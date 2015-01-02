@@ -130,7 +130,7 @@ If you want to improve the Publisher plugins, you should follow these steps:
 4. Make the changes you need.
 5. Publish a new version of the plugins to the plugins repository, with any of these methods:
     1. Locally (on your .m2/repository directory): `./gradlew aar-publisher:install` or `./gradlew jar-publisher:install`
-    2. Remotelly: **WIP**.
+    2. Remotelly (on Nexus): `./gradlew aar-publisher:uploadArchives` or `./gradlew jar-publisher:uploadArchives` - You can check if the plugin has been uploaded by browsing [Nexus](http://maven-mobile.melicloud.com/nexus/content/repositories/). If you want to publish as a snapshot, make sure the version ends with "-SNAPSHOT", otherwise it will get uploaded as a release. See the inner build.gradle to modify the version.
 
 ## Further help
 If you need further help, please contact [martin.heras@mercadolibre.com](mailto:martin.heras@mercadolibre.com).
