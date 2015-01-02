@@ -27,7 +27,7 @@ In order to get all of this done, the plugins add new tasks to your build script
 2. `./gradlew publishAarSnapshot` - Same as `publishAarRelease`, but it uploads the artifacts to the specified Maven snapshots repository. It does NOT tag the version in Git, as it is not a release.
 3. `./gradlew publishAarLocal` - This is particularly useful during the development phase of the Android library. It overwrites the artifacts in your .m2/repository directory, so that you can code & test your code without uploading anything to a remote repository. This does NOT run lint so that we don't have to wait that long. It does not tag the version in Git either.
 
-## How to add it to your project?
+## How to add aar-publisher to your project?
 
 Simple. You just need to apply the plugin and configure it in the build script, as the following snippet shows:
 
@@ -115,6 +115,9 @@ Simple. You just need to apply the plugin and configure it in the build script, 
     	compile fileTree(dir: 'libs', include: ['*.jar'])
     	compile 'com.android.support:appcompat-v7:21.0.3'
     }
+
+## Tasks added by jar-publisher
+**WIP**.
 
 ## How to improve it?
 If you want to improve the Publisher plugins, you should follow these steps:
