@@ -68,9 +68,53 @@ Simple. You just need to apply the plugin and configure it in the build script, 
 
 **Your module's build.gradle**
 
+    apply plugin: 'com.mercadolibre.android.gradle.publisher.aar'
 
+    android {
+        compileSdkVersion 21
+        buildToolsVersion "21.1.2"
 
+        defaultConfig {
+            minSdkVersion 14
+            targetSdkVersion 21
+            versionCode 1
+            versionName "1.0"
+        }
 
+        buildTypes {
+        	release {
+            	minifyEnabled false
+            	proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        	}
+
+        	debug {
+            	minifyEnabled false
+            	proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        	}
+
+        	testing {
+            	minifyEnabled false
+            	proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        	}
+    	}
+	}
+
+	publisher.releasesRepository.url = [YOUR MAVEN RELEASES REPO URL]
+	publisher.releasesRepository.username = [YOUR USERNAME]
+	publisher.releasesRepository.password = [YOUR PASSWORD]
+
+	publisher.snapshotsRepository.url = [YOUR MAVEN SNAPSHOTS REPO URL]
+	publisher.snapshotsRepository.username = [YOUR USERNAME]
+	publisher.snapshotsRepository.password = [YOUR PASSWORD]
+
+	publisher.groupId = [YOUR GROUPID FOR MAVEN]
+	publisher.artifactId = project.name // Or whatever...
+	publisher.version = [YOUR LIBRARY VERSION]
+
+    dependencies {
+    	compile fileTree(dir: 'libs', include: ['*.jar'])
+    	compile 'com.android.support:appcompat-v7:21.0.3'
+    }
 
 ## How to improve it?
 If you want to improve the Publisher plugins, you should follow these steps:
