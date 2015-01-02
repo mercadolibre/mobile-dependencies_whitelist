@@ -119,14 +119,16 @@ Simple. You just need to apply the plugin and configure it in the build script, 
 ## Tasks added by jar-publisher
 **WIP**.
 
-## How to improve it?
+## How to improve or compile the plugins?
 If you want to improve the Publisher plugins, you should follow these steps:
 
 1. Clone the project.
 2. Import the project from Android Studio (NOTE: Import it, do not 'open' it).
 3. On the left panel, select the 'Project' view, instead of the 'Android' view, as this project is made with Groovy and the 'Android' view does not work well with .groovy source sets.
 4. Make the changes you need.
-5. Publish a new version of the plugins to the plugins repository (**WIP**).
+5. Publish a new version of the plugins to the plugins repository, with any of these methods:
+    1. Locally (on your .m2/repository directory): `./gradlew aar-publisher:install` or `./gradlew jar-publisher:install`
+    2. Remotelly: **WIP**.
 
 ## Further help
 If you need further help, please contact [martin.heras@mercadolibre.com](mailto:martin.heras@mercadolibre.com).
