@@ -31,7 +31,7 @@ In order to get all of this done, the plugins add new tasks to your build script
 
 Simple. You just need to apply the plugin and configure it in the build script, as the following snippet shows:
 
-### Parent build.gradle
+**Parent build.gradle**
 
     apply plugin: 'idea'
 
@@ -66,7 +66,7 @@ Simple. You just need to apply the plugin and configure it in the build script, 
     	}
 	}
 
-### Your module's build.gradle
+**Your module's build.gradle**
 
 
 
