@@ -116,7 +116,7 @@ Simple. You just need to apply the plugin and configure it in the build script, 
     	compile 'com.android.support:appcompat-v7:21.0.3'
     }
     
-As you can see, there is no need to apply the _com.android.library_ nor the _maven_ plugins, as they automatically applied by the aar-publisher plugin.
+As you can see, there is no need to apply the _com.android.library_ nor the _maven_ plugins, as they are automatically applied by the aar-publisher plugin.
 
 ## Tasks added by jar-publisher
 **WIP**.
