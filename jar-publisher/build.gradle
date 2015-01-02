@@ -6,9 +6,21 @@ dependencies {
     compile localGroovy()
 }
 
-repositories {
-    mavenLocal()
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url:'http://maven-mobile.melicloud.com/nexus/content/repositories/releases') {
+                authentication(userName: 'mobile', password: 'ml123456')
+            }
+            // If the artifact ends with "-SNAPSHOT", this repository is selected:
+            snapshotRepository(url: 'http://maven-mobile.melicloud.com/nexus/content/repositories/snapshots') {
+                authentication(userName: 'mobile', password: 'ml123456')
+            }
+        }
+    }
 }
 
 group = 'com.mercadolibre.android.gradle.publisher'
-version = '0.1-SNAPSHOT'
+
+// Make sure you append "-SNAPSHOT" to the version if you want to upload a snapshot version.
+version = '1.0-SNAPSHOT'
