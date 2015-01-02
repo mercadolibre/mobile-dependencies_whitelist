@@ -39,11 +39,16 @@ Simple. You just need to apply the plugin and configure it in the build script, 
     	repositories {
         	jcenter()
         	mavenLocal()
+            maven {
+            	url 'http://maven-mobile.melicloud.com/nexus/content/repositories/releases'
+            }
+        	maven {
+            	url 'http://maven-mobile.melicloud.com/nexus/content/repositories/snapshots'
+            }
     	}
     	dependencies {
         	classpath 'com.android.tools.build:gradle:1.0.0'
-        	classpath 'com.mercadolibre.android.gradle.publisher:aar-publisher:0.1-SNAPSHOT'
-        	classpath 'com.mercadolibre.android.gradle.publisher:jar-publisher:0.1-SNAPSHOT'
+        	classpath 'com.mercadolibre.android.gradle.publisher:aar-publisher:1.0'
     	}
  	}
     
