@@ -115,6 +115,8 @@ Simple. You just need to apply the plugin and configure it in the build script, 
     	compile fileTree(dir: 'libs', include: ['*.jar'])
     	compile 'com.android.support:appcompat-v7:21.0.3'
     }
+    
+As you can see, there is no need to apply the 'com.android.library' nor the 'maven' plugins, as they automatically applied by the aar-publisher plugin.
 
 ## Tasks added by jar-publisher
 **WIP**.
