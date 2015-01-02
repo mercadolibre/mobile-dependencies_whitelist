@@ -125,8 +125,8 @@ As you can see, there is no need to apply the _com.android.library_ nor the _mav
 If you want to improve the Publisher plugins, you should follow these steps:
 
 1. Clone the project.
-2. Import the project from Android Studio (NOTE: Import it, do not 'open' it).
-3. On the left panel, select the 'Project' view, instead of the 'Android' view, as this project is made with Groovy and the 'Android' view does not work well with .groovy source sets.
+2. Import the project from IntelliJ Community Edition (NOTE: Import it, do not 'open' it). You MUST select the root build.gradle when importing the project, otherwise IntelliJ will not recognize all the Gradle modules. 
+3. Make sure you have a JDK configured for the project: _File -> Project Structure -> Project SDK_.
 4. Make the changes you need.
 5. Publish a new version of the plugins to the plugins repository, with any of these methods:
     1. Locally (on your .m2/repository directory): `./gradlew aar-publisher:install` or `./gradlew jar-publisher:install`
