@@ -23,4 +23,4 @@ uploadArchives {
 group = 'com.mercadolibre.android.gradle.publisher'
 
 // Make sure you append "-SNAPSHOT" to the version if you want to upload a snapshot version.
-version = '1.0-SNAPSHOT'
+version = '1.0'
