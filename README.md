@@ -74,6 +74,7 @@ Simple. You just need to apply the plugin and configure it in the build script, 
 
 ## How to improve it?
 If you want to improve the Publisher plugins, you should follow these steps:
+
 1. Clone the project.
 2. Import the project from Android Studio (NOTE: Import it, do not 'open' it).
 3. On the left panel, select the 'Project' view, instead of the 'Android' view, as this project is made with Groovy and the 'Android' view does not work well with .groovy source sets.
