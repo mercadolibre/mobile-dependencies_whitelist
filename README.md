@@ -181,17 +181,17 @@ Simple. You just need to apply the plugin and configure it in the build script, 
 
     apply plugin: 'com.mercadolibre.android.gradle.publisher.jar'
 
-    publisher.releasesRepository.url = 'http://maven-mobile.melicloud.com/nexus/content/repositories/releases'
-    publisher.releasesRepository.username = nexusUsername
-    publisher.releasesRepository.password = nexusPassword
+    publisher.releasesRepository.url = [YOUR MAVEN RELEASES REPO URL]
+    publisher.releasesRepository.username = [YOUR USERNAME]
+    publisher.releasesRepository.password = [YOUR PASSWORD]
 
-    publisher.snapshotsRepository.url = 'http://maven-mobile.melicloud.com/nexus/content/repositories/snapshots'
-    publisher.snapshotsRepository.username = nexusUsername
-    publisher.snapshotsRepository.password = nexusPassword
+    publisher.snapshotsRepository.url = [YOUR MAVEN SNAPSHOTS REPO URL]
+    publisher.snapshotsRepository.username = [YOUR USERNAME]
+    publisher.snapshotsRepository.password = [YOUR PASSWORD]
 
-    publisher.groupId = 'com.mercadolibre.android'
-    publisher.artifactId = project.name
-    publisher.version = libraryVersion
+    publisher.groupId = [YOUR GROUPID FOR MAVEN]
+    publisher.artifactId = project.name // Or whatever...
+    publisher.version = [YOUR LIBRARY VERSION]
 
     dependencies {
         compile fileTree(dir: 'libs', include: ['*.jar'])
