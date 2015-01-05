@@ -127,9 +127,9 @@ As you can see, there is no need to apply the _com.android.library_ nor the _mav
 
 ## Tasks added by jar-publisher
 
-1. `./gradlew publishJarRelease` - Publishes the .jar (along with the sources and Javadoc) to the specified Maven releases repository. It runs all the checks before uploading the artifacts (tests, Jacoco, etc.), and once they get uploaded, it tags the version in Git.
-2. `./gradlew publishJarSnapshot` - Same as `publishJarRelease`, but it uploads the artifacts to the specified Maven snapshots repository. It does NOT tag the version in Git, as it is not a release.
-3. `./gradlew publishJarLocal` - This is particularly useful during the development phase of the Java library. It overwrites the artifacts in your .m2/repository directory, so that you can code & test your code without uploading anything to a remote repository. It does not tag the version in Git.
+1. `publishJarRelease` - Publishes the .jar (along with the sources and Javadoc) to the specified Maven releases repository. It runs all the checks before uploading the artifacts (tests, Jacoco, etc.), and once they get uploaded, it tags the version in Git.
+2. `publishJarSnapshot` - Same as `publishJarRelease`, but it uploads the artifacts to the specified Maven snapshots repository. It does NOT tag the version in Git, as it is not a release.
+3. `publishJarLocal` - This is particularly useful during the development phase of the Java library. It overwrites the artifacts in your .m2/repository directory, so that you can code & test your code without uploading anything to a remote repository. It does not tag the version in Git.
 
 ## How to add jar-publisher to your project?
 
