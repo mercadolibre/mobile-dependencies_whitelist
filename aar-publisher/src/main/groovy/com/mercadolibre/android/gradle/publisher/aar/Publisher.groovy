@@ -56,6 +56,9 @@ public class PublisherPlugin implements Plugin<Project> {
         return project.publisher
     }
 
+    /**
+     * Adds the 'publisher' container to the project.
+     */
     private void addPublisherContainer() {
         project.extensions.create('publisher', PublisherPluginExtension)
         getPublisherContainer().releasesRepository = new PublisherRepository()
