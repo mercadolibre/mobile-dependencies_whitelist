@@ -39,11 +39,16 @@ Simple. You just need to apply the plugin and configure it in the build script, 
     	repositories {
         	jcenter()
         	mavenLocal()
+            maven {
+            	url 'http://maven-mobile.melicloud.com/nexus/content/repositories/releases'
+            }
+        	maven {
+            	url 'http://maven-mobile.melicloud.com/nexus/content/repositories/snapshots'
+            }
     	}
     	dependencies {
         	classpath 'com.android.tools.build:gradle:1.0.0'
-        	classpath 'com.mercadolibre.android.gradle.publisher:aar-publisher:0.1-SNAPSHOT'
-        	classpath 'com.mercadolibre.android.gradle.publisher:jar-publisher:0.1-SNAPSHOT'
+        	classpath 'com.mercadolibre.android.gradle.publisher:aar-publisher:1.0'
     	}
  	}
     
@@ -131,6 +136,10 @@ If you want to improve the Publisher plugins, you should follow these steps:
 5. Publish a new version of the plugins to the plugins repository, with any of these methods:
     1. Locally (on your .m2/repository directory): `./gradlew aar-publisher:install` or `./gradlew jar-publisher:install`
     2. Remotelly (on Nexus): `./gradlew aar-publisher:uploadArchives` or `./gradlew jar-publisher:uploadArchives` - You can check if the plugin has been uploaded by browsing [Nexus](http://maven-mobile.melicloud.com/nexus/content/repositories/). If you want to publish as a snapshot, make sure the version ends with "-SNAPSHOT", otherwise it will get uploaded as a release. See the inner build.gradle to modify the version.
+    
+## Possible errors
+
+- If you get a 400 HTTP error while uploading the artifacts, make sure you are not trying to publish an existing release version. For instance, Nexus repository refuses to save an artifact in the release directory if the version already exists.
 
 ## Further help
 If you need further help, please contact [martin.heras@mercadolibre.com](mailto:martin.heras@mercadolibre.com).
