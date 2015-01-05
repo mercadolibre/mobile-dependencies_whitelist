@@ -29,6 +29,8 @@ In order to get all of this done, the plugins add new tasks to your build script
 
 ## How to add aar-publisher to your project?
 
+Example: [mobile-android_commons](https://github.com/mercadolibre/mobile-android_commons)
+
 Simple. You just need to apply the plugin and configure it in the build script, as the following snippet shows:
 
 **Parent build.gradle**
@@ -123,7 +125,15 @@ Simple. You just need to apply the plugin and configure it in the build script, 
     
 As you can see, there is no need to apply the _com.android.library_ nor the _maven_ plugins, as they are automatically applied by the aar-publisher plugin.
 
+## Tasks added by jar-publisher
+
+1. `./gradlew publishJarRelease` - Publishes the .jar (along with the sources and Javadoc) to the specified Maven releases repository. It runs all the checks before uploading the artifacts (tests, Jacoco, etc.), and once they get uploaded, it tags the version in Git.
+2. `./gradlew publishJarSnapshot` - Same as `publishJarRelease`, but it uploads the artifacts to the specified Maven snapshots repository. It does NOT tag the version in Git, as it is not a release.
+3. `./gradlew publishJarLocal` - This is particularly useful during the development phase of the Java library. It overwrites the artifacts in your .m2/repository directory, so that you can code & test your code without uploading anything to a remote repository. It does not tag the version in Git.
+
 ## How to add jar-publisher to your project?
+
+Example: [mobile-android_model](https://github.com/mercadolibre/mobile-android_model)
 
 Simple. You just need to apply the plugin and configure it in the build script, as the following snippet shows:
 
@@ -188,9 +198,6 @@ Simple. You just need to apply the plugin and configure it in the build script, 
     }
     
 As you can see, there is no need to apply the _java_ nor the _maven_ plugins, as they are automatically applied by the jar-publisher plugin.
-
-## Tasks added by jar-publisher
-**WIP**.
 
 ## How to improve or compile the plugins?
 If you want to improve the Publisher plugins, you should follow these steps:
