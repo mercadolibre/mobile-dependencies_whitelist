@@ -36,40 +36,40 @@ Simple. You just need to apply the plugin and configure it in the build script, 
     apply plugin: 'idea'
 
     buildscript {
-    	repositories {
-        	jcenter()
-        	mavenLocal()
+    	repositories { // This repositories are used when building your project. In this case, we need to tell Gradle to use our repositories in order to find the Gradle Publisher plugins.
+            mavenLocal() // So that the artifacts are first looked for in your .m2/repository directory.
+            jcenter() // This is needed by Gradle.
             maven {
-            	url 'http://maven-mobile.melicloud.com/nexus/content/repositories/releases'
+            	url 'http://maven-mobile.melicloud.com/nexus/content/repositories/releases' // Releases URL.
             }
-        	maven {
-            	url 'http://maven-mobile.melicloud.com/nexus/content/repositories/snapshots'
+            maven {
+            	url 'http://maven-mobile.melicloud.com/nexus/content/repositories/snapshots' // Snapshots URL.
             }
     	}
     	dependencies {
         	classpath 'com.android.tools.build:gradle:1.0.0'
         	classpath 'com.mercadolibre.android.gradle.publisher:aar-publisher:1.0'
     	}
- 	}
+    }
     
-	allprojects {
+    allprojects {
     	repositories {
-        	jcenter()
-        	maven {
+            jcenter()
+            maven {
             	url 'http://maven-mobile.melicloud.com/nexus/content/repositories/releases'
             }
-        	maven {
+            maven {
             	url 'http://maven-mobile.melicloud.com/nexus/content/repositories/snapshots'
             }
     	}
-	}
+    }
 
-	idea {
-    	module {
-        	downloadJavadoc = true
-        	downloadSources = true
+    idea {
+        module {
+            downloadJavadoc = true
+            downloadSources = true
     	}
-	}
+    }
 
 **Your module's build.gradle**
 
@@ -122,6 +122,72 @@ Simple. You just need to apply the plugin and configure it in the build script, 
     }
     
 As you can see, there is no need to apply the _com.android.library_ nor the _maven_ plugins, as they are automatically applied by the aar-publisher plugin.
+
+## How to add jar-publisher to your project?
+
+Simple. You just need to apply the plugin and configure it in the build script, as the following snippet shows:
+
+**Parent build.gradle**
+
+    apply plugin: 'idea'
+
+    buildscript {
+    	repositories { // This repositories are used when building your project. In this case, we need to tell Gradle to use our repositories in order to find the Gradle Publisher plugins.
+            mavenLocal() // So that the artifacts are first looked for in your .m2/repository directory.
+            jcenter() // This is needed by Gradle.
+            maven {
+            	url 'http://maven-mobile.melicloud.com/nexus/content/repositories/releases' // Releases URL.
+            }
+            maven {
+            	url 'http://maven-mobile.melicloud.com/nexus/content/repositories/snapshots' // Snapshots URL.
+            }
+    	}
+    	dependencies {
+        	classpath 'com.android.tools.build:gradle:1.0.0'
+        	classpath 'com.mercadolibre.android.gradle.publisher:jar-publisher:1.0'
+    	}
+    }
+    
+    allprojects {
+    	repositories {
+            jcenter()
+            maven {
+            	url 'http://maven-mobile.melicloud.com/nexus/content/repositories/releases'
+            }
+            maven {
+            	url 'http://maven-mobile.melicloud.com/nexus/content/repositories/snapshots'
+            }
+    	}
+    }
+
+    idea {
+        module {
+            downloadJavadoc = true
+            downloadSources = true
+    	}
+    }
+    
+**Your module's build.gradle**
+
+    apply plugin: 'com.mercadolibre.android.gradle.publisher.jar'
+
+    publisher.releasesRepository.url = 'http://maven-mobile.melicloud.com/nexus/content/repositories/releases'
+    publisher.releasesRepository.username = nexusUsername
+    publisher.releasesRepository.password = nexusPassword
+
+    publisher.snapshotsRepository.url = 'http://maven-mobile.melicloud.com/nexus/content/repositories/snapshots'
+    publisher.snapshotsRepository.username = nexusUsername
+    publisher.snapshotsRepository.password = nexusPassword
+
+    publisher.groupId = 'com.mercadolibre.android'
+    publisher.artifactId = project.name
+    publisher.version = libraryVersion
+
+    dependencies {
+        compile fileTree(dir: 'libs', include: ['*.jar'])
+    }
+    
+As you can see, there is no need to apply the _java_ nor the _maven_ plugins, as they are automatically applied by the jar-publisher plugin.
 
 ## Tasks added by jar-publisher
 **WIP**.
