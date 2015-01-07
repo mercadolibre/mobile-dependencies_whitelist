@@ -36,6 +36,7 @@ Simple. You just need to apply the plugin and configure it in the build script, 
 **Parent build.gradle**
 ```groovy
 apply plugin: 'idea'
+apply plugin: 'com.mercadolibre.android.gradle.base' // This sets up our custom Nexus repositories. It is also important because it turns off the Gradle cache for dynamic versions.
 
 buildscript {
 	repositories { // This repositories are used when building your project. In this case, we need to tell Gradle to use our repositories in order to find the Gradle Publisher plugins.
@@ -46,19 +47,8 @@ buildscript {
     }
     dependencies {
     	classpath 'com.android.tools.build:gradle:1.0.0'
+        classpath 'com.mercadolibre.android.gradle:base:1.0'
         classpath 'com.mercadolibre.android.gradle.publisher:aar-publisher:1.1'
-    }
-}
-    
-allprojects {
-    repositories {
-        jcenter()
-        maven {
-            url 'http://maven-mobile.melicloud.com/nexus/content/repositories/releases'
-        }
-        maven {
-            url 'http://maven-mobile.melicloud.com/nexus/content/repositories/experimental'
-        }
     }
 }
 
@@ -136,6 +126,7 @@ Simple. You just need to apply the plugin and configure it in the build script, 
 **Parent build.gradle**
 ```groovy
 apply plugin: 'idea'
+apply plugin: 'com.mercadolibre.android.gradle.base' // This sets up our custom Nexus repositories. It is also important because it turns off the Gradle cache for dynamic versions.
 
 buildscript {
     repositories { // This repositories are used when building your project. In this case, we need to tell Gradle to use our repositories in order to find the Gradle Publisher plugins.
@@ -146,20 +137,9 @@ buildscript {
    	}
     dependencies {
         classpath 'com.android.tools.build:gradle:1.0.0'
+        classpath 'com.mercadolibre.android.gradle:base:1.0'
         classpath 'com.mercadolibre.android.gradle.publisher:jar-publisher:1.1'
     }
-}
-    
-allprojects {
-    repositories {
-        jcenter()
-        maven {
-            url 'http://maven-mobile.melicloud.com/nexus/content/repositories/releases'
-        }
-        maven {
-            url 'http://maven-mobile.melicloud.com/nexus/content/repositories/experimental'
-        }
-	}
 }
 
 idea {
@@ -216,6 +196,10 @@ If you want to improve the Publisher plugins, you should follow these steps:
 ### aar-publisher
 
 - 1.1: Removed `publishAarSnapshot`. Added `publishAarExperimental`.
+- 1.0: First version of the plugin!
+
+### base
+
 - 1.0: First version of the plugin!
 
 ## Further help
