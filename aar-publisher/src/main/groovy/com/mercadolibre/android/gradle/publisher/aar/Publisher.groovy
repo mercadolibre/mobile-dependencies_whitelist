@@ -104,7 +104,7 @@ public class PublisherPlugin implements Plugin<Project> {
             javadocTask.options.linksOffline 'http://d.android.com/reference/', "${project.android.sdkDirectory}/docs/reference"
             javadocTask.exclude '**/BuildConfig.java'
             javadocTask.exclude '**/R.java'
-            javadocTask.failOnError = true
+            javadocTask.failOnError = false
         }
     }
 
@@ -193,8 +193,7 @@ public class PublisherPlugin implements Plugin<Project> {
     private void createPublishReleaseTask() {
         def task = project.tasks.create 'publishAarRelease'
         task.setDescription('Publishes a new release version of the AAR library.')
-        task.dependsOn 'assemble'
-        task.dependsOn 'check'
+        task.dependsOn 'assemble', 'check', 'releaseSourcesJar', 'releaseJavadocJar'
         task.finalizedBy 'uploadArchives'
 
         task.doLast {
@@ -210,7 +209,7 @@ public class PublisherPlugin implements Plugin<Project> {
     private void createPublishExperimentalTask() {
         def task = project.tasks.create 'publishAarExperimental'
         task.setDescription('Publishes a new experimental version of the AAR library.')
-        task.dependsOn 'assemble'
+        task.dependsOn 'assemble', 'debugSourcesJar', 'debugJavadocJar'
         task.finalizedBy 'uploadArchives'
 
         task.doLast {
@@ -234,7 +233,7 @@ public class PublisherPlugin implements Plugin<Project> {
     private void createPublishLocalTask() {
         def task = project.tasks.create 'publishAarLocal'
         task.setDescription('Publishes a new local version of the AAR library, locally on the .m2/repository directory.')
-        task.dependsOn 'assemble'
+        task.dependsOn 'assemble', 'debugSourcesJar', 'debugJavadocJar'
         task.finalizedBy 'uploadArchives'
 
         task.doLast {
