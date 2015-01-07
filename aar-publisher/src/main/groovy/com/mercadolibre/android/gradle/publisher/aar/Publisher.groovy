@@ -7,6 +7,8 @@ import org.gradle.api.tasks.Exec
 import org.gradle.api.tasks.bundling.Jar
 import org.gradle.api.tasks.javadoc.Javadoc
 
+import java.text.SimpleDateFormat
+
 /**
  * Gradle plugin for publishing AARs after running some important tasks before:
  *
@@ -18,7 +20,7 @@ import org.gradle.api.tasks.javadoc.Javadoc
  *     <li>Generate JAR with Javadoc.</li>
  *     <li>Create lint reports.</li>
  *     <li>Run Android connected tests (requires a connected device).</li>
- *     <li>Upload the artifacts to the repository (either release, snapshot or local).</li>
+ *     <li>Upload the artifacts to the repository (either release, experimental or local).</li>
  *     <li>Tag the version in Git (if release).</li>
  * </ol>
  *
@@ -62,7 +64,7 @@ public class PublisherPlugin implements Plugin<Project> {
     private void addPublisherContainer() {
         project.extensions.create('publisher', PublisherPluginExtension)
         getPublisherContainer().releasesRepository = new PublisherRepository()
-        getPublisherContainer().snapshotsRepository = new PublisherRepository()
+        getPublisherContainer().experimentalRepository = new PublisherRepository()
     }
 
     /**
@@ -74,7 +76,7 @@ public class PublisherPlugin implements Plugin<Project> {
         createJavadocJarTasks()
         createPublishLocalTask()
         createPublishReleaseTask()
-        createPublishSnapshotTask()
+        createPublishExperimentalTask()
         createTagVersionTask()
     }
 
@@ -134,10 +136,6 @@ public class PublisherPlugin implements Plugin<Project> {
                         repository(url: getPublisherContainer().releasesRepository.url) {
                             authentication(userName: getPublisherContainer().releasesRepository.username, password: getPublisherContainer().releasesRepository.password)
                         }
-                        // If the artifact ends with "-SNAPSHOT", this repository is selected:
-                        snapshotRepository(url: getPublisherContainer().snapshotsRepository.url) {
-                            authentication(userName: getPublisherContainer().snapshotsRepository.username, password: getPublisherContainer().snapshotsRepository.password)
-                        }
                         pom.groupId = getPublisherContainer().groupId
                         pom.artifactId = getPublisherContainer().artifactId
                         pom.version = getPublisherContainer().version
@@ -176,15 +174,15 @@ public class PublisherPlugin implements Plugin<Project> {
             throw new GradleException("Property 'publisher.releasesRepository.password' is needed by the Publisher plugin. Please define it in the build script.")
         }
 
-        // Publisher.snapshotsRepository container.
-        if (getPublisherContainer().snapshotsRepository.url == null || getPublisherContainer().snapshotsRepository.url.length() == 0) {
-            throw new GradleException("Property 'publisher.snapshotsRepository.url' is needed by the Publisher plugin. Please define it in the build script.")
+        // Publisher.experimentalRepository container.
+        if (getPublisherContainer().experimentalRepository.url == null || getPublisherContainer().experimentalRepository.url.length() == 0) {
+            throw new GradleException("Property 'publisher.experimentalRepository.url' is needed by the Publisher plugin. Please define it in the build script.")
         }
-        if (getPublisherContainer().snapshotsRepository.username == null || getPublisherContainer().snapshotsRepository.username.length() == 0) {
-            throw new GradleException("Property 'publisher.snapshotsRepository.username' is needed by the Publisher plugin. Please define it in the build script.")
+        if (getPublisherContainer().experimentalRepository.username == null || getPublisherContainer().experimentalRepository.username.length() == 0) {
+            throw new GradleException("Property 'publisher.experimentalRepository.username' is needed by the Publisher plugin. Please define it in the build script.")
         }
-        if (getPublisherContainer().snapshotsRepository.password == null || getPublisherContainer().snapshotsRepository.password.length() == 0) {
-            throw new GradleException("Property 'publisher.snapshotsRepository.password' is needed by the Publisher plugin. Please define it in the build script.")
+        if (getPublisherContainer().experimentalRepository.password == null || getPublisherContainer().experimentalRepository.password.length() == 0) {
+            throw new GradleException("Property 'publisher.experimentalRepository.password' is needed by the Publisher plugin. Please define it in the build script.")
         }
 
     }
@@ -207,11 +205,11 @@ public class PublisherPlugin implements Plugin<Project> {
     }
 
     /**
-     * Creates the "publishAarSnapshot" task.
+     * Creates the "publishAarExperimental" task.
      */
-    private void createPublishSnapshotTask() {
-        def task = project.tasks.create 'publishAarSnapshot'
-        task.setDescription('Publishes a new snapshot version of the AAR library.')
+    private void createPublishExperimentalTask() {
+        def task = project.tasks.create 'publishAarExperimental'
+        task.setDescription('Publishes a new experimental version of the AAR library.')
         task.dependsOn 'assemble'
         task.finalizedBy 'uploadArchives'
 
@@ -223,8 +221,10 @@ public class PublisherPlugin implements Plugin<Project> {
             project.android {
                 defaultPublishConfig 'debug'
             }
-            // Append "-SNAPSHOT" to the version so that it gets uploaded to the snapshots repository.
-            project.uploadArchives.repositories.mavenDeployer.pom.version += '-SNAPSHOT'
+            project.uploadArchives.repositories.mavenDeployer.pom.version += '-EXPERIMENTAL-' + getTimestamp()
+            project.uploadArchives.repositories.mavenDeployer.repository.url = getPublisherContainer().experimentalRepository.url
+            project.uploadArchives.repositories.mavenDeployer.repository.authentication.userName = getPublisherContainer().experimentalRepository.username
+            project.uploadArchives.repositories.mavenDeployer.repository.authentication.password = getPublisherContainer().experimentalRepository.password
         }
     }
 
@@ -233,7 +233,7 @@ public class PublisherPlugin implements Plugin<Project> {
      */
     private void createPublishLocalTask() {
         def task = project.tasks.create 'publishAarLocal'
-        task.setDescription('Publishes a new snapshot version of the AAR library, but locally on the .m2/repository directory.')
+        task.setDescription('Publishes a new local version of the AAR library, locally on the .m2/repository directory.')
         task.dependsOn 'assemble'
         task.finalizedBy 'uploadArchives'
 
@@ -245,10 +245,9 @@ public class PublisherPlugin implements Plugin<Project> {
             project.android {
                 defaultPublishConfig 'debug'
             }
-            // Append "-SNAPSHOT" to the version so that it gets uploaded to the snapshots repository.
-            project.uploadArchives.repositories.mavenDeployer.pom.version += '-SNAPSHOT'
+            project.uploadArchives.repositories.mavenDeployer.pom.version += '-LOCAL-' + getTimestamp()
             // Point the repository to our .m2/repository directory.
-            project.uploadArchives.repositories.mavenDeployer.snapshotRepository.url = "file://${System.properties['user.home']}/.m2/repository"
+            project.uploadArchives.repositories.mavenDeployer.repository.url = "file://${System.properties['user.home']}/.m2/repository"
         }
     }
 
@@ -269,6 +268,16 @@ public class PublisherPlugin implements Plugin<Project> {
             project.gradle.taskGraph.hasTask(project.tasks['publishAarRelease'])
         }
     }
+
+    /**
+     * Gets the current timestamp.
+     * @return the current timestamp.
+     */
+    private String getTimestamp() {
+        def sdf = new SimpleDateFormat('yyyyMMddHHmmss')
+        sdf.timeZone = TimeZone.getTimeZone('UTC')
+        sdf.format(new Date())
+    }
 }
 
 /**
@@ -282,9 +291,9 @@ public class PublisherPluginExtension {
     private PublisherRepository releasesRepository
 
     /**
-     * Snapshots repository.
+     * Experimental repository.
      */
-    private PublisherRepository snapshotsRepository
+    private PublisherRepository experimentalRepository
 
     /**
      * GroupId for Maven.
@@ -318,19 +327,19 @@ public class PublisherPluginExtension {
     }
 
     /**
-     * Gets the snapshots repository.
-     * @return the snapshots repository.
+     * Gets the experimental repository.
+     * @return the experimental repository.
      */
-    public PublisherRepository getSnapshotsRepository() {
-        return snapshotsRepository
+    public PublisherRepository getExperimentalRepository() {
+        return experimentalRepository
     }
 
     /**
-     * Sets the snapshots repository.
-     * @param snapshotsRepository the snapshots repository.
+     * Sets the experimental repository.
+     * @param experimentalRepository the experimental repository.
      */
-    public void setSnapshotsRepository(PublisherRepository snapshotsRepository) {
-        this.snapshotsRepository = snapshotsRepository
+    public void setExperimentalRepository(PublisherRepository experimentalRepository) {
+        this.experimentalRepository = experimentalRepository
     }
 
     /**
@@ -383,7 +392,7 @@ public class PublisherPluginExtension {
 }
 
 /**
- * The 'publisher.[releases|snapshots]Repository'.
+ * The 'publisher.[releases|experimental]Repository'.
  */
 public class PublisherRepository {
 
