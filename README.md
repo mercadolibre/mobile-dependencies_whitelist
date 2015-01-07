@@ -174,17 +174,6 @@ dependencies {
 ```    
 As you can see, there is no need to apply the _java_ nor the _maven_ plugins, as they are automatically applied by the jar-publisher plugin.
 
-## How to improve or compile the plugins?
-If you want to improve the Publisher plugins, you should follow these steps:
-
-1. Clone the project.
-2. Import the project from IntelliJ Community Edition (not Android Studio!) (NOTE: Import it, do not 'open' it). You MUST select the root build.gradle when importing the project, otherwise IntelliJ will not recognize all the Gradle modules. 
-3. Make sure you have a JDK configured for the project: _File -> Project Structure -> Project SDK_.
-4. Make the changes you need.
-5. Publish a new version of the plugins to the plugins repository, with any of these methods:
-    1. Locally (on your .m2/repository directory): `./gradlew aar-publisher:install` or `./gradlew jar-publisher:install`
-    2. Remotelly (on Nexus): `./gradlew aar-publisher:uploadArchives` or `./gradlew jar-publisher:uploadArchives` - You can check if the plugin has been uploaded by browsing [Nexus](http://maven-mobile.melicloud.com/nexus/content/repositories/). If you want to publish as a snapshot, make sure the version ends with "-SNAPSHOT", otherwise it will get uploaded as a release. See the inner build.gradle to modify the version.
-    
 ## What does the base plugin do for us?
 
 This plugin helps us on configuring the custom Nexus repositories when using our custom Android Libraries as dependencies in Gradle.
@@ -225,8 +214,19 @@ dependencies {
     compile ('com.mercadolibre.android:commons:0.1.0-EXPERIMENTAL-+@aar')
 }
 ```   
-    
-## Possible errors
+
+## How to improve or compile the plugins?
+If you want to improve the Publisher plugins, you should follow these steps:
+
+1. Clone the project.
+2. Import the project from IntelliJ Community Edition (not Android Studio!) (NOTE: Import it, do not 'open' it). You MUST select the root build.gradle when importing the project, otherwise IntelliJ will not recognize all the Gradle modules. 
+3. Make sure you have a JDK configured for the project: _File -> Project Structure -> Project SDK_.
+4. Make the changes you need.
+5. Publish a new version of the plugins to the plugins repository, with any of these methods:
+    1. Locally (on your .m2/repository directory): `./gradlew aar-publisher:install` or `./gradlew jar-publisher:install`
+    2. Remotelly (on Nexus): `./gradlew aar-publisher:uploadArchives` or `./gradlew jar-publisher:uploadArchives` - You can check if the plugin has been uploaded by browsing [Nexus](http://maven-mobile.melicloud.com/nexus/content/repositories/). If you want to publish as a snapshot, make sure the version ends with "-SNAPSHOT", otherwise it will get uploaded as a release. See the inner build.gradle to modify the version.
+
+## Possible errors with jar-publisher and aar-publisher
 
 - If you get a 400 HTTP error while uploading the artifacts, make sure you are not trying to publish an existing release version. For instance, Nexus repository refuses to save an artifact in the release directory if the version already exists.
 
