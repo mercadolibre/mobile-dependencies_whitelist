@@ -204,10 +204,15 @@ If you want to improve the Publisher plugins, you should follow these steps:
    
 ## Changelog
 
-- **jar-publisher 1.1** Removed publishJarSnapshot. Added publishJarExperimental.
-- **aar-publisher 1.1** Removed publishAarSnapshot. Added publishAarExperimental.
-- **aar-publisher 1.0** First version of the plugin!
-- **jar-publisher 1.0** First version of the plugin!
+### jar-publisher
+
+- 1.1: Removed `publishJarSnapshot`. Added `publishJarExperimental`.
+- 1.0: First version of the plugin!
+
+### aar-publisher
+
+- 1.1: Removed `publishAarSnapshot`. Added `publishAarExperimental`.
+- 1.0: First version of the plugin!
     
 ## Possible errors
 
