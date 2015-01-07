@@ -29,9 +29,13 @@ class PublisherPlugin implements Plugin<Project> {
 
     private Project project;
 
+    /**
+     * Method called by Gradle when applying this plugin.
+     * @param project the Gradle project.
+     */
     void apply(Project project) {
 
-        this.project = project;
+        this.project = project
 
         project.apply plugin: 'java'
         // We could use "maven-publish" in a future. Right now, it is an incubating plugin.

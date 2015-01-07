@@ -1,1 +1,1 @@
-include ':aar-publisher', ':jar-publisher'
+include ':aar-publisher', ':jar-publisher', ':base'

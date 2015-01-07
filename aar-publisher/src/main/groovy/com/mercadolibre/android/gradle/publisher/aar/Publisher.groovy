@@ -34,12 +34,12 @@ public class PublisherPlugin implements Plugin<Project> {
     private Project project;
 
     /**
-     * Method called by Gradle when applying the plugin.
-     * @param project The project.
+     * Method called by Gradle when applying this plugin.
+     * @param project the Gradle project.
      */
     void apply(Project project) {
 
-        this.project = project;
+        this.project = project
 
         project.apply plugin: 'com.android.library'
         // We could use "maven-publish" in a future. Right now, it does not support Android libraries (aar).
