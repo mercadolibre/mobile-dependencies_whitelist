@@ -244,6 +244,7 @@ If you want to improve the Publisher plugins, you should follow these steps:
 
 ### base
 
+- 1.1: Added mavenCentral() as default repository.
 - 1.0: First version of the plugin!
 
 ## Further help
