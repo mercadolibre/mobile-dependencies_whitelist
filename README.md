@@ -1,13 +1,16 @@
-MercadoLibre Android Library Publisher Plugins for Gradle
+MercadoLibre Gradle Android Plugins for Gradle
 ==============================
 
 ## What is this?
-This project includes two Gradle plugins to make the Android library developer's life easier:
+This project includes three Gradle plugins to make the Android library developer's life easier:
 
 1. aar-publisher
 2. jar-publisher
+3. base
 
-These plugins add new tasks to the Gradle build script that applies them. The goal of these tasks is to publish Android libraries to Maven repositories, but running some other important tasks before:
+## What do the aar-publisher / jar-publisher plugins do for us?
+
+These plugins add new tasks to the Gradle build script that applies them (except the base plugin). The goal of these tasks is to publish Android libraries to Maven repositories, but running some other important tasks before:
 
 1. Generate JAR containing source code per each Android variant.
 2. Generate HTMLs with all the related Javadoc per each Android variant.
@@ -36,6 +39,7 @@ Simple. You just need to apply the plugin and configure it in the build script, 
 **Parent build.gradle**
 ```groovy
 apply plugin: 'idea'
+apply plugin: 'com.mercadolibre.android.gradle.base' // This sets up our custom Nexus repositories. It is also important because it turns off the Gradle cache for dynamic versions.
 
 buildscript {
 	repositories { // This repositories are used when building your project. In this case, we need to tell Gradle to use our repositories in order to find the Gradle Publisher plugins.
@@ -46,19 +50,8 @@ buildscript {
     }
     dependencies {
     	classpath 'com.android.tools.build:gradle:1.0.0'
+        classpath 'com.mercadolibre.android.gradle:base:1.0'
         classpath 'com.mercadolibre.android.gradle.publisher:aar-publisher:1.1'
-    }
-}
-    
-allprojects {
-    repositories {
-        jcenter()
-        maven {
-            url 'http://maven-mobile.melicloud.com/nexus/content/repositories/releases'
-        }
-        maven {
-            url 'http://maven-mobile.melicloud.com/nexus/content/repositories/experimental'
-        }
     }
 }
 
@@ -136,6 +129,7 @@ Simple. You just need to apply the plugin and configure it in the build script, 
 **Parent build.gradle**
 ```groovy
 apply plugin: 'idea'
+apply plugin: 'com.mercadolibre.android.gradle.base' // This sets up our custom Nexus repositories. It is also important because it turns off the Gradle cache for dynamic versions.
 
 buildscript {
     repositories { // This repositories are used when building your project. In this case, we need to tell Gradle to use our repositories in order to find the Gradle Publisher plugins.
@@ -146,20 +140,9 @@ buildscript {
    	}
     dependencies {
         classpath 'com.android.tools.build:gradle:1.0.0'
+        classpath 'com.mercadolibre.android.gradle:base:1.0'
         classpath 'com.mercadolibre.android.gradle.publisher:jar-publisher:1.1'
     }
-}
-    
-allprojects {
-    repositories {
-        jcenter()
-        maven {
-            url 'http://maven-mobile.melicloud.com/nexus/content/repositories/releases'
-        }
-        maven {
-            url 'http://maven-mobile.melicloud.com/nexus/content/repositories/experimental'
-        }
-	}
 }
 
 idea {
@@ -191,6 +174,47 @@ dependencies {
 ```    
 As you can see, there is no need to apply the _java_ nor the _maven_ plugins, as they are automatically applied by the jar-publisher plugin.
 
+## What does the base plugin do for us?
+
+This plugin helps us on configuring the custom Nexus repositories when using our custom Android Libraries as dependencies in Gradle.
+
+All you have to do is:
+
+**Parent build.gradle**
+```groovy
+apply plugin: 'idea'
+apply plugin: 'com.mercadolibre.android.gradle.base' // This is the plugin!
+
+buildscript {
+    repositories {
+        jcenter()
+        maven {
+            url 'http://maven-mobile.melicloud.com/nexus/content/repositories/releases'
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.0.0'
+        classpath 'com.mercadolibre.android.gradle:base:1.0' // Let Gradle know that we are going to need this plugin.
+    }
+}
+
+idea {
+    module {
+        downloadJavadoc = true
+        downloadSources = true
+    }
+}
+```   
+
+**Your module's build.gradle**
+```groovy
+dependencies {
+	// The following dependencies are just examples! Notice that we are using a wildcard to always get the latest EXPERIMENTAL artifact from particular versions. The Base plugin handles the Gradle cache for us, so that this module is always pointing to the latest EXPERIMENTAL dependencies.
+    compile ('com.mercadolibre.android:networking:0.0.1-EXPERIMENTAL-+')
+    compile ('com.mercadolibre.android:commons:0.1.0-EXPERIMENTAL-+@aar')
+}
+```   
+
 ## How to improve or compile the plugins?
 If you want to improve the Publisher plugins, you should follow these steps:
 
@@ -201,8 +225,8 @@ If you want to improve the Publisher plugins, you should follow these steps:
 5. Publish a new version of the plugins to the plugins repository, with any of these methods:
     1. Locally (on your .m2/repository directory): `./gradlew aar-publisher:install` or `./gradlew jar-publisher:install`
     2. Remotelly (on Nexus): `./gradlew aar-publisher:uploadArchives` or `./gradlew jar-publisher:uploadArchives` - You can check if the plugin has been uploaded by browsing [Nexus](http://maven-mobile.melicloud.com/nexus/content/repositories/). If you want to publish as a snapshot, make sure the version ends with "-SNAPSHOT", otherwise it will get uploaded as a release. See the inner build.gradle to modify the version.
-    
-## Possible errors
+
+## Possible errors with jar-publisher and aar-publisher
 
 - If you get a 400 HTTP error while uploading the artifacts, make sure you are not trying to publish an existing release version. For instance, Nexus repository refuses to save an artifact in the release directory if the version already exists.
 
@@ -216,6 +240,10 @@ If you want to improve the Publisher plugins, you should follow these steps:
 ### aar-publisher
 
 - 1.1: Removed `publishAarSnapshot`. Added `publishAarExperimental`.
+- 1.0: First version of the plugin!
+
+### base
+
 - 1.0: First version of the plugin!
 
 ## Further help
