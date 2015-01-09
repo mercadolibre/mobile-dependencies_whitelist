@@ -25,6 +25,7 @@ class BasePlugin implements Plugin<Project> {
             // Set the default repositories.
             repositories {
                 jcenter()
+                mavenLocal()
                 mavenCentral()
                 maven {
                     url 'http://maven-mobile.melicloud.com/nexus/content/repositories/releases'
