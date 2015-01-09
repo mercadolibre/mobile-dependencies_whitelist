@@ -50,7 +50,7 @@ buildscript {
     }
     dependencies {
     	classpath 'com.android.tools.build:gradle:1.0.0'
-        classpath 'com.mercadolibre.android.gradle:base:1.1'
+        classpath 'com.mercadolibre.android.gradle:base:1.2'
         classpath 'com.mercadolibre.android.gradle.publisher:aar-publisher:1.1'
     }
 }
@@ -140,7 +140,7 @@ buildscript {
    	}
     dependencies {
         classpath 'com.android.tools.build:gradle:1.0.0'
-        classpath 'com.mercadolibre.android.gradle:base:1.1'
+        classpath 'com.mercadolibre.android.gradle:base:1.2'
         classpath 'com.mercadolibre.android.gradle.publisher:jar-publisher:1.1'
     }
 }
@@ -194,7 +194,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:1.0.0'
-        classpath 'com.mercadolibre.android.gradle:base:1.1' // Let Gradle know that we are going to need this plugin.
+        classpath 'com.mercadolibre.android.gradle:base:1.2' // Let Gradle know that we are going to need this plugin.
     }
 }
 
