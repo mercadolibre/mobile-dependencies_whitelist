@@ -176,7 +176,10 @@ As you can see, there is no need to apply the _java_ nor the _maven_ plugins, as
 
 ## What does the base plugin do for us?
 
-This plugin helps us on configuring the custom Nexus repositories when using our custom Android Libraries as dependencies in Gradle.
+This plugin helps us on the following things:
+
+1. It configures the custom Nexus repositories when using our custom Android Libraries as dependencies in Gradle.
+2. It links the sources of the dependencies, for the two possible packagings (JARs and AARs), if the dependency is declared as 'compile'. This does not work for 'provided' dependencies due to a bug in Gradle/AS.
 
 All you have to do is:
 
