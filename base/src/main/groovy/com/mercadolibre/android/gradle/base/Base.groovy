@@ -117,7 +117,7 @@ class BasePlugin implements Plugin<Project> {
     }
 
     /**
-     * Adds the sources JAR to the root's SOURCES child, if it does not exist already.
+     * Adds the sources JAR to the root's SOURCES child, if it does not exist already. If the JAR is not found, it is downloaded from the repositories.
      * @param libraryXml the file pointing to the XML of the library.
      * @param root the root node.
      * @param groupId the groupId of the library.
@@ -127,7 +127,7 @@ class BasePlugin implements Plugin<Project> {
     private void addSources(File libraryXml, Node root, String groupId, String artifactId, String version) {
 
         // Get the path of the artifact cache directory.
-        File gradleCacheDir = project.file(project.gradle.getGradleUserHomeDir().absolutePath + '/caches/modules-2/files-2.1/' + groupId + '/' + artifactId + '/' + version)
+        File gradleCacheDir = project.file(project.gradle.getGradleUserHomeDir().absolutePath + File.separator + 'caches' + File.separator + 'modules-2' + File.separator + 'files-2.1' + File.separator + groupId + File.separator + artifactId + File.separator + version)
         if (gradleCacheDir.exists() && gradleCacheDir.isDirectory()) {
 
             // Get the hash directories and sort them by the 'last modified' attribute.
@@ -138,6 +138,8 @@ class BasePlugin implements Plugin<Project> {
                 }
             });
 
+            boolean sourcesExist = false
+
             // Get the first hash directory that contains a JAR with sources,
             // and use that to make the library point to its sources.
             for (File hashDir : hashDirs) {
@@ -146,10 +148,103 @@ class BasePlugin implements Plugin<Project> {
                     if (files.size() > 0 && files[0].absolutePath.contains(artifactId + '-' + version + '-sources.jar')) {
                         root.library[0].SOURCES[0].appendNode('root', [url: 'jar://' + files[0].absolutePath + '!/'])
                         new XmlNodePrinter(new PrintWriter(new FileWriter(libraryXml))).print(root)
+                        sourcesExist = true
                         break;
                     }
                 }
             }
+
+            // If the sources don't exist, try to get them from the repositories.
+            if (!sourcesExist) {
+
+                String sha1 = null;
+                String repositoryUrl = null;
+
+                // For all the repositories...
+                project.repositories.each {
+
+                    // If we still did not found the location, continue iterating through
+                    // the repositories.
+                    if (sha1 == null) {
+
+                        // Make sure the url ends with '/'.
+                        String currentRepositoryUrl = it.getUrl().toString()
+                        if (!currentRepositoryUrl.endsWith('/')) {
+                            currentRepositoryUrl += '/'
+                        }
+
+                        // Get the SHA1.
+                        sha1 = fetchSha1(currentRepositoryUrl, groupId, artifactId, version)
+                        if (sha1 != null) {
+                            repositoryUrl = currentRepositoryUrl
+                        }
+
+                    }
+                }
+
+                // If we have the SHA1, that means that we found the repository with the sources.
+                // We can download it, and create the directory in the Gradle cache, using the SHA1.
+                if (sha1 != null) {
+
+                    boolean shouldDownload = true
+
+                    // Create the SHA1 directory if it does not exist.
+                    File sha1Directory = project.file(gradleCacheDir.absolutePath + File.separator + sha1)
+                    if (!sha1Directory.exists()) {
+                        shouldDownload = sha1Directory.mkdir()
+                    }
+
+                    // Download the sources from the resolved repository into the SHA1 directory just created.
+                    if (shouldDownload) {
+
+                        File sourcesFile = project.file(sha1Directory.absolutePath + File.separator + artifactId + '-' + version + '-sources.jar')
+                        BufferedOutputStream fileOutputStream = new BufferedOutputStream(new FileOutputStream(sourcesFile))
+                        try {
+                            fileOutputStream << new URL(repositoryUrl + groupId.replace('.', '/') + '/' + artifactId + '/' + version + '/' + artifactId + '-' + version + '-sources.jar').openStream()
+                        } catch (IOException e) {
+                            project.logger.error '[BasePlugin] An exception occurred: ' + e.toString()
+                        } finally {
+                            fileOutputStream.close()
+                        }
+
+                        // If the downloaded was successful, then add the source.
+                        if (sourcesFile.exists()) {
+                            root.library[0].SOURCES[0].appendNode('root', [url: 'jar://' + sourcesFile.absolutePath + '!/'])
+                            new XmlNodePrinter(new PrintWriter(new FileWriter(libraryXml))).print(root)
+                        }
+                    }
+                }
+            }
         }
+    }
+
+    /**
+     * Fetches the SHA1 of the specified artifact from the repositories (it actually gets the first SHA1 found).
+     * @param repositoryUrl the repository URL.
+     * @param groupId the groupId of the dependency.
+     * @param artifactId the artifactId of the dependency.
+     * @param version the version of the dependency.
+     * @return
+     */
+    private String fetchSha1(String repositoryUrl, String groupId, String artifactId, String version) {
+
+        String sha1Url = repositoryUrl + groupId.replace('.', '/') + '/' + artifactId + '/' + version + '/' + artifactId + '-' + version + '-sources.jar.sha1'
+        String sha1 = null;
+        ByteArrayOutputStream sha1OutputStream = new ByteArrayOutputStream()
+        InputStream sha1InputStream = null
+        try {
+            sha1InputStream = new URL(sha1Url).openStream()
+            sha1OutputStream << sha1InputStream
+            sha1 = sha1OutputStream.toString()
+        } catch (FileNotFoundException ignored) {
+        } catch (IOException e) {
+            project.logger.error '[BasePlugin] An exception occurred: ' + e.toString()
+        } finally {
+            sha1OutputStream.close()
+            if (sha1InputStream != null) {
+                sha1InputStream.close()
+            }
+        }
+        return sha1;
     }
 }

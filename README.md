@@ -50,7 +50,7 @@ buildscript {
     }
     dependencies {
     	classpath 'com.android.tools.build:gradle:1.0.0'
-        classpath 'com.mercadolibre.android.gradle:base:1.2'
+        classpath 'com.mercadolibre.android.gradle:base:1.4'
         classpath 'com.mercadolibre.android.gradle.publisher:aar-publisher:1.1'
     }
 }
@@ -140,7 +140,7 @@ buildscript {
    	}
     dependencies {
         classpath 'com.android.tools.build:gradle:1.0.0'
-        classpath 'com.mercadolibre.android.gradle:base:1.2'
+        classpath 'com.mercadolibre.android.gradle:base:1.4'
         classpath 'com.mercadolibre.android.gradle.publisher:jar-publisher:1.1'
     }
 }
@@ -179,7 +179,7 @@ As you can see, there is no need to apply the _java_ nor the _maven_ plugins, as
 This plugin helps us on the following things:
 
 1. It configures the custom Nexus repositories when using our custom Android Libraries as dependencies in Gradle.
-2. It links the sources of the dependencies, for the two possible packagings (JARs and AARs), if the dependency is declared as 'compile'. This does not work for 'provided' dependencies due to a bug in Gradle/AS.
+2. It links the sources of the dependencies, for the two possible packagings (JARs and AARs).
 
 All you have to do is:
 
@@ -197,7 +197,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:1.0.0'
-        classpath 'com.mercadolibre.android.gradle:base:1.2' // Let Gradle know that we are going to need this plugin.
+        classpath 'com.mercadolibre.android.gradle:base:1.4' // Let Gradle know that we are going to need this plugin.
     }
 }
 
@@ -247,6 +247,7 @@ If you want to improve the Publisher plugins, you should follow these steps:
 
 ### base
 
+- 1.4: It now attaches the sources for 'provided' dependencies (JARs and AARs).
 - 1.3: It now attaches the sources for 'compile' dependencies (JARs and AARs). It does not work with 'provided' dependencies (next version).
 - 1.2: Added mavenLocal() as default repository.
 - 1.1: Added mavenCentral() as default repository.
