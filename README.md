@@ -247,6 +247,7 @@ If you want to improve the Publisher plugins, you should follow these steps:
 
 ### base
 
+- 1.3: It now attaches the sources for 'compile' dependencies (JARs and AARs). It does not work with 'provided' dependencies (next version).
 - 1.2: Added mavenLocal() as default repository.
 - 1.1: Added mavenCentral() as default repository.
 - 1.0: First version of the plugin!
