@@ -38,7 +38,6 @@ Simple. You just need to apply the plugin and configure it in the build script, 
 
 **Parent build.gradle**
 ```groovy
-apply plugin: 'idea'
 apply plugin: 'com.mercadolibre.android.gradle.base' // This sets up our custom Nexus repositories. It is also important because it turns off the Gradle cache for dynamic versions.
 
 buildscript {
@@ -53,13 +52,6 @@ buildscript {
         classpath 'com.mercadolibre.android.gradle:base:1.4'
         classpath 'com.mercadolibre.android.gradle.publisher:aar-publisher:1.2'
     }
-}
-
-idea {
-    module {
-        downloadJavadoc = true
-        downloadSources = true
-	}
 }
 ```
 **Your module's build.gradle**
@@ -128,7 +120,6 @@ Simple. You just need to apply the plugin and configure it in the build script, 
 
 **Parent build.gradle**
 ```groovy
-apply plugin: 'idea'
 apply plugin: 'com.mercadolibre.android.gradle.base' // This sets up our custom Nexus repositories. It is also important because it turns off the Gradle cache for dynamic versions.
 
 buildscript {
@@ -142,13 +133,6 @@ buildscript {
         classpath 'com.android.tools.build:gradle:1.0.0'
         classpath 'com.mercadolibre.android.gradle:base:1.4'
         classpath 'com.mercadolibre.android.gradle.publisher:jar-publisher:1.1'
-    }
-}
-
-idea {
-    module {
-        downloadJavadoc = true
-        downloadSources = true
     }
 }
 ```    
@@ -185,7 +169,6 @@ All you have to do is:
 
 **Parent build.gradle**
 ```groovy
-apply plugin: 'idea'
 apply plugin: 'com.mercadolibre.android.gradle.base' // This is the plugin!
 
 buildscript {
@@ -198,13 +181,6 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:1.0.0'
         classpath 'com.mercadolibre.android.gradle:base:1.4' // Let Gradle know that we are going to need this plugin.
-    }
-}
-
-idea {
-    module {
-        downloadJavadoc = true
-        downloadSources = true
     }
 }
 ```   
