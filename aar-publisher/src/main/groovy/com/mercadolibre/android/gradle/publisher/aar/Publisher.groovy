@@ -78,6 +78,7 @@ public class PublisherPlugin implements Plugin<Project> {
         createPublishReleaseTask()
         createPublishExperimentalTask()
         createTagVersionTask()
+        resetUploadArchivesDependencies()
     }
 
     /**
@@ -188,18 +189,30 @@ public class PublisherPlugin implements Plugin<Project> {
     }
 
     /**
+     * Resets the "uploadArchives" task dependencies so that we can configure its
+     * artifacts in a custom way, depending on the variants.
+     */
+    private void resetUploadArchivesDependencies() {
+        project.tasks['uploadArchives'].dependsOn.clear()
+    }
+
+    /**
      * Creates the "publishAarRelease" task.
      */
     private void createPublishReleaseTask() {
         def task = project.tasks.create 'publishAarRelease'
         task.setDescription('Publishes a new release version of the AAR library.')
-        task.dependsOn 'assemble', 'check', 'releaseSourcesJar', 'releaseJavadocJar'
+        task.dependsOn 'assembleRelease', 'check', 'releaseSourcesJar' //, 'releaseJavadocJar' --> // Uncomment to upload Javadocs. This is not working well so it is turned off.
         task.finalizedBy 'uploadArchives'
 
         task.doLast {
-            // Add sources artifact from 'release' variant.
+            // Set artifacts.
+            project.configurations.archives.artifacts.clear()
+            project.artifacts.add('archives', project.file("$project.buildDir/outputs/aar/${project.name}-release.aar"))
             project.artifacts.add('archives', project.tasks['releaseSourcesJar'])
-            project.artifacts.add('archives', project.tasks['releaseJavadocJar'])
+
+            // Uncomment the following line to upload Javadocs. This is not working well so it is turned off.
+            // project.artifacts.add('archives', project.tasks['releaseJavadocJar'])
         }
     }
 
@@ -209,17 +222,19 @@ public class PublisherPlugin implements Plugin<Project> {
     private void createPublishExperimentalTask() {
         def task = project.tasks.create 'publishAarExperimental'
         task.setDescription('Publishes a new experimental version of the AAR library.')
-        task.dependsOn 'assemble', 'debugSourcesJar', 'debugJavadocJar'
+        task.dependsOn 'assembleDebug', 'debugSourcesJar' //, 'debugJavadocJar' --> // Uncomment to upload Javadocs. This is not working well so it is turned off.
         task.finalizedBy 'uploadArchives'
 
         task.doLast {
-            // Add sources artifact from 'debug' variant.
+
+            // Set the artifacts.
+            project.configurations.archives.artifacts.clear()
+            project.artifacts.add('archives', project.file("$project.buildDir/outputs/aar/${project.name}-debug.aar"))
             project.artifacts.add('archives', project.tasks['debugSourcesJar'])
-            project.artifacts.add('archives', project.tasks['debugJavadocJar'])
-            // Tell uploadArchives task to use the 'debug' variant aar.
-            project.android {
-                defaultPublishConfig 'debug'
-            }
+
+            // Uncomment the following line to upload Javadocs. This is not working well so it is turned off.
+            // project.artifacts.add('archives', project.tasks['debugJavadocJar'])
+
             project.uploadArchives.repositories.mavenDeployer.pom.version += '-EXPERIMENTAL-' + getTimestamp()
             project.uploadArchives.repositories.mavenDeployer.repository.url = getPublisherContainer().experimentalRepository.url
             project.uploadArchives.repositories.mavenDeployer.repository.authentication.userName = getPublisherContainer().experimentalRepository.username
@@ -233,17 +248,19 @@ public class PublisherPlugin implements Plugin<Project> {
     private void createPublishLocalTask() {
         def task = project.tasks.create 'publishAarLocal'
         task.setDescription('Publishes a new local version of the AAR library, locally on the .m2/repository directory.')
-        task.dependsOn 'assemble', 'debugSourcesJar', 'debugJavadocJar'
+        task.dependsOn 'assembleDebug', 'debugSourcesJar' //, 'debugJavadocJar' --> // Uncomment to upload Javadocs. This is not working well so it is turned off.
         task.finalizedBy 'uploadArchives'
 
         task.doLast {
-            // Add sources artifact from 'debug' variant.
+
+            // Set the artifacts.
+            project.configurations.archives.artifacts.clear()
+            project.artifacts.add('archives', project.file("$project.buildDir/outputs/aar/${project.name}-debug.aar"))
             project.artifacts.add('archives', project.tasks['debugSourcesJar'])
-            project.artifacts.add('archives', project.tasks['debugJavadocJar'])
-            // Tell uploadArchives task to use the 'debug' variant aar.
-            project.android {
-                defaultPublishConfig 'debug'
-            }
+
+            // Uncomment the following line to upload Javadocs. This is not working well so it is turned off.
+            // project.artifacts.add('archives', project.tasks['debugJavadocJar'])
+
             project.uploadArchives.repositories.mavenDeployer.pom.version += '-LOCAL-' + getTimestamp()
             // Point the repository to our .m2/repository directory.
             project.uploadArchives.repositories.mavenDeployer.repository.url = "file://${System.properties['user.home']}/.m2/repository"

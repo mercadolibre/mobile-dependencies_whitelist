@@ -13,8 +13,8 @@ This project includes three Gradle plugins to make the Android library developer
 These plugins add new tasks to the Gradle build script that applies them (except the base plugin). The goal of these tasks is to publish Android libraries to Maven repositories, but running some other important tasks before:
 
 1. Generate JAR containing source code per each Android variant.
-2. Generate HTMLs with all the related Javadoc per each Android variant.
-3. Generate JAR containing the Javadoc's HTMLs.
+2. Generate HTMLs with all the related Javadoc per each Android variant (turned off in the latest versions).
+3. Generate JAR containing the Javadoc's HTMLs (turned off in the latest versions).
 4. Create lint reports (only if publishing as release - see below).
 5. Run Android (Instrumentation) tests (only for aar-publisher).
 6. Run JUnit tests (only for jar-publisher).
@@ -51,7 +51,7 @@ buildscript {
     dependencies {
     	classpath 'com.android.tools.build:gradle:1.0.0'
         classpath 'com.mercadolibre.android.gradle:base:1.4'
-        classpath 'com.mercadolibre.android.gradle.publisher:aar-publisher:1.1'
+        classpath 'com.mercadolibre.android.gradle.publisher:aar-publisher:1.2'
     }
 }
 
@@ -214,7 +214,7 @@ idea {
 dependencies {
 	// The following dependencies are just examples! Notice that we are using a wildcard to always get the latest EXPERIMENTAL artifact from particular versions. The Base plugin handles the Gradle cache for us, so that this module is always pointing to the latest EXPERIMENTAL dependencies.
     compile ('com.mercadolibre.android:networking:0.0.1-EXPERIMENTAL-+')
-    compile ('com.mercadolibre.android:commons:0.1.0-EXPERIMENTAL-+@aar')
+    compile ('com.mercadolibre.android:commons:0.1.0-EXPERIMENTAL-+')
 }
 ```   
 
@@ -242,6 +242,7 @@ If you want to improve the Publisher plugins, you should follow these steps:
 
 ### aar-publisher
 
+- 1.2: Bugfixing. Turned off javadoc generation as it is currently working bad.
 - 1.1: Removed `publishAarSnapshot`. Added `publishAarExperimental`.
 - 1.0: First version of the plugin!
 
@@ -254,4 +255,4 @@ If you want to improve the Publisher plugins, you should follow these steps:
 - 1.0: First version of the plugin!
 
 ## Further help
-If you need further help, please contact [martin.heras@mercadolibre.com](mailto:martin.heras@mercadolibre.com).
+If you need further help, please contact [martin.heras@mercadolibre.com](mailto:martin.heras@mercadolibre.com) or [mobile-it@mercadolibre.com](mailto:mobile-it@mercadolibre.com).
