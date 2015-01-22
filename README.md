@@ -49,7 +49,7 @@ buildscript {
     }
     dependencies {
     	classpath 'com.android.tools.build:gradle:1.0.0'
-        classpath 'com.mercadolibre.android.gradle:base:1.4'
+        classpath 'com.mercadolibre.android.gradle:base:1.5'
         classpath 'com.mercadolibre.android.gradle.publisher:aar-publisher:1.2'
     }
 }
@@ -131,7 +131,7 @@ buildscript {
    	}
     dependencies {
         classpath 'com.android.tools.build:gradle:1.0.0'
-        classpath 'com.mercadolibre.android.gradle:base:1.4'
+        classpath 'com.mercadolibre.android.gradle:base:1.5'
         classpath 'com.mercadolibre.android.gradle.publisher:jar-publisher:1.1'
     }
 }
@@ -180,7 +180,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:1.0.0'
-        classpath 'com.mercadolibre.android.gradle:base:1.4' // Let Gradle know that we are going to need this plugin.
+        classpath 'com.mercadolibre.android.gradle:base:1.5' // Let Gradle know that we are going to need this plugin.
     }
 }
 ```   
@@ -224,7 +224,8 @@ If you want to improve the Publisher plugins, you should follow these steps:
 
 ### base
 
-- 1.4: It now attaches the sources for 'provided' dependencies (JARs and AARs).
+- 1.5: Fixed bug: the plugin is not attaching the sources when pointing to a LOCAL version.
+- 1.4: It now attaches the sources for 'provided' dependencies (JARs and AARs) (although you should not use 'provided' in any case...).
 - 1.3: It now attaches the sources for 'compile' dependencies (JARs and AARs). It does not work with 'provided' dependencies (next version).
 - 1.2: Added mavenLocal() as default repository.
 - 1.1: Added mavenCentral() as default repository.
