@@ -50,7 +50,7 @@ buildscript {
     dependencies {
     	classpath 'com.android.tools.build:gradle:1.0.0'
         classpath 'com.mercadolibre.android.gradle:base:1.5'
-        classpath 'com.mercadolibre.android.gradle.publisher:aar-publisher:1.2'
+        classpath 'com.mercadolibre.android.gradle.publisher:aar-publisher:1.3'
     }
 }
 ```
@@ -208,6 +208,7 @@ If you want to improve the Publisher plugins, you should follow these steps:
 ## Possible errors with jar-publisher and aar-publisher
 
 - If you get a 400 HTTP error while uploading the artifacts, make sure you are not trying to publish an existing release version. For instance, Nexus repository refuses to save an artifact in the release directory if the version already exists.
+- As of 1.3, aar-publisher throws an exception when a local dependency is found in the build.gradle file, to prevent publishing invalid artifacts.
 
 ## Changelog
 
@@ -218,6 +219,7 @@ If you want to improve the Publisher plugins, you should follow these steps:
 
 ### aar-publisher
 
+- 1.3: Prevents to have local dependencies declared in your build.gradle (like `compile project(':anotherProject')`), as this way is invalid for published artifacts.
 - 1.2: Bugfixing. Turned off javadoc generation as it is currently working bad.
 - 1.1: Removed `publishAarSnapshot`. Added `publishAarExperimental`.
 - 1.0: First version of the plugin!

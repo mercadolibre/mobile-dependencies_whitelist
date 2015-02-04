@@ -51,6 +51,27 @@ public class PublisherPlugin implements Plugin<Project> {
     }
 
     /**
+     * Creates the "checkLocalDependencies" task.
+     */
+    private void createCheckLocalDependenciesTask() {
+        def task = project.tasks.create 'checkLocalDependencies'
+        task.setDescription('Checks that there is no declared local dependency in the build script, as this way of declaring dependencies is invalid when publishing artifacts.')
+        task.doLast {
+            def localDependencyFound = false;
+            project.configurations.each { conf ->
+                conf.allDependencies.each { dep ->
+                    if ("unspecified".equalsIgnoreCase(dep.version)) {
+                        localDependencyFound = true;
+                    }
+                }
+            }
+            if (localDependencyFound) {
+                throw new GradleException("A local dependency is declared in '${project.name}'. Make sure that you are not declaring a dependency like \"compile project('anotherProject')\", as it is invalid for published artifacts.")
+            }
+        }
+    }
+
+    /**
      * Gets the 'publisher' container.
      * @return the 'publisher' container.
      */
@@ -78,6 +99,7 @@ public class PublisherPlugin implements Plugin<Project> {
         createPublishReleaseTask()
         createPublishExperimentalTask()
         createTagVersionTask()
+        createCheckLocalDependenciesTask()
         resetUploadArchivesDependencies()
     }
 
@@ -202,7 +224,7 @@ public class PublisherPlugin implements Plugin<Project> {
     private void createPublishReleaseTask() {
         def task = project.tasks.create 'publishAarRelease'
         task.setDescription('Publishes a new release version of the AAR library.')
-        task.dependsOn 'assembleRelease', 'check', 'releaseSourcesJar' //, 'releaseJavadocJar' --> // Uncomment to upload Javadocs. This is not working well so it is turned off.
+        task.dependsOn 'checkLocalDependencies', 'assembleRelease', 'check', 'releaseSourcesJar' //, 'releaseJavadocJar' --> // Uncomment to upload Javadocs. This is not working well so it is turned off.
         task.finalizedBy 'uploadArchives'
 
         task.doLast {
@@ -222,7 +244,7 @@ public class PublisherPlugin implements Plugin<Project> {
     private void createPublishExperimentalTask() {
         def task = project.tasks.create 'publishAarExperimental'
         task.setDescription('Publishes a new experimental version of the AAR library.')
-        task.dependsOn 'assembleDebug', 'debugSourcesJar' //, 'debugJavadocJar' --> // Uncomment to upload Javadocs. This is not working well so it is turned off.
+        task.dependsOn 'checkLocalDependencies', 'assembleDebug', 'debugSourcesJar' //, 'debugJavadocJar' --> // Uncomment to upload Javadocs. This is not working well so it is turned off.
         task.finalizedBy 'uploadArchives'
 
         task.doLast {
@@ -248,7 +270,7 @@ public class PublisherPlugin implements Plugin<Project> {
     private void createPublishLocalTask() {
         def task = project.tasks.create 'publishAarLocal'
         task.setDescription('Publishes a new local version of the AAR library, locally on the .m2/repository directory.')
-        task.dependsOn 'assembleDebug', 'debugSourcesJar' //, 'debugJavadocJar' --> // Uncomment to upload Javadocs. This is not working well so it is turned off.
+        task.dependsOn 'checkLocalDependencies', 'assembleDebug', 'debugSourcesJar' //, 'debugJavadocJar' --> // Uncomment to upload Javadocs. This is not working well so it is turned off.
         task.finalizedBy 'uploadArchives'
 
         task.doLast {
