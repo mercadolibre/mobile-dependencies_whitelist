@@ -1,13 +1,17 @@
 package com.mercadolibre.android.gradle.publisher.aar
 
+import org.apache.commons.lang.mutable.MutableInt
 import org.gradle.api.GradleException
 import org.gradle.api.Plugin
 import org.gradle.api.Project
+import org.gradle.api.file.FileCollection
+import org.gradle.api.file.FileTree
 import org.gradle.api.tasks.Exec
 import org.gradle.api.tasks.bundling.Jar
 import org.gradle.api.tasks.javadoc.Javadoc
 
 import java.text.SimpleDateFormat
+import java.util.concurrent.atomic.AtomicReference
 
 /**
  * Gradle plugin for publishing AARs after running some important tasks before:
@@ -100,7 +104,64 @@ public class PublisherPlugin implements Plugin<Project> {
         createPublishExperimentalTask()
         createTagVersionTask()
         createCheckLocalDependenciesTask()
+        createRobolectricTestFile()
         resetUploadArchivesDependencies()
+    }
+
+    private void createRobolectricTestFile() {
+        //Optimize app-example name
+        project.android.sourceSets.test.java.srcDirs += "../app/build/generated/source/r/debug"
+
+        def task = project.tasks.create 'createRobolectricFiles'
+        task.setDescription('Creates \"test-project.properties\" file necessary for Robolectric unit testing.')
+        task.dependsOn 'assemble'
+
+        task.doLast {
+            File file = project.file("src/main/test-project.properties")
+            if (file.exists()){
+                if (!file.delete()){
+                    throw new GradleException("Cannot delete \"test-project.properties\" file. Check if some process is using it and close it.")
+                }
+            }
+            file.createNewFile()
+
+            File projectFile = project.file("src/main/project.properties")
+            if (!projectFile.exists())
+                projectFile.createNewFile()
+
+            File[] tree = new File("build/intermediates/exploded-aar").listFiles()
+
+            def path = "../../build/intermediates/exploded-aar/"
+            def libCounter = new AtomicReference<Integer>()
+            libCounter.set(new Integer(1))
+
+            tree.each {File tmpFile ->
+                addDirToFile(file, tmpFile, path, libCounter)
+            }
+        }
+    }
+
+    private void addDirToFile(File roboFile, File directory, String path, AtomicReference<Integer> dirCounter){
+        File[] tree = directory.listFiles()
+
+        def hasFiles = false
+
+        tree.each { File file ->
+            if (!file.isDirectory())
+                hasFiles = true
+        }
+
+        if (hasFiles){
+            roboFile.append("android.library.reference.${dirCounter.get().intValue()}=${path}${directory.name}\n")
+            def oldValue = dirCounter.get().intValue()
+            dirCounter.set(new Integer(oldValue + 1))
+        } else {
+            path += directory.name
+            path += "/"
+            tree.each { File file ->
+                addDirToFile(roboFile, file, path, dirCounter)
+            }
+        }
     }
 
     /**
