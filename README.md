@@ -29,6 +29,7 @@ In order to get all of this done, the plugins add new tasks to your build script
 1. `publishAarRelease` - Publishes the .aar (along with the sources and Javadoc) to the specified Maven releases repository. It runs all the checks before uploading the artifacts (lint, tests, etc.), and once they get uploaded, it tags the version in Git.
 2. `publishAarExperimental` - Same as `publishAarRelease`, but it uploads the artifacts to the specified Maven experimental repository. It does NOT tag the version in Git, as it is not a release.
 3. `publishAarLocal` - This is particularly useful during the development phase of the Android library. It overwrites the artifacts in your .m2/repository directory, so that you can code & test your code without uploading anything to a remote repository. This does NOT run lint so that we don't have to wait that long. It does not tag the version in Git either.
+4. `jacoco{buildType}` - This task creates a Jacoco Code Coverage Report for specified buildType. This task DOES NOT assemble your variant because of building times performance, you should assemble first desired variant. *I.E.: jacocoDebug*
 
 ## How to add aar-publisher to your project?
 
@@ -219,6 +220,7 @@ If you want to improve the Publisher plugins, you should follow these steps:
 
 ### aar-publisher
 
+- 1.4: `jacoco{buildType}` tasks added. One per build type will be created.
 - 1.3: Prevents to have local dependencies declared in your build.gradle (like `compile project(':anotherProject')`), as this way is invalid for published artifacts.
 - 1.2: Bugfixing. Turned off javadoc generation as it is currently working bad.
 - 1.1: Removed `publishAarSnapshot`. Added `publishAarExperimental`.
