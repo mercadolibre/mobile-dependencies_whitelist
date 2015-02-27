@@ -9,6 +9,7 @@ import org.gradle.api.file.FileTree
 import org.gradle.api.tasks.Exec
 import org.gradle.api.tasks.bundling.Jar
 import org.gradle.api.tasks.javadoc.Javadoc
+import org.gradle.testing.jacoco.tasks.JacocoReport
 
 import java.text.SimpleDateFormat
 import java.util.concurrent.atomic.AtomicReference
@@ -48,6 +49,9 @@ public class PublisherPlugin implements Plugin<Project> {
         project.apply plugin: 'com.android.library'
         // We could use "maven-publish" in a future. Right now, it does not support Android libraries (aar).
         project.apply plugin: 'maven'
+        // We apply jacoco plugin allowing us to create Unit tests code coverage report
+        project.apply plugin: 'jacoco'
+        project.jacoco.toolVersion = "0.7.1.201405082137"
 
         addPublisherContainer()
         setupUploadArchivesTask()
@@ -99,6 +103,7 @@ public class PublisherPlugin implements Plugin<Project> {
         createSourcesJarTasks()
         createJavadocTasks()
         createJavadocJarTasks()
+        createJacocoTasks()
         createPublishLocalTask()
         createPublishReleaseTask()
         createPublishExperimentalTask()
@@ -189,6 +194,58 @@ public class PublisherPlugin implements Plugin<Project> {
             javadocTask.exclude '**/BuildConfig.java'
             javadocTask.exclude '**/R.java'
             javadocTask.failOnError = false
+        }
+    }
+
+    /**
+     * Creates the tasks to generate Jacoco report, one per variant depending on Unit and Instrumentation tests.
+     * [incubating]
+     */
+    private void createJacocoTasks() {
+        project.android.libraryVariants.all { variant ->
+
+            //Define local variables to avoid accessing multiple times to the buildType object.
+            def buildTypeName = variant.buildType.name
+            def capitalizedBuildTypeName = buildTypeName.capitalize()
+            def taskName = "jacoco${capitalizedBuildTypeName}"
+
+            //Create and retrieve necesary tasks
+            def jacocoTask = project.tasks.create taskName, JacocoReport
+            def connectedAndroidTest = project.tasks.findByName("connectedAndroidTest")
+            def unitTest = project.tasks.findByName("test${capitalizedBuildTypeName}")
+
+            //We should disable Java Jacoco instrumentation because it colides with Android Jacoco plugin. We only use Java Jacoco to create a merged report.
+            unitTest.jacoco.enabled = false
+
+            //Define JacocoTasks and it's configuration
+            jacocoTask.description = "Generate Jacoco code coverage report after running tests for ${buildTypeName} build variant. [incubating]"
+            jacocoTask.group = "Reporting"
+
+            //By convention this is the sources folder
+            jacocoTask.sourceDirectories = project.files("src/main/java")
+
+            //Here is where execution data files are created. ConnectedAndroidTest and Test tasks generates them.
+            jacocoTask.executionData = project.files("./jacoco.exec", "build/outputs/code-coverage/connected/coverage.ec")
+
+            //Ignore auto-generated classes
+            jacocoTask.classDirectories = project.fileTree(dir: "./build/intermediates/classes/${buildTypeName}", excludes: [
+                    '**/R.class',
+                    '**/R$*.class',
+                    '**/BuildConfig.class'
+            ])
+
+            //Enable both reports
+            jacocoTask.reports.xml.enabled = true
+            jacocoTask.reports.html.enabled = true
+
+            //We need tests tasks to run first. They create the Jacoco execution data files.
+            jacocoTask.dependsOn unitTest
+            jacocoTask.dependsOn connectedAndroidTest
+
+            //If testCoverage is not enabled, Android Jacoco' plugin will not instrumentate project classes
+            if (!variant.buildType.testCoverageEnabled){
+                project.logger.warn("You should enable \"android.buildTypes.${buildTypeName}.testCoverageEnabled\" in your build.gradle in order to make \"${taskName}\" run.")
+            }
         }
     }
 
