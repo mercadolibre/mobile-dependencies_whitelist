@@ -220,6 +220,7 @@ If you want to improve the Publisher plugins, you should follow these steps:
 
 ### aar-publisher
 
+- 1.4: `jacoco{buildType}` tasks added. One per build type will be created.
 - 1.3: Prevents to have local dependencies declared in your build.gradle (like `compile project(':anotherProject')`), as this way is invalid for published artifacts.
 - 1.2: Bugfixing. Turned off javadoc generation as it is currently working bad.
 - 1.1: Removed `publishAarSnapshot`. Added `publishAarExperimental`.
