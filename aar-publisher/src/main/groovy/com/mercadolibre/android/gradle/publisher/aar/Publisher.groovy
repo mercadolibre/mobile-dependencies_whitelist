@@ -146,7 +146,7 @@ public class PublisherPlugin implements Plugin<Project> {
             //Define local variables to avoid accessing multiple times to the buildType object.
             def buildTypeName = variant.buildType.name
             def capitalizedBuildTypeName = buildTypeName.capitalize()
-            def taskName = "generate${capitalizedBuildTypeName}JacocoReport"
+            def taskName = "jacoco${capitalizedBuildTypeName}"
 
             //Create and retrieve necesary tasks
             def jacocoTask = project.tasks.create taskName, JacocoReport
