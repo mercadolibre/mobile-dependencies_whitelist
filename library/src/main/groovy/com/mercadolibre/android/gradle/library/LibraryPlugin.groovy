@@ -113,7 +113,8 @@ public class LibraryPlugin implements Plugin<Project> {
         createPublishLocalTask()
         createPublishReleaseTask()
         createPublishExperimentalTask()
-        createTagVersionTask()
+        //TODO Unncomment this when Git tagging needs to be used again.
+//        createTagVersionTask()
         createCheckLocalDependenciesTask()
         resetUploadArchivesDependencies()
     }
@@ -374,6 +375,7 @@ public class LibraryPlugin implements Plugin<Project> {
 
         task.dependsOn 'uploadArchives'
         project.tasks['uploadArchives'].finalizedBy task
+
         task.onlyIf {
             project.gradle.taskGraph.hasTask(project.tasks['publishAarRelease'])
         }
