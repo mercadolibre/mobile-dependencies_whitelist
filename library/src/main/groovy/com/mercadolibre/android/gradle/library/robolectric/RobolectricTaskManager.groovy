@@ -17,6 +17,10 @@ class RobolectricTaskManager {
      */
     private Project project;
 
+    /**
+     * Invoke this method using Gradle Project to apply Robolectric Tasks
+     * @param project The Gradle project
+     */
     public void apply(Project project){
         this.project = project;
 
@@ -41,7 +45,6 @@ class RobolectricTaskManager {
 
     private void hookToCleanTask() {
         def cleanTask = project.tasks.findByName("clean")
-
         cleanTask.finalizedBy "cleanRobolectricFiles"
     }
 
@@ -123,6 +126,10 @@ class RobolectricTaskManager {
         }
     }
 
+    /**
+     * Retrieves 'createRobolectricFiles' task for further use
+     * @return Robolectric files creation task
+     */
     public Task retrieveRobolecticFilesTask (){
         return project.tasks.findByName("createRobolectricFiles")
     }

@@ -296,7 +296,7 @@ public class LibraryPlugin implements Plugin<Project> {
     private void createPublishReleaseTask() {
         def task = project.tasks.create 'publishAarRelease'
         task.setDescription('Publishes a new release version of the AAR library.')
-        task.dependsOn 'checkLocalDependencies', 'assembleRelease', 'check', 'releaseSourcesJar' //, 'releaseJavadocJar' --> // Uncomment to upload Javadocs. This is not working well so it is turned off.
+        task.dependsOn 'checkLocalDependencies', 'assembleRelease', 'testRelease', 'check', 'releaseSourcesJar' //, 'releaseJavadocJar' --> // Uncomment to upload Javadocs. This is not working well so it is turned off.
         task.finalizedBy 'uploadArchives'
 
         task.doLast {
