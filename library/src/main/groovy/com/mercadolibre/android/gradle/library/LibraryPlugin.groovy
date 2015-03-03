@@ -1,5 +1,6 @@
-package com.mercadolibre.android.gradle.publisher.aar
+package com.mercadolibre.android.gradle.library
 
+import com.mercadolibre.android.gradle.library.robolectric.RobolectricTaskManager
 import org.gradle.api.GradleException
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -11,7 +12,7 @@ import org.gradle.testing.jacoco.tasks.JacocoReport
 import java.text.SimpleDateFormat
 
 /**
- * Gradle plugin for publishing AARs after running some important tasks before:
+ * Gradle plugin for Android Libraries. It provides some important tasks:
  *
  * <ol>
  *     <li>Apply com.android.library plugin.</li>
@@ -25,14 +26,19 @@ import java.text.SimpleDateFormat
  *     <li>Tag the version in Git (if release).</li>
  * </ol>
  *
- * @author Martin A. Heras
+ * @author Martin A. Heras & Nicolas Giagnoni
  */
-public class PublisherPlugin implements Plugin<Project> {
+public class LibraryPlugin implements Plugin<Project> {
 
     /**
      * The project.
      */
     private Project project;
+
+    /**
+     * Robolectric Tasks Manager
+     */
+    private RobolectricTaskManager robolectricManager;
 
     /**
      * Method called by Gradle when applying this plugin.
@@ -48,6 +54,10 @@ public class PublisherPlugin implements Plugin<Project> {
         // We apply jacoco plugin allowing us to create Unit tests code coverage report
         project.apply plugin: 'jacoco'
         project.jacoco.toolVersion = "0.7.1.201405082137"
+
+        // We init Robolectric Tasks
+        robolectricManager = new RobolectricTaskManager()
+        robolectricManager.apply(project)
 
         addPublisherContainer()
         setupUploadArchivesTask()
@@ -103,7 +113,8 @@ public class PublisherPlugin implements Plugin<Project> {
         createPublishLocalTask()
         createPublishReleaseTask()
         createPublishExperimentalTask()
-        createTagVersionTask()
+        //TODO Unncomment this when Git tagging needs to be used again.
+//        createTagVersionTask()
         createCheckLocalDependenciesTask()
         resetUploadArchivesDependencies()
     }
@@ -152,6 +163,7 @@ public class PublisherPlugin implements Plugin<Project> {
             def jacocoTask = project.tasks.create taskName, JacocoReport
             def connectedAndroidTest = project.tasks.findByName("connectedAndroidTest")
             def unitTest = project.tasks.findByName("test${capitalizedBuildTypeName}")
+            def roboTask = robolectricManager.retrieveRobolecticFilesTask()
 
             //We should disable Java Jacoco instrumentation because it colides with Android Jacoco plugin. We only use Java Jacoco to create a merged report.
             unitTest.jacoco.enabled = false
@@ -178,12 +190,16 @@ public class PublisherPlugin implements Plugin<Project> {
             jacocoTask.reports.html.enabled = true
 
             //We need tests tasks to run first. They create the Jacoco execution data files.
-            jacocoTask.dependsOn unitTest
+            unitTest.mustRunAfter connectedAndroidTest
+            connectedAndroidTest.mustRunAfter roboTask
+
+            jacocoTask.dependsOn roboTask
             jacocoTask.dependsOn connectedAndroidTest
+            jacocoTask.dependsOn unitTest
 
             //If testCoverage is not enabled, Android Jacoco' plugin will not instrumentate project classes
             if (!variant.buildType.testCoverageEnabled){
-                project.logger.warn("You should enable \"android.buildTypes.${buildTypeName}.testCoverageEnabled\" in your build.gradle in order to make \"${taskName}\" run.")
+                project.logger.warn("WARNING: You should enable \"android.buildTypes.${buildTypeName}.testCoverageEnabled\" in your build.gradle in order to make \"${taskName}\" run in \"${project.name}\".")
             }
         }
     }
@@ -281,7 +297,7 @@ public class PublisherPlugin implements Plugin<Project> {
     private void createPublishReleaseTask() {
         def task = project.tasks.create 'publishAarRelease'
         task.setDescription('Publishes a new release version of the AAR library.')
-        task.dependsOn 'checkLocalDependencies', 'assembleRelease', 'check', 'releaseSourcesJar' //, 'releaseJavadocJar' --> // Uncomment to upload Javadocs. This is not working well so it is turned off.
+        task.dependsOn 'checkLocalDependencies', 'assembleRelease', 'testRelease', 'check', 'releaseSourcesJar' //, 'releaseJavadocJar' --> // Uncomment to upload Javadocs. This is not working well so it is turned off.
         task.finalizedBy 'uploadArchives'
 
         task.doLast {
@@ -359,6 +375,7 @@ public class PublisherPlugin implements Plugin<Project> {
 
         task.dependsOn 'uploadArchives'
         project.tasks['uploadArchives'].finalizedBy task
+
         task.onlyIf {
             project.gradle.taskGraph.hasTask(project.tasks['publishAarRelease'])
         }
