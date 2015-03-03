@@ -167,13 +167,13 @@ If you want to improve MercadoLibre Gradle plugins, you should follow these step
  - `jacoco{buildType}` tasks added. One per build type will be created. 
  - Inherits **all deprecated aar-publisher features.**
 
-### jar-publisher  *<span style="color:red">**DEPRECATED**</span>
+### jar-publisher  <span style="color:red">**DEPRECATED**</span>
 
 - Removed from repository, out of maintainence
 - 1.1: Removed `publishJarSnapshot`. Added `publishJarExperimental`.
 - 1.0: First version of the plugin!
 
-### aar-publisher  *<span style="color:red">**DEPRECATED**</span>
+### aar-publisher  <span style="color:red">**DEPRECATED**</span>
 
 - 1.3: Prevents to have local dependencies declared in your build.gradle (like `compile project(':anotherProject')`), as this way is invalid for published artifacts.
 - 1.2: Bugfixing. Turned off javadoc generation as it is currently working bad.
