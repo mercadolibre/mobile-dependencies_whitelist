@@ -9,6 +9,9 @@ import java.util.concurrent.atomic.AtomicReference
 /**
  * Robolectric Tasks
  *
+ * 'project.properties' file should be created including 'exampleApp' key to make Robolectric
+ * Tasks work properly
+ *
  * Created by ngiagnoni on 2/27/15.
  */
 class RobolectricTaskManager {
@@ -28,11 +31,17 @@ class RobolectricTaskManager {
         configureExampleApp()
     }
 
+    /**
+     * Create all Robolectric Tasks
+     */
     private void configureRobolectricTasks(){
         createRobolectricFilesTask()
         createCleanRobolectricFilesTask()
     }
 
+    /**
+     * Configures android sourcets in unit testing tasks to obtain auto-generated classes to work
+     */
     private void configureExampleApp() {
         def exampleApp = project.getProperties().get("exampleApp")
         if (exampleApp != null){
@@ -43,11 +52,17 @@ class RobolectricTaskManager {
         }
     }
 
+    /**
+     * Hooks Robolectric clean tasks to project' clean task
+     */
     private void hookToCleanTask() {
         def cleanTask = project.tasks.findByName("clean")
         cleanTask.finalizedBy "cleanRobolectricFiles"
     }
 
+    /**
+     * Creates Robolectric clean tasks
+     */
     private void createCleanRobolectricFilesTask() {
         def task = project.tasks.create 'cleanRobolectricFiles'
         task.setDescription('Creates \"test-project.properties\" file necessary for Robolectric unit testing.')
@@ -76,6 +91,9 @@ class RobolectricTaskManager {
         hookToCleanTask()
     }
 
+    /**
+     * Creates Robolectric tasks necessary for unit testing
+     */
     private void createRobolectricFilesTask() {
         def task = project.tasks.create 'createRobolectricFiles'
         task.setDescription('Creates \"test-project.properties\" file necessary for Robolectric unit testing.')
@@ -103,6 +121,13 @@ class RobolectricTaskManager {
         }
     }
 
+    /**
+     * Recursive method to scan library dependencies and add them to Robolectric file
+     * @param roboFile Robolectric configuration file
+     * @param directory Directory where search must start
+     * @param path Accumulative path through recursive method
+     * @param dirCounter Robolectric file dirs added counter
+     */
     private void addDirToFile(File roboFile, File directory, String path, AtomicReference<Integer> dirCounter) {
         File[] tree = directory.listFiles()
 
