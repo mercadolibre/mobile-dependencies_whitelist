@@ -1,21 +1,18 @@
-package com.mercadolibre.android.gradle.publisher.aar
+package com.mercadolibre.android.gradle.library
 
-import org.apache.commons.lang.mutable.MutableInt
+import com.mercadolibre.android.gradle.library.robolectric.RobolectricTaskManager
 import org.gradle.api.GradleException
 import org.gradle.api.Plugin
 import org.gradle.api.Project
-import org.gradle.api.file.FileCollection
-import org.gradle.api.file.FileTree
 import org.gradle.api.tasks.Exec
 import org.gradle.api.tasks.bundling.Jar
 import org.gradle.api.tasks.javadoc.Javadoc
 import org.gradle.testing.jacoco.tasks.JacocoReport
 
 import java.text.SimpleDateFormat
-import java.util.concurrent.atomic.AtomicReference
 
 /**
- * Gradle plugin for publishing AARs after running some important tasks before:
+ * Gradle plugin for Android Libraries. It provides some important tasks:
  *
  * <ol>
  *     <li>Apply com.android.library plugin.</li>
@@ -29,14 +26,19 @@ import java.util.concurrent.atomic.AtomicReference
  *     <li>Tag the version in Git (if release).</li>
  * </ol>
  *
- * @author Martin A. Heras
+ * @author Martin A. Heras & Nicolas Giagnoni
  */
-public class PublisherPlugin implements Plugin<Project> {
+public class LibraryPlugin implements Plugin<Project> {
 
     /**
      * The project.
      */
     private Project project;
+
+    /**
+     * Robolectric Tasks Manager
+     */
+    private RobolectricTaskManager robolectricManager;
 
     /**
      * Method called by Gradle when applying this plugin.
@@ -52,6 +54,10 @@ public class PublisherPlugin implements Plugin<Project> {
         // We apply jacoco plugin allowing us to create Unit tests code coverage report
         project.apply plugin: 'jacoco'
         project.jacoco.toolVersion = "0.7.1.201405082137"
+
+        // We init Robolectric Tasks
+        robolectricManager = new RobolectricTaskManager()
+        robolectricManager.apply(project)
 
         addPublisherContainer()
         setupUploadArchivesTask()
@@ -109,64 +115,7 @@ public class PublisherPlugin implements Plugin<Project> {
         createPublishExperimentalTask()
         createTagVersionTask()
         createCheckLocalDependenciesTask()
-        createRobolectricTestFile()
         resetUploadArchivesDependencies()
-    }
-
-    private void createRobolectricTestFile() {
-        //Optimize app-example name
-        project.android.sourceSets.test.java.srcDirs += "../app/build/generated/source/r/debug"
-
-        def task = project.tasks.create 'createRobolectricFiles'
-        task.setDescription('Creates \"test-project.properties\" file necessary for Robolectric unit testing.')
-        task.dependsOn 'assemble'
-
-        task.doLast {
-            File file = project.file("src/main/test-project.properties")
-            if (file.exists()){
-                if (!file.delete()){
-                    throw new GradleException("Cannot delete \"test-project.properties\" file. Check if some process is using it and close it.")
-                }
-            }
-            file.createNewFile()
-
-            File projectFile = project.file("src/main/project.properties")
-            if (!projectFile.exists())
-                projectFile.createNewFile()
-
-            File[] tree = new File("build/intermediates/exploded-aar").listFiles()
-
-            def path = "../../build/intermediates/exploded-aar/"
-            def libCounter = new AtomicReference<Integer>()
-            libCounter.set(new Integer(1))
-
-            tree.each {File tmpFile ->
-                addDirToFile(file, tmpFile, path, libCounter)
-            }
-        }
-    }
-
-    private void addDirToFile(File roboFile, File directory, String path, AtomicReference<Integer> dirCounter){
-        File[] tree = directory.listFiles()
-
-        def hasFiles = false
-
-        tree.each { File file ->
-            if (!file.isDirectory())
-                hasFiles = true
-        }
-
-        if (hasFiles){
-            roboFile.append("android.library.reference.${dirCounter.get().intValue()}=${path}${directory.name}\n")
-            def oldValue = dirCounter.get().intValue()
-            dirCounter.set(new Integer(oldValue + 1))
-        } else {
-            path += directory.name
-            path += "/"
-            tree.each { File file ->
-                addDirToFile(roboFile, file, path, dirCounter)
-            }
-        }
     }
 
     /**
@@ -213,6 +162,7 @@ public class PublisherPlugin implements Plugin<Project> {
             def jacocoTask = project.tasks.create taskName, JacocoReport
             def connectedAndroidTest = project.tasks.findByName("connectedAndroidTest")
             def unitTest = project.tasks.findByName("test${capitalizedBuildTypeName}")
+            def roboTask = robolectricManager.retrieveRobolecticFilesTask()
 
             //We should disable Java Jacoco instrumentation because it colides with Android Jacoco plugin. We only use Java Jacoco to create a merged report.
             unitTest.jacoco.enabled = false
@@ -239,12 +189,16 @@ public class PublisherPlugin implements Plugin<Project> {
             jacocoTask.reports.html.enabled = true
 
             //We need tests tasks to run first. They create the Jacoco execution data files.
-            jacocoTask.dependsOn unitTest
+            unitTest.mustRunAfter connectedAndroidTest
+            connectedAndroidTest.mustRunAfter roboTask
+
+            jacocoTask.dependsOn roboTask
             jacocoTask.dependsOn connectedAndroidTest
+            jacocoTask.dependsOn unitTest
 
             //If testCoverage is not enabled, Android Jacoco' plugin will not instrumentate project classes
             if (!variant.buildType.testCoverageEnabled){
-                project.logger.warn("You should enable \"android.buildTypes.${buildTypeName}.testCoverageEnabled\" in your build.gradle in order to make \"${taskName}\" run.")
+                project.logger.warn("WARNING: You should enable \"android.buildTypes.${buildTypeName}.testCoverageEnabled\" in your build.gradle in order to make \"${taskName}\" run in \"${project.name}\".")
             }
         }
     }
