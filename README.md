@@ -206,6 +206,10 @@ buildscript {
         classpath 'com.mercadolibre.android.gradle:base:1.5'
 
         classpath 'com.mercadolibre.android.gradle:application:1.0'
+        // Necessary for application plugin
+        classpath 'com.mercadolibre.android.gradle:jacoco:1.0'
+        // Necessary for application plugin
+        classpath 'com.mercadolibre.android.gradle:robolectric:1.0'
     }
 }
 ```
