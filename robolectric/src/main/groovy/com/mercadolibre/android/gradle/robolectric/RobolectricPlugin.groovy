@@ -1,20 +1,16 @@
-package com.mercadolibre.android.gradle.library.robolectric
+package com.mercadolibre.android.gradle.robolectric
 
 import org.gradle.api.GradleException
+import org.gradle.api.Plugin
 import org.gradle.api.Project
-import org.gradle.api.Task
 
 import java.util.concurrent.atomic.AtomicReference
 
 /**
- * Robolectric Tasks
- *
- * 'project.properties' file should be created including 'exampleApp' key to make Robolectric
- * Tasks work properly
- *
- * Created by ngiagnoni on 2/27/15.
+ * Created by ngiagnoni on 3/11/15.
  */
-class RobolectricTaskManager {
+public class RobolectricPlugin implements Plugin<Project> {
+
     /**
      * The Project
      */
@@ -24,6 +20,7 @@ class RobolectricTaskManager {
      * Invoke this method using Gradle Project to apply Robolectric Tasks
      * @param project The Gradle project
      */
+    @Override
     public void apply(Project project){
         this.project = project;
 
@@ -35,6 +32,10 @@ class RobolectricTaskManager {
      * Create all Robolectric Tasks
      */
     private void configureRobolectricTasks(){
+        if (project.android == null){
+            throw new GradleException("You should apply \"android\" plugin to make this one work.")
+        }
+
         createRobolectricFilesTask()
         createCleanRobolectricFilesTask()
     }
@@ -49,6 +50,22 @@ class RobolectricTaskManager {
             project.android.sourceSets.test.java.srcDirs += "../${exampleApp}/build/generated/source/r/debug"
         } else {
             project.logger.warn("WARNING: Property 'exampleApp' is needed by the Robolectric plugin to work properly. Please define it in the gradle.properties of \"${project.name}\"")
+        }
+    }
+
+    private void hookToTestTasks(){
+        def variants = null;
+
+        try {
+            variants = project.android.applicationVariants
+        } catch (Exception e) {
+            variants = project.android.libraryVariants
+        }
+
+        variants.all { variant ->
+            def taskName = "test${variant.buildType.name.capitalize()}"
+            def testTask = project.tasks.findByName(taskName)
+            testTask.dependsOn("createRobolectricFiles")
         }
     }
 
@@ -119,6 +136,8 @@ class RobolectricTaskManager {
             File file = project.file("src/main/test-project.properties")
             return file.exists()
         }
+
+        hookToTestTasks()
     }
 
     /**
@@ -151,11 +170,4 @@ class RobolectricTaskManager {
         }
     }
 
-    /**
-     * Retrieves 'createRobolectricFiles' task for further use
-     * @return Robolectric files creation task
-     */
-    public Task retrieveRobolecticFilesTask (){
-        return project.tasks.findByName("createRobolectricFiles")
-    }
 }
