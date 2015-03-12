@@ -50,7 +50,7 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.0.0'
+        classpath 'com.android.tools.build:gradle:1.1.3'
         classpath 'com.mercadolibre.android.gradle:base:1.5'
         classpath 'com.mercadolibre.android.gradle:library:1.1'
         // Necessary for library plugin
@@ -132,7 +132,7 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.0.0'
+        classpath 'com.android.tools.build:gradle:1.1.3'
         classpath 'com.mercadolibre.android.gradle:base:1.5'
 
         classpath 'com.mercadolibre.android.gradle:jacoco:1.0'
@@ -170,7 +170,7 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.0.0'
+        classpath 'com.android.tools.build:gradle:1.1.3'
         classpath 'com.mercadolibre.android.gradle:base:1.5'
 
         classpath 'com.mercadolibre.android.gradle:robolectric:1.0'
