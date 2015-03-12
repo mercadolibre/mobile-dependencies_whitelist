@@ -21,7 +21,7 @@ This plugin add new tasks to the Gradle build script that applies them (except t
 5. Run Android (Instrumentation) tests.
 6. Run JUnit tests.
 7. Create Jacoco reports. **[using Jacoco Plugin]**
-8. Create Robolectric necesary files to work. **[using Robolectric Plugin]**
+8. Create Robolectric necessary files to work. **[using Robolectric Plugin]**
 9. Upload the artifacts (library .aar, sources and Javadoc) to the Maven repository, depending on what task you run (see below).
 
 In order to get all of this done, the plugins add new tasks to your build script, so that you can call them with the Gradle command line tool.
@@ -53,9 +53,9 @@ buildscript {
         classpath 'com.android.tools.build:gradle:1.0.0'
         classpath 'com.mercadolibre.android.gradle:base:1.5'
         classpath 'com.mercadolibre.android.gradle:library:X.X'
-        //Necesary for library plugin
+        // Necessary for library plugin
         classpath 'com.mercadolibre.android.gradle:jacoco:X.X'
-        //Necesary for library plugin
+        // Necessary for library plugin
         classpath 'com.mercadolibre.android.gradle:robolectric:X.X'
     }
 }
@@ -149,7 +149,7 @@ apply plugin: 'com.mercadolibre.android.gradle.jacoco'
 
 ## What does the robolectric plugin do for us?
 
-This plugin creates all necesary files to make Robolectric run using library dependencies. It also provides to Android Unit Testing libraries a mechanism to register R auto-generated classes because Android's library plugin does not provide it.
+This plugin creates all necessary files to make Robolectric run using library dependencies. It also provides to Android Unit Testing libraries a mechanism to register R auto-generated classes because Android's library plugin does not provide it.
 
 ***If you are working on an Android library**, Android Gradle Plugin will not auto-generate R classes for Unit Testing variants, so you will not be able to create tests asserting resources. This plugin fixes this issue, you only need to create a **'gradle.properties'** file in your library root folder. Inside this specify an "exampleApp" property indicating your test application name. This will let Android plugin to obtain needed R auto-generated files.
 
