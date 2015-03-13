@@ -52,17 +52,19 @@ public class JacocoAndroidPlugin implements Plugin<Project> {
 
             //Define local variables to avoid accessing multiple times to the buildType object.
             def buildTypeName = variant.buildType.name
+            def flavorName = variant.flavorName
             def capitalizedBuildTypeName = buildTypeName.capitalize()
+            def capitalizedFlavorName = flavorName.capitalize()
 
-            def taskName = "jacoco${capitalizedBuildTypeName}"
-            def testTaskName = "test${capitalizedBuildTypeName}"
+            def taskName = "jacoco${capitalizedFlavorName}${capitalizedBuildTypeName}"
+            def testTaskName = "test${capitalizedFlavorName}${capitalizedBuildTypeName}"
 
             //Create and retrieve necesary tasks
             def jacocoTask = project.tasks.create taskName, JacocoReport
             def unitTest = project.tasks.findByName(testTaskName)
 
             //Define JacocoTasks and it's configuration
-            jacocoTask.description = "Generate Jacoco code coverage report after running tests for ${buildTypeName} build variant. [incubating]"
+            jacocoTask.description = "Generate Jacoco code coverage report after running tests for ${flavorName}${capitalizedBuildTypeName} flavor. [incubating]"
             jacocoTask.group = "Reporting"
 
             //By convention this is the sources folder
@@ -71,8 +73,16 @@ public class JacocoAndroidPlugin implements Plugin<Project> {
             //Here is where execution data files are created. ConnectedAndroidTest and Test tasks generates them.
             jacocoTask.executionData = project.files("build/jacoco/${testTaskName}.exec")
 
+            def jacocoDirectory = "./build/intermediates/classes/"
+
+            if (flavorName != null && !flavorName.equals("")){
+                jacocoDirectory += "${flavorName}/"
+            }
+
+            jacocoDirectory += "${buildTypeName}"
+
             //Ignore auto-generated classes
-            jacocoTask.classDirectories = project.fileTree(dir: "./build/intermediates/classes/${buildTypeName}", excludes: [
+            jacocoTask.classDirectories = project.fileTree(dir: jacocoDirectory, excludes: [
                     '**/R.class',
                     '**/R$*.class',
                     '**/BuildConfig.class'
