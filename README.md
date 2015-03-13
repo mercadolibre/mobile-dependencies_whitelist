@@ -50,13 +50,13 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.0.0'
+        classpath 'com.android.tools.build:gradle:1.1.3'
         classpath 'com.mercadolibre.android.gradle:base:1.5'
-        classpath 'com.mercadolibre.android.gradle:library:X.X'
+        classpath 'com.mercadolibre.android.gradle:library:1.1'
         // Necessary for library plugin
-        classpath 'com.mercadolibre.android.gradle:jacoco:X.X'
+        classpath 'com.mercadolibre.android.gradle:jacoco:1.0'
         // Necessary for library plugin
-        classpath 'com.mercadolibre.android.gradle:robolectric:X.X'
+        classpath 'com.mercadolibre.android.gradle:robolectric:1.0'
     }
 }
 ```
@@ -132,10 +132,10 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.0.0'
+        classpath 'com.android.tools.build:gradle:1.1.3'
         classpath 'com.mercadolibre.android.gradle:base:1.5'
 
-        classpath 'com.mercadolibre.android.gradle:jacoco:X.X'
+        classpath 'com.mercadolibre.android.gradle:jacoco:1.0'
     }
 }
 ```
@@ -170,10 +170,10 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.0.0'
+        classpath 'com.android.tools.build:gradle:1.1.3'
         classpath 'com.mercadolibre.android.gradle:base:1.5'
 
-        classpath 'com.mercadolibre.android.gradle:robolectric:X.X'
+        classpath 'com.mercadolibre.android.gradle:robolectric:1.0'
     }
 }
 ```
@@ -189,6 +189,37 @@ testCompile 'org.robolectric:robolectric:X.X'
 ## What does the application plugin do for us?
 
 At this moment, **application plugin is only a wrapper for Robolectric and Jacoco plugins**. It's purpose is to contain all application refered tasks to avoid copy and paste in all app projects.
+
+**Parent build.gradle**
+```groovy
+apply plugin: 'com.mercadolibre.android.gradle.base' // This sets up our custom Nexus repositories. It is also important because it turns off the Gradle cache for dynamic versions.
+
+buildscript {
+    repositories { // This repositories are used when building your project. In this case, we need to tell Gradle to use our repositories in order to find the Gradle Publisher plugins.
+        jcenter() // This is needed by Gradle.
+        maven {
+            url 'http://maven-mobile.melicloud.com/nexus/content/repositories/releases' // Releases URL.
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.0.0'
+        classpath 'com.mercadolibre.android.gradle:base:1.5'
+
+        classpath 'com.mercadolibre.android.gradle:application:1.0'
+        // Necessary for application plugin
+        classpath 'com.mercadolibre.android.gradle:jacoco:1.0'
+        // Necessary for application plugin
+        classpath 'com.mercadolibre.android.gradle:robolectric:1.0'
+    }
+}
+```
+
+**Your module's build.gradle**
+```groovy
+apply plugin: 'com.mercadolibre.android.gradle.application'
+
+.....
+```    
 
 ## What does the base plugin do for us?
 
