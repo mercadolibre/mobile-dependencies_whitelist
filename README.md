@@ -283,10 +283,14 @@ If you want to improve MercadoLibre Gradle plugins, you should follow these step
  - Inherits **all deprecated aar-publisher features.**
 
 ### jacoco plugin
+- 1.1:
+ - Fix to build variants. Flavors where not recognized
 - 1.0:
  - Jacoco tasks working standalone.
 
 ### robolectric plugin
+- 1.1:
+ - Fix to build variants. Flavors where not recognized
 - 1.0:
  - Robolectric tasks working standalone.
 
