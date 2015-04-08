@@ -1,0 +1,36 @@
+apply plugin: 'com.jfrog.bintray'
+
+//default site and git urls (used only in this project and overwritten in the library Plugin)
+def siteUrl='http://github.com/mercadolibre/mobile-android_gradle'
+def gitUrl='http://github.com/mercadolibre/mobile-android_gradle.git'
+
+bintray {
+    user = 'bintray-publisher'
+    key = '5438c410e4379f5f2955dd93514f4b452766b626'
+    dryRun = false
+    publish = true
+    configurations = ['archives'] //When uploading configuration files
+    pkg {
+        repo = 'android-releases'
+        userOrg = 'mercadolibre'
+        name = "${group}.${project.name}"
+        issueTrackerUrl = "${siteUrl}/issues"
+        vcsUrl = gitUrl
+        labels = ['aar', 'gradle-plugin', 'android']
+        publicDownloadNumbers = false
+    }
+}
+
+install {
+    repositories.mavenInstaller {
+        pom {
+            project {
+                packaging 'aar'
+                name 'Bintray publish Gradle aar'
+                url siteUrl
+            }
+        }
+    }
+}
+
+

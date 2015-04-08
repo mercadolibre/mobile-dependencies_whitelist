@@ -6,16 +6,8 @@ dependencies {
     compile localGroovy()
 }
 
-uploadArchives {
-    repositories {
-        mavenDeployer {
-            repository(url:'http://maven-mobile.melicloud.com/nexus/content/repositories/releases') {
-                authentication(userName: 'mobile', password: 'ml123456')
-            }
-        }
-    }
-}
-
 group = 'com.mercadolibre.android.gradle'
 
 version = '1.0'
+
+apply from: '../bintraypublish.gradle'

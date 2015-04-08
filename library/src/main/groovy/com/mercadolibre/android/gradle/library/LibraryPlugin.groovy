@@ -46,6 +46,10 @@ public class LibraryPlugin implements Plugin<Project> {
         // We apply android plugin.
         project.apply plugin: 'com.android.library'
 
+        //Apply bintray plugins to the repos
+        project.apply plugin: 'com.jfrog.bintray'
+        project.apply plugin: 'com.github.dcendents.android-maven'
+
         project.apply plugin: 'com.mercadolibre.android.gradle.jacoco'
         project.apply plugin: 'com.mercadolibre.android.gradle.robolectric'
 
@@ -90,6 +94,7 @@ public class LibraryPlugin implements Plugin<Project> {
         project.extensions.create('publisher', PublisherPluginExtension)
         getPublisherContainer().releasesRepository = new PublisherRepository()
         getPublisherContainer().experimentalRepository = new PublisherRepository()
+        getPublisherContainer().bintrayRepository = new BintrayRepository()
     }
 
     /**
@@ -228,18 +233,51 @@ public class LibraryPlugin implements Plugin<Project> {
      */
     private void createPublishReleaseTask() {
         def task = project.tasks.create 'publishAarRelease'
-        task.setDescription('Publishes a new release version of the AAR library.')
+        task.setDescription('Publishes a new release version of the AAR library to Bintray.')
         task.dependsOn 'checkLocalDependencies', 'assembleRelease', 'testRelease', 'check', 'releaseSourcesJar' //, 'releaseJavadocJar' --> // Uncomment to upload Javadocs. This is not working well so it is turned off.
-        task.finalizedBy 'uploadArchives'
-
+        task.finalizedBy 'bintrayUpload'
         task.doLast {
-            // Set artifacts.
+
+            // Set the artifacts.
             project.configurations.archives.artifacts.clear()
-            project.artifacts.add('archives', project.file("$project.buildDir/outputs/aar/${project.name}-release.aar"))
+
+            //check if previous publish aar exists (and delete it)
+            def prevFile = project.file("$project.buildDir/outputs/aar/${project.name}.aar");
+            if (prevFile.exists())
+                prevFile.delete();
+
+            //Get the aar file and rename it (so that the bintray plugin uploads the aar to the correct path)
+            def debugFile = project.file("$project.buildDir/outputs/aar/${project.name}-release.aar")
+            debugFile.renameTo("$project.buildDir/outputs/aar/${project.name}.aar")
+
+            project.artifacts.add('archives', project.file("$project.buildDir/outputs/aar/${project.name}.aar"))
             project.artifacts.add('archives', project.tasks['releaseSourcesJar'])
 
-            // Uncomment the following line to upload Javadocs. This is not working well so it is turned off.
-            // project.artifacts.add('archives', project.tasks['releaseJavadocJar'])
+            project.install.repositories.mavenInstaller {
+                pom {
+                    project {
+                        packaging 'aar'
+                        name 'Bintray publish Gradle aar'
+                        url getPublisherContainer().bintrayRepository.vcsUrl
+                    }
+                }
+            }
+
+            project.bintrayUpload.user = 'bintray-publisher'
+            project.bintrayUpload.apiKey = '5438c410e4379f5f2955dd93514f4b452766b626'
+            project.bintrayUpload.dryRun = false
+            project.bintrayUpload.publish = true
+            project.bintrayUpload.configurations = ['archives']
+            project.bintrayUpload.repoName = 'android-releases'
+            project.bintrayUpload.userOrg = 'mercadolibre'
+            project.bintrayUpload.packageName = "${getPublisherContainer().groupId}.${getPublisherContainer().artifactId}"
+            project.bintrayUpload.packageIssueTrackerUrl = getPublisherContainer().bintrayRepository.vcsUrl + "/issues"
+            project.bintrayUpload.packageVcsUrl = getPublisherContainer().bintrayRepository.vcsUrl + ".git"
+            project.bintrayUpload.packageWebsiteUrl = getPublisherContainer().bintrayRepository.vcsUrl
+            project.bintrayUpload.versionVcsTag =
+                                "${getPublisherContainer().bintrayRepository.vcsUrl}/releases/tag/v${getPublisherContainer().version}"
+            project.bintrayUpload.versionName = "${getPublisherContainer().version}"
+            project.bintrayUpload.packagePublicDownloadNumbers = false
         }
     }
 
@@ -340,6 +378,11 @@ public class PublisherPluginExtension {
     private PublisherRepository experimentalRepository
 
     /**
+     * Bintray repo information
+     */
+    private BintrayRepository bintrayRepository;
+
+    /**
      * GroupId for Maven.
      */
     private String groupId
@@ -360,6 +403,14 @@ public class PublisherPluginExtension {
      */
     public PublisherRepository getReleasesRepository() {
         return releasesRepository
+    }
+
+    BintrayRepository getBintrayRepository() {
+        return bintrayRepository
+    }
+
+    void setBintrayRepository(BintrayRepository bintrayRepository) {
+        this.bintrayRepository = bintrayRepository
     }
 
     /**
@@ -501,5 +552,21 @@ public class PublisherRepository {
      */
     public void setPassword(String password) {
         this.password = password
+    }
+}
+
+public class BintrayRepository {
+    /**
+     * Repo URL
+     *
+     **/
+    private String vcsUrl;
+
+    String getVcsUrl() {
+        return vcsUrl
+    }
+
+    void setVcsUrl(String vcsUrl) {
+        this.vcsUrl = vcsUrl
     }
 }
