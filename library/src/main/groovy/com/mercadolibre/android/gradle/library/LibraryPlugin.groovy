@@ -272,10 +272,11 @@ public class LibraryPlugin implements Plugin<Project> {
             project.bintrayUpload.userOrg = 'mercadolibre'
             project.bintrayUpload.packageName = "${getPublisherContainer().groupId}.${getPublisherContainer().artifactId}"
             project.bintrayUpload.packageIssueTrackerUrl = getPublisherContainer().bintrayRepository.vcsUrl + "/issues"
-            project.bintrayUpload.packageVcsUrl = getPublisherContainer().bintrayRepository.vcsUrl + ".git"
-            project.bintrayUpload.packageWebsiteUrl = getPublisherContainer().bintrayRepository.vcsUrl
-            project.bintrayUpload.versionVcsTag =
-                                "${getPublisherContainer().bintrayRepository.vcsUrl}/releases/tag/v${getPublisherContainer().version}"
+            project.bintrayUpload.packageVcsUrl =
+                    "${getPublisherContainer().bintrayRepository.vcsUrl}/releases/tag/v${getPublisherContainer().version}"
+            project.bintrayUpload.packageWebsiteUrl = "" + getPublisherContainer().bintrayRepository.vcsUrl
+            project.bintrayUpload.versionVcsTag ="v${getPublisherContainer().version}"
+
             project.bintrayUpload.versionName = "${getPublisherContainer().version}"
             project.bintrayUpload.packagePublicDownloadNumbers = false
         }
