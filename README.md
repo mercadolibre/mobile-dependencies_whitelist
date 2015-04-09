@@ -28,13 +28,15 @@ In order to get all of this done, the plugins add new tasks to your build script
 
 ## Tasks added by library plugin
 
-1. `publishAarRelease` - Publishes the .aar (along with the sources and Javadoc) to the specified Maven releases repository. It runs all the checks before uploading the artifacts (lint, tests, etc.), and once they get uploaded, it tags the version in Git.
+1. `publishAarRelease` - Publishes the .aar (along with the sources and Javadoc) to Bintray releases repository. It runs all the checks before uploading the artifacts (lint, tests, etc.), and once they get uploaded, it tags the version in Git.
 2. `publishAarExperimental` - Same as `publishAarRelease`, but it uploads the artifacts to the specified Maven experimental repository. It does NOT tag the version in Git, as it is not a release.
 3. `publishAarLocal` - This is particularly useful during the development phase of the Android library. It overwrites the artifacts in your .m2/repository directory, so that you can code & test your code without uploading anything to a remote repository. This does NOT run lint so that we don't have to wait that long. It does not tag the version in Git either.
 
 ## How to add library plugin to your project?
 
 Example: [mobile-android_commons](https://github.com/mercadolibre/mobile-android_commons)
+
+Example (with Bintray): [mobile-android_ui](https://github.com/mercadolibre/mobile-android_ui/tree/develop)
 
 Simple. You just need to apply the plugin and configure it in the build script, as the following snippet shows:
 
@@ -45,18 +47,26 @@ apply plugin: 'com.mercadolibre.android.gradle.base' // This sets up our custom 
 buildscript {
     repositories { // This repositories are used when building your project. In this case, we need to tell Gradle to use our repositories in order to find the Gradle Publisher plugins.
         jcenter() // This is needed by Gradle.
+        //Releases Bintray Configuration
         maven {
-            url 'http://maven-mobile.melicloud.com/nexus/content/repositories/releases' // Releases URL.
+                url  "https://dl.bintray.com/mercadolibre/android-releases"
+                credentials {
+                    username 'bintray-read'
+                    password 'ff5072eaf799961add07d5484a6283eb3939556b'
+                }
         }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:1.1.3'
         classpath 'com.mercadolibre.android.gradle:base:1.5'
-        classpath 'com.mercadolibre.android.gradle:library:1.1'
+        classpath 'com.mercadolibre.android.gradle:library:1.2'
         // Necessary for library plugin
         classpath 'com.mercadolibre.android.gradle:jacoco:1.0'
         // Necessary for library plugin
         classpath 'com.mercadolibre.android.gradle:robolectric:1.0'
+        // Necessary for Bintray integration (library plugin 1.2+)
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.0'
+        classpath 'com.github.dcendents:android-maven-plugin:1.2'
     }
 }
 ```
@@ -110,7 +120,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:21.0.3'
 }
 ```    
-As you can see, there is no need to apply the _com.android.library_ nor the _maven_ plugins, as they are automatically applied by the aar-publisher plugin.
+As you can see, there is no need to apply the _com.android.library_ nor the _maven_ plugins, as they are automatically applied by the library plugin.
 
 ## What does the jacoco plugin do for us?
 

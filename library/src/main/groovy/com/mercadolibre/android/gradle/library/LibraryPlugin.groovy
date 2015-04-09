@@ -196,17 +196,6 @@ public class LibraryPlugin implements Plugin<Project> {
             throw new GradleException("Property 'publisher.version' is needed by the Publisher plugin. Please define it in the build script.")
         }
 
-        // Publisher.releasesRepository container.
-        if (getPublisherContainer().releasesRepository.url == null || getPublisherContainer().releasesRepository.url.length() == 0) {
-            throw new GradleException("Property 'publisher.releasesRepository.url' is needed by the Publisher plugin. Please define it in the build script.")
-        }
-        if (getPublisherContainer().releasesRepository.username == null || getPublisherContainer().releasesRepository.username.length() == 0) {
-            throw new GradleException("Property 'publisher.releasesRepository.username' is needed by the Publisher plugin. Please define it in the build script.")
-        }
-        if (getPublisherContainer().releasesRepository.password == null || getPublisherContainer().releasesRepository.password.length() == 0) {
-            throw new GradleException("Property 'publisher.releasesRepository.password' is needed by the Publisher plugin. Please define it in the build script.")
-        }
-
         // Publisher.experimentalRepository container.
         if (getPublisherContainer().experimentalRepository.url == null || getPublisherContainer().experimentalRepository.url.length() == 0) {
             throw new GradleException("Property 'publisher.experimentalRepository.url' is needed by the Publisher plugin. Please define it in the build script.")
@@ -252,6 +241,9 @@ public class LibraryPlugin implements Plugin<Project> {
 
             project.artifacts.add('archives', project.file("$project.buildDir/outputs/aar/${project.name}.aar"))
             project.artifacts.add('archives', project.tasks['releaseSourcesJar'])
+
+            project.group = getPublisherContainer().groupId
+            project.version = getPublisherContainer().version
 
             project.install.repositories.mavenInstaller {
                 pom {
