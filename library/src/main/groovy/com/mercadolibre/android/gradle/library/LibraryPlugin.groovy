@@ -46,7 +46,7 @@ public class LibraryPlugin implements Plugin<Project> {
         // We apply android plugin.
         project.apply plugin: 'com.android.library'
 
-        //Apply bintray plugins to the repos
+        // Apply bintray plugins to the repositories.
         project.apply plugin: 'com.jfrog.bintray'
         project.apply plugin: 'com.github.dcendents.android-maven'
 
@@ -107,8 +107,8 @@ public class LibraryPlugin implements Plugin<Project> {
         createPublishLocalTask()
         createPublishReleaseTask()
         createPublishExperimentalTask()
-        //TODO Unncomment this when Git tagging needs to be used again.
-//        createTagVersionTask()
+        // TODO: Uncomment this when Git tagging needs to be used again.
+        // createTagVersionTask()
         createCheckLocalDependenciesTask()
         resetUploadArchivesDependencies()
     }
@@ -230,12 +230,12 @@ public class LibraryPlugin implements Plugin<Project> {
             // Set the artifacts.
             project.configurations.archives.artifacts.clear()
 
-            //check if previous publish aar exists (and delete it)
+            // Check if previous publish AAR exists (and delete it).
             def prevFile = project.file("$project.buildDir/outputs/aar/${project.name}.aar");
             if (prevFile.exists())
                 prevFile.delete();
 
-            //Get the aar file and rename it (so that the bintray plugin uploads the aar to the correct path)
+            // Get the AAR file and rename it (so that the bintray plugin uploads the aar to the correct path).
             def debugFile = project.file("$project.buildDir/outputs/aar/${project.name}-release.aar")
             debugFile.renameTo("$project.buildDir/outputs/aar/${project.name}.aar")
 
@@ -550,7 +550,7 @@ public class PublisherRepository {
 
 public class BintrayRepository {
     /**
-     * Repo URL
+     * Repo URL.
      *
      **/
     private String vcsUrl;
