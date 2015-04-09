@@ -1,6 +1,6 @@
 apply plugin: 'com.jfrog.bintray'
 
-//default site and git urls (used only in this project and overwritten in the library Plugin)
+// Default site and Git URLs (used only in this project and overwritten in the Library Plugin).
 def siteUrl='http://github.com/mercadolibre/mobile-android_gradle'
 def gitUrl='http://github.com/mercadolibre/mobile-android_gradle.git'
 
