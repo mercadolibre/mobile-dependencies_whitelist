@@ -48,11 +48,28 @@ class BasePlugin implements Plugin<Project> {
                 jcenter()
                 mavenLocal()
                 mavenCentral()
+                // TODO (Marcos): Leave maven-mobile repos until a full rollout is made.
                 maven {
                     url 'http://maven-mobile.melicloud.com/nexus/content/repositories/releases'
                 }
                 maven {
                     url 'http://maven-mobile.melicloud.com/nexus/content/repositories/experimental'
+                }
+
+                // New Bintray repos, the experimental repo is not working right now.
+                maven {
+                    url  "https://dl.bintray.com/mercadolibre/android-releases"
+                    credentials {
+                        username 'bintray-read'
+                        password 'ff5072eaf799961add07d5484a6283eb3939556b'
+                    }
+                }
+                maven {
+                    url  "https://dl.bintray.com/mercadolibre/android-experimental"
+                    credentials {
+                        username 'bintray-read'
+                        password 'ff5072eaf799961add07d5484a6283eb3939556b'
+                    }
                 }
             }
         }
