@@ -25,8 +25,7 @@ install {
     repositories.mavenInstaller {
         pom {
             project {
-                packaging 'aar'
-                name 'Bintray publish Gradle aar'
+                packaging 'jar'
                 url siteUrl
             }
         }

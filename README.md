@@ -36,8 +36,6 @@ In order to get all of this done, the plugins add new tasks to your build script
 
 Example: [mobile-android_commons](https://github.com/mercadolibre/mobile-android_commons)
 
-Example (with Bintray): [mobile-android_ui](https://github.com/mercadolibre/mobile-android_ui/tree/develop)
-
 Simple. You just need to apply the plugin and configure it in the build script, as the following snippet shows:
 
 **Parent build.gradle**
@@ -48,13 +46,6 @@ buildscript {
     repositories { // This repositories are used when building your project. In this case, we need to tell Gradle to use our repositories in order to find the Gradle Publisher plugins.
         jcenter() // This is needed by Gradle.
         //Releases Bintray Configuration
-        maven {
-                url  "https://dl.bintray.com/mercadolibre/android-releases"
-                credentials {
-                    username 'bintray-read'
-                    password 'ff5072eaf799961add07d5484a6283eb3939556b'
-                }
-        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:1.1.3'
@@ -64,9 +55,6 @@ buildscript {
         classpath 'com.mercadolibre.android.gradle:jacoco:1.0'
         // Necessary for library plugin
         classpath 'com.mercadolibre.android.gradle:robolectric:1.0'
-        // Necessary for Bintray integration (library plugin 1.2+)
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.0'
-        classpath 'com.github.dcendents:android-maven-plugin:1.2'
     }
 }
 ```
@@ -328,3 +316,54 @@ If you want to improve MercadoLibre Gradle plugins, you should follow these step
 
 ## Further help
 If you need further help, please contact [martin.heras@mercadolibre.com](mailto:martin.heras@mercadolibre.com) or [mobile-it@mercadolibre.com](mailto:mobile-it@mercadolibre.com).
+
+
+## Migration Guide from library 1.1 to 1.2+
+
+The gradle library plugin version 1.2 includes publication to Bintray instead of maven-mobile. Because of this new 
+classpath need to be added and repositories.
+
+Example: [mobile-android_ui](https://github.com/mercadolibre/mobile-android_ui/tree/develop)
+
+**Parent build.gradle**
+```groovy
+apply plugin: 'com.mercadolibre.android.gradle.base' // This sets up our custom Nexus repositories. It is also important because it turns off the Gradle cache for dynamic versions.
+
+buildscript {
+    repositories { // This repositories are used when building your project. In this case, we need to tell Gradle to use our repositories in order to find the Gradle Publisher plugins.
+        jcenter() // This is needed by Gradle.
+        
+        // New Maven Bintray Repository
+        maven {
+            url  "https://dl.bintray.com/mercadolibre/android-releases"
+            credentials {
+                username 'bintray-read'
+                password 'ff5072eaf799961add07d5484a6283eb3939556b'
+            }
+        }
+        
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.0.0'
+        classpath 'com.mercadolibre.android.gradle:base:1.5'
+        
+        classpath 'com.mercadolibre.android.gradle:application:1.0'
+        // Necessary for application plugin
+        classpath 'com.mercadolibre.android.gradle:jacoco:1.0'
+        // Necessary for application plugin
+        classpath 'com.mercadolibre.android.gradle:robolectric:1.0'
+        
+        // New classpath to be added for BinTray (added in library plugin 1.2)
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.0'
+        classpath 'com.github.dcendents:android-maven-plugin:1.2'
+    }
+}
+```
+
+**Your module's build.gradle**
+You don't need the releases configurations anymore (remove them).
+
+    publisher.releasesRepository.url = [YOUR MAVEN RELEASES REPO URL]
+    publisher.releasesRepository.username = [YOUR USERNAME]
+    publisher.releasesRepository.password = [YOUR PASSWORD]
+

@@ -245,15 +245,12 @@ public class LibraryPlugin implements Plugin<Project> {
             project.group = getPublisherContainer().groupId
             project.version = getPublisherContainer().version
 
-            project.install.repositories.mavenInstaller {
-                pom {
-                    project {
-                        packaging 'aar'
-                        name 'Bintray publish Gradle aar'
-                        url getPublisherContainer().bintrayRepository.vcsUrl
-                    }
-                }
-            }
+            //write the pom as the generated is not correct :(
+            project.pom {
+                version = getPublisherContainer().version
+                artifactId = getPublisherContainer().artifactId
+            }.writeTo("build/poms/pom-default.xml")
+
 
             project.bintrayUpload.user = 'bintray-publisher'
             project.bintrayUpload.apiKey = '5438c410e4379f5f2955dd93514f4b452766b626'
