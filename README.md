@@ -341,8 +341,8 @@ buildscript {
                 password 'ff5072eaf799961add07d5484a6283eb3939556b'
             }
         }
-        
     }
+    
     dependencies {
         classpath 'com.android.tools.build:gradle:1.0.0'
         classpath 'com.mercadolibre.android.gradle:base:1.5'
