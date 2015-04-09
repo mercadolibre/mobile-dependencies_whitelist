@@ -9,7 +9,7 @@ bintray {
     key = '5438c410e4379f5f2955dd93514f4b452766b626'
     dryRun = false
     publish = true
-    configurations = ['archives'] //When uploading configuration files
+    configurations = ['archives'] // When uploading configuration files.
     pkg {
         repo = 'android-releases'
         userOrg = 'mercadolibre'
