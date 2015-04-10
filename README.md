@@ -314,9 +314,6 @@ If you want to improve MercadoLibre Gradle plugins, you should follow these step
 - 1.1: Added mavenCentral() as default repository.
 - 1.0: First version of the plugin!
 
-## Further help
-If you need further help, please contact [martin.heras@mercadolibre.com](mailto:martin.heras@mercadolibre.com) or [mobile-it@mercadolibre.com](mailto:mobile-it@mercadolibre.com).
-
 
 ## Migration Guide from library 1.1 to 1.2+
 
@@ -401,5 +398,10 @@ As an example, the _mySampleApp_ could have a reference to _myLibraryProject_ in
     
 The gradle tasks should be run using the new name also.
 
-    ./gradlew :myCoolArtifact:build :myCoolArtifact:test 
+    ./gradlew :myCoolArtifact:build :myCoolArtifact:test
+     
+     
+## Further help
+If you need further help, please contact [martin.heras@mercadolibre.com](mailto:martin.heras@mercadolibre.com) or [mobile-it@mercadolibre.com](mailto:mobile-it@mercadolibre.com).
+
 
