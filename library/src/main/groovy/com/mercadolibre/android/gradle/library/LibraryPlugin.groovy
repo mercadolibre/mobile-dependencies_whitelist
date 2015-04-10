@@ -94,7 +94,6 @@ public class LibraryPlugin implements Plugin<Project> {
         project.extensions.create('publisher', PublisherPluginExtension)
         getPublisherContainer().releasesRepository = new PublisherRepository()
         getPublisherContainer().experimentalRepository = new PublisherRepository()
-        getPublisherContainer().bintrayRepository = new BintrayRepository()
     }
 
     /**
@@ -230,20 +229,27 @@ public class LibraryPlugin implements Plugin<Project> {
             // Set the artifacts.
             project.configurations.archives.artifacts.clear()
 
+            project.group = getPublisherContainer().groupId
+            project.version = getPublisherContainer().version
+
+            // fixed repo URL
+            def repoURL = "http://github.com/mercadolibre/mobile-android_${getPublisherContainer().artifactId}"
+
             // Check if previous publish AAR exists (and delete it).
             def prevFile = project.file("$project.buildDir/outputs/aar/${project.name}.aar");
             if (prevFile.exists())
                 prevFile.delete();
 
             // Get the AAR file and rename it (so that the bintray plugin uploads the aar to the correct path).
-            def debugFile = project.file("$project.buildDir/outputs/aar/${project.name}-release.aar")
-            debugFile.renameTo("$project.buildDir/outputs/aar/${project.name}.aar")
+            def aarFile = project.file("$project.buildDir/outputs/aar/${project.name}-release.aar")
+            aarFile.renameTo("$project.buildDir/outputs/aar/${getPublisherContainer().artifactId}.aar")
 
-            project.artifacts.add('archives', project.file("$project.buildDir/outputs/aar/${project.name}.aar"))
+            // rename the sources file to find it
+            project.file("$project.buildDir/libs/${project.name}-sources.jar")
+                    .renameTo("$project.buildDir/libs/${project.name}-${project.version}-sources.jar")
+
+            project.artifacts.add('archives', project.file("$project.buildDir/outputs/aar/${getPublisherContainer().artifactId}.aar"))
             project.artifacts.add('archives', project.tasks['releaseSourcesJar'])
-
-            project.group = getPublisherContainer().groupId
-            project.version = getPublisherContainer().version
 
             //write the pom as the generated is not correct :(
             project.pom {
@@ -260,12 +266,11 @@ public class LibraryPlugin implements Plugin<Project> {
             project.bintrayUpload.repoName = 'android-releases'
             project.bintrayUpload.userOrg = 'mercadolibre'
             project.bintrayUpload.packageName = "${getPublisherContainer().groupId}.${getPublisherContainer().artifactId}"
-            project.bintrayUpload.packageIssueTrackerUrl = getPublisherContainer().bintrayRepository.vcsUrl + "/issues"
+            project.bintrayUpload.packageIssueTrackerUrl = "$repoURL/issues"
             project.bintrayUpload.packageVcsUrl =
-                    "${getPublisherContainer().bintrayRepository.vcsUrl}/releases/tag/v${getPublisherContainer().version}"
-            project.bintrayUpload.packageWebsiteUrl = "" + getPublisherContainer().bintrayRepository.vcsUrl
+                    "$repoURL/releases/tag/v${getPublisherContainer().version}"
+            project.bintrayUpload.packageWebsiteUrl = repoURL
             project.bintrayUpload.versionVcsTag ="v${getPublisherContainer().version}"
-
             project.bintrayUpload.versionName = "${getPublisherContainer().version}"
             project.bintrayUpload.packagePublicDownloadNumbers = false
         }
@@ -368,11 +373,6 @@ public class PublisherPluginExtension {
     private PublisherRepository experimentalRepository
 
     /**
-     * Bintray repo information
-     */
-    private BintrayRepository bintrayRepository;
-
-    /**
      * GroupId for Maven.
      */
     private String groupId
@@ -393,14 +393,6 @@ public class PublisherPluginExtension {
      */
     public PublisherRepository getReleasesRepository() {
         return releasesRepository
-    }
-
-    BintrayRepository getBintrayRepository() {
-        return bintrayRepository
-    }
-
-    void setBintrayRepository(BintrayRepository bintrayRepository) {
-        this.bintrayRepository = bintrayRepository
     }
 
     /**
@@ -545,18 +537,3 @@ public class PublisherRepository {
     }
 }
 
-public class BintrayRepository {
-    /**
-     * Repo URL.
-     *
-     **/
-    private String vcsUrl;
-
-    String getVcsUrl() {
-        return vcsUrl
-    }
-
-    void setVcsUrl(String vcsUrl) {
-        this.vcsUrl = vcsUrl
-    }
-}

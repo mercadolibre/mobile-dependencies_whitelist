@@ -314,9 +314,6 @@ If you want to improve MercadoLibre Gradle plugins, you should follow these step
 - 1.1: Added mavenCentral() as default repository.
 - 1.0: First version of the plugin!
 
-## Further help
-If you need further help, please contact [martin.heras@mercadolibre.com](mailto:martin.heras@mercadolibre.com) or [mobile-it@mercadolibre.com](mailto:mobile-it@mercadolibre.com).
-
 
 ## Migration Guide from library 1.1 to 1.2+
 
@@ -353,7 +350,7 @@ buildscript {
         // Necessary for application plugin
         classpath 'com.mercadolibre.android.gradle:robolectric:1.0'
         
-        // New classpath to be added for BinTray (added in library plugin 1.2)
+        // New classpath to be added for Bintray (added in library plugin 1.2)
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.0'
         classpath 'com.github.dcendents:android-maven-plugin:1.2'
     }
@@ -366,4 +363,45 @@ You don't need the releases configurations anymore (remove them).
     publisher.releasesRepository.url = [YOUR MAVEN RELEASES REPO URL]
     publisher.releasesRepository.username = [YOUR USERNAME]
     publisher.releasesRepository.password = [YOUR PASSWORD]
+    
+**What if my project.name is not the same as my artifactId ?**
+To be able to integrate with bintray, we use the bintray gradle plugin from jfrog (added in the classpath).
+The plugin uses the project.name to create the file path in bintray and so, if the project.name is different from
+the artifactId, the path is not correctly created.
+
+To solve this, the project.name must be changed in the settings.gradle file so that the bintray uploader correctly
+creates the path.
+
+For example, suppose you have the following structure:
+
+    rootProject
+      |- myLibraryProject
+         |- src
+         |- build.gradle
+      |- mySampleApp
+         |- src
+         |- build.gradle
+      |- build.gradle
+      |- settings.gradle
+      
+Suppose we want to publish _myLibraryProject_ as _myCoolArtifact_. Then, the settings.gradle file should have:
+    
+    project(':myLibraryProject').name = 'myCoolArtifact'
+    
+Bare in mind that changing the _project.name_ value changes the name used when running gradle tasks or when directly 
+including the project for tests. 
+As an example, the _mySampleApp_ could have a reference to _myLibraryProject_ in the following way:
+
+    compile project(':myCoolArtifact')
+
+**Notice that the new name should be used
+    
+The gradle tasks should be run using the new name also.
+
+    ./gradlew :myCoolArtifact:build :myCoolArtifact:test
+     
+     
+## Further help
+If you need further help, please contact [martin.heras@mercadolibre.com](mailto:martin.heras@mercadolibre.com) or [mobile-it@mercadolibre.com](mailto:mobile-it@mercadolibre.com).
+
 
