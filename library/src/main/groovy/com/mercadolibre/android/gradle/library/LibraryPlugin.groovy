@@ -33,6 +33,9 @@ public class LibraryPlugin implements Plugin<Project> {
      */
     private Project project;
 
+    private static final String PUBLISH_RELESE = "release"
+    private static final String PUBLISH_EXPERIMENTAL = "experimental"
+
     /**
      * Method called by Gradle when applying this plugin.
      * @param project the Gradle project.
@@ -195,17 +198,6 @@ public class LibraryPlugin implements Plugin<Project> {
             throw new GradleException("Property 'publisher.version' is needed by the Publisher plugin. Please define it in the build script.")
         }
 
-        // Publisher.experimentalRepository container.
-        if (getPublisherContainer().experimentalRepository.url == null || getPublisherContainer().experimentalRepository.url.length() == 0) {
-            throw new GradleException("Property 'publisher.experimentalRepository.url' is needed by the Publisher plugin. Please define it in the build script.")
-        }
-        if (getPublisherContainer().experimentalRepository.username == null || getPublisherContainer().experimentalRepository.username.length() == 0) {
-            throw new GradleException("Property 'publisher.experimentalRepository.username' is needed by the Publisher plugin. Please define it in the build script.")
-        }
-        if (getPublisherContainer().experimentalRepository.password == null || getPublisherContainer().experimentalRepository.password.length() == 0) {
-            throw new GradleException("Property 'publisher.experimentalRepository.password' is needed by the Publisher plugin. Please define it in the build script.")
-        }
-
     }
 
     /**
@@ -226,53 +218,16 @@ public class LibraryPlugin implements Plugin<Project> {
         task.finalizedBy 'bintrayUpload'
         task.doLast {
 
+            // Set all Bintray configuration.
+            setBintrayConfig(PUBLISH_RELESE);
+
             // Set the artifacts.
             project.configurations.archives.artifacts.clear()
-
-            project.group = getPublisherContainer().groupId
-            project.version = getPublisherContainer().version
-
-            // fixed repo URL
-            def repoURL = "http://github.com/mercadolibre/mobile-android_${getPublisherContainer().artifactId}"
-
-            // Check if previous publish AAR exists (and delete it).
-            def prevFile = project.file("$project.buildDir/outputs/aar/${project.name}.aar");
-            if (prevFile.exists())
-                prevFile.delete();
-
-            // Get the AAR file and rename it (so that the bintray plugin uploads the aar to the correct path).
-            def aarFile = project.file("$project.buildDir/outputs/aar/${project.name}-release.aar")
-            aarFile.renameTo("$project.buildDir/outputs/aar/${getPublisherContainer().artifactId}.aar")
-
-            // rename the sources file to find it
-            project.file("$project.buildDir/libs/${project.name}-sources.jar")
-                    .renameTo("$project.buildDir/libs/${project.name}-${project.version}-sources.jar")
-
-            project.artifacts.add('archives', project.file("$project.buildDir/outputs/aar/${getPublisherContainer().artifactId}.aar"))
+            project.artifacts.add('archives', project.file(getAarFilePath(PUBLISH_RELESE)))
             project.artifacts.add('archives', project.tasks['releaseSourcesJar'])
 
-            //write the pom as the generated is not correct :(
-            project.pom {
-                version = getPublisherContainer().version
-                artifactId = getPublisherContainer().artifactId
-            }.writeTo("build/poms/pom-default.xml")
 
 
-            project.bintrayUpload.user = 'bintray-publisher'
-            project.bintrayUpload.apiKey = '5438c410e4379f5f2955dd93514f4b452766b626'
-            project.bintrayUpload.dryRun = false
-            project.bintrayUpload.publish = true
-            project.bintrayUpload.configurations = ['archives']
-            project.bintrayUpload.repoName = 'android-releases'
-            project.bintrayUpload.userOrg = 'mercadolibre'
-            project.bintrayUpload.packageName = "${getPublisherContainer().groupId}.${getPublisherContainer().artifactId}"
-            project.bintrayUpload.packageIssueTrackerUrl = "$repoURL/issues"
-            project.bintrayUpload.packageVcsUrl =
-                    "$repoURL/releases/tag/v${getPublisherContainer().version}"
-            project.bintrayUpload.packageWebsiteUrl = repoURL
-            project.bintrayUpload.versionVcsTag ="v${getPublisherContainer().version}"
-            project.bintrayUpload.versionName = "${getPublisherContainer().version}"
-            project.bintrayUpload.packagePublicDownloadNumbers = false
         }
     }
 
@@ -283,23 +238,99 @@ public class LibraryPlugin implements Plugin<Project> {
         def task = project.tasks.create 'publishAarExperimental'
         task.setDescription('Publishes a new experimental version of the AAR library.')
         task.dependsOn 'checkLocalDependencies', 'assembleDebug', 'debugSourcesJar' //, 'debugJavadocJar' --> // Uncomment to upload Javadocs. This is not working well so it is turned off.
-        task.finalizedBy 'uploadArchives'
+        task.finalizedBy 'bintrayUpload'
 
         task.doLast {
 
+            // Set all Bintray configuration.
+            setBintrayConfig(PUBLISH_EXPERIMENTAL);
+
             // Set the artifacts.
             project.configurations.archives.artifacts.clear()
-            project.artifacts.add('archives', project.file("$project.buildDir/outputs/aar/${project.name}-debug.aar"))
+            project.artifacts.add('archives', project.file(getAarFilePath(PUBLISH_EXPERIMENTAL)))
             project.artifacts.add('archives', project.tasks['debugSourcesJar'])
-
-            // Uncomment the following line to upload Javadocs. This is not working well so it is turned off.
-            // project.artifacts.add('archives', project.tasks['debugJavadocJar'])
-
-            project.uploadArchives.repositories.mavenDeployer.pom.version += '-EXPERIMENTAL-' + getTimestamp()
-            project.uploadArchives.repositories.mavenDeployer.repository.url = getPublisherContainer().experimentalRepository.url
-            project.uploadArchives.repositories.mavenDeployer.repository.authentication.userName = getPublisherContainer().experimentalRepository.username
-            project.uploadArchives.repositories.mavenDeployer.repository.authentication.password = getPublisherContainer().experimentalRepository.password
         }
+    }
+
+    /**
+     * Sets basic bintray configuration, repository configuration, user and password.
+     * Also renames the sources file so that the bintray plugin finds it and writes the valid
+     * pom as the default pom so that the bintray plugin uploads it.
+     *
+     **/
+    private void setBintrayConfig(String buildConfig){
+        
+        // Fixed repository URL.
+        def repoURL = "http://github.com/mercadolibre/mobile-android_${getPublisherContainer().artifactId}"
+
+        project.group = getPublisherContainer().groupId
+
+        switch (buildConfig){
+            case PUBLISH_RELESE :
+                project.version = getPublisherContainer().version
+                project.bintrayUpload.repoName = 'android-releases';
+                project.bintrayUpload.packageVcsUrl =
+                        "$repoURL/releases/tag/v${project.version}"
+                project.bintrayUpload.versionVcsTag ="v${project.version}"
+                break;
+            case PUBLISH_EXPERIMENTAL :
+                project.version = "${getPublisherContainer().version}-EXPERIMENTAL-${getTimestamp()}"
+                project.bintrayUpload.repoName = 'android-experimental'
+                break;
+        }
+
+        project.bintrayUpload.user = 'bintray-publisher'
+        project.bintrayUpload.apiKey = '5438c410e4379f5f2955dd93514f4b452766b626'
+        project.bintrayUpload.dryRun = false
+        project.bintrayUpload.publish = true
+        project.bintrayUpload.configurations = ['archives']
+        project.bintrayUpload.userOrg = 'mercadolibre'
+        project.bintrayUpload.packageName = "${getPublisherContainer().groupId}.${getPublisherContainer().artifactId}"
+        project.bintrayUpload.packageIssueTrackerUrl = "$repoURL/issues"
+        project.bintrayUpload.packageWebsiteUrl = repoURL
+        project.bintrayUpload.versionName = "${project.version}"
+        project.bintrayUpload.packagePublicDownloadNumbers = false
+
+        // Write the correct pom for the version and artifactId being generated
+        project.pom {
+            version = project.version
+            artifactId = getPublisherContainer().artifactId
+            project {
+                packaging 'aar'
+                url repoURL
+            }
+        }.writeTo("build/poms/pom-default.xml")
+
+        // Rename the sources file to find it.
+        project.file("$project.buildDir/libs/${project.name}-sources.jar")
+                .renameTo("$project.buildDir/libs/${project.name}-${project.version}-sources.jar")
+
+    }
+
+    /**
+     * Retrieves the aar file to publish and renames it so that the bintray plugin uploads it correctly.
+     * @param publishType one of 'release' or 'experimental'
+     * @return new file path
+     */
+    private String getAarFilePath(String publishType){
+        // Check if previous publish AAR exists (and delete it).
+        def prevFile = project.file("$project.buildDir/outputs/aar/${project.name}.aar");
+        if (prevFile.exists())
+            prevFile.delete();
+
+        // Get the AAR file and rename it (so that the bintray plugin uploads the aar to the correct path).
+        File aarFile;
+        switch (publishType){
+            case PUBLISH_RELESE :
+                aarFile = project.file("$project.buildDir/outputs/aar/${project.name}-release.aar");
+                break;
+            case PUBLISH_EXPERIMENTAL :
+                aarFile = project.file("$project.buildDir/outputs/aar/${project.name}-debug.aar");
+                break;
+        }
+
+        aarFile.renameTo("$project.buildDir/outputs/aar/${getPublisherContainer().artifactId}.aar")
+        return "$project.buildDir/outputs/aar/${getPublisherContainer().artifactId}.aar"
     }
 
     /**
