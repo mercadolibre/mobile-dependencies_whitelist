@@ -218,7 +218,7 @@ public class LibraryPlugin implements Plugin<Project> {
         task.finalizedBy 'bintrayUpload'
         task.doLast {
 
-            //set all bintray configuration
+            // Set all Bintray configuration.
             setBintrayConfig(PUBLISH_RELESE);
 
             // Set the artifacts.
@@ -242,7 +242,7 @@ public class LibraryPlugin implements Plugin<Project> {
 
         task.doLast {
 
-            //set all bintray configuration
+            // Set all Bintray configuration.
             setBintrayConfig(PUBLISH_EXPERIMENTAL);
 
             // Set the artifacts.
@@ -259,7 +259,8 @@ public class LibraryPlugin implements Plugin<Project> {
      *
      **/
     private void setBintrayConfig(String buildConfig){
-        // fixed repo URL
+        
+        // Fixed repository URL.
         def repoURL = "http://github.com/mercadolibre/mobile-android_${getPublisherContainer().artifactId}"
 
         project.group = getPublisherContainer().groupId
@@ -300,7 +301,7 @@ public class LibraryPlugin implements Plugin<Project> {
             }
         }.writeTo("build/poms/pom-default.xml")
 
-        // rename the sources file to find it
+        // Rename the sources file to find it.
         project.file("$project.buildDir/libs/${project.name}-sources.jar")
                 .renameTo("$project.buildDir/libs/${project.name}-${project.version}-sources.jar")
 
