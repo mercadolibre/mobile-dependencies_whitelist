@@ -234,7 +234,7 @@ public class LibraryPlugin implements Plugin<Project> {
 
             // Set the artifacts.
             project.configurations.archives.artifacts.clear()
-            project.artifacts.add('archives', getAarFilePath(PUBLISH_RELESE))
+            project.artifacts.add('archives', project.file(getAarFilePath(PUBLISH_RELESE)))
             project.artifacts.add('archives', project.tasks['releaseSourcesJar'])
 
 
@@ -305,6 +305,10 @@ public class LibraryPlugin implements Plugin<Project> {
         project.pom {
             version = project.version
             artifactId = getPublisherContainer().artifactId
+            project {
+                packaging 'aar'
+                url repoURL
+            }
         }.writeTo("build/poms/pom-default.xml")
 
         // rename the sources file to find it
