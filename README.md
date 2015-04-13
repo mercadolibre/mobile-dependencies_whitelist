@@ -10,6 +10,15 @@ This project includes three Gradle plugins to make the Android library developer
 4. jacoco [incubating]
 3. base
 
+
+## Whats New ?
+
+- The last version of the library plugin publishes the release and experimental artifacts to bintray.
+- **WARN**: Soon the maven-mobile repository will be deprecated, migrate to Bintray as soon as possible.
+- Check [Migration Guide](https://github.com/mercadolibre/mobile-android_gradle#migration-guide-from-library-11-to-12)
+to migrate your library/application to Bintray.
+- Check [Changelog](https://github.com/mercadolibre/mobile-android_gradle#changelog) for further information.
+
 ## What does the library plugin do for us?
 
 This plugin add new tasks to the Gradle build script that applies them (except the base plugin). The goal of these tasks is to test and publish Android libraries to Maven repositories, but running some other important tasks before:
@@ -274,6 +283,10 @@ If you want to improve MercadoLibre Gradle plugins, you should follow these step
 ## Changelog
 
 ### library plugin
+
+- 1.4: Publishes to bintray both release and experimental artifacts. Fixes some minor bugs.
+- 1.3: Fixes sources not being attached to the releases in bintray. 
+- 1.2: Replaces the 'publishAarRelease' so that the artifact publishes to Bintray
 - 1.1:
  -  Robolectric and jacoco tasks were deacopled from this plugin. Now includes both by default.
 - 1.0: 
@@ -307,6 +320,7 @@ If you want to improve MercadoLibre Gradle plugins, you should follow these step
 
 ### base
 
+- 1.6: Adds Bintray repositories as default dependencies.
 - 1.5: Fixed bug: the plugin is not attaching the sources when pointing to a LOCAL version.
 - 1.4: It now attaches the sources for 'provided' dependencies (JARs and AARs) (although you should not use 'provided' in any case...).
 - 1.3: It now attaches the sources for 'compile' dependencies (JARs and AARs). It does not work with 'provided' dependencies (next version).
@@ -315,12 +329,16 @@ If you want to improve MercadoLibre Gradle plugins, you should follow these step
 - 1.0: First version of the plugin!
 
 
-## Migration Guide from library 1.1 to 1.2+
+## Migration Guide from library 1.1 to 1.+
 
 The gradle library plugin version 1.2 includes publication to Bintray instead of maven-mobile. Because of this new 
 classpath need to be added and repositories.
 
 Example: [mobile-android_ui](https://github.com/mercadolibre/mobile-android_ui/tree/develop)
+
+You should now use the "+" wildcard to include our gradle plugin dependencies in order to avoid
+being constantly updating the plugin (check how the base, library, jacoco and robolectric dependencies
+are included below).
 
 **Parent build.gradle**
 ```groovy
@@ -342,15 +360,15 @@ buildscript {
     
     dependencies {
         classpath 'com.android.tools.build:gradle:1.0.0'
-        classpath 'com.mercadolibre.android.gradle:base:1.5'
         
-        classpath 'com.mercadolibre.android.gradle:application:1.0'
-        // Necessary for application plugin
-        classpath 'com.mercadolibre.android.gradle:jacoco:1.0'
-        // Necessary for application plugin
-        classpath 'com.mercadolibre.android.gradle:robolectric:1.0'
+        classpath 'com.mercadolibre.android.gradle:base:1.+'
+        classpath 'com.mercadolibre.android.gradle:library:1.+'
         
-        // New classpath to be added for Bintray (added in library plugin 1.2)
+        // Necessary for application plugin
+        classpath 'com.mercadolibre.android.gradle:jacoco:1.+'
+        classpath 'com.mercadolibre.android.gradle:robolectric:1.+'
+        
+        // New classpath to be added for Bintray
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.0'
         classpath 'com.github.dcendents:android-maven-plugin:1.2'
     }
@@ -358,11 +376,23 @@ buildscript {
 ```
 
 **Your module's build.gradle**
-You don't need the releases configurations anymore (remove them).
+You don't need the releases nor experimental configurations anymore (remove them).
 
     publisher.releasesRepository.url = [YOUR MAVEN RELEASES REPO URL]
     publisher.releasesRepository.username = [YOUR USERNAME]
     publisher.releasesRepository.password = [YOUR PASSWORD]
+    
+    publisher.experimentalRepository.url = [YOUR MAVEN SNAPSHOTS REPO URL]
+    publisher.experimentalRepository.username = [YOUR USERNAME]
+    publisher.experimentalRepository.password = [YOUR PASSWORD]
+    
+    
+You just need the groupId, version and artifactId configuration:
+    
+    publisher.groupId = [YOUR GROUPID FOR MAVEN]
+    publisher.artifactId = project.name // Or whatever...
+    publisher.version = [YOUR LIBRARY VERSION]
+    
     
 **What if my project.name is not the same as my artifactId ?**
 To be able to integrate with bintray, we use the bintray gradle plugin from jfrog (added in the classpath).
