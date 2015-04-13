@@ -198,17 +198,6 @@ public class LibraryPlugin implements Plugin<Project> {
             throw new GradleException("Property 'publisher.version' is needed by the Publisher plugin. Please define it in the build script.")
         }
 
-        // Publisher.experimentalRepository container.
-        if (getPublisherContainer().experimentalRepository.url == null || getPublisherContainer().experimentalRepository.url.length() == 0) {
-            throw new GradleException("Property 'publisher.experimentalRepository.url' is needed by the Publisher plugin. Please define it in the build script.")
-        }
-        if (getPublisherContainer().experimentalRepository.username == null || getPublisherContainer().experimentalRepository.username.length() == 0) {
-            throw new GradleException("Property 'publisher.experimentalRepository.username' is needed by the Publisher plugin. Please define it in the build script.")
-        }
-        if (getPublisherContainer().experimentalRepository.password == null || getPublisherContainer().experimentalRepository.password.length() == 0) {
-            throw new GradleException("Property 'publisher.experimentalRepository.password' is needed by the Publisher plugin. Please define it in the build script.")
-        }
-
     }
 
     /**
