@@ -57,7 +57,6 @@ public class LibraryPlugin implements Plugin<Project> {
         project.apply plugin: 'com.mercadolibre.android.gradle.robolectric'
 
         addPublisherContainer()
-        setupUploadArchivesTask()
         createAllTasks()
     }
 
@@ -95,8 +94,6 @@ public class LibraryPlugin implements Plugin<Project> {
      */
     private void addPublisherContainer() {
         project.extensions.create('publisher', PublisherPluginExtension)
-        getPublisherContainer().releasesRepository = new PublisherRepository()
-        getPublisherContainer().experimentalRepository = new PublisherRepository()
     }
 
     /**
@@ -156,31 +153,6 @@ public class LibraryPlugin implements Plugin<Project> {
         }
     }
 
-    /**
-     * Sets up the "uploadArchives" task from the "maven" plugin.
-     */
-    private void setupUploadArchivesTask() {
-
-        project.afterEvaluate {
-
-            validatePublisherContainer()
-
-            project.uploadArchives {
-                repositories {
-                    mavenDeployer {
-                        repository(url: getPublisherContainer().releasesRepository.url) {
-                            authentication(userName: getPublisherContainer().releasesRepository.username, password: getPublisherContainer().releasesRepository.password)
-                        }
-                        pom.groupId = getPublisherContainer().groupId
-                        pom.artifactId = getPublisherContainer().artifactId
-                        pom.version = getPublisherContainer().version
-                    }
-                }
-            }
-        }
-
-        project.uploadArchives.dependsOn 'connectedAndroidTest'
-    }
 
     /**
      * Validates that all the needed configuration is set within the 'publisher' container.
@@ -394,16 +366,6 @@ public class LibraryPlugin implements Plugin<Project> {
 public class PublisherPluginExtension {
 
     /**
-     * Releases repository.
-     */
-    private PublisherRepository releasesRepository
-
-    /**
-     * Experimental repository.
-     */
-    private PublisherRepository experimentalRepository
-
-    /**
      * GroupId for Maven.
      */
     private String groupId
@@ -417,38 +379,6 @@ public class PublisherPluginExtension {
      * Version for Maven.
      */
     private String version
-
-    /**
-     * Gets the releases repository.
-     * @return the repository.
-     */
-    public PublisherRepository getReleasesRepository() {
-        return releasesRepository
-    }
-
-    /**
-     * Sets the releases repository.
-     * @param releasesRepository the releases repository.
-     */
-    public void setReleasesRepository(PublisherRepository releasesRepository) {
-        this.releasesRepository = releasesRepository
-    }
-
-    /**
-     * Gets the experimental repository.
-     * @return the experimental repository.
-     */
-    public PublisherRepository getExperimentalRepository() {
-        return experimentalRepository
-    }
-
-    /**
-     * Sets the experimental repository.
-     * @param experimentalRepository the experimental repository.
-     */
-    public void setExperimentalRepository(PublisherRepository experimentalRepository) {
-        this.experimentalRepository = experimentalRepository
-    }
 
     /**
      * Gets the group ID for Maven.
