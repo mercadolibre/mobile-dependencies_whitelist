@@ -284,6 +284,7 @@ If you want to improve MercadoLibre Gradle plugins, you should follow these step
 
 ### library plugin
 
+- 1.6: Fixes publishAarLocal bug
 - 1.5: Removes the need of adding the exprimental information (url, user and password)
 - 1.4: Publishes to bintray both release and experimental artifacts. Fixes some minor bugs.
 - 1.3: Fixes sources not being attached to the releases in bintray. 
@@ -301,6 +302,8 @@ If you want to improve MercadoLibre Gradle plugins, you should follow these step
  - Jacoco tasks working standalone.
 
 ### robolectric plugin
+
+- 1.2: Removes a warning.
 - 1.1:
  - Fix to build variants. Flavors where not recognized
 - 1.0:
