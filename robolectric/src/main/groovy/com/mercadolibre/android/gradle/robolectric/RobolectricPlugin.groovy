@@ -48,8 +48,6 @@ public class RobolectricPlugin implements Plugin<Project> {
         if (exampleApp != null){
             project.logger.warn("INFO: Property 'exampleApp' loaded. Value is \"${exampleApp}\" in \"${project.name}\"")
             project.android.sourceSets.test.java.srcDirs += "../${exampleApp}/build/generated/source/r/debug"
-        } else {
-            project.logger.warn("WARNING: Property 'exampleApp' is needed by the Robolectric plugin to work properly. Please define it in the gradle.properties of \"${project.name}\"")
         }
     }
 
