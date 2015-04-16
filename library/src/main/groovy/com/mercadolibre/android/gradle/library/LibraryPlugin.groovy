@@ -57,6 +57,7 @@ public class LibraryPlugin implements Plugin<Project> {
         project.apply plugin: 'com.mercadolibre.android.gradle.robolectric'
 
         addPublisherContainer()
+        setupUploadArchivesTask()
         createAllTasks()
     }
 
@@ -153,6 +154,29 @@ public class LibraryPlugin implements Plugin<Project> {
         }
     }
 
+    /**
+     * Sets up the "uploadArchives" task from the "maven" plugin.
+     */
+    private void setupUploadArchivesTask() {
+
+        project.afterEvaluate {
+
+            validatePublisherContainer()
+
+            project.uploadArchives {
+                repositories {
+                    mavenDeployer {
+                        repository(url: "file://${System.properties['user.home']}/.m2/repository")
+                        pom.groupId = getPublisherContainer().groupId
+                        pom.artifactId = getPublisherContainer().artifactId
+                        pom.version = getPublisherContainer().version
+                    }
+                }
+            }
+        }
+
+        project.uploadArchives.dependsOn 'connectedAndroidTest'
+    }
 
     /**
      * Validates that all the needed configuration is set within the 'publisher' container.
@@ -327,8 +351,8 @@ public class LibraryPlugin implements Plugin<Project> {
             project.uploadArchives.repositories.mavenDeployer.pom.version += '-LOCAL-' + getTimestamp()
             // Point the repository to our .m2/repository directory.
             project.uploadArchives.repositories.mavenDeployer.repository.url = "file://${System.properties['user.home']}/.m2/repository"
-        }
-    }
+                    }
+                }
 
     /**
      * Creates the "tagVersion" task (if release).
