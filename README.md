@@ -13,11 +13,8 @@ This project includes three Gradle plugins to make the Android library developer
 
 ## Whats New ?
 
-- The last version of the library plugin publishes the release and experimental artifacts to bintray.
-- **WARN**: Soon the maven-mobile repository will be deprecated, migrate to Bintray as soon as possible.
-- Check [Migration Guide](https://github.com/mercadolibre/mobile-android_gradle#migration-guide-from-library-11-to-12)
-to migrate your library/application to Bintray.
-- Check [Changelog](https://github.com/mercadolibre/mobile-android_gradle#changelog) for further information.
+- Full rollout of Bintray as maven repository (releases and experimental libraries should be deployed in Bintray).
+
 
 ## What does the library plugin do for us?
 
@@ -134,9 +131,15 @@ apply plugin: 'com.mercadolibre.android.gradle.base' // This sets up our custom 
 buildscript {
     repositories { // This repositories are used when building your project. In this case, we need to tell Gradle to use our repositories in order to find the Gradle Publisher plugins.
         jcenter() // This is needed by Gradle.
+
+        // New Maven Bintray Repository
         maven {
-            url 'http://maven-mobile.melicloud.com/nexus/content/repositories/releases' // Releases URL.
+            url  "https://dl.bintray.com/mercadolibre/android-releases"
+            credentials {
+                username 'bintray-read'
+                password 'ff5072eaf799961add07d5484a6283eb3939556b'
         }
+    }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:1.1.3'
@@ -172,9 +175,15 @@ apply plugin: 'com.mercadolibre.android.gradle.base' // This sets up our custom 
 buildscript {
     repositories { // This repositories are used when building your project. In this case, we need to tell Gradle to use our repositories in order to find the Gradle Publisher plugins.
         jcenter() // This is needed by Gradle.
+
+        // New Maven Bintray Repository
         maven {
-            url 'http://maven-mobile.melicloud.com/nexus/content/repositories/releases' // Releases URL.
+            url  "https://dl.bintray.com/mercadolibre/android-releases"
+            credentials {
+                username 'bintray-read'
+                password 'ff5072eaf799961add07d5484a6283eb3939556b'
         }
+    }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:1.1.3'
@@ -204,9 +213,15 @@ apply plugin: 'com.mercadolibre.android.gradle.base' // This sets up our custom 
 buildscript {
     repositories { // This repositories are used when building your project. In this case, we need to tell Gradle to use our repositories in order to find the Gradle Publisher plugins.
         jcenter() // This is needed by Gradle.
+
+        // New Maven Bintray Repository
         maven {
-            url 'http://maven-mobile.melicloud.com/nexus/content/repositories/releases' // Releases URL.
+            url  "https://dl.bintray.com/mercadolibre/android-releases"
+            credentials {
+                username 'bintray-read'
+                password 'ff5072eaf799961add07d5484a6283eb3939556b'
         }
+    }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:1.0.0'
@@ -244,9 +259,14 @@ apply plugin: 'com.mercadolibre.android.gradle.base' // This is the plugin!
 buildscript {
     repositories {
         jcenter()
+        // New Maven Bintray Repository
         maven {
-            url 'http://maven-mobile.melicloud.com/nexus/content/repositories/releases'
+            url  "https://dl.bintray.com/mercadolibre/android-releases"
+            credentials {
+                username 'bintray-read'
+                password 'ff5072eaf799961add07d5484a6283eb3939556b'
         }
+    }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:1.0.0'
@@ -271,9 +291,9 @@ If you want to improve MercadoLibre Gradle plugins, you should follow these step
 2. Import the project from IntelliJ Community Edition (not Android Studio!) (NOTE: Import it, do not 'open' it). You MUST select the root build.gradle when importing the project, otherwise IntelliJ will not recognize all the Gradle modules. 
 3. Make sure you have a JDK configured for the project: _File -> Project Structure -> Project SDK_.
 4. Make the changes you need.
-5. Publish a new version of the plugins to the plugins repository, with any of these methods:
+5. Publish a new version of the plugins to the plugins repository:
     1. Locally (on your .m2/repository directory): `./gradlew library:install` or `./gradlew base:install`
-    2. Remotelly (on Nexus): `./gradlew library:uploadArchives` or `./gradlew base:uploadArchives` - You can check if the plugin has been uploaded by browsing [Nexus](http://maven-mobile.melicloud.com/nexus/content/repositories/). If you want to publish as a snapshot, make sure the version ends with "-SNAPSHOT", otherwise it will get uploaded as a release. See the inner build.gradle to modify the version.
+    2. Remotelly (on Bintray): `./gradlew library:uploadArchives` or `./gradlew base:uploadArchives` - You can check if the plugin has been uploaded by browsing [Nexus](http://maven-mobile.melicloud.com/nexus/content/repositories/). If you want to publish as a snapshot, make sure the version ends with "-SNAPSHOT", otherwise it will get uploaded as a release. See the inner build.gradle to modify the version.
 
 ## Possible errors with library plugin
 
@@ -324,6 +344,7 @@ If you want to improve MercadoLibre Gradle plugins, you should follow these step
 
 ### base
 
+- 1.7: Removes maven-mobile from repositories.
 - 1.6: Adds Bintray repositories as default dependencies.
 - 1.5: Fixed bug: the plugin is not attaching the sources when pointing to a LOCAL version.
 - 1.4: It now attaches the sources for 'provided' dependencies (JARs and AARs) (although you should not use 'provided' in any case...).
