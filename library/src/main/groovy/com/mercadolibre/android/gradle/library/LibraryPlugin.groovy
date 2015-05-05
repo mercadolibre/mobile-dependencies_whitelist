@@ -4,7 +4,6 @@ import org.gradle.api.GradleException
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.tasks.bundling.Jar
-import org.gradle.api.tasks.javadoc.Javadoc
 
 import java.text.SimpleDateFormat
 
@@ -15,8 +14,6 @@ import java.text.SimpleDateFormat
  *     <li>Apply com.android.library plugin.</li>
  *     <li>Apply maven plugin.</li>
  *     <li>Generate JAR with sources.</li>
- *     <li>Generate HTMLs with Javadoc.</li>
- *     <li>Generate JAR with Javadoc.</li>
  *     <li>Create lint reports.</li>
  *     <li>Run Android connected tests (requires a connected device).</li>
  *     <li>Upload the artifacts to the repository (either release, experimental or local).</li>
@@ -101,8 +98,6 @@ public class LibraryPlugin implements Plugin<Project> {
      */
     private void createAllTasks() {
         createSourcesJarTasks()
-        createJavadocTasks()
-        createJavadocJarTasks()
         createPublishLocalTask()
         createPublishReleaseTask()
         createPublishExperimentalTask()
@@ -119,35 +114,6 @@ public class LibraryPlugin implements Plugin<Project> {
             sourcesJarTask.dependsOn variant.javaCompile
             sourcesJarTask.classifier = 'sources'
             sourcesJarTask.from variant.javaCompile.source
-        }
-    }
-
-    /**
-     * Creates the tasks to generate the Javadoc HTMLs, one per variant.
-     */
-    private void createJavadocTasks() {
-        project.android.libraryVariants.all { variant ->
-            def javadocTask = project.tasks.create "${variant.buildType.name}Javadoc", Javadoc
-            javadocTask.source = variant.javaCompile.source
-            javadocTask.classpath = project.files(variant.javaCompile.classpath.files) + project.files("${project.android.sdkDirectory}/platforms/${project.android.compileSdkVersion}/android.jar")
-            javadocTask.options.links 'http://docs.oracle.com/javase/7/docs/api/'
-            javadocTask.options.linksOffline 'http://d.android.com/reference/', "${project.android.sdkDirectory}/docs/reference"
-            javadocTask.exclude '**/BuildConfig.java'
-            javadocTask.exclude '**/R.java'
-            javadocTask.failOnError = false
-        }
-    }
-
-    /**
-     * Creates the tasks to generate the JARs with the Javadoc HTMLs, one per variant.
-     */
-    private void createJavadocJarTasks() {
-        project.android.libraryVariants.all { variant ->
-            def javadocTask = project.tasks.findByName("${variant.buildType.name}Javadoc")
-            def javadocJarTask = project.tasks.create "${variant.buildType.name}JavadocJar", Jar
-            javadocJarTask.classifier = 'javadoc'
-            javadocJarTask.from javadocTask.destinationDir
-            javadocJarTask.dependsOn javadocTask
         }
     }
 
