@@ -8,6 +8,6 @@ dependencies {
 
 group = 'com.mercadolibre.android.gradle'
 
-version = '1.7'
+version = '1.8'
 
 apply from: '../bintraypublish.gradle'

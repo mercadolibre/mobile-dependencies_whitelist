@@ -3,7 +3,6 @@ package com.mercadolibre.android.gradle.library
 import org.gradle.api.GradleException
 import org.gradle.api.Plugin
 import org.gradle.api.Project
-import org.gradle.api.tasks.Exec
 import org.gradle.api.tasks.bundling.Jar
 import org.gradle.api.tasks.javadoc.Javadoc
 
@@ -107,8 +106,6 @@ public class LibraryPlugin implements Plugin<Project> {
         createPublishLocalTask()
         createPublishReleaseTask()
         createPublishExperimentalTask()
-        // TODO: Uncomment this when Git tagging needs to be used again.
-        // createTagVersionTask()
         createCheckLocalDependenciesTask()
         resetUploadArchivesDependencies()
     }
@@ -210,7 +207,7 @@ public class LibraryPlugin implements Plugin<Project> {
     private void createPublishReleaseTask() {
         def task = project.tasks.create 'publishAarRelease'
         task.setDescription('Publishes a new release version of the AAR library to Bintray.')
-        task.dependsOn 'checkLocalDependencies', 'assembleRelease', 'testRelease', 'check', 'releaseSourcesJar' //, 'releaseJavadocJar' --> // Uncomment to upload Javadocs. This is not working well so it is turned off.
+        task.dependsOn 'checkLocalDependencies', 'assembleRelease', 'testRelease', 'check', 'releaseSourcesJar'
         task.finalizedBy 'bintrayUpload'
         task.doLast {
 
@@ -223,7 +220,6 @@ public class LibraryPlugin implements Plugin<Project> {
             project.artifacts.add('archives', project.tasks['releaseSourcesJar'])
 
 
-
         }
     }
 
@@ -233,7 +229,7 @@ public class LibraryPlugin implements Plugin<Project> {
     private void createPublishExperimentalTask() {
         def task = project.tasks.create 'publishAarExperimental'
         task.setDescription('Publishes a new experimental version of the AAR library.')
-        task.dependsOn 'checkLocalDependencies', 'assembleDebug', 'debugSourcesJar' //, 'debugJavadocJar' --> // Uncomment to upload Javadocs. This is not working well so it is turned off.
+        task.dependsOn 'checkLocalDependencies', 'assembleDebug', 'debugSourcesJar'
         task.finalizedBy 'bintrayUpload'
 
         task.doLast {
@@ -254,22 +250,22 @@ public class LibraryPlugin implements Plugin<Project> {
      * pom as the default pom so that the bintray plugin uploads it.
      *
      **/
-    private void setBintrayConfig(String buildConfig){
-        
+    private void setBintrayConfig(String buildConfig) {
+
         // Fixed repository URL.
         def repoURL = "http://github.com/mercadolibre/mobile-android_${getPublisherContainer().artifactId}"
 
         project.group = getPublisherContainer().groupId
 
-        switch (buildConfig){
-            case PUBLISH_RELESE :
+        switch (buildConfig) {
+            case PUBLISH_RELESE:
                 project.version = getPublisherContainer().version
                 project.bintrayUpload.repoName = 'android-releases';
                 project.bintrayUpload.packageVcsUrl =
                         "$repoURL/releases/tag/v${project.version}"
-                project.bintrayUpload.versionVcsTag ="v${project.version}"
+                project.bintrayUpload.versionVcsTag = "v${project.version}"
                 break;
-            case PUBLISH_EXPERIMENTAL :
+            case PUBLISH_EXPERIMENTAL:
                 project.version = "${getPublisherContainer().version}-EXPERIMENTAL-${getTimestamp()}"
                 project.bintrayUpload.repoName = 'android-experimental'
                 break;
@@ -308,7 +304,7 @@ public class LibraryPlugin implements Plugin<Project> {
      * @param publishType one of 'release' or 'experimental'
      * @return new file path
      */
-    private String getAarFilePath(String publishType){
+    private String getAarFilePath(String publishType) {
         // Check if previous publish AAR exists (and delete it).
         def prevFile = project.file("$project.buildDir/outputs/aar/${project.name}.aar");
         if (prevFile.exists())
@@ -316,11 +312,11 @@ public class LibraryPlugin implements Plugin<Project> {
 
         // Get the AAR file and rename it (so that the bintray plugin uploads the aar to the correct path).
         File aarFile;
-        switch (publishType){
-            case PUBLISH_RELESE :
+        switch (publishType) {
+            case PUBLISH_RELESE:
                 aarFile = project.file("$project.buildDir/outputs/aar/${project.name}-release.aar");
                 break;
-            case PUBLISH_EXPERIMENTAL :
+            case PUBLISH_EXPERIMENTAL:
                 aarFile = project.file("$project.buildDir/outputs/aar/${project.name}-debug.aar");
                 break;
         }
@@ -335,7 +331,7 @@ public class LibraryPlugin implements Plugin<Project> {
     private void createPublishLocalTask() {
         def task = project.tasks.create 'publishAarLocal'
         task.setDescription('Publishes a new local version of the AAR library, locally on the .m2/repository directory.')
-        task.dependsOn 'checkLocalDependencies', 'assembleDebug', 'debugSourcesJar' //, 'debugJavadocJar' --> // Uncomment to upload Javadocs. This is not working well so it is turned off.
+        task.dependsOn 'checkLocalDependencies', 'assembleDebug', 'debugSourcesJar'
         task.finalizedBy 'uploadArchives'
 
         task.doLast {
@@ -345,31 +341,9 @@ public class LibraryPlugin implements Plugin<Project> {
             project.artifacts.add('archives', project.file("$project.buildDir/outputs/aar/${project.name}-debug.aar"))
             project.artifacts.add('archives', project.tasks['debugSourcesJar'])
 
-            // Uncomment the following line to upload Javadocs. This is not working well so it is turned off.
-            // project.artifacts.add('archives', project.tasks['debugJavadocJar'])
-
             project.uploadArchives.repositories.mavenDeployer.pom.version += '-LOCAL-' + getTimestamp()
             // Point the repository to our .m2/repository directory.
             project.uploadArchives.repositories.mavenDeployer.repository.url = "file://${System.properties['user.home']}/.m2/repository"
-                    }
-                }
-
-    /**
-     * Creates the "tagVersion" task (if release).
-     */
-    private void createTagVersionTask() {
-        def task = project.tasks.create 'tagVersion', Exec
-        task.commandLine 'sh'
-        project.afterEvaluate {
-            task.args "-c", "git tag " + getPublisherContainer().version + "; git push --tags"
-        }
-        task.setDescription('Tags the library version in Git')
-
-        task.dependsOn 'uploadArchives'
-        project.tasks['uploadArchives'].finalizedBy task
-
-        task.onlyIf {
-            project.gradle.taskGraph.hasTask(project.tasks['publishAarRelease'])
         }
     }
 
@@ -377,7 +351,7 @@ public class LibraryPlugin implements Plugin<Project> {
      * Gets the current timestamp.
      * @return the current timestamp.
      */
-    private String getTimestamp() {
+    private static String getTimestamp() {
         def sdf = new SimpleDateFormat('yyyyMMddHHmmss')
         sdf.timeZone = TimeZone.getTimeZone('UTC')
         sdf.format(new Date())

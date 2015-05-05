@@ -6,9 +6,6 @@ import org.gradle.api.Project
 
 import java.util.concurrent.atomic.AtomicReference
 
-/**
- * Created by ngiagnoni on 3/11/15.
- */
 public class RobolectricPlugin implements Plugin<Project> {
 
     /**
@@ -21,18 +18,17 @@ public class RobolectricPlugin implements Plugin<Project> {
      * @param project The Gradle project
      */
     @Override
-    public void apply(Project project){
+    public void apply(Project project) {
         this.project = project;
 
         configureRobolectricTasks()
-        configureExampleApp()
     }
 
     /**
      * Create all Robolectric Tasks
      */
-    private void configureRobolectricTasks(){
-        if (project.android == null){
+    private void configureRobolectricTasks() {
+        if (project.android == null) {
             throw new GradleException("You should apply \"android\" plugin to make this one work.")
         }
 
@@ -40,23 +36,13 @@ public class RobolectricPlugin implements Plugin<Project> {
         createCleanRobolectricFilesTask()
     }
 
-    /**
-     * Configures android sourcets in unit testing tasks to obtain auto-generated classes to work
-     */
-    private void configureExampleApp() {
-        def exampleApp = project.getProperties().get("exampleApp")
-        if (exampleApp != null){
-            project.logger.warn("INFO: Property 'exampleApp' loaded. Value is \"${exampleApp}\" in \"${project.name}\"")
-            project.android.sourceSets.test.java.srcDirs += "../${exampleApp}/build/generated/source/r/debug"
-        }
-    }
+    private void hookToTestTasks() {
 
-    private void hookToTestTasks(){
-        def variants = null;
+        def variants;
 
         try {
             variants = project.android.applicationVariants
-        } catch (Exception e) {
+        } catch (Exception ignored) {
             variants = project.android.libraryVariants
         }
 
@@ -84,15 +70,15 @@ public class RobolectricPlugin implements Plugin<Project> {
 
         task.doLast {
             File file = project.file("src/main/test-project.properties")
-            if (file.exists()){
-                if (!file.delete()){
+            if (file.exists()) {
+                if (!file.delete()) {
                     throw new GradleException("Cannot delete \"test-project.properties\" file. Check if some process is using it and close it.")
                 }
             }
 
             File projectFile = project.file("src/main/project.properties")
-            if (projectFile.exists()){
-                if (!projectFile.delete()){
+            if (projectFile.exists()) {
+                if (!projectFile.delete()) {
                     throw new GradleException("Cannot delete \"project.properties\" file. Check if some process is using it and close it.")
                 }
             }
@@ -125,7 +111,7 @@ public class RobolectricPlugin implements Plugin<Project> {
             def libCounter = new AtomicReference<Integer>()
             libCounter.set(new Integer(1))
 
-            tree.each {File tmpFile ->
+            tree.each { File tmpFile ->
                 addDirToFile(file, tmpFile, path, libCounter)
             }
         }
