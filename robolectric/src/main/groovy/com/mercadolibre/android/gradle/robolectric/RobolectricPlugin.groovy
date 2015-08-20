@@ -49,6 +49,13 @@ public class RobolectricPlugin implements Plugin<Project> {
         variants.all { variant ->
             def taskName = "test${variant.flavorName.capitalize()}${variant.buildType.name.capitalize()}"
             def testTask = project.tasks.findByName(taskName)
+
+            //Forward compatibility to android grdle plugin 1.3.+
+            if (testTask == null) {
+                taskName += "UnitTest"
+                testTask = project.tasks.findByName(taskName)
+            }
+
             testTask.dependsOn("createRobolectricFiles")
         }
     }
