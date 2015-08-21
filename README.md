@@ -400,6 +400,14 @@ buildscript {
 }
 ```
 
+**Using Gradle 2.4+**
+
+If you intend to  use Gradle 2.4+, the `com.github.dcendents:android-maven-plugin:1.2`
+dependency should be changed to `com.github.dcendents:android-maven-gradle-plugin:1.3`
+
+Be sure to configure the `wrapper` task accordingly.
+
+
 **Your module's build.gradle**
 You don't need the releases nor experimental configurations anymore (remove them).
 
