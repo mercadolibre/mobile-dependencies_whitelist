@@ -45,8 +45,8 @@ public class LibraryPlugin implements Plugin<Project> {
         // We apply android plugin.
         project.apply plugin: 'com.android.library'
 
-        // Apply bintray plugins to the repositories.
         project.apply plugin: 'com.jfrog.bintray'
+
         project.apply plugin: 'com.github.dcendents.android-maven'
 
         project.apply plugin: 'com.mercadolibre.android.gradle.jacoco'
