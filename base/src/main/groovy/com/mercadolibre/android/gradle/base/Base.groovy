@@ -48,7 +48,6 @@ class BasePlugin implements Plugin<Project> {
                 mavenLocal()
                 mavenCentral()
 
-                // New Bintray repos, the experimental repo is not working right now.
                 maven {
                     url "https://dl.bintray.com/mercadolibre/android-releases"
                     credentials {
