@@ -4,11 +4,19 @@ MercadoLibre Gradle Android Plugins for Gradle
 ## What is this?
 This project includes three Gradle plugins to make the Android library developer's life easier:
 
-1. library
-2. application
-3. robolectric [incubating]
+1. application
+2. base
+3. library
 4. jacoco [incubating]
-3. base
+5. robolectric [incubating]
+
+
+## Repo usage
+*Do not clone or push to* **master** *branch.*
+
+Create branch or fork from **develop**, then push or create pull requests (if you don't have access) to that branch.
+
+The repo uses [this branching model](http://nvie.com/posts/a-successful-git-branching-model/).
 
 
 ## Whats New ?
