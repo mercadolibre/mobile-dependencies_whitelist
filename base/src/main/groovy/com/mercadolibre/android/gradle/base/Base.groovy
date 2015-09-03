@@ -75,8 +75,10 @@ class BasePlugin implements Plugin<Project> {
      * <p/>
      * Users can also override this default version by adding the following code block to the root {@code build.gradle}:
      * <pre>
-     *     wrapper {*         gradleVersion = '3.0'
-     *}* </pre>
+     *     wrapper {
+     *         gradleVersion = '3.0'
+     *     }
+     * </pre>
      */
     void setDefaultGradleVersion() {
         def wrapperTask = project.tasks.findByName("wrapper")
