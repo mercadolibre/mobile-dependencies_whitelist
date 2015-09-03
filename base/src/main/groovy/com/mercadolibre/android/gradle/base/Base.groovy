@@ -69,7 +69,7 @@ class BasePlugin implements Plugin<Project> {
     }
 
     /**
-     * Set the default Gradle version based on {@link #DEFAULT_GRADLE_WRAPPER_VERSION}.
+     * Upgrade the default Gradle version based on {@link #DEFAULT_GRADLE_WRAPPER_VERSION} when corresponding.
      * <p/>
      * <strong>Note that to start using this version, the user must run {@code ./gradlew wrapper} to update the wrapper.</strong>
      * <p/>
@@ -84,8 +84,12 @@ class BasePlugin implements Plugin<Project> {
         def wrapperTask = project.tasks.findByName("wrapper")
         if (wrapperTask == null) {
             println 'ERROR: Unable to set default Gradle version to: ' + DEFAULT_GRADLE_WRAPPER_VERSION
-        } else {
+        } else if (Float.valueOf(String.valueOf(wrapperTask.gradleVersion)) < Float.valueOf(DEFAULT_GRADLE_WRAPPER_VERSION)) {
             wrapperTask.gradleVersion = DEFAULT_GRADLE_WRAPPER_VERSION
+
+            println ':' + wrapperTask.name
+            wrapperTask.execute()
+            println 'Gradle Wrapper version upgraded to: ' + wrapperTask.gradleVersion
         }
     }
 }
