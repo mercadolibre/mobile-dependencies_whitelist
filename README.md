@@ -311,7 +311,7 @@ If you want to improve MercadoLibre Gradle plugins, you should follow these step
 ## Changelog
 
 ### library plugin
-
+- 2.0: Added compatibility with Gradle 2.4+
 - 1.6: Fixes publishAarLocal bug
 - 1.5: Removes the need of adding the exprimental information (url, user and password)
 - 1.4: Publishes to bintray both release and experimental artifacts. Fixes some minor bugs.
@@ -324,13 +324,14 @@ If you want to improve MercadoLibre Gradle plugins, you should follow these step
  - Inherits **all deprecated aar-publisher features.**
 
 ### jacoco plugin
+- 2.0: Added compatibility with Gradle 2.4+
 - 1.1:
  - Fix to build variants. Flavors where not recognized
 - 1.0:
  - Jacoco tasks working standalone.
 
 ### robolectric plugin
-
+- 2.0: Added compatibility with Gradle 2.4+
 - 1.2: Removes a warning.
 - 1.1:
  - Fix to build variants. Flavors where not recognized
@@ -351,7 +352,9 @@ If you want to improve MercadoLibre Gradle plugins, you should follow these step
 - 1.0: First version of the plugin!
 
 ### base
-
+- 2.0:
+ - Added compatibility with Gradle 2.4+
+ - Uses Gradle 2.6 as minimum.
 - 1.7: Removes maven-mobile from repositories.
 - 1.6: Adds Bintray repositories as default dependencies.
 - 1.5: Fixed bug: the plugin is not attaching the sources when pointing to a LOCAL version.
