@@ -8,6 +8,8 @@ import org.gradle.api.Project
  */
 class BasePlugin implements Plugin<Project> {
 
+    private static final String DEFAULT_GRADLE_WRAPPER_VERSION = '2.6'
+
     /**
      * The project.
      */
@@ -23,10 +25,11 @@ class BasePlugin implements Plugin<Project> {
 
         avoidCacheForDynamicVersions()
         setupRepositories()
+        setDefaultGradleVersion()
     }
 
     /**
-     * Avoids using Gradle caches for dynamic versions, so that we can use EXPERIMENTAL artifacts with the '+' wildcard.
+     * Avoid using Gradle caches for dynamic versions, so that we can use EXPERIMENTAL artifacts with the '+' wildcard.
      */
     private void avoidCacheForDynamicVersions() {
         // For all sub-projects...
@@ -36,7 +39,6 @@ class BasePlugin implements Plugin<Project> {
             }
         }
     }
-
     /**
      * Sets up the repositories.
      */
@@ -63,6 +65,20 @@ class BasePlugin implements Plugin<Project> {
                     }
                 }
             }
+        }
+    }
+
+    /**
+     * Set the default Gradle version based on {@link #DEFAULT_GRADLE_WRAPPER_VERSION}.
+     * <p/>
+     * <strong>Note that to start using this version, the user must run {code ./gradlew wrapper} to update the wrapper.</strong>
+     */
+    void setDefaultGradleVersion() {
+        def wrapperTask = project.tasks.findByName("wrapper")
+        if (wrapperTask == null) {
+            println 'ERROR: Unable to set default Gradle version to: ' + DEFAULT_GRADLE_WRAPPER_VERSION
+        } else {
+            wrapperTask.gradleVersion = DEFAULT_GRADLE_WRAPPER_VERSION
         }
     }
 }
