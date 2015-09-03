@@ -71,7 +71,12 @@ class BasePlugin implements Plugin<Project> {
     /**
      * Set the default Gradle version based on {@link #DEFAULT_GRADLE_WRAPPER_VERSION}.
      * <p/>
-     * <strong>Note that to start using this version, the user must run {code ./gradlew wrapper} to update the wrapper.</strong>
+     * <strong>Note that to start using this version, the user must run {@code ./gradlew wrapper} to update the wrapper.</strong>
+     * <p/>
+     * Users can also override this default version by adding the following code block to the root {@code build.gradle}:
+     * <pre>
+     *     wrapper {*         gradleVersion = '3.0'
+     *}* </pre>
      */
     void setDefaultGradleVersion() {
         def wrapperTask = project.tasks.findByName("wrapper")
