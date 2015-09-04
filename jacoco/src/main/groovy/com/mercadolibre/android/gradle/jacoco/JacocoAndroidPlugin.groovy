@@ -57,17 +57,11 @@ public class JacocoAndroidPlugin implements Plugin<Project> {
             def capitalizedFlavorName = flavorName.capitalize()
 
             def taskName = "jacoco${capitalizedFlavorName}${capitalizedBuildTypeName}"
-            def testTaskName = "test${capitalizedFlavorName}${capitalizedBuildTypeName}"
+            def testTaskName = "test${capitalizedFlavorName}${capitalizedBuildTypeName}UnitTest"
 
             //Create and retrieve necesary tasks
             def jacocoTask = project.tasks.create taskName, JacocoReport
             def unitTest = project.tasks.findByName(testTaskName)
-
-            //Forward compatibility to android grdle plugin 1.3.+
-            if (unitTest == null) {
-                testTaskName += "UnitTest"
-                unitTest = project.tasks.findByName(testTaskName)
-            }
 
             //Define JacocoTasks and it's configuration
             jacocoTask.description = "Generate Jacoco code coverage report after running tests for ${flavorName}${capitalizedBuildTypeName} flavor. [incubating]"
