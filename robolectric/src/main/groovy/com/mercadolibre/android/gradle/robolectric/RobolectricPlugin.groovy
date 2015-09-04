@@ -47,7 +47,7 @@ public class RobolectricPlugin implements Plugin<Project> {
         }
 
         variants.all { variant ->
-            def taskName = "test${variant.flavorName.capitalize()}${variant.buildType.name.capitalize()}"
+            def taskName = "test${variant.flavorName.capitalize()}${variant.buildType.name.capitalize()}UnitTest"
             def testTask = project.tasks.findByName(taskName)
 
             testTask.dependsOn("createRobolectricFiles")

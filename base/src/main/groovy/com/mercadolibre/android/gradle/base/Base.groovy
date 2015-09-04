@@ -8,6 +8,8 @@ import org.gradle.api.Project
  */
 class BasePlugin implements Plugin<Project> {
 
+    private static final String DEFAULT_GRADLE_WRAPPER_VERSION = '2.6'
+
     /**
      * The project.
      */
@@ -23,10 +25,11 @@ class BasePlugin implements Plugin<Project> {
 
         avoidCacheForDynamicVersions()
         setupRepositories()
+        setDefaultGradleVersion()
     }
 
     /**
-     * Avoids using Gradle caches for dynamic versions, so that we can use EXPERIMENTAL artifacts with the '+' wildcard.
+     * Avoid using Gradle caches for dynamic versions, so that we can use EXPERIMENTAL artifacts with the '+' wildcard.
      */
     private void avoidCacheForDynamicVersions() {
         // For all sub-projects...
@@ -36,7 +39,6 @@ class BasePlugin implements Plugin<Project> {
             }
         }
     }
-
     /**
      * Sets up the repositories.
      */
@@ -48,7 +50,6 @@ class BasePlugin implements Plugin<Project> {
                 mavenLocal()
                 mavenCentral()
 
-                // New Bintray repos, the experimental repo is not working right now.
                 maven {
                     url "https://dl.bintray.com/mercadolibre/android-releases"
                     credentials {
@@ -64,6 +65,31 @@ class BasePlugin implements Plugin<Project> {
                     }
                 }
             }
+        }
+    }
+
+    /**
+     * Upgrade the default Gradle version based on {@link #DEFAULT_GRADLE_WRAPPER_VERSION} when corresponding.
+     * <p/>
+     * <strong>Note that to start using this version, the user must run {@code ./gradlew wrapper} to update the wrapper.</strong>
+     * <p/>
+     * Users can also override this default version by adding the following code block to the root {@code build.gradle}:
+     * <pre>
+     *     wrapper {
+     *         gradleVersion = '3.0'
+     *     }
+     * </pre>
+     */
+    void setDefaultGradleVersion() {
+        def wrapperTask = project.tasks.findByName("wrapper")
+        if (wrapperTask == null) {
+            println 'ERROR: Unable to set default Gradle version to: ' + DEFAULT_GRADLE_WRAPPER_VERSION
+        } else if (Float.valueOf(String.valueOf(wrapperTask.gradleVersion)) < Float.valueOf(DEFAULT_GRADLE_WRAPPER_VERSION)) {
+            wrapperTask.gradleVersion = DEFAULT_GRADLE_WRAPPER_VERSION
+
+            println ':' + wrapperTask.name
+            wrapperTask.execute()
+            println 'Gradle Wrapper version upgraded to: ' + wrapperTask.gradleVersion
         }
     }
 }

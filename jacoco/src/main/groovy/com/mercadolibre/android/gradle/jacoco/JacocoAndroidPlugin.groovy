@@ -57,7 +57,7 @@ public class JacocoAndroidPlugin implements Plugin<Project> {
             def capitalizedFlavorName = flavorName.capitalize()
 
             def taskName = "jacoco${capitalizedFlavorName}${capitalizedBuildTypeName}"
-            def testTaskName = "test${capitalizedFlavorName}${capitalizedBuildTypeName}"
+            def testTaskName = "test${capitalizedFlavorName}${capitalizedBuildTypeName}UnitTest"
 
             //Create and retrieve necesary tasks
             def jacocoTask = project.tasks.create taskName, JacocoReport

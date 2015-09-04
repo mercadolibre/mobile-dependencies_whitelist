@@ -29,7 +29,7 @@ public class LibraryPlugin implements Plugin<Project> {
      */
     private Project project;
 
-    private static final String PUBLISH_RELESE = "release"
+    private static final String PUBLISH_RELEASE = "release"
     private static final String PUBLISH_EXPERIMENTAL = "experimental"
 
     /**
@@ -45,8 +45,8 @@ public class LibraryPlugin implements Plugin<Project> {
         // We apply android plugin.
         project.apply plugin: 'com.android.library'
 
-        // Apply bintray plugins to the repositories.
         project.apply plugin: 'com.jfrog.bintray'
+
         project.apply plugin: 'com.github.dcendents.android-maven'
 
         project.apply plugin: 'com.mercadolibre.android.gradle.jacoco'
@@ -173,17 +173,16 @@ public class LibraryPlugin implements Plugin<Project> {
     private void createPublishReleaseTask() {
         def task = project.tasks.create 'publishAarRelease'
         task.setDescription('Publishes a new release version of the AAR library to Bintray.')
-        task.dependsOn 'checkLocalDependencies', 'assembleRelease', 'testRelease', 'check', 'releaseSourcesJar'
 
+        task.dependsOn 'checkLocalDependencies', 'assembleRelease', 'testReleaseUnitTest', 'check', 'releaseSourcesJar'
         task.finalizedBy 'bintrayUpload'
         task.doLast {
 
-            // Set all Bintray configuration.
-            setBintrayConfig(PUBLISH_RELESE);
+            setBintrayConfig(PUBLISH_RELEASE);
 
             // Set the artifacts.
             project.configurations.archives.artifacts.clear()
-            project.artifacts.add('archives', project.file(getAarFilePath(PUBLISH_RELESE)))
+            project.artifacts.add('archives', project.file(getAarFilePath(PUBLISH_RELEASE)))
             project.artifacts.add('archives', project.tasks['releaseSourcesJar'])
 
 
@@ -200,14 +199,40 @@ public class LibraryPlugin implements Plugin<Project> {
         task.finalizedBy 'bintrayUpload'
 
         task.doLast {
-
-            // Set all Bintray configuration.
             setBintrayConfig(PUBLISH_EXPERIMENTAL);
 
             // Set the artifacts.
             project.configurations.archives.artifacts.clear()
             project.artifacts.add('archives', project.file(getAarFilePath(PUBLISH_EXPERIMENTAL)))
             project.artifacts.add('archives', project.tasks['debugSourcesJar'])
+        }
+    }
+
+    /**
+     * Creates the "publishAarLocal" task.
+     */
+    private void createPublishLocalTask() {
+        def task = project.tasks.create 'publishAarLocal'
+        task.setDescription('Publishes a new local version of the AAR library, locally on the .m2/repository directory.')
+        task.dependsOn 'checkLocalDependencies', 'assembleDebug', 'debugSourcesJar'
+        task.finalizedBy 'uploadArchives'
+
+        task.doLast {
+
+            // Set the artifacts.
+
+            // Note that clear default artifacts generates the warning:
+            // "Changed artifacts of configuration ':commons:default' after it has been included in dependency resolution.
+            // This behaviour has been deprecated and is scheduled to be removed in Gradle 3.0."
+            project.configurations.default.artifacts.clear()
+
+            project.configurations.archives.artifacts.clear()
+            project.artifacts.add('archives', project.file("$project.buildDir/outputs/aar/${project.name}-debug.aar"))
+            project.artifacts.add('archives', project.tasks['debugSourcesJar'])
+
+            project.uploadArchives.repositories.mavenDeployer.pom.version += '-LOCAL-' + getTimestamp()
+            // Point the repository to our .m2/repository directory.
+            project.uploadArchives.repositories.mavenDeployer.repository.url = "file://${System.properties['user.home']}/.m2/repository"
         }
     }
 
@@ -225,7 +250,7 @@ public class LibraryPlugin implements Plugin<Project> {
         project.group = getPublisherContainer().groupId
 
         switch (buildConfig) {
-            case PUBLISH_RELESE:
+            case PUBLISH_RELEASE:
                 project.version = getPublisherContainer().version
                 project.bintrayUpload.repoName = 'android-releases';
                 project.bintrayUpload.packageVcsUrl =
@@ -280,7 +305,7 @@ public class LibraryPlugin implements Plugin<Project> {
         // Get the AAR file and rename it (so that the bintray plugin uploads the aar to the correct path).
         File aarFile;
         switch (publishType) {
-            case PUBLISH_RELESE:
+            case PUBLISH_RELEASE:
                 aarFile = project.file("$project.buildDir/outputs/aar/${project.name}-release.aar");
                 break;
             case PUBLISH_EXPERIMENTAL:
@@ -290,28 +315,6 @@ public class LibraryPlugin implements Plugin<Project> {
 
         aarFile.renameTo("$project.buildDir/outputs/aar/${getPublisherContainer().artifactId}.aar")
         return "$project.buildDir/outputs/aar/${getPublisherContainer().artifactId}.aar"
-    }
-
-    /**
-     * Creates the "publishAarLocal" task.
-     */
-    private void createPublishLocalTask() {
-        def task = project.tasks.create 'publishAarLocal'
-        task.setDescription('Publishes a new local version of the AAR library, locally on the .m2/repository directory.')
-        task.dependsOn 'checkLocalDependencies', 'assembleDebug', 'debugSourcesJar'
-        task.finalizedBy 'uploadArchives'
-
-        task.doLast {
-
-            // Set the artifacts.
-            project.configurations.archives.artifacts.clear()
-            project.artifacts.add('archives', project.file("$project.buildDir/outputs/aar/${project.name}-debug.aar"))
-            project.artifacts.add('archives', project.tasks['debugSourcesJar'])
-
-            project.uploadArchives.repositories.mavenDeployer.pom.version += '-LOCAL-' + getTimestamp()
-            // Point the repository to our .m2/repository directory.
-            project.uploadArchives.repositories.mavenDeployer.repository.url = "file://${System.properties['user.home']}/.m2/repository"
-        }
     }
 
     /**
