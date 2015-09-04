@@ -173,11 +173,8 @@ public class LibraryPlugin implements Plugin<Project> {
     private void createPublishReleaseTask() {
         def task = project.tasks.create 'publishAarRelease'
         task.setDescription('Publishes a new release version of the AAR library to Bintray.')
+        task.dependsOn 'checkLocalDependencies', 'assembleRelease', 'testRelease', 'check', 'releaseSourcesJar'
 
-        // Depending on the used android gradle plugin version use the appropriate task
-        def testTask = project.tasks.findByName('testRelease') == null ? 'testReleaseUnitTest' : 'testRelease'
-
-        task.dependsOn 'checkLocalDependencies', 'assembleRelease', testTask, 'check', 'releaseSourcesJar'
         task.finalizedBy 'bintrayUpload'
         task.doLast {
 

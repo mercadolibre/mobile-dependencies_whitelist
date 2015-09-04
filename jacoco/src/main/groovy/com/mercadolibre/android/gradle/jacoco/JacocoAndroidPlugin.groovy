@@ -63,12 +63,6 @@ public class JacocoAndroidPlugin implements Plugin<Project> {
             def jacocoTask = project.tasks.create taskName, JacocoReport
             def unitTest = project.tasks.findByName(testTaskName)
 
-            //Forward compatibility to android grdle plugin 1.3.+
-            if (unitTest == null) {
-                testTaskName += "UnitTest"
-                unitTest = project.tasks.findByName(testTaskName)
-            }
-
             //Define JacocoTasks and it's configuration
             jacocoTask.description = "Generate Jacoco code coverage report after running tests for ${flavorName}${capitalizedBuildTypeName} flavor. [incubating]"
             jacocoTask.group = "Reporting"
