@@ -307,7 +307,7 @@ public class LibraryPlugin implements Plugin<Project> {
         task.doLast {
 
             // Set the artifacts.
-            project.configurations.default.artifacts.clear()
+            project.configurations.archives.artifacts.clear()
             project.artifacts.add('archives', project.file("$project.buildDir/outputs/aar/${project.name}-debug.aar"))
             project.artifacts.add('archives', project.tasks['debugSourcesJar'])
 
