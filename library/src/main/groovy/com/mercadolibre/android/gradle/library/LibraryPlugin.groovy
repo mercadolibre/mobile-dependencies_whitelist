@@ -310,6 +310,7 @@ public class LibraryPlugin implements Plugin<Project> {
     private loadBintrayCredentials(){
       File propsFile = project.file('./bintray.properties');
       if (propsFile.exists()) {
+        println "Load Bintray credentials from 'bintray.properties'. Please don't versioning this file."
         Properties props = new Properties();
         props.load(new FileInputStream(propsFile))
         project.bintrayUpload.user = props.getProperty('bintray.user')

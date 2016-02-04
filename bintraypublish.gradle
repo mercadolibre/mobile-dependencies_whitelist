@@ -12,6 +12,7 @@ bintray {
 
     File propsFile = file('bintray.properties');
     if (propsFile.exists()) {
+      println "Load Bintray credentials from 'bintray.properties'. Please don't versioning this file."
       Properties props = new Properties();
       props.load(new FileInputStream(propsFile))
       user = props.getProperty('bintray.user')
