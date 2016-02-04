@@ -269,15 +269,13 @@ public class LibraryPlugin implements Plugin<Project> {
                 project.bintrayUpload.packageVcsUrl =
                         "$repoURL/releases/tag/v${project.version}"
                 project.bintrayUpload.versionVcsTag = "v${project.version}"
-                loadBintrayCredentials()
                 break;
             case PUBLISH_EXPERIMENTAL:
                 project.version = "${getPublisherContainer().version}-EXPERIMENTAL-${getTimestamp()}"
                 project.bintrayUpload.repoName = 'android-experimental'
-                loadBintrayCredentials()
                 break;
         }
-
+        loadBintrayCredentials()
         project.bintrayUpload.dryRun = false
         project.bintrayUpload.publish = true
         project.bintrayUpload.configurations = ['archives']
