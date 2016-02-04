@@ -102,6 +102,7 @@ public class LibraryPlugin implements Plugin<Project> {
         createPublishReleaseTask()
         createPublishExperimentalTask()
         createCheckLocalDependenciesTask()
+        createGetProjectVersionTask()
         resetUploadArchivesDependencies()
     }
 
@@ -237,6 +238,18 @@ public class LibraryPlugin implements Plugin<Project> {
     }
 
     /**
+     * Creates the "getProjectVersion" task.
+     */
+    private void createGetProjectVersionTask() {
+        def task = project.tasks.create 'getProjectVersion'
+        task.setDescription('Gets project version')
+
+        task.doLast {
+          println("Project version: ${getPublisherContainer().version}");
+        }
+    }
+
+    /**
      * Sets basic bintray configuration, repository configuration, user and password.
      * Also renames the sources file so that the bintray plugin finds it and writes the valid
      * pom as the default pom so that the bintray plugin uploads it.
@@ -256,15 +269,15 @@ public class LibraryPlugin implements Plugin<Project> {
                 project.bintrayUpload.packageVcsUrl =
                         "$repoURL/releases/tag/v${project.version}"
                 project.bintrayUpload.versionVcsTag = "v${project.version}"
+                loadBintrayCredentials()
                 break;
             case PUBLISH_EXPERIMENTAL:
                 project.version = "${getPublisherContainer().version}-EXPERIMENTAL-${getTimestamp()}"
                 project.bintrayUpload.repoName = 'android-experimental'
+                loadBintrayCredentials()
                 break;
         }
 
-        project.bintrayUpload.user = 'bintray-publisher'
-        project.bintrayUpload.apiKey = '5438c410e4379f5f2955dd93514f4b452766b626'
         project.bintrayUpload.dryRun = false
         project.bintrayUpload.publish = true
         project.bintrayUpload.configurations = ['archives']
@@ -289,6 +302,26 @@ public class LibraryPlugin implements Plugin<Project> {
         project.file("$project.buildDir/libs/${project.name}-sources.jar")
                 .renameTo("$project.buildDir/libs/${project.name}-${project.version}-sources.jar")
 
+    }
+
+    /**
+     * Sets bintray credentials
+     */
+    private loadBintrayCredentials(){
+      File propsFile = project.file('./bintray.properties');
+      if (propsFile.exists()) {
+        Properties props = new Properties();
+        props.load(new FileInputStream(propsFile))
+        project.bintrayUpload.user = props.getProperty('bintray.user')
+        project.bintrayUpload.apiKey = props.getProperty('bintray.key')
+      } else if (System.getenv('BINTRAY_USER') && System.getenv('BINTRAY_KEY')){
+        project.bintrayUpload.user = System.getenv('BINTRAY_USER')
+        project.bintrayUpload.apiKey = System.getenv('BINTRAY_KEY')
+      } else {
+        println "[!] Missing Bintray credentials"
+        println "    You can set this values as enviroment variables: 'BINTRAY_USER' and 'BINTRAY_KEY'"
+        println "    or into a property file ('bintray.properties'): 'bintray.user' and 'bintray.key'"
+      }
     }
 
     /**
@@ -465,4 +498,3 @@ public class PublisherRepository {
         this.password = password
     }
 }
-

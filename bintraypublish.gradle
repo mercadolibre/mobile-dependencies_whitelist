@@ -5,8 +5,25 @@ def siteUrl='http://github.com/mercadolibre/mobile-android_gradle'
 def gitUrl='http://github.com/mercadolibre/mobile-android_gradle.git'
 
 bintray {
-    user = 'bintray-publisher'
-    key = '5438c410e4379f5f2955dd93514f4b452766b626'
+    def taskName = project.getGradle().startParameter.taskNames.get(0);
+    if (!taskName.contains("bintray")){
+      return;
+    }
+
+    File propsFile = file('bintray.properties');
+    if (propsFile.exists()) {
+      Properties props = new Properties();
+      props.load(new FileInputStream(propsFile))
+      user = props.getProperty('bintray.user')
+      key = props.getProperty('bintray.key')
+      } else if (System.getenv('BINTRAY_USER') && System.getenv('BINTRAY_KEY')){
+        project.bintrayUpload.user = System.getenv('BINTRAY_USER')
+        project.bintrayUpload.apiKey = System.getenv('BINTRAY_KEY')
+      } else {
+        println "[!] Missing Bintray credentials"
+        println "    You can set this values as enviroment variables: 'BINTRAY_USER' and 'BINTRAY_KEY'"
+        println "    or into a property file ('bintray.properties'): 'bintray.user' and 'bintray.key'"
+      }
     dryRun = false
     publish = true
     configurations = ['archives'] // When uploading configuration files.
@@ -31,5 +48,3 @@ install {
         }
     }
 }
-
-
