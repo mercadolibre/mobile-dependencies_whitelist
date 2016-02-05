@@ -4,6 +4,7 @@ branches:
     only:
         - develop
         - master
+        - hotfix/gradle-upgrade
 
 language: groovy
 
