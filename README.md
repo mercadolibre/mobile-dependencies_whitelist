@@ -1,6 +1,18 @@
 MercadoLibre Gradle Android Plugins for Gradle
 ==============================
 
+## Repo status
+
+- Branch: **master**
+
+[![Semver](http://img.shields.io/SemVer/2.0.0.png)](http://semver.org/spec/v2.0.0.html)
+[![Build Status](https://magnum.travis-ci.com/mercadolibre/mobile-android_gradle.svg?token=miquMjuW9qs6Ssw13jPd&branch=master)](https://magnum.travis-ci.com/mercadolibre/mobile-android_gradle)
+
+- Branch: **develop**
+
+[![Semver](http://img.shields.io/SemVer/2.0.0.png)](http://semver.org/spec/v2.0.0.html)
+[![Build Status](https://magnum.travis-ci.com/mercadolibre/mobile-android_gradle.svg?token=miquMjuW9qs6Ssw13jPd&branch=develop)](https://magnum.travis-ci.com/mercadolibre/mobile-android_gradle)
+
 ## What is this?
 This project includes three Gradle plugins to make the Android library developer's life easier:
 

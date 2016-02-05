@@ -1,0 +1,17 @@
+sudo: false
+
+branches:
+    only:
+        - develop
+        - master
+
+language: groovy
+
+jdk: oraclejdk7
+
+script:
+    - ./gradlew application:build
+    - ./gradlew base:build
+    - ./gradlew jacoco:build
+    - ./gradlew library:build
+    - ./gradlew robolectric:build
