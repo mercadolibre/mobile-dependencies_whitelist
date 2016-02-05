@@ -11,4 +11,8 @@ language: groovy
 jdk: oraclejdk7
 
 script:
-    - ./gradlew base:test
+    - ./gradlew application:build
+    - ./gradlew base:build
+    - ./gradlew jacoco:build
+    - ./gradlew library:build
+    - ./gradlew robolectric:build
