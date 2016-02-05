@@ -1,0 +1,13 @@
+sudo: false
+
+branches:
+    only:
+        - develop
+        - master
+
+language: groovy
+
+jdk: oraclejdk7
+
+script:
+    - ./gradlew base:test
