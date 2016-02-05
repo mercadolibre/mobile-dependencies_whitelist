@@ -31,7 +31,11 @@ public class LibraryPlugin implements Plugin<Project> {
 
     private static final String PUBLISH_RELEASE = "release"
     private static final String PUBLISH_EXPERIMENTAL = "experimental"
-
+    private static final String BINTRAY_USER_ENV = "BINTRAY_USER"
+    private static final String BINTRAY_KEY_ENV = "BINTRAY_KEY"
+    private static final String BINTRAY_PROP_FILE = "bintray.properties"
+    private static final String BINTRAY_USER_PROP = "bintray.user"
+    private static final String BINTRAY_KEY_PROP = "bintray.key"
     /**
      * Method called by Gradle when applying this plugin.
      * @param project the Gradle project.
@@ -305,21 +309,21 @@ public class LibraryPlugin implements Plugin<Project> {
     /**
      * Sets bintray credentials
      */
-    private loadBintrayCredentials(){
-      File propsFile = project.file('./bintray.properties');
+    private void loadBintrayCredentials() {
+      File propsFile = project.file(BINTRAY_PROP_FILE);
       if (propsFile.exists()) {
-        println "Load Bintray credentials from 'bintray.properties'. Please don't versioning this file."
+        println "[!] Load Bintray credentials from '${BINTRAY_PROP_FILE}'. Please don't versioning this file."
         Properties props = new Properties();
         props.load(new FileInputStream(propsFile))
-        project.bintrayUpload.user = props.getProperty('bintray.user')
-        project.bintrayUpload.apiKey = props.getProperty('bintray.key')
-      } else if (System.getenv('BINTRAY_USER') && System.getenv('BINTRAY_KEY')){
-        project.bintrayUpload.user = System.getenv('BINTRAY_USER')
-        project.bintrayUpload.apiKey = System.getenv('BINTRAY_KEY')
+        project.bintrayUpload.user = props.getProperty(BINTRAY_USER_PROP)
+        project.bintrayUpload.apiKey = props.getProperty(BINTRAY_KEY_PROP)
+      } else if (System.getenv(BINTRAY_USER_ENV) && System.getenv(BINTRAY_KEY_ENV)){
+        project.bintrayUpload.user = System.getenv(BINTRAY_USER_ENV)
+        project.bintrayUpload.apiKey = System.getenv(BINTRAY_KEY_ENV)
       } else {
         println "[!] Missing Bintray credentials"
-        println "    You can set this values as enviroment variables: 'BINTRAY_USER' and 'BINTRAY_KEY'"
-        println "    or into a property file ('bintray.properties'): 'bintray.user' and 'bintray.key'"
+        println "    You can set this values as enviroment variables: '${BINTRAY_USER_ENV}' and '${BINTRAY_KEY_ENV}'"
+        println "    or into a property file ('${BINTRAY_PROP_FILE}'): '${BINTRAY_USER_PROP}' and '${BINTRAY_KEY_PROP}'"
       }
     }
 
