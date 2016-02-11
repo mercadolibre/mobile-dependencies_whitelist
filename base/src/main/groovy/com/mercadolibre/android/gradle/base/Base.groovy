@@ -82,14 +82,71 @@ class BasePlugin implements Plugin<Project> {
      */
     void setDefaultGradleVersion() {
         def wrapperTask = project.tasks.findByName("wrapper")
+
         if (wrapperTask == null) {
             println 'ERROR: Unable to set default Gradle version to: ' + DEFAULT_GRADLE_WRAPPER_VERSION
-        } else if (Float.valueOf(String.valueOf(wrapperTask.gradleVersion)) < Float.valueOf(DEFAULT_GRADLE_WRAPPER_VERSION)) {
+
+        } else if (shouldUpgradeGradleWrapper(wrapperTask.gradleVersion)) {
             wrapperTask.gradleVersion = DEFAULT_GRADLE_WRAPPER_VERSION
 
             println ':' + wrapperTask.name
             wrapperTask.execute()
             println 'Gradle Wrapper version upgraded to: ' + wrapperTask.gradleVersion
         }
+    }
+
+    /**
+     * Check whether we should upgrade Gradle Wrapper's version or not.
+     * @param wrapperVersion
+     * @return <code>true</code> to upgrade it. Otherwise <code>false</code>.
+     */
+    static boolean shouldUpgradeGradleWrapper(String wrapperVersion) {
+        return !DEFAULT_GRADLE_WRAPPER_VERSION.equals(wrapperVersion) && DEFAULT_GRADLE_WRAPPER_VERSION.equals(getGreater(DEFAULT_GRADLE_WRAPPER_VERSION, wrapperVersion))
+    }
+
+    /**
+     * Compare two version numbers.
+     * <strong>Important: </strong>It only supports version numbers containing only numbers.
+     *
+     * @param aVersion
+     * @param bVersion
+     * @return The greater one between aVersion and bVersion
+     */
+    static String getGreater(String aVersion, String bVersion) {
+        String[] aArray = aVersion.split("[.]")
+        String[] bArray = bVersion.split("[.]")
+
+        String result
+
+        int length = aArray.length > bArray.length ? aArray.length : bArray.length
+        for (int i = 0; i < length; i++) {
+
+            float aToken
+            try {
+                aToken = Float.valueOf(aArray[i]);
+            } catch (ArrayIndexOutOfBoundsException e) {
+                // Do nothing.
+            }
+
+            float bToken
+            try {
+                bToken = Float.valueOf(bArray[i]);
+            } catch (ArrayIndexOutOfBoundsException e) {
+                // Do nothing.
+            }
+
+            if (!bToken || aToken > bToken) {
+                result = aVersion
+                break
+
+            } else if (!aToken || aToken < bToken) {
+                result = bVersion
+                break
+            } else {
+                // Do nothing
+            }
+        }
+
+        return result
     }
 }
