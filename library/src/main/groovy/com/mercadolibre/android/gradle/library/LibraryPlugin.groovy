@@ -31,6 +31,15 @@ public class LibraryPlugin implements Plugin<Project> {
 
     private static final String PUBLISH_RELEASE = "release"
     private static final String PUBLISH_EXPERIMENTAL = "experimental"
+    private static final String BINTRAY_USER_ENV = "BINTRAY_USER"
+    private static final String BINTRAY_KEY_ENV = "BINTRAY_KEY"
+    private static final String BINTRAY_PROP_FILE = "bintray.properties"
+    private static final String BINTRAY_USER_PROP = "bintray.user"
+    private static final String BINTRAY_KEY_PROP = "bintray.key"
+    private static final String TASK_PUBLISH_LOCAL = "publishAarLocal"
+    private static final String TASK_PUBLISH_EXPERIMENTAL = "publishAarExperimental"
+    private static final String TASK_PUBLISH_RELEASE = "publishAarRelease"
+    private static final String TASK_GET_PROJECT_VERSION = "getProjectVersion"
 
     /**
      * Method called by Gradle when applying this plugin.
@@ -55,6 +64,7 @@ public class LibraryPlugin implements Plugin<Project> {
         addPublisherContainer()
         setupUploadArchivesTask()
         createAllTasks()
+        addIsBeingPublishedMethod()
     }
 
     /**
@@ -93,6 +103,22 @@ public class LibraryPlugin implements Plugin<Project> {
         project.extensions.create('publisher', PublisherPluginExtension)
     }
 
+    private void addIsBeingPublishedMethod() {
+      project.metaClass.isBeingPublished() {
+        for (def task : project.getGradle().getStartParameter().getTaskNames())
+        {
+          def (moduleName, taskName) = task.tokenize( ':' )
+          if (moduleName != null && moduleName == project.name && taskName != null &&
+              (taskName == TASK_PUBLISH_LOCAL ||
+               taskName == TASK_PUBLISH_EXPERIMENTAL ||
+               taskName == TASK_PUBLISH_RELEASE))
+          {
+            return true;
+          }
+        }
+        return false;
+      }
+    }
     /**
      * Creates all the relevant tasks for the plugin.
      */
@@ -102,6 +128,7 @@ public class LibraryPlugin implements Plugin<Project> {
         createPublishReleaseTask()
         createPublishExperimentalTask()
         createCheckLocalDependenciesTask()
+        createGetProjectVersionTask()
         resetUploadArchivesDependencies()
     }
 
@@ -171,7 +198,7 @@ public class LibraryPlugin implements Plugin<Project> {
      * Creates the "publishAarRelease" task.
      */
     private void createPublishReleaseTask() {
-        def task = project.tasks.create 'publishAarRelease'
+        def task = project.tasks.create TASK_PUBLISH_RELEASE
         task.setDescription('Publishes a new release version of the AAR library to Bintray.')
 
         task.dependsOn 'checkLocalDependencies', 'assembleRelease', 'testReleaseUnitTest', 'check', 'releaseSourcesJar'
@@ -193,7 +220,7 @@ public class LibraryPlugin implements Plugin<Project> {
      * Creates the "publishAarExperimental" task.
      */
     private void createPublishExperimentalTask() {
-        def task = project.tasks.create 'publishAarExperimental'
+        def task = project.tasks.create TASK_PUBLISH_EXPERIMENTAL
         task.setDescription('Publishes a new experimental version of the AAR library.')
         task.dependsOn 'checkLocalDependencies', 'assembleDebug', 'debugSourcesJar'
         task.finalizedBy 'bintrayUpload'
@@ -212,7 +239,7 @@ public class LibraryPlugin implements Plugin<Project> {
      * Creates the "publishAarLocal" task.
      */
     private void createPublishLocalTask() {
-        def task = project.tasks.create 'publishAarLocal'
+        def task = project.tasks.create TASK_PUBLISH_LOCAL
         task.setDescription('Publishes a new local version of the AAR library, locally on the .m2/repository directory.')
         task.dependsOn 'checkLocalDependencies', 'assembleDebug', 'debugSourcesJar'
         task.finalizedBy 'uploadArchives'
@@ -233,6 +260,18 @@ public class LibraryPlugin implements Plugin<Project> {
             project.uploadArchives.repositories.mavenDeployer.pom.version += '-LOCAL-' + getTimestamp()
             // Point the repository to our .m2/repository directory.
             project.uploadArchives.repositories.mavenDeployer.repository.url = "file://${System.properties['user.home']}/.m2/repository"
+        }
+    }
+
+    /**
+     * Creates the "getProjectVersion" task.
+     */
+    private void createGetProjectVersionTask() {
+        def task = project.tasks.create TASK_GET_PROJECT_VERSION
+        task.setDescription('Gets project version')
+
+        task.doLast {
+          println getPublisherContainer().version;
         }
     }
 
@@ -262,9 +301,7 @@ public class LibraryPlugin implements Plugin<Project> {
                 project.bintrayUpload.repoName = 'android-experimental'
                 break;
         }
-
-        project.bintrayUpload.user = 'bintray-publisher'
-        project.bintrayUpload.apiKey = '5438c410e4379f5f2955dd93514f4b452766b626'
+        loadBintrayCredentials()
         project.bintrayUpload.dryRun = false
         project.bintrayUpload.publish = true
         project.bintrayUpload.configurations = ['archives']
@@ -289,6 +326,27 @@ public class LibraryPlugin implements Plugin<Project> {
         project.file("$project.buildDir/libs/${project.name}-sources.jar")
                 .renameTo("$project.buildDir/libs/${project.name}-${project.version}-sources.jar")
 
+    }
+
+    /**
+     * Sets bintray credentials
+     */
+    private void loadBintrayCredentials() {
+      File propsFile = project.file(BINTRAY_PROP_FILE);
+      if (propsFile.exists()) {
+        println "[!] Load Bintray credentials from '${BINTRAY_PROP_FILE}'. Please don't versioning this file."
+        Properties props = new Properties();
+        props.load(new FileInputStream(propsFile))
+        project.bintrayUpload.user = props.getProperty(BINTRAY_USER_PROP)
+        project.bintrayUpload.apiKey = props.getProperty(BINTRAY_KEY_PROP)
+      } else if (System.getenv(BINTRAY_USER_ENV) && System.getenv(BINTRAY_KEY_ENV)){
+        project.bintrayUpload.user = System.getenv(BINTRAY_USER_ENV)
+        project.bintrayUpload.apiKey = System.getenv(BINTRAY_KEY_ENV)
+      } else {
+        println "[!] Missing Bintray credentials"
+        println "    You can set this values as enviroment variables: '${BINTRAY_USER_ENV}' and '${BINTRAY_KEY_ENV}'"
+        println "    or into a property file ('${BINTRAY_PROP_FILE}'): '${BINTRAY_USER_PROP}' and '${BINTRAY_KEY_PROP}'"
+      }
     }
 
     /**
@@ -465,4 +523,3 @@ public class PublisherRepository {
         this.password = password
     }
 }
-
