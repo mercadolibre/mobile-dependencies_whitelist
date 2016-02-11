@@ -55,3 +55,7 @@ install {
         }
     }
 }
+
+task getProjectVersion << {
+  println projectVersion
+}

@@ -271,7 +271,7 @@ public class LibraryPlugin implements Plugin<Project> {
         task.setDescription('Gets project version')
 
         task.doLast {
-          println("Project version: ${getPublisherContainer().version}");
+          println getPublisherContainer().version;
         }
     }
 
