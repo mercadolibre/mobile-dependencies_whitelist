@@ -6,3 +6,4 @@ curl -H "Authorization: token ${GITHUB_TOKEN}" \
   -o Rakefile
 
 rake release['base application library jacoco robolectric',bintray]
+
