@@ -74,13 +74,13 @@ buildscript {
         //Releases Bintray Configuration
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.1.3'
-        classpath 'com.mercadolibre.android.gradle:base:1.5'
-        classpath 'com.mercadolibre.android.gradle:library:1.2'
+        classpath 'com.android.tools.build:gradle:1.3.1'
+        classpath 'com.mercadolibre.android.gradle:base:3.+'
+        classpath 'com.mercadolibre.android.gradle:library:3.+'
+
         // Necessary for library plugin
-        classpath 'com.mercadolibre.android.gradle:jacoco:1.0'
-        // Necessary for library plugin
-        classpath 'com.mercadolibre.android.gradle:robolectric:1.0'
+        classpath 'com.mercadolibre.android.gradle:jacoco:3.+'
+        classpath 'com.mercadolibre.android.gradle:robolectric:3.+'
     }
 }
 ```
@@ -162,10 +162,10 @@ buildscript {
     }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.1.3'
-        classpath 'com.mercadolibre.android.gradle:base:1.5'
+        classpath 'com.android.tools.build:gradle:1.3.1'
+        classpath 'com.mercadolibre.android.gradle:base:3.+'
 
-        classpath 'com.mercadolibre.android.gradle:jacoco:1.0'
+        classpath 'com.mercadolibre.android.gradle:jacoco:3.+'
     }
 }
 ```
@@ -206,10 +206,10 @@ buildscript {
     }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.1.3'
-        classpath 'com.mercadolibre.android.gradle:base:1.5'
+        classpath 'com.android.tools.build:gradle:1.3.1'
+        classpath 'com.mercadolibre.android.gradle:base:3.+'
 
-        classpath 'com.mercadolibre.android.gradle:robolectric:1.0'
+        classpath 'com.mercadolibre.android.gradle:robolectric:3.+'
     }
 }
 ```
@@ -244,14 +244,12 @@ buildscript {
     }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.0.0'
-        classpath 'com.mercadolibre.android.gradle:base:1.5'
+        classpath 'com.android.tools.build:gradle:1.3.1'
 
-        classpath 'com.mercadolibre.android.gradle:application:1.0'
-        // Necessary for application plugin
-        classpath 'com.mercadolibre.android.gradle:jacoco:1.0'
-        // Necessary for application plugin
-        classpath 'com.mercadolibre.android.gradle:robolectric:1.0'
+		classpath("com.mercadolibre.android.gradle:base:3.+")
+        classpath("com.mercadolibre.android.gradle:application:3.+")
+        classpath("com.mercadolibre.android.gradle:jacoco:3.+")
+        classpath("com.mercadolibre.android.gradle:robolectric:3.+")
     }
 }
 ```
@@ -289,14 +287,16 @@ buildscript {
     }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.0.0'
-        classpath 'com.mercadolibre.android.gradle:base:1.5' // Let Gradle know that we are going to need this plugin.
+        classpath 'com.android.tools.build:gradle:1.3.1'
+		
+		// Let Gradle know that we are going to need this plugin.
+        classpath 'com.mercadolibre.android.gradle:base:3.+'
     }
 }
 ```   
 
 **Your module's build.gradle**
-```groovy
+```java
 dependencies {
     // The following dependencies are just examples! Notice that we are using a wildcard to always get the latest EXPERIMENTAL artifact from particular versions. The Base plugin handles the Gradle cache for us, so that this module is always pointing to the latest EXPERIMENTAL dependencies.
     compile ('com.mercadolibre.android:networking:0.0.1-EXPERIMENTAL-+')
@@ -304,78 +304,36 @@ dependencies {
 }
 ```   
 
-## How to improve or compile the plugins?
+## Contributing
+
+### Base flow
 If you want to improve MercadoLibre Gradle plugins, you should follow these steps:
 
 1. Clone the project.
 2. Import the project from IntelliJ Community Edition (not Android Studio!) (NOTE: Import it, do not 'open' it). You MUST select the root build.gradle when importing the project, otherwise IntelliJ will not recognize all the Gradle modules. 
 3. Make sure you have a JDK configured for the project: _File -> Project Structure -> Project SDK_.
 4. Make the changes you need.
-5. Publish a new version of the plugins to the plugins repository:
-    1. Locally (on your .m2/repository directory): `./gradlew library:install` or `./gradlew base:install`
-    2. Remotelly (on Bintray): `./gradlew library:uploadArchives` or `./gradlew base:uploadArchives` - You can check if the plugin has been uploaded by browsing [Nexus](http://maven-mobile.melicloud.com/nexus/content/repositories/). If you want to publish as a snapshot, make sure the version ends with "-SNAPSHOT", otherwise it will get uploaded as a release. See the inner build.gradle to modify the version.
+5. Publish a new version of the plugins locally (on your .m2/repository directory): `./gradlew library:install` or `./gradlew base:install`
+
+### Publish
+Travis will publish each module after any merged PR on the **master** branch when the latest commit contains the flag: `[ci deploy]`.
+
+To be able to do this, be sure to always keep both `bintray.properties` and `Rakefile` ignored in your `.gitignore` file.
+
+If you want to publish them manually, you need to setup either a properties file `bintray.properties` containing:
+- `bintray.user`
+- `bintray.key`
+
+or the following environment variables:
+- `BINTRAY_USER`
+- `BINTRAY_KEY`
+
+To publish it remotely (on Bintray) just run: `./gradlew base:uploadArchives` - You can check if the plugin has been uploaded by browsing [Nexus](http://maven-mobile.melicloud.com/nexus/content/repositories/). If you want to publish as a snapshot, make sure the version ends with "-SNAPSHOT", otherwise it will get uploaded as a release. See the inner build.gradle to modify the version.
 
 ## Possible errors with library plugin
 
 - If you get a 400 HTTP error while uploading the artifacts, make sure you are not trying to publish an existing release version. For instance, Nexus repository refuses to save an artifact in the release directory if the version already exists.
 - Throws an exception when a local dependency is found in the build.gradle file, to prevent publishing invalid artifacts.
-
-## Changelog
-
-### library plugin
-- 2.0: Added compatibility with Gradle 2.4+
-- 1.6: Fixes publishAarLocal bug
-- 1.5: Removes the need of adding the exprimental information (url, user and password)
-- 1.4: Publishes to bintray both release and experimental artifacts. Fixes some minor bugs.
-- 1.3: Fixes sources not being attached to the releases in bintray. 
-- 1.2: Replaces the 'publishAarRelease' so that the artifact publishes to Bintray
-- 1.1:
- -  Robolectric and jacoco tasks were deacopled from this plugin. Now includes both by default.
-- 1.0: 
- - `jacoco{buildType}` tasks added. One per build type will be created. 
- - Inherits **all deprecated aar-publisher features.**
-
-### jacoco plugin
-- 2.0: Added compatibility with Gradle 2.4+
-- 1.1:
- - Fix to build variants. Flavors where not recognized
-- 1.0:
- - Jacoco tasks working standalone.
-
-### robolectric plugin
-- 2.0: Added compatibility with Gradle 2.4+
-- 1.2: Removes a warning.
-- 1.1:
- - Fix to build variants. Flavors where not recognized
-- 1.0:
- - Robolectric tasks working standalone.
-
-### jar-publisher  <span style="color:red">**DEPRECATED**</span>
-
-- Removed from repository, out of maintainence
-- 1.1: Removed `publishJarSnapshot`. Added `publishJarExperimental`.
-- 1.0: First version of the plugin!
-
-### aar-publisher  <span style="color:red">**DEPRECATED**</span>
-
-- 1.3: Prevents to have local dependencies declared in your build.gradle (like `compile project(':anotherProject')`), as this way is invalid for published artifacts.
-- 1.2: Bugfixing. Turned off javadoc generation as it is currently working bad.
-- 1.1: Removed `publishAarSnapshot`. Added `publishAarExperimental`.
-- 1.0: First version of the plugin!
-
-### base
-- 2.0:
- - Added compatibility with Gradle 2.4+
- - Uses Gradle 2.6 as minimum.
-- 1.7: Removes maven-mobile from repositories.
-- 1.6: Adds Bintray repositories as default dependencies.
-- 1.5: Fixed bug: the plugin is not attaching the sources when pointing to a LOCAL version.
-- 1.4: It now attaches the sources for 'provided' dependencies (JARs and AARs) (although you should not use 'provided' in any case...).
-- 1.3: It now attaches the sources for 'compile' dependencies (JARs and AARs). It does not work with 'provided' dependencies (next version).
-- 1.2: Added mavenLocal() as default repository.
-- 1.1: Added mavenCentral() as default repository.
-- 1.0: First version of the plugin!
-
 
 ## Migration Guide from library 1.1 to 1.+
 
