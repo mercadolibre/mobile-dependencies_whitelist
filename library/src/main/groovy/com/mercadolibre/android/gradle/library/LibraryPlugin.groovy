@@ -271,7 +271,17 @@ public class LibraryPlugin implements Plugin<Project> {
         task.setDescription('Gets project version')
 
         task.doLast {
-          println getPublisherContainer().version;
+          def projectVersion = getPublisherContainer().version;
+
+          def fileName = "project.version"
+          def folder = new File( './build' )
+          if( !folder.exists() ) {
+            folder.mkdirs()
+          }
+
+          def inputFile = new File("${folder}/${fileName}")
+          inputFile.write("version: ${projectVersion}")
+          println "See '${folder}/${fileName}' file"
         }
     }
 
