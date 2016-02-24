@@ -274,7 +274,7 @@ public class LibraryPlugin implements Plugin<Project> {
           def projectVersion = getPublisherContainer().version;
 
           def fileName = "project.version"
-          def folder = new File( './build' )
+          def folder = new File( 'build' )
           if( !folder.exists() ) {
             folder.mkdirs()
           }
