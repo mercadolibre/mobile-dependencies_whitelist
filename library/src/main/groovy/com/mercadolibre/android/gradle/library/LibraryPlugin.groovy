@@ -271,17 +271,19 @@ public class LibraryPlugin implements Plugin<Project> {
         task.setDescription('Gets project version')
 
         task.doLast {
-          def projectVersion = getPublisherContainer().version;
+            // ToDO: This is duplicated in bintraypublish.gradle ==> Wrong!
 
-          def fileName = "project.version"
-          def folder = new File( 'build' )
-          if( !folder.exists() ) {
-            folder.mkdirs()
-          }
+            def projectVersion = getPublisherContainer().version;
 
-          def inputFile = new File("${folder}/${fileName}")
-          inputFile.write("version: ${projectVersion}")
-          println "See '${folder}/${fileName}' file"
+            def fileName = "project.version"
+            def folder = new File('build')
+            if (!folder.exists()) {
+                folder.mkdirs()
+            }
+
+            def inputFile = new File("${folder}/${fileName}")
+            inputFile.write("version: ${projectVersion}")
+            println "See '${folder}/${fileName}' file"
         }
     }
 
