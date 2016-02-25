@@ -57,5 +57,14 @@ install {
 }
 
 task getProjectVersion << {
-    println projectVersion
+    // ToDO: This is duplicated in LibraryPlugin.groovy ==> Wrong!
+
+    def fileName = "project.version"
+    def folder = new File('build')
+    if (!folder.exists()) {
+        folder.mkdirs()
+    }
+
+    def inputFile = new File("${folder}/${fileName}")
+    inputFile.write("version: ${projectVersion}")
 }
