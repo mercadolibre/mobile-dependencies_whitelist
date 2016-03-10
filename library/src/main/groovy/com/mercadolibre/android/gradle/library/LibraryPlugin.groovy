@@ -222,7 +222,7 @@ public class LibraryPlugin implements Plugin<Project> {
     private void createPublishExperimentalTask() {
         def task = project.tasks.create TASK_PUBLISH_EXPERIMENTAL
         task.setDescription('Publishes a new experimental version of the AAR library.')
-        task.dependsOn 'checkLocalDependencies', 'assembleDebug', 'debugSourcesJar'
+        task.dependsOn 'checkLocalDependencies', 'assembleRelease', 'debugSourcesJar'
         task.finalizedBy 'bintrayUpload'
 
         task.doLast {
@@ -241,7 +241,7 @@ public class LibraryPlugin implements Plugin<Project> {
     private void createPublishLocalTask() {
         def task = project.tasks.create TASK_PUBLISH_LOCAL
         task.setDescription('Publishes a new local version of the AAR library, locally on the .m2/repository directory.')
-        task.dependsOn 'checkLocalDependencies', 'assembleDebug', 'debugSourcesJar'
+        task.dependsOn 'checkLocalDependencies', 'assembleRelease', 'debugSourcesJar'
         task.finalizedBy 'uploadArchives'
 
         task.doLast {
