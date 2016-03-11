@@ -222,7 +222,7 @@ public class LibraryPlugin implements Plugin<Project> {
     private void createPublishExperimentalTask() {
         def task = project.tasks.create TASK_PUBLISH_EXPERIMENTAL
         task.setDescription('Publishes a new experimental version of the AAR library.')
-        task.dependsOn 'checkLocalDependencies', 'assembleRelease', 'debugSourcesJar'
+        task.dependsOn 'checkLocalDependencies', 'assembleRelease', 'releaseSourcesJar'
         task.finalizedBy 'bintrayUpload'
 
         task.doLast {
@@ -231,7 +231,7 @@ public class LibraryPlugin implements Plugin<Project> {
             // Set the artifacts.
             project.configurations.archives.artifacts.clear()
             project.artifacts.add('archives', project.file(getAarFilePath(PUBLISH_EXPERIMENTAL)))
-            project.artifacts.add('archives', project.tasks['debugSourcesJar'])
+            project.artifacts.add('archives', project.tasks['releaseSourcesJar'])
         }
     }
 
@@ -241,7 +241,7 @@ public class LibraryPlugin implements Plugin<Project> {
     private void createPublishLocalTask() {
         def task = project.tasks.create TASK_PUBLISH_LOCAL
         task.setDescription('Publishes a new local version of the AAR library, locally on the .m2/repository directory.')
-        task.dependsOn 'checkLocalDependencies', 'assembleRelease', 'debugSourcesJar'
+        task.dependsOn 'checkLocalDependencies', 'assembleRelease', 'releaseSourcesJar'
         task.finalizedBy 'uploadArchives'
 
         task.doLast {
@@ -255,7 +255,7 @@ public class LibraryPlugin implements Plugin<Project> {
 
             project.configurations.archives.artifacts.clear()
             project.artifacts.add('archives', project.file("$project.buildDir/outputs/aar/${project.name}-debug.aar"))
-            project.artifacts.add('archives', project.tasks['debugSourcesJar'])
+            project.artifacts.add('archives', project.tasks['releaseSourcesJar'])
 
             project.uploadArchives.repositories.mavenDeployer.pom.version += '-LOCAL-' + getTimestamp()
             // Point the repository to our .m2/repository directory.
