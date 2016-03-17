@@ -204,7 +204,6 @@ public class LibraryPlugin implements Plugin<Project> {
         task.dependsOn 'checkLocalDependencies', 'assembleRelease', 'testReleaseUnitTest', 'check', 'releaseSourcesJar'
         task.finalizedBy 'bintrayUpload'
         task.doLast {
-
             setBintrayConfig(PUBLISH_RELEASE);
 
             // Set the artifacts.
@@ -212,7 +211,7 @@ public class LibraryPlugin implements Plugin<Project> {
             project.artifacts.add('archives', project.file(getAarFilePath(PUBLISH_RELEASE)))
             project.artifacts.add('archives', project.tasks['releaseSourcesJar'])
 
-
+            logVersion(String.format("%s:%s:%s", project.group, project.name, project.version))
         }
     }
 
@@ -232,6 +231,8 @@ public class LibraryPlugin implements Plugin<Project> {
             project.configurations.archives.artifacts.clear()
             project.artifacts.add('archives', project.file(getAarFilePath(PUBLISH_EXPERIMENTAL)))
             project.artifacts.add('archives', project.tasks['releaseSourcesJar'])
+
+            logVersion(String.format("%s:%s:%s", project.group, project.name, project.version))
         }
     }
 
@@ -258,9 +259,21 @@ public class LibraryPlugin implements Plugin<Project> {
             project.artifacts.add('archives', project.tasks['releaseSourcesJar'])
 
             project.uploadArchives.repositories.mavenDeployer.pom.version += '-LOCAL-' + getTimestamp()
+
+            def pom = project.uploadArchives.repositories.mavenDeployer.pom
+            logVersion(String.format("%s:%s:%s", pom.groupId, pom.artifactId, pom.version))
+
             // Point the repository to our .m2/repository directory.
             project.uploadArchives.repositories.mavenDeployer.repository.url = "file://${System.properties['user.home']}/.m2/repository"
         }
+    }
+
+    /**
+     * Log the given {@code library}.
+     * @param library It should be the string concatenation between {@code groupId}, {@code module} and {@code version}
+     */
+    private static void logVersion(String library) {
+        println 'Publishing library: ' + library
     }
 
     /**
