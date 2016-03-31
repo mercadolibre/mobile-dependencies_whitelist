@@ -255,7 +255,7 @@ public class LibraryPlugin implements Plugin<Project> {
             project.configurations.default.artifacts.clear()
 
             project.configurations.archives.artifacts.clear()
-            project.artifacts.add('archives', project.file("$project.buildDir/outputs/aar/${project.name}-debug.aar"))
+            project.artifacts.add('archives', project.file("$project.buildDir/outputs/aar/${project.name}-release.aar"))
             project.artifacts.add('archives', project.tasks['releaseSourcesJar'])
 
             project.uploadArchives.repositories.mavenDeployer.pom.version += '-LOCAL-' + getTimestamp()
