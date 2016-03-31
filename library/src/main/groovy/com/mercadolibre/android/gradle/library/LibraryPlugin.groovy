@@ -208,7 +208,7 @@ public class LibraryPlugin implements Plugin<Project> {
 
             // Set the artifacts.
             project.configurations.archives.artifacts.clear()
-            project.artifacts.add('archives', project.file(getAarFilePath(PUBLISH_RELEASE)))
+            project.artifacts.add('archives', project.file(getAarFilePath()))
             project.artifacts.add('archives', project.tasks['releaseSourcesJar'])
 
             logVersion(String.format("%s:%s:%s", project.group, project.name, project.version))
@@ -229,7 +229,7 @@ public class LibraryPlugin implements Plugin<Project> {
 
             // Set the artifacts.
             project.configurations.archives.artifacts.clear()
-            project.artifacts.add('archives', project.file(getAarFilePath(PUBLISH_EXPERIMENTAL)))
+            project.artifacts.add('archives', project.file(getAarFilePath()))
             project.artifacts.add('archives', project.tasks['releaseSourcesJar'])
 
             logVersion(String.format("%s:%s:%s", project.group, project.name, project.version))
@@ -376,25 +376,16 @@ public class LibraryPlugin implements Plugin<Project> {
 
     /**
      * Retrieves the aar file to publish and renames it so that the bintray plugin uploads it correctly.
-     * @param publishType one of 'release' or 'experimental'
      * @return new file path
      */
-    private String getAarFilePath(String publishType) {
+    private String getAarFilePath() {
         // Check if previous publish AAR exists (and delete it).
         def prevFile = project.file("$project.buildDir/outputs/aar/${project.name}.aar");
         if (prevFile.exists())
             prevFile.delete();
 
         // Get the AAR file and rename it (so that the bintray plugin uploads the aar to the correct path).
-        File aarFile;
-        switch (publishType) {
-            case PUBLISH_RELEASE:
-                aarFile = project.file("$project.buildDir/outputs/aar/${project.name}-release.aar");
-                break;
-            case PUBLISH_EXPERIMENTAL:
-                aarFile = project.file("$project.buildDir/outputs/aar/${project.name}-debug.aar");
-                break;
-        }
+        File aarFile = project.file("$project.buildDir/outputs/aar/${project.name}-release.aar");
 
         aarFile.renameTo("$project.buildDir/outputs/aar/${getPublisherContainer().artifactId}.aar")
         return "$project.buildDir/outputs/aar/${getPublisherContainer().artifactId}.aar"

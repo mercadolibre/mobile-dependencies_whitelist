@@ -1,5 +1,8 @@
 ### Changelog
 
+#### v3.1.1
+- Arreglo la publicación a EXPERIMENTAL/LOCAL por que **no** estaba subiendo el archivo .aar.
+
 #### v3.1.0
 - Logueamos por consola el *groupId:module:version* de lo que se esta publicando, tanto para local, como experimental o release.
 
