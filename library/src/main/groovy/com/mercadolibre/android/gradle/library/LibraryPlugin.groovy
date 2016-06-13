@@ -4,6 +4,7 @@ import org.gradle.api.GradleException
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.tasks.bundling.Jar
+import org.gradle.api.tasks.testing.Test
 
 import java.text.SimpleDateFormat
 
@@ -65,6 +66,7 @@ public class LibraryPlugin implements Plugin<Project> {
         setupUploadArchivesTask()
         createAllTasks()
         addIsBeingPublishedMethod()
+        setTestsLogType();
     }
 
     /**
@@ -372,6 +374,16 @@ public class LibraryPlugin implements Plugin<Project> {
         println "    You can set this values as enviroment variables: '${BINTRAY_USER_ENV}' and '${BINTRAY_KEY_ENV}'"
         println "    or into a property file ('${BINTRAY_PROP_FILE}'): '${BINTRAY_USER_PROP}' and '${BINTRAY_KEY_PROP}'"
       }
+    }
+
+    private void setTestsLogType() {
+        project.tasks.withType(Test) {
+            // output test failure causes for easier Travis integration
+            testLogging {
+                events "FAILED"
+                exceptionFormat "full"
+            }
+        }
     }
 
     /**
