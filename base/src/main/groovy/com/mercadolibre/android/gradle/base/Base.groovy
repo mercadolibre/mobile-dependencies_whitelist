@@ -26,6 +26,7 @@ class BasePlugin implements Plugin<Project> {
         avoidCacheForDynamicVersions()
         setupRepositories()
         setDefaultGradleVersion()
+        setUpTestsLogging()
     }
 
     /**
@@ -148,5 +149,15 @@ class BasePlugin implements Plugin<Project> {
         }
 
         return result
+    }
+
+    private void setUpTestsLogging() {
+        project.tasks.withType(Test) {
+            // output test failure causes for easier Travis integration
+            testLogging {
+                events "FAILED"
+                exceptionFormat "full"
+            }
+        }
     }
 }
