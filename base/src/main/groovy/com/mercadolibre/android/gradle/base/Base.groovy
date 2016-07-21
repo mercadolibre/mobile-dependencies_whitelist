@@ -151,9 +151,11 @@ class BasePlugin implements Plugin<Project> {
         return result
     }
 
+    /**
+     * Setup unit tests logging to log only failed tests to keep output clean.
+     */
     private void setUpTestsLogging() {
         project.tasks.withType(Test) {
-            // output test failure causes for easier Travis integration
             testLogging {
                 events "FAILED"
                 exceptionFormat "full"
