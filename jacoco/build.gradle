@@ -1,13 +1,1 @@
-apply plugin: 'groovy'
-apply plugin: 'maven'
-
-dependencies {
-    compile gradleApi()
-    compile localGroovy()
-}
-
-group = 'com.mercadolibre.android.gradle'
-
-version = projectVersion
-
-apply from: '../bintraypublish.gradle'
+apply from: "${project.rootDir}/common.gradle"
