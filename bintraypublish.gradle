@@ -5,9 +5,15 @@ def siteUrl = 'http://github.com/mercadolibre/mobile-android_gradle'
 def gitUrl = 'http://github.com/mercadolibre/mobile-android_gradle.git'
 
 bintray {
-    def taskName = project.getGradle().startParameter.taskNames.get(0);
+    def taskNames = project.getGradle().startParameter.taskNames
+    if (taskNames.isEmpty()) {
+        // If we remove this validation, then the project WON'T be imported because of an: java.lang.IndexOutOfBoundsException: Index: 0, Size: 0 trying to get the 0 element.
+        return
+    }
+
+    def taskName = taskNames.get(0);
     if (!taskName.contains("bintray")) {
-        return;
+        return
     }
 
     def BINTRAY_USER_ENV = 'BINTRAY_USER'
