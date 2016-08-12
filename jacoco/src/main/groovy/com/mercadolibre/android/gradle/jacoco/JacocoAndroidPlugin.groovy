@@ -21,8 +21,7 @@ public class JacocoAndroidPlugin implements Plugin<Project> {
 
         // We apply jacoco plugin allowing us to create Unit tests code coverage report
         project.apply plugin: 'jacoco'
-        project.jacoco.toolVersion = "0.7.1.201405082137"
-
+        project.jacoco.toolVersion = "0.7.6.201602180812"
         createJacocoTasks()
     }
 
@@ -30,10 +29,10 @@ public class JacocoAndroidPlugin implements Plugin<Project> {
         if (project.android == null){
             throw new GradleException("You should apply \"android\" plugin to make this one work.")
         }
-
         createJacocoReportTasks()
         createCleanJacocoTasks()
     }
+
 
     /**
      * Creates the tasks to generate Jacoco report, one per variant depending on Unit and Instrumentation tests.
@@ -44,9 +43,14 @@ public class JacocoAndroidPlugin implements Plugin<Project> {
 
         try {
             variants = project.android.applicationVariants
+
         } catch (Exception e) {
             variants = project.android.libraryVariants
         }
+
+        applyJacocoNoLocationClasses("com.android.build.gradle.LibraryPlugin")
+        applyJacocoNoLocationClasses("com.android.build.gradle.AppPlugin")
+
 
         variants.all { variant ->
 
@@ -93,7 +97,6 @@ public class JacocoAndroidPlugin implements Plugin<Project> {
             jacocoTask.reports.html.enabled = true
 
             jacocoTask.dependsOn unitTest
-
             //If testCoverage is not enabled, Android Jacoco' plugin will not instrumentate project classes
             if (variant.buildType.testCoverageEnabled){
                 project.logger.warn("WARNING: You should DISABLE \"android.buildTypes.${buildTypeName}.testCoverageEnabled\" in your build.gradle in order to make \"${taskName}\" run succesfully in \"${project.name}\".")
@@ -124,5 +127,24 @@ public class JacocoAndroidPlugin implements Plugin<Project> {
 
         def cleanTask = project.tasks.findByName("clean")
         cleanTask.finalizedBy task
+    }
+
+    /**
+     * Fixes Jacoco versions > 0.7.1 returning 0% coverage.
+     * Info at: https://github.com/robolectric/robolectric/issues/2230
+     */
+    private void applyJacocoNoLocationClasses(pluginName){
+        try {
+            Class<?> pluginClass = Class.forName(pluginName)
+            if (Plugin.isAssignableFrom(pluginClass)) {
+                project.plugins.withType(pluginClass){
+                    project.android.testOptions.unitTests.all{
+                        it.jacoco.includeNoLocationClasses = true
+                    }
+                }
+            }
+        }catch(Exception e){
+
+        }
     }
 }
