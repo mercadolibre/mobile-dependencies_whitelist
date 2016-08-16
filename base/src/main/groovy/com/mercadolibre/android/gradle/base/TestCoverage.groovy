@@ -1,16 +1,7 @@
 package com.mercadolibre.android.gradle.base
 
-import groovy.io.FileType
-import org.gradle.api.Action
-import org.gradle.api.DomainObjectSet
-import org.gradle.api.Plugin
 import org.gradle.api.Project
-import org.gradle.api.Task
-import org.gradle.testing.jacoco.plugins.JacocoPlugin
-import org.gradle.testing.jacoco.tasks.JacocoMerge
 import org.gradle.testing.jacoco.tasks.JacocoReport
-import org.gradle.api.file.FileCollection
-import org.gradle.api.file.FileTree
 
 
 /**
@@ -18,9 +9,7 @@ import org.gradle.api.file.FileTree
  */
 class TestCoverage {
 
-    def listClass = []
     def listSrc = []
-    def testTaskName = ""
 
     /**
      * Find list of projects whose Jacoco report tasks are to be considered.
@@ -37,7 +26,7 @@ class TestCoverage {
             def reportTasks = projects.collect {
                 it.tasks.withType(JacocoReport).findAll {
                     it != exclude
-                    it.toString().endsWith(variant)
+                    it.name.endsWith(variant)
                 }
             }.flatten()
             reportTasks
@@ -45,16 +34,21 @@ class TestCoverage {
             def reportTasks = projects.collect {
                 it.tasks.withType(JacocoReport).findAll {
                     it != exclude
-                    it.toString().endsWith("Debug")
+                    it.name.endsWith("Debug")
                 }
             }.flatten()
+            reportTasks
         }
+
+
     }
 
+    /**
+     * Create Full Jacoco Report including all subprojects.
+     */
     public createJacocoFinalProjectTask(Project project) {
-        //project.plugins.apply(JacocoPlugin)
         project.apply plugin: 'jacoco'
-        project.jacoco.toolVersion = "0.7.6.201602180812"
+        project.jacoco.toolVersion = "0.7.7.201606060606"
         JacocoReport fullReportTask = project.tasks.create("jacocoFullReport", JacocoReport)
         fullReportTask.configure {
             reports.xml.enabled = true
@@ -82,10 +76,27 @@ class TestCoverage {
             })
             sourceDirectories = project.files({
                 getReportTasks(project, fullReportTask).collect { it.sourceDirectories }.findAll {
+                    listSrc << it.getAsPath().toString()
                     it != null
                 }
             })
         }
     }
 
+    /**
+     * Executes post to coveralls.io of the resulting .exec file
+     */
+    public createCoveragePost(project) {
+        project.apply plugin: 'com.github.kt3k.coveralls'
+        def task = project.getTasksByName("coveralls", false)
+        task = task[0]
+        task.description = "Post coverage report to coveralls.io"
+        task.group = "Reporting"
+        task.dependsOn "jacocoFullReport"
+        project.findProperty("coveralls").jacocoReportPath = 'build/reports/jacoco/jacocoFullReport/jacocoFullReport.xml'
+        project.findProperty("coveralls").sourceDirs = listSrc
+        task.onlyIf({
+            System.env.'CI'
+        })
+    }
 }

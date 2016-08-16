@@ -21,7 +21,7 @@ public class JacocoAndroidPlugin implements Plugin<Project> {
 
         // We apply jacoco plugin allowing us to create Unit tests code coverage report
         project.apply plugin: 'jacoco'
-        project.jacoco.toolVersion = "0.7.6.201602180812"
+        project.jacoco.toolVersion = "0.7.7.201606060606"
         createJacocoTasks()
     }
 
