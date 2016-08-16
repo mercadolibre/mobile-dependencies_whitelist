@@ -87,16 +87,19 @@ class TestCoverage {
      * Executes post to coveralls.io of the resulting .exec file
      */
     public createCoveragePost(project) {
-        project.apply plugin: 'com.github.kt3k.coveralls'
-        def task = project.getTasksByName("coveralls", false)
-        task = task[0]
-        task.description = "Post coverage report to coveralls.io"
-        task.group = "Reporting"
-        task.dependsOn "jacocoFullReport"
-        project.findProperty("coveralls").jacocoReportPath = 'build/reports/jacoco/jacocoFullReport/jacocoFullReport.xml'
-        project.findProperty("coveralls").sourceDirs = listSrc
-        task.onlyIf({
-            System.env.'CI'
-        })
+        project.afterEvaluate{
+            def task = project.getTasksByName("coveralls", false)
+            task = task[0]
+            if (task != null){
+                task.description = "Post coverage report to coveralls.io"
+                task.group = "Reporting"
+                task.dependsOn "jacocoFullReport"
+                project.findProperty("coveralls").jacocoReportPath = 'build/reports/jacoco/jacocoFullReport/jacocoFullReport.xml'
+                project.findProperty("coveralls").sourceDirs = listSrc
+                task.onlyIf({
+                    System.env.'CI'
+                })
+            }
+        }
     }
 }
