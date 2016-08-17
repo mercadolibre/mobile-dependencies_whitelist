@@ -31,11 +31,6 @@ Create branch or fork from **develop**, then push or create pull requests (if yo
 The repo uses [this branching model](http://nvie.com/posts/a-successful-git-branching-model/).
 
 
-## Whats New ?
-
-- Full rollout of Bintray as maven repository (releases and experimental libraries should be deployed in Bintray).
-
-
 ## What does the library plugin do for us?
 
 This plugin add new tasks to the Gradle build script that applies them (except the base plugin). The goal of these tasks is to test and publish Android libraries to Maven repositories, but running some other important tasks before:
@@ -52,7 +47,7 @@ This plugin add new tasks to the Gradle build script that applies them (except t
 
 In order to get all of this done, the plugins add new tasks to your build script, so that you can call them with the Gradle command line tool.
 
-## Tasks added by library plugin
+### Tasks added by library plugin
 
 1. `publishAarRelease` - Publishes the .aar (along with the sources and Javadoc) to Bintray releases repository. It runs all the checks before uploading the artifacts (lint, tests, etc.), and once they get uploaded, it tags the version in Git.
 2. `publishAarExperimental` - Same as `publishAarRelease`, but it uploads the artifacts to the specified Maven experimental repository. It does NOT tag the version in Git, as it is not a release.
@@ -140,7 +135,7 @@ As you can see, there is no need to apply the _com.android.library_ nor the _mav
 
 This plugin adapts Java's Jacoco plugin to Android. It aims to provide test code coverage for new Android Unit Testing feature that Android Jacoco Plugin does not contemplate. 
 
-## Tasks added by jacoco plugin
+### Tasks added by jacoco plugin
 
 1. `jacoco{buildType}` - This task creates a Jacoco Code Coverage Report for specified buildType. *I.E.: jacocoDebug*. This task DOES NOT assemble your variant because of building times performance, you should assemble first desired variant.
  
@@ -183,7 +178,7 @@ This plugin creates all necessary files to make Robolectric run using library de
 
 ***If you are working on an Android library**, Android Gradle Plugin will not auto-generate R classes for Unit Testing variants, so you will not be able to create tests asserting resources. This plugin fixes this issue, you only need to create a **'gradle.properties'** file in your library root folder. Inside this specify an "exampleApp" property indicating your test application name. This will let Android plugin to obtain needed R auto-generated files.
 
-## Tasks added by robolectric plugin
+### Tasks added by robolectric plugin
 
 1. `createRobolectricFiles` - This task creates 'project.properties' and 'test-project.properties' files needed by Robolectric lib to work properly with resourcefull dependencies.
 2. `cleanRobolectricFiles` - This task is hooked to `clean` tasks and it's purpose is to delete previous mentioned files to avoid cache issues
@@ -265,7 +260,7 @@ apply plugin: 'com.mercadolibre.android.gradle.application'
 
 This plugin helps us on the following things:
 
-1. It configures the custom Nexus repositories when using our custom Android Libraries as dependencies in Gradle.
+1. It configures the custom Bintray repositories when using our custom Android Libraries as dependencies in Gradle.
 2. It links the sources of the dependencies, for the two possible packagings (JARs and AARs).
 
 All you have to do is:
@@ -303,6 +298,11 @@ dependencies {
     compile ('com.mercadolibre.android:commons:0.1.0-EXPERIMENTAL-+')
 }
 ```   
+
+### Tasks added by library plugin
+
+2. Create `jacocoFullReport` task which merges subproject's JaCoCo reports into one.
+3. Create `coveralls` task which post the previously created JaCoCo report to Coveralls.io
 
 ## Contributing
 

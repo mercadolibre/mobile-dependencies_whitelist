@@ -21,21 +21,20 @@ class TestCoverage {
         /**
          * Selects jacocoTasks depending on variant
          */
-        if(project.hasProperty('variant')){
+        if (project.hasProperty('variant')) {
             def variant = project.getProperty('variant')
-            def reportTasks = collectJacocoTasks(projects,variant)
+            def reportTasks = collectJacocoTasks(projects, variant)
             reportTasks
-        }else{
-            def reportTasks = collectJacocoTasks(projects,'Debug')
+        } else {
+            def reportTasks = collectJacocoTasks(projects, 'Debug')
             reportTasks
         }
     }
 
-
     /**
      * Find all JacocoReport tasks except for the jacocoFullReport task we're creating here.
      */
-    static def collectJacocoTasks(projects,variant){
+    static def collectJacocoTasks(projects, variant) {
         def reportTasks = projects.collect {
             it.tasks.withType(JacocoReport).findAll {
                 it.name.endsWith(variant)
@@ -49,6 +48,8 @@ class TestCoverage {
      */
     public createJacocoFinalProjectTask(Project project) {
         project.apply plugin: 'jacoco'
+
+        // Note that the following version of the JaCoCo tool is also at JacocoAndroidPlugin.groovy
         project.jacoco.toolVersion = "0.7.7.201606060606"
         JacocoReport fullReportTask = project.tasks.create("jacocoFullReport", JacocoReport)
         fullReportTask.configure {
@@ -88,10 +89,10 @@ class TestCoverage {
      * Executes post to coveralls.io of the resulting .exec file
      */
     public createCoveragePost(project) {
-        project.afterEvaluate{
+        project.afterEvaluate {
             def task = project.getTasksByName("coveralls", false)
             task = task[0]
-            if (task != null){
+            if (task != null) {
                 task.description = "Post coverage report to coveralls.io"
                 task.group = "Reporting"
                 task.dependsOn "jacocoFullReport"
