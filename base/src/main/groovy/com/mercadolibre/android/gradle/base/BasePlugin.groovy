@@ -26,6 +26,9 @@ class BasePlugin implements Plugin<Project> {
         avoidCacheForDynamicVersions()
         setupRepositories()
         setDefaultGradleVersion()
+        def testCoverage = new TestCoverage()
+        testCoverage.createJacocoFinalProjectTask(project)
+        testCoverage.createCoveragePost(project)
     }
 
     /**
