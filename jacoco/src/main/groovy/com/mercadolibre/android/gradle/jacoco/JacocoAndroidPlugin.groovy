@@ -16,21 +16,21 @@ public class JacocoAndroidPlugin implements Plugin<Project> {
     private Project project;
 
     @Override
-    public void apply(Project project){
+    public void apply(Project project) {
         this.project = project
 
         // We apply jacoco plugin allowing us to create Unit tests code coverage report
         project.apply plugin: 'jacoco'
-        project.jacoco.toolVersion = "0.7.1.201405082137"
 
+        // Note that the following version of the JaCoCo tool is also at TestCoverage.groovy
+        project.jacoco.toolVersion = "0.7.7.201606060606"
         createJacocoTasks()
     }
 
     private void createJacocoTasks() {
-        if (project.android == null){
+        if (project.android == null) {
             throw new GradleException("You should apply \"android\" plugin to make this one work.")
         }
-
         createJacocoReportTasks()
         createCleanJacocoTasks()
     }
@@ -44,9 +44,14 @@ public class JacocoAndroidPlugin implements Plugin<Project> {
 
         try {
             variants = project.android.applicationVariants
+
         } catch (Exception e) {
             variants = project.android.libraryVariants
         }
+
+        applyJacocoNoLocationClasses("com.android.build.gradle.LibraryPlugin")
+        applyJacocoNoLocationClasses("com.android.build.gradle.AppPlugin")
+
 
         variants.all { variant ->
 
@@ -75,7 +80,7 @@ public class JacocoAndroidPlugin implements Plugin<Project> {
 
             def jacocoDirectory = "./build/intermediates/classes/"
 
-            if (flavorName != null && !flavorName.equals("")){
+            if (flavorName != null && !flavorName.equals("")) {
                 jacocoDirectory += "${flavorName}/"
             }
 
@@ -93,9 +98,8 @@ public class JacocoAndroidPlugin implements Plugin<Project> {
             jacocoTask.reports.html.enabled = true
 
             jacocoTask.dependsOn unitTest
-
             //If testCoverage is not enabled, Android Jacoco' plugin will not instrumentate project classes
-            if (variant.buildType.testCoverageEnabled){
+            if (variant.buildType.testCoverageEnabled) {
                 project.logger.warn("WARNING: You should DISABLE \"android.buildTypes.${buildTypeName}.testCoverageEnabled\" in your build.gradle in order to make \"${taskName}\" run succesfully in \"${project.name}\".")
             }
         }
@@ -107,7 +111,7 @@ public class JacocoAndroidPlugin implements Plugin<Project> {
 
         task.doLast {
             File file = project.file("./jacoco.exec")
-            if (!file.delete()){
+            if (!file.delete()) {
                 throw new GradleException("Cannot delete \"jacoco.exec\" file. Check if some process is using it and close it.")
             }
         }
@@ -124,5 +128,24 @@ public class JacocoAndroidPlugin implements Plugin<Project> {
 
         def cleanTask = project.tasks.findByName("clean")
         cleanTask.finalizedBy task
+    }
+
+    /**
+     * Fixes Jacoco versions > 0.7.1 returning 0% coverage.
+     * More info at <a href="https://github.com/robolectric/robolectric/issues/2230">robolectric#2230</a> and <a href="https://github.com/jacoco/jacoco/pull/288">jacoco#288</a>.
+     */
+    private void applyJacocoNoLocationClasses(pluginName) {
+        try {
+            Class<?> pluginClass = Class.forName(pluginName)
+            if (Plugin.isAssignableFrom(pluginClass)) {
+                project.plugins.withType(pluginClass) {
+                    project.android.testOptions.unitTests.all {
+                        it.jacoco.includeNoLocationClasses = true
+                    }
+                }
+            }
+        } catch (Exception e) {
+
+        }
     }
 }
