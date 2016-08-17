@@ -14,33 +14,34 @@ class TestCoverage {
     /**
      * Find list of projects whose Jacoco report tasks are to be considered.
      */
-    static def getReportTasks(Project project, JacocoReport exclude) {
+    static def getReportTasks(Project project) {
 
         def projects = project.subprojects
 
         /**
-         * Find all JacocoReport tasks except for the jacocoFullReport task we're creating here.
+         * Selects jacocoTasks depending on variant
          */
         if(project.hasProperty('variant')){
             def variant = project.getProperty('variant')
-            def reportTasks = projects.collect {
-                it.tasks.withType(JacocoReport).findAll {
-                    it != exclude
-                    it.name.endsWith(variant)
-                }
-            }.flatten()
+            def reportTasks = collectJacocoTasks(projects,variant)
             reportTasks
         }else{
-            def reportTasks = projects.collect {
-                it.tasks.withType(JacocoReport).findAll {
-                    it != exclude
-                    it.name.endsWith("Debug")
-                }
-            }.flatten()
+            def reportTasks = collectJacocoTasks(projects,'Debug')
             reportTasks
         }
+    }
 
 
+    /**
+     * Find all JacocoReport tasks except for the jacocoFullReport task we're creating here.
+     */
+    static def collectJacocoTasks(projects,variant){
+        def reportTasks = projects.collect {
+            it.tasks.withType(JacocoReport).findAll {
+                it.name.endsWith(variant)
+            }
+        }.flatten()
+        return reportTasks
     }
 
     /**
@@ -62,20 +63,20 @@ class TestCoverage {
             }
             doFirst {
                 executionData = project.files(executionData.findAll { it.exists() }.flatten())
-                project.logger.info("Setting up jacocoFullReport for: " + getReportTasks(project, fullReportTask))
+                project.logger.info("Setting up jacocoFullReport for: " + getReportTasks(project))
             }
 
             /** Filter for nulls since some JacocoReport tasks may have no classDirectories or sourceDirectories
              * configured, for example if there are no tests for a subproject.
              */
-            executionData project.files({ getReportTasks(project, fullReportTask).executionData })
+            executionData project.files({ getReportTasks(project).executionData })
             classDirectories = project.files({
-                getReportTasks(project, fullReportTask).collect { it.classDirectories }.findAll {
+                getReportTasks(project).collect { it.classDirectories }.findAll {
                     it != null
                 }
             })
             sourceDirectories = project.files({
-                getReportTasks(project, fullReportTask).collect { it.sourceDirectories }.findAll {
+                getReportTasks(project).collect { it.sourceDirectories }.findAll {
                     listSrc << it.getAsPath().toString()
                     it != null
                 }
