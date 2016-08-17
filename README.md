@@ -19,8 +19,8 @@ This project includes three Gradle plugins to make the Android library developer
 1. application
 2. base
 3. library
-4. jacoco [incubating]
-5. robolectric [incubating]
+4. jacoco
+5. robolectric
 
 
 ## Repo usage
