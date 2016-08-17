@@ -2,6 +2,7 @@ package com.mercadolibre.android.gradle.base
 
 import org.gradle.api.Plugin
 import org.gradle.api.Project
+import org.gradle.api.tasks.testing.Test
 
 /**
  * Gradle base plugin for MercadoLibre Android projects/modules.
@@ -158,10 +159,12 @@ class BasePlugin implements Plugin<Project> {
      * Setup unit tests logging to log only failed tests to keep output clean.
      */
     private void setUpTestsLogging() {
-        project.tasks.withType(Test) {
-            testLogging {
-                events "FAILED"
-                exceptionFormat "full"
+        project.subprojects.collect {
+            it.tasks.withType(Test) {
+                testLogging {
+                    events "FAILED"
+                    exceptionFormat "full"
+                }
             }
         }
     }
