@@ -16,7 +16,7 @@ class TestCoverage {
      */
     static def getReportTasks(Project project, JacocoReport exclude) {
 
-        def projects = project.allprojects
+        def projects = project.subprojects
 
         /**
          * Find all JacocoReport tasks except for the jacocoFullReport task we're creating here.
