@@ -3,6 +3,7 @@ package com.mercadolibre.android.gradle.robolectric
 import org.gradle.api.GradleException
 import org.gradle.api.Plugin
 import org.gradle.api.Project
+import org.gradle.api.tasks.Copy
 
 import java.util.concurrent.atomic.AtomicReference
 
@@ -33,10 +34,11 @@ public class RobolectricPlugin implements Plugin<Project> {
         }
 
         createRobolectricFilesTask()
+        createCopyManifestTask();
         createCleanRobolectricFilesTask()
     }
 
-    private void hookToTestTasks() {
+    private void hookToTestTasks(def task, def buildType=null) {
 
         def variants;
 
@@ -47,10 +49,14 @@ public class RobolectricPlugin implements Plugin<Project> {
         }
 
         variants.all { variant ->
+            // checks if the hook need to be only for a certain buildType
+            if (buildType != null && buildType.name != variant.buildType.name) {
+                return;
+            }
             def taskName = "test${variant.flavorName.capitalize()}${variant.buildType.name.capitalize()}UnitTest"
             def testTask = project.tasks.findByName(taskName)
 
-            testTask.dependsOn("createRobolectricFiles")
+            testTask.dependsOn(task)
         }
     }
 
@@ -92,7 +98,23 @@ public class RobolectricPlugin implements Plugin<Project> {
 
         hookToCleanTask()
     }
+    /**
+     * Copies files from ${buildDir}/intermediates/bundles/${buildType}/AndroidManifest.xml to ${buildDir}/intermediates/manifests/full/${buildType}/AndroidManifest.xml
+     * this is a fix for to help the transition to Android Gradle 2.2.0 with Robolectric < 3.1.1
+     */
+    private void createCopyManifestTask() {
+        project.android.buildTypes.each { buildType ->
+            def taskName = "copy${buildType.name.capitalize()}AndroidManifestTask"
+            def task = project.task(taskName, type: Copy) { Copy t ->
+                t.from "${project.buildDir}/intermediates/bundles/${buildType.name}/AndroidManifest.xml"
+                t.into "${project.buildDir}/intermediates/manifests/full/${buildType.name}"
+            }
+            // depends on the task that generates the buildType Manifest
+            task.dependsOn("process${buildType.name.capitalize()}Manifest")
 
+            hookToTestTasks(task, buildType)
+        }
+    }
     /**
      * Creates Robolectric tasks necessary for unit testing
      */
@@ -121,8 +143,7 @@ public class RobolectricPlugin implements Plugin<Project> {
             File file = project.file("src/main/test-project.properties")
             return file.exists()
         }
-
-        hookToTestTasks()
+        hookToTestTasks(task)
     }
 
     /**
