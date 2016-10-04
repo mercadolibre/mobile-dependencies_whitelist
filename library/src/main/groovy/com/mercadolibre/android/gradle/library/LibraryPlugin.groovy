@@ -4,6 +4,7 @@ import org.gradle.api.GradleException
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.tasks.bundling.Jar
+import org.gradle.util.GradleVersion
 
 import java.text.SimpleDateFormat
 
@@ -248,7 +249,7 @@ public class LibraryPlugin implements Plugin<Project> {
         task.doLast {
 
             // Set the artifacts.
-            if (project.getGradle().getGradleVersion() < '3.0') {
+            if (GradleVersion.current() < GradleVersion.version('3.0')) {
                 project.configurations.default.artifacts.clear()
             }
 
