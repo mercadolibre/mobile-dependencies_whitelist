@@ -4,6 +4,7 @@ import org.gradle.api.GradleException
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.tasks.bundling.Jar
+import org.gradle.util.GradleVersion
 
 import java.text.SimpleDateFormat
 
@@ -248,11 +249,9 @@ public class LibraryPlugin implements Plugin<Project> {
         task.doLast {
 
             // Set the artifacts.
-
-            // Note that clear default artifacts generates the warning:
-            // "Changed artifacts of configuration ':commons:default' after it has been included in dependency resolution.
-            // This behaviour has been deprecated and is scheduled to be removed in Gradle 3.0."
-            project.configurations.default.artifacts.clear()
+            if (GradleVersion.current() < GradleVersion.version('3.0')) {
+                project.configurations.default.artifacts.clear()
+            }
 
             project.configurations.archives.artifacts.clear()
             project.artifacts.add('archives', project.file("$project.buildDir/outputs/aar/${project.name}-release.aar"))
