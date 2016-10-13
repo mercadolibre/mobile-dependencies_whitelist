@@ -105,21 +105,20 @@ public class LibraryPlugin implements Plugin<Project> {
     }
 
     private void addIsBeingPublishedMethod() {
-      project.metaClass.isBeingPublished() {
-        for (def task : project.getGradle().getStartParameter().getTaskNames())
-        {
-          def (moduleName, taskName) = task.tokenize( ':' )
-          if (moduleName != null && moduleName == project.name && taskName != null &&
-              (taskName == TASK_PUBLISH_LOCAL ||
-               taskName == TASK_PUBLISH_EXPERIMENTAL ||
-               taskName == TASK_PUBLISH_RELEASE))
-          {
-            return true;
-          }
+        project.metaClass.isBeingPublished() {
+            for (def task : project.getGradle().getStartParameter().getTaskNames()) {
+                def (moduleName, taskName) = task.tokenize(':')
+                if (moduleName != null && moduleName == project.name && taskName != null &&
+                        (taskName == TASK_PUBLISH_LOCAL ||
+                                taskName == TASK_PUBLISH_EXPERIMENTAL ||
+                                taskName == TASK_PUBLISH_RELEASE)) {
+                    return true;
+                }
+            }
+            return false;
         }
-        return false;
-      }
     }
+
     /**
      * Creates all the relevant tasks for the plugin.
      */
@@ -254,7 +253,6 @@ public class LibraryPlugin implements Plugin<Project> {
             }
 
             project.configurations.archives.artifacts.clear()
-            project.artifacts.add('archives', project.file("$project.buildDir/outputs/aar/${project.name}-release.aar"))
             project.artifacts.add('archives', project.tasks['releaseSourcesJar'])
 
             project.uploadArchives.repositories.mavenDeployer.pom.version += '-LOCAL-' + getTimestamp()
@@ -356,21 +354,21 @@ public class LibraryPlugin implements Plugin<Project> {
      * Sets bintray credentials
      */
     private void loadBintrayCredentials() {
-      File propsFile = project.file(BINTRAY_PROP_FILE);
-      if (propsFile.exists()) {
-        println "[!] Load Bintray credentials from '${BINTRAY_PROP_FILE}'. Please don't versioning this file."
-        Properties props = new Properties();
-        props.load(new FileInputStream(propsFile))
-        project.bintrayUpload.user = props.getProperty(BINTRAY_USER_PROP)
-        project.bintrayUpload.apiKey = props.getProperty(BINTRAY_KEY_PROP)
-      } else if (System.getenv(BINTRAY_USER_ENV) && System.getenv(BINTRAY_KEY_ENV)){
-        project.bintrayUpload.user = System.getenv(BINTRAY_USER_ENV)
-        project.bintrayUpload.apiKey = System.getenv(BINTRAY_KEY_ENV)
-      } else {
-        println "[!] Missing Bintray credentials"
-        println "    You can set this values as enviroment variables: '${BINTRAY_USER_ENV}' and '${BINTRAY_KEY_ENV}'"
-        println "    or into a property file ('${BINTRAY_PROP_FILE}'): '${BINTRAY_USER_PROP}' and '${BINTRAY_KEY_PROP}'"
-      }
+        File propsFile = project.file(BINTRAY_PROP_FILE);
+        if (propsFile.exists()) {
+            println "[!] Load Bintray credentials from '${BINTRAY_PROP_FILE}'. Please don't versioning this file."
+            Properties props = new Properties();
+            props.load(new FileInputStream(propsFile))
+            project.bintrayUpload.user = props.getProperty(BINTRAY_USER_PROP)
+            project.bintrayUpload.apiKey = props.getProperty(BINTRAY_KEY_PROP)
+        } else if (System.getenv(BINTRAY_USER_ENV) && System.getenv(BINTRAY_KEY_ENV)) {
+            project.bintrayUpload.user = System.getenv(BINTRAY_USER_ENV)
+            project.bintrayUpload.apiKey = System.getenv(BINTRAY_KEY_ENV)
+        } else {
+            println "[!] Missing Bintray credentials"
+            println "    You can set this values as enviroment variables: '${BINTRAY_USER_ENV}' and '${BINTRAY_KEY_ENV}'"
+            println "    or into a property file ('${BINTRAY_PROP_FILE}'): '${BINTRAY_USER_PROP}' and '${BINTRAY_KEY_PROP}'"
+        }
     }
 
     /**
@@ -378,16 +376,23 @@ public class LibraryPlugin implements Plugin<Project> {
      * @return new file path
      */
     private String getAarFilePath() {
+
+        def aarParentDirectory = "$project.buildDir/outputs/aar/"
+
         // Check if previous publish AAR exists (and delete it).
-        def prevFile = project.file("$project.buildDir/outputs/aar/${project.name}.aar");
-        if (prevFile.exists())
+        def prevFile = project.file(aarParentDirectory + "${project.name}.aar");
+        if (prevFile.exists()) {
             prevFile.delete();
+        }
 
         // Get the AAR file and rename it (so that the bintray plugin uploads the aar to the correct path).
-        File aarFile = project.file("$project.buildDir/outputs/aar/${project.name}-release.aar");
+        File aarFile = project.file(aarParentDirectory + "${project.name}-release.aar")
 
-        aarFile.renameTo("$project.buildDir/outputs/aar/${getPublisherContainer().artifactId}.aar")
-        return "$project.buildDir/outputs/aar/${getPublisherContainer().artifactId}.aar"
+        def newName = aarParentDirectory + "${getPublisherContainer().artifactId}.aar"
+
+        aarFile.renameTo(newName)
+
+        return newName
     }
 
     /**
