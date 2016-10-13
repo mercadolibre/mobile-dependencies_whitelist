@@ -315,6 +315,16 @@ If you want to improve MercadoLibre Gradle plugins, you should follow these step
 4. Make the changes you need.
 5. Publish a new version of the plugins locally (on your .m2/repository directory): `./gradlew library:install` or `./gradlew base:install`
 
+### PRO tip
+
+1. Make some changes
+2. Compile them by doing: `./gradlew assemble`
+2. In the root `build.gradle` under `buildscript.dependencies` of the repo you want to test replace the library with your local classes directory: 
+    ```
+    classpath files('.../build/classes/main', '.../build/resources/main')
+    ```
+3. Test it!
+
 ### Publish
 Travis will publish each module after any merged PR on the **master** branch when the latest commit contains the flag: `[ci deploy]`.
 
