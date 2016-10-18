@@ -1,5 +1,8 @@
 ### Changelog
 
+#### v3.3.3
+- Con el fix de la version v3.3.2 no estabamos publicando el .aar en algunos casos. Ahora si.
+
 #### v3.3.2
 - El fix de la version v3.3.1 estaba incompleto y algunos módulos no se podían publicar. Lo solucionamos.
 
