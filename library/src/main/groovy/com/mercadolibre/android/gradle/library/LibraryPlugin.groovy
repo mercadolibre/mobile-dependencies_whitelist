@@ -62,6 +62,12 @@ public class LibraryPlugin implements Plugin<Project> {
         project.apply plugin: 'com.mercadolibre.android.gradle.jacoco'
         project.apply plugin: 'com.mercadolibre.android.gradle.robolectric'
 
+        this.project.configurations {
+            archives {
+                extendsFrom this.project.configurations.default
+            }
+        }
+
         addPublisherContainer()
         setupUploadArchivesTask()
         createAllTasks()
