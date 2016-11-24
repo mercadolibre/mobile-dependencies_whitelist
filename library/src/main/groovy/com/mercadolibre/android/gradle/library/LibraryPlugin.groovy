@@ -152,7 +152,7 @@ public class LibraryPlugin implements Plugin<Project> {
         project.afterEvaluate {
 
             validatePublisherContainer()
-
+            project.ext.versionName = getPublisherContainer().version;
             project.uploadArchives {
                 repositories {
                     mavenDeployer {
