@@ -1,5 +1,8 @@
 ### Changelog
 
+#### v3.3.4
+- Agregamos el versionName al project de las libs
+
 #### v3.3.3
 - Con el fix de la version v3.3.2 no estabamos publicando el .aar en algunos casos. Ahora si.
 
