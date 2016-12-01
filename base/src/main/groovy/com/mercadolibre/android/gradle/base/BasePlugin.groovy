@@ -10,11 +10,17 @@ import org.gradle.api.tasks.testing.Test
 class BasePlugin implements Plugin<Project> {
 
     private static final String DEFAULT_GRADLE_WRAPPER_VERSION = '2.6'
+    private static final String LIBRARY_PLUGIN = "com.android.build.gradle.LibraryPlugin"
 
     /**
      * The project.
      */
-    private Project project;
+    private Project project
+
+    /**
+     * Lets the project allow dependencies freely
+     */
+    protected boolean ALLOW_DEPENDENCIES
 
     /**
      * Method called by Gradle when applying this plugin.
@@ -168,4 +174,48 @@ class BasePlugin implements Plugin<Project> {
             }
         }
     }
+
+    /**
+     * Returns if the project is a library
+     */
+    def isLibrary() {
+        LIBRARY_PLUGIN in project.getProperties()['plugins'].toString().split(', ')*.replaceAll(("@.*"),(""))
+    }
+
+    /**
+     * Will be run after a project evaluation. This is, unless running from android studio
+     * always at the begginning.
+     * 
+     * This throws GradleException if errors are found.
+     */
+    afterEvaluate {
+        if (ALLOW_DEPENDENCIES) {
+            return;
+        }
+
+        def shouldFail = false
+        project.configurations.each { conf ->
+            conf.dependencies.each { dep ->
+                def message = "Forbidden dependency <${dep.group}:${dep.name}:${dep.version}> found in project. Please remove it from here :)"  
+                if (isLibrary()) {
+                    // If its a library it can only contain dependencies from the sdk group
+                    if (!dep.group.equals("com.mercadolibre.android.sdk")) {
+                        println message
+                        shouldFail = true
+                    }
+                } else {
+                    // If its an application it can only contain dependencies from mercadolibre's group
+                    if (!dep.group.contains("com.mercadolibre")) {
+                        println message
+                        shouldFail = true
+                    }
+                }
+            }
+        }
+        
+        if (shouldFail) {
+            throw new GradleException('There are illegal dependencies in the project. Please remove them.')
+        }
+    }
+
 }
