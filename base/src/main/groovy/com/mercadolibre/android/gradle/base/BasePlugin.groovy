@@ -3,6 +3,7 @@ package com.mercadolibre.android.gradle.base
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.tasks.testing.Test
+import org.gradle.api.GradleException
 
 /**
  * Gradle base plugin for MercadoLibre Android projects/modules.
@@ -18,22 +19,17 @@ class BasePlugin implements Plugin<Project> {
     private Project project
 
     /**
-     * Lets the project allow dependencies freely
-     */
-    protected boolean ALLOW_DEPENDENCIES
-
-    /**
      * Method called by Gradle when applying this plugin.
      * @param project the Gradle project.
      */
     void apply(Project project) {
-
         this.project = project
 
         avoidCacheForDynamicVersions()
         setupRepositories()
         setDefaultGradleVersion()
         setUpTestsLogging()
+        setUpLint()
         def testCoverage = new TestCoverage()
         testCoverage.createJacocoFinalProjectTask(project)
         testCoverage.createCoveragePost(project)
@@ -105,6 +101,22 @@ class BasePlugin implements Plugin<Project> {
             println 'Gradle Wrapper version upgraded to: ' + wrapperTask.gradleVersion
         }
     }
+
+    /**
+     * Set up dependency lint to run always at the start of a task.
+     *
+     * This wont be triggered by adb install so wont be triggered by the
+     * 'play' button in Android Studio (to let the user fasten up development
+     * in the staging process)
+     */
+    def setUpLint() {
+        project.gradle.allprojects { innerProject ->
+            afterEvaluate {
+                lintDependencies(innerProject)
+            }
+            innerProject.ext.abortDependenciesOnError = true
+        }
+    }        
 
     /**
      * Check whether we should upgrade Gradle Wrapper's version or not.
@@ -188,16 +200,13 @@ class BasePlugin implements Plugin<Project> {
      * 
      * This throws GradleException if errors are found.
      */
-    afterEvaluate {
-        if (ALLOW_DEPENDENCIES) {
-            return;
-        }
-
+    def lintDependencies(def project) {
+        def isLibrary = isLibrary()
         def shouldFail = false
         project.configurations.each { conf ->
             conf.dependencies.each { dep ->
                 def message = "Forbidden dependency <${dep.group}:${dep.name}:${dep.version}> found in project. Please remove it from here :)"  
-                if (isLibrary()) {
+                if (isLibrary) {
                     // If its a library it can only contain dependencies from the sdk group
                     if (!dep.group.equals("com.mercadolibre.android.sdk")) {
                         println message
@@ -213,7 +222,7 @@ class BasePlugin implements Plugin<Project> {
             }
         }
         
-        if (shouldFail) {
+        if (shouldFail && project.ext.abortDependenciesOnError) {
             throw new GradleException('There are illegal dependencies in the project. Please remove them.')
         }
     }
