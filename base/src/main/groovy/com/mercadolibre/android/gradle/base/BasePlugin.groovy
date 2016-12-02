@@ -192,8 +192,10 @@ class BasePlugin implements Plugin<Project> {
 
     /**
      * Returns if the project is a library
+     * If no project is given as parameter (since its useful for inner projects
+     * inside the root), it will use the root as project parameter.
      */
-    def isLibrary(def project) {
+    def isLibrary(def project = this.project) {
         LIBRARY_PLUGIN in project.getProperties()['plugins'].toString().split(', ')*.replaceAll(("@.*"),(""))
     }
 
@@ -206,10 +208,18 @@ class BasePlugin implements Plugin<Project> {
     def lintDependencies(def project) {
         def allowedDeps = isLibrary(project) ? ALLOWED_LIBRARY_DEPENDENCIES : ALLOWED_APPLICATION_DEPENDENCIES
         def hasFailed = false
-        String[].metaClass.containsDependency = { dep -> 
+        
+        /**
+         * Method to check if a part of a string is contained in
+         * at least one of the strings of the array
+         * eg array = [ "abc", "def", "ghi" ]
+         * array.containsPartOf("ab") -> true
+         * array.containsPartOf("hi") -> true
+         */
+        String[].metaClass.containsPartOf = { string -> 
             def returnValue = false
             delegate.find {
-                if (dep.contains(it)) {
+                if (string.contains(it)) {
                     return returnValue = true
                 }
                 return false
@@ -217,6 +227,9 @@ class BasePlugin implements Plugin<Project> {
             return returnValue
         }
 
+        /**
+         * Closure to report a forbidden dependency as error
+         */
         def report = { message ->
             if (!hasFailed) {
                 println "Forbidden dependencies found:"
@@ -225,16 +238,18 @@ class BasePlugin implements Plugin<Project> {
             hasFailed = true
         }
 
+        // Core logic
         project.configurations.each { conf ->
             conf.dependencies.each { dep ->
                 def message = "<${dep.group}:${dep.name}:${dep.version}>"  
-                    // If its a library it can only contain dependencies from the sdk group, if its an application only from mercadolibre's group
-                    if (!allowedDeps.containsDependency(dep.group) && !dep.version.equals("unspecified")) {
-                        report(message)
-                    } 
+                // If its a library it can only contain dependencies from the sdk group, if its an application only from mercadolibre's group
+                if (!allowedDeps.containsPartOf(dep.group) && !dep.version.equals("unspecified")) {
+                    report(message)
+                } 
             }
         }
         
+        // Final block which throws an exception to abort gradle task if allowed
         if (hasFailed) {
             println "Please remove them from the project."
             if (project.ext.abortDependenciesOnError) {
