@@ -202,28 +202,38 @@ class BasePlugin implements Plugin<Project> {
      */
     def lintDependencies(def project) {
         def isLibrary = isLibrary()
-        def shouldFail = false
+        def hasFailed = false
+
+        def report = { message ->
+            if (!hasFailed) {
+                println "Forbidden dependencies found:"
+            }
+            println message
+            hasFailed = true
+        }
+
         project.configurations.each { conf ->
             conf.dependencies.each { dep ->
-                def message = "Forbidden dependency <${dep.group}:${dep.name}:${dep.version}> found in project. Please remove it from here :)"  
+                def message = "<${dep.group}:${dep.name}:${dep.version}>"  
                 if (isLibrary) {
                     // If its a library it can only contain dependencies from the sdk group
                     if (!dep.group.equals("com.mercadolibre.android.sdk")) {
-                        println message
-                        shouldFail = true
+                        report(message)
                     }
                 } else {
                     // If its an application it can only contain dependencies from mercadolibre's group
                     if (!dep.group.contains("com.mercadolibre")) {
-                        println message
-                        shouldFail = true
+                        report(message)
                     }
                 }
             }
         }
         
-        if (shouldFail && project.ext.abortDependenciesOnError) {
-            throw new GradleException('There are illegal dependencies in the project. Please remove them.')
+        if (hasFailed) {
+            println "Please remove them from the project."
+            if (project.ext.abortDependenciesOnError) {
+                throw new GradleException('There are illegal dependencies in the project. Please remove them.') 
+            }
         }
     }
 
