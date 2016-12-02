@@ -11,7 +11,10 @@ import org.gradle.api.GradleException
 class BasePlugin implements Plugin<Project> {
 
     private static final String DEFAULT_GRADLE_WRAPPER_VERSION = '2.6'
+    
     private static final String LIBRARY_PLUGIN = "com.android.build.gradle.LibraryPlugin"
+    private static final String[] ALLOWED_LIBRARY_DEPENDENCIES = [ "com.mercadolibre.android.sdk" ]
+    private static final String[] ALLOWED_APPLICATION_DEPENDENCIES = [ "com.mercadolibre" ]
 
     /**
      * The project.
@@ -190,7 +193,7 @@ class BasePlugin implements Plugin<Project> {
     /**
      * Returns if the project is a library
      */
-    def isLibrary() {
+    def isLibrary(def project) {
         LIBRARY_PLUGIN in project.getProperties()['plugins'].toString().split(', ')*.replaceAll(("@.*"),(""))
     }
 
@@ -201,8 +204,18 @@ class BasePlugin implements Plugin<Project> {
      * This throws GradleException if errors are found.
      */
     def lintDependencies(def project) {
-        def isLibrary = isLibrary()
+        def allowedDeps = isLibrary(project) ? ALLOWED_LIBRARY_DEPENDENCIES : ALLOWED_APPLICATION_DEPENDENCIES
         def hasFailed = false
+        String[].metaClass.containsDependency = { dep -> 
+            def returnValue = false
+            delegate.find {
+                if (dep.contains(it)) {
+                    return returnValue = true
+                }
+                return false
+            }
+            return returnValue
+        }
 
         def report = { message ->
             if (!hasFailed) {
@@ -215,17 +228,10 @@ class BasePlugin implements Plugin<Project> {
         project.configurations.each { conf ->
             conf.dependencies.each { dep ->
                 def message = "<${dep.group}:${dep.name}:${dep.version}>"  
-                if (isLibrary) {
-                    // If its a library it can only contain dependencies from the sdk group
-                    if (!dep.group.equals("com.mercadolibre.android.sdk")) {
+                    // If its a library it can only contain dependencies from the sdk group, if its an application only from mercadolibre's group
+                    if (!allowedDeps.containsDependency(dep.group) && !dep.version.equals("unspecified")) {
                         report(message)
-                    }
-                } else {
-                    // If its an application it can only contain dependencies from mercadolibre's group
-                    if (!dep.group.contains("com.mercadolibre")) {
-                        report(message)
-                    }
-                }
+                    } 
             }
         }
         
