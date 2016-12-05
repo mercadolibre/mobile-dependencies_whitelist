@@ -262,6 +262,7 @@ This plugin helps us on the following things:
 
 1. It configures the custom Bintray repositories when using our custom Android Libraries as dependencies in Gradle.
 2. It links the sources of the dependencies, for the two possible packagings (JARs and AARs).
+3. Lints the dependencies the project has, and checks that only contains the allowed dependencies.
 
 All you have to do is:
 
