@@ -198,7 +198,7 @@ class BasePlugin implements Plugin<Project> {
     def isLibrary(def project = this.project) {
         def found = false
         project.getProperties()['plugins'].each {
-            if (it.contains(LIBRARY_PLUGIN)) {
+            if (it.toString().contains(LIBRARY_PLUGIN)) {
                 found = true
             }
         }
@@ -232,7 +232,7 @@ class BasePlugin implements Plugin<Project> {
                 }
             }
 
-            return returnValue
+            return found
         }
 
         /**
