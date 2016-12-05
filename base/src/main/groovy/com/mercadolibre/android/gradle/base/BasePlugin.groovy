@@ -196,7 +196,14 @@ class BasePlugin implements Plugin<Project> {
      * inside the root), it will use the root as project parameter.
      */
     def isLibrary(def project = this.project) {
-        LIBRARY_PLUGIN in project.getProperties()['plugins'].toString().split(', ')*.replaceAll(("@.*"),(""))
+        def found = false
+        project.getProperties()['plugins'].each {
+            if (it.contains(LIBRARY_PLUGIN)) {
+                found = true
+            }
+        }
+
+        return found
     }
 
     /**
