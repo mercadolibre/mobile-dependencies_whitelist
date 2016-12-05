@@ -261,7 +261,8 @@ public class LibraryPlugin implements Plugin<Project> {
             project.configurations.archives.artifacts.clear()
             project.artifacts.add('archives', project.tasks['releaseSourcesJar'])
 
-            project.uploadArchives.repositories.mavenDeployer.pom.version += '-LOCAL-' + getTimestamp()
+            def version = project.uploadArchives.repositories.mavenDeployer.pom.version
+            project.uploadArchives.repositories.mavenDeployer.pom.version = "LOCAL-${version}-${getTimestamp()}"
 
             def pom = project.uploadArchives.repositories.mavenDeployer.pom
             logVersion(String.format("%s:%s:%s", pom.groupId, pom.artifactId, pom.version))
@@ -325,7 +326,7 @@ public class LibraryPlugin implements Plugin<Project> {
                 project.bintrayUpload.versionVcsTag = "v${project.version}"
                 break;
             case PUBLISH_EXPERIMENTAL:
-                project.version = "${getPublisherContainer().version}-EXPERIMENTAL-${getTimestamp()}"
+                project.version = "EXPERIMENTAL-${getPublisherContainer().version}-${getTimestamp()}"
                 project.bintrayUpload.repoName = 'android-experimental'
                 break;
         }
