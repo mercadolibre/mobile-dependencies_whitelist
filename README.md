@@ -51,7 +51,7 @@ In order to get all of this done, the plugins add new tasks to your build script
 
 1. `publishAarRelease` - Publishes the .aar (along with the sources and Javadoc) to Bintray releases repository. It runs all the checks before uploading the artifacts (lint, tests, etc.), and once they get uploaded, it tags the version in Git.
 2. `publishAarExperimental` - Same as `publishAarRelease`, but it uploads the artifacts to the specified Maven experimental repository. It does NOT tag the version in Git, as it is not a release.
-3. `publishAarAlpha` - Same as `publishAarRelease`, but it uploads the artifacts to the specified Maven alpha repository. It does tag the version in git, since its a release, but note that its an Alpha one. This wont reach the Playstore.
+3. `publishAarAlpha` - Same as `publishAarRelease`, but it uploads the artifacts to the specified Maven alpha repository. This is a release, but in alpha.
 4. `publishAarLocal` - This is particularly useful during the development phase of the Android library. It overwrites the artifacts in your .m2/repository directory, so that you can code & test your code without uploading anything to a remote repository. This does NOT run lint so that we don't have to wait that long. It does not tag the version in Git either.
 
 ## How to add library plugin to your project?
