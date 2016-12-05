@@ -224,13 +224,13 @@ class BasePlugin implements Plugin<Project> {
          * array.containsPartOf("hi") -> true
          */
         String[].metaClass.containsPartOf = { string -> 
-            def returnValue = false
-            delegate.find {
+            def found = false
+            delegate.each {
                 if (string.contains(it)) {
-                    return returnValue = true
+                    found = true
                 }
-                return false
             }
+
             return returnValue
         }
 
