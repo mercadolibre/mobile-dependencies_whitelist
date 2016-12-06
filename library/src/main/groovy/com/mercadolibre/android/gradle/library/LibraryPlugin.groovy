@@ -363,7 +363,7 @@ public class LibraryPlugin implements Plugin<Project> {
                 break
             case PUBLISH_ALPHA:
                 project.version = "${getPublisherContainer().version}-ALPHA-${getTimestamp()}-${getGitHash()}"
-                project.bintrayUpload.repoName = 'android-alpha'
+                project.bintrayUpload.repoName = 'android-releases'
                 project.bintrayUpload.packageVcsUrl = "$repoURL/releases/tag/v${project.version}"
                 project.bintrayUpload.versionVcsTag = "v${project.version}"
                 break
