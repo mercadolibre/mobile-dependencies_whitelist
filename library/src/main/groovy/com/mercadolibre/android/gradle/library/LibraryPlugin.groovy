@@ -64,6 +64,8 @@ public class LibraryPlugin implements Plugin<Project> {
         project.apply plugin: 'com.mercadolibre.android.gradle.jacoco'
         project.apply plugin: 'com.mercadolibre.android.gradle.robolectric'
 
+        project.apply plugin: 'nebula.dependency-lock'
+
         this.project.configurations {
             archives {
                 extendsFrom this.project.configurations.default
@@ -214,13 +216,13 @@ public class LibraryPlugin implements Plugin<Project> {
             case PUBLISH_RELEASE:
                 task = project.tasks.create TASK_PUBLISH_RELEASE
                 task.setDescription('Publishes a new release version of the AAR library to Bintray.')
-                task.dependsOn 'checkLocalDependencies', 'assembleRelease', 'testReleaseUnitTest', 'check', 'releaseSourcesJar'
+                task.dependsOn 'generateLock', 'saveLock', 'cleanLockAlphas', 'checkLocalDependencies', 'assembleRelease', 'testReleaseUnitTest', 'check', 'releaseSourcesJar'
                 break
 
             case PUBLISH_EXPERIMENTAL:
                 task = project.tasks.create TASK_PUBLISH_EXPERIMENTAL
                 task.setDescription('Publishes a new experimental version of the AAR library.')
-                task.dependsOn 'checkLocalDependencies', 'assembleRelease', 'releaseSourcesJar'
+                task.dependsOn 'generateLock', 'saveLock', 'cleanLockAlphas', 'checkLocalDependencies', 'assembleRelease', 'releaseSourcesJar'
                 break
 
             case PUBLISH_ALPHA:
@@ -232,7 +234,7 @@ public class LibraryPlugin implements Plugin<Project> {
             default:
                 throw new GradleException("No task type provided")
         }
-        task.finalizedBy 'bintrayUpload'
+        task.finalizedBy 'bintrayUpload', 'deleteLock'
         task.doLast {
             setBintrayConfig(publishType);
 
