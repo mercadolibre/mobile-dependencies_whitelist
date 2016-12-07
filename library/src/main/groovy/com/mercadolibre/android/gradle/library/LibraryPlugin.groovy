@@ -213,7 +213,7 @@ public class LibraryPlugin implements Plugin<Project> {
     }
 
     def createLockTasks() {
-        def cleanLockAlphasTask = project.tasks.create TASK_CLEAN_LOCK_ALPLHAS
+        def cleanLockAlphasTask = project.tasks.create TASK_CLEAN_LOCK_ALPHAS
         task.setDescription('Cleans alphas tags from versions in lock in case they exist')
         task.doLast {
             println System.getProperty("user.dir");
