@@ -213,14 +213,13 @@ public class LibraryPlugin implements Plugin<Project> {
     }
 
     def createLockTasks() {
-        def cleanLockAlphasTask = project.tasks.create TASK_CLEAN_LOCK_ALPHAS
+        def task = project.tasks.create TASK_CLEAN_LOCK_ALPHAS
         task.setDescription('Cleans alphas tags from versions in lock in case they exist')
         task.doLast {
-            println System.getProperty("user.dir");
-            def file = new File('dependencies.lock')
+            def file = project.file('dependencies.lock')
             def inputJson = new JsonSlurper().parseText(file.text)
             inputJson.each { variant, variantJson ->
-                unless (variant.contains("test") || variant.contains("Test")) {
+                if (!variant.contains("test") && !variant.contains("Test")) {
                     variantJson.each { dependency, dependencyVersions ->
                         if (dependencyVersions.locked.contains("ALPHA")) {
                             dependencyVersions.locked = dependencyVersions.locked.find(/.*\..*\.[0-9]+/)
@@ -236,8 +235,6 @@ public class LibraryPlugin implements Plugin<Project> {
             // Chequear que el path file este bien
         }
     }
-
-
 
     /**
      * Create and configure a bintray task for a specific
