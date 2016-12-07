@@ -232,7 +232,6 @@ public class LibraryPlugin implements Plugin<Project> {
             file.withWriter {
                     jsonBuilder.writeTo(it)
             }
-            // Chequear que el path file este bien
         }
     }
 
