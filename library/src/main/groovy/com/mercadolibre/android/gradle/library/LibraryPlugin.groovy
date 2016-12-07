@@ -8,6 +8,11 @@ import org.gradle.util.GradleVersion
 
 import java.text.SimpleDateFormat
 
+import groovy.json.JsonSlurper
+import groovy.json.JsonBuilder
+
+import java.io.File
+
 /**
  * Gradle plugin for Android Libraries. It provides some important tasks:
  *
@@ -42,6 +47,7 @@ public class LibraryPlugin implements Plugin<Project> {
     private static final String TASK_PUBLISH_EXPERIMENTAL = "publishAarExperimental"
     private static final String TASK_PUBLISH_RELEASE = "publishAarRelease"
     private static final String TASK_PUBLISH_ALPHA = "publishAarAlpha"
+    private static final String TASK_CLEAN_LOCK_ALPHAS = "cleanLockAlphas"
     private static final String TASK_GET_PROJECT_VERSION = "getProjectVersion"
 
     /**
@@ -138,6 +144,7 @@ public class LibraryPlugin implements Plugin<Project> {
         createPublishReleaseTask()
         createPublishExperimentalTask()
         createPublishAlphaTask()
+        createLockTasks()
         createCheckLocalDependenciesTask()
         createGetProjectVersionTask()
         resetUploadArchivesDependencies()
@@ -205,6 +212,33 @@ public class LibraryPlugin implements Plugin<Project> {
         project.tasks['uploadArchives'].dependsOn.clear()
     }
 
+    def createLockTasks() {
+        def cleanLockAlphasTask = project.tasks.create TASK_CLEAN_LOCK_ALPLHAS
+        task.setDescription('Cleans alphas tags from versions in lock in case they exist')
+        task.doLast {
+            println System.getProperty("user.dir");
+            def file = new File('dependencies.lock')
+            def inputJson = new JsonSlurper().parseText(file.text)
+            inputJson.each { variant, variantJson ->
+                unless (variant.contains("test") || variant.contains("Test")) {
+                    variantJson.each { dependency, dependencyVersions ->
+                        if (dependencyVersions.locked.contains("ALPHA")) {
+                            dependencyVersions.locked = dependencyVersions.locked.find(/.*\..*\.[0-9]+/)
+                        }
+                    }
+                }
+            }
+
+            def jsonBuilder = new JsonBuilder(inputJson)
+            file.withWriter {
+                    jsonBuilder.writeTo(it)
+            }
+            // Chequear que el path file este bien
+        }
+    }
+
+
+
     /**
      * Create and configure a bintray task for a specific
      * publishType. Take into account that this type of task
@@ -216,13 +250,13 @@ public class LibraryPlugin implements Plugin<Project> {
             case PUBLISH_RELEASE:
                 task = project.tasks.create TASK_PUBLISH_RELEASE
                 task.setDescription('Publishes a new release version of the AAR library to Bintray.')
-                task.dependsOn 'generateLock', 'saveLock', 'cleanLockAlphas', 'checkLocalDependencies', 'assembleRelease', 'testReleaseUnitTest', 'check', 'releaseSourcesJar'
+                task.dependsOn 'generateLock', 'saveLock', TASK_CLEAN_LOCK_ALPHAS, 'checkLocalDependencies', 'assembleRelease', 'testReleaseUnitTest', 'check', 'releaseSourcesJar'
                 break
 
             case PUBLISH_EXPERIMENTAL:
                 task = project.tasks.create TASK_PUBLISH_EXPERIMENTAL
                 task.setDescription('Publishes a new experimental version of the AAR library.')
-                task.dependsOn 'generateLock', 'saveLock', 'cleanLockAlphas', 'checkLocalDependencies', 'assembleRelease', 'releaseSourcesJar'
+                task.dependsOn 'generateLock', 'saveLock', TASK_CLEAN_LOCK_ALPHAS, 'checkLocalDependencies', 'assembleRelease', 'releaseSourcesJar'
                 break
 
             case PUBLISH_ALPHA:
