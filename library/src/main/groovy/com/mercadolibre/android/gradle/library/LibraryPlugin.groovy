@@ -222,7 +222,7 @@ public class LibraryPlugin implements Plugin<Project> {
                 if (!variant.contains("test") && !variant.contains("Test")) {
                     variantJson.each { dependency, dependencyVersions ->
                         if (dependencyVersions.locked.contains("ALPHA")) {
-                            dependencyVersions.locked = dependencyVersions.locked.find(/.*\..*\.[0-9]+/)
+                            dependencyVersions.locked = dependencyVersions.locked.find(/.*\..*\.[0-9]+/) // Accepts [everything].[everything].[only numbers]
                         }
                     }
                 }
