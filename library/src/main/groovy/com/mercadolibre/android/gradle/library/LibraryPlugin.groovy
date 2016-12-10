@@ -230,7 +230,7 @@ public class LibraryPlugin implements Plugin<Project> {
 
             def jsonBuilder = new JsonBuilder(inputJson)
             file.withWriter {
-                    jsonBuilder.writeTo(it)
+                    it.write jsonBuilder.toPrettyString()
             }
         }
     }
