@@ -47,7 +47,7 @@ public class LibraryPlugin implements Plugin<Project> {
     private static final String TASK_PUBLISH_EXPERIMENTAL = "publishAarExperimental"
     private static final String TASK_PUBLISH_RELEASE = "publishAarRelease"
     private static final String TASK_PUBLISH_ALPHA = "publishAarAlpha"
-    private static final String TASK_CLEAN_LOCK_ALPHAS = "cleanLockAlphas"
+    private static final String TASK_LOCK_VERSIONS = "lockVersions"
     private static final String TASK_GET_PROJECT_VERSION = "getProjectVersion"
 
     /**
@@ -144,7 +144,7 @@ public class LibraryPlugin implements Plugin<Project> {
         createPublishReleaseTask()
         createPublishExperimentalTask()
         createPublishAlphaTask()
-        createLockTasks()
+        createLockVersionsTask()
         createCheckLocalDependenciesTask()
         createGetProjectVersionTask()
         resetUploadArchivesDependencies()
@@ -212,10 +212,15 @@ public class LibraryPlugin implements Plugin<Project> {
         project.tasks['uploadArchives'].dependsOn.clear()
     }
 
-    def createLockTasks() {
-        def task = project.tasks.create TASK_CLEAN_LOCK_ALPHAS
-        task.setDescription('Cleans alphas tags from versions in lock in case they exist')
+    def createLockVersionsTask() {
+        def task = project.tasks.create TASK_LOCK_VERSIONS
+        task.setDescription('Locks the compiled project with the current versions of its dependencies to keep using them in future assembles')
         task.doLast {
+            println ":${project.name}:generateLock"
+            project.generateLock.execute()
+            println ":${project.name}:saveLock"
+            project.saveLock.execute()
+
             def file = project.file('dependencies.lock')
             def inputJson = new JsonSlurper().parseText(file.text)
             inputJson.each { variant, variantJson ->
@@ -227,10 +232,10 @@ public class LibraryPlugin implements Plugin<Project> {
                     }
                 }
             }
-
+            
             def jsonBuilder = new JsonBuilder(inputJson)
             file.withWriter {
-                    it.write jsonBuilder.toPrettyString()
+                it.write jsonBuilder.toPrettyString()
             }
         }
     }
@@ -246,18 +251,17 @@ public class LibraryPlugin implements Plugin<Project> {
             case PUBLISH_RELEASE:
                 task = project.tasks.create TASK_PUBLISH_RELEASE
                 task.setDescription('Publishes a new release version of the AAR library to Bintray.')
-                task.dependsOn 'generateLock', 'saveLock', TASK_CLEAN_LOCK_ALPHAS, 'checkLocalDependencies', 'assembleRelease', 'testReleaseUnitTest', 'check', 'releaseSourcesJar'
+                task.dependsOn 'checkLocalDependencies', 'assembleRelease', 'testReleaseUnitTest', 'check', 'releaseSourcesJar'
                 break
 
             case PUBLISH_EXPERIMENTAL:
                 task = project.tasks.create TASK_PUBLISH_EXPERIMENTAL
                 task.setDescription('Publishes a new experimental version of the AAR library.')
-                task.dependsOn 'generateLock', 'saveLock', TASK_CLEAN_LOCK_ALPHAS, 'checkLocalDependencies', 'assembleRelease', 'releaseSourcesJar'
+                task.dependsOn 'checkLocalDependencies', 'assembleRelease', 'releaseSourcesJar'
                 break
 
             case PUBLISH_ALPHA:
-                task = project.tasks.create TASK_PUBLISH_ALPHA
-                task.setDescription('Publishes a new alpha version of the AAR library to Bintray.')
+                task = project.tasks.create TASK_PUBLISH_ALPHA task.setDescription('Publishes a new alpha version of the AAR library to Bintray.')
                 task.dependsOn 'checkLocalDependencies', 'assembleRelease', 'testReleaseUnitTest', 'check', 'releaseSourcesJar'
                 break
 
