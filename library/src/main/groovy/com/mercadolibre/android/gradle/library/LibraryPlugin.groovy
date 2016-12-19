@@ -261,7 +261,8 @@ public class LibraryPlugin implements Plugin<Project> {
                 break
 
             case PUBLISH_ALPHA:
-                task = project.tasks.create TASK_PUBLISH_ALPHA task.setDescription('Publishes a new alpha version of the AAR library to Bintray.')
+                task = project.tasks.create TASK_PUBLISH_ALPHA
+                task.setDescription('Publishes a new alpha version of the AAR library to Bintray.')
                 task.dependsOn 'checkLocalDependencies', 'assembleRelease', 'testReleaseUnitTest', 'check', 'releaseSourcesJar'
                 break
 
