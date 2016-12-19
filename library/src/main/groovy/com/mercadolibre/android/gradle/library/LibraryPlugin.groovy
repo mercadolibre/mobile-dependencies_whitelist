@@ -269,7 +269,7 @@ public class LibraryPlugin implements Plugin<Project> {
             default:
                 throw new GradleException("No task type provided")
         }
-        task.finalizedBy 'bintrayUpload', 'deleteLock'
+        task.finalizedBy 'bintrayUpload'
         task.doLast {
             setBintrayConfig(publishType);
 
