@@ -1,5 +1,8 @@
 ### Changelog
 
+#### v3.3.4-CHECKOUT
+- Publicar local debug
+
 #### v3.3.4
 - Agregamos el versionName al project de las libs
 
