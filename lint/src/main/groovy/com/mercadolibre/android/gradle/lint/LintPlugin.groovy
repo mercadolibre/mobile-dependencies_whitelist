@@ -26,12 +26,12 @@ class LintPlugin implements Plugin<Project> {
     /**
      * The project.
      */
-    def project;
+    def project
 
     /**
      * Array with instances of the lints to run
      */
-    Lint[] linters;
+    Lint[] linters
 
     /**
      * Method called by Gradle when applying this plugin.
