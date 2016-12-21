@@ -2,6 +2,12 @@ package com.mercadolibre.android.gradle.lint.dependencies
 
 import com.mercadolibre.android.gradle.lint.Lint
 
+/**
+ * Class that lints the dependencies in the project checking that it only
+ * compiles the whitelisted ones
+ *
+ * Author: Santi Aguilera
+ */
 class DependenciesLint implements Lint {
 
     def ALLOWED_DEPENDENCIES = [ "com.mercadolibre.android.sdk" ]
