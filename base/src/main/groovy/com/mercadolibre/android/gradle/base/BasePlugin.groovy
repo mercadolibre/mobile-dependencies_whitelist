@@ -12,7 +12,7 @@ class BasePlugin implements Plugin<Project> {
 
     private static final String DEFAULT_GRADLE_WRAPPER_VERSION = '2.6'
 
-/**
+    /**
      * The project.
      */
     private Project project
