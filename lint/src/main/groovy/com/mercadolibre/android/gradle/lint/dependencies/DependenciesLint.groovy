@@ -4,7 +4,7 @@ import com.mercadolibre.android.gradle.lint.Lint
 
 class DependenciesLint implements Lint {
 
-    private static final String[] ALLOWED_DEPENDENCIES = [ "com.mercadolibre.android.sdk" ]
+    def ALLOWED_DEPENDENCIES = [ "com.mercadolibre.android.sdk" ]
     
     /**
      * Checks the dependencies the project contains are in the whitelist
@@ -26,16 +26,13 @@ class DependenciesLint implements Lint {
         // Core logic
         project.configurations.each { conf ->
             conf.dependencies.each { dep ->
-                def message = "Forbidden dependency: <${dep.group}:${dep.name}:${dep.version}>"  
+                // The ASCII chars make the stdout look red.
+                def message = "\u001b[31m" + "Forbidden dependency: <${dep.group}:${dep.name}:${dep.version}>" + "\u001b[0m"
                 // If its a library it can only contain dependencies from the LIBRARY group, if its an application only from APPLICATION's group
-                if (!dependencyIsInWhitelist(dep.group) && dep.version != DEFAULT_GRADLE_VALUE) {
+                if (!dependencyIsInWhitelist(dep.group) && dep.name != DEFAULT_GRADLE_VALUE) {
                     report(message)
                 } 
             }
-        }
-        
-        if (hasFailed) {
-            println "Please remove them from the project."
         }
 
         return hasFailed
@@ -58,8 +55,8 @@ class DependenciesLint implements Lint {
     * Supports regular expressions for the array values.
     */
     def dependencyIsInWhitelist(def dependency) {
-        ALLOWED_DEPENDENCIES.each {
-            if (dependency =~ /\$\{it\}/) {
+        for (def whitelistDep : ALLOWED_DEPENDENCIES) {
+            if (dependency =~ /${whitelistDep}/) {
                 return true
             }
         }
