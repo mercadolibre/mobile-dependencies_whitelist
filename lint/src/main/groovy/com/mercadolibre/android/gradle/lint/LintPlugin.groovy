@@ -64,7 +64,7 @@ class LintPlugin implements Plugin<Project> {
         task.doLast {
             def buildErrored = false
             linters.each {
-                println ":${it.name()}"
+                println ":${project.name}:${it.name()}"
                 def lintErrored = it.lint(project)
                 if (lintErrored) {
                     buildErrored = true
