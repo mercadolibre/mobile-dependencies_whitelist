@@ -46,7 +46,7 @@ class DependenciesLint implements Lint {
 
     /**
      * Returns the task name
-    */
+     */
     def name() {
         return "lintDependencies"
     }

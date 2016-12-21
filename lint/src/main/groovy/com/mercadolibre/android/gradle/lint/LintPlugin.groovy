@@ -48,7 +48,7 @@ class LintPlugin implements Plugin<Project> {
     def setUpLint() {
         /**
          * Array with the lints to run
-        */
+         */
         linters = [
             new DependenciesLint()
         ]
@@ -58,7 +58,7 @@ class LintPlugin implements Plugin<Project> {
 
         /**
          * Creation of the lint task
-        */
+         */
         def task = project.tasks.create TASK_NAME
         task.setDescription("Lints the project dependencies to check they are in the allowed whitelist")
         task.doLast {
@@ -78,7 +78,7 @@ class LintPlugin implements Plugin<Project> {
 
         /**
          * Hooking of the task
-        */
+         */
         project.tasks.whenTaskAdded { addedTask ->
             if (addedTask.name.contains(TASK_TO_HOOK)) {
                 addedTask.dependsOn TASK_NAME
