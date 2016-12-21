@@ -21,7 +21,7 @@ class LintPlugin implements Plugin<Project> {
     /**
      * Gradle lint task name
      */
-    def TASK_NAME = "lintGradle"
+    private static final String TASK_NAME = "lintGradle"
 
     /**
      * The project.
@@ -53,7 +53,8 @@ class LintPlugin implements Plugin<Project> {
             new DependenciesLint()
         ]
 
-        def TASK_TO_HOOK = "assemble" // The task to which the lint will be hooked
+        // The task to which the lint will be hooked
+        def TASK_TO_HOOK = "assemble"
 
         /**
          * Creation of the lint task
