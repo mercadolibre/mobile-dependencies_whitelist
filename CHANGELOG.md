@@ -1,6 +1,6 @@
 ### Changelog
 
-#### DEBUG-v3.3.5
+#### v3.3.5
 - Nueva task publishDebugAarLocal para publicar local en modo debug
 
 #### v3.3.4

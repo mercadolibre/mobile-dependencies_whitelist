@@ -322,7 +322,7 @@ public class LibraryPlugin implements Plugin<Project> {
             project.configurations.archives.artifacts.clear()
             project.artifacts.add('archives', project.tasks['debugSourcesJar'])
 
-            project.uploadArchives.repositories.mavenDeployer.pom.version += '-LOCAL-' + getTimestamp()
+            project.uploadArchives.repositories.mavenDeployer.pom.version += '-DEBUG-LOCAL-' + getTimestamp()
 
             def pom = project.uploadArchives.repositories.mavenDeployer.pom
             logVersion(String.format("%s:%s:%s", pom.groupId, pom.artifactId, pom.version))
