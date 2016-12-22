@@ -1,5 +1,9 @@
 {
     "whitelist": [
-        "com.mercadolibre.android.sdk"
+        "com.mercadolibre.android.sdk",
+        "com.mercadolibre.android.testing",
+        "com.monits:android-linters",
+        "org.powermock",
+        "com.squareup.okhttp3:mockwebserver"
     ]
 }
