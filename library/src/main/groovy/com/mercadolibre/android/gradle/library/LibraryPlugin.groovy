@@ -39,7 +39,7 @@ public class LibraryPlugin implements Plugin<Project> {
     private static final String BINTRAY_USER_PROP = "bintray.user"
     private static final String BINTRAY_KEY_PROP = "bintray.key"
     private static final String TASK_PUBLISH_LOCAL = "publishAarLocal"
-    private static final String TASK_PUBLISH_DEBUG_LOCAL = "publishDebugAarLocal"
+    private static final String TASK_PUBLISH_DEBUG_LOCAL = "publishAarLocalDebug"
     private static final String TASK_PUBLISH_EXPERIMENTAL = "publishAarExperimental"
     private static final String TASK_PUBLISH_RELEASE = "publishAarRelease"
     private static final String TASK_PUBLISH_ALPHA = "publishAarAlpha"
@@ -322,6 +322,7 @@ public class LibraryPlugin implements Plugin<Project> {
             project.configurations.archives.artifacts.clear()
             project.artifacts.add('archives', project.tasks['debugSourcesJar'])
 
+            def version = project.uploadArchives.repositories.mavenDeployer.pom.version
             project.uploadArchives.repositories.mavenDeployer.pom.version = "LOCAL-DEBUG-${version}-${getTimestamp()}"
 
             def pom = project.uploadArchives.repositories.mavenDeployer.pom
