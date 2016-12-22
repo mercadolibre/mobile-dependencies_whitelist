@@ -1,7 +1,7 @@
 ### Changelog
 
 #### v3.3.5
-- Nueva task publishDebugAarLocal para publicar local en modo debug
+- Nuevas tasks por variant para publicar local. Ahora se llaman publishAarLocal + (Release/Debug/:VARIANT)
 
 #### v3.3.4
 - Agregamos el versionName al project de las libs
