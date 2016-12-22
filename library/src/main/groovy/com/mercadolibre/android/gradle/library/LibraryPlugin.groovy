@@ -285,7 +285,6 @@ public class LibraryPlugin implements Plugin<Project> {
                 project.configurations.default.artifacts.clear()
             }
 
-            project.android.defaultPublishConfig = 'release';
             project.configurations.archives.artifacts.clear()
             project.artifacts.add('archives', project.tasks['releaseSourcesJar'])
 
