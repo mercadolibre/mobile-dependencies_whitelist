@@ -39,7 +39,6 @@ public class LibraryPlugin implements Plugin<Project> {
     private static final String BINTRAY_USER_PROP = "bintray.user"
     private static final String BINTRAY_KEY_PROP = "bintray.key"
     private static final String TASK_PUBLISH_LOCAL = "publishAarLocal"
-    private static final String TASK_PUBLISH_DEBUG_LOCAL = "publishAarLocalDebug"
     private static final String TASK_PUBLISH_EXPERIMENTAL = "publishAarExperimental"
     private static final String TASK_PUBLISH_RELEASE = "publishAarRelease"
     private static final String TASK_PUBLISH_ALPHA = "publishAarAlpha"
@@ -118,8 +117,7 @@ public class LibraryPlugin implements Plugin<Project> {
             for (def task : project.getGradle().getStartParameter().getTaskNames()) {
                 def (moduleName, taskName) = task.tokenize(':')
                 if (moduleName != null && moduleName == project.name && taskName != null &&
-                        (taskName == TASK_PUBLISH_LOCAL ||
-                            taskName == TASK_PUBLISH_DEBUG_LOCAL ||
+                        (taskName.contains(TASK_PUBLISH_LOCAL) ||
                                 taskName == TASK_PUBLISH_EXPERIMENTAL ||
                                 taskName == TASK_PUBLISH_RELEASE)) {
                     return true;
@@ -134,8 +132,7 @@ public class LibraryPlugin implements Plugin<Project> {
      */
     private void createAllTasks() {
         createSourcesJarTasks()
-        createPublishLocalTask()
-        createPublishDebugLocalTask()
+        createPublishLocalTasks()
         createPublishReleaseTask()
         createPublishExperimentalTask()
         createPublishAlphaTask()
@@ -270,66 +267,48 @@ public class LibraryPlugin implements Plugin<Project> {
     }
 
     /**
-     * Creates the "publishAarLocal" task.
+     * Creates the "publishAarLocalX" task, where X are each of the library variants
      */
-    private void createPublishLocalTask() {
-        def task = project.tasks.create TASK_PUBLISH_LOCAL
-        task.setDescription('Publishes a new local version of the AAR library, locally on the .m2/repository directory.')
-        task.dependsOn 'checkLocalDependencies', 'assembleRelease', 'releaseSourcesJar'
-        task.finalizedBy 'uploadArchives'
+    private void createPublishLocalTasks() {
+        /**
+         * Since at this point of the project we cant get yet the build flavors
+         * of the project, we need to hook to the assembles task
+         */
+        project.tasks.whenTaskAdded { addedTask ->
+            if (addedTask.name =~ /assemble*/) {
+                def flavorName = addedTask.name.replaceAll("assemble", "")
+                flavorName = "${Character.toLowerCase(flavorName.charAt(0))}${flavorName.substring(1)}"
 
-        task.doLast {
+                println "Created ${TASK_PUBLISH_LOCAL}${flavorName.capitalize()}"
 
-            // Set the artifacts.
-            if (GradleVersion.current() < GradleVersion.version('3.0')) {
-                project.configurations.default.artifacts.clear()
+                def task = project.tasks.create "${TASK_PUBLISH_LOCAL}${flavorName.capitalize()}"
+                task.setDescription("Publishes a new local version, on the variant ${flavorName.capitalize()} of the AAR library, locally on the .m2/repository directory.")
+                task.dependsOn 'checkLocalDependencies', "assemble${flavorName.capitalize()}", "${flavorName}SourcesJar"
+                task.finalizedBy 'uploadArchives'
+
+                task.doFirst {
+                    project.android.defaultPublishConfig = "${flavorName}"
+                }
+
+                task.doLast {
+                    // Set the artifacts.
+                    if (GradleVersion.current() < GradleVersion.version('3.0')) {
+                        project.configurations.default.artifacts.clear()
+                    }
+
+                    project.configurations.archives.artifacts.clear()
+                    project.artifacts.add('archives', project.tasks["${flavorName}SourcesJar"])
+
+                    def version = project.uploadArchives.repositories.mavenDeployer.pom.version
+                    project.uploadArchives.repositories.mavenDeployer.pom.version = "LOCAL-${flavorName.toUpperCase()}-${version}-${getTimestamp()}"
+
+                    def pom = project.uploadArchives.repositories.mavenDeployer.pom
+                    logVersion(String.format("%s:%s:%s", pom.groupId, pom.artifactId, pom.version))
+
+                    // Point the repository to our .m2/repository directory.
+                    project.uploadArchives.repositories.mavenDeployer.repository.url = "file://${System.properties['user.home']}/.m2/repository"
+                }
             }
-
-            project.configurations.archives.artifacts.clear()
-            project.artifacts.add('archives', project.tasks['releaseSourcesJar'])
-
-            def version = project.uploadArchives.repositories.mavenDeployer.pom.version
-            project.uploadArchives.repositories.mavenDeployer.pom.version = "LOCAL-RELEASE-${version}-${getTimestamp()}"
-
-            def pom = project.uploadArchives.repositories.mavenDeployer.pom
-            logVersion(String.format("%s:%s:%s", pom.groupId, pom.artifactId, pom.version))
-
-            // Point the repository to our .m2/repository directory.
-            project.uploadArchives.repositories.mavenDeployer.repository.url = "file://${System.properties['user.home']}/.m2/repository"
-        }
-    }
-
-    /**
-     * Creates the "createPublishLocalTask" task.
-     */
-    private void createPublishDebugLocalTask() {
-        def task = project.tasks.create TASK_PUBLISH_DEBUG_LOCAL
-        task.setDescription('Publishes a new local debug version of the AAR library, locally on the .m2/repository directory.')
-        task.dependsOn 'checkLocalDependencies', 'assembleDebug', 'debugSourcesJar'
-        task.finalizedBy 'uploadArchives'
-
-        task.doFirst {
-            project.android.defaultPublishConfig = 'debug'
-        }
-
-        task.doLast {
-
-            // Set the artifacts.
-            if (GradleVersion.current() < GradleVersion.version('3.0')) {
-                project.configurations.default.artifacts.clear()
-            }
-            
-            project.configurations.archives.artifacts.clear()
-            project.artifacts.add('archives', project.tasks['debugSourcesJar'])
-
-            def version = project.uploadArchives.repositories.mavenDeployer.pom.version
-            project.uploadArchives.repositories.mavenDeployer.pom.version = "LOCAL-DEBUG-${version}-${getTimestamp()}"
-
-            def pom = project.uploadArchives.repositories.mavenDeployer.pom
-            logVersion(String.format("%s:%s:%s", pom.groupId, pom.artifactId, pom.version))
-
-            // Point the repository to our .m2/repository directory.
-            project.uploadArchives.repositories.mavenDeployer.repository.url = "file://${System.properties['user.home']}/.m2/repository"
         }
     }
 
