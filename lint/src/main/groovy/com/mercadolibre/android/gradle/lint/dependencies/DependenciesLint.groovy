@@ -53,9 +53,10 @@ class DependenciesLint implements Lint {
         project.configurations.each { conf ->
             conf.dependencies.each { dep ->
                 // The ASCII chars make the stdout look red.
-                def message = "\u001b[31m" + "Forbidden dependency: <${dep.group}:${dep.name}:${dep.version}>" + "\u001b[0m"
+                def dependencyFullName = "${dep.group}:${dep.name}:${dep.version}"
+                def message = "\u001b[31m" + "Forbidden dependency: <${dependencyFullName}>" + "\u001b[0m"
                 // If its a library it can only contain dependencies from the LIBRARY group, if its an application only from APPLICATION's group
-                if (!dependencyIsInWhitelist(dep.group) && dep.name != DEFAULT_GRADLE_VALUE) {
+                if (!dependencyIsInWhitelist(dependencyFullName) && dep.name != DEFAULT_GRADLE_VALUE) {
                     report(message)
                 } 
             }
