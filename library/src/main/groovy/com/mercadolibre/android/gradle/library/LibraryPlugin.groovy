@@ -289,7 +289,7 @@ public class LibraryPlugin implements Plugin<Project> {
             project.artifacts.add('archives', project.tasks['releaseSourcesJar'])
 
             def version = project.uploadArchives.repositories.mavenDeployer.pom.version
-            project.uploadArchives.repositories.mavenDeployer.pom.version = "LOCAL-${version}-${getTimestamp()}"
+            project.uploadArchives.repositories.mavenDeployer.pom.version = "LOCAL-RELEASE-${version}-${getTimestamp()}"
 
             def pom = project.uploadArchives.repositories.mavenDeployer.pom
             logVersion(String.format("%s:%s:%s", pom.groupId, pom.artifactId, pom.version))
@@ -322,7 +322,7 @@ public class LibraryPlugin implements Plugin<Project> {
             project.configurations.archives.artifacts.clear()
             project.artifacts.add('archives', project.tasks['debugSourcesJar'])
 
-            project.uploadArchives.repositories.mavenDeployer.pom.version += '-DEBUG-LOCAL-' + getTimestamp()
+            project.uploadArchives.repositories.mavenDeployer.pom.version = "LOCAL-DEBUG-${version}-${getTimestamp()}"
 
             def pom = project.uploadArchives.repositories.mavenDeployer.pom
             logVersion(String.format("%s:%s:%s", pom.groupId, pom.artifactId, pom.version))
