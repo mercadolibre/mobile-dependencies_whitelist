@@ -53,7 +53,7 @@ In order to get all of this done, the plugins add new tasks to your build script
 2. `publishAarExperimental` - Same as `publishAarRelease`, but it uploads the artifacts to the specified Maven experimental repository. It does NOT tag the version in Git, as it is not a release.
 3. `publishAarAlpha` - Same as `publishAarRelease`, but it uploads the artifacts to the specified Maven alpha repository. This is a release, but in alpha.
 4. `publishAarLocalXXXX` - This is particularly useful during the development phase of the Android library. It overwrites the artifacts in your .m2/repository directory, so that you can code & test your code without uploading anything to a remote repository. This does NOT run lint so that we don't have to wait that long. It does not tag the version in Git either. 
-Note: XXXX is the build variant that you want to run for the publish. In most cases it will probably be Releease or Debug.
+Note: XXXX is the build variant that you want to run for the publish. In most cases it will probably be Release or Debug.
 An example would be: `./gradlew project:publishAarLocalRelease`
 
 ## How to add library plugin to your project?
