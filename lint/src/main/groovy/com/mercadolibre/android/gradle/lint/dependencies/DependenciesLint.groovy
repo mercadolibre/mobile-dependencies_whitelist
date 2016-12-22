@@ -28,7 +28,7 @@ class DependenciesLint implements Lint {
      *     "whitelist" : [ ":dependency1", ":dependency2", ... , ":dependencyN" ]
      * }
      */
-    private static final String WHITELIST_ENDPOINT = "https://raw.githubusercontent.com/saantiaguilera/fiuba-sisop-budget-scheduler/master/LICENSE"
+    private static final String WHITELIST_ENDPOINT = "https://raw.githubusercontent.com/mercadolibre/mobile-dependencies_whitelist/master/android-whitelist.json"
 
     /**
      * Checks the dependencies the project contains are in the whitelist
@@ -50,15 +50,13 @@ class DependenciesLint implements Lint {
         }
 
         // Core logic
-        project.configurations.each { conf ->
-            conf.dependencies.each { dep ->
-                // The ASCII chars make the stdout look red.
-                def dependencyFullName = "${dep.group}:${dep.name}:${dep.version}"
-                def message = "\u001b[31m" + "Forbidden dependency: <${dependencyFullName}>" + "\u001b[0m"
-                // If its a library it can only contain dependencies from the LIBRARY group, if its an application only from APPLICATION's group
-                if (!dependencyIsInWhitelist(dependencyFullName) && dep.name != DEFAULT_GRADLE_VALUE) {
-                    report(message)
-                } 
+        project.configurations.compile.dependencies.each { dependency ->
+            // The ASCII chars make the stdout look red.
+            def dependencyFullName = "${dependency.group}:${dependency.name}:${dependency.version}"
+            def message = "\u001b[31m" + "Forbidden dependency: <${dependencyFullName}>" + "\u001b[0m"
+            // If its a library it can only contain dependencies from the LIBRARY group, if its an application only from APPLICATION's group
+            if (!dependencyIsInWhitelist(dependencyFullName) && dependency.name != DEFAULT_GRADLE_VALUE) {
+                report(message)
             }
         }
 

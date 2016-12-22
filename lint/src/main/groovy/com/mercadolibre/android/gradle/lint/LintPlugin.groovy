@@ -53,8 +53,9 @@ class LintPlugin implements Plugin<Project> {
             new DependenciesLint()
         ]
 
-        // The task to which the lint will be hooked
-        def TASK_TO_HOOK = "assemble"
+        // The tasks to which the lint will be hooked
+        def TASK_ASSEMBLE = "assemble" // This is when the library is assembled.
+        def TASK_BUNDLE = "bundle" // This is if an application that depends on is assembled.
 
         /**
          * Creation of the lint task
@@ -80,7 +81,7 @@ class LintPlugin implements Plugin<Project> {
          * Hooking of the task
          */
         project.tasks.whenTaskAdded { addedTask ->
-            if (addedTask.name.contains(TASK_TO_HOOK)) {
+            if (addedTask.name.contains(TASK_ASSEMBLE) || addedTask.name.contains(TASK_BUNDLE)) {
                 addedTask.dependsOn TASK_NAME
             }
         }
