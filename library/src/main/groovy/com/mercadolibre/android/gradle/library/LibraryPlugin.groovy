@@ -28,7 +28,7 @@ public class LibraryPlugin implements Plugin<Project> {
     /**
      * The project.
      */
-    private Project project;
+    private Project project
 
     private static final String PUBLISH_RELEASE = "release"
     private static final String PUBLISH_EXPERIMENTAL = "experimental"
@@ -278,8 +278,6 @@ public class LibraryPlugin implements Plugin<Project> {
             if (addedTask.name =~ /assemble*/) {
                 def flavorName = addedTask.name.replaceAll("assemble", "")
                 flavorName = "${Character.toLowerCase(flavorName.charAt(0))}${flavorName.substring(1)}"
-
-                println "Created ${TASK_PUBLISH_LOCAL}${flavorName.capitalize()}"
 
                 def task = project.tasks.create "${TASK_PUBLISH_LOCAL}${flavorName.capitalize()}"
                 task.setDescription("Publishes a new local version, on the variant ${flavorName.capitalize()} of the AAR library, locally on the .m2/repository directory.")
