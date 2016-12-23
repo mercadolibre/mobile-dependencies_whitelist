@@ -49,7 +49,12 @@ class BasePlugin implements Plugin<Project> {
         }
     }
 
-    def setUpLocksTask() {
+    /**
+     * Set up lock task for each subproject that has the nebula plugin included.
+     * Also sets up an empty task for the root project, so we can call it without the need of a module
+     * to call all of the subproject tasks at the same time (eg ./gradlew lockVersions -> each module 'lockVersions')
+     */
+    private void setUpLocksTask() {
         // For each subproject that has the lock plugin, create the task
         project.afterEvaluate {
             project.subprojects.each { subproject ->
@@ -90,14 +95,14 @@ class BasePlugin implements Plugin<Project> {
 
                         /**
                          * Since some repositories have local modules as dependencies and they compile them
-                         * locally when not publishing and when publishing they publish in a specific order
-                         * (and then use the bintray dep once they are being published) we DONT lock other modules
-                         * from the same repository (since we cant determine the order they will be published
+                         * locally when not publishing and when they do, its in a specific order
+                         * (and then use the bintray dep once they are being published) we DONT lock local modules
+                         * (since we cant determine the order they will be published
                          * and we must lock before running the release tests and ci)
                          *
                          * This means that current modules wont have a x.x.+ dependency in the build.gradle
-                         * (Which makes sense, since you will have them compiled locally and on the publishing
-                         * you will have your specific version target :) )
+                         * (Which makes sense, since you will have them compiled locally all the time with the latest
+                         * and on the publishing you will have your specific new version target :) )
                          *
                          * For more information about the dependency lock features please read:
                          * https://github.com/nebula-plugins/gradle-dependency-lock-plugin/wiki/Usage#extensions-provided
@@ -106,10 +111,8 @@ class BasePlugin implements Plugin<Project> {
                          */
                         subproject.dependencyLock {
                             dependencyFilter = { String group, String name, String version ->
-                                // Dont lock the dependencies that have as group our same group id or project name
-                                def isFromLocalDependency = group == project.name
-                                def isFromSameGroup = subproject.hasProperty("publisher") ? group == subproject.publisher.groupId : false
-                                !(isFromLocalDependency || isFromSameGroup)
+                                // Dont lock local dependencies as mentioned above
+                                group != project.name
                             }
                         }
                     }
