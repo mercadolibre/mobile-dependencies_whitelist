@@ -3,7 +3,6 @@ package com.mercadolibre.android.gradle.application
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 
-
 /**
  * Created by ngiagnoni on 3/11/15.
  */
