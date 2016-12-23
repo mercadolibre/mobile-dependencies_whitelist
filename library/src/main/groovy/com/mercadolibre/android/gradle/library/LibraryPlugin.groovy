@@ -270,14 +270,9 @@ public class LibraryPlugin implements Plugin<Project> {
      * Creates the "publishAarLocalX" task, where X are each of the library variants
      */
     private void createPublishLocalTasks() {
-        /**
-         * Since at this point of the project we cant get yet the build flavors
-         * of the project, we need to hook to the assembles task
-         */
-        project.tasks.whenTaskAdded { addedTask ->
-            if (addedTask.name =~ /assemble*/) {
-                def flavorName = addedTask.name.replaceAll("assemble", "")
-                flavorName = "${Character.toLowerCase(flavorName.charAt(0))}${flavorName.substring(1)}"
+        project.afterEvaluate {
+            project.android.libraryVariants.each { variant ->
+                def flavorName = variant.buildType.name
 
                 def task = project.tasks.create "${TASK_PUBLISH_LOCAL}${flavorName.capitalize()}"
                 task.setDescription("Publishes a new local version, on the variant ${flavorName.capitalize()} of the AAR library, locally on the .m2/repository directory.")
