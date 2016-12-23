@@ -1,5 +1,7 @@
 package com.mercadolibre.android.gradle.base
 
+import groovy.json.JsonBuilder
+import groovy.json.JsonSlurper
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.tasks.testing.Test
@@ -11,6 +13,8 @@ class BasePlugin implements Plugin<Project> {
 
     private static final String DEFAULT_GRADLE_WRAPPER_VERSION = '2.6'
 
+    private static final String TASK_LOCK_VERSIONS = "lockVersions"
+
     /**
      * The project.
      */
@@ -21,13 +25,13 @@ class BasePlugin implements Plugin<Project> {
      * @param project the Gradle project.
      */
     void apply(Project project) {
-
         this.project = project
 
         avoidCacheForDynamicVersions()
         setupRepositories()
         setDefaultGradleVersion()
         setUpTestsLogging()
+        setUpLocksTask()
         def testCoverage = new TestCoverage()
         testCoverage.createJacocoFinalProjectTask(project)
         testCoverage.createCoveragePost(project)
@@ -44,6 +48,52 @@ class BasePlugin implements Plugin<Project> {
             }
         }
     }
+
+    def setUpLocksTask() {
+        project.afterEvaluate {
+            // For each subproject that has the lock plugin, create the task
+            project.subprojects.each { subproject ->
+                // Check that the subproject has the lock features. Else we dont have to lock anything
+                if (subproject.plugins.toListString().contains("nebula.plugin.dependencylock.DependencyLockPlugin")) {
+                    def innerTask = subproject.tasks.create TASK_LOCK_VERSIONS
+                    innerTask.setDescription('Locks the compiled project with the current versions of its dependencies to keep them in future assembles')
+                    innerTask.doLast {
+                        // Generate and save the lock first.
+                        println ":${subproject.name}:generateLock"
+                        subproject.generateLock.execute()
+                        println ":${subproject.name}:saveLock"
+                        subproject.saveLock.execute()
+
+                        // Get the lock file created and clean any ALPHA's versions that it contains
+                        def file = subproject.file('dependencies.lock')
+                        def inputJson = new JsonSlurper().parseText(file.text)
+                        inputJson.each { variant, variantJson ->
+                            if (!variant.contains("test") && !variant.contains("Test")) {
+                                variantJson.each { dependency, dependencyVersions ->
+                                    if (dependencyVersions.locked //Because when compile dirs it gets transitives without locks
+                                            && dependencyVersions.locked.contains("ALPHA")) {
+                                        dependencyVersions.locked = dependencyVersions.locked.find(/.*\..*\.[0-9]+/)
+                                        // Accepts [everything].[everything].[only numbers]
+                                    }
+                                }
+                            }
+                        }
+
+                        // Write the new file
+                        def jsonBuilder = new JsonBuilder(inputJson)
+                        file.withWriter {
+                            it.write jsonBuilder.toPrettyString()
+                        }
+                    }
+                }
+            }
+        }
+
+        // Root needs to have an empty task to find it, then dependencies for each subproject will fallback
+        def task = project.tasks.create TASK_LOCK_VERSIONS
+        task.setDescription('Locks the compiled projects with the current versions of its dependencies to keep using them in future assembles')
+    }
+
     /**
      * Sets up the repositories.
      */

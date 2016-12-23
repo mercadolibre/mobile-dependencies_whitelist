@@ -124,11 +124,23 @@ public class LibraryPlugin implements Plugin<Project> {
         project.metaClass.isBeingPublished() {
             for (def task : project.getGradle().getStartParameter().getTaskNames()) {
                 def (moduleName, taskName) = task.tokenize(':')
+
+                // If we execute without module (eg ./gradlew build)
+                if (taskName == null) {
+                    taskName = moduleName
+                    moduleName = null
+                }
+
                 if (moduleName != null && moduleName == project.name && taskName != null &&
                         (taskName == TASK_PUBLISH_LOCAL ||
                                 taskName == TASK_PUBLISH_EXPERIMENTAL ||
                                 taskName == TASK_PUBLISH_RELEASE)) {
                     return true;
+                }
+
+                // If we are locking the versions, we will lock as a publish mode.
+                if (taskName == TASK_LOCK_VERSIONS) {
+                    return true
                 }
             }
             return false;
@@ -144,7 +156,6 @@ public class LibraryPlugin implements Plugin<Project> {
         createPublishReleaseTask()
         createPublishExperimentalTask()
         createPublishAlphaTask()
-        createLockVersionsTask()
         createCheckLocalDependenciesTask()
         createGetProjectVersionTask()
         resetUploadArchivesDependencies()
@@ -210,34 +221,6 @@ public class LibraryPlugin implements Plugin<Project> {
      */
     private void resetUploadArchivesDependencies() {
         project.tasks['uploadArchives'].dependsOn.clear()
-    }
-
-    def createLockVersionsTask() {
-        def task = project.tasks.create TASK_LOCK_VERSIONS
-        task.setDescription('Locks the compiled project with the current versions of its dependencies to keep using them in future assembles')
-        task.doLast {
-            println ":${project.name}:generateLock"
-            project.generateLock.execute()
-            println ":${project.name}:saveLock"
-            project.saveLock.execute()
-
-            def file = project.file('dependencies.lock')
-            def inputJson = new JsonSlurper().parseText(file.text)
-            inputJson.each { variant, variantJson ->
-                if (!variant.contains("test") && !variant.contains("Test")) {
-                    variantJson.each { dependency, dependencyVersions ->
-                        if (dependencyVersions.locked.contains("ALPHA")) {
-                            dependencyVersions.locked = dependencyVersions.locked.find(/.*\..*\.[0-9]+/) // Accepts [everything].[everything].[only numbers]
-                        }
-                    }
-                }
-            }
-            
-            def jsonBuilder = new JsonBuilder(inputJson)
-            file.withWriter {
-                it.write jsonBuilder.toPrettyString()
-            }
-        }
     }
 
     /**
