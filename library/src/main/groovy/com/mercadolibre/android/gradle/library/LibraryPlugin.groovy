@@ -137,11 +137,6 @@ public class LibraryPlugin implements Plugin<Project> {
                                 taskName == TASK_PUBLISH_RELEASE)) {
                     return true;
                 }
-
-                // If we are locking the versions, we will lock as a publish mode.
-                if (taskName == TASK_LOCK_VERSIONS) {
-                    return true
-                }
             }
             return false;
         }
