@@ -3,11 +3,6 @@ package com.mercadolibre.android.gradle.application
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 
-import groovy.json.JsonSlurper
-import groovy.json.JsonBuilder
-
-import java.io.File
-
 
 /**
  * Created by ngiagnoni on 3/11/15.

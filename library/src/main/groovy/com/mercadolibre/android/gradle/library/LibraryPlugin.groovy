@@ -8,11 +8,6 @@ import org.gradle.util.GradleVersion
 
 import java.text.SimpleDateFormat
 
-import groovy.json.JsonSlurper
-import groovy.json.JsonBuilder
-
-import java.io.File
-
 /**
  * Gradle plugin for Android Libraries. It provides some important tasks:
  *
