@@ -42,7 +42,6 @@ public class LibraryPlugin implements Plugin<Project> {
     private static final String TASK_PUBLISH_EXPERIMENTAL = "publishAarExperimental"
     private static final String TASK_PUBLISH_RELEASE = "publishAarRelease"
     private static final String TASK_PUBLISH_ALPHA = "publishAarAlpha"
-    private static final String TASK_LOCK_VERSIONS = "lockVersions"
     private static final String TASK_GET_PROJECT_VERSION = "getProjectVersion"
 
     /**
