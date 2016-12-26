@@ -54,6 +54,10 @@ class DependenciesLint implements Lint {
             // The ASCII chars make the stdout look red.
             def dependencyFullName = "${dependency.group}:${dependency.name}:${dependency.version}"
             def message = "\u001b[31m" + "Forbidden dependency: <${dependencyFullName}>" + "\u001b[0m"
+            def isLocalDependency = {
+                (dependencyFullName.contains(project.publisher.groupId as String)
+                        || dependencyFullName.contains(project.name as String))
+            }
             /**
              * - Dependency cant be found in whitelist
              * - Isnt "unspecified" the name of the dependency
@@ -62,7 +66,7 @@ class DependenciesLint implements Lint {
              */
             if (!dependencyIsInWhitelist(dependencyFullName)
                     && dependency.name != DEFAULT_GRADLE_VALUE
-                    && !dependencyFullName.contains(project.publisher.groupId as String)) {
+                    && !isLocalDependency) {
                 report(message)
             }
         }
