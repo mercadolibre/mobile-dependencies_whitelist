@@ -35,7 +35,7 @@ class DependenciesLint implements Lint {
      * 
      * This throws GradleException if errors are found.
      */
-    def lint(def project) {
+    def lint(def project, def variants) {
         setUpWhitelist()
 
         def hasFailed = false
@@ -50,14 +50,12 @@ class DependenciesLint implements Lint {
         }
 
         // Core logic
-        project.configurations.compile.dependencies.each { dependency ->
+        def analizeDependency = { dependency, String packageName ->
             // The ASCII chars make the stdout look red.
             def dependencyFullName = "${dependency.group}:${dependency.name}:${dependency.version}"
             def message = "\u001b[31m" + "Forbidden dependency: <${dependencyFullName}>" + "\u001b[0m"
-            def isLocalDependency = {
-                (dependencyFullName.contains(project.publisher.groupId as String)
-                        || dependencyFullName.contains(project.name as String))
-            }
+            def publishName = "${project.publisher.groupId}:${project.publisher.artifactId}"
+
             /**
              * - Dependency cant be found in whitelist
              * - Isnt "unspecified" the name of the dependency
@@ -65,11 +63,32 @@ class DependenciesLint implements Lint {
              * Only if all of the above meet it will error.
              */
             if (!dependencyIsInWhitelist(dependencyFullName)
-                    && dependency.name != DEFAULT_GRADLE_VALUE
-                    && !isLocalDependency) {
+                    && !dependencyFullName.contains(DEFAULT_GRADLE_VALUE)
+                    && !(dependencyFullName.contains(packageName) || dependencyFullName.contains(publishName))) {
                 report(message)
             }
         }
+
+        String debugPackageName // For the default compile deps, we will use debug package
+
+        // Check dependencies of each variant available first
+        variants.each { variant ->
+            def variantName = variant.name
+            String packageName = variant.applicationId
+
+            if (variantName == "debug") {
+                debugPackageName = packageName
+            }
+
+            project.configurations.all { configuration ->
+                if (configuration.name == "${variantName}Compile") {
+                    configuration.dependencies.each { analizeDependency(it, packageName) }
+                }
+            }
+        }
+
+        // Check the default compiling deps
+        project.configurations.compile.dependencies.each { analizeDependency(it, debugPackageName) }
 
         return hasFailed
     }

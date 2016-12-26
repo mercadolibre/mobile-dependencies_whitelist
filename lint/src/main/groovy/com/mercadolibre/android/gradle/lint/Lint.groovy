@@ -16,6 +16,6 @@ interface Lint {
      * Lint the project
      * Returns boolean notifying if the lint contained errors or not
      */
-    def lint(def project)
+    def lint(def project, def variants)
 
 }

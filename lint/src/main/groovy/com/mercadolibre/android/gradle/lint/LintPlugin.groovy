@@ -34,6 +34,15 @@ class LintPlugin implements Plugin<Project> {
     Lint[] linters
 
     /**
+     * Array with available variants
+     *
+     * We have to save them before, else gradle
+     * throws us a tantrum if accessing them after
+     * tasks are created
+     */
+    List<Object> variants
+
+    /**
      * Method called by Gradle when applying this plugin.
      * @param project the Gradle project.
      */
@@ -53,6 +62,13 @@ class LintPlugin implements Plugin<Project> {
             new DependenciesLint()
         ]
 
+        variants = new ArrayList<>()
+        project.android {
+            defaultConfig {
+                libraryVariants.all { variant -> variants.add(variant) }
+            }
+        }
+
         // The tasks to which the lint will be hooked
         def TASK_ASSEMBLE = "assemble" // This is when the library is assembled.
         def TASK_BUNDLE = "bundle" // This is if an application that depends on is assembled.
@@ -66,7 +82,7 @@ class LintPlugin implements Plugin<Project> {
             def buildErrored = false
             linters.each {
                 println ":${project.name}:${it.name()}"
-                def lintErrored = it.lint(project)
+                def lintErrored = it.lint(project, variants)
                 if (lintErrored) {
                     buildErrored = true
                 }
