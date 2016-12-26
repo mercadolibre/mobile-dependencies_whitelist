@@ -354,7 +354,6 @@ public class LibraryPlugin implements Plugin<Project> {
      * Sets basic bintray configuration, repository configuration, user and password.
      * Also renames the sources file so that the bintray plugin finds it and writes the valid
      * pom as the default pom so that the bintray plugin uploads it.
-     *
      **/
     private void setBintrayConfig(String buildConfig) {
 
