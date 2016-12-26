@@ -28,10 +28,11 @@ public class LibraryPlugin implements Plugin<Project> {
     /**
      * The project.
      */
-    private Project project;
+    private Project project
 
     private static final String PUBLISH_RELEASE = "release"
     private static final String PUBLISH_EXPERIMENTAL = "experimental"
+    private static final String PUBLISH_ALPHA = "alpha"
     private static final String BINTRAY_USER_ENV = "BINTRAY_USER"
     private static final String BINTRAY_KEY_ENV = "BINTRAY_KEY"
     private static final String BINTRAY_PROP_FILE = "bintray.properties"
@@ -40,6 +41,7 @@ public class LibraryPlugin implements Plugin<Project> {
     private static final String TASK_PUBLISH_LOCAL = "publishAarLocal"
     private static final String TASK_PUBLISH_EXPERIMENTAL = "publishAarExperimental"
     private static final String TASK_PUBLISH_RELEASE = "publishAarRelease"
+    private static final String TASK_PUBLISH_ALPHA = "publishAarAlpha"
     private static final String TASK_GET_PROJECT_VERSION = "getProjectVersion"
 
     /**
@@ -115,7 +117,7 @@ public class LibraryPlugin implements Plugin<Project> {
             for (def task : project.getGradle().getStartParameter().getTaskNames()) {
                 def (moduleName, taskName) = task.tokenize(':')
                 if (moduleName != null && moduleName == project.name && taskName != null &&
-                        (taskName == TASK_PUBLISH_LOCAL ||
+                        (taskName.contains(TASK_PUBLISH_LOCAL) ||
                                 taskName == TASK_PUBLISH_EXPERIMENTAL ||
                                 taskName == TASK_PUBLISH_RELEASE)) {
                     return true;
@@ -130,9 +132,10 @@ public class LibraryPlugin implements Plugin<Project> {
      */
     private void createAllTasks() {
         createSourcesJarTasks()
-        createPublishLocalTask()
+        createPublishLocalTasks()
         createPublishReleaseTask()
         createPublishExperimentalTask()
+        createPublishAlphaTask()
         createCheckLocalDependenciesTask()
         createGetProjectVersionTask()
         resetUploadArchivesDependencies()
@@ -201,16 +204,37 @@ public class LibraryPlugin implements Plugin<Project> {
     }
 
     /**
-     * Creates the "publishAarRelease" task.
+     * Create and configure a bintray task for a specific
+     * publishType. Take into account that this type of task
+     * must be a Bintray type (not a local publish for example)
      */
-    private void createPublishReleaseTask() {
-        def task = project.tasks.create TASK_PUBLISH_RELEASE
-        task.setDescription('Publishes a new release version of the AAR library to Bintray.')
+    def createBintrayTask(def publishType) {
+        def task;
+        switch (publishType) {
+            case PUBLISH_RELEASE:
+                task = project.tasks.create TASK_PUBLISH_RELEASE
+                task.setDescription('Publishes a new release version of the AAR library to Bintray.')
+                task.dependsOn 'checkLocalDependencies', 'assembleRelease', 'testReleaseUnitTest', 'check', 'releaseSourcesJar'
+                break
 
-        task.dependsOn 'checkLocalDependencies', 'assembleRelease', 'testReleaseUnitTest', 'check', 'releaseSourcesJar'
+            case PUBLISH_EXPERIMENTAL:
+                task = project.tasks.create TASK_PUBLISH_EXPERIMENTAL
+                task.setDescription('Publishes a new experimental version of the AAR library.')
+                task.dependsOn 'checkLocalDependencies', 'assembleRelease', 'releaseSourcesJar'
+                break
+
+            case PUBLISH_ALPHA:
+                task = project.tasks.create TASK_PUBLISH_ALPHA
+                task.setDescription('Publishes a new alpha version of the AAR library to Bintray.')
+                task.dependsOn 'checkLocalDependencies', 'assembleRelease', 'testReleaseUnitTest', 'check', 'releaseSourcesJar'
+                break
+
+            default:
+                throw new GradleException("No task type provided")
+        }
         task.finalizedBy 'bintrayUpload'
         task.doLast {
-            setBintrayConfig(PUBLISH_RELEASE);
+            setBintrayConfig(publishType);
 
             // Set the artifacts.
             project.configurations.archives.artifacts.clear()
@@ -219,55 +243,65 @@ public class LibraryPlugin implements Plugin<Project> {
 
             logVersion(String.format("%s:%s:%s", project.group, project.name, project.version))
         }
+    }
+
+    /**
+     * Creates the "publishAarRelease" task.
+     */
+    def createPublishReleaseTask() {
+        createBintrayTask(PUBLISH_RELEASE) 
+    }
+
+    /**
+     * Creates the "publishAarAlpha" task.
+     */
+    def createPublishAlphaTask() {
+        createBintrayTask(PUBLISH_ALPHA)
     }
 
     /**
      * Creates the "publishAarExperimental" task.
      */
-    private void createPublishExperimentalTask() {
-        def task = project.tasks.create TASK_PUBLISH_EXPERIMENTAL
-        task.setDescription('Publishes a new experimental version of the AAR library.')
-        task.dependsOn 'checkLocalDependencies', 'assembleRelease', 'releaseSourcesJar'
-        task.finalizedBy 'bintrayUpload'
-
-        task.doLast {
-            setBintrayConfig(PUBLISH_EXPERIMENTAL);
-
-            // Set the artifacts.
-            project.configurations.archives.artifacts.clear()
-            project.artifacts.add('archives', project.file(getAarFilePath()))
-            project.artifacts.add('archives', project.tasks['releaseSourcesJar'])
-
-            logVersion(String.format("%s:%s:%s", project.group, project.name, project.version))
-        }
+    def createPublishExperimentalTask() {
+        createBintrayTask(PUBLISH_EXPERIMENTAL)
     }
 
     /**
-     * Creates the "publishAarLocal" task.
+     * Creates the "publishAarLocalX" task, where X are each of the library variants
      */
-    private void createPublishLocalTask() {
-        def task = project.tasks.create TASK_PUBLISH_LOCAL
-        task.setDescription('Publishes a new local version of the AAR library, locally on the .m2/repository directory.')
-        task.dependsOn 'checkLocalDependencies', 'assembleRelease', 'releaseSourcesJar'
-        task.finalizedBy 'uploadArchives'
+    private void createPublishLocalTasks() {
+        project.afterEvaluate {
+            project.android.libraryVariants.each { variant ->
+                def flavorName = variant.buildType.name
 
-        task.doLast {
+                def task = project.tasks.create "${TASK_PUBLISH_LOCAL}${flavorName.capitalize()}"
+                task.setDescription("Publishes a new local version, on the variant ${flavorName.capitalize()} of the AAR library, locally on the .m2/repository directory.")
+                task.dependsOn 'checkLocalDependencies', "assemble${flavorName.capitalize()}", "${flavorName}SourcesJar"
+                task.finalizedBy 'uploadArchives'
 
-            // Set the artifacts.
-            if (GradleVersion.current() < GradleVersion.version('3.0')) {
-                project.configurations.default.artifacts.clear()
+                task.doFirst {
+                    project.android.defaultPublishConfig = "${flavorName}"
+                }
+
+                task.doLast {
+                    // Set the artifacts.
+                    if (GradleVersion.current() < GradleVersion.version('3.0')) {
+                        project.configurations.default.artifacts.clear()
+                    }
+
+                    project.configurations.archives.artifacts.clear()
+                    project.artifacts.add('archives', project.tasks["${flavorName}SourcesJar"])
+
+                    def version = project.uploadArchives.repositories.mavenDeployer.pom.version
+                    project.uploadArchives.repositories.mavenDeployer.pom.version = "LOCAL-${flavorName.toUpperCase()}-${version}-${getTimestamp()}"
+
+                    def pom = project.uploadArchives.repositories.mavenDeployer.pom
+                    logVersion(String.format("%s:%s:%s", pom.groupId, pom.artifactId, pom.version))
+
+                    // Point the repository to our .m2/repository directory.
+                    project.uploadArchives.repositories.mavenDeployer.repository.url = "file://${System.properties['user.home']}/.m2/repository"
+                }
             }
-
-            project.configurations.archives.artifacts.clear()
-            project.artifacts.add('archives', project.tasks['releaseSourcesJar'])
-
-            project.uploadArchives.repositories.mavenDeployer.pom.version += '-LOCAL-' + getTimestamp()
-
-            def pom = project.uploadArchives.repositories.mavenDeployer.pom
-            logVersion(String.format("%s:%s:%s", pom.groupId, pom.artifactId, pom.version))
-
-            // Point the repository to our .m2/repository directory.
-            project.uploadArchives.repositories.mavenDeployer.repository.url = "file://${System.properties['user.home']}/.m2/repository"
         }
     }
 
@@ -304,10 +338,22 @@ public class LibraryPlugin implements Plugin<Project> {
     }
 
     /**
+     * Get the git hash as a string
+     * Example of return value = "e61af97"
+     */
+    def getGitHash = { ->
+        def stdout = new ByteArrayOutputStream()
+        exec {
+            commandLine 'git', 'rev-parse', '--short', 'HEAD'
+            standardOutput = stdout
+        }
+        return stdout.toString().trim()
+    }
+
+    /**
      * Sets basic bintray configuration, repository configuration, user and password.
      * Also renames the sources file so that the bintray plugin finds it and writes the valid
      * pom as the default pom so that the bintray plugin uploads it.
-     *
      **/
     private void setBintrayConfig(String buildConfig) {
 
@@ -323,11 +369,17 @@ public class LibraryPlugin implements Plugin<Project> {
                 project.bintrayUpload.packageVcsUrl =
                         "$repoURL/releases/tag/v${project.version}"
                 project.bintrayUpload.versionVcsTag = "v${project.version}"
-                break;
+                break
+            case PUBLISH_ALPHA:
+                project.version = "${getPublisherContainer().version}-ALPHA-${getTimestamp()}-${getGitHash()}"
+                project.bintrayUpload.repoName = 'android-releases'
+                project.bintrayUpload.packageVcsUrl = "$repoURL/releases/tag/v${project.version}"
+                project.bintrayUpload.versionVcsTag = "v${project.version}"
+                break
             case PUBLISH_EXPERIMENTAL:
-                project.version = "${getPublisherContainer().version}-EXPERIMENTAL-${getTimestamp()}"
+                project.version = "EXPERIMENTAL-${getPublisherContainer().version}-${getTimestamp()}"
                 project.bintrayUpload.repoName = 'android-experimental'
-                break;
+                break
         }
         loadBintrayCredentials()
         project.bintrayUpload.dryRun = false
