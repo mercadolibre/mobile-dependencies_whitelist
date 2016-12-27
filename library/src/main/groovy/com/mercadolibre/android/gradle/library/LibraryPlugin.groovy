@@ -126,6 +126,7 @@ public class LibraryPlugin implements Plugin<Project> {
                 if (moduleName != null && moduleName == project.name && taskName != null &&
                         (taskName.contains(TASK_PUBLISH_LOCAL) ||
                                 taskName == TASK_PUBLISH_EXPERIMENTAL ||
+                                taskName == TASK_PUBLISH_ALPHA ||
                                 taskName == TASK_PUBLISH_RELEASE)) {
                     return true;
                 }
