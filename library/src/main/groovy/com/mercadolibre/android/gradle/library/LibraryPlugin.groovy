@@ -28,7 +28,7 @@ public class LibraryPlugin implements Plugin<Project> {
     /**
      * The project.
      */
-    private Project project;
+    private Project project
 
     private static final String PUBLISH_RELEASE = "release"
     private static final String PUBLISH_EXPERIMENTAL = "experimental"
@@ -124,7 +124,7 @@ public class LibraryPlugin implements Plugin<Project> {
                 }
 
                 if (moduleName != null && moduleName == project.name && taskName != null &&
-                        (taskName == TASK_PUBLISH_LOCAL ||
+                        (taskName.contains(TASK_PUBLISH_LOCAL) ||
                                 taskName == TASK_PUBLISH_EXPERIMENTAL ||
                                 taskName == TASK_PUBLISH_RELEASE)) {
                     return true;
@@ -139,7 +139,7 @@ public class LibraryPlugin implements Plugin<Project> {
      */
     private void createAllTasks() {
         createSourcesJarTasks()
-        createPublishLocalTask()
+        createPublishLocalTasks()
         createPublishReleaseTask()
         createPublishExperimentalTask()
         createPublishAlphaTask()
@@ -274,32 +274,41 @@ public class LibraryPlugin implements Plugin<Project> {
     }
 
     /**
-     * Creates the "publishAarLocal" task.
+     * Creates the "publishAarLocalX" task, where X are each of the library variants
      */
-    private void createPublishLocalTask() {
-        def task = project.tasks.create TASK_PUBLISH_LOCAL
-        task.setDescription('Publishes a new local version of the AAR library, locally on the .m2/repository directory.')
-        task.dependsOn 'checkLocalDependencies', 'assembleRelease', 'releaseSourcesJar'
-        task.finalizedBy 'uploadArchives'
+    private void createPublishLocalTasks() {
+        project.afterEvaluate {
+            project.android.libraryVariants.each { variant ->
+                def flavorName = variant.buildType.name
 
-        task.doLast {
+                def task = project.tasks.create "${TASK_PUBLISH_LOCAL}${flavorName.capitalize()}"
+                task.setDescription("Publishes a new local version, on the variant ${flavorName.capitalize()} of the AAR library, locally on the .m2/repository directory.")
+                task.dependsOn 'checkLocalDependencies', "assemble${flavorName.capitalize()}", "${flavorName}SourcesJar"
+                task.finalizedBy 'uploadArchives'
 
-            // Set the artifacts.
-            if (GradleVersion.current() < GradleVersion.version('3.0')) {
-                project.configurations.default.artifacts.clear()
+                task.doFirst {
+                    project.android.defaultPublishConfig = "${flavorName}"
+                }
+
+                task.doLast {
+                    // Set the artifacts.
+                    if (GradleVersion.current() < GradleVersion.version('3.0')) {
+                        project.configurations.default.artifacts.clear()
+                    }
+
+                    project.configurations.archives.artifacts.clear()
+                    project.artifacts.add('archives', project.tasks["${flavorName}SourcesJar"])
+
+                    def version = project.uploadArchives.repositories.mavenDeployer.pom.version
+                    project.uploadArchives.repositories.mavenDeployer.pom.version = "LOCAL-${flavorName.toUpperCase()}-${version}-${getTimestamp()}"
+
+                    def pom = project.uploadArchives.repositories.mavenDeployer.pom
+                    logVersion(String.format("%s:%s:%s", pom.groupId, pom.artifactId, pom.version))
+
+                    // Point the repository to our .m2/repository directory.
+                    project.uploadArchives.repositories.mavenDeployer.repository.url = "file://${System.properties['user.home']}/.m2/repository"
+                }
             }
-
-            project.configurations.archives.artifacts.clear()
-            project.artifacts.add('archives', project.tasks['releaseSourcesJar'])
-
-            def version = project.uploadArchives.repositories.mavenDeployer.pom.version
-            project.uploadArchives.repositories.mavenDeployer.pom.version = "LOCAL-${version}-${getTimestamp()}"
-
-            def pom = project.uploadArchives.repositories.mavenDeployer.pom
-            logVersion(String.format("%s:%s:%s", pom.groupId, pom.artifactId, pom.version))
-
-            // Point the repository to our .m2/repository directory.
-            project.uploadArchives.repositories.mavenDeployer.repository.url = "file://${System.properties['user.home']}/.m2/repository"
         }
     }
 
@@ -352,7 +361,6 @@ public class LibraryPlugin implements Plugin<Project> {
      * Sets basic bintray configuration, repository configuration, user and password.
      * Also renames the sources file so that the bintray plugin finds it and writes the valid
      * pom as the default pom so that the bintray plugin uploads it.
-     *
      **/
     private void setBintrayConfig(String buildConfig) {
 
