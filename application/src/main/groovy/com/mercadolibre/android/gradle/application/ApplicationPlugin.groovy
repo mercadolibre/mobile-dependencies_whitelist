@@ -18,8 +18,6 @@ public class ApplicationPlugin implements Plugin<Project> {
 
         project.apply plugin: 'com.mercadolibre.android.gradle.jacoco'
         project.apply plugin: 'com.mercadolibre.android.gradle.robolectric'
-
-        project.apply plugin: 'nebula.dependency-lock'
     }
 
 }
