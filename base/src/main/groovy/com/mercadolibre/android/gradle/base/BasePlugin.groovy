@@ -55,78 +55,83 @@ class BasePlugin implements Plugin<Project> {
      * to call all of the subproject tasks at the same time (eg ./gradlew lockVersions -> each module 'lockVersions')
      */
     private void setUpLocksTask() {
-        // For each subproject that has the lock plugin, create the task
+        def dependencyLockPluginExists = false
+        // Check that the project supports lock features. Else we wont add it
         project.afterEvaluate {
             project.buildscript.configurations.classpath.each { classpath ->
                 if (classpath.name.contains("gradle-dependency-lock-plugin")) {
-                    project.subprojects.each { subproject ->
-                        subproject.apply plugin: 'nebula.dependency-lock'
+                    dependencyLockPluginExists = true
+                }
+            }
 
-                        // Check that the subproject has the lock features. Else we dont have to lock anything
-                        subproject.afterEvaluate {
-                            // Create the lock task for the subproject
-                            def innerTask = subproject.tasks.create TASK_LOCK_VERSIONS
-                            innerTask.setDescription('Locks the compiled project with the current versions of its dependencies to keep them in future assembles')
-                            innerTask.doLast {
-                                // Generate and save the lock first.
-                                println ":${subproject.name}:generateLock"
-                                subproject.generateLock.execute()
-                                println ":${subproject.name}:saveLock"
-                                subproject.saveLock.execute()
+            // If it supports locks, then add the task for each of the subprojects.
+            if (dependencyLockPluginExists) {
+                project.subprojects.each { subproject ->
+                    subproject.apply plugin: 'nebula.dependency-lock'
 
-                                // Get the lock file created and clean any ALPHA's versions that it contains
-                                def file = subproject.file('dependencies.lock')
-                                def inputJson = new JsonSlurper().parseText(file.text)
-                                inputJson.each { variant, variantJson ->
-                                    if (!variant.contains("test") && !variant.contains("Test")) {
-                                        variantJson.each { dependency, dependencyVersions ->
-                                            if (dependencyVersions.locked //Because when compile dirs it gets transitives without locks
-                                                    && dependencyVersions.locked.contains("ALPHA")) {
-                                                dependencyVersions.locked = dependencyVersions.locked.find(/.*\..*\.[0-9]+/)
-                                                // Accepts [everything].[everything].[only numbers]
-                                            }
+                    subproject.afterEvaluate {
+                        // Create the lock task for the subproject
+                        def innerTask = subproject.tasks.create TASK_LOCK_VERSIONS
+                        innerTask.setDescription('Locks the compiled project with the current versions of its dependencies to keep them in future assembles')
+                        innerTask.doLast {
+                            // Generate and save the lock first.
+                            println ":${subproject.name}:generateLock"
+                            subproject.generateLock.execute()
+                            println ":${subproject.name}:saveLock"
+                            subproject.saveLock.execute()
+
+                            // Get the lock file created and clean any ALPHA's versions that it contains
+                            def file = subproject.file('dependencies.lock')
+                            def inputJson = new JsonSlurper().parseText(file.text)
+                            inputJson.each { variant, variantJson ->        
+                                if (!variant.contains("test") && !variant.contains("Test")) {
+                                    variantJson.each { dependency, dependencyVersions ->
+                                        if (dependencyVersions.locked //Because when compile dirs it gets transitives without locks
+                                                && dependencyVersions.locked.contains("ALPHA")) {
+                                            dependencyVersions.locked = dependencyVersions.locked.find(/.*\..*\.[0-9]+/)
+                                            // Accepts [everything].[everything].[only numbers]
                                         }
                                     }
                                 }
-
-                                // Write the new file
-                                def jsonBuilder = new JsonBuilder(inputJson)
-                                file.withWriter {
-                                    it.write jsonBuilder.toPrettyString()
-                                }
                             }
 
-                            /**
-                             * Since some repositories have local modules as dependencies and they compile them
-                             * locally when not publishing and when they do, its in a specific order
-                             * (and then use the bintray dep once they are being published) we DONT lock local modules
-                             * (since we cant determine the order they will be published
-                             * and we must lock before running the release tests and ci)
-                             *
-                             * This means that current modules wont have a x.x.+ dependency in the build.gradle
-                             * (Which makes sense, since you will have them compiled locally all the time with the latest
-                             * and on the publishing you will have your specific new version target :) )
-                             *
-                             * For more information about the dependency lock features please read:
-                             * https://github.com/nebula-plugins/gradle-dependency-lock-plugin/wiki/Usage#extensions-provided
-                             * Its highly recommended to never apply this closure in libraries, since we cant know
-                             * the effects it may create on the CD process
-                             */
-                            subproject.dependencyLock {
-                                dependencyFilter = { String group, String name, String version ->
-                                    // Dont lock local dependencies as mentioned above
-                                    group != project.name
-                                }
+                            // Write the new file
+                            def jsonBuilder = new JsonBuilder(inputJson)
+                            file.withWriter {
+                                it.write jsonBuilder.toPrettyString()
+                            }
+                        }
+
+                        /**
+                         * Since some repositories have local modules as dependencies and they compile them
+                         * locally when not publishing and when they do, its in a specific order
+                         * (and then use the bintray dep once they are being published) we DONT lock local modules
+                         * (since we cant determine the order they will be published
+                         * and we must lock before running the release tests and ci)
+                         *
+                         * This means that current modules wont have a x.x.+ dependency in the build.gradle
+                         * (Which makes sense, since you will have them compiled locally all the time with the latest
+                         * and on the publishing you will have your specific new version target :) )
+                         *
+                         * For more information about the dependency lock features please read:
+                         * https://github.com/nebula-plugins/gradle-dependency-lock-plugin/wiki/Usage#extensions-provided
+                         * Its highly recommended to never apply this closure in libraries, since we cant know
+                         * the effects it may create on the CD process
+                         */
+                        subproject.dependencyLock {
+                            dependencyFilter = { String group, String name, String version ->
+                                // Dont lock local dependencies as mentioned above
+                                group != project.name
                             }
                         }
                     }
                 }
+
+                // Root needs to have an empty task to find it, then dependencies for each subproject will fallback
+                def task = project.tasks.create TASK_LOCK_VERSIONS
+                task.setDescription('Locks the compiled projects with the current versions of its dependencies to keep using them in future assembles')
             }
         }
-
-        // Root needs to have an empty task to find it, then dependencies for each subproject will fallback
-        def task = project.tasks.create TASK_LOCK_VERSIONS
-        task.setDescription('Locks the compiled projects with the current versions of its dependencies to keep using them in future assembles')
     }
 
     /**
