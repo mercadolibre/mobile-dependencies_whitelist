@@ -76,6 +76,12 @@ class DependenciesLint implements Lint {
             def variantName = variant.name
             String packageName = variant.applicationId
 
+            /**
+             * Since each variant can have its own package name, we need for the 
+             * default compile mode a package to check against for the
+             * local dependencies. Since we use mostly debug, we are choosing
+             * as default package the debug one.
+             */
             if (variantName == "debug") {
                 debugPackageName = packageName
             }
