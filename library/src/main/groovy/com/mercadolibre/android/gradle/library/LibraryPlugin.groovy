@@ -116,9 +116,17 @@ public class LibraryPlugin implements Plugin<Project> {
         project.metaClass.isBeingPublished() {
             for (def task : project.getGradle().getStartParameter().getTaskNames()) {
                 def (moduleName, taskName) = task.tokenize(':')
+
+                // If we execute without module (eg ./gradlew build)
+                if (taskName == null) {
+                    taskName = moduleName
+                    moduleName = null
+                }
+
                 if (moduleName != null && moduleName == project.name && taskName != null &&
                         (taskName.contains(TASK_PUBLISH_LOCAL) ||
                                 taskName == TASK_PUBLISH_EXPERIMENTAL ||
+                                taskName == TASK_PUBLISH_ALPHA ||
                                 taskName == TASK_PUBLISH_RELEASE)) {
                     return true;
                 }
@@ -338,19 +346,6 @@ public class LibraryPlugin implements Plugin<Project> {
     }
 
     /**
-     * Get the git hash as a string
-     * Example of return value = "e61af97"
-     */
-    def getGitHash = { ->
-        def stdout = new ByteArrayOutputStream()
-        exec {
-            commandLine 'git', 'rev-parse', '--short', 'HEAD'
-            standardOutput = stdout
-        }
-        return stdout.toString().trim()
-    }
-
-    /**
      * Sets basic bintray configuration, repository configuration, user and password.
      * Also renames the sources file so that the bintray plugin finds it and writes the valid
      * pom as the default pom so that the bintray plugin uploads it.
@@ -371,7 +366,7 @@ public class LibraryPlugin implements Plugin<Project> {
                 project.bintrayUpload.versionVcsTag = "v${project.version}"
                 break
             case PUBLISH_ALPHA:
-                project.version = "${getPublisherContainer().version}-ALPHA-${getTimestamp()}-${getGitHash()}"
+                project.version = "${getPublisherContainer().version}-ALPHA-${getTimestamp()}"
                 project.bintrayUpload.repoName = 'android-releases'
                 project.bintrayUpload.packageVcsUrl = "$repoURL/releases/tag/v${project.version}"
                 project.bintrayUpload.versionVcsTag = "v${project.version}"
