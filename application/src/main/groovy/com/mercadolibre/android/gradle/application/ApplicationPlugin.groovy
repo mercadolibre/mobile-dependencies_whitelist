@@ -8,8 +8,12 @@ import org.gradle.api.Project
  */
 public class ApplicationPlugin implements Plugin<Project> {
 
+    def project
+
     @Override
-    public void apply(Project project){
+    public void apply(Project project) {
+        this.project = project
+
         project.apply plugin: 'com.android.application'
 
         project.apply plugin: 'com.mercadolibre.android.gradle.jacoco'

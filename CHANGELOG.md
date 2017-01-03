@@ -1,19 +1,8 @@
 ### Changelog
 
-#### v3.3.5
-- Nuevas tasks por variant para publicar local. Ahora se llaman publishAarLocal + (Release/Debug/:VARIANT)
-
-#### v3.3.4
-- Agregamos el versionName al project de las libs
-
-#### v3.3.3
-- Con el fix de la version v3.3.2 no estabamos publicando el .aar en algunos casos. Ahora si.
-
-#### v3.3.2
-- El fix de la version v3.3.1 estaba incompleto y algunos módulos no se podían publicar, lo solucionamos.
-
-#### v3.3.1
-- Agregamos un fix que permite publicar modulos de forma local bajo cualquier version de gradle
-
-#### v3.3.0
-- Agregamos un fix que permite utilizar Android Gradle Plugin 2.2.0 con Robolectirc < 3.1
+#### v3.4.0
+- Se fixea bug al resolver el nombre de una version alpha.
+- Se agrega feature e integracion con el plugin de nebula para hacer locks a las dependencias y poder usarlas de forma dinamica en develop, pero estatica en release.
+- Se fixea bug para saber si se esta publicando y no se agrega un prefijo.
+- Se agrega modulo para hacer lint sobre los gradle.
+- Se agrega lint para las dependencias permitidas de un proyecto, aceptando unicamente las existentes en https://github.com/mercadolibre/mobile-dependencies_whitelist
