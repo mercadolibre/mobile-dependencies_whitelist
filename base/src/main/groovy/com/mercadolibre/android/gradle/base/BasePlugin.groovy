@@ -15,6 +15,12 @@ class BasePlugin implements Plugin<Project> {
 
     private static final String TASK_LOCK_VERSIONS = "lockVersions"
 
+    private static final String NEBULA_LOCK_CLASSPATH_NAME = "gradle-dependency-lock-plugin"
+    private static final String NEBULA_LOCK_PLUGIN_NAME = 'nebula.dependency-lock'
+    private static final String NEBULA_LOCK_DEFAULT_FILE_NAME = 'dependencies.lock'
+
+    private static final String VERSION_ALPHA = "ALPHA"
+
     /**
      * The project.
      */
@@ -59,7 +65,7 @@ class BasePlugin implements Plugin<Project> {
         // Check that the project supports lock features. Else we wont add it
         project.afterEvaluate {
             project.buildscript.configurations.classpath.each { classpath ->
-                if (classpath.name.contains("gradle-dependency-lock-plugin")) {
+                if (classpath.name.contains(NEBULA_LOCK_CLASSPATH_NAME)) {
                     dependencyLockPluginExists = true
                 }
             }
@@ -67,7 +73,7 @@ class BasePlugin implements Plugin<Project> {
             // If it supports locks, then add the task for each of the subprojects.
             if (dependencyLockPluginExists) {
                 project.subprojects.each { subproject ->
-                    subproject.apply plugin: 'nebula.dependency-lock'
+                    subproject.apply plugin: NEBULA_LOCK_PLUGIN_NAME
 
                     subproject.afterEvaluate {
                         // Create the lock task for the subproject
@@ -81,13 +87,13 @@ class BasePlugin implements Plugin<Project> {
                             subproject.saveLock.execute()
 
                             // Get the lock file created and clean any ALPHA's versions that it contains
-                            def file = subproject.file('dependencies.lock')
+                            def file = subproject.file(NEBULA_LOCK_DEFAULT_FILE_NAME)
                             def inputJson = new JsonSlurper().parseText(file.text)
                             inputJson.each { variant, variantJson ->        
                                 if (!variant.contains("test") && !variant.contains("Test")) {
                                     variantJson.each { dependency, dependencyVersions ->
                                         if (dependencyVersions.locked //Because when compile dirs it gets transitives without locks
-                                                && dependencyVersions.locked.contains("ALPHA")) {
+                                                && dependencyVersions.locked.contains(VERSION_ALPHA)) {
                                             dependencyVersions.locked = dependencyVersions.locked.find(/.*\..*\.[0-9]+/)
                                             // Accepts [everything].[everything].[only numbers]
                                         }
