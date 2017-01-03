@@ -14,13 +14,14 @@ MercadoLibre Gradle Android Plugins for Gradle
 [![Build Status](https://magnum.travis-ci.com/mercadolibre/mobile-android_gradle.svg?token=miquMjuW9qs6Ssw13jPd&branch=develop)](https://magnum.travis-ci.com/mercadolibre/mobile-android_gradle)
 
 ## What is this?
-This project includes three Gradle plugins to make the Android library developer's life easier:
+This project includes Gradle plugins to make the Android library developer's life easier:
 
 1. application
 2. base
 3. library
 4. jacoco
 5. robolectric
+6. lint
 
 
 ## Repo usage
@@ -257,7 +258,19 @@ buildscript {
 apply plugin: 'com.mercadolibre.android.gradle.application'
 
 .....
-```    
+```
+
+## What does the lint plugin do for us
+
+This plugin helps us have correctness and cohesion across all mobile projects.
+
+The current features include:
+
+### Dependencies Linter
+
+It detects that the project contains only dependencies from a specific set. This way, across all libraries we can have same versions of them and theres no need of declaring them at a lot of libraries. Also maybe the feature you would like to add we already have it but from another author!
+
+If you would like to add a new dependency to your project you need, please communicate with us so we can add it to the SDK (or maybe we can check if there isnt already one that fits your needs!)
 
 ## What does the base plugin do for us?
 

@@ -3,6 +3,7 @@ package com.mercadolibre.android.gradle.base
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.tasks.testing.Test
+import org.gradle.api.GradleException
 
 /**
  * Gradle base plugin for MercadoLibre Android projects/modules.
@@ -14,14 +15,13 @@ class BasePlugin implements Plugin<Project> {
     /**
      * The project.
      */
-    private Project project;
+    private Project project
 
     /**
      * Method called by Gradle when applying this plugin.
      * @param project the Gradle project.
      */
     void apply(Project project) {
-
         this.project = project
 
         avoidCacheForDynamicVersions()
@@ -168,4 +168,5 @@ class BasePlugin implements Plugin<Project> {
             }
         }
     }
+
 }

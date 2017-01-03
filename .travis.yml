@@ -15,6 +15,7 @@ script:
     - ./gradlew jacoco:build
     - ./gradlew library:build
     - ./gradlew robolectric:build
+    - ./gradlew lint:build
 
 after_success:
     - ./travis_deploy.sh

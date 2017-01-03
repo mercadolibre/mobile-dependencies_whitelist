@@ -7,6 +7,8 @@ robolectric/build
 library/build
 application/build
 jacoco/build
+lint/build
+build/
 bintray.properties
 Rakefile
 *.DS_Store
