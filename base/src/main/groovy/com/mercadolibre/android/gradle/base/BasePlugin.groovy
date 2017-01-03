@@ -18,6 +18,10 @@ class BasePlugin implements Plugin<Project> {
     private static final String NEBULA_LOCK_CLASSPATH_NAME = "gradle-dependency-lock-plugin"
     private static final String NEBULA_LOCK_PLUGIN_NAME = 'nebula.dependency-lock'
     private static final String NEBULA_LOCK_DEFAULT_FILE_NAME = 'dependencies.lock'
+    private static final String[] NEBULA_LOCK_TASKS = [
+        "generateLock",
+        "saveLock"
+    ]
 
     private static final String VERSION_ALPHA = "ALPHA"
 
@@ -81,11 +85,13 @@ class BasePlugin implements Plugin<Project> {
                         innerTask.setDescription('Locks the compiled project with the current versions of its dependencies to keep them in future assembles')
                         innerTask.doLast {
                             // Generate and save the lock first.
-                            println ":${subproject.name}:generateLock"
-                            subproject.generateLock.execute()
-                            println ":${subproject.name}:saveLock"
-                            subproject.saveLock.execute()
+                            NEBULA_LOCK_TASKS.each {
+                                println ":${subproject.name}:${it}"
+                                subproject.tasks[it].execute()
+                            }
 
+
+                            println ":${subproject.name}:filterLock"
                             // Get the lock file created and clean any ALPHA's versions that it contains
                             def file = subproject.file(NEBULA_LOCK_DEFAULT_FILE_NAME)
                             def inputJson = new JsonSlurper().parseText(file.text)
