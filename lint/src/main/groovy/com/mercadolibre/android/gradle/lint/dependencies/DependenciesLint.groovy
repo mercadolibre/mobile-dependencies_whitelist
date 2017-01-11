@@ -28,7 +28,7 @@ class DependenciesLint implements Lint {
      *     "whitelist" : [ ":dependency1", ":dependency2", ... , ":dependencyN" ]
      * }
      */
-    private static final String WHITELIST_ENDPOINT = "https://raw.githubusercontent.com/mercadolibre/mobile-dependencies_whitelist/v1.0.0/android-whitelist.json"
+    private static final String WHITELIST_ENDPOINT = "https://raw.githubusercontent.com/mercadolibre/mobile-dependencies_whitelist/master/android-whitelist.json"
 
     /**
      * Checks the dependencies the project contains are in the whitelist
