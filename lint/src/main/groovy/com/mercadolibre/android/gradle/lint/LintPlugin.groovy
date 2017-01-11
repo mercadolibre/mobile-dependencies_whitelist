@@ -23,6 +23,11 @@ class LintPlugin implements Plugin<Project> {
      * Gradle lint task name
      */
     private static final String TASK_NAME = "lintGradle"
+    
+    /**
+     * Error message when failing
+     */
+    private static final String TASK_FAIL_MESSAGE = "Errors found while running lints, please check the console output for more information"
 
     /**
      * The project.
@@ -92,10 +97,10 @@ class LintPlugin implements Plugin<Project> {
             if (buildErrored) {
                 if (project.gradle.getStartParameter().getTaskRequests().toString().contains(TASK_NAME)) {
                     // If they are specifically running lint, break the build and error it
-                    throw new GradleException("Errors found while running lints, please check the console output for more information")
+                    throw new GradleException(TASK_FAIL_MESSAGE)
                 } else {
                     // If they are assembling, let them know about the errors but dont fail the build
-                    throw new StopActionException("Errors found while running lints, please check the console output for more information")
+                    throw new StopActionException(TASK_FAIL_MESSAGE)
                 }
             }
         }
