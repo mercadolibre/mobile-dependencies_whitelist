@@ -1,6 +1,7 @@
 package com.mercadolibre.android.gradle.lint
 
 import org.gradle.api.tasks.StopActionException
+import org.gradle.api.GradleException
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 
@@ -89,7 +90,13 @@ class LintPlugin implements Plugin<Project> {
             }
 
             if (buildErrored) {
-                throw new StopActionException("Errors found while running lints, please check the console output for more information")
+                if (project.gradle.getStartParameter().getTaskRequests().toString().contains(TASK_NAME)) {
+                    // If they are specifically running lint, break the build and error it
+                    throw new GradleException("Errors found while running lints, please check the console output for more information")
+                } else {
+                    // If they are assembling, let them know about the errors but dont fail the build
+                    throw new StopActionException("Errors found while running lints, please check the console output for more information")
+                }
             }
         }
 
