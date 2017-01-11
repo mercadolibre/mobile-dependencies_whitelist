@@ -1,6 +1,6 @@
 package com.mercadolibre.android.gradle.lint
 
-import org.gradle.api.GradleException
+import org.gradle.api.tasks.StopActionException
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 
@@ -89,7 +89,7 @@ class LintPlugin implements Plugin<Project> {
             }
 
             if (buildErrored) {
-                throw new GradleException("Errors found while running lints, please check the console output for more information")
+                throw new StopActionException("Errors found while running lints, please check the console output for more information")
             }
         }
 
