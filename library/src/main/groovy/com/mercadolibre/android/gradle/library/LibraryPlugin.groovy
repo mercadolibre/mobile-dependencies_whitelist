@@ -450,14 +450,11 @@ public class LibraryPlugin implements Plugin<Project> {
     }
 
     private String getAarFilePathForLocalPublish(def variant) {
-        println("WIP Generating aar file path for variant: ${variant}")
-
         def aarParentDirectory = "$project.buildDir/outputs/aar/"
 
         // Check if previous publish AAR exists (and delete it).
         def prevFile = project.file(aarParentDirectory + "${project.name}.aar");
         if (prevFile.exists()) {
-            println("WIP deleting existing file")
             prevFile.delete();
         }
 
@@ -468,7 +465,6 @@ public class LibraryPlugin implements Plugin<Project> {
 
         aarFile.renameTo(newName)
 
-        println("WIP new file is: ${aarFile.toString()}")
         return newName
     }
 
