@@ -337,7 +337,7 @@ If you want to improve MercadoLibre Gradle plugins, you should follow these step
 2. Compile them by doing: `./gradlew assemble`
 2. In the root `build.gradle` under `buildscript.dependencies` of the repo you want to test replace the library with your local classes directory: 
     ```
-    classpath files('.../build/classes/main', '.../build/resources/main')
+    classpath files("$modulePath/build/classes/main", "$modulePath/build/resources/main")
     ```
 3. Test it!
 
