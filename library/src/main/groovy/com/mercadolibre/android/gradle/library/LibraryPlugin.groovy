@@ -298,6 +298,7 @@ public class LibraryPlugin implements Plugin<Project> {
                     }
 
                     project.configurations.archives.artifacts.clear()
+                    project.artifacts.add('archives', project.file(getAarFilePathForLocalPublish(flavorName)))
                     project.artifacts.add('archives', project.tasks["${flavorName}SourcesJar"])
 
                     def version = project.uploadArchives.repositories.mavenDeployer.pom.version
@@ -442,6 +443,25 @@ public class LibraryPlugin implements Plugin<Project> {
         File aarFile = project.file(aarParentDirectory + "${project.name}-release.aar")
 
         def newName = aarParentDirectory + "${getPublisherContainer().artifactId}.aar"
+
+        aarFile.renameTo(newName)
+
+        return newName
+    }
+
+    private String getAarFilePathForLocalPublish(def variant) {
+        def aarParentDirectory = "$project.buildDir/outputs/aar/"
+
+        // Check if previous publish AAR exists (and delete it).
+        def prevFile = project.file(aarParentDirectory + "${project.name}.aar");
+        if (prevFile.exists()) {
+            prevFile.delete();
+        }
+
+        // Get the AAR file and rename it (so that the bintray plugin uploads the aar to the correct path).
+        File aarFile = project.file(aarParentDirectory + "${project.name}-${variant}.aar")
+
+        def newName = aarParentDirectory + "${project.name}-release.aar"
 
         aarFile.renameTo(newName)
 

@@ -1,5 +1,9 @@
 ### Changelog
 
+#### v3.4.1
+- Mejoras en los mensajes de error mostrados cuando falla el linteo de dependencias.
+- Arreglamos la publicación local por variant. Estábamos publicando binarios del variant `release` pero con los sources de `debug`.
+
 #### v3.4.0
 - Se fixea bug al resolver el nombre de una version alpha.
 - Se agrega feature e integracion con el plugin de nebula para hacer locks a las dependencias y poder usarlas de forma dinamica en develop, pero estatica en release.
