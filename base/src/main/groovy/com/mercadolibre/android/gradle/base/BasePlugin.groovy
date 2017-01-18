@@ -16,7 +16,12 @@ class BasePlugin implements Plugin<Project> {
 
     private static final String TASK_LOCK_VERSIONS = "lockVersions"
 
-    private static final String NEBULA_LOCK_CLASSPATH_NAME = "gradle-dependency-lock-plugin"
+    private static final String LIBRARY_PLUGIN_NAME = "com.android.build.gradle.LibraryPlugin"
+
+    private static final String LINT_PLUGIN_CLASSPATH= "com.mercadolibre.android.gradle/lint"
+    private static final String LINT_PLUGIN_NAME = "com.mercadolibre.android.gradle.lint"
+
+    private static final String NEBULA_LOCK_CLASSPATH = "com.netflix.nebula/gradle-dependency-lock-plugin"
     private static final String NEBULA_LOCK_PLUGIN_NAME = 'nebula.dependency-lock'
     private static final String NEBULA_LOCK_DEFAULT_FILE_NAME = 'dependencies.lock'
     private static final String[] NEBULA_LOCK_TASKS = [
@@ -43,6 +48,7 @@ class BasePlugin implements Plugin<Project> {
         setDefaultGradleVersion()
         setUpTestsLogging()
         setUpLocksTask()
+        setUpLintPlugin()
         def testCoverage = new TestCoverage()
         testCoverage.createJacocoFinalProjectTask(project)
         testCoverage.createCoveragePost(project)
@@ -61,6 +67,39 @@ class BasePlugin implements Plugin<Project> {
     }
 
     /**
+     * Apply lint plugin to all subprojects that are library.
+     *
+     * This will be done if (and only if) the lint classpath is present in the root project 
+     */
+    private void setUpLintPlugin() {
+        def pluginExists = false
+        // Check that the project supports plugin features. Else we wont add it
+        project.afterEvaluate {
+            project.buildscript.configurations.classpath.each { classpath ->
+                if (classpath.path.contains(LINT_PLUGIN_CLASSPATH)) {
+                    pluginExists = true
+                }
+            }
+
+            // If it supports it, then add the plugin for each of the subprojects.
+            if (pluginExists) {
+                project.subprojects.each { subproject ->
+                    def isLibrary = false
+                    // Check the project is a library!
+                    subproject.plugins.each { plugin ->
+                        if (plugin.toString().contains(LIBRARY_PLUGIN_NAME)) {
+                            isLibrary = true
+                        }
+                    }
+                    if (isLibrary) {
+                        subproject.apply plugin: LINT_PLUGIN_NAME
+                    }
+                }
+            }
+        }
+    }
+
+    /**
      * Set up lock task for each subproject that has the nebula plugin included.
      * Also sets up an empty task for the root project, so we can call it without the need of a module
      * to call all of the subproject tasks at the same time (eg ./gradlew lockVersions -> each module 'lockVersions')
@@ -70,7 +109,7 @@ class BasePlugin implements Plugin<Project> {
         // Check that the project supports lock features. Else we wont add it
         project.afterEvaluate {
             project.buildscript.configurations.classpath.each { classpath ->
-                if (classpath.name.contains(NEBULA_LOCK_CLASSPATH_NAME)) {
+                if (classpath.path.contains(NEBULA_LOCK_CLASSPATH)) {
                     dependencyLockPluginExists = true
                 }
             }
