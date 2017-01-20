@@ -1,5 +1,6 @@
 {
-    "whitelist": [
-        "MeliSDK"
-    ]
+	"whitelist": [{
+		"name": "MeliSDK",
+		"requirement": ">= 0"
+	}]
 }
