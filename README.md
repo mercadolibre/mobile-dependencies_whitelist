@@ -22,3 +22,26 @@ Example:
 }
 ```
 
+### iOS
+iOS whitelist dependencies consist of a set of dependencies that are available for front-ends and high-level repositories to consume from the Mercadolibre-mobile group.
+
+This set of dependencies is parsed in the form of a JSON text. The root level property should be called `whitelist`.
+
+Each of the dependencies is an object with two properties `name` and `version` which will be matched against each of the dependencies in the podspec. The `version` string SUPPORTS regex expression.
+
+Example:
+```
+{
+	"whitelist": [
+     # This will match with 'MeliSDK' and version '~>5.+' (version must have ~>5.x)
+    {
+		"name": "MeliSDK",
+		"version": "^~>5.[0-9]+$"
+	}, 
+     # This will match with 'MLRecommendations' for any version
+    {
+		"name": "MLRecommendations",
+		"version": null
+	}]
+}
+```
