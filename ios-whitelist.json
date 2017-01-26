@@ -1,6 +1,6 @@
 {
 	"whitelist": [{
 		"name": "MeliSDK",
-		"requirement": ">= 0"
+		"version": "^~>5.[0-9]+$"
 	}]
 }
