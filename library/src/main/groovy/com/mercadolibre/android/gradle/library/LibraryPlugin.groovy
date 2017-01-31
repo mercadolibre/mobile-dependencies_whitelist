@@ -43,6 +43,7 @@ public class LibraryPlugin implements Plugin<Project> {
     private static final String TASK_PUBLISH_RELEASE = "publishAarRelease"
     private static final String TASK_PUBLISH_ALPHA = "publishAarAlpha"
     private static final String TASK_GET_PROJECT_VERSION = "getProjectVersion"
+    private static final String TASK_LOCK = "lock"
 
     /**
      * Method called by Gradle when applying this plugin.
@@ -127,7 +128,8 @@ public class LibraryPlugin implements Plugin<Project> {
                         (taskName.contains(TASK_PUBLISH_LOCAL) ||
                                 taskName == TASK_PUBLISH_EXPERIMENTAL ||
                                 taskName == TASK_PUBLISH_ALPHA ||
-                                taskName == TASK_PUBLISH_RELEASE)) {
+                                taskName == TASK_PUBLISH_RELEASE ||
+                                taskName.toLowerCase().contains(TASK_LOCK))) {
                     return true;
                 }
             }
