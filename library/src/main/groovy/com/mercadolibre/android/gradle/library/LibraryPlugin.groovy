@@ -128,8 +128,11 @@ public class LibraryPlugin implements Plugin<Project> {
                         (taskName.contains(TASK_PUBLISH_LOCAL) ||
                                 taskName == TASK_PUBLISH_EXPERIMENTAL ||
                                 taskName == TASK_PUBLISH_ALPHA ||
-                                taskName == TASK_PUBLISH_RELEASE ||
-                                taskName.toLowerCase().contains(TASK_LOCK))) {
+                                taskName == TASK_PUBLISH_RELEASE)) {
+                    return true;
+                }
+
+                if (task.toString().toLowerCase().contains(TASK_LOCK)) {
                     return true;
                 }
             }
