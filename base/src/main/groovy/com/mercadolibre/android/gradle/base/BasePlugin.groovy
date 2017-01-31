@@ -114,29 +114,6 @@ class BasePlugin implements Plugin<Project> {
                                 it.write jsonBuilder.toPrettyString()
                             }
                         }
-
-                        /**
-                         * Since some repositories have local modules as dependencies and they compile them
-                         * locally when not publishing and when they do, its in a specific order
-                         * (and then use the bintray dep once they are being published) we DONT lock local modules
-                         * (since we cant determine the order they will be published
-                         * and we must lock before running the release tests and ci)
-                         *
-                         * This means that current modules wont have a x.x.+ dependency in the build.gradle
-                         * (Which makes sense, since you will have them compiled locally all the time with the latest
-                         * and on the publishing you will have your specific new version target :) )
-                         *
-                         * For more information about the dependency lock features please read:
-                         * https://github.com/nebula-plugins/gradle-dependency-lock-plugin/wiki/Usage#extensions-provided
-                         * Its highly recommended to never apply this closure in libraries, since we cant know
-                         * the effects it may create on the CD process
-                         */
-                        subproject.dependencyLock {
-                            dependencyFilter = { String group, String name, String version ->
-                                // Dont lock local dependencies as mentioned above
-                                group != project.name
-                            }
-                        }
                     }
                 }
 
