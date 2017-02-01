@@ -170,6 +170,46 @@ public class LibraryPlugin implements Plugin<Project> {
         }
     }
 
+    def setUpPom(def pomGroup, def pomArtifact, def pomVersion) {
+        return project.pom {
+            // Only check dependencies if the lock plugin is present. Else the repository just has dynamic deps..
+            if (project.plugins.toString().contains(DEPENDENCY_LOCK_PLUGIN)
+                    && project.file(DEPENDENCY_LOCK_FILE_NAME).exists()) {
+                def json = new JsonSlurper().parse(project.file(DEPENDENCY_LOCK_FILE_NAME))
+                //For now they are all release, so check in release and compile. If in a future
+                //we have also for debug, change here to find the release or debug accordingly
+                def deps = generatedDependencies
+                for (def dep : deps) {
+                    if (dep.version.contains("+")) {
+                        if (json.compile["${dep.groupId}:${dep.artifactId}"]) {
+                            dep.version = json.compile["${dep.groupId}:${dep.artifactId}"].locked
+                        } else {
+                            // Fallback to the specific variant compile
+                            if (json._releaseCompile["${dep.groupId}:${dep.artifactId}"]) {
+                                dep.version = json._releaseCompile["${dep.groupId}:${dep.artifactId}"].locked
+                            }
+                        }
+                    }
+                }
+
+                // We set configurations to null to avoid generating the dependencies and having duplicated all of them
+                configurations = null
+
+                // Since the POM wont be generating them, we put them on our own :)
+                dependencies = deps
+            }
+
+            version = pomVersion
+            artifactId = pomArtifact
+            groupId = pomGroup
+
+            project {
+                packaging 'aar'
+                url "http://github.com/mercadolibre/mobile-android_${pomArtifact}"
+            }
+        }
+    }
+
     /**
      * Sets up the "uploadArchives" task from the "maven" plugin.
      */
@@ -183,9 +223,10 @@ public class LibraryPlugin implements Plugin<Project> {
                 repositories {
                     mavenDeployer {
                         repository(url: "file://${System.properties['user.home']}/.m2/repository")
-                        pom.groupId = getPublisherContainer().groupId
-                        pom.artifactId = getPublisherContainer().artifactId
-                        pom.version = getPublisherContainer().version
+
+                        setUpPom(getPublisherContainer().groupId,
+                                getPublisherContainer().artifactId,
+                                getPublisherContainer().version)
                     }
                 }
             }
@@ -398,41 +439,9 @@ public class LibraryPlugin implements Plugin<Project> {
         project.bintrayUpload.packagePublicDownloadNumbers = false
 
         // Write the correct pom for the version and artifactId being generated
-        project.pom {
-            // Only check dependencies if the lock plugin is present. Else the repository just has dynamic deps..
-            if (project.plugins.toString().contains(DEPENDENCY_LOCK_PLUGIN)
-                    && project.file(DEPENDENCY_LOCK_FILE_NAME).exists()) {
-                def json = new JsonSlurper().parse(project.file(DEPENDENCY_LOCK_FILE_NAME))
-                //For now they are all release, so check in release and compile. If in a future
-                //we have also for debug, change here to find the release or debug accordingly
-                def deps = generatedDependencies
-                for (def dep : deps) {
-                    if (dep.version.contains("+")) {
-                        if (json.compile["${dep.groupId}:${dep.artifactId}"]) {
-                            dep.version = json.compile["${dep.groupId}:${dep.artifactId}"].locked
-                        } else {
-                            // Fallback to the specific variant compile
-                            if (json._releaseCompile["${dep.groupId}:${dep.artifactId}"]) {
-                                dep.version = json._releaseCompile["${dep.groupId}:${dep.artifactId}"].locked
-                            }
-                        }
-                    }
-                }
-
-                // We set configurations to null to avoid generating the dependencies and having duplicated all of them
-                configurations = null
-
-                // Since the POM wont be generating them, we put them on our own :)
-                dependencies = deps
-            }
-
-            version = project.version
-            artifactId = getPublisherContainer().artifactId
-            project {
-                packaging 'aar'
-                url repoURL
-            }
-        }.writeTo("build/poms/pom-default.xml")
+        setUpPom(project.group,
+            getPublisherContainer().artifactId,
+            project.version).writeTo("build/poms/pom-default.xml")
 
         // Rename the sources file to find it.
         project.file("$project.buildDir/libs/${project.name}-sources.jar")
