@@ -170,15 +170,15 @@ public class LibraryPlugin implements Plugin<Project> {
         }
     }
 
-    def setUpPom(def pomGroup, def pomArtifact, def pomVersion) {
-        return project.pom {
+    def setUpPom(def pomGroup, def pomArtifact, def pomVersion, def pom = null) {
+        def setDependencies = { def currentPom ->
             // Only check dependencies if the lock plugin is present. Else the repository just has dynamic deps..
             if (project.plugins.toString().contains(DEPENDENCY_LOCK_PLUGIN)
                     && project.file(DEPENDENCY_LOCK_FILE_NAME).exists()) {
                 def json = new JsonSlurper().parse(project.file(DEPENDENCY_LOCK_FILE_NAME))
                 //For now they are all release, so check in release and compile. If in a future
                 //we have also for debug, change here to find the release or debug accordingly
-                def deps = generatedDependencies
+                def deps = currentPom.generatedDependencies
                 for (def dep : deps) {
                     if (dep.version.contains("+")) {
                         if (json.compile["${dep.groupId}:${dep.artifactId}"]) {
@@ -193,19 +193,31 @@ public class LibraryPlugin implements Plugin<Project> {
                 }
 
                 // We set configurations to null to avoid generating the dependencies and having duplicated all of them
-                configurations = null
+                currentPom.configurations = null
 
                 // Since the POM wont be generating them, we put them on our own :)
-                dependencies = deps
+                currentPom.dependencies = deps
             }
+        }
 
-            version = pomVersion
-            artifactId = pomArtifact
-            groupId = pomGroup
+        if (pom != null) {
+            setDependencies pom
+            pom.version = pomVersion
+            pom.artifactId = pomArtifact
+            pom.groupId = pomGroup
+            return pom
+        } else {
+            return project.pom {
+                setDependencies it
 
-            project {
-                packaging 'aar'
-                url "http://github.com/mercadolibre/mobile-android_${pomArtifact}"
+                version = pomVersion
+                artifactId = pomArtifact
+                groupId = pomGroup
+
+                project {
+                    packaging 'aar'
+                    url "http://github.com/mercadolibre/mobile-android_${pomArtifact}"
+                }
             }
         }
     }
@@ -226,7 +238,8 @@ public class LibraryPlugin implements Plugin<Project> {
 
                         setUpPom(getPublisherContainer().groupId,
                                 getPublisherContainer().artifactId,
-                                getPublisherContainer().version)
+                                getPublisherContainer().version,
+                                pom)
                     }
                 }
             }
