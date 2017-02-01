@@ -16,7 +16,12 @@ class BasePlugin implements Plugin<Project> {
 
     private static final String TASK_LOCK_VERSIONS = "lockVersions"
 
-    private static final String NEBULA_LOCK_CLASSPATH_NAME = "gradle-dependency-lock-plugin"
+    private static final String LIBRARY_PLUGIN_NAME = "com.android.build.gradle.LibraryPlugin"
+
+    private static final String LINT_PLUGIN_CLASSPATH= "com.mercadolibre.android.gradle/lint"
+    private static final String LINT_PLUGIN_NAME = "com.mercadolibre.android.gradle.lint"
+
+    private static final String NEBULA_LOCK_CLASSPATH = "com.netflix.nebula/gradle-dependency-lock-plugin"
     private static final String NEBULA_LOCK_PLUGIN_NAME = 'nebula.dependency-lock'
     private static final String NEBULA_LOCK_DEFAULT_FILE_NAME = 'dependencies.lock'
     private static final String[] NEBULA_LOCK_TASKS = [
@@ -43,6 +48,7 @@ class BasePlugin implements Plugin<Project> {
         setDefaultGradleVersion()
         setUpTestsLogging()
         setUpLocksTask()
+        setUpLintPlugin()
         def testCoverage = new TestCoverage()
         testCoverage.createJacocoFinalProjectTask(project)
         testCoverage.createCoveragePost(project)
@@ -61,6 +67,39 @@ class BasePlugin implements Plugin<Project> {
     }
 
     /**
+     * Apply lint plugin to all subprojects that are library.
+     *
+     * This will be done if (and only if) the lint classpath is present in the root project 
+     */
+    private void setUpLintPlugin() {
+        def pluginExists = false
+        // Check that the project supports plugin features. Else we wont add it
+        project.afterEvaluate {
+            project.buildscript.configurations.classpath.each { classpath ->
+                if (classpath.path.contains(LINT_PLUGIN_CLASSPATH)) {
+                    pluginExists = true
+                }
+            }
+
+            // If it supports it, then add the plugin for each of the subprojects.
+            if (pluginExists) {
+                project.subprojects.each { subproject ->
+                    def isLibrary = false
+                    // Check the project is a library!
+                    subproject.plugins.each { plugin ->
+                        if (plugin.toString().contains(LIBRARY_PLUGIN_NAME)) {
+                            isLibrary = true
+                        }
+                    }
+                    if (isLibrary) {
+                        subproject.apply plugin: LINT_PLUGIN_NAME
+                    }
+                }
+            }
+        }
+    }
+
+    /**
      * Set up lock task for each subproject that has the nebula plugin included.
      * Also sets up an empty task for the root project, so we can call it without the need of a module
      * to call all of the subproject tasks at the same time (eg ./gradlew lockVersions -> each module 'lockVersions')
@@ -70,7 +109,7 @@ class BasePlugin implements Plugin<Project> {
         // Check that the project supports lock features. Else we wont add it
         project.afterEvaluate {
             project.buildscript.configurations.classpath.each { classpath ->
-                if (classpath.name.contains(NEBULA_LOCK_CLASSPATH_NAME)) {
+                if (classpath.path.contains(NEBULA_LOCK_CLASSPATH)) {
                     dependencyLockPluginExists = true
                 }
             }
@@ -112,29 +151,6 @@ class BasePlugin implements Plugin<Project> {
                             def jsonBuilder = new JsonBuilder(inputJson)
                             file.withWriter {
                                 it.write jsonBuilder.toPrettyString()
-                            }
-                        }
-
-                        /**
-                         * Since some repositories have local modules as dependencies and they compile them
-                         * locally when not publishing and when they do, its in a specific order
-                         * (and then use the bintray dep once they are being published) we DONT lock local modules
-                         * (since we cant determine the order they will be published
-                         * and we must lock before running the release tests and ci)
-                         *
-                         * This means that current modules wont have a x.x.+ dependency in the build.gradle
-                         * (Which makes sense, since you will have them compiled locally all the time with the latest
-                         * and on the publishing you will have your specific new version target :) )
-                         *
-                         * For more information about the dependency lock features please read:
-                         * https://github.com/nebula-plugins/gradle-dependency-lock-plugin/wiki/Usage#extensions-provided
-                         * Its highly recommended to never apply this closure in libraries, since we cant know
-                         * the effects it may create on the CD process
-                         */
-                        subproject.dependencyLock {
-                            dependencyFilter = { String group, String name, String version ->
-                                // Dont lock local dependencies as mentioned above
-                                group != project.name
                             }
                         }
                     }
