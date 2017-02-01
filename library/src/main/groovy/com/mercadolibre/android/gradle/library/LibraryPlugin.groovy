@@ -170,10 +170,31 @@ public class LibraryPlugin implements Plugin<Project> {
         }
     }
 
+    /**
+     * Checks if a plugin is applied
+     * @param plugin name
+     * @return if the plugin exists in the project or not
+     */
+    private boolean isPluginApplied(String plugin) {
+        return project.plugins.toString().contains(plugin)
+    }
+
+    /**
+     * Sets up the project pom for a maven publisher or bintray publisher.
+     *
+     * @param pomGroup the group id that the pom will have
+     * @param pomArtifact the artifact id that the pom will have
+     * @param pomVersion the version the pom will have
+     * @param pom if a specific pom will be written (and not the project), fill this argument. This is most probably
+     * in the case you will upload archives to a maven local, where the pom is not in the project but in the maven
+     * publisher.
+     *
+     * @return pom instance with set up.
+     */
     def setUpPom(def pomGroup, def pomArtifact, def pomVersion, def pom = null) {
         def setDependencies = { def currentPom ->
             // Only check dependencies if the lock plugin is present. Else the repository just has dynamic deps..
-            if (project.plugins.toString().contains(DEPENDENCY_LOCK_PLUGIN)
+            if (isPluginApplied(DEPENDENCY_LOCK_PLUGIN)
                     && project.file(DEPENDENCY_LOCK_FILE_NAME).exists()) {
                 def json = new JsonSlurper().parse(project.file(DEPENDENCY_LOCK_FILE_NAME))
                 //For now they are all release, so check in release and compile. If in a future
@@ -200,13 +221,7 @@ public class LibraryPlugin implements Plugin<Project> {
             }
         }
 
-        if (pom != null) {
-            setDependencies pom
-            pom.version = pomVersion
-            pom.artifactId = pomArtifact
-            pom.groupId = pomGroup
-            return pom
-        } else {
+        if (pom == null) {
             return project.pom {
                 setDependencies it
 
@@ -219,6 +234,12 @@ public class LibraryPlugin implements Plugin<Project> {
                     url "http://github.com/mercadolibre/mobile-android_${pomArtifact}"
                 }
             }
+        } else {
+            setDependencies pom
+            pom.version = pomVersion
+            pom.artifactId = pomArtifact
+            pom.groupId = pomGroup
+            return pom
         }
     }
 
