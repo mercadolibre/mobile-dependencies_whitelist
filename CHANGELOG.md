@@ -1,5 +1,9 @@
 ### Changelog
 
+#### v3.4.2
+- Se agrega las tasks de lock como modo de publicacion activa
+- Se modifica en el pom las dependencias para que hagan un mirror a las del lock (si el plugin de lock esta presente)
+
 #### v3.4.1
 - Mejoras en los mensajes de error mostrados cuando falla el linteo de dependencias.
 - Arreglamos la publicación local por variant. Estábamos publicando binarios del variant `release` pero con los sources de `debug`.
