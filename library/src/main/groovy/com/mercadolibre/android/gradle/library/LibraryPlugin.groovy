@@ -1,5 +1,6 @@
 package com.mercadolibre.android.gradle.library
 
+import groovy.json.JsonSlurper
 import org.gradle.api.GradleException
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -43,7 +44,10 @@ public class LibraryPlugin implements Plugin<Project> {
     private static final String TASK_PUBLISH_RELEASE = "publishAarRelease"
     private static final String TASK_PUBLISH_ALPHA = "publishAarAlpha"
     private static final String TASK_GET_PROJECT_VERSION = "getProjectVersion"
+
     private static final String TASK_LOCK = "lock"
+    private static final String DEPENDENCY_LOCK_PLUGIN = "nebula.plugin.dependencylock.DependencyLockPlugin"
+    private static final String DEPENDENCY_LOCK_FILE_NAME = "dependencies.lock"
 
     /**
      * Method called by Gradle when applying this plugin.
@@ -395,6 +399,33 @@ public class LibraryPlugin implements Plugin<Project> {
 
         // Write the correct pom for the version and artifactId being generated
         project.pom {
+            // Only check dependencies if the lock plugin is present. Else the repository just has dynamic deps..
+            if (project.plugins.toString().contains(DEPENDENCY_LOCK_PLUGIN)
+                    && project.file(DEPENDENCY_LOCK_FILE_NAME).exists()) {
+                def json = new JsonSlurper().parse(project.file(DEPENDENCY_LOCK_FILE_NAME))
+                //For now they are all release, so check in release and compile. If in a future
+                //we have also for debug, change here to find the release or debug accordingly
+                def deps = generatedDependencies
+                for (def dep : deps) {
+                    if (dep.version.contains("+")) {
+                        if (json.compile["${dep.groupId}:${dep.artifactId}"]) {
+                            dep.version = json.compile["${dep.groupId}:${dep.artifactId}"].locked
+                        } else {
+                            // Fallback to the specific variant compile
+                            if (json._releaseCompile["${dep.groupId}:${dep.artifactId}"]) {
+                                dep.version = json._releaseCompile["${dep.groupId}:${dep.artifactId}"].locked
+                            }
+                        }
+                    }
+                }
+
+                // We set configurations to null to avoid generating the dependencies and having duplicated all of them
+                configurations = null
+
+                // Since the POM wont be generating them, we put them on our own :)
+                dependencies = deps
+            }
+
             version = project.version
             artifactId = getPublisherContainer().artifactId
             project {
