@@ -38,8 +38,6 @@ public class AarLibraryPlugin extends LibraryPlugin {
 
     @Override
     boolean isPublishTask(String task) {
-        println "task is $task"
-        println "are we being published? ${task.contains(TASK_PUBLISH_LOCAL) || task == TASK_PUBLISH_EXPERIMENTAL || task == TASK_PUBLISH_ALPHA || task == TASK_PUBLISH_RELEASE}"
         return task.contains(TASK_PUBLISH_LOCAL) || task == TASK_PUBLISH_EXPERIMENTAL || task == TASK_PUBLISH_ALPHA || task == TASK_PUBLISH_RELEASE
     }
 
@@ -62,6 +60,7 @@ public class AarLibraryPlugin extends LibraryPlugin {
     /**
      * Creates the tasks to generate the JARs with the source code, one per variant.
      */
+    @Override
     void createSourcesJarTasks() {
         project.android.libraryVariants.all { variant ->
             def sourcesJarTask = project.tasks.create "${variant.buildType.name}SourcesJar", Jar
@@ -74,6 +73,7 @@ public class AarLibraryPlugin extends LibraryPlugin {
     /**
      * Sets up the "uploadArchives" task from the "maven" plugin.
      */
+    @Override
     protected void setupUploadArchivesTask() {
         super.setupUploadArchivesTask()
 
@@ -85,6 +85,7 @@ public class AarLibraryPlugin extends LibraryPlugin {
      * publishType. Take into account that this type of task
      * must be a Bintray type (not a local publish for example)
      */
+    @Override
     void createBintrayTask(String publishType) {
         def task;
         switch (publishType) {
@@ -125,6 +126,7 @@ public class AarLibraryPlugin extends LibraryPlugin {
     /**
      * Creates the "publishAarLocalX" task, where X are each of the library variants
      */
+    @Override
     void createPublishLocalTasks() {
         project.afterEvaluate {
             project.android.libraryVariants.each { variant ->

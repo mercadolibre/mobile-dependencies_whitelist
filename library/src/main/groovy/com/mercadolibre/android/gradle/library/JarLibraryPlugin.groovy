@@ -18,6 +18,7 @@ public class JarLibraryPlugin extends LibraryPlugin {
      * Method called by Gradle when applying this plugin.
      * @param project the Gradle project.
      */
+    @Override
     void applyPlugins() {
 
         // We could use "maven-publish" in a future. Right now, it does not support Android libraries (aar).
@@ -36,6 +37,7 @@ public class JarLibraryPlugin extends LibraryPlugin {
     /**
      * Creates the tasks to generate the JARs with the source code
      */
+    @Override
     void createSourcesJarTasks() {
         def sourcesJarTask = project.tasks.create "sourcesJar", Jar
         sourcesJarTask.dependsOn project.tasks.getByName("compileJava")
@@ -48,6 +50,7 @@ public class JarLibraryPlugin extends LibraryPlugin {
      * publishType. Take into account that this type of task
      * must be a Bintray type (not a local publish for example)
      */
+    @Override
     void createBintrayTask(String publishType) {
         def task;
         switch (publishType) {
@@ -102,6 +105,7 @@ public class JarLibraryPlugin extends LibraryPlugin {
         return actualDestination
     }
 
+    @Override
     String getFilePathForLocalPublish() {
         return "$project.buildDir/libs/${project.name}.jar";
     }
@@ -109,6 +113,7 @@ public class JarLibraryPlugin extends LibraryPlugin {
     /**
      * Creates the "publishAarLocalX" task, where X are each of the library variants
      */
+    @Override
     void createPublishLocalTasks() {
         project.afterEvaluate {
             def task = project.tasks.create "${TASK_PUBLISH_LOCAL}"
@@ -136,6 +141,7 @@ public class JarLibraryPlugin extends LibraryPlugin {
         }
     }
 
+    @Override
     String getPomPackaging() {
         return "jar"
     }

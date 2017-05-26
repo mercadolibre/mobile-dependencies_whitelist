@@ -207,6 +207,10 @@ abstract class LibraryPlugin implements Plugin<Project> {
                     if (dep.version.contains("+")) {
                         if (json.compile["${dep.groupId}:${dep.artifactId}"]) {
                             dep.version = json.compile["${dep.groupId}:${dep.artifactId}"].locked
+                        } else {
+                            if (json._releaseCompile["${dep.groupId}:${dep.artifactId}"]) {
+                                dep.version = json._releaseCompile["${dep.groupId}:${dep.artifactId}"].locked
+                            }
                         }
                     }
                 }
