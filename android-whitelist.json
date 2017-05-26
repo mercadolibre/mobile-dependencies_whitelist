@@ -1,5 +1,6 @@
 {
     "whitelist": [
-        "com\\.mercadolibre\\.android\\.sdk:.*:7\\.\\+"
+        "com\\.mercadolibre\\.android\\.sdk:.*:7\\.\\+",
+        "com\\.android\\.support\\.constraint:constraint-layout:"
     ]
 }
