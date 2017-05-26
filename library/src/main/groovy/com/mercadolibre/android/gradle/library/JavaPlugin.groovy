@@ -10,21 +10,9 @@ import org.gradle.util.GradleVersion
 import java.text.SimpleDateFormat
 
 /**
- * Gradle plugin for Android Libraries. It provides some important tasks:
- *
- * <ol>
- *     <li>Apply com.android.library plugin.</li>
- *     <li>Apply maven plugin.</li>
- *     <li>Generate JAR with sources.</li>
- *     <li>Create lint reports.</li>
- *     <li>Run Android connected tests (requires a connected device).</li>
- *     <li>Upload the artifacts to the repository (either release, experimental or local).</li>
- *     <li>Tag the version in Git (if release).</li>
- * </ol>
- *
- * @author Martin A. Heras & Nicolas Giagnoni
+ * Created by mfeldsztejn on 5/23/17.
  */
-public class LibraryPlugin implements Plugin<Project> {
+public class JavaPlugin implements Plugin<Project> {
 
     /**
      * The project.
@@ -39,10 +27,10 @@ public class LibraryPlugin implements Plugin<Project> {
     private static final String BINTRAY_PROP_FILE = "bintray.properties"
     private static final String BINTRAY_USER_PROP = "bintray.user"
     private static final String BINTRAY_KEY_PROP = "bintray.key"
-    private static final String TASK_PUBLISH_LOCAL = "publishAarLocal"
-    private static final String TASK_PUBLISH_EXPERIMENTAL = "publishAarExperimental"
-    private static final String TASK_PUBLISH_RELEASE = "publishAarRelease"
-    private static final String TASK_PUBLISH_ALPHA = "publishAarAlpha"
+    private static final String TASK_PUBLISH_LOCAL = "publishJarLocal"
+    private static final String TASK_PUBLISH_EXPERIMENTAL = "publishJarExperimental"
+    private static final String TASK_PUBLISH_RELEASE = "publishJarRelease"
+    private static final String TASK_PUBLISH_ALPHA = "publishJarAlpha"
     private static final String TASK_GET_PROJECT_VERSION = "getProjectVersion"
 
     private static final String TASK_LOCK = "lock"
@@ -59,15 +47,9 @@ public class LibraryPlugin implements Plugin<Project> {
         // We could use "maven-publish" in a future. Right now, it does not support Android libraries (aar).
         project.apply plugin: 'maven'
 
-        // We apply android plugin.
-        project.apply plugin: 'com.android.library'
+        project.apply plugin: 'java'
 
         project.apply plugin: 'com.jfrog.bintray'
-
-        project.apply plugin: 'com.github.dcendents.android-maven'
-
-        project.apply plugin: 'com.mercadolibre.android.gradle.jacoco'
-        project.apply plugin: 'com.mercadolibre.android.gradle.robolectric'
 
         this.project.configurations {
             archives {
@@ -90,8 +72,9 @@ public class LibraryPlugin implements Plugin<Project> {
         task.doLast {
             def localDependencyFound = false;
             project.configurations.each { conf ->
-                conf.allDependencies.each { dep ->
-                    if ("unspecified".equalsIgnoreCase(dep.version)) {
+                conf.dependencies
+                conf.dependencies.each { dep ->
+                    if ("unspecified".equalsIgnoreCase(dep.version) && !conf.name.contains("compileOnly")) {
                         localDependencyFound = true;
                     }
                 }
@@ -100,6 +83,16 @@ public class LibraryPlugin implements Plugin<Project> {
                 throw new GradleException("A local dependency is declared in '${project.name}'. Make sure that you are not declaring a dependency like \"compile project('anotherProject')\", as it is invalid for published artifacts.")
             }
         }
+    }
+
+    /**
+     * Creates the tasks to generate the JARs with the source code, one per variant.
+     */
+    private void createSourcesJarTasks() {
+        def sourcesJarTask = project.tasks.create "sourcesJar", Jar
+        sourcesJarTask.dependsOn project.tasks.getByName("compileJava")
+        sourcesJarTask.classifier = 'sources'
+        sourcesJarTask.from project.tasks.getByName("compileJava").source
     }
 
     /**
@@ -159,18 +152,6 @@ public class LibraryPlugin implements Plugin<Project> {
     }
 
     /**
-     * Creates the tasks to generate the JARs with the source code, one per variant.
-     */
-    private void createSourcesJarTasks() {
-        project.android.libraryVariants.all { variant ->
-            def sourcesJarTask = project.tasks.create "${variant.buildType.name}SourcesJar", Jar
-            sourcesJarTask.dependsOn variant.javaCompile
-            sourcesJarTask.classifier = 'sources'
-            sourcesJarTask.from variant.javaCompile.source
-        }
-    }
-
-    /**
      * Checks if a plugin is applied
      * @param plugin name
      * @return if the plugin exists in the project or not
@@ -204,11 +185,6 @@ public class LibraryPlugin implements Plugin<Project> {
                     if (dep.version.contains("+")) {
                         if (json.compile["${dep.groupId}:${dep.artifactId}"]) {
                             dep.version = json.compile["${dep.groupId}:${dep.artifactId}"].locked
-                        } else {
-                            // Fallback to the specific variant compile
-                            if (json._releaseCompile["${dep.groupId}:${dep.artifactId}"]) {
-                                dep.version = json._releaseCompile["${dep.groupId}:${dep.artifactId}"].locked
-                            }
                         }
                     }
                 }
@@ -230,7 +206,7 @@ public class LibraryPlugin implements Plugin<Project> {
                 groupId = pomGroup
 
                 project {
-                    packaging 'aar'
+                    packaging 'jar'
                     url "http://github.com/mercadolibre/mobile-android_${pomArtifact}"
                 }
             }
@@ -265,8 +241,6 @@ public class LibraryPlugin implements Plugin<Project> {
                 }
             }
         }
-
-        project.uploadArchives.dependsOn 'connectedAndroidTest'
     }
 
     /**
@@ -301,24 +275,31 @@ public class LibraryPlugin implements Plugin<Project> {
      * must be a Bintray type (not a local publish for example)
      */
     def createBintrayTask(def publishType) {
+        def buildtask = project.tasks.getByName("build")
+                .doFirst {
+            println "building"
+        }
+        .doLast {
+            "finished building"
+        }
         def task;
         switch (publishType) {
             case PUBLISH_RELEASE:
                 task = project.tasks.create TASK_PUBLISH_RELEASE
-                task.setDescription('Publishes a new release version of the AAR library to Bintray.')
-                task.dependsOn 'checkLocalDependencies', 'assembleRelease', 'testReleaseUnitTest', 'check', 'releaseSourcesJar'
+                task.setDescription('Publishes a new release version of the JAR library to Bintray.')
+                task.dependsOn 'checkLocalDependencies', 'assemble', 'test', 'check', 'sourcesJar', 'build'
                 break
 
             case PUBLISH_EXPERIMENTAL:
                 task = project.tasks.create TASK_PUBLISH_EXPERIMENTAL
-                task.setDescription('Publishes a new experimental version of the AAR library.')
-                task.dependsOn 'checkLocalDependencies', 'assembleRelease', 'releaseSourcesJar'
+                task.setDescription('Publishes a new experimental version of the JAR library.')
+                task.dependsOn 'checkLocalDependencies', 'assemble', 'test', 'check', 'sourcesJar', 'build'
                 break
 
             case PUBLISH_ALPHA:
                 task = project.tasks.create TASK_PUBLISH_ALPHA
-                task.setDescription('Publishes a new alpha version of the AAR library to Bintray.')
-                task.dependsOn 'checkLocalDependencies', 'assembleRelease', 'testReleaseUnitTest', 'check', 'releaseSourcesJar'
+                task.setDescription('Publishes a new alpha version of the JAR library to Bintray.')
+                task.dependsOn 'checkLocalDependencies', 'assemble', 'test', 'check', 'sourcesJar', 'build'
                 break
 
             default:
@@ -330,8 +311,10 @@ public class LibraryPlugin implements Plugin<Project> {
 
             // Set the artifacts.
             project.configurations.archives.artifacts.clear()
+            print project.file(getAarFilePath())
+            print project.file(getAarFilePath()).exists()
             project.artifacts.add('archives', project.file(getAarFilePath()))
-            project.artifacts.add('archives', project.tasks['releaseSourcesJar'])
+            project.artifacts.add('archives', project.tasks['sourcesJar'])
 
             logVersion(String.format("%s:%s:%s", project.group, project.name, project.version))
         }
@@ -341,7 +324,7 @@ public class LibraryPlugin implements Plugin<Project> {
      * Creates the "publishAarRelease" task.
      */
     def createPublishReleaseTask() {
-        createBintrayTask(PUBLISH_RELEASE) 
+        createBintrayTask(PUBLISH_RELEASE)
     }
 
     /**
@@ -363,37 +346,27 @@ public class LibraryPlugin implements Plugin<Project> {
      */
     private void createPublishLocalTasks() {
         project.afterEvaluate {
-            project.android.libraryVariants.each { variant ->
-                def flavorName = variant.buildType.name
+            def task = project.tasks.create "${TASK_PUBLISH_LOCAL}"
+            task.setDescription("Publishes a new local version, on the variant of the AAR library, locally on the .m2/repository directory.")
+            task.dependsOn 'checkLocalDependencies', "assemble"
+            task.finalizedBy 'uploadArchives'
 
-                def task = project.tasks.create "${TASK_PUBLISH_LOCAL}${flavorName.capitalize()}"
-                task.setDescription("Publishes a new local version, on the variant ${flavorName.capitalize()} of the AAR library, locally on the .m2/repository directory.")
-                task.dependsOn 'checkLocalDependencies', "assemble${flavorName.capitalize()}", "${flavorName}SourcesJar"
-                task.finalizedBy 'uploadArchives'
-
-                task.doFirst {
-                    project.android.defaultPublishConfig = "${flavorName}"
+            task.doLast {
+                // Set the artifacts.
+                if (GradleVersion.current() < GradleVersion.version('3.0')) {
+                    project.configurations.default.artifacts.clear()
                 }
 
-                task.doLast {
-                    // Set the artifacts.
-                    if (GradleVersion.current() < GradleVersion.version('3.0')) {
-                        project.configurations.default.artifacts.clear()
-                    }
+                project.artifacts.add('archives', project.file(getAarFilePathForLocalPublish()))
 
-                    project.configurations.archives.artifacts.clear()
-                    project.artifacts.add('archives', project.file(getAarFilePathForLocalPublish(flavorName)))
-                    project.artifacts.add('archives', project.tasks["${flavorName}SourcesJar"])
+                def version = project.uploadArchives.repositories.mavenDeployer.pom.version
+                project.uploadArchives.repositories.mavenDeployer.pom.version = "LOCAL-${version}-${getTimestamp()}"
 
-                    def version = project.uploadArchives.repositories.mavenDeployer.pom.version
-                    project.uploadArchives.repositories.mavenDeployer.pom.version = "LOCAL-${flavorName.toUpperCase()}-${version}-${getTimestamp()}"
+                def pom = project.uploadArchives.repositories.mavenDeployer.pom
+                logVersion(String.format("%s:%s:%s", pom.groupId, pom.artifactId, pom.version))
 
-                    def pom = project.uploadArchives.repositories.mavenDeployer.pom
-                    logVersion(String.format("%s:%s:%s", pom.groupId, pom.artifactId, pom.version))
-
-                    // Point the repository to our .m2/repository directory.
-                    project.uploadArchives.repositories.mavenDeployer.repository.url = "file://${System.properties['user.home']}/.m2/repository"
-                }
+                // Point the repository to our .m2/repository directory.
+                project.uploadArchives.repositories.mavenDeployer.repository.url = "file://${System.properties['user.home']}/.m2/repository"
             }
         }
     }
@@ -474,8 +447,8 @@ public class LibraryPlugin implements Plugin<Project> {
 
         // Write the correct pom for the version and artifactId being generated
         setUpPom(project.group,
-            getPublisherContainer().artifactId,
-            project.version).writeTo("build/poms/pom-default.xml")
+                getPublisherContainer().artifactId,
+                project.version).writeTo("build/poms/pom-default.xml")
 
         // Rename the sources file to find it.
         project.file("$project.buildDir/libs/${project.name}-sources.jar")
@@ -509,42 +482,21 @@ public class LibraryPlugin implements Plugin<Project> {
      * @return new file path
      */
     private String getAarFilePath() {
-
-        def aarParentDirectory = "$project.buildDir/outputs/aar/"
+        def jarParentDirectory = "$project.buildDir/libs/"
+        def actualDestination = jarParentDirectory + "${getPublisherContainer().artifactId}.jar"
 
         // Check if previous publish AAR exists (and delete it).
-        def prevFile = project.file(aarParentDirectory + "${project.name}.aar");
+        def prevFile = project.file(jarParentDirectory + "${project.name}.jar");
         if (prevFile.exists()) {
-            prevFile.delete();
+            prevFile.renameTo(actualDestination)
         }
 
-        // Get the AAR file and rename it (so that the bintray plugin uploads the aar to the correct path).
-        File aarFile = project.file(aarParentDirectory + "${project.name}-release.aar")
-
-        def newName = aarParentDirectory + "${getPublisherContainer().artifactId}.aar"
-
-        aarFile.renameTo(newName)
-
-        return newName
+        return actualDestination
     }
 
-    private String getAarFilePathForLocalPublish(def variant) {
-        def aarParentDirectory = "$project.buildDir/outputs/aar/"
-
-        // Check if previous publish AAR exists (and delete it).
-        def prevFile = project.file(aarParentDirectory + "${project.name}.aar");
-        if (prevFile.exists()) {
-            prevFile.delete();
-        }
-
-        // Get the AAR file and rename it (so that the bintray plugin uploads the aar to the correct path).
-        File aarFile = project.file(aarParentDirectory + "${project.name}-${variant}.aar")
-
-        def newName = aarParentDirectory + "${project.name}-release.aar"
-
-        aarFile.renameTo(newName)
-
-        return newName
+    private String getAarFilePathForLocalPublish() {
+        def jarParentDirectory = "$project.buildDir/libs/"
+        return jarParentDirectory + "${project.name}.jar";
     }
 
     /**
@@ -556,4 +508,5 @@ public class LibraryPlugin implements Plugin<Project> {
         sdf.timeZone = TimeZone.getTimeZone('UTC')
         sdf.format(new Date())
     }
+
 }
