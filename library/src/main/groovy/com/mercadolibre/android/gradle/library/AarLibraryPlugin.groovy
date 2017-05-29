@@ -1,6 +1,5 @@
 package com.mercadolibre.android.gradle.library
 
-import org.gradle.api.GradleException
 import org.gradle.api.tasks.bundling.Jar
 import org.gradle.util.GradleVersion
 
@@ -21,10 +20,10 @@ import org.gradle.util.GradleVersion
  */
 public class AarLibraryPlugin extends LibraryPlugin {
 
-    private static final String TASK_PUBLISH_LOCAL = "publishAarLocal"
-    private static final String TASK_PUBLISH_EXPERIMENTAL = "publishAarExperimental"
-    private static final String TASK_PUBLISH_RELEASE = "publishAarRelease"
-    private static final String TASK_PUBLISH_ALPHA = "publishAarAlpha"
+    private static final String TASK_PUBLISH_AAR_LOCAL = "publishAarLocal"
+    private static final String TASK_PUBLISH_AAR_EXPERIMENTAL = "publishAarExperimental"
+    private static final String TASK_PUBLISH_AAR_RELEASE = "publishAarRelease"
+    private static final String TASK_PUBLISH_AAR_ALPHA = "publishAarAlpha"
     private static final String JACOCO_PLUGIN_CLASSPATH = "com.mercadolibre.android.gradle/jacoco"
     private static final String ROBOLECTRIC_PLUGIN_CLASSPATH = "com.mercadolibre.android.gradle/robolectric"
 
@@ -34,13 +33,9 @@ public class AarLibraryPlugin extends LibraryPlugin {
     }
 
     @Override
-    String getFilePathForLocalPublish() {
-        return null
-    }
-
-    @Override
     boolean isPublishTask(String task) {
-        return task.contains(TASK_PUBLISH_LOCAL) || task == TASK_PUBLISH_EXPERIMENTAL || task == TASK_PUBLISH_ALPHA || task == TASK_PUBLISH_RELEASE
+        return task.contains(TASK_PUBLISH_AAR_LOCAL) || task == TASK_PUBLISH_AAR_EXPERIMENTAL ||
+                task == TASK_PUBLISH_AAR_ALPHA || task == TASK_PUBLISH_AAR_RELEASE
     }
 
     @Override
@@ -96,47 +91,48 @@ public class AarLibraryPlugin extends LibraryPlugin {
         project.uploadArchives.dependsOn 'connectedAndroidTest'
     }
 
-    /**
-     * Create and configure a bintray task for a specific
-     * publishType. Take into account that this type of task
-     * must be a Bintray type (not a local publish for example)
-     */
     @Override
-    void createBintrayTask(String publishType) {
-        def task;
+    void setTaskDependencies(def task, def publishType) {
+        task.dependsOn 'checkLocalDependencies', 'assemble', 'test', 'check', 'sourcesJar'
         switch (publishType) {
             case PUBLISH_RELEASE:
-                task = project.tasks.create TASK_PUBLISH_RELEASE
-                task.setDescription('Publishes a new release version of the AAR library to Bintray.')
                 task.dependsOn 'checkLocalDependencies', 'assembleRelease', 'testReleaseUnitTest', 'check', 'releaseSourcesJar'
+                break
+            case PUBLISH_EXPERIMENTAL:
+                task.dependsOn 'checkLocalDependencies', 'assembleRelease', 'releaseSourcesJar'
+                break
+            case PUBLISH_ALPHA:
+                task.dependsOn 'checkLocalDependencies', 'assembleRelease', 'testReleaseUnitTest', 'check', 'releaseSourcesJar'
+                break
+        }
+    }
+
+    @Override
+    void createBintrayTask(String publishType) {
+        super.createBintrayTask(publishType)
+        def task
+        switch (publishType) {
+            case PUBLISH_RELEASE:
+                task = project.tasks.create "${TASK_PUBLISH_AAR_RELEASE}"
+                task.finalizedBy TASK_PUBLISH_RELEASE
                 break
 
             case PUBLISH_EXPERIMENTAL:
-                task = project.tasks.create TASK_PUBLISH_EXPERIMENTAL
-                task.setDescription('Publishes a new experimental version of the AAR library.')
-                task.dependsOn 'checkLocalDependencies', 'assembleRelease', 'releaseSourcesJar'
+                task = project.tasks.create "${TASK_PUBLISH_AAR_EXPERIMENTAL}"
+                task.finalizedBy TASK_PUBLISH_EXPERIMENTAL
                 break
 
             case PUBLISH_ALPHA:
-                task = project.tasks.create TASK_PUBLISH_ALPHA
-                task.setDescription('Publishes a new alpha version of the AAR library to Bintray.')
-                task.dependsOn 'checkLocalDependencies', 'assembleRelease', 'testReleaseUnitTest', 'check', 'releaseSourcesJar'
+                task = project.tasks.create "${TASK_PUBLISH_AAR_ALPHA}"
+                task.finalizedBy TASK_PUBLISH_ALPHA
                 break
-
-            default:
-                throw new GradleException("No task type provided")
         }
-        task.finalizedBy 'bintrayUpload'
-        task.doLast {
-            setBintrayConfig(publishType);
+    }
 
-            // Set the artifacts.
-            project.configurations.archives.artifacts.clear()
-            project.artifacts.add('archives', project.file(getAarFilePath()))
-            project.artifacts.add('archives', project.tasks['releaseSourcesJar'])
-
-            logVersion(String.format("%s:%s:%s", project.group, project.name, project.version))
-        }
+    @Override
+    void addArtifacts() {
+        project.artifacts.add('archives', project.file(getAarFilePath()))
+        project.artifacts.add('archives', project.tasks['releaseSourcesJar'])
     }
 
     /**
@@ -148,7 +144,7 @@ public class AarLibraryPlugin extends LibraryPlugin {
             project.android.libraryVariants.each { variant ->
                 def flavorName = variant.buildType.name
 
-                def task = project.tasks.create "${TASK_PUBLISH_LOCAL}${flavorName.capitalize()}"
+                def task = project.tasks.create "${TASK_PUBLISH_AAR_LOCAL}${flavorName.capitalize()}"
                 task.setDescription("Publishes a new local version, on the variant ${flavorName.capitalize()} of the AAR library, locally on the .m2/repository directory.")
                 task.dependsOn 'checkLocalDependencies', "assemble${flavorName.capitalize()}", "${flavorName}SourcesJar"
                 task.finalizedBy 'uploadArchives'
