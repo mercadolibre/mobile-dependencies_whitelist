@@ -25,6 +25,8 @@ public class AarLibraryPlugin extends LibraryPlugin {
     private static final String TASK_PUBLISH_EXPERIMENTAL = "publishAarExperimental"
     private static final String TASK_PUBLISH_RELEASE = "publishAarRelease"
     private static final String TASK_PUBLISH_ALPHA = "publishAarAlpha"
+    private static final String JACOCO_PLUGIN_CLASSPATH = "com.mercadolibre.android.gradle/jacoco"
+    private static final String ROBOLECTRIC_PLUGIN_CLASSPATH = "com.mercadolibre.android.gradle/robolectric"
 
     @Override
     String getPomPackaging() {
@@ -53,8 +55,22 @@ public class AarLibraryPlugin extends LibraryPlugin {
 
         project.apply plugin: 'com.github.dcendents.android-maven'
 
-        project.apply plugin: 'com.mercadolibre.android.gradle.jacoco'
-        project.apply plugin: 'com.mercadolibre.android.gradle.robolectric'
+        project.afterEvaluate {
+            boolean hasJacocoPlugin, hasRobolectricPlugin
+            project.rootProject.buildscript.configurations.classpath.each {
+                if (it.name.contains(JACOCO_PLUGIN_CLASSPATH)) {
+                    hasJacocoPlugin = true
+                }
+                if (it.name.contains(ROBOLECTRIC_PLUGIN_CLASSPATH)) {
+                    hasRobolectricPlugin = true
+                }
+            }
+            if (hasJacocoPlugin)
+                project.apply plugin: 'com.mercadolibre.android.gradle.jacoco'
+
+            if (hasRobolectricPlugin)
+                project.apply plugin: 'com.mercadolibre.android.gradle.robolectric'
+        }
     }
 
     /**

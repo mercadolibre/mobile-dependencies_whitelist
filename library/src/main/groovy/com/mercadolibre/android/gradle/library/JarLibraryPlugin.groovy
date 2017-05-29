@@ -57,19 +57,19 @@ public class JarLibraryPlugin extends LibraryPlugin {
             case PUBLISH_RELEASE:
                 task = project.tasks.create TASK_PUBLISH_RELEASE
                 task.setDescription('Publishes a new release version of the JAR library to Bintray.')
-                task.dependsOn 'checkLocalDependencies', 'assemble', 'test', 'check', 'sourcesJar', 'build'
+                task.dependsOn 'checkLocalDependencies', 'assemble', 'test', 'check', 'sourcesJar'
                 break
 
             case PUBLISH_EXPERIMENTAL:
                 task = project.tasks.create TASK_PUBLISH_EXPERIMENTAL
                 task.setDescription('Publishes a new experimental version of the JAR library.')
-                task.dependsOn 'checkLocalDependencies', 'assemble', 'test', 'check', 'sourcesJar', 'build'
+                task.dependsOn 'checkLocalDependencies', 'assemble', 'test', 'check', 'sourcesJar'
                 break
 
             case PUBLISH_ALPHA:
                 task = project.tasks.create TASK_PUBLISH_ALPHA
                 task.setDescription('Publishes a new alpha version of the JAR library to Bintray.')
-                task.dependsOn 'checkLocalDependencies', 'assemble', 'test', 'check', 'sourcesJar', 'build'
+                task.dependsOn 'checkLocalDependencies', 'assemble', 'test', 'check', 'sourcesJar'
                 break
 
             default:
