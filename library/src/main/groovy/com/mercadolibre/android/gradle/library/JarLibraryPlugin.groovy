@@ -1,6 +1,5 @@
 package com.mercadolibre.android.gradle.library
 
-import org.gradle.api.GradleException
 import org.gradle.api.tasks.bundling.Jar
 import org.gradle.util.GradleVersion
 
@@ -9,10 +8,10 @@ import org.gradle.util.GradleVersion
  */
 public class JarLibraryPlugin extends LibraryPlugin {
 
-    private static final String TASK_PUBLISH_LOCAL = "publishJarLocal"
-    private static final String TASK_PUBLISH_EXPERIMENTAL = "publishJarExperimental"
-    private static final String TASK_PUBLISH_RELEASE = "publishJarRelease"
-    private static final String TASK_PUBLISH_ALPHA = "publishJarAlpha"
+    private static final String TASK_PUBLISH_JAR_LOCAL = "publishJarLocal"
+    private static final String TASK_PUBLISH_JAR_EXPERIMENTAL = "publishJarExperimental"
+    private static final String TASK_PUBLISH_JAR_RELEASE = "publishJarRelease"
+    private static final String TASK_PUBLISH_JAR_ALPHA = "publishJarAlpha"
 
     /**
      * Method called by Gradle when applying this plugin.
@@ -31,7 +30,8 @@ public class JarLibraryPlugin extends LibraryPlugin {
 
     @Override
     boolean isPublishTask(String task) {
-        return task == TASK_PUBLISH_LOCAL || task == TASK_PUBLISH_EXPERIMENTAL || task == TASK_PUBLISH_ALPHA || task == TASK_PUBLISH_RELEASE
+        return task == TASK_PUBLISH_JAR_LOCAL || task == TASK_PUBLISH_JAR_EXPERIMENTAL ||
+                task == TASK_PUBLISH_JAR_ALPHA || task == TASK_PUBLISH_JAR_RELEASE
     }
 
     /**
@@ -45,47 +45,37 @@ public class JarLibraryPlugin extends LibraryPlugin {
         sourcesJarTask.from project.tasks.getByName("compileJava").source
     }
 
-    /**
-     * Create and configure a bintray task for a specific
-     * publishType. Take into account that this type of task
-     * must be a Bintray type (not a local publish for example)
-     */
+    @Override
+    void setTaskDependencies(def task, def publishType) {
+        task.dependsOn 'checkLocalDependencies', 'assemble', 'test', 'check', 'sourcesJar'
+    }
+
     @Override
     void createBintrayTask(String publishType) {
-        def task;
+        super.createBintrayTask(publishType)
+        def task
         switch (publishType) {
             case PUBLISH_RELEASE:
-                task = project.tasks.create TASK_PUBLISH_RELEASE
-                task.setDescription('Publishes a new release version of the JAR library to Bintray.')
-                task.dependsOn 'checkLocalDependencies', 'assemble', 'test', 'check', 'sourcesJar'
+                task = project.tasks.create "${TASK_PUBLISH_JAR_RELEASE}"
+                task.finalizedBy TASK_PUBLISH_RELEASE
                 break
 
             case PUBLISH_EXPERIMENTAL:
-                task = project.tasks.create TASK_PUBLISH_EXPERIMENTAL
-                task.setDescription('Publishes a new experimental version of the JAR library.')
-                task.dependsOn 'checkLocalDependencies', 'assemble', 'test', 'check', 'sourcesJar'
+                task = project.tasks.create "${TASK_PUBLISH_JAR_EXPERIMENTAL}"
+                task.finalizedBy TASK_PUBLISH_EXPERIMENTAL
                 break
 
             case PUBLISH_ALPHA:
-                task = project.tasks.create TASK_PUBLISH_ALPHA
-                task.setDescription('Publishes a new alpha version of the JAR library to Bintray.')
-                task.dependsOn 'checkLocalDependencies', 'assemble', 'test', 'check', 'sourcesJar'
+                task = project.tasks.create "${TASK_PUBLISH_JAR_ALPHA}"
+                task.finalizedBy TASK_PUBLISH_ALPHA
                 break
-
-            default:
-                throw new GradleException("No task type provided")
         }
-        task.finalizedBy 'bintrayUpload'
-        task.doLast {
-            setBintrayConfig(publishType);
+    }
 
-            // Set the artifacts.
-            project.configurations.archives.artifacts.clear()
-            project.artifacts.add('archives', project.file(getFilePath()))
-            project.artifacts.add('archives', project.tasks['sourcesJar'])
-
-            logVersion(String.format("%s:%s:%s", project.group, project.name, project.version))
-        }
+    @Override
+    void addArtifacts() {
+        project.artifacts.add('archives', project.file(getFilePath()))
+        project.artifacts.add('archives', project.tasks['sourcesJar'])
     }
 
     /**
@@ -105,7 +95,6 @@ public class JarLibraryPlugin extends LibraryPlugin {
         return actualDestination
     }
 
-    @Override
     String getFilePathForLocalPublish() {
         return "$project.buildDir/libs/${project.name}.jar";
     }
@@ -116,7 +105,7 @@ public class JarLibraryPlugin extends LibraryPlugin {
     @Override
     void createPublishLocalTasks() {
         project.afterEvaluate {
-            def task = project.tasks.create "${TASK_PUBLISH_LOCAL}"
+            def task = project.tasks.create "${TASK_PUBLISH_JAR_LOCAL}"
             task.setDescription("Publishes a new local version, on the variant of the AAR library, locally on the .m2/repository directory.")
             task.dependsOn 'checkLocalDependencies', "assemble"
             task.finalizedBy 'uploadArchives'

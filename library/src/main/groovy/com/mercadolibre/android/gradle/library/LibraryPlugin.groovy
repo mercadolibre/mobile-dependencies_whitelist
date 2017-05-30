@@ -15,6 +15,10 @@ abstract class LibraryPlugin implements Plugin<Project> {
     protected static final String PUBLISH_RELEASE = "release"
     protected static final String PUBLISH_EXPERIMENTAL = "experimental"
     protected static final String PUBLISH_ALPHA = "alpha"
+    protected static final String TASK_PUBLISH_LOCAL = "publishLocal"
+    protected static final String TASK_PUBLISH_EXPERIMENTAL = "publishExperimental"
+    protected static final String TASK_PUBLISH_RELEASE = "publishRelease"
+    protected static final String TASK_PUBLISH_ALPHA = "publishAarAlpha"
     private static final String BINTRAY_USER_ENV = "BINTRAY_USER"
     private static final String BINTRAY_KEY_ENV = "BINTRAY_KEY"
     private static final String BINTRAY_PROP_FILE = "bintray.properties"
@@ -68,11 +72,11 @@ abstract class LibraryPlugin implements Plugin<Project> {
 
     abstract void createPublishLocalTasks()
 
-    abstract void createBintrayTask(String task)
-
-    abstract String getFilePathForLocalPublish()
-
     abstract String getPomPackaging()
+
+    abstract void addArtifacts()
+
+    abstract void setTaskDependencies(def task, def publishType)
 
     /**
      * Adds the 'publisher' container to the project.
@@ -272,6 +276,47 @@ abstract class LibraryPlugin implements Plugin<Project> {
      */
     def createPublishExperimentalTask() {
         createBintrayTask(PUBLISH_EXPERIMENTAL)
+    }
+
+    /**
+     * Create and configure a bintray task for a specific
+     * publishType. Take into account that this type of task
+     * must be a Bintray type (not a local publish for example)
+     */
+    void createBintrayTask(String publishType) {
+        def task;
+        switch (publishType) {
+            case PUBLISH_RELEASE:
+                task = project.tasks.create TASK_PUBLISH_RELEASE
+                task.setDescription('Publishes a new release version of the library to Bintray.')
+                setTaskDependencies(task, publishType)
+                break
+
+            case PUBLISH_EXPERIMENTAL:
+                task = project.tasks.create TASK_PUBLISH_EXPERIMENTAL
+                task.setDescription('Publishes a new experimental version of the library to Bintray.')
+                setTaskDependencies(task, publishType)
+                break
+
+            case PUBLISH_ALPHA:
+                task = project.tasks.create TASK_PUBLISH_ALPHA
+                task.setDescription('Publishes a new alpha version of the library to Bintray.')
+                setTaskDependencies(task, publishType)
+                break
+
+            default:
+                throw new GradleException("No task type provided")
+        }
+        task.finalizedBy 'bintrayUpload'
+        task.doLast {
+            setBintrayConfig(publishType);
+
+            // Set the artifacts.
+            project.configurations.archives.artifacts.clear()
+            addArtifacts()
+
+            logVersion(String.format("%s:%s:%s", project.group, project.name, project.version))
+        }
     }
 
     /**
