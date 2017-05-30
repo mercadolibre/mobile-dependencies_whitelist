@@ -18,7 +18,7 @@ abstract class LibraryPlugin implements Plugin<Project> {
     protected static final String TASK_PUBLISH_LOCAL = "publishLocal"
     protected static final String TASK_PUBLISH_EXPERIMENTAL = "publishExperimental"
     protected static final String TASK_PUBLISH_RELEASE = "publishRelease"
-    protected static final String TASK_PUBLISH_ALPHA = "publishAarAlpha"
+    protected static final String TASK_PUBLISH_ALPHA = "publishAlpha"
     private static final String BINTRAY_USER_ENV = "BINTRAY_USER"
     private static final String BINTRAY_KEY_ENV = "BINTRAY_KEY"
     private static final String BINTRAY_PROP_FILE = "bintray.properties"
