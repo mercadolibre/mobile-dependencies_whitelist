@@ -93,7 +93,6 @@ public class AarLibraryPlugin extends LibraryPlugin {
 
     @Override
     void setTaskDependencies(def task, def publishType) {
-        task.dependsOn 'checkLocalDependencies', 'assemble', 'test', 'check', 'sourcesJar'
         switch (publishType) {
             case PUBLISH_RELEASE:
                 task.dependsOn 'checkLocalDependencies', 'assembleRelease', 'testReleaseUnitTest', 'check', 'releaseSourcesJar'
