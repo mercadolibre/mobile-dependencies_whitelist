@@ -1,6 +1,39 @@
 {
 	"whitelist": [{
-		"name": "MeliSDK",
-		"version": "^~>\\s?5.[0-9]+$"
-	}]
+			"name": "MeliSDK",
+			"version": "^~>\\s?5.[0-9]+$"
+		},
+		{
+			"name": "MLCart",
+			"version": "^~>\\s?1.[0-9]+$"
+		},
+		{
+			"name": "MLRecommendations",
+			"version": "^~>\\s?1.[0-9]+$"
+		},
+		{
+			"name": "MLAppRater",
+			"version": "^~>\\s?1.[0-9]+$"
+		},
+		{
+			"name": "MLImagePicker",
+			"version": "^~>\\s?0.[0-9]+$"
+		},
+		{
+			"name": "MLNetworking",
+			"version": "^~>\\s?0.[0-9]+$"
+		},
+		{
+			"name": "MLCommons(/.*)?",
+			"version": "^~>\\s?1.[0-9]+$"
+		},
+		{
+			"name": "MLUI(/.*)?",
+			"version": "^~>\\s?2.[0-9]+$"
+		},
+		{
+			"name": "MLMelidata(/.*)?",
+			"version": "^~>\\s?0.[0-9]+$"
+		}
+	]
 }
