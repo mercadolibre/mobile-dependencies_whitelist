@@ -5,7 +5,6 @@ import groovy.json.JsonSlurper
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.tasks.testing.Test
-import org.gradle.api.GradleException
 
 /**
  * Gradle base plugin for MercadoLibre Android projects/modules.
@@ -16,7 +15,8 @@ class BasePlugin implements Plugin<Project> {
 
     private static final String TASK_LOCK_VERSIONS = "lockVersions"
 
-    private static final String LIBRARY_PLUGIN_NAME = "com.android.build.gradle.LibraryPlugin"
+    private static final String AAR_LIBRARY_PLUGIN_NAME = "com.android.build.gradle.AarLibraryPlugin"
+    private static final String JAR_LIBRARY_PLUGIN_NAME = "com.android.build.gradle.JarLibraryPlugin"
 
     private static final String LINT_PLUGIN_CLASSPATH= "com.mercadolibre.android.gradle/lint"
     private static final String LINT_PLUGIN_NAME = "com.mercadolibre.android.gradle.lint"
@@ -87,7 +87,7 @@ class BasePlugin implements Plugin<Project> {
                     def isLibrary = false
                     // Check the project is a library!
                     subproject.plugins.each { plugin ->
-                        if (plugin.toString().contains(LIBRARY_PLUGIN_NAME)) {
+                        if (plugin.toString().contains(AAR_LIBRARY_PLUGIN_NAME) || plugin.toString().contains(JAR_LIBRARY_PLUGIN_NAME)) {
                             isLibrary = true
                         }
                     }
