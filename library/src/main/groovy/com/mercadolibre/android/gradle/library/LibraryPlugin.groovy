@@ -68,7 +68,12 @@ abstract class LibraryPlugin implements Plugin<Project> {
 
     abstract void createSourcesJarTasks()
 
-    abstract boolean isPublishTask(String task)
+    /**
+     * Returns if the parameter is a publish task name
+     */
+    protected boolean isPublishTask(String task) {
+        return task == TASK_PUBLISH_LOCAL || task == TASK_PUBLISH_EXPERIMENTAL || task == TASK_PUBLISH_ALPHA || task == TASK_PUBLISH_RELEASE
+    }
 
     abstract void createPublishLocalTasks()
 
