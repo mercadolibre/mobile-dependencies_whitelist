@@ -58,7 +58,6 @@ class DependenciesLint implements Lint {
             def file = project.file(FILE)
             if (!hasFailed) {
                 // Es la primera vez que va a fallar..
-                // Si el file todavia no existe, lo creamos.
                 if (!file.exists()) {
                     file.getParentFile().mkdirs()
                 }
