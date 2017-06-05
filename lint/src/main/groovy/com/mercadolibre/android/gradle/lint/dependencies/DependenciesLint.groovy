@@ -30,6 +30,9 @@ class DependenciesLint implements Lint {
      */
     private static final String WHITELIST_ENDPOINT = "https://raw.githubusercontent.com/mercadolibre/mobile-dependencies_whitelist/master/android-whitelist.json"
 
+    private static final String ERROR_TITLE = "Error: Found dependencies not allowed:"
+    private static final String ERROR_ALLOWED_DEPENDENCIES = "Please check your dependencies.\nYou can see the allowed dependencies at ${WHITELIST_ENDPOINT}" 
+
     /**
      * Checks the dependencies the project contains are in the whitelist
      * 
@@ -45,15 +48,26 @@ class DependenciesLint implements Lint {
          * Closure to report a forbidden dependency as error
          */
         def report = { message ->
+            def file = project.file('build/reports/lint_dependencies/lint.ld')
+            if (!file.exists()) {
+                // Si todavia no existe el file, crealo
+                file.getParentFile().mkdirs()
+            }
+            if (!hasFailed) {
+                // Es la primera vez que falla, asi que todavia "no fallo"
+                hasFailed = true
+                println ERROR_TITLE
+                file << ERROR_TITLE
+            }
+            file.append("${System.getProperty("line.separator")}${message}")
             println message
-            hasFailed = true
         }
 
         // Core logic
         def analizeDependency = { dependency, String packageName ->
             // The ASCII chars make the stdout look red.
             def dependencyFullName = "${dependency.group}:${dependency.name}:${dependency.version}"
-            def message = "\u001b[31m" + "Forbidden dependency: <${dependencyFullName}>" + "\u001b[0m"
+            def message = "- ${dependencyFullName}"
             def publishName = "${project.publisher.groupId}:${project.publisher.artifactId}"
 
             /**
@@ -95,6 +109,10 @@ class DependenciesLint implements Lint {
 
         // Check the default compiling deps
         project.configurations.compile.dependencies.each { analizeDependency(it, debugPackageName) }
+
+        if (hasFailed) {
+            report(ERROR_ALLOWED_DEPENDENCIES)
+        }
 
         return hasFailed
     }
