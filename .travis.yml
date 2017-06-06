@@ -1,21 +1,60 @@
-sudo: false
+sudo: required
+dist: precise
+group: edge
+
+language: groovy
+
+cache:
+    directories:
+        # Please never remove the gradle cache. Its always useful :)
+        - $HOME/.gradle/caches/$GRADLE_VERSION
+        - $HOME/.gradle/caches/jars-1
+        - $HOME/.gradle/native
+        - $HOME/.gradle/wrapper
+
+before_cache:
+    # Remove daemon logs dbs and lockfiles
+    - rm -rf $HOME/.gradle/daemon/
+    - rm -rf $HOME/.gradle/caches/modules-2/modules-2.lock
+
+jdk: oraclejdk8
+
+git:
+    depth: 10
 
 branches:
     only:
         - develop
         - master
 
-language: groovy
+matrix:
+    fast_finish: true
 
-jdk: oraclejdk8
+env:
+    matrix:
+    - TEST_SUITE="application:build" MODULE_DIR="application"
+    - TEST_SUITE="base:build" MODULE_DIR="build"
+    - TEST_SUITE="jacoco:build" MODULE_DIR="jacoco"
+    - TEST_SUITE="library:build" MODULE_DIR="library"
+    - TEST_SUITE="lint:build" MODULE_DIR="lint"
+    - TEST_SUITE="robolectric:build" MODULE_DIR="robolectric"
+    global:
+    - TERM=dumb
+    - export GRADLE_VERSION=$(sed -n "/[0-9]\.[0-9]/p" gradle/wrapper/gradle-wrapper.properties | cut -c 67-69)
+    - COVERALLS_REPO_TOKEN=V2CzZy3bleLuF0X86Aw8yp7UzGTyqR65E
+    - TRAVIS_LEADER_TOKEN="TEST_SUITE"
+    - TRAVIS_LEADER_VALUE="base:build"
+    - LIB_PROJECT_NAMES="base,robolectric,jacoco,lint,library,application"
+    - LIB_PROJECT_DIRS="base,robolectric,jacoco,lint,library,application"
+
+before_install:
+    - bash "travis/run_before_install.sh"
 
 script:
-    - ./gradlew application:build
-    - ./gradlew base:build
-    - ./gradlew jacoco:build
-    - ./gradlew library:build
-    - ./gradlew robolectric:build
-    - ./gradlew lint:build
+    - bash "travis/run_script.sh"
 
 after_success:
-    - ./travis_deploy.sh
+    - bash "travis/run_after_success.sh"
+
+after_failure:
+    - bash "travis/run_after_failure.sh"
