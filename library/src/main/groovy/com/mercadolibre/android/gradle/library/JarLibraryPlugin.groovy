@@ -30,7 +30,7 @@ public class JarLibraryPlugin extends LibraryPlugin {
 
     @Override
     boolean isPublishTask(String task) {
-        return task == TASK_PUBLISH_JAR_LOCAL || task == TASK_PUBLISH_JAR_EXPERIMENTAL ||
+        return super.isPublishTask(task) || task == TASK_PUBLISH_JAR_LOCAL || task == TASK_PUBLISH_JAR_EXPERIMENTAL ||
                 task == TASK_PUBLISH_JAR_ALPHA || task == TASK_PUBLISH_JAR_RELEASE
     }
 
