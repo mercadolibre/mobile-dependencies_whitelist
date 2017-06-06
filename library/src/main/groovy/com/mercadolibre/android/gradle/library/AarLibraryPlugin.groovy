@@ -34,7 +34,7 @@ public class AarLibraryPlugin extends LibraryPlugin {
 
     @Override
     boolean isPublishTask(String task) {
-        return task.contains(TASK_PUBLISH_AAR_LOCAL) || task == TASK_PUBLISH_AAR_EXPERIMENTAL ||
+        return super.isPublishTask(task) || task.contains(TASK_PUBLISH_AAR_LOCAL) || task == TASK_PUBLISH_AAR_EXPERIMENTAL ||
                 task == TASK_PUBLISH_AAR_ALPHA || task == TASK_PUBLISH_AAR_RELEASE
     }
 
