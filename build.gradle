@@ -5,6 +5,13 @@ buildscript {
         jcenter()
         mavenCentral()
         mavenLocal()
+        maven {
+            url "https://dl.bintray.com/mercadolibre/android-releases"
+            credentials {
+                username 'bintray-read'
+                password 'ff5072eaf799961add07d5484a6283eb3939556b'
+            }
+        }
     }
 
     dependencies {
