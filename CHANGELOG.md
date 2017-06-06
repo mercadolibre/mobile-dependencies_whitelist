@@ -4,6 +4,7 @@
 - Fixeamos la publicacion
 - Fixeamos que no se estaban agregando los plugins de jacoco y robolectric
 
+
 ### 3.5.0
 #### Nuevos features:
 - Podemos publicar jars desde el plugin haciendo:
