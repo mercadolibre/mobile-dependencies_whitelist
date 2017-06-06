@@ -53,10 +53,10 @@ public class AarLibraryPlugin extends LibraryPlugin {
         project.afterEvaluate {
             boolean hasJacocoPlugin, hasRobolectricPlugin
             project.rootProject.buildscript.configurations.classpath.each {
-                if (it.name.contains(JACOCO_PLUGIN_CLASSPATH)) {
+                if (it.path.contains(JACOCO_PLUGIN_CLASSPATH)) {
                     hasJacocoPlugin = true
                 }
-                if (it.name.contains(ROBOLECTRIC_PLUGIN_CLASSPATH)) {
+                if (it.path.contains(ROBOLECTRIC_PLUGIN_CLASSPATH)) {
                     hasRobolectricPlugin = true
                 }
             }
