@@ -1,5 +1,8 @@
 ### Changelog
 
+### 3.5.2
+- Ahora si fixeamos jacoco
+
 ### 3.5.1
 - Fixeamos la publicacion
 - Fixeamos que no se estaban agregando los plugins de jacoco y robolectric
