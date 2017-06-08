@@ -49,8 +49,7 @@ public class JacocoAndroidPlugin implements Plugin<Project> {
             variants = project.android.libraryVariants
         }
 
-        applyJacocoNoLocationClasses("com.android.build.gradle.AarLibraryPlugin")
-        applyJacocoNoLocationClasses("com.android.build.gradle.JarLibraryPlugin")
+        applyJacocoNoLocationClasses("com.android.build.gradle.LibraryPlugin")
         applyJacocoNoLocationClasses("com.android.build.gradle.AppPlugin")
 
 

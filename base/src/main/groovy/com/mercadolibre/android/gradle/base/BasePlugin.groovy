@@ -1,9 +1,8 @@
 package com.mercadolibre.android.gradle.base
 
-import groovy.json.JsonBuilder
-import groovy.json.JsonSlurper
 import org.gradle.api.Plugin
 import org.gradle.api.Project
+import org.gradle.api.artifacts.ComponentSelection
 import org.gradle.api.tasks.testing.Test
 
 /**
@@ -15,15 +14,14 @@ class BasePlugin implements Plugin<Project> {
 
     private static final String TASK_LOCK_VERSIONS = "lockVersions"
 
-    private static final String AAR_LIBRARY_PLUGIN_NAME = "com.android.build.gradle.AarLibraryPlugin"
-    private static final String JAR_LIBRARY_PLUGIN_NAME = "com.android.build.gradle.JarLibraryPlugin"
+    private static final String LIBRARY_PLUGIN_NAME = "com.android.build.gradle.LibraryPlugin"
 
     private static final String LINT_PLUGIN_CLASSPATH= "com.mercadolibre.android.gradle/lint"
     private static final String LINT_PLUGIN_NAME = "com.mercadolibre.android.gradle.lint"
 
     private static final String NEBULA_LOCK_CLASSPATH = "com.netflix.nebula/gradle-dependency-lock-plugin"
     private static final String NEBULA_LOCK_PLUGIN_NAME = 'nebula.dependency-lock'
-    private static final String NEBULA_LOCK_DEFAULT_FILE_NAME = 'dependencies.lock'
+    private static final String NEBULA_LOCK_TASKS_NAME_MATCHER = "lock";
     private static final String[] NEBULA_LOCK_TASKS = [
         "generateLock",
         "saveLock"
@@ -87,7 +85,7 @@ class BasePlugin implements Plugin<Project> {
                     def isLibrary = false
                     // Check the project is a library!
                     subproject.plugins.each { plugin ->
-                        if (plugin.toString().contains(AAR_LIBRARY_PLUGIN_NAME) || plugin.toString().contains(JAR_LIBRARY_PLUGIN_NAME)) {
+                        if (plugin.toString().contains(LIBRARY_PLUGIN_NAME)) {
                             isLibrary = true
                         }
                     }
@@ -105,6 +103,7 @@ class BasePlugin implements Plugin<Project> {
      * to call all of the subproject tasks at the same time (eg ./gradlew lockVersions -> each module 'lockVersions')
      */
     private void setUpLocksTask() {
+        def taskDescription = 'Locks the compiled project with the current versions of its dependencies to keep them in future assembles'
         def dependencyLockPluginExists = false
         // Check that the project supports lock features. Else we wont add it
         project.afterEvaluate {
@@ -114,51 +113,37 @@ class BasePlugin implements Plugin<Project> {
                 }
             }
 
-            // If it supports locks, then add the task for each of the subprojects.
+            // If it supports locks, then add the task for each of the subprojects and configure it
             if (dependencyLockPluginExists) {
                 project.subprojects.each { subproject ->
+                    // First apply the plugin since they might not add it
                     subproject.apply plugin: NEBULA_LOCK_PLUGIN_NAME
 
-                    subproject.afterEvaluate {
-                        // Create the lock task for the subproject
-                        def innerTask = subproject.tasks.create TASK_LOCK_VERSIONS
-                        innerTask.setDescription('Locks the compiled project with the current versions of its dependencies to keep them in future assembles')
-                        innerTask.doLast {
-                            // Generate and save the lock first.
-                            NEBULA_LOCK_TASKS.each {
-                                println ":${subproject.name}:${it}"
-                                subproject.tasks[it].execute()
-                            }
-
-
-                            println ":${subproject.name}:filterLock"
-                            // Get the lock file created and clean any ALPHA's versions that it contains
-                            def file = subproject.file(NEBULA_LOCK_DEFAULT_FILE_NAME)
-                            def inputJson = new JsonSlurper().parseText(file.text)
-                            inputJson.each { variant, variantJson ->        
-                                if (!variant.contains("test") && !variant.contains("Test")) {
-                                    variantJson.each { dependency, dependencyVersions ->
-                                        if (dependencyVersions.locked //Because when compile dirs it gets transitives without locks
-                                                && dependencyVersions.locked.contains(VERSION_ALPHA)) {
-                                            dependencyVersions.locked = dependencyVersions.locked.find(/.*\..*\.[0-9]+/)
-                                            // Accepts [everything].[everything].[only numbers]
-                                        }
+                    // Second lets add a strategy to filter all ALPHA versions when running a lock task
+                    // this way we will only lock to release versions (or experimentals if explicitly added)
+                    if (project.gradle.startParameter.taskNames.toListString().toLowerCase().contains(NEBULA_LOCK_TASKS_NAME_MATCHER)) {
+                        subproject.configurations.all {
+                            resolutionStrategy {
+                                componentSelection.all { ComponentSelection selection ->
+                                    if (selection.candidate.version.contains(VERSION_ALPHA)) {
+                                        selection.reject("Bad version. We dont accept alphas on the lock stage.")
                                     }
                                 }
                             }
-
-                            // Write the new file
-                            def jsonBuilder = new JsonBuilder(inputJson)
-                            file.withWriter {
-                                it.write jsonBuilder.toPrettyString()
-                            }
                         }
+                    }
+
+                    // Finally, create a task that wraps the flow of the locking logic
+                    subproject.task(TASK_LOCK_VERSIONS) {
+                        description taskDescription
+                        dependsOn NEBULA_LOCK_TASKS
                     }
                 }
 
                 // Root needs to have an empty task to find it, then dependencies for each subproject will fallback
-                def task = project.tasks.create TASK_LOCK_VERSIONS
-                task.setDescription('Locks the compiled projects with the current versions of its dependencies to keep using them in future assembles')
+                project.task(TASK_LOCK_VERSIONS) {
+                    description taskDescription
+                }
             }
         }
     }
