@@ -1,9 +1,11 @@
 ### Changelog
 
+### 3.5.2
+- Refactorizamos como funcionan los locks. Ahora busca en maven el ultimo release mientras busca la dependencia, en vez de inferirlo
+
 ### 3.5.1
 - Fixeamos la publicacion
 - Fixeamos que no se estaban agregando los plugins de jacoco y robolectric
-
 
 ### 3.5.0
 #### Nuevos features:
