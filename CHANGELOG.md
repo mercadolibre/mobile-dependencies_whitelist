@@ -1,6 +1,7 @@
 ### Changelog
 
 ### 3.5.2
+- Ahora si fixeamos jacoco
 - Refactorizamos como funcionan los locks. Ahora busca en maven el ultimo release mientras busca la dependencia, en vez de inferirlo
 
 ### 3.5.1
