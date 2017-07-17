@@ -1,5 +1,7 @@
 package com.mercadolibre.android.gradle.base
 
+import groovy.json.JsonBuilder
+import groovy.json.JsonSlurper
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.artifacts.ComponentSelection
@@ -115,7 +117,7 @@ class BasePlugin implements Plugin<Project> {
 
             // If it supports locks, then add the task for each of the subprojects and configure it
             if (dependencyLockPluginExists) {
-                project.subprojects.each { subproject ->
+                project.subprojects.findAll { it.hasProperty("publisher") }.each { subproject ->
                     // First apply the plugin since they might not add it
                     subproject.apply plugin: NEBULA_LOCK_PLUGIN_NAME
 
@@ -125,7 +127,10 @@ class BasePlugin implements Plugin<Project> {
                         subproject.configurations.all {
                             resolutionStrategy {
                                 componentSelection.all { ComponentSelection selection ->
-                                    if (selection.candidate.version.contains(VERSION_ALPHA)) {
+                                    // If the version has an alpha and it's not me reject the version
+                                    // If it's me, we will change it later
+                                    if (!selection.candidate.group.contentEquals(subproject.publisher.groupId) &&
+                                            selection.candidate.version.contains(VERSION_ALPHA)) {
                                         selection.reject("Bad version. We dont accept alphas on the lock stage.")
                                     }
                                 }
@@ -137,6 +142,22 @@ class BasePlugin implements Plugin<Project> {
                     subproject.task(TASK_LOCK_VERSIONS) {
                         description taskDescription
                         dependsOn NEBULA_LOCK_TASKS
+
+                        doLast {
+                            def file = project.file("dependencies.lock");
+                            def json = new JsonSlurper().parse(file)
+                            json.each { variantName, dependencies ->
+                                dependencies.each { group, versions ->
+                                    if (group.contains(subproject.publisher.groupId)) {
+                                        versions.locked = subproject.publisher.version
+                                    }
+                                }
+                            }
+                            def jsonBuilder = new JsonBuilder(json)
+                            file.withWriter {
+                                it.write jsonBuilder.toPrettyString()
+                            }
+                        }
                     }
                 }
 
