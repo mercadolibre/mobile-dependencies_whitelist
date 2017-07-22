@@ -8,6 +8,8 @@ import org.gradle.api.Project
 import com.mercadolibre.android.gradle.lint.dependencies.DependenciesLint
 
 /**
+ * This plugin should be merged to base eventually (when all the front ends already have it implemented)
+ *
  * Gradle plugin for Android Lints. It provides some important tasks:
  *
  * <ol>

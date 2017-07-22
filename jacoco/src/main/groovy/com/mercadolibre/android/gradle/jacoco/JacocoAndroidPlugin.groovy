@@ -6,6 +6,7 @@ import org.gradle.api.Project
 import org.gradle.testing.jacoco.tasks.JacocoReport
 
 /**
+ * Ideally this plugin should be merged to base
  * Created by ngiagnoni on 3/11/15.
  */
 public class JacocoAndroidPlugin implements Plugin<Project> {
