@@ -6,6 +6,7 @@ import com.mercadolibre.android.gradle.base.modules.JavaJacocoModule
 import com.mercadolibre.android.gradle.base.modules.JavaPublishableModule
 import com.mercadolibre.android.gradle.base.modules.LintableModule
 import com.mercadolibre.android.gradle.base.modules.LockableModule
+import com.mercadolibre.android.gradle.base.modules.Module
 import com.mercadolibre.android.gradle.base.modules.RobolectricModule
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -19,8 +20,25 @@ class BasePlugin implements Plugin<Project> {
 
     private static final String ANDROID_LIBRARY_PLUGIN = 'com.android.library'
     private static final String ANDROID_APPLICATION_PLUGIN = 'com.android.application'
+
     private static final String NEBULA_LOCK_CLASSPATH = "com.netflix.nebula/gradle-dependency-lock-plugin"
     private static final String LINT_PLUGIN_CLASSPATH= "com.mercadolibre.android.gradle/lint"
+
+    private static final Module[] ANDROID_LIBRARY_MODULES = [
+            new AndroidLibraryPublishableModule(),
+            new RobolectricModule(),
+            new AndroidJacocoModule()
+    ]
+
+    private static final Module[] ANDROID_APPLICATION_MODULES = [
+            new RobolectricModule(),
+            new AndroidJacocoModule()
+    ]
+
+    private static final Module[] JAVA_MODULES = [
+            new JavaPublishableModule(),
+            new JavaJacocoModule()
+    ]
 
     /**
      * The project.
@@ -40,25 +58,17 @@ class BasePlugin implements Plugin<Project> {
 
         setUpTestsLogging()
 
-        def testCoverage = new TestCoverage()
-        testCoverage.createJacocoFinalProjectTask(project)
-        testCoverage.createCoveragePost(project)
-
         project.subprojects.each {
             if (it.plugins.withType(JavaPlugin)) {
-                new JavaPublishableModule().configure(it)
-                new JavaJacocoModule().configure(it)
+                JAVA_MODULES.each { module -> module.configure(it) }
             }
 
             if (it.pluginManager.hasPlugin(ANDROID_LIBRARY_PLUGIN)) {
-                new AndroidLibraryPublishableModule().configure(it)
-                new RobolectricModule().configure(it)
-                new AndroidJacocoModule().configure(it)
+                ANDROID_LIBRARY_MODULES.each { module -> module.configure(it) }
             }
 
             if (it.pluginManager.hasPlugin(ANDROID_APPLICATION_PLUGIN)) {
-                new RobolectricModule().configure(it)
-                new AndroidJacocoModule().configure(it)
+                ANDROID_APPLICATION_MODULES.each { module -> module.configure(it) }
             }
 
             project.afterEvaluate {
