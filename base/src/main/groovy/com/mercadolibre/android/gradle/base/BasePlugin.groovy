@@ -6,7 +6,6 @@ import com.mercadolibre.android.gradle.base.modules.JavaJacocoModule
 import com.mercadolibre.android.gradle.base.modules.JavaPublishableModule
 import com.mercadolibre.android.gradle.base.modules.LintableModule
 import com.mercadolibre.android.gradle.base.modules.LockableModule
-import com.mercadolibre.android.gradle.base.modules.PublishableModule
 import com.mercadolibre.android.gradle.base.modules.RobolectricModule
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -18,8 +17,8 @@ import org.gradle.api.tasks.testing.Test
  */
 class BasePlugin implements Plugin<Project> {
 
-    private static final String JAVA_PLUGIN = 'java'
     private static final String ANDROID_LIBRARY_PLUGIN = 'com.android.library'
+    private static final String ANDROID_APPLICATION_PLUGIN = 'com.android.application'
     private static final String NEBULA_LOCK_CLASSPATH = "com.netflix.nebula/gradle-dependency-lock-plugin"
     private static final String LINT_PLUGIN_CLASSPATH= "com.mercadolibre.android.gradle/lint"
 
@@ -53,6 +52,11 @@ class BasePlugin implements Plugin<Project> {
 
             if (it.pluginManager.hasPlugin(ANDROID_LIBRARY_PLUGIN)) {
                 new AndroidLibraryPublishableModule().configure(it)
+                new RobolectricModule().configure(it)
+                new AndroidJacocoModule().configure(it)
+            }
+
+            if (it.pluginManager.hasPlugin(ANDROID_APPLICATION_PLUGIN)) {
                 new RobolectricModule().configure(it)
                 new AndroidJacocoModule().configure(it)
             }
