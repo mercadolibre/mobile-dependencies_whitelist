@@ -32,18 +32,18 @@ class PublishableModule extends Module {
             }
 
             plugins.withType(JavaPlugin) {
-                configure(project, TYPE_JAR)
+                configureAs(project, TYPE_JAR)
             }
 
             plugins.withId(ANDROID_LIBRARY_PLUGIN_ID) {
-                configure(project, TYPE_AAR)
+                configureAs(project, TYPE_AAR)
             }
         }
 
         project.tasks['uploadArchives'].dependsOn.clear()
     }
 
-    def configure(Project project, String type) {
+    private def configureAs(Project project, String type) {
         project.apply plugin: 'maven'
         project.apply plugin: 'com.jfrog.bintray'
 
