@@ -1,7 +1,5 @@
 package com.mercadolibre.android.gradle.base.modules
 
-import groovy.json.JsonBuilder
-import groovy.json.JsonSlurper
 import org.gradle.api.Project
 import org.gradle.api.artifacts.ComponentSelection
 

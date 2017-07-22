@@ -1,13 +1,6 @@
 package com.mercadolibre.android.gradle.base
 
-import com.mercadolibre.android.gradle.base.modules.AndroidJacocoModule
-import com.mercadolibre.android.gradle.base.modules.AndroidLibraryPublishableModule
-import com.mercadolibre.android.gradle.base.modules.JavaJacocoModule
-import com.mercadolibre.android.gradle.base.modules.JavaPublishableModule
-import com.mercadolibre.android.gradle.base.modules.LintableModule
-import com.mercadolibre.android.gradle.base.modules.LockableModule
-import com.mercadolibre.android.gradle.base.modules.Module
-import com.mercadolibre.android.gradle.base.modules.RobolectricModule
+import com.mercadolibre.android.gradle.base.modules.*
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.plugins.JavaPlugin
