@@ -1,6 +1,8 @@
 package com.mercadolibre.android.gradle.base
 
+import com.mercadolibre.android.gradle.base.modules.AndroidJacocoModule
 import com.mercadolibre.android.gradle.base.modules.AndroidLibraryPublishableModule
+import com.mercadolibre.android.gradle.base.modules.JavaJacocoModule
 import com.mercadolibre.android.gradle.base.modules.JavaPublishableModule
 import com.mercadolibre.android.gradle.base.modules.LintableModule
 import com.mercadolibre.android.gradle.base.modules.LockableModule
@@ -46,11 +48,13 @@ class BasePlugin implements Plugin<Project> {
         project.subprojects.each {
             if (it.plugins.withType(JavaPlugin)) {
                 new JavaPublishableModule().configure(it)
+                new JavaJacocoModule().configure(it)
             }
 
             if (it.pluginManager.hasPlugin(ANDROID_LIBRARY_PLUGIN)) {
                 new AndroidLibraryPublishableModule().configure(it)
                 new RobolectricModule().configure(it)
+                new AndroidJacocoModule().configure(it)
             }
 
             project.afterEvaluate {
