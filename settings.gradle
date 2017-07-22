@@ -1,1 +1,1 @@
-include ':robolectric', 'jacoco', ':base', ':library', 'application', ':lint'
+include ':base', ':lint'
