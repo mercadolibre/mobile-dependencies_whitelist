@@ -3,7 +3,6 @@
 buildscript {
     repositories {
         jcenter()
-        mavenCentral()
         mavenLocal()
         maven {
             url "https://dl.bintray.com/mercadolibre/android-releases"
@@ -31,9 +30,22 @@ allprojects {
 }
 
 subprojects {
+    apply plugin: 'groovy'
+    apply plugin: 'maven'
+
     apply plugin: "com.mercadolibre.android.gradle.java"
 
     publisher.groupId = "com.mercadolibre.android.gradle"
     publisher.version = projectVersion
     publisher.artifactId = it.name
+
+    group 'com.mercadolibre.android.gradle'
+    version "$projectVersion"
+
+    dependencies {
+        compile gradleApi()
+        compile localGroovy()
+
+        testCompile 'junit:junit:4.12'
+    }
 }
