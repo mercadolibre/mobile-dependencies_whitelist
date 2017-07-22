@@ -1,27 +1,21 @@
-package com.mercadolibre.android.gradle.robolectric
+package com.mercadolibre.android.gradle.base.modules
 
 import org.gradle.api.GradleException
-import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.tasks.Copy
 
 import java.util.concurrent.atomic.AtomicReference
 
-public class RobolectricPlugin implements Plugin<Project> {
+/**
+ * Created by saguilera on 7/22/17.
+ */
+class RobolectricModule extends Module {
 
-    /**
-     * The Project
-     */
     private Project project;
 
-    /**
-     * Invoke this method using Gradle Project to apply Robolectric Tasks
-     * @param project The Gradle project
-     */
     @Override
-    public void apply(Project project) {
+    void configure(Project project) {
         this.project = project;
-
         configureRobolectricTasks()
     }
 
@@ -29,17 +23,12 @@ public class RobolectricPlugin implements Plugin<Project> {
      * Create all Robolectric Tasks
      */
     private void configureRobolectricTasks() {
-        if (project.android == null) {
-            throw new GradleException("You should apply \"android\" plugin to make this one work.")
-        }
-
         createRobolectricFilesTask()
         createCopyManifestTask();
         createCleanRobolectricFilesTask()
     }
 
     private void hookToTestTasks(def task, def buildType=null) {
-
         def variants;
 
         try {

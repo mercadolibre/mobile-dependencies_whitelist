@@ -8,14 +8,16 @@ import org.gradle.api.tasks.bundling.Jar
 /**
  * Created by saguilera on 7/21/17.
  */
-class JavaModule extends Module {
+class AndroidLibraryPublishableModule extends PublishableModule {
 
-    private static final String PACKAGE_TYPE = 'jar'
+    private static final String PACKAGE_TYPE = 'aar'
 
     private Project project
 
     @Override
     void configure(Project project) {
+        super.configure(project)
+
         this.project = project
 
         applyPlugins()
@@ -23,10 +25,15 @@ class JavaModule extends Module {
     }
 
     private void applyPlugins() {
+        project.apply plugin: 'com.github.dcendents.android-maven'
+
         project.afterEvaluate {
             project.rootProject.buildscript.configurations.classpath.each {
                 if (it.path.contains(JACOCO_PLUGIN_CLASSPATH)) {
                     project.apply plugin: 'com.mercadolibre.android.gradle.jacoco'
+                }
+                if (it.path.contains(ROBOLECTRIC_PLUGIN_CLASSPATH)) {
+                    project.apply plugin: 'com.mercadolibre.android.gradle.robolectric'
                 }
             }
         }
@@ -34,38 +41,23 @@ class JavaModule extends Module {
 
     @SuppressWarnings("GroovyAssignabilityCheck")
     private void createTasks() {
-        project.sourceSets.all { def type ->
+        project.android.libraryVariants.all { variant ->
             // Create sources tasks
-            def sourcesJarTask = project.tasks.create "${type.name}SourcesJar", Jar
-            sourcesJarTask.from type.output
-            sourcesJarTask.classifier = "${type.name}"
-
-            createAlpha(type.name)
-            createExperimental(type.name)
-            createRelease(type.name)
-            createLocal(type.name)
-        }
-
-        if (!project.tasks.findByName('releaseSourcesJar')) {
-            def sourcesJarTask = project.tasks.create "releaseSourcesJar", Jar
-            sourcesJarTask.dependsOn project.tasks.getByName("compileJava")
+            def sourcesJarTask = project.tasks.create "${variant.buildType.name}SourcesJar", Jar
+            sourcesJarTask.dependsOn variant.javaCompile
             sourcesJarTask.classifier = 'sources'
-            sourcesJarTask.from project.tasks.getByName("compileJava").source
+            sourcesJarTask.from variant.javaCompile.source
+
+            createAlpha(variant.buildType.name)
+            createExperimental(variant.buildType.name)
+            createRelease(variant.buildType.name)
+            createLocal(variant.buildType.name)
         }
 
         createAlpha()
         createExperimental()
         createRelease()
         createLocal()
-    }
-
-    private taskDependencies = { String variant = null ->
-        return ["checkLocalDependencies", "assemble${variant?.capitalize() ?: ''}", "test${variant?.capitalize() ?: ''}", "check", "${variant?.capitalize() ?: 'release'}SourcesJar"]
-    }
-
-    private def artifacts = { ArtifactHandler artifacts, String variant ->
-        artifacts.add('archives', getJarFile())
-        artifacts.add('archives', project.tasks["${variant ?: 'release'}SourcesJar"])
     }
 
     private void createAlpha(String variant = null) {
@@ -77,7 +69,7 @@ class JavaModule extends Module {
             } else {
                 it.suffixVersion = defaultSuffixVersion
             }
-            it.dependencies = taskDependencies(variant)
+            it.dependencies = [ "checkLocalDependencies", "assemble${variant?.capitalize() ?: 'Release'}", "test${variant?.capitalize() ?: 'Release'}UnitTest", "check", "${variant ?: 'release'}SourcesJar" ]
             it.project = project
             it.name = "alpha${variant.capitalize() ?: ''}"
             it.variant = variant
@@ -89,7 +81,7 @@ class JavaModule extends Module {
     private void createLocal(String variant = null) {
         PublishTaskFactory.create(new PublishTaskFactory.Builder().with {
             it.packageType = PACKAGE_TYPE
-            it.dependencies = taskDependencies(variant)
+            it.dependencies = [ 'checkLocalDependencies', "assemble${variant?.capitalize() ?: 'Release'}", "${variant ?: 'release'}SourcesJar" ]
             it.project = project
             it.name = "local${variant.capitalize() ?: ''}"
             it.variant = variant
@@ -98,7 +90,8 @@ class JavaModule extends Module {
                 project.android.defaultPublishConfig = "${variant}"
             }
             it.doLast = { Project project ->
-                project.artifacts.add('archives', project.file("$project.buildDir/libs/${project.name}.jar"))
+                project.artifacts.add('archives', project.file(getAarFilePathForLocalPublish(variant)))
+                project.artifacts.add('archives', project.tasks["${variant}SourcesJar"])
 
                 def version = project.uploadArchives.repositories.mavenDeployer.pom.version
                 project.uploadArchives.repositories.mavenDeployer.pom.version = "LOCAL-${variant.toUpperCase()}-${version}-${getTimestamp()}"
@@ -110,6 +103,7 @@ class JavaModule extends Module {
 
                 // Point the repository to our .m2/repository directory.
                 project.uploadArchives.repositories.mavenDeployer.repository.url = "file://${System.properties['user.home']}/.m2/repository"
+
             }
             return it
         })
@@ -120,7 +114,7 @@ class JavaModule extends Module {
         // Please note that the release wont have any preffix or suffix of that variant, its just the release
         PublishTaskFactory.create(new PublishTaskFactory.Builder().with {
             it.packageType = PACKAGE_TYPE
-            it.dependencies = taskDependencies(variant)
+            it.dependencies = [ "checkLocalDependencies", "assemble${variant?.capitalize() ?: 'Release'}", "test${variant?.capitalize() ?: 'Release'}UnitTest", "check", "${variant ?: 'release'}SourcesJar" ]
             it.project = project
             it.name = "release${variant.capitalize() ?: ''}"
             it.variant = variant
@@ -139,7 +133,7 @@ class JavaModule extends Module {
             } else {
                 it.prefixVersion = defaultPrefixVersion
             }
-            it.dependencies = taskDependencies(variant)
+            it.dependencies = [ "checkLocalDependencies", "assemble${variant?.capitalize() ?: 'Release'}", "${variant ?: 'release'}SourcesJar" ]
             it.project = project
             it.name = "experimental${variant?.capitalize() ?: ''}"
             it.repoName = 'android-experimental'
@@ -149,19 +143,47 @@ class JavaModule extends Module {
         })
     }
 
-    private def getJarFile() {
-        def jarParentDirectory = "$project.buildDir/libs/"
-        def prevFile = project.file(jarParentDirectory + "${project.name}.jar");
-        def actualFile = project.file(jarParentDirectory + "${project.publisher.artifactId}-${project.publisher.version}.jar")
+    private def artifacts = { ArtifactHandler artifacts, String variant ->
+        artifacts.add('archives', getAarFile(variant))
+        artifacts.add('archives', project.tasks["${variant ?: 'release'}SourcesJar"])
+    }
 
-        if (prevFile.exists() && prevFile.path != actualFile.path) {
+    private def getAarFile(String variant) {
+        if (variant == null) {
+            variant = 'release'
+        }
+
+        def aarParentDirectory = "$project.buildDir/outputs/aar/"
+        File aarFile = project.file(aarParentDirectory + "${project.name}-${variant}.aar")
+        File actualFile = project.file(aarParentDirectory + "${project.publisher.artifactId}.aar")
+
+        if (aarFile.exists() && aarFile.path != actualFile.path) {
             if (actualFile.exists()) {
                 actualFile.delete()
             }
-            actualFile << prevFile.bytes
+            actualFile << aarFile.bytes
         }
 
         return actualFile
+    }
+
+    private String getAarFilePathForLocalPublish(def variant) {
+        def aarParentDirectory = "$project.buildDir/outputs/aar/"
+
+        // Check if previous publish AAR exists (and delete it).
+        def prevFile = project.file(aarParentDirectory + "${project.name}.aar");
+        if (prevFile.exists()) {
+            prevFile.delete();
+        }
+
+        // Get the AAR file and rename it (so that the bintray plugin uploads the aar to the correct path).
+        File aarFile = project.file(aarParentDirectory + "${project.name}-${variant}.aar")
+
+        def newName = aarParentDirectory + "${project.name}-release.aar"
+
+        aarFile.renameTo(newName)
+
+        return newName
     }
 
 }

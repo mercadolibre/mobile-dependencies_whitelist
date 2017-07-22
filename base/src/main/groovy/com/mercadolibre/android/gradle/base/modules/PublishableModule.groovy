@@ -4,19 +4,13 @@ import com.mercadolibre.android.gradle.base.extensions.PublisherPluginExtension
 import com.mercadolibre.android.gradle.base.factories.PomFactory
 import org.gradle.api.GradleException
 import org.gradle.api.Project
-import org.gradle.api.plugins.JavaPlugin
 
 /**
  * Created by mfeldsztejn on 5/26/17.
  */
-class PublishableModule extends Module {
+abstract class PublishableModule extends Module {
 
     private static final String TASK_GET_PROJECT_VERSION = "getProjectVersion"
-
-    public static final String TYPE_JAR = 'jar'
-    public static final String TYPE_AAR = 'aar'
-
-    public static final String ANDROID_LIBRARY_PLUGIN_ID = "com.android.library"
 
     @Override
     void configure(Project project) {
@@ -31,50 +25,28 @@ class PublishableModule extends Module {
                 }
             }
 
-            plugins.withType(JavaPlugin) {
-                configureAs(project, TYPE_JAR)
-            }
+            apply plugin: 'maven'
+            apply plugin: 'com.jfrog.bintray'
 
-            plugins.withId(ANDROID_LIBRARY_PLUGIN_ID) {
-                configureAs(project, TYPE_AAR)
-            }
-        }
-
-        project.tasks['uploadArchives'].dependsOn.clear()
-    }
-
-    private def configureAs(Project project, String type) {
-        project.apply plugin: 'maven'
-        project.apply plugin: 'com.jfrog.bintray'
-
-        project.afterEvaluate {
-            validatePublisherContainer(project)
-            project.uploadArchives {
-                repositories {
-                    mavenDeployer {
-                        repository(url: "file://${System.properties['user.home']}/.m2/repository")
-                        PomFactory.create(new PomFactory.Builder().with {
-                            it.project = project
-                            it.packageType = type
-                            return it
-                        }).writeTo("build/poms/pom-default.xml")
+            afterEvaluate {
+                validatePublisherContainer(project)
+                uploadArchives {
+                    repositories {
+                        mavenDeployer {
+                            repository(url: "file://${System.properties['user.home']}/.m2/repository")
+                            PomFactory.create(new PomFactory.Builder().with {
+                                it.project = project
+                                it.packageType = type
+                                return it
+                            }).writeTo("build/poms/pom-default.xml")
+                        }
                     }
                 }
             }
-        }
 
-        Module module
-        switch (type) {
-            case TYPE_JAR:
-                module = new JavaModule()
-                break
-            case TYPE_AAR:
-            default:
-                module = new AndroidLibraryModule()
+            tasks['uploadArchives'].dependsOn.clear()
         }
-        module.configure(project)
     }
-
 
     /**
      * Validates that all the needed configuration is set within the 'publisher' container.

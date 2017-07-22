@@ -1,10 +1,14 @@
 package com.mercadolibre.android.gradle.base
 
+import com.mercadolibre.android.gradle.base.modules.AndroidLibraryPublishableModule
+import com.mercadolibre.android.gradle.base.modules.JavaPublishableModule
 import com.mercadolibre.android.gradle.base.modules.LintableModule
 import com.mercadolibre.android.gradle.base.modules.LockableModule
 import com.mercadolibre.android.gradle.base.modules.PublishableModule
+import com.mercadolibre.android.gradle.base.modules.RobolectricModule
 import org.gradle.api.Plugin
 import org.gradle.api.Project
+import org.gradle.api.plugins.JavaPlugin
 import org.gradle.api.tasks.testing.Test
 
 /**
@@ -40,8 +44,13 @@ class BasePlugin implements Plugin<Project> {
         testCoverage.createCoveragePost(project)
 
         project.subprojects.each {
-            if (it.pluginManager.hasPlugin(JAVA_PLUGIN) || it.pluginManager.hasPlugin(ANDROID_LIBRARY_PLUGIN)) {
-                new PublishableModule().configure(it)
+            if (it.plugins.withType(JavaPlugin)) {
+                new JavaPublishableModule().configure(it)
+            }
+
+            if (it.pluginManager.hasPlugin(ANDROID_LIBRARY_PLUGIN)) {
+                new AndroidLibraryPublishableModule().configure(it)
+                new RobolectricModule().configure(it)
             }
 
             project.afterEvaluate {
