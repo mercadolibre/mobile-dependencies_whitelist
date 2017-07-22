@@ -1,19 +1,15 @@
-package com.mercadolibre.android.gradle.library
+package com.mercadolibre.android.gradle.base.modules
 
-import com.mercadolibre.android.gradle.library.extensions.PublisherPluginExtension
-import com.mercadolibre.android.gradle.library.factories.PomFactory
-import com.mercadolibre.android.gradle.library.modules.AndroidLibraryModule
-import com.mercadolibre.android.gradle.library.modules.JavaModule
-import com.mercadolibre.android.gradle.library.modules.Module
+import com.mercadolibre.android.gradle.base.extensions.PublisherPluginExtension
+import com.mercadolibre.android.gradle.base.factories.PomFactory
 import org.gradle.api.GradleException
-import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.plugins.JavaPlugin
 
 /**
  * Created by mfeldsztejn on 5/26/17.
  */
-abstract class LibraryPlugin implements Plugin<Project> {
+class PublishableModule extends Module {
 
     private static final String TASK_GET_PROJECT_VERSION = "getProjectVersion"
 
@@ -23,7 +19,7 @@ abstract class LibraryPlugin implements Plugin<Project> {
     public static final String ANDROID_LIBRARY_PLUGIN_ID = "com.android.library"
 
     @Override
-    void apply(Project project) {
+    void configure(Project project) {
         createGetProjectVersionTask(project)
 
         project.with {

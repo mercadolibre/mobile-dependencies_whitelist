@@ -1,4 +1,4 @@
-package com.mercadolibre.android.gradle.library
+package com.mercadolibre.android.gradle.library.extensions
 
 /**
  * The 'publisher' extension.

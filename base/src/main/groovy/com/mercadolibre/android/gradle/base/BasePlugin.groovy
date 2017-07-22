@@ -101,8 +101,8 @@ class BasePlugin implements Plugin<Project> {
 
     /**
      * Set up lock task for each subproject that has the nebula plugin included.
-     * Also sets up an empty task for the root project, so we can call it without the need of a module
-     * to call all of the subproject tasks at the same time (eg ./gradlew lockVersions -> each module 'lockVersions')
+     * Also sets up an empty task for the root project, so we can call it without the need of a modules
+     * to call all of the subproject tasks at the same time (eg ./gradlew lockVersions -> each modules 'lockVersions')
      */
     private void setUpLocksTask() {
         def taskDescription = 'Locks the compiled project with the current versions of its dependencies to keep them in future assembles'

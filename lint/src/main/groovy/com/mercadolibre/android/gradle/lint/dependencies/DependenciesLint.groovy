@@ -80,7 +80,7 @@ class DependenciesLint implements Lint {
             /**
              * - Dependency cant be found in whitelist
              * - Isnt "unspecified" the name of the dependency
-             * - Dependency isnt from the same group (you CAN compile dependencies from your own module)
+             * - Dependency isnt from the same group (you CAN compile dependencies from your own modules)
              * Only if all of the above meet it will error.
              */
             if (!dependencyIsInWhitelist(dependencyFullName)
