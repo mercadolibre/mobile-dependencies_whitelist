@@ -94,23 +94,24 @@ class AndroidLibraryPublishableModule extends PublishableModule {
             it.variant = variant
             it.finalizedBy = 'uploadArchives'
             it.doFirst = { Project project ->
-                project.android.defaultPublishConfig = "${variant ?: ''}"
-            }
-            it.doLast = { Project project ->
-                project.artifacts.add('archives', project.file(getAarFilePathForLocalPublish(variant)))
-                project.artifacts.add('archives', project.tasks["${variant ?: ''}SourcesJar"])
+                project.android.defaultPublishConfig = "${variant ?: 'release'}"
 
-                def version = project.uploadArchives.repositories.mavenDeployer.pom.version
+                def version = project.publisher.version
                 project.uploadArchives.repositories.mavenDeployer.pom.version = "LOCAL-${variant?.toUpperCase() ?: 'RELEASE'}-${version}-${getTimestamp()}"
+                project.uploadArchives.repositories.mavenDeployer.pom.artifactId = project.publisher.artifactId
+                project.uploadArchives.repositories.mavenDeployer.pom.groupId = project.publisher.groupId
 
                 def pom = project.uploadArchives.repositories.mavenDeployer.pom
                 project.version = pom.version
-                project.group = pom.groupId
-                project.publisher.artifactId = pom.artifactId
+                project.group = project.publisher.groupId
+
+                pom.writeTo("build/poms/pom-default.xml")
 
                 // Point the repository to our .m2/repository directory.
                 project.uploadArchives.repositories.mavenDeployer.repository.url = "file://${System.properties['user.home']}/.m2/repository"
-
+            }
+            it.addArtifacts = { ArtifactHandler artifact, String artifactVariant ->
+                artifact.add('archives', project.file(getAarFilePathForLocalPublish(artifactVariant)))
             }
             return it
         })

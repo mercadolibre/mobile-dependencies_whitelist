@@ -34,11 +34,11 @@ abstract class PublishableModule extends Module {
                     repositories {
                         mavenDeployer {
                             repository(url: "file://${System.properties['user.home']}/.m2/repository")
-                            PomFactory.create(new PomFactory.Builder().with {
+                            pom = PomFactory.create(new PomFactory.Builder().with {
                                 it.project = project
                                 it.packageType = packageType()
                                 return it
-                            }).writeTo("build/poms/pom-default.xml")
+                            })
                         }
                     }
                 }
