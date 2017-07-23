@@ -36,7 +36,7 @@ abstract class PublishableModule extends Module {
                             repository(url: "file://${System.properties['user.home']}/.m2/repository")
                             PomFactory.create(new PomFactory.Builder().with {
                                 it.project = project
-                                it.packageType = type
+                                it.packageType = packageType()
                                 return it
                             }).writeTo("build/poms/pom-default.xml")
                         }
@@ -47,6 +47,8 @@ abstract class PublishableModule extends Module {
             tasks['uploadArchives'].dependsOn.clear()
         }
     }
+
+    protected abstract String packageType()
 
     /**
      * Validates that all the needed configuration is set within the 'publisher' container.

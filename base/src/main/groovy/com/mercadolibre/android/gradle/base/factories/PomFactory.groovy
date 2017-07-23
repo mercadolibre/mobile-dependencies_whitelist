@@ -35,14 +35,27 @@ class PomFactory {
                 (it.version.text() == 'unspecified' || it.version.text() == 'undefined')
             }.each {
                 it.groupId*.value = publisher.groupId
-                it.version*.value = publisher.version
+
+                // Version might contain a timestamp, meaning that if we put for other local versions
+                // this same timestamp, they wont be resolvable.
+                // Check if a timestamp is present, if so, make it dynamic, else keep the publisher.version
+                // This regex matches if: Starts with garbage + '-' + ends with 10 to 16 digits.
+                // Eg: ALPHA-RELEASE-9.3.2-201704080505 -> ALPHA-RELEASE-9.3.2-+
+                if (publisher.version ==~ /^.*-\d{10,16}/) {
+                    it.version*.value = (publisher.version as String).replaceAll(/-\d{10,16}/, '-+')
+                } else {
+                    it.version*.value = publisher.version
+                }
 
                 // Check over all the subprojects for someone with that project name and use its artifactId of publisher
-                def artifact = project.rootProject.subprojects.find {
-                    it.name == it.artifactId.text()
+                def artifact = project.rootProject.subprojects.find { subproject ->
+                    subproject.name == it.artifactId.text()
                 }.publisher.artifactId
 
                 it.artifactId*.value = artifact
+
+                // In local dependencies a classifier is added for knowing the compiled variant, remove it.
+                it.remove(it.classifier)
             }
         }.withXml { XmlProvider xmlProvider ->
             // This is another compose where we change dynamic versions by the ones declared in the .lock (if existent)

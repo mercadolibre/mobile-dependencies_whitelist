@@ -21,6 +21,7 @@ class PublishTaskFactory {
         if (builder.project == null || builder.name == null || builder.packageType == null) {
             throw new IllegalStateException("Need a project and a publish name")
         }
+
         def project = builder.project
 
         def task = project.tasks.create "publish${builder.packageType.capitalize()}${builder.name.capitalize()}"

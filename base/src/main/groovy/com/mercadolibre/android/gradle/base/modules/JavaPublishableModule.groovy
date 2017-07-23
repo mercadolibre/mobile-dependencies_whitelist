@@ -24,6 +24,11 @@ class JavaPublishableModule extends PublishableModule {
         createTasks()
     }
 
+    @Override
+    protected String packageType() {
+        return PACKAGE_TYPE
+    }
+
     private void applyPlugins() {
         project.afterEvaluate {
             project.rootProject.buildscript.configurations.classpath.each {
@@ -48,7 +53,7 @@ class JavaPublishableModule extends PublishableModule {
     }
 
     private taskDependencies = {
-        return ["checkLocalDependencies", "assemble", "test", "check", "releaseSourcesJar"]
+        return ["assemble", "test", "check", "releaseSourcesJar"]
     }
 
     private def artifacts = { ArtifactHandler artifacts, String variant ->
@@ -61,7 +66,7 @@ class JavaPublishableModule extends PublishableModule {
             it.packageType = PACKAGE_TYPE
             it.suffixVersion = "ALPHA-${getTimestamp()}"
             it.dependencies = taskDependencies()
-            it.project = project
+            it.project = this.project
             it.name = "alpha"
             it.addArtifacts = artifacts
             return it
@@ -72,7 +77,7 @@ class JavaPublishableModule extends PublishableModule {
         PublishTaskFactory.create(new PublishTaskFactory.Builder().with {
             it.packageType = PACKAGE_TYPE
             it.dependencies = taskDependencies()
-            it.project = project
+            it.project = this.project
             it.name = "local"
             it.finalizedBy = 'uploadArchives'
             it.doLast = { Project project ->
@@ -97,7 +102,7 @@ class JavaPublishableModule extends PublishableModule {
         PublishTaskFactory.create(new PublishTaskFactory.Builder().with {
             it.packageType = PACKAGE_TYPE
             it.dependencies = taskDependencies()
-            it.project = project
+            it.project = this.project
             it.name = "release"
             it.addArtifacts = artifacts
             return it
@@ -110,7 +115,7 @@ class JavaPublishableModule extends PublishableModule {
             it.suffixVersion = getTimestamp()
             it.prefixVersion = "EXPERIMENTAL"
             it.dependencies = taskDependencies()
-            it.project = project
+            it.project = this.project
             it.name = "experimental"
             it.repoName = 'android-experimental'
             it.addArtifacts = artifacts

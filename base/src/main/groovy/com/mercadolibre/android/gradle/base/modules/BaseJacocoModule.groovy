@@ -2,6 +2,7 @@ package com.mercadolibre.android.gradle.base.modules
 
 import org.gradle.api.GradleException
 import org.gradle.api.Project
+import org.gradle.api.tasks.testing.Test
 import org.gradle.testing.jacoco.tasks.JacocoReport
 
 /**
@@ -9,7 +10,7 @@ import org.gradle.testing.jacoco.tasks.JacocoReport
  */
 abstract class BaseJacocoModule extends Module {
 
-    private static final String JACOCO_VERSION = "0.7.7.201606060606"
+    def static final String JACOCO_VERSION = "0.7.7.201606060606"
 
     protected Project project
 
@@ -22,6 +23,13 @@ abstract class BaseJacocoModule extends Module {
 
             jacoco {
                 toolVersion = JACOCO_VERSION
+            }
+
+            tasks.withType(Test) {
+                testLogging {
+                    events "FAILED"
+                    exceptionFormat "full"
+                }
             }
         }
 
@@ -70,7 +78,7 @@ abstract class BaseJacocoModule extends Module {
     /**
      * Find list of projects whose Jacoco report tasks are to be considered.
      */
-    private static def getReportTasks(Project project) {
+    def static getReportTasks(Project project) {
         project.with {
             if (hasProperty('variant')) {
                 return collectJacocoTasks(subprojects, getProperty('variant') as String)
@@ -83,7 +91,7 @@ abstract class BaseJacocoModule extends Module {
     /**
      * Find all JacocoReport tasks except for the jacocoFullReport task we're creating here.
      */
-    private static def collectJacocoTasks(Set<Project> projects, String variant = 'Release') {
+    def static collectJacocoTasks(Set<Project> projects, String variant = 'Release') {
         return projects.collect {
             it.tasks.withType(JacocoReport).findAll {
                 it.name.endsWith(variant)
@@ -91,7 +99,7 @@ abstract class BaseJacocoModule extends Module {
         }.flatten()
     }
 
-    private void createCleanJacocoTask() {
+    def void createCleanJacocoTask() {
         def task = project.tasks.create 'cleanJacocoFiles'
         task.setDescription('Clean all Jacoco related files.')
 

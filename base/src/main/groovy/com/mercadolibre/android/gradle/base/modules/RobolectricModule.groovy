@@ -45,7 +45,9 @@ class RobolectricModule extends Module {
             def taskName = "test${variant.flavorName.capitalize()}${variant.buildType.name.capitalize()}UnitTest"
             def testTask = project.tasks.findByName(taskName)
 
-            testTask.dependsOn(task)
+            if (testTask) {
+                testTask.dependsOn(task)
+            }
         }
     }
 

@@ -24,6 +24,11 @@ class AndroidLibraryPublishableModule extends PublishableModule {
         createTasks()
     }
 
+    @Override
+    protected String packageType() {
+        return PACKAGE_TYPE
+    }
+
     private void applyPlugins() {
         project.apply plugin: 'com.github.dcendents.android-maven'
 
@@ -42,11 +47,13 @@ class AndroidLibraryPublishableModule extends PublishableModule {
     @SuppressWarnings("GroovyAssignabilityCheck")
     private void createTasks() {
         project.android.libraryVariants.all { variant ->
-            // Create sources tasks
-            def sourcesJarTask = project.tasks.create "${variant.buildType.name}SourcesJar", Jar
-            sourcesJarTask.dependsOn variant.javaCompile
-            sourcesJarTask.classifier = 'sources'
-            sourcesJarTask.from variant.javaCompile.source
+            // Create sources tasks if they dont exist
+            if (!project.tasks.findByName("${variant.buildType.name}SourcesJar")) {
+                def sourcesJarTask = project.tasks.create "${variant.buildType.name}SourcesJar", Jar
+                sourcesJarTask.dependsOn variant.javaCompile
+                sourcesJarTask.classifier = 'sources'
+                sourcesJarTask.from variant.javaCompile.source
+            }
 
             createAlpha(variant.buildType.name)
             createExperimental(variant.buildType.name)
@@ -69,9 +76,9 @@ class AndroidLibraryPublishableModule extends PublishableModule {
             } else {
                 it.suffixVersion = defaultSuffixVersion
             }
-            it.dependencies = [ "checkLocalDependencies", "assemble${variant?.capitalize() ?: 'Release'}", "test${variant?.capitalize() ?: 'Release'}UnitTest", "check", "${variant ?: 'release'}SourcesJar" ]
-            it.project = project
-            it.name = "alpha${variant.capitalize() ?: ''}"
+            it.dependencies = [ "assemble${variant?.capitalize() ?: 'Release'}", "test${variant?.capitalize() ?: 'Release'}UnitTest", "check", "${variant ?: 'release'}SourcesJar" ]
+            it.project = this.project
+            it.name = "alpha${variant?.capitalize() ?: ''}"
             it.variant = variant
             it.addArtifacts = artifacts
             return it
@@ -81,20 +88,20 @@ class AndroidLibraryPublishableModule extends PublishableModule {
     private void createLocal(String variant = null) {
         PublishTaskFactory.create(new PublishTaskFactory.Builder().with {
             it.packageType = PACKAGE_TYPE
-            it.dependencies = [ 'checkLocalDependencies', "assemble${variant?.capitalize() ?: 'Release'}", "${variant ?: 'release'}SourcesJar" ]
-            it.project = project
-            it.name = "local${variant.capitalize() ?: ''}"
+            it.dependencies = [ "assemble${variant?.capitalize() ?: 'Release'}", "${variant ?: 'release'}SourcesJar" ]
+            it.project = this.project
+            it.name = "local${variant?.capitalize() ?: ''}"
             it.variant = variant
             it.finalizedBy = 'uploadArchives'
             it.doFirst = { Project project ->
-                project.android.defaultPublishConfig = "${variant}"
+                project.android.defaultPublishConfig = "${variant ?: ''}"
             }
             it.doLast = { Project project ->
                 project.artifacts.add('archives', project.file(getAarFilePathForLocalPublish(variant)))
-                project.artifacts.add('archives', project.tasks["${variant}SourcesJar"])
+                project.artifacts.add('archives', project.tasks["${variant ?: ''}SourcesJar"])
 
                 def version = project.uploadArchives.repositories.mavenDeployer.pom.version
-                project.uploadArchives.repositories.mavenDeployer.pom.version = "LOCAL-${variant.toUpperCase()}-${version}-${getTimestamp()}"
+                project.uploadArchives.repositories.mavenDeployer.pom.version = "LOCAL-${variant?.toUpperCase() ?: 'RELEASE'}-${version}-${getTimestamp()}"
 
                 def pom = project.uploadArchives.repositories.mavenDeployer.pom
                 project.version = pom.version
@@ -114,9 +121,9 @@ class AndroidLibraryPublishableModule extends PublishableModule {
         // Please note that the release wont have any preffix or suffix of that variant, its just the release
         PublishTaskFactory.create(new PublishTaskFactory.Builder().with {
             it.packageType = PACKAGE_TYPE
-            it.dependencies = [ "checkLocalDependencies", "assemble${variant?.capitalize() ?: 'Release'}", "test${variant?.capitalize() ?: 'Release'}UnitTest", "check", "${variant ?: 'release'}SourcesJar" ]
-            it.project = project
-            it.name = "release${variant.capitalize() ?: ''}"
+            it.dependencies = [ "assemble${variant?.capitalize() ?: 'Release'}", "test${variant?.capitalize() ?: 'Release'}UnitTest", "check", "${variant ?: 'release'}SourcesJar" ]
+            it.project = this.project
+            it.name = "release${variant?.capitalize() ?: ''}"
             it.variant = variant
             it.addArtifacts = artifacts
             return it
@@ -133,8 +140,8 @@ class AndroidLibraryPublishableModule extends PublishableModule {
             } else {
                 it.prefixVersion = defaultPrefixVersion
             }
-            it.dependencies = [ "checkLocalDependencies", "assemble${variant?.capitalize() ?: 'Release'}", "${variant ?: 'release'}SourcesJar" ]
-            it.project = project
+            it.dependencies = [ "assemble${variant?.capitalize() ?: 'Release'}", "${variant ?: 'release'}SourcesJar" ]
+            it.project = this.project
             it.name = "experimental${variant?.capitalize() ?: ''}"
             it.repoName = 'android-experimental'
             it.variant = variant
@@ -168,6 +175,10 @@ class AndroidLibraryPublishableModule extends PublishableModule {
     }
 
     private String getAarFilePathForLocalPublish(def variant) {
+        if (variant == null) {
+            variant = 'release'
+        }
+
         def aarParentDirectory = "$project.buildDir/outputs/aar/"
 
         // Check if previous publish AAR exists (and delete it).

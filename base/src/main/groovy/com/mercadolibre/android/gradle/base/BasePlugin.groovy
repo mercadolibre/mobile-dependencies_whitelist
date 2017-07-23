@@ -17,21 +17,27 @@ class BasePlugin implements Plugin<Project> {
     private static final String NEBULA_LOCK_CLASSPATH = "com.netflix.nebula/gradle-dependency-lock-plugin"
     private static final String LINT_PLUGIN_CLASSPATH= "com.mercadolibre.android.gradle/lint"
 
-    private static final Module[] ANDROID_LIBRARY_MODULES = [
-            new AndroidLibraryPublishableModule(),
-            new RobolectricModule(),
-            new AndroidJacocoModule()
-    ]
+    private static final ANDROID_LIBRARY_MODULES = { ->
+        return [
+                new AndroidLibraryPublishableModule(),
+                new RobolectricModule(),
+                new AndroidJacocoModule()
+        ]
+    }
 
-    private static final Module[] ANDROID_APPLICATION_MODULES = [
-            new RobolectricModule(),
-            new AndroidJacocoModule()
-    ]
+    private static final ANDROID_APPLICATION_MODULES = { ->
+        return [
+                new RobolectricModule(),
+                new AndroidJacocoModule()
+        ]
+    }
 
-    private static final Module[] JAVA_MODULES = [
-            new JavaPublishableModule(),
-            new JavaJacocoModule()
-    ]
+    private static final JAVA_MODULES = { ->
+        return [
+                new JavaPublishableModule(),
+                new JavaJacocoModule()
+        ]
+    }
 
     /**
      * The project.
@@ -49,28 +55,30 @@ class BasePlugin implements Plugin<Project> {
         addHasClasspathMethod()
         setupRepositories()
 
-        setUpTestsLogging()
-
-        project.subprojects.each {
-            if (it.plugins.withType(JavaPlugin)) {
-                JAVA_MODULES.each { module -> module.configure(it) }
+        project.subprojects { Project subproject ->
+            // Apply modules depending on already applied plugins
+            subproject.plugins.withType(JavaPlugin) {
+                JAVA_MODULES().each { module -> module.configure(subproject) }
             }
 
-            if (it.pluginManager.hasPlugin(ANDROID_LIBRARY_PLUGIN)) {
-                ANDROID_LIBRARY_MODULES.each { module -> module.configure(it) }
+            subproject.plugins.withId(ANDROID_LIBRARY_PLUGIN) {
+                ANDROID_LIBRARY_MODULES().each { module -> module.configure(subproject) }
             }
 
-            if (it.pluginManager.hasPlugin(ANDROID_APPLICATION_PLUGIN)) {
-                ANDROID_APPLICATION_MODULES.each { module -> module.configure(it) }
+            subproject.plugins.withId(ANDROID_APPLICATION_PLUGIN) {
+                ANDROID_APPLICATION_MODULES().each { module -> module.configure(subproject) }
             }
 
+            // Depending on added classpaths, this modules with apply plugins
             project.afterEvaluate {
                 if (project.hasClasspath(NEBULA_LOCK_CLASSPATH)) {
-                    new LockableModule().configure(it)
+                    new LockableModule().configure(subproject)
                 }
 
-                if (project.hasClasspath(LINT_PLUGIN_CLASSPATH) && it.pluginManager.hasPlugin(ANDROID_LIBRARY_PLUGIN)) {
-                    new LintableModule().configure(it)
+                if (project.hasClasspath(LINT_PLUGIN_CLASSPATH)) {
+                    subproject.plugins.withId(ANDROID_LIBRARY_PLUGIN) {
+                        new LintableModule().configure(subproject)
+                    }
                 }
             }
         }
@@ -123,20 +131,6 @@ class BasePlugin implements Plugin<Project> {
                         username 'bintray-read'
                         password 'ff5072eaf799961add07d5484a6283eb3939556b'
                     }
-                }
-            }
-        }
-    }
-
-    /**
-     * Setup unit tests logging to log only failed tests to keep output clean.
-     */
-    private void setUpTestsLogging() {
-        project.subprojects.collect {
-            it.tasks.withType(Test) {
-                testLogging {
-                    events "FAILED"
-                    exceptionFormat "full"
                 }
             }
         }
