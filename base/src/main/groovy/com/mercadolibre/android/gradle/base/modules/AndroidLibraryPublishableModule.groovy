@@ -30,7 +30,7 @@ class AndroidLibraryPublishableModule extends PublishableModule {
         createTask(new PublishAarReleaseTask(), libraryVariant, "publishAarRelease${libraryVariant.name.capitalize()}")
         createTask(new PublishAarLocalTask(), libraryVariant, "publishAarLocal${libraryVariant.name.capitalize()}")
 
-        if (libraryVariant.name == 'release') {
+        if (libraryVariant.name == 'release' && !libraryVariant.flavorName) {
             // Create tasks without the variant suffix that default to the main sourcesets
             createTask(new PublishAarAlphaTask(), libraryVariant, "publishAarAlpha")
             createTask(new PublishAarExperimentalTask(), libraryVariant, "publishAarExperimental")
