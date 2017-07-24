@@ -35,7 +35,30 @@ class PomUtils {
                     def dependencyNode = dependenciesNode.appendNode('dependency')
                     dependencyNode.appendNode('groupId', it.group)
                     dependencyNode.appendNode('artifactId', it.name)
-                    dependencyNode.appendNode('version', it.version)
+
+                    if (it.group == xmlProvider.asNode().groupId.text()) {
+                        // Its a local dependency, so lets further check
+                        // if maybe the version has a timestamp, in which
+                        // case, we should convert it to a dynamic version.
+                        if (xmlProvider.asNode().version.text() ==~ /^.*-\d{10,16}/) {
+                            // The version has at the end a timestamp.
+                            // We will add the version as dynamic
+                            // If the user doesnt want this, he should before publishing
+                            // a module, publish its dependants and change
+                            // the local compilation
+                            dependencyNode.appendNode('version', xmlProvider.asNode().version.text()
+                                    .replaceAll(/-\d{10,16}/, '-+'))
+                        } else {
+                            // If it doesnt have a timestamp, we should assume its a
+                            // production publication, where the user explicitly
+                            // wants this version (its already published or will be
+                            // soon
+                            dependencyNode.appendNode('version', it.version)
+                        }
+                    } else {
+                        // This dependency isnt local, so use the verison it has.
+                        dependencyNode.appendNode('version', it.version)
+                    }
 
                     def scope
                     switch (configuration.name) {
@@ -55,38 +78,6 @@ class PomUtils {
                     dependencyNode.appendNode('scope', scope)
                 }
             }
-        }
-    }
-
-    static void composeLocalDependencies(Project project, XmlProvider xmlProvider) {
-        // This is a "compose" where we change local dependencies for their group:artifact:version declared
-        xmlProvider.asNode().dependencies.'*'.findAll() {
-            it.groupId.text() == project.rootProject.name &&
-                    (it.version.text() == 'unspecified' || it.version.text() == 'undefined')
-        }.each {
-            it.groupId*.value = project.group
-
-            // Version might contain a timestamp, meaning that if we put for other local versions
-            // this same timestamp, they wont be resolvable.
-            // Check if a timestamp is present, if so, make it dynamic, else keep the version
-            // This regex matches if: Starts with garbage + '-' + ends with 10 to 16 digits.
-            // Eg: ALPHA-RELEASE-9.3.2-201704080505 -> ALPHA-RELEASE-9.3.2-+
-            String pomVersion = xmlProvider.asNode().version*.text()
-            if (pomVersion ==~ /^.*-\d{10,16}/) {
-                it.version*.value = pomVersion.replaceAll(/-\d{10,16}/, '-+')
-            } else {
-                it.version*.value = pomVersion
-            }
-
-            // Check over all the subprojects for someone with that project name and use its name
-            def artifact = project.rootProject.subprojects.find { subproject ->
-                subproject.name == it.artifactId.text()
-            }.name
-
-            it.artifactId*.value = artifact
-
-            // In local dependencies a classifier is added for knowing the compiled variant, remove it.
-            it.remove(it.classifier)
         }
     }
 

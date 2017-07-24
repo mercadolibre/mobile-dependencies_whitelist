@@ -94,7 +94,6 @@ abstract class PublishJarTask extends PublishTask {
                     xmlProvider.asNode().packaging*.value = 'jar'
 
                     PomUtils.injectDependencies(project, xmlProvider, variant.name)
-                    PomUtils.composeLocalDependencies(project, xmlProvider)
                     PomUtils.composeDynamicDependencies(project, xmlProvider)
 
                     project.file("${project.buildDir}/publications/${taskName}/pom-default.xml")

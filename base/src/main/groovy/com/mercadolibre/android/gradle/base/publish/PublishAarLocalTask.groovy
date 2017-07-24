@@ -16,7 +16,7 @@ class PublishAarLocalTask extends PublishAarTask {
         createMavenPublication()
 
         project.task(builder.taskName) {
-            dependsOn "check", "${variant.name}SourcesJar", "${variant.name}JavadocJar"
+            dependsOn "${variant.name}SourcesJar", "${variant.name}JavadocJar"
             doLast {
                 println "Publishing: ${project.group}:${project.name}:${VersionContainer.get(builder.taskName, project.version as String)}"
             }
