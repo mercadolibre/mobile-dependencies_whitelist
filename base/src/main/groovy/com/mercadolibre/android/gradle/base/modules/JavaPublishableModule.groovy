@@ -43,27 +43,27 @@ class JavaPublishableModule extends PublishableModule {
     private void createTasks() {
         // JAR projects dont have local publishes since gradle already provides
         // the `install` task for it
+        project.afterEvaluate {
+            project.sourceSets.each {
+                if (it.name != 'test') {
+                    createTask(new PublishJarAlphaTask(), it, "publishJarAlpha${it.name.capitalize()}")
+                    createTask(new PublishJarReleaseTask(), it, "publishJarRelease${it.name.capitalize()}")
+                    createTask(new PublishJarExperimentalTask(), it, "publishJarExperimental${it.name.capitalize()}")
+                }
 
-        project.sourceSets.each {
-            if (it.name != 'test') {
-                createTask(new PublishJarAlphaTask(), it, "publishJarAlpha${it.name}")
-                createTask(new PublishJarReleaseTask(), it, "publishJarRelease${it.name}")
-                createTask(new PublishJarExperimentalTask(), it, "publishJarExperimental${it.name}")
-            }
+                if (it.name == 'main') {
+                    // If release, create mirror tasks without the flavor name
+                    createTask(new PublishJarAlphaTask(), it, "publishJarAlpha")
+                    createTask(new PublishJarReleaseTask(), it, "publishJarRelease")
+                    createTask(new PublishJarExperimentalTask(), it, "publishJarExperimental")
 
-            if (it.name == 'release') {
-                // If release, create mirror tasks without the flavor name
-                createTask(new PublishJarAlphaTask(), it, "publishJarAlpha")
-                createTask(new PublishJarReleaseTask(), it, "publishJarRelease")
-                createTask(new PublishJarExperimentalTask(), it, "publishJarExperimental")
-
-                // And also mirror them without the Jar suffix too
-                createTask(new PublishJarAlphaTask(), it, "publishAlpha")
-                createTask(new PublishJarReleaseTask(), it, "publishRelease")
-                createTask(new PublishJarExperimentalTask(), it, "publishExperimental")
+                    // And also mirror them without the Jar suffix too
+                    createTask(new PublishJarAlphaTask(), it, "publishAlpha")
+                    createTask(new PublishJarReleaseTask(), it, "publishRelease")
+                    createTask(new PublishJarExperimentalTask(), it, "publishExperimental")
+                }
             }
         }
-
     }
 
 }

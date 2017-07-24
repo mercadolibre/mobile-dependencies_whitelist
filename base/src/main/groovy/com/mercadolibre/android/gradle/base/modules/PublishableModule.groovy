@@ -3,6 +3,7 @@ package com.mercadolibre.android.gradle.base.modules
 import com.mercadolibre.android.gradle.base.extensions.PublisherPluginExtension
 import org.gradle.api.GradleException
 import org.gradle.api.Project
+import org.gradle.api.plugins.MavenPlugin
 import org.gradle.api.publish.maven.plugins.MavenPublishPlugin
 
 /**
@@ -16,6 +17,7 @@ abstract class PublishableModule extends Module {
     void configure(Project project) {
         project.with {
             apply plugin: MavenPublishPlugin
+            apply plugin: MavenPlugin
             apply plugin: 'com.jfrog.bintray'
 
             extensions.create('publisher', PublisherPluginExtension)

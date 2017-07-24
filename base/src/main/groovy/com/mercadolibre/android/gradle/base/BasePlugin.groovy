@@ -4,6 +4,7 @@ import com.mercadolibre.android.gradle.base.modules.*
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.plugins.JavaPlugin
+import org.gradle.api.publish.maven.MavenPublication
 
 /**
  * Gradle base plugin for MercadoLibre Android projects/modules.
@@ -54,7 +55,7 @@ class BasePlugin implements Plugin<Project> {
         addHasClasspathMethod()
         setupRepositories()
 
-        project.subprojects { Project subproject ->
+        project.subprojects.each { Project subproject ->
             // Apply modules depending on already applied plugins
             subproject.plugins.withType(JavaPlugin) {
                 JAVA_MODULES().each { module -> module.configure(subproject) }
