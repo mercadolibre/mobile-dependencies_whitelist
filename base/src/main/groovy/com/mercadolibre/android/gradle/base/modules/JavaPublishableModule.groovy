@@ -16,16 +16,7 @@ class JavaPublishableModule extends PublishableModule {
 
         this.project = project
 
-        applyPlugins()
         createTasks()
-    }
-
-    private void applyPlugins() {
-        project.afterEvaluate {
-            if (project.rootProject.hasClasspath(JACOCO_PLUGIN_CLASSPATH)) {
-                project.apply plugin: 'com.mercadolibre.android.gradle.jacoco'
-            }
-        }
     }
 
     protected void createTask(PublishJarTask task, def libraryVariant, String theTaskName) {

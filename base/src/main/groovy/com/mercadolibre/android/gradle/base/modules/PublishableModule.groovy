@@ -1,6 +1,5 @@
 package com.mercadolibre.android.gradle.base.modules
 
-import org.gradle.api.GradleException
 import org.gradle.api.Project
 import org.gradle.api.plugins.MavenPlugin
 import org.gradle.api.publish.maven.plugins.MavenPublishPlugin
