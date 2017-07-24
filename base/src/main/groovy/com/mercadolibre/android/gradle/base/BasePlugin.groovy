@@ -98,12 +98,13 @@ class BasePlugin implements Plugin<Project> {
 
     private void addHasClasspathMethod() {
         project.metaClass.hasClasspath = { String path ->
+            boolean found = false
             delegate.buildscript.configurations.classpath.each { classpath ->
                 if (classpath.path.contains(path)) {
-                    return true
+                    found = true
                 }
             }
-            return false
+            return found
         }
     }
 

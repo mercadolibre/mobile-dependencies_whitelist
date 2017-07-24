@@ -94,20 +94,13 @@ class PomUtils {
             }.each { def dependency ->
                 // Look in the json if the dependency name exists
                 json.each { def config ->
-                    def jsonDependency = config["${dependency.groupId.text()}:${dependency.artifactId.text()}"]
+                    def jsonDependency = config.value["${dependency.groupId.text()}:${dependency.artifactId.text()}"]
                     if (jsonDependency && jsonDependency.locked && !jsonDependency.locked.contains('+')) {
                         dependency.version*.value = jsonDependency.locked
                     }
                 }
             }
         }
-    }
-
-    static class Builder {
-
-        Project project = null
-        String packageType = null
-
     }
 
 }

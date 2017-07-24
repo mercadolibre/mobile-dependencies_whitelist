@@ -24,13 +24,11 @@ class AndroidLibraryPublishableModule extends PublishableModule {
         project.apply plugin: 'com.github.dcendents.android-maven'
 
         project.afterEvaluate {
-            project.rootProject.buildscript.configurations.classpath.each {
-                if (it.path.contains(JACOCO_PLUGIN_CLASSPATH)) {
+            if (project.rootProject.hasClasspath(JACOCO_PLUGIN_CLASSPATH)) {
                     project.apply plugin: 'com.mercadolibre.android.gradle.jacoco'
-                }
-                if (it.path.contains(ROBOLECTRIC_PLUGIN_CLASSPATH)) {
-                    project.apply plugin: 'com.mercadolibre.android.gradle.robolectric'
-                }
+            }
+            if (project.rootProject.hasClasspath(ROBOLECTRIC_PLUGIN_CLASSPATH)) {
+                project.apply plugin: 'com.mercadolibre.android.gradle.robolectric'
             }
         }
     }

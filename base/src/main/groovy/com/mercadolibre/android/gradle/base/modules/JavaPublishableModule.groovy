@@ -22,10 +22,8 @@ class JavaPublishableModule extends PublishableModule {
 
     private void applyPlugins() {
         project.afterEvaluate {
-            project.rootProject.buildscript.configurations.classpath.each {
-                if (it.path.contains(JACOCO_PLUGIN_CLASSPATH)) {
-                    project.apply plugin: 'com.mercadolibre.android.gradle.jacoco'
-                }
+            if (project.rootProject.hasClasspath(JACOCO_PLUGIN_CLASSPATH)) {
+                project.apply plugin: 'com.mercadolibre.android.gradle.jacoco'
             }
         }
     }
