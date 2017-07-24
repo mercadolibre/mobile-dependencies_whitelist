@@ -20,6 +20,7 @@ class PublishAarLocalTask extends PublishAarTask {
             doLast {
                 println "Publishing: ${project.group}:${project.name}:${VersionContainer.get(builder.taskName, project.version as String)}"
             }
+            group = 'publishing'
             finalizedBy "publish${taskName.capitalize()}PublicationToMavenLocal"
         }
     }

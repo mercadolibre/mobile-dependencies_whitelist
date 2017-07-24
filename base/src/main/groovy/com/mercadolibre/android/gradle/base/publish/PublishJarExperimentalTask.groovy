@@ -27,6 +27,7 @@ class PublishJarExperimentalTask extends PublishJarTask {
                     return it
                 })
             }
+            group = 'publishing'
 
             dependsOn "check", "${variant.name}SourcesJar", "${variant.name}JavadocJar"
             finalizedBy 'bintrayUpload'
