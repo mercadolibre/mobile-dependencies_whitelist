@@ -116,8 +116,12 @@ abstract class PublishAarTask extends PublishTask {
 
             project.tasks.whenTaskAdded {
                 if (it.name.contains('generatePomFileFor')) {
-                    String hookedTask = it.name.replaceFirst('generatePomFileFor', '').replaceFirst("Publication", '').uncapitalize()
-                    project.tasks.findByName(hookedTask).dependsOn it
+                    String hookedTask = it.name.replaceFirst('generatePomFileFor', '').replaceFirst("Publication", '')
+
+                    if (hookedTask != null && hookedTask.length() != 0) {
+                        hookedTask = (Character.toLowerCase(hookedTask.charAt(0)) as String) + hookedTask.substring(1)
+                        project.tasks.findByName(hookedTask).dependsOn it
+                    }
                 }
             }
         }
