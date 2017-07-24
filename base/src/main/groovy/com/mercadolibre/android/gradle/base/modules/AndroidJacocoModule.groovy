@@ -94,6 +94,16 @@ class AndroidJacocoModule extends BaseJacocoModule {
                 jacocoTask.dependsOn unitTest
             }
 
+            if (project.tasks.findByName('jacocoFullReport')) {
+                project.tasks.jacocoFullReport.dependsOn jacocoTask
+            } else {
+                project.tasks.whenTaskAdded {
+                    if (it.name.contentEquals('jacocoFullReport')) {
+                        it.dependsOn jacocoTask
+                    }
+                }
+            }
+
             //If testCoverage is not enabled, Android Jacoco' plugin will not instrumentate project classes
             if (variant.buildType.testCoverageEnabled) {
                 project.logger.warn("WARNING: You should DISABLE \"android.buildTypes.${buildTypeName}.testCoverageEnabled\" in your build.gradle in order to make \"${taskName}\" run succesfully in \"${project.name}\".")

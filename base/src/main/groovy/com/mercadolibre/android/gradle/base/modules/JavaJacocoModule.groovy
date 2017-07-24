@@ -1,6 +1,7 @@
 package com.mercadolibre.android.gradle.base.modules
 
 import org.gradle.api.Project
+import org.gradle.api.Task
 
 /**
  * Created by saguilera on 7/22/17.
@@ -12,7 +13,16 @@ class JavaJacocoModule extends BaseJacocoModule {
         super.configure(project)
 
         project.afterEvaluate {
-            project.tasks.findByName("jacocoFullReport").dependsOn project.tasks.findByName("jacocoTestReport")
+            Task jacocoTestReport = project.tasks.findByName("jacocoTestReport")
+            if (project.tasks.findByName('jacocoFullReport')) {
+                project.tasks.jacocoFullReport.dependsOn jacocoTestReport
+            } else {
+                project.tasks.whenTaskAdded {
+                    if (it.name.contentEquals('jacocoFullReport')) {
+                        it.dependsOn jacocoTestReport
+                    }
+                }
+            }
         }
     }
 
