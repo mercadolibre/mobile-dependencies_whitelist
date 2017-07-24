@@ -1,5 +1,6 @@
 package com.mercadolibre.android.gradle.base.publish
 
+import com.mercadolibre.android.gradle.base.utils.VersionContainer
 import org.gradle.api.Task
 
 /**
@@ -7,26 +8,16 @@ import org.gradle.api.Task
  */
 class PublishAarLocalTask extends PublishAarTask {
 
-    private String localVersion
-
     Task create(PublishTask.Builder builder) {
         super.create(builder)
 
-        localVersion = "${project.publisher.version}-LOCAL-${getTimestamp()}"
+        VersionContainer.put(builder.taskName, "${project.version}-LOCAL-${getTimestamp()}")
 
         createMavenPublication()
 
         project.task(builder.taskName) {
-            doFirst {
-                project.version = version()
-            }
             dependsOn "check", "${variant.name}SourcesJar", "${variant.name}JavadocJar"
-            finalizedBy "publish${taskName.capitalize()}PublicationToMavenLocal"
+            finalizedBy "${taskName}PublicationToMavenLocal"
         }
-    }
-
-    @Override
-    protected String version() {
-        return localVersion
     }
 }

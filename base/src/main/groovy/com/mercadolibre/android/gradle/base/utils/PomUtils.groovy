@@ -12,51 +12,30 @@ class PomUtils {
 
     private static final String DEPENDENCY_LOCK_FILE_NAME = "dependencies.lock"
 
-    static MavenPom create(Builder builder) {
-        Project project = builder.project
-        String packagingType = builder.packageType
-
-        def publisher = project.publisher
-        MavenPom pom = project.pom { MavenPom pom ->
-            pom.version = publisher.version
-            pom.artifactId = publisher.artifactId
-            pom.groupId = publisher.groupId
-            pom.packaging = packagingType
-
-            pom.project { // This is why the variable is called proj. Else they will conflict
-                packaging packagingType
-            }
-        }.withXml { XmlProvider xmlProvider ->
-            composeLocalDependencies(project, xmlProvider)
-        }.withXml { XmlProvider xmlProvider ->
-            composeDynamicDependencies(project, xmlProvider)
-        }
-    }
-
     static void composeLocalDependencies(Project project, XmlProvider xmlProvider) {
-        def publisher = project.publisher
         // This is a "compose" where we change local dependencies for their group:artifact:version declared
         xmlProvider.asNode().dependencies.'*'.findAll() {
             it.groupId.text() == project.rootProject.name &&
                     (it.version.text() == 'unspecified' || it.version.text() == 'undefined')
         }.each {
-            it.groupId*.value = publisher.groupId
+            it.groupId*.value = project.group
 
             // Version might contain a timestamp, meaning that if we put for other local versions
             // this same timestamp, they wont be resolvable.
-            // Check if a timestamp is present, if so, make it dynamic, else keep the publisher.version
+            // Check if a timestamp is present, if so, make it dynamic, else keep the version
             // This regex matches if: Starts with garbage + '-' + ends with 10 to 16 digits.
             // Eg: ALPHA-RELEASE-9.3.2-201704080505 -> ALPHA-RELEASE-9.3.2-+
-            if (publisher.version ==~ /^.*-\d{10,16}/) {
-                it.version*.value = (publisher.version as String).replaceAll(/-\d{10,16}/, '-+')
+            String pomVersion = xmlProvider.asNode().version*.text()
+            if (pomVersion ==~ /^.*-\d{10,16}/) {
+                it.version*.value = pomVersion.replaceAll(/-\d{10,16}/, '-+')
             } else {
-                it.version*.value = publisher.version
+                it.version*.value = pomVersion
             }
 
-            // Check over all the subprojects for someone with that project name and use its artifactId of publisher
+            // Check over all the subprojects for someone with that project name and use its name
             def artifact = project.rootProject.subprojects.find { subproject ->
                 subproject.name == it.artifactId.text()
-            }.publisher.artifactId
+            }.name
 
             it.artifactId*.value = artifact
 

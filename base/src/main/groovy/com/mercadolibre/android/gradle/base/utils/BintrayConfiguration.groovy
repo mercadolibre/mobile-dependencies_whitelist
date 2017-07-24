@@ -15,29 +15,21 @@ final class BintrayConfiguration {
 
     static void setBintrayConfig(Builder builder) {
         Project project = builder.project
-        String version = builder.version
         String publicationName = builder.publicationName
         String bintrayRepository = builder.bintrayRepository
-
-        def publisherContainer = project.publisher
-
-        project.group = publisherContainer.groupId
-
-        project.version = version
-        publisherContainer.version = version
 
         project.bintrayUpload.with {
             repoName = bintrayRepository
 
             publications = [publicationName]
 
-            versionVcsTag = "${project.version}"
+            versionVcsTag = "${VersionContainer.get(publicationName, project.version as String)}"
 
             dryRun = false
             publish = true
             userOrg = 'mercadolibre'
-            packageName = "${publisherContainer.groupId}.${publisherContainer.artifactId}"
-            versionName = "${project.version}"
+            packageName = "${project.group}.${project.name}"
+            versionName = "${VersionContainer.get(publicationName, project.version as String)}"
 
             packagePublicDownloadNumbers = false
 
@@ -67,7 +59,6 @@ final class BintrayConfiguration {
 
     static class Builder {
         Project project
-        String version
         String publicationName
         String bintrayRepository
     }

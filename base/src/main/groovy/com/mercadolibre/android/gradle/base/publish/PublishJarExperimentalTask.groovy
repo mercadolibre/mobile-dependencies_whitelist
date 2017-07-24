@@ -1,6 +1,7 @@
 package com.mercadolibre.android.gradle.base.publish
 
 import com.mercadolibre.android.gradle.base.utils.BintrayConfiguration
+import com.mercadolibre.android.gradle.base.utils.VersionContainer
 import org.gradle.api.Task
 
 /**
@@ -13,7 +14,7 @@ class PublishJarExperimentalTask extends PublishJarTask {
     Task create(PublishTask.Builder builder) {
         super.create(builder)
 
-        experimentalVersion = "EXPERIMENTAL-${project.publisher.version}-${getTimestamp()}"
+        VersionContainer.put(builder.taskName, "EXPERIMENTAL-${project.version}-${getTimestamp()}")
 
         createMavenPublication()
 
@@ -22,7 +23,6 @@ class PublishJarExperimentalTask extends PublishJarTask {
                 BintrayConfiguration.setBintrayConfig(new BintrayConfiguration.Builder().with {
                     project = this.project
                     bintrayRepository = BINTRAY_EXPERIMENTAL_REPOSITORY
-                    version = version()
                     publicationName = this.taskName
                     return it
                 })
@@ -31,10 +31,5 @@ class PublishJarExperimentalTask extends PublishJarTask {
             dependsOn "check", "${variant.name}SourcesJar", "${variant.name}JavadocJar"
             finalizedBy 'bintrayUpload'
         }
-    }
-
-    @Override
-    protected String version() {
-        return experimentalVersion
     }
 }

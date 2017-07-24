@@ -66,10 +66,8 @@ class AndroidLibraryPublishableModule extends PublishableModule {
     }
 
     private void createTasks() {
-        project.afterEvaluate {
-            project.android.libraryVariants.all { def libraryVariant ->
-                createTasksFor(libraryVariant)
-            }
+        project.android.libraryVariants.all { def libraryVariant ->
+            createTasksFor(libraryVariant)
         }
     }
 
