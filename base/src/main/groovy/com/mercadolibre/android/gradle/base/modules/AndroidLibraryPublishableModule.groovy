@@ -25,10 +25,10 @@ class AndroidLibraryPublishableModule extends PublishableModule {
     }
 
     protected void createTasksFor(def libraryVariant) {
-        createTask(new PublishAarAlphaTask(), libraryVariant, "publishAarAlpha${libraryVariant.name.capitalize()}")
-        createTask(new PublishAarExperimentalTask(), libraryVariant, "publishAarExperimental${libraryVariant.name.capitalize()}")
-        createTask(new PublishAarReleaseTask(), libraryVariant, "publishAarRelease${libraryVariant.name.capitalize()}")
-        createTask(new PublishAarLocalTask(), libraryVariant, "publishAarLocal${libraryVariant.name.capitalize()}")
+        createTask(new PublishAarAlphaTask(), libraryVariant, "publishAarAlpha${libraryVariant.name.capitalize()}${libraryVariant.flavorName?.capitalize() ?: ''}")
+        createTask(new PublishAarExperimentalTask(), libraryVariant, "publishAarExperimental${libraryVariant.name.capitalize()}${libraryVariant.flavorName?.capitalize() ?: ''}")
+        createTask(new PublishAarReleaseTask(), libraryVariant, "publishAarRelease${libraryVariant.name.capitalize()}${libraryVariant.flavorName?.capitalize() ?: ''}")
+        createTask(new PublishAarLocalTask(), libraryVariant, "publishAarLocal${libraryVariant.name.capitalize()}${libraryVariant.flavorName?.capitalize() ?: ''}")
 
         if (libraryVariant.name == 'release' && !libraryVariant.flavorName) {
             // Create tasks without the variant suffix that default to the main sourcesets

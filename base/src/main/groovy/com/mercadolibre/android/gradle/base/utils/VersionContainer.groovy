@@ -15,4 +15,8 @@ final class VersionContainer {
         return map.get(publicationName, defaultValue)
     }
 
+    public static void logVersion(String version) {
+        println ("${(27 as Character)}[32mPublishing version: ${version} ${(27 as Character)}[0m")
+    }
+
 }

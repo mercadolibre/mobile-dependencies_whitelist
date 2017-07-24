@@ -11,14 +11,14 @@ class PublishAarLocalTask extends PublishAarTask {
     Task create(PublishTask.Builder builder) {
         super.create(builder)
 
-        VersionContainer.put(builder.taskName, "${project.version}-LOCAL-${getTimestamp()}")
+        VersionContainer.put(builder.taskName, "${project.version}")
 
         createMavenPublication()
 
         project.task(builder.taskName) {
             dependsOn "${variant.name}SourcesJar", "${variant.name}JavadocJar"
             doLast {
-                println "Publishing: ${project.group}:${project.name}:${VersionContainer.get(builder.taskName, project.version as String)}"
+                VersionContainer.logVersion("${project.group}:${project.name}:${VersionContainer.get(builder.taskName, project.version as String)}")
             }
             group = 'publishing'
             finalizedBy "publish${taskName.capitalize()}PublicationToMavenLocal"

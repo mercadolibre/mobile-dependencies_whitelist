@@ -8,7 +8,7 @@ import org.gradle.api.artifacts.Configuration
 /**
  * Created by saguilera on 7/21/17.
  */
-class PomUtils {
+final class PomUtils {
 
     private static final String DEPENDENCY_LOCK_FILE_NAME = "dependencies.lock"
 

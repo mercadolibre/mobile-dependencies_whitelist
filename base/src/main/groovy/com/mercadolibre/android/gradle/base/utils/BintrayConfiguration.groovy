@@ -38,7 +38,7 @@ final class BintrayConfiguration {
 
         loadBintrayCredentials(project)
 
-        println "Publishing: ${project.group}:${project.name}:${VersionContainer.get(publicationName, project.version as String)}"
+        VersionContainer.logVersion("${project.group}:${project.name}:${VersionContainer.get(publicationName, project.version as String)}")
     }
 
     private static def loadBintrayCredentials(Project project) {

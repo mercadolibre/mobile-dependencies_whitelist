@@ -44,11 +44,13 @@ class JavaPublishableModule extends PublishableModule {
                 createTask(new PublishJarAlphaTask(), it, "publishJarAlpha")
                 createTask(new PublishJarReleaseTask(), it, "publishJarRelease")
                 createTask(new PublishJarExperimentalTask(), it, "publishJarExperimental")
+                createTask(new PublishJarLocalTask(), it, "publishJarLocal")
 
                 // And also mirror them without the Jar suffix too
                 createTask(new PublishJarAlphaTask(), it, "publishAlpha")
                 createTask(new PublishJarReleaseTask(), it, "publishRelease")
                 createTask(new PublishJarExperimentalTask(), it, "publishExperimental")
+                createTask(new PublishJarLocalTask(), it, "publishLocal")
             }
         }
     }

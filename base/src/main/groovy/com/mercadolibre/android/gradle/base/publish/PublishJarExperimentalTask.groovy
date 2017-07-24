@@ -9,8 +9,6 @@ import org.gradle.api.Task
  */
 class PublishJarExperimentalTask extends PublishJarTask {
 
-    private String experimentalVersion
-
     Task create(PublishTask.Builder builder) {
         super.create(builder)
 
