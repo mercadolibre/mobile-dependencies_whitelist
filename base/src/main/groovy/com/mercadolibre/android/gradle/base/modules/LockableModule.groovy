@@ -21,7 +21,6 @@ class LockableModule extends Module {
 
     @Override
     void configure(Project project) {
-        println "Nebula found for project ${project.name}"
         project.apply plugin: NEBULA_LOCK_PLUGIN_NAME
 
         def taskDescription = 'Locks the compiled project with the current versions of its dependencies to keep them in future assembles'
@@ -49,7 +48,6 @@ class LockableModule extends Module {
                     group != project.publisher.groupId
                 }
 
-                println "Creating task for nebula."
                 // Create a task that wraps the flow of the locking logic
                 project.task(TASK_LOCK_VERSIONS) {
                     description taskDescription

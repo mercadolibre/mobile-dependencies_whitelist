@@ -1,7 +1,6 @@
 package com.mercadolibre.android.gradle.base.modules
 
 import org.gradle.api.Project
-import org.gradle.testing.jacoco.tasks.JacocoReport
 
 /**
  * Created by saguilera on 7/22/17.

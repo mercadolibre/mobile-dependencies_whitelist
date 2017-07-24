@@ -4,7 +4,6 @@ import com.mercadolibre.android.gradle.base.modules.*
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.plugins.JavaPlugin
-import org.gradle.api.tasks.testing.Test
 
 /**
  * Gradle base plugin for MercadoLibre Android projects/modules.

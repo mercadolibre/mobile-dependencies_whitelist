@@ -1,9 +1,9 @@
 package com.mercadolibre.android.gradle.base.modules
 
 import com.mercadolibre.android.gradle.base.extensions.PublisherPluginExtension
-import com.mercadolibre.android.gradle.base.factories.PomFactory
 import org.gradle.api.GradleException
 import org.gradle.api.Project
+import org.gradle.api.publish.maven.plugins.MavenPublishPlugin
 
 /**
  * Created by mfeldsztejn on 5/26/17.
@@ -14,9 +14,10 @@ abstract class PublishableModule extends Module {
 
     @Override
     void configure(Project project) {
-        createGetProjectVersionTask(project)
-
         project.with {
+            apply plugin: MavenPublishPlugin
+            apply plugin: 'com.jfrog.bintray'
+
             extensions.create('publisher', PublisherPluginExtension)
 
             configurations {
@@ -25,30 +26,13 @@ abstract class PublishableModule extends Module {
                 }
             }
 
-            apply plugin: 'maven'
-            apply plugin: 'com.jfrog.bintray'
-
             afterEvaluate {
                 validatePublisherContainer(project)
-                uploadArchives {
-                    repositories {
-                        mavenDeployer {
-                            repository(url: "file://${System.properties['user.home']}/.m2/repository")
-                            pom = PomFactory.create(new PomFactory.Builder().with {
-                                it.project = project
-                                it.packageType = packageType()
-                                return it
-                            })
-                        }
-                    }
-                }
             }
-
-            tasks['uploadArchives'].dependsOn.clear()
         }
-    }
 
-    protected abstract String packageType()
+        createGetProjectVersionTask(project)
+    }
 
     /**
      * Validates that all the needed configuration is set within the 'publisher' container.
