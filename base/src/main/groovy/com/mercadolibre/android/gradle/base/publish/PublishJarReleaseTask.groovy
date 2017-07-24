@@ -26,7 +26,8 @@ class PublishJarReleaseTask extends PublishJarTask {
                 })
             }
 
-            dependsOn "check", "${variant.name}SourcesJar", "${variant.name}JavadocJar"
+            dependsOn "check", "${variant.name}SourcesJar", "${variant.name}JavadocJar",
+                    "generatePomFor${taskName.capitalize()}Publication"
             finalizedBy 'bintrayUpload'
         }
     }

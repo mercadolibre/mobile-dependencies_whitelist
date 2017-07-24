@@ -3,7 +3,7 @@ package com.mercadolibre.android.gradle.base.utils
 import groovy.json.JsonSlurper
 import org.gradle.api.Project
 import org.gradle.api.XmlProvider
-import org.gradle.api.publish.maven.MavenPom
+import org.gradle.api.artifacts.Configuration
 
 /**
  * Created by saguilera on 7/21/17.
@@ -11,6 +11,52 @@ import org.gradle.api.publish.maven.MavenPom
 class PomUtils {
 
     private static final String DEPENDENCY_LOCK_FILE_NAME = "dependencies.lock"
+
+    @SuppressWarnings("GroovyAssignabilityCheck")
+    static void injectDependencies(Project project, XmlProvider xmlProvider, String variantName = 'release') {
+        // Since maven-publish has a bug in the current version because it resolves lazily
+        // we have to add the dependencies barehanded
+        // https://discuss.gradle.org/t/maven-publish-doesnt-include-dependencies-in-the-project-pom-file/8544
+        // Its also in the bintray docs if you are interested
+        def dependenciesNode = xmlProvider.asNode().appendNode('dependencies')
+
+        // Here I declare all the configurations we support to upload to the pom.
+        // We also take into account flavored ones
+        // This doesnt give support to gradle 4.0 yet with implementation and stuff
+        final String[] compileConfigurations = ['compile', "${variantName}Compile"]
+        final String[] testConfigurations = ['test', "test${variantName.capitalize()}"]
+        final String[] runtimeConfigurations = ['runtime']
+        final String[] providedConfigurations = ['provided', 'compileOnly', "${variantName}CompileOnly"]
+        final String[] all = [compileConfigurations, providedConfigurations, testConfigurations,
+                              runtimeConfigurations].flatten()
+        project.configurations.all { Configuration configuration ->
+            if (all.contains(configuration.name)) {
+                configuration.allDependencies.each {
+                    def dependencyNode = dependenciesNode.appendNode('dependency')
+                    dependencyNode.appendNode('groupId', it.group)
+                    dependencyNode.appendNode('artifactId', it.name)
+                    dependencyNode.appendNode('version', it.version)
+
+                    def scope
+                    switch (configuration.name) {
+                        case providedConfigurations:
+                            scope = 'provided'
+                            break
+                        case runtimeConfigurations:
+                            scope = 'runtime'
+                            break
+                        case testConfigurations:
+                            scope = 'test'
+                            break
+                        default:
+                            scope = 'compile'
+                            break
+                    }
+                    dependencyNode.appendNode('scope', scope)
+                }
+            }
+        }
+    }
 
     static void composeLocalDependencies(Project project, XmlProvider xmlProvider) {
         // This is a "compose" where we change local dependencies for their group:artifact:version declared

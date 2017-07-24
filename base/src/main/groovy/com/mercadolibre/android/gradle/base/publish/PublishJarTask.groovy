@@ -88,14 +88,24 @@ abstract class PublishJarTask extends PublishTask {
                 artifactId = project.name
                 groupId = project.group
                 version = VersionContainer.get(taskName, project.version as String)
-
                 artifacts = [sourcesJar, javadocJar]
 
                 pom.withXml { XmlProvider xmlProvider ->
+                    xmlProvider.asNode().packaging*.value = 'jar'
+
+                    PomUtils.injectDependencies(project, xmlProvider, variant.name)
                     PomUtils.composeLocalDependencies(project, xmlProvider)
-                }
-                pom.withXml { XmlProvider xmlProvider ->
                     PomUtils.composeDynamicDependencies(project, xmlProvider)
+
+                    project.file("${project.buildDir}/publications/${taskName}/pom-default.xml")
+                            .write(xmlProvider.asString().toString())
+                }
+            }
+
+            project.tasks.whenTaskAdded {
+                if (it.name.contains('generatePomFileFor')) {
+                    String hookedTask = it.name.replaceFirst('generatePomFileFor', '').replaceFirst("Publication", '').uncapitalize()
+                    project.tasks.findByName(hookedTask).dependsOn it
                 }
             }
         }

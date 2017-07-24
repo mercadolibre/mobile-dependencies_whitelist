@@ -18,7 +18,7 @@ final class BintrayConfiguration {
         String publicationName = builder.publicationName
         String bintrayRepository = builder.bintrayRepository
 
-        project.bintrayUpload.with {
+        project.tasks.bintrayUpload.with {
             repoName = bintrayRepository
 
             publications = [publicationName]
@@ -37,6 +37,8 @@ final class BintrayConfiguration {
         }
 
         loadBintrayCredentials(project)
+
+        println "Publishing: ${project.group}:${project.name}:${VersionContainer.get(publicationName, project.version as String)}"
     }
 
     private static def loadBintrayCredentials(Project project) {
