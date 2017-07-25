@@ -1,7 +1,7 @@
 package com.mercadolibre.android.gradle.base.modules
 
 import com.mercadolibre.android.gradle.base.lint.Lint
-import com.mercadolibre.android.gradle.base.lint.LintConfigurationExtension
+import com.mercadolibre.android.gradle.base.lint.LintGradleExtension
 import com.mercadolibre.android.gradle.base.lint.dependencies.DependenciesLint
 import org.gradle.api.GradleException
 import org.gradle.api.Project
@@ -58,10 +58,10 @@ class LintableModule implements Module {
     void configure(Project project) {
         this.project = project
 
-        String extensionName = LintConfigurationExtension.simpleName.replaceAll("Extension", '')
+        String extensionName = LintGradleExtension.simpleName.replaceAll("Extension", '')
         extensionName = (Character.toLowerCase(extensionName.charAt(0)) as String) + extensionName.substring(1)
 
-        project.extensions.create(extensionName, LintConfigurationExtension)
+        project.extensions.create(extensionName, LintGradleExtension)
 
         project.afterEvaluate {
             setUpLint()
@@ -88,7 +88,7 @@ class LintableModule implements Module {
             task.doLast {
                 def buildErrored = false
 
-                if (project.lintConfiguration.enabled) {
+                if (project.lintGradle.enabled) {
                     linters.each {
                         println ":${project.name}:${it.name()}"
                         def lintErrored = it.lint(project, variants)
