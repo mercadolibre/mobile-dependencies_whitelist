@@ -11,7 +11,7 @@ class PublishAarLocalTask extends PublishAarTask {
     Task create(PublishTask.Builder builder) {
         super.create(builder)
 
-        VersionContainer.put(builder.taskName, "${project.version}")
+        VersionContainer.put(builder.taskName, flavorVersion(project.version as String, builder.variant))
 
         createMavenPublication()
 

@@ -127,4 +127,17 @@ abstract class PublishAarTask extends PublishTask {
         }
     }
 
+    /**
+     * Returns a flavored version if the variant is flavored, else the version you provided
+     * @param version to flavorize
+     * @param variant possibly flavored
+     * @return flavored version or the same
+     */
+    protected String flavorVersion(String version, def variant) {
+        if (variant.flavorName) {
+            return "${version}-${variant.flavorName.toUpperCase()}"
+        }
+        return version
+    }
+
 }

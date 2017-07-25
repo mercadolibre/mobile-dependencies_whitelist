@@ -12,7 +12,7 @@ class PublishAarAlphaTask extends PublishAarTask {
     Task create(PublishTask.Builder builder) {
         super.create(builder)
 
-        VersionContainer.put(builder.taskName, "${project.version}-ALPHA-${getTimestamp()}")
+        VersionContainer.put(builder.taskName, flavorVersion("${project.version}-ALPHA-${getTimestamp()}", builder.variant))
 
         createMavenPublication()
 
