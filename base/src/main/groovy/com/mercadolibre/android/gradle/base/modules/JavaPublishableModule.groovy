@@ -28,7 +28,6 @@ class JavaPublishableModule extends PublishableModule {
         })
     }
 
-    @SuppressWarnings("GroovyAssignabilityCheck")
     private void createTasks() {
         // JAR projects dont have local publishes since gradle already provides
         // the `install` task for it
