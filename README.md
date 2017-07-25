@@ -26,7 +26,7 @@ Listo. Con eso el plugin ya va a hacer lo suyo.
 
 ## Modulos
 
-El plugin trae muchos modulos internos con distintos features, algunos de ellos tienen un poco de customizacion para que el user aplique.
+El plugin trae muchos modulos internos con distintos features, algunos de ellos tienen un poco de customizacion para que el user aplique, en caso de querer usarlos.
 
 ### Publicacion
 
