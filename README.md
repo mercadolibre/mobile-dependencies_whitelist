@@ -43,18 +43,15 @@ allprojects {
 ```
 
 Las tasks creadas son de la forma:
-- :publish\<Packaging>\<Type>\<Variant>\<Flavor> // Si no hay flavors, va a ser publishAar\<X>\<Variant>
+- :publish\<Packaging>\<Type>\<Variant>\<Flavor> // Si no hay flavors, va a ser publish\<Packaging>\<Type>\<Variant>
 - :publish\<Packaging>\<Type> // Va a publicar para el variant **release** todos los flavors que haya
 - :publish\<Type> // Va a publicar para el variant **release** todos los flavors que haya, detecta solo el packaging
 
 Donde:
 
 - \<Packaging>: aar - jar
-
 - \<Type>: Local - Release - Alpha - Experimental
-
 - \<Flavor>: Definido por cada uno, si no tiene la aplicacion, desestimarlo
-
 - \<Variant>: Debug - Release. El developer puede agregar mas, asi que tambien es definido por cada uno.
 
 Notas a tener en cuenta:
