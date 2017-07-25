@@ -16,20 +16,24 @@ class PublishJarReleaseTask extends PublishJarTask {
 
         createMavenPublication()
 
-        project.task(builder.taskName) {
-            doFirst {
-                BintrayConfiguration.setBintrayConfig(new BintrayConfiguration.Builder().with {
-                    project = this.project
-                    bintrayRepository = BINTRAY_RELEASE_REPOSITORY
-                    publicationName = this.taskName
-                    return it
-                })
-            }
-            group = 'publishing'
+        if (project.tasks.findByName(builder.taskName)) {
+            return project.tasks."$taskName"
+        } else {
+            return project.task(builder.taskName) {
+                doFirst {
+                    BintrayConfiguration.setBintrayConfig(new BintrayConfiguration.Builder().with {
+                        project = this.project
+                        bintrayRepository = BINTRAY_RELEASE_REPOSITORY
+                        publicationName = this.taskName
+                        return it
+                    })
+                }
+                group = 'publishing'
 
-            dependsOn "check", "${variant.name}SourcesJar", "${variant.name}JavadocJar",
-                    "generatePomFor${taskName.capitalize()}Publication"
-            finalizedBy 'bintrayUpload'
+                dependsOn "check", "${variant.name}SourcesJar", "${variant.name}JavadocJar",
+                        "generatePomFor${taskName.capitalize()}Publication"
+                finalizedBy 'bintrayUpload'
+            }
         }
     }
 }

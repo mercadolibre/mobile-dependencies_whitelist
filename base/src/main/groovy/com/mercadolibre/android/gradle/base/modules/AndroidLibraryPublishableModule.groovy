@@ -2,6 +2,7 @@ package com.mercadolibre.android.gradle.base.modules
 
 import com.mercadolibre.android.gradle.base.publish.*
 import org.gradle.api.Project
+import org.gradle.api.Task
 
 /**
  * Created by saguilera on 7/21/17.
@@ -17,7 +18,10 @@ class AndroidLibraryPublishableModule extends PublishableModule {
         this.project = project
 
         applyPlugins()
-        createTasks()
+
+        project.android.libraryVariants.all { def libraryVariant ->
+            createTasksFor(libraryVariant)
+        }
     }
 
     private void applyPlugins() {
@@ -25,28 +29,28 @@ class AndroidLibraryPublishableModule extends PublishableModule {
     }
 
     protected void createTasksFor(def libraryVariant) {
-        createTask(new PublishAarAlphaTask(), libraryVariant, "publishAarAlpha${libraryVariant.name.capitalize()}${libraryVariant.flavorName?.capitalize() ?: ''}")
-        createTask(new PublishAarExperimentalTask(), libraryVariant, "publishAarExperimental${libraryVariant.name.capitalize()}${libraryVariant.flavorName?.capitalize() ?: ''}")
-        createTask(new PublishAarReleaseTask(), libraryVariant, "publishAarRelease${libraryVariant.name.capitalize()}${libraryVariant.flavorName?.capitalize() ?: ''}")
-        createTask(new PublishAarLocalTask(), libraryVariant, "publishAarLocal${libraryVariant.name.capitalize()}${libraryVariant.flavorName?.capitalize() ?: ''}")
+        def alphaTask = createTask(new PublishAarAlphaTask(), libraryVariant, "publishAarAlpha${libraryVariant.name.capitalize()}")
+        def experimentalTask = createTask(new PublishAarExperimentalTask(), libraryVariant, "publishAarExperimental${libraryVariant.name.capitalize()}")
+        def releaseTask = createTask(new PublishAarReleaseTask(), libraryVariant, "publishAarRelease${libraryVariant.name.capitalize()}")
+        def localTask = createTask(new PublishAarLocalTask(), libraryVariant, "publishAarLocal${libraryVariant.name.capitalize()}")
 
-        if (libraryVariant.name == 'release' && !libraryVariant.flavorName) {
+        if (libraryVariant.name.toLowerCase().contains('release')) {
             // Create tasks without the variant suffix that default to the main sourcesets
-            createTask(new PublishAarAlphaTask(), libraryVariant, "publishAarAlpha")
-            createTask(new PublishAarExperimentalTask(), libraryVariant, "publishAarExperimental")
-            createTask(new PublishAarReleaseTask(), libraryVariant, "publishAarRelease")
-            createTask(new PublishAarLocalTask(), libraryVariant, "publishAarLocal")
+            createStubTask("publishAarAlpha", alphaTask)
+            createStubTask("publishAarExperimental", experimentalTask)
+            createStubTask("publishAarRelease", releaseTask)
+            createStubTask("publishAarLocal", localTask)
 
             // Create tasks without the variant and package type suffix, defaulting to release
-            createTask(new PublishAarAlphaTask(), libraryVariant, "publishAlpha")
-            createTask(new PublishAarExperimentalTask(), libraryVariant, "publishExperimental")
-            createTask(new PublishAarReleaseTask(), libraryVariant, "publishRelease")
-            createTask(new PublishAarLocalTask(), libraryVariant, "publishLocal")
+            createStubTask("publishAlpha", alphaTask)
+            createStubTask("publishExperimental", experimentalTask)
+            createStubTask("publishRelease", releaseTask)
+            createStubTask("publishLocal", localTask)
         }
     }
 
-    protected void createTask(PublishAarTask task, def libraryVariant, String theTaskName) {
-        task.create(new PublishTask.Builder().with {
+    protected Task createTask(PublishAarTask task, def libraryVariant, String theTaskName) {
+        return task.create(new PublishTask.Builder().with {
             project = this.project
             variant = libraryVariant
             taskName = theTaskName
@@ -54,10 +58,16 @@ class AndroidLibraryPublishableModule extends PublishableModule {
         })
     }
 
-    private void createTasks() {
-        project.android.libraryVariants.all { def libraryVariant ->
-            createTasksFor(libraryVariant)
+    protected Task createStubTask(String name, Task realTask) {
+        if (project.tasks.findByName(name)) {
+            project.tasks."$name".dependsOn realTask
+        } else {
+            project.task(name) { Task it ->
+                it.group = 'publishing'
+                it.dependsOn realTask
+            }
         }
+        return project.tasks."$name"
     }
 
 }

@@ -12,12 +12,16 @@ class PublishJarLocalTask extends PublishJarTask {
     Task create(PublishTask.Builder builder) {
         super.create(builder)
 
-        project.task(builder.taskName) {
-            doFirst {
-                VersionContainer.logVersion("${project.group}:${project.name}:${project.version}")
+        if (project.tasks.findByName(builder.taskName)) {
+            return project.tasks."$taskName"
+        } else {
+            return project.task(builder.taskName) {
+                doFirst {
+                    VersionContainer.logVersion("${project.group}:${project.name}:${project.version}")
+                }
+                group = 'publishing'
+                dependsOn "install"
             }
-            group = 'publishing'
-            dependsOn "install"
         }
     }
 }
