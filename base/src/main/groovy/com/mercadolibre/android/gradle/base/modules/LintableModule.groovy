@@ -6,6 +6,7 @@ import com.mercadolibre.android.gradle.base.lint.dependencies.DependenciesLint
 import org.gradle.api.GradleException
 import org.gradle.api.Project
 import org.gradle.api.tasks.StopActionException
+import org.gradle.internal.impldep.org.apache.commons.lang.StringUtils
 
 /**
  * Module that applies lints to android libraries
@@ -27,19 +28,19 @@ class LintableModule implements Module {
     /**
      * The project.
      */
-    def project
+    protected def project
 
     /**
      * Array with instances of the lints to run
      */
-    Lint[] linters = [
+    protected final Lint[] linters = [
             new DependenciesLint()
     ]
 
     /**
      * Array of tasks that this lint depends of
      */
-    String[] dependencies = [
+    protected final String[] dependencies = [
             'assemble',
             'bundle'
     ]
@@ -51,14 +52,15 @@ class LintableModule implements Module {
      * throws us a tantrum if accessing them after
      * tasks are created
      */
-    List<Object> variants
+    protected final List variants = new ArrayList()
 
     @Override
     void configure(Project project) {
         this.project = project
 
-        project.extensions.create(LintConfigurationExtension.name.replaceAll("Extension", '').uncapitalize(),
-                LintConfigurationExtension)
+        String extensionName = LintConfigurationExtension.name.replaceAll("Extension", '')
+        extensionName = (Character.toLowerCase(extensionName.charAt(0)) as String) + extensionName.substring(1)
+        project.extensions.create(extensionName, LintConfigurationExtension)
 
         project.afterEvaluate {
             setUpLint()
@@ -75,7 +77,6 @@ class LintableModule implements Module {
      * Set up gradle lint to run in every assemble task.
      */
     protected void setUpLint() {
-        variants = new ArrayList<>()
         project.android.libraryVariants.all { variant -> variants.add(variant) }
 
         /**

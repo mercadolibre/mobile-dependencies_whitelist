@@ -14,7 +14,6 @@ class BasePlugin implements Plugin<Project> {
     private static final String ANDROID_APPLICATION_PLUGIN = 'com.android.application'
 
     private static final String NEBULA_LOCK_CLASSPATH = "com.netflix.nebula/gradle-dependency-lock-plugin"
-    private static final String LINT_PLUGIN_CLASSPATH= "com.mercadolibre.android.gradle/lint"
 
     private static final ANDROID_LIBRARY_MODULES = { ->
         return [
@@ -75,16 +74,10 @@ class BasePlugin implements Plugin<Project> {
                 ANDROID_APPLICATION_MODULES().each { module -> module.configure(subproject) }
             }
 
-            // Depending on added classpaths, this modules with apply plugins
+            // Depending on added classpaths, this modules will apply plugins
             project.afterEvaluate {
                 if (project.hasClasspath(NEBULA_LOCK_CLASSPATH)) {
                     new LockableModule().configure(subproject)
-                }
-
-                if (project.hasClasspath(LINT_PLUGIN_CLASSPATH)) {
-                    subproject.plugins.withId(ANDROID_LIBRARY_PLUGIN) {
-                        new LintableModule().configure(subproject)
-                    }
                 }
             }
         }
