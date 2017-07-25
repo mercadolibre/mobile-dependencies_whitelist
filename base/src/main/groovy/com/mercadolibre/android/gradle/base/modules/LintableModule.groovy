@@ -5,8 +5,8 @@ import com.mercadolibre.android.gradle.base.lint.LintConfigurationExtension
 import com.mercadolibre.android.gradle.base.lint.dependencies.DependenciesLint
 import org.gradle.api.GradleException
 import org.gradle.api.Project
+import org.gradle.api.Task
 import org.gradle.api.tasks.StopActionException
-import org.gradle.internal.impldep.org.apache.commons.lang.StringUtils
 
 /**
  * Module that applies lints to android libraries
@@ -58,8 +58,9 @@ class LintableModule implements Module {
     void configure(Project project) {
         this.project = project
 
-        String extensionName = LintConfigurationExtension.name.replaceAll("Extension", '')
+        String extensionName = LintConfigurationExtension.simpleName.replaceAll("Extension", '')
         extensionName = (Character.toLowerCase(extensionName.charAt(0)) as String) + extensionName.substring(1)
+
         project.extensions.create(extensionName, LintConfigurationExtension)
 
         project.afterEvaluate {
@@ -82,9 +83,9 @@ class LintableModule implements Module {
         /**
          * Creation of the lint task
          */
-        project.task (TASK_NAME) {
-            description "Lints the project dependencies to check they are in the allowed whitelist"
-            doLast {
+        project.task (TASK_NAME) { Task task ->
+            task.description "Lints the project dependencies to check they are in the allowed whitelist"
+            task.doLast {
                 def buildErrored = false
 
                 if (project.lintConfiguration.enabled) {
@@ -98,7 +99,7 @@ class LintableModule implements Module {
                 }
 
                 if (buildErrored) {
-                    if (project.gradle.getStartParameter().getTaskRequests().toString().contains(TASK_NAME)) {
+                    if (project.gradle.startParameter.taskNames.toListString().contains(task.name)) {
                         // If they are specifically running lint, break the build and error it
                         throw new GradleException(TASK_FAIL_MESSAGE)
                     } else {

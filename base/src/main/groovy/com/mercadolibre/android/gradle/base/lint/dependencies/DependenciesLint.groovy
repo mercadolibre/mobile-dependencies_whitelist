@@ -57,11 +57,11 @@ class DependenciesLint implements Lint {
         }
 
         // Core logic
-        def analizeDependency = { dependency, String packageName ->
+        def analizeDependency = { dependency ->
             // The ASCII chars make the stdout look red.
             def dependencyFullName = "${dependency.group}:${dependency.name}:${dependency.version}"
             def message = "- ${dependencyFullName}"
-            def publishName = "${project.publisher.groupId}:${project.publisher.artifactId}"
+            def publishName = "${project.group}:${project.name}"
 
             /**
              * - Dependency cant be found in whitelist
@@ -71,40 +71,25 @@ class DependenciesLint implements Lint {
              */
             if (!dependencyIsInWhitelist(dependencyFullName)
                     && !dependencyFullName.contains(DEFAULT_GRADLE_VALUE)
-                    && !(dependencyFullName.contains(packageName) || dependencyFullName.contains(publishName))) {
+                    && !dependencyFullName.contains(publishName)) {
                 report(message)
             }
         }
 
-        String debugPackageName // For the default compile deps, we will use debug package
-
         // Check dependencies of each variant available first
         variants.each { variant ->
             def variantName = variant.name
-            String packageName = variant.applicationId
 
-            /**
-             * Since each variant can have its own package name, we need for the 
-             * default compile mode a package to check against for the
-             * local dependencies. Since we use mostly debug, we are choosing
-             * as default package the debug one.
-             */
-            if (variantName == "debug") {
-                debugPackageName = packageName
-            }
-
-            project.configurations.all { configuration ->
-                if (configuration.name == "${variantName}Compile") {
-                    configuration.dependencies.each { analizeDependency(it, packageName) }
-                }
+            if (project.configurations.hasProperty("${variantName}Compile")) {
+                project.configurations."${variantName}Compile".dependencies.each { analizeDependency(it) }
             }
         }
 
         // Check the default compiling deps
-        project.configurations.compile.dependencies.each { analizeDependency(it, debugPackageName) }
+        project.configurations.compile.dependencies.each { analizeDependency(it) }
 
         if (hasFailed) {
-            report("${ERROR_ALLOWED_DEPENDENCIES} ${project.lintConfigurationdependencyWhitelistUrl}")
+            report("${ERROR_ALLOWED_DEPENDENCIES} ${project.lintConfiguration.dependencyWhitelistUrl}")
         }
 
         return hasFailed
