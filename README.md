@@ -48,10 +48,14 @@ Las tasks creadas son de la forma:
 - :publish\<Type> // Va a publicar para el variant **release** todos los flavors que haya, detecta solo el packaging
 
 Donde:
-\<Packaging>: aar - jar
-\<Type>: Local - Release - Alpha - Experimental
-\<Flavor>: Definido por cada uno, si no tiene la aplicacion, desestimarlo
-\<Variant>: Debug - Release. El developer puede agregar mas, asi que tambien es definido por cada uno.
+
+- \<Packaging>: aar - jar
+
+- \<Type>: Local - Release - Alpha - Experimental
+
+- \<Flavor>: Definido por cada uno, si no tiene la aplicacion, desestimarlo
+
+- \<Variant>: Debug - Release. El developer puede agregar mas, asi que tambien es definido por cada uno.
 
 Notas a tener en cuenta:
 - Podemos correr sobre el root cualquiera de ellos, y si hay mas de un modulo que lo tiene va a publicar ambos. Es decir, si corremos `./gradlew publishRelease` va a publicar todos los modulos en todos los flavors en Release.
