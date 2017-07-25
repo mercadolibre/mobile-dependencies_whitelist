@@ -135,7 +135,7 @@ abstract class PublishAarTask extends PublishTask {
      */
     protected String flavorVersion(String version, def variant) {
         if (variant.flavorName) {
-            return "${version}-${variant.flavorName.toUpperCase()}"
+            return "${variant.flavorName}-${version}"
         }
         return version
     }
