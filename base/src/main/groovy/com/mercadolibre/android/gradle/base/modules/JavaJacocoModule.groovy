@@ -14,11 +14,11 @@ class JavaJacocoModule extends BaseJacocoModule {
 
         project.afterEvaluate {
             Task jacocoTestReport = project.tasks.findByName("jacocoTestReport")
-            if (project.tasks.findByName('jacocoFullReport')) {
-                project.tasks.jacocoFullReport.dependsOn jacocoTestReport
+            if (project.tasks.findByName(JACOCO_FULL_REPORT_TASK)) {
+                project.tasks."$JACOCO_FULL_REPORT_TASK".dependsOn jacocoTestReport
             } else {
                 project.tasks.whenTaskAdded {
-                    if (it.name.contentEquals('jacocoFullReport')) {
+                    if (it.name.contentEquals(JACOCO_FULL_REPORT_TASK)) {
                         it.dependsOn jacocoTestReport
                     }
                 }

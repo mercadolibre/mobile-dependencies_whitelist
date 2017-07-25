@@ -9,6 +9,8 @@ import org.gradle.testing.jacoco.plugins.JacocoPlugin
  */
 abstract class BaseJacocoModule extends Module {
 
+    public static final String JACOCO_FULL_REPORT_TASK = 'jacocoFullReport'
+
     protected Project project
 
     @Override
@@ -25,7 +27,7 @@ abstract class BaseJacocoModule extends Module {
                 }
             }
 
-            task("jacocoFullReport") {
+            task(JACOCO_FULL_REPORT_TASK) {
                 it.group 'reporting'
             }
         }

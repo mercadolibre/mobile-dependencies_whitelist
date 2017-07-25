@@ -31,11 +31,11 @@ class AndroidJacocoModule extends BaseJacocoModule {
             jacocoTestReportTask.dependsOn reportTask
         }
 
-        if (project.tasks.findByName('jacocoFullReport')) {
-            project.tasks.jacocoFullReport.dependsOn jacocoTestReportTask
+        if (project.tasks.findByName(JACOCO_FULL_REPORT_TASK)) {
+            project.tasks."$JACOCO_FULL_REPORT_TASK".dependsOn jacocoTestReportTask
         } else {
             project.tasks.whenTaskAdded {
-                if (it.name.contentEquals('jacocoFullReport')) {
+                if (it.name.contentEquals(JACOCO_FULL_REPORT_TASK)) {
                     it.dependsOn jacocoTestReportTask
                 }
             }
