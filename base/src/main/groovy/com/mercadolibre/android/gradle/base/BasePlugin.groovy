@@ -150,7 +150,7 @@ class BasePlugin implements Plugin<Project> {
                                     def json = new JsonSlurper().parse(file)
                                     json.each { variantName, dependencies ->
                                         dependencies.each { group, versions ->
-                                            if (group.contains(subproject.publisher.groupId)) {
+                                            if (group.equals(subproject.publisher.groupId)) {
                                                 versions.locked = subproject.publisher.version
                                             }
                                         }
