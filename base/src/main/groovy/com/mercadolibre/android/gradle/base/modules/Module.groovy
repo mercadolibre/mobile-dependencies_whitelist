@@ -3,13 +3,12 @@ package com.mercadolibre.android.gradle.base.modules
 import org.gradle.api.Project
 
 /**
+ * Base interface of a module
+ *
  * Created by saguilera on 7/21/17.
  */
-abstract class Module {
+interface Module {
 
-    protected static final String JACOCO_PLUGIN_CLASSPATH = "com.mercadolibre.android.gradle/jacoco"
-    protected static final String ROBOLECTRIC_PLUGIN_CLASSPATH = "com.mercadolibre.android.gradle/robolectric"
-
-    abstract void configure(Project project)
+    void configure(Project project)
 
 }

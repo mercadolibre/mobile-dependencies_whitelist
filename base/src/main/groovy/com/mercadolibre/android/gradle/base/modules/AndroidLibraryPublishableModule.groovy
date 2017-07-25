@@ -5,6 +5,10 @@ import org.gradle.api.Project
 import org.gradle.api.Task
 
 /**
+ * Android library publishing module. It will create tasks for each available variant and flavor.
+ *
+ * Currently it will create publish tasks for ALPHA / RELEASE / EXPERIMENTAL / LOCAL
+ *
  * Created by saguilera on 7/21/17.
  */
 class AndroidLibraryPublishableModule extends PublishableModule {

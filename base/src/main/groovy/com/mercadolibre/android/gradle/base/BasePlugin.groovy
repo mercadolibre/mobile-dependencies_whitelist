@@ -20,7 +20,8 @@ class BasePlugin implements Plugin<Project> {
         return [
                 new AndroidLibraryPublishableModule(),
                 new RobolectricModule(),
-                new AndroidJacocoModule()
+                new AndroidJacocoModule(),
+                new LintableModule()
         ]
     }
 

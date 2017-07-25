@@ -7,9 +7,11 @@ import org.gradle.api.tasks.Copy
 import java.util.concurrent.atomic.AtomicReference
 
 /**
+ * Robolectric module in charge of setting up tasks for easy testing with robolectric dependencies
+ *
  * Created by saguilera on 7/22/17.
  */
-class RobolectricModule extends Module {
+class RobolectricModule implements Module {
 
     private Project project;
 

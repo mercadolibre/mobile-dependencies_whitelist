@@ -4,6 +4,11 @@ import com.mercadolibre.android.gradle.base.publish.*
 import org.gradle.api.Project
 
 /**
+ * Java publishing module in charge of creating tasks for each available sourceSet, and letting it publish it to bintray
+ * or mavenLocal
+ *
+ * Currently it will create publish tasks for ALPHA / RELEASE / EXPERIMENTAL / LOCAL
+ *
  * Created by saguilera on 7/21/17.
  */
 class JavaPublishableModule extends PublishableModule {

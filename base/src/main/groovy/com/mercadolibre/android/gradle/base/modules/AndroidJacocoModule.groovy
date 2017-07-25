@@ -6,6 +6,8 @@ import org.gradle.api.tasks.testing.Test
 import org.gradle.testing.jacoco.tasks.JacocoReport
 
 /**
+ * Module in charge of configuring jacoco reports for android projects so that any coverage application can obtain them
+ *
  * Created by saguilera on 7/22/17.
  */
 class AndroidJacocoModule extends BaseJacocoModule {

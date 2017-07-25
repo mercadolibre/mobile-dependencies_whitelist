@@ -4,6 +4,8 @@ import org.gradle.api.Project
 import org.gradle.api.Task
 
 /**
+ * Java module for customizing jacoco reports, so they can be accesed by whichever coverage application we use
+ *
  * Created by saguilera on 7/22/17.
  */
 class JavaJacocoModule extends BaseJacocoModule {

@@ -5,9 +5,11 @@ import org.gradle.api.plugins.MavenPlugin
 import org.gradle.api.publish.maven.plugins.MavenPublishPlugin
 
 /**
- * Created by mfeldsztejn on 5/26/17.
+ * Abstract module in charge of publishing archives into maven/bintray/whatever
+ *
+ * Created by saguilera on 7/22/17.
  */
-abstract class PublishableModule extends Module {
+abstract class PublishableModule implements Module {
 
     protected static final String TASK_TYPE_ALPHA = 'Alpha'
     protected static final String TASK_TYPE_RELEASE = 'Release'

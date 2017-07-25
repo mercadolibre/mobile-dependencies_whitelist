@@ -4,9 +4,11 @@ import org.gradle.api.Project
 import org.gradle.api.artifacts.ComponentSelection
 
 /**
+ * Module that is in charge of managing the locking of dynamic dependencies into static ones
+ *
  * Created by saguilera on 7/22/17.
  */
-class LockableModule extends Module {
+class LockableModule implements Module {
 
     private static final String TASK_LOCK_VERSIONS = "lockVersions"
 
