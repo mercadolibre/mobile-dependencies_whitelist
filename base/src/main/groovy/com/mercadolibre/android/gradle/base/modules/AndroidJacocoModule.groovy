@@ -1,6 +1,8 @@
 package com.mercadolibre.android.gradle.base.modules
 
 import org.gradle.api.Project
+import org.gradle.api.Task
+import org.gradle.api.tasks.testing.Test
 import org.gradle.testing.jacoco.tasks.JacocoReport
 
 /**
@@ -22,93 +24,91 @@ class AndroidJacocoModule extends BaseJacocoModule {
             }
         }
 
-        createJacocoReportTasks()
-    }
+        Task jacocoTestReportTask = findOrCreateJacocoTestReportTask()
 
-    /**
-     * Creates the tasks to generate Jacoco report, one per variant depending on Unit and Instrumentation tests.
-     * [incubating]
-     */
-    private void createJacocoReportTasks() {
-        def variants
-        try {
-            variants = project.android.applicationVariants
-        } catch (Exception e) {
-            variants = project.android.libraryVariants
+        getVariants().all { variant ->
+            JacocoReport reportTask = createReportTask(variant)
+            jacocoTestReportTask.dependsOn reportTask
         }
 
-        variants.all { variant ->
-            //Define local variables to avoid accessing multiple times to the buildType object.
-            def buildTypeName = variant.buildType.name
-            def flavorName = variant.flavorName
-            def capitalizedBuildTypeName = buildTypeName.capitalize()
-            def capitalizedFlavorName = flavorName.capitalize()
-
-            def taskName = "jacoco${capitalizedFlavorName}${capitalizedBuildTypeName}"
-            def testTaskName = "test${capitalizedFlavorName}${capitalizedBuildTypeName}UnitTest"
-
-            //Create and retrieve necesary tasks
-            def jacocoTask = project.tasks.create taskName, JacocoReport
-            def unitTest = project.tasks.findByName(testTaskName)
-
-            //Define JacocoTasks and it's configuration
-            jacocoTask.description = "Generate Jacoco code coverage report after running tests for ${flavorName}${capitalizedBuildTypeName} flavor."
-            jacocoTask.group = "Reporting"
-
-            //By convention this is the sources folder
-            jacocoTask.sourceDirectories = project.files("src/main/java")
-
-            //Here is where execution data files are created. ConnectedAndroidTest and Test tasks generates them.
-            jacocoTask.executionData = project.files("build/jacoco/${testTaskName}.exec")
-
-            def jacocoDirectory = "./build/intermediates/classes/"
-
-            if (flavorName != null && flavorName != "") {
-                jacocoDirectory += "${flavorName}/"
-            }
-
-            jacocoDirectory += "${buildTypeName}"
-
-            //Ignore auto-generated classes
-            jacocoTask.classDirectories = project.fileTree(dir: jacocoDirectory, excludes: [
-                    '**/R.class',
-                    '**/R$*.class',
-                    '**/BuildConfig.class',
-                    '**/*$ViewInjector*.*',
-                    '**/*$ViewBinder*.*',
-                    '**/Manifest*.*',
-                    '**/*$Lambda$*.*',
-                    '**/*Module.*',
-                    '**/*Dagger*.*',
-                    '**/*MembersInjector*.*',
-                    '**/*_Provide*Factory*.*',
-                    '**/*_Factory*.*',
-                    '**/*$*$*.*'
-            ])
-
-            //Enable both reports
-            jacocoTask.reports.xml.enabled = true
-            jacocoTask.reports.html.enabled = true
-
-            if (unitTest) {
-                jacocoTask.dependsOn unitTest
-            }
-
-            if (project.tasks.findByName('jacocoFullReport')) {
-                project.tasks.jacocoFullReport.dependsOn jacocoTask
-            } else {
-                project.tasks.whenTaskAdded {
-                    if (it.name.contentEquals('jacocoFullReport')) {
-                        it.dependsOn jacocoTask
-                    }
+        if (project.tasks.findByName('jacocoFullReport')) {
+            project.tasks.jacocoFullReport.dependsOn jacocoTestReportTask
+        } else {
+            project.tasks.whenTaskAdded {
+                if (it.name.contentEquals('jacocoFullReport')) {
+                    it.dependsOn jacocoTestReportTask
                 }
             }
+        }
+    }
 
-            //If testCoverage is not enabled, Android Jacoco' plugin will not instrumentate project classes
-            if (variant.buildType.testCoverageEnabled) {
-                project.logger.warn("WARNING: You should DISABLE \"android.buildTypes.${buildTypeName}.testCoverageEnabled\" in your build.gradle in order to make \"${taskName}\" run succesfully in \"${project.name}\".")
+    private def findOrCreateJacocoTestReportTask() {
+        Task jacocoTestReportTask = project.tasks.findByName("jacocoTestReport")
+        if (!jacocoTestReportTask) {
+            jacocoTestReportTask = project.task("jacocoTestReport") {
+                group = "reporting"
             }
         }
+        return jacocoTestReportTask
+    }
+
+    private def getVariants() {
+        if (project.android.hasProperty('libraryVariants')) {
+            return project.android.libraryVariants
+        } else {
+            return project.android.applicationVariants
+        }
+    }
+
+    private def createReportTask(def variant) {
+        def sourceDirs = sourceDirs(variant)
+        def classesDir = classesDir(variant)
+        def testTask = testTask(variant)
+        def executionData = executionDataFile(testTask)
+        return project.task("jacoco${testTask.name.capitalize()}Report", type: JacocoReport) { JacocoReport reportTask ->
+            reportTask.dependsOn testTask
+            reportTask.group = "reporting"
+            reportTask.description = "Generates Jacoco coverage reports for the ${variant.name} variant."
+            reportTask.executionData = project.files(executionData)
+            reportTask.sourceDirectories = project.files(sourceDirs)
+            reportTask.classDirectories =
+                    project.fileTree(dir: classesDir, excludes: [
+                            '**/R.class',
+                            '**/R$*.class',
+                            '**/BuildConfig.class',
+                            '**/*$ViewInjector*.*',
+                            '**/*$ViewBinder*.*',
+                            '**/Manifest*.*',
+                            '**/*$Lambda$*.*',
+                            '**/*Module.*',
+                            '**/*Dagger*.*',
+                            '**/*MembersInjector*.*',
+                            '**/*_Provide*Factory*.*',
+                            '**/*_Factory*.*',
+                            '**/*$*$*.*'
+                    ])
+            reportTask.reports {
+                csv.enabled false
+                html.enabled true
+                xml.enabled true
+            }
+        }
+    }
+
+    protected def sourceDirs(variant) {
+        variant.sourceSets.java.srcDirs.collect { it.path }.flatten()
+    }
+
+    protected def classesDir(variant) {
+        variant.javaCompile.destinationDir
+    }
+
+    protected def testTask(variant) {
+        project.tasks.withType(Test).find { task -> task.name =~ /test${variant.name.capitalize()}UnitTest/ }
+    }
+
+    protected def executionDataFile(Task testTask) {
+        testTask.jacoco.destinationFile.path
     }
 
 }
