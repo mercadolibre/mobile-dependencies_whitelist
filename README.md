@@ -1,8 +1,6 @@
 MercadoLibre Mobile Gradle Plugin
 ==============================
 
-## Repo status
-
 [![Build Status](https://travis-ci.com/mercadolibre/mobile-android_gradle.svg?token=cqMzpxLsVioEuXgqEi7v&branch=develop)](https://travis-ci.com/mercadolibre/mobile-android_gradle) 
 
 Plugin de gradle que configura y agregar tasks para hacerle la vida mas facil al developer mobile.
