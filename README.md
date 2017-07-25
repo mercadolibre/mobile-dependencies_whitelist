@@ -43,21 +43,21 @@ allprojects {
 ```
 
 Las tasks creadas son de la forma:
-- :publish\<Packaging>\<Type>\<Variant>\<Flavor> // Si no hay flavors, va a ser publish\<Packaging>\<Type>\<Variant>
-- :publish\<Packaging>\<Type> // Va a publicar para el variant **release** todos los flavors que haya
-- :publish\<Type> // Va a publicar para el variant **release** todos los flavors que haya, detecta solo el packaging
+- :publish\<Packaging>\<Type>\<BuildType>\<Flavor> // Si no hay flavors, va a ser publish\<Packaging>\<Type>\<BuildType>
+- :publish\<Packaging>\<Type> // Va a publicar para el BuildType **release** todos los flavors que haya
+- :publish\<Type> // Va a publicar para el BuildType **release** todos los flavors que haya, detecta solo el packaging
 
 Donde:
 
 - \<Packaging>: aar - jar
 - \<Type>: Local - Release - Alpha - Experimental
 - \<Flavor>: Definido por cada uno, si no tiene la aplicacion, desestimarlo
-- \<Variant>: Debug - Release. El developer puede agregar mas, asi que tambien es definido por cada uno.
+- \<BuildType>: Debug - Release. El developer puede agregar mas, asi que tambien es definido por cada uno.
 
 Notas a tener en cuenta:
 - Podemos correr sobre el root cualquiera de ellos, y si hay mas de un modulo que lo tiene va a publicar ambos. Es decir, si corremos `./gradlew publishRelease` va a publicar todos los modulos en todos los flavors en Release.
 - Soporta tanto proyectos AAR como JAR. 
-- Soporta flavors, variants y buildTypes para proyectos de Android. Para proyectos Java soporta sourceSets (serian los flavors de Java)
+- Soporta flavors, buildTypes dentro de cada uno para proyectos de Android. Para proyectos Java soporta sourceSets (serian los flavors de Java)
 - Soporta cualquier superset de java, es decir que si tenemos codigo Kotlin, lo va a agregar.
 - En caso de tener dependencias locales, agregarlas como `compile project(path: '...')` y automaticamente nosotros vamos a referenciarlas como corresponde.
 - En caso de haber productFlavors, los mismos para diferenciarlos en una misma publicacion van a tener su nombre como prefijo en la version "Ejemplo com.mercadolibre.group:artifact:flavorA-1.0.0"
@@ -77,10 +77,10 @@ Este modulo genera la task `lintGradle`, la cual aplica todos los lints. De ser 
 
 ### Jacoco
 
-Se agrega plugin de jacoco, el mismo permite tener reportes para cada task de test del proyecto. El mismo creara una task `jacocoFullReport` la cual corre todos los tests posibles (para cada variant/buildType/flavor/sourceSet) y genera los reportes en formatos detectables por las aplicaciones de coverage.
+Se agrega plugin de jacoco, el mismo permite tener reportes para cada task de test del proyecto. El mismo creara una task `jacocoFullReport` la cual corre todos los tests posibles (para cada buildType/flavor/sourceSet) y genera los reportes en formatos detectables por las aplicaciones de coverage.
 
 ### Locks
 
-Se agrega una task `lockVersions` para coder lockear versiones dinamicas a estaticas correctamente.
+Se agrega una task `lockVersions` para poder lockear versiones dinamicas a estaticas correctamente.
 
 Ademas, el mismo generara ciertas tasks para manipular los locks de manera mas facil, por ejemplo `updateLock`/`deleteLock`/etc. Para mas informacion de las mismas se puede ver el plugin de Nebula.
