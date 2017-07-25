@@ -12,5 +12,4 @@
 - Se agregan reportes de jacoco para cada flavor, variant y buildTypes
 - Se agrega task 'jacocoFullReport' que permite generar todos los reportes posibles
 - Se agrega modulo para lockear dependencias
-- Se agrega modulo para configurar robolectric
 - Se le da soporte a kotlin o cualquier superset de java
