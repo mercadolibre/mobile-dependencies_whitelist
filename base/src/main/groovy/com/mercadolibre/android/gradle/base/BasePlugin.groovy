@@ -54,6 +54,12 @@ class BasePlugin implements Plugin<Project> {
         addHasClasspathMethod()
         setupRepositories()
 
+        project.allprojects {
+            // TODO This is for giving retrocompatibility with mobile-cd. Remove it when everyone has updated
+            // https://github.com/mercadolibre/mobile-cd/blob/master/helpers/android_helper.rb#L39
+            it.ext.versionName = it.version
+        }
+
         project.subprojects.each { Project subproject ->
             // Apply modules depending on already applied plugins
             subproject.plugins.withType(JavaPlugin) {
