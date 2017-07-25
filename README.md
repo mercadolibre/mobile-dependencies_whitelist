@@ -67,7 +67,7 @@ Notas a tener en cuenta:
 Se agregan lints especificos. Hay un closure sobre cada proyecto donde podemos habilitarlo o deshabilitarlo (y tiene ciertas configuraciones especificas de cada lint)
 
 ```gradle
-lintConfiguration {
+lintGradle {
   enabled = true
   dependencyWhitelistUrl = "https://raw.githubusercontent.com/mercadolibre/mobile-dependencies_whitelist/master/android-whitelist.json" // Si alguien distinto a Meli quiere su whitelist, deberia cambiar esto
 }
