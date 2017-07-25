@@ -18,7 +18,6 @@ class BasePlugin implements Plugin<Project> {
     private static final ANDROID_LIBRARY_MODULES = { ->
         return [
                 new AndroidLibraryPublishableModule(),
-                new RobolectricModule(),
                 new AndroidJacocoModule(),
                 new LintableModule()
         ]
@@ -26,7 +25,6 @@ class BasePlugin implements Plugin<Project> {
 
     private static final ANDROID_APPLICATION_MODULES = { ->
         return [
-                new RobolectricModule(),
                 new AndroidJacocoModule()
         ]
     }
