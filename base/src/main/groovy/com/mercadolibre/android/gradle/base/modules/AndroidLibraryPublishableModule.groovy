@@ -9,6 +9,8 @@ import org.gradle.api.Task
  */
 class AndroidLibraryPublishableModule extends PublishableModule {
 
+    private static final String PACKAGING = 'Aar'
+
     private Project project
 
     @Override
@@ -29,23 +31,29 @@ class AndroidLibraryPublishableModule extends PublishableModule {
     }
 
     protected void createTasksFor(def libraryVariant) {
-        def alphaTask = createTask(new PublishAarAlphaTask(), libraryVariant, "publishAarAlpha${libraryVariant.name.capitalize()}")
-        def experimentalTask = createTask(new PublishAarExperimentalTask(), libraryVariant, "publishAarExperimental${libraryVariant.name.capitalize()}")
-        def releaseTask = createTask(new PublishAarReleaseTask(), libraryVariant, "publishAarRelease${libraryVariant.name.capitalize()}")
-        def localTask = createTask(new PublishAarLocalTask(), libraryVariant, "publishAarLocal${libraryVariant.name.capitalize()}")
+        String variantName = libraryVariant.name
 
-        if (libraryVariant.name.toLowerCase().contains('release')) {
+        def alphaTask = createTask(new PublishAarAlphaTask(), libraryVariant,
+                getTaskName(TASK_TYPE_ALPHA, PACKAGING, variantName))
+        def experimentalTask = createTask(new PublishAarExperimentalTask(), libraryVariant,
+                getTaskName(TASK_TYPE_EXPERIMENTAL, PACKAGING, variantName))
+        def releaseTask = createTask(new PublishAarReleaseTask(), libraryVariant,
+                getTaskName(TASK_TYPE_RELEASE, PACKAGING, variantName))
+        def localTask = createTask(new PublishAarLocalTask(), libraryVariant,
+                getTaskName(TASK_TYPE_LOCAL, PACKAGING, variantName))
+
+        if (libraryVariant.name.toLowerCase().contains(TASK_TYPE_RELEASE.toLowerCase())) {
             // Create tasks without the variant suffix that default to the main sourcesets
-            createStubTask("publishAarAlpha", alphaTask)
-            createStubTask("publishAarExperimental", experimentalTask)
-            createStubTask("publishAarRelease", releaseTask)
-            createStubTask("publishAarLocal", localTask)
+            createStubTask(getTaskName(TASK_TYPE_ALPHA, PACKAGING), alphaTask)
+            createStubTask(getTaskName(TASK_TYPE_EXPERIMENTAL, PACKAGING), experimentalTask)
+            createStubTask(getTaskName(TASK_TYPE_RELEASE, PACKAGING), releaseTask)
+            createStubTask(getTaskName(TASK_TYPE_LOCAL, PACKAGING), localTask)
 
             // Create tasks without the variant and package type suffix, defaulting to release
-            createStubTask("publishAlpha", alphaTask)
-            createStubTask("publishExperimental", experimentalTask)
-            createStubTask("publishRelease", releaseTask)
-            createStubTask("publishLocal", localTask)
+            createStubTask(getTaskName(TASK_TYPE_ALPHA), alphaTask)
+            createStubTask(getTaskName(TASK_TYPE_EXPERIMENTAL), experimentalTask)
+            createStubTask(getTaskName(TASK_TYPE_RELEASE), releaseTask)
+            createStubTask(getTaskName(TASK_TYPE_LOCAL), localTask)
         }
     }
 
@@ -63,7 +71,7 @@ class AndroidLibraryPublishableModule extends PublishableModule {
             project.tasks."$name".dependsOn realTask
         } else {
             project.task(name) { Task it ->
-                it.group = 'publishing'
+                it.group = PublishTask.TASK_GROUP
                 it.dependsOn realTask
             }
         }

@@ -28,7 +28,7 @@ class PublishJarReleaseTask extends PublishJarTask {
                         return it
                     })
                 }
-                group = 'publishing'
+                group = TASK_GROUP
 
                 dependsOn "check", "${variant.name}SourcesJar", "${variant.name}JavadocJar",
                         "generatePomFor${taskName.capitalize()}Publication"

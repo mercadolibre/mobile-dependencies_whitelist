@@ -19,7 +19,7 @@ class PublishJarLocalTask extends PublishJarTask {
                 doFirst {
                     VersionContainer.logVersion("${project.group}:${project.name}:${project.version}")
                 }
-                group = 'publishing'
+                group = TASK_GROUP
                 dependsOn "install"
             }
         }

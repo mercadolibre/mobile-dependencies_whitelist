@@ -8,6 +8,11 @@ import org.gradle.api.Project
  */
 class JavaPublishableModule extends PublishableModule {
 
+    private static final String SOURCE_SETS_TEST = 'test'
+    private static final String SOURCE_SETS_DEFAULT = 'main'
+
+    private static final String PACKAGING = 'Jar'
+
     private Project project
 
     @Override
@@ -32,24 +37,30 @@ class JavaPublishableModule extends PublishableModule {
         // JAR projects dont have local publishes since gradle already provides
         // the `install` task for it
         project.sourceSets.each {
-            if (it.name != 'test') {
-                createTask(new PublishJarAlphaTask(), it, "publishJarAlpha${it.name.capitalize()}")
-                createTask(new PublishJarReleaseTask(), it, "publishJarRelease${it.name.capitalize()}")
-                createTask(new PublishJarExperimentalTask(), it, "publishJarExperimental${it.name.capitalize()}")
+            if (it.name != SOURCE_SETS_TEST) {
+                String variantName = it.name
+                createTask(new PublishJarAlphaTask(), it,
+                        getTaskName(TASK_TYPE_ALPHA, PACKAGING, variantName))
+                createTask(new PublishJarReleaseTask(), it,
+                        getTaskName(TASK_TYPE_RELEASE, PACKAGING, variantName))
+                createTask(new PublishJarExperimentalTask(), it,
+                        getTaskName(TASK_TYPE_EXPERIMENTAL, PACKAGING, variantName))
+                createTask(new PublishJarLocalTask(), it,
+                        getTaskName(TASK_TYPE_LOCAL, PACKAGING, variantName))
             }
 
-            if (it.name == 'main') {
+            if (it.name == SOURCE_SETS_DEFAULT) {
                 // If release, create mirror tasks without the flavor name
-                createTask(new PublishJarAlphaTask(), it, "publishJarAlpha")
-                createTask(new PublishJarReleaseTask(), it, "publishJarRelease")
-                createTask(new PublishJarExperimentalTask(), it, "publishJarExperimental")
-                createTask(new PublishJarLocalTask(), it, "publishJarLocal")
+                createTask(new PublishJarAlphaTask(), it, getTaskName(TASK_TYPE_ALPHA, PACKAGING))
+                createTask(new PublishJarReleaseTask(), it, getTaskName(TASK_TYPE_RELEASE, PACKAGING))
+                createTask(new PublishJarExperimentalTask(), it, getTaskName(TASK_TYPE_EXPERIMENTAL, PACKAGING))
+                createTask(new PublishJarLocalTask(), it, getTaskName(TASK_TYPE_LOCAL, PACKAGING))
 
                 // And also mirror them without the Jar suffix too
-                createTask(new PublishJarAlphaTask(), it, "publishAlpha")
-                createTask(new PublishJarReleaseTask(), it, "publishRelease")
-                createTask(new PublishJarExperimentalTask(), it, "publishExperimental")
-                createTask(new PublishJarLocalTask(), it, "publishLocal")
+                createTask(new PublishJarAlphaTask(), it, getTaskName(TASK_TYPE_ALPHA))
+                createTask(new PublishJarReleaseTask(), it, getTaskName(TASK_TYPE_RELEASE))
+                createTask(new PublishJarExperimentalTask(), it, getTaskName(TASK_TYPE_EXPERIMENTAL))
+                createTask(new PublishJarLocalTask(), it, getTaskName(TASK_TYPE_LOCAL))
             }
         }
     }

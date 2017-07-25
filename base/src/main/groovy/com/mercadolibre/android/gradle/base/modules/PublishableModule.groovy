@@ -9,6 +9,11 @@ import org.gradle.api.publish.maven.plugins.MavenPublishPlugin
  */
 abstract class PublishableModule extends Module {
 
+    protected static final String TASK_TYPE_ALPHA = 'Alpha'
+    protected static final String TASK_TYPE_RELEASE = 'Release'
+    protected static final String TASK_TYPE_EXPERIMENTAL = 'Experimental'
+    protected static final String TASK_TYPE_LOCAL = 'Local'
+
     private static final String TASK_GET_PROJECT_VERSION = "getProjectVersion"
 
     @Override
@@ -48,6 +53,10 @@ abstract class PublishableModule extends Module {
             inputFile.write("version: ${projectVersion}")
             println "See '${folder}/${fileName}' file"
         }
+    }
+
+    protected String getTaskName(String type, String packaging = '', String variantName = '') {
+        return "publish${packaging.capitalize()}${type}${variantName.capitalize()}"
     }
 
 }

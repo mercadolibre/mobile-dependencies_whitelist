@@ -13,6 +13,8 @@ abstract class PublishTask {
     protected static final String BINTRAY_RELEASE_REPOSITORY = 'android-releases'
     protected static final String BINTRAY_EXPERIMENTAL_REPOSITORY = 'android-experimental'
 
+    public static final String TASK_GROUP = 'publishing'
+
     abstract Task create(Builder builder)
 
     protected String getTimestamp() {

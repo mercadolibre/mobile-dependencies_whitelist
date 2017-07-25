@@ -28,7 +28,7 @@ class PublishAarReleaseTask extends PublishAarTask {
                         return it
                     })
                 }
-                group = 'publishing'
+                group = TASK_GROUP
 
                 dependsOn "check", "${variant.name}SourcesJar", "${variant.name}JavadocJar"
                 finalizedBy 'bintrayUpload'
