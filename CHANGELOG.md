@@ -1,28 +1,16 @@
 ### Changelog
 
-### 3.6.1
-- Fixeamos que los locks corran porque una validacion no cumplia siempre
+### 4.0.0
 
-### 3.5.2
-- Ahora si fixeamos jacoco
-- Refactorizamos como funcionan los locks. Ahora busca en maven el ultimo release mientras busca la dependencia, en vez de inferirlo
-
-### 3.5.1
-- Fixeamos la publicacion
-- Fixeamos que no se estaban agregando los plugins de jacoco y robolectric
-
-### 3.5.0
-#### Nuevos features:
-- Podemos publicar jars desde el plugin haciendo:
-    - publishJarRelease
-    - publishJarExperimental
-    - publishJarLocal
-    - publishJarAlpha
-
-- Agregamos nuevos tasks de publicacion
-
-    - publishRelease
-    - publishAlpha
-    - publishExperimental
-
-(los nuevos tasks se comportan como los anteriores)
+- Se tiro abajo lo anterior y se hizo de nuevo
+- Se agrega un solo plugin con modulos independientes adentro
+- Se da soporte a publicacion de AAR y JAR
+- Se da soporte a flavors, variants y buildTypes
+- Se da soporte a sourceSets
+- Se cambia nombre del plugin a 'mercadolibre.mobile'
+- Se shippea lints de gradle dentro del plugin
+- Se agregan reportes de jacoco para cada flavor, variant y buildTypes
+- Se agrega task 'jacocoFullReport' que permite generar todos los reportes posibles
+- Se agrega modulo para lockear dependencias
+- Se agrega modulo para configurar robolectric
+- Se le da soporte a kotlin o cualquier superset de java
