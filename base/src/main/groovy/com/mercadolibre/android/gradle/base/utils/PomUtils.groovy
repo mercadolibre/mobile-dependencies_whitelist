@@ -32,50 +32,54 @@ final class PomUtils {
         project.configurations.all { Configuration configuration ->
             if (all.contains(configuration.name)) {
                 configuration.allDependencies.each {
-                    def dependencyNode = dependenciesNode.appendNode('dependency')
-                    dependencyNode.appendNode('groupId', it.group)
-                    dependencyNode.appendNode('artifactId', it.name)
+                    // Check they all exists. For example if using
+                    // compile localGroovy() -> this is ":unspecified:"
+                    if (it.group && it.name && it.version) {
+                        def dependencyNode = dependenciesNode.appendNode('dependency')
+                        dependencyNode.appendNode('groupId', it.group)
+                        dependencyNode.appendNode('artifactId', it.name)
 
-                    if (it.group == xmlProvider.asNode().groupId.text()) {
-                        // Its a local dependency, so lets further check
-                        // if maybe the version has a timestamp, in which
-                        // case, we should convert it to a dynamic version.
-                        if (xmlProvider.asNode().version.text() ==~ /^.*-\d{10,16}/) {
-                            // The version has at the end a timestamp.
-                            // We will add the version as dynamic
-                            // If the user doesnt want this, he should before publishing
-                            // a module, publish its dependants and change
-                            // the local compilation
-                            dependencyNode.appendNode('version', xmlProvider.asNode().version.text()
-                                    .replaceAll(/-\d{10,16}/, '-+'))
+                        if (it.group == xmlProvider.asNode().groupId.text()) {
+                            // Its a local dependency, so lets further check
+                            // if maybe the version has a timestamp, in which
+                            // case, we should convert it to a dynamic version.
+                            if (xmlProvider.asNode().version.text() ==~ /^.*-\d{10,16}/) {
+                                // The version has at the end a timestamp.
+                                // We will add the version as dynamic
+                                // If the user doesnt want this, he should before publishing
+                                // a module, publish its dependants and change
+                                // the local compilation
+                                dependencyNode.appendNode('version', xmlProvider.asNode().version.text()
+                                        .replaceAll(/-\d{10,16}/, '-+'))
+                            } else {
+                                // If it doesnt have a timestamp, we should assume its a
+                                // production publication, where the user explicitly
+                                // wants this version (its already published or will be
+                                // soon
+                                dependencyNode.appendNode('version', it.version)
+                            }
                         } else {
-                            // If it doesnt have a timestamp, we should assume its a
-                            // production publication, where the user explicitly
-                            // wants this version (its already published or will be
-                            // soon
+                            // This dependency isnt local, so use the verison it has.
                             dependencyNode.appendNode('version', it.version)
                         }
-                    } else {
-                        // This dependency isnt local, so use the verison it has.
-                        dependencyNode.appendNode('version', it.version)
-                    }
 
-                    def scope
-                    switch (configuration.name) {
-                        case providedConfigurations:
-                            scope = 'provided'
-                            break
-                        case runtimeConfigurations:
-                            scope = 'runtime'
-                            break
-                        case testConfigurations:
-                            scope = 'test'
-                            break
-                        default:
-                            scope = 'compile'
-                            break
+                        def scope
+                        switch (configuration.name) {
+                            case providedConfigurations:
+                                scope = 'provided'
+                                break
+                            case runtimeConfigurations:
+                                scope = 'runtime'
+                                break
+                            case testConfigurations:
+                                scope = 'test'
+                                break
+                            default:
+                                scope = 'compile'
+                                break
+                        }
+                        dependencyNode.appendNode('scope', scope)
                     }
-                    dependencyNode.appendNode('scope', scope)
                 }
             }
         }
