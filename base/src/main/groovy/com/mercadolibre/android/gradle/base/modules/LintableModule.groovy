@@ -58,11 +58,6 @@ class LintableModule implements Module {
     void configure(Project project) {
         this.project = project
 
-        String extensionName = LintGradleExtension.simpleName.replaceAll("Extension", '')
-        extensionName = (Character.toLowerCase(extensionName.charAt(0)) as String) + extensionName.substring(1)
-
-        project.extensions.create(extensionName, LintGradleExtension)
-
         project.afterEvaluate {
             setUpLint()
         }
@@ -72,6 +67,13 @@ class LintableModule implements Module {
                 addedTask.dependsOn TASK_NAME
             }
         }
+    }
+
+    public static void createExtension(Project project) {
+        String extensionName = LintGradleExtension.simpleName.replaceAll("Extension", '')
+        extensionName = (Character.toLowerCase(extensionName.charAt(0)) as String) + extensionName.substring(1)
+
+        project.extensions.create(extensionName, LintGradleExtension)
     }
 
     /**
@@ -88,7 +90,7 @@ class LintableModule implements Module {
             task.doLast {
                 def buildErrored = false
 
-                if (project.lintGradle.enabled) {
+                if (project.rootProject.lintGradle.enabled) {
                     linters.each {
                         println ":${project.name}:${it.name()}"
                         def lintErrored = it.lint(project, variants)

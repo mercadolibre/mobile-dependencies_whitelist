@@ -1,6 +1,9 @@
+apply plugin: 'mercadolibre.mobile'
+
 buildscript {
     repositories {
         jcenter()
+        mavenLocal()
         maven {
             url "https://dl.bintray.com/mercadolibre/android-releases"
             credentials {
@@ -11,6 +14,7 @@ buildscript {
     }
 
     dependencies {
+        classpath 'com.mercadolibre.android.gradle:base:4.0.0'
         classpath 'com.android.tools.build:gradle:2.2.0'
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.0'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.3'

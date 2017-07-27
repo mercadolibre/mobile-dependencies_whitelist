@@ -51,6 +51,7 @@ class BasePlugin implements Plugin<Project> {
         avoidCacheForDynamicVersions()
         addHasClasspathMethod()
         setupRepositories()
+        createExtensions()
 
         project.allprojects {
             // TODO This is for giving retrocompatibility with mobile-cd. Remove it when everyone has updated
@@ -79,6 +80,10 @@ class BasePlugin implements Plugin<Project> {
                 }
             }
         }
+    }
+
+    private void createExtensions() {
+        LintableModule.createExtension(project)
     }
 
     /**
