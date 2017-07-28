@@ -95,7 +95,7 @@ class BasePlugin implements Plugin<Project> {
         // For all sub-projects...
         project.gradle.allprojects {
             configurations.all {
-                resolutionStrategy.cacheDynamicVersionsFor 30, 'minutes'
+                resolutionStrategy.cacheDynamicVersionsFor 1, 'seconds'
             }
         }
     }
