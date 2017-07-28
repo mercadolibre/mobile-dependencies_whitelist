@@ -1,6 +1,7 @@
 package com.mercadolibre.android.gradle.base
 
 import com.mercadolibre.android.gradle.base.modules.*
+import com.mercadolibre.android.gradle.base.utils.VersionContainer
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.plugins.JavaPlugin
@@ -47,6 +48,8 @@ class BasePlugin implements Plugin<Project> {
      */
     void apply(Project project) {
         this.project = project
+
+        VersionContainer.init()
 
         avoidCacheForDynamicVersions()
         addHasClasspathMethod()

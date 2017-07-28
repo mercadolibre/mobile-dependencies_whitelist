@@ -5,7 +5,11 @@ package com.mercadolibre.android.gradle.base.utils
  */
 final class VersionContainer {
 
-    private static final Map<String, String> map = new HashMap<>()
+    private static Map<String, String> map
+
+    public static void init() {
+        map = new HashMap<>()
+    }
 
     public static void put(String publicationName, String version) {
         if (!map.get(publicationName)) {
