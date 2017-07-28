@@ -1,9 +1,9 @@
-apply plugin: 'mercadolibre.mobile'
+//apply plugin: 'mercadolibre.mobile'
 
 buildscript {
     repositories {
         jcenter()
-        mavenLocal()
+        //mavenLocal()
         maven {
             url "https://dl.bintray.com/mercadolibre/android-releases"
             credentials {
@@ -13,8 +13,19 @@ buildscript {
         }
     }
 
+    /**
+     * TODO: La primera vez que publiquemos, hacerlo a mano.
+     * Como?
+     * 1. En el gradle.properties ponemos 4.0.0
+     * 2. Corremos ./gradlew install -> Nos manda al mavenLocal() la 4.0.0
+     * 3. Descomentamos el classpath / apply plugin: / mavenLocal()
+     * 4. Corremos ./gradlew publishRelease
+     * 5. Si fallo 4., entonces hay un issue, menos mal que no publico (?)
+     * 6. Borramos el mavenLocal() y ponemos como version del classpath '4.+'
+     * Done, dog-fooding mastah
+     */
     dependencies {
-        classpath 'com.mercadolibre.android.gradle:base:4.0.0'
+        //classpath 'com.mercadolibre.android.gradle:base:4.0.0'
         classpath 'com.android.tools.build:gradle:2.2.0'
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.0'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.3'
