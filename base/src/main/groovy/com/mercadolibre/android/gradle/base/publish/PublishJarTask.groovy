@@ -80,7 +80,7 @@ abstract class PublishJarTask extends PublishTask {
                 sourcesJar = project.task("${variant.name}SourcesJar", type: Jar) {
                     description "Puts sources for ${variant.name} in a jar."
                     from sourceDirs
-                    classifier = 'sources'
+                    classifier = '' // pure jars need the no-suffix that already brings the sources
                 }
             }
 
