@@ -30,8 +30,7 @@ class PublishJarReleaseTask extends PublishJarTask {
                 }
                 group = TASK_GROUP
 
-                dependsOn "check", "${variant.name}SourcesJar", "${variant.name}JavadocJar",
-                        "generatePomFor${taskName.capitalize()}Publication"
+                dependsOn "build", "check", "${variant.name}SourcesJar", "${variant.name}JavadocJar"
                 finalizedBy 'bintrayUpload'
             }
         }

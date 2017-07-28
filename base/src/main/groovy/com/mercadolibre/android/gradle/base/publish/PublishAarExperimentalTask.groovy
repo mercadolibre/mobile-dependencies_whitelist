@@ -30,7 +30,7 @@ class PublishAarExperimentalTask extends PublishAarTask {
                 }
                 group = TASK_GROUP
 
-                dependsOn "check", "${variant.name}SourcesJar", "${variant.name}JavadocJar"
+                dependsOn "bundle${variant.name.capitalize()}", "check", "${variant.name}SourcesJar", "${variant.name}JavadocJar"
                 finalizedBy 'bintrayUpload'
             }
         }

@@ -19,7 +19,7 @@ class PublishAarLocalTask extends PublishAarTask {
             return project.tasks."$taskName"
         } else {
             return project.task(builder.taskName) {
-                dependsOn "${variant.name}SourcesJar", "${variant.name}JavadocJar"
+                dependsOn "bundle${variant.name.capitalize()}", "${variant.name}SourcesJar", "${variant.name}JavadocJar"
                 doLast {
                     VersionContainer.logVersion("${project.group}:${project.name}:${VersionContainer.get(builder.taskName, project.version as String)}")
                 }
