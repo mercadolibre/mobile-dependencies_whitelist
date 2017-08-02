@@ -118,47 +118,46 @@ class BasePlugin implements Plugin<Project> {
             // If it supports locks, then add the task for each of the subprojects and configure it
             if (dependencyLockPluginExists) {
                 project.subprojects.each { subproject ->
-                    subproject.afterEvaluate {
-                        if (subproject.hasProperty('publisher')) {
-                            // First apply the plugin since they might not add it
-                            subproject.apply plugin: NEBULA_LOCK_PLUGIN_NAME
+                    Class clazz = Class.forName("com.mercadolibre.android.gradle.library.LibraryPlugin")
+                    subproject.plugins.withType(clazz) {
+                        // First apply the plugin since they might not add it
+                        subproject.apply plugin: NEBULA_LOCK_PLUGIN_NAME
 
-                            // Second lets add a strategy to filter all ALPHA versions when running a lock task
-                            // this way we will only lock to release versions (or experimentals if explicitly added)
-                            if (project.gradle.startParameter.taskNames.toListString().toLowerCase().contains(NEBULA_LOCK_TASKS_NAME_MATCHER)) {
-                                subproject.configurations.all {
-                                    resolutionStrategy {
-                                        componentSelection.all { ComponentSelection selection ->
-                                            // If the version has an alpha and it's not me reject the version
-                                            // If it's me, we will change it later
-                                            if (!selection.candidate.group.contentEquals(subproject.publisher.groupId) &&
-                                                    selection.candidate.version.contains(VERSION_ALPHA)) {
-                                                selection.reject("Bad version. We dont accept alphas on the lock stage.")
-                                            }
+                        // Second lets add a strategy to filter all ALPHA versions when running a lock task
+                        // this way we will only lock to release versions (or experimentals if explicitly added)
+                        if (project.gradle.startParameter.taskNames.toListString().toLowerCase().contains(NEBULA_LOCK_TASKS_NAME_MATCHER)) {
+                            subproject.configurations.all {
+                                resolutionStrategy {
+                                    componentSelection.all { ComponentSelection selection ->
+                                        // If the version has an alpha and it's not me reject the version
+                                        // If it's me, we will change it later
+                                        if (!selection.candidate.group.contentEquals(subproject.publisher.groupId) &&
+                                                selection.candidate.version.contains(VERSION_ALPHA)) {
+                                            selection.reject("Bad version. We dont accept alphas on the lock stage.")
                                         }
                                     }
                                 }
                             }
+                        }
 
-                            // Finally, create a task that wraps the flow of the locking logic
-                            subproject.task(TASK_LOCK_VERSIONS) {
-                                description taskDescription
-                                dependsOn NEBULA_LOCK_TASKS
+                        // Finally, create a task that wraps the flow of the locking logic
+                        subproject.task(TASK_LOCK_VERSIONS) {
+                            description taskDescription
+                            dependsOn NEBULA_LOCK_TASKS
 
-                                doLast {
-                                    def file = project.file("dependencies.lock");
-                                    def json = new JsonSlurper().parse(file)
-                                    json.each { variantName, dependencies ->
-                                        dependencies.each { group, versions ->
-                                            if (group.equals(subproject.publisher.groupId)) {
-                                                versions.locked = subproject.publisher.version
-                                            }
+                            doLast {
+                                def file = project.file("dependencies.lock");
+                                def json = new JsonSlurper().parse(file)
+                                json.each { variantName, dependencies ->
+                                    dependencies.each { group, versions ->
+                                        if (group.equals(subproject.publisher.groupId)) {
+                                            versions.locked = subproject.publisher.version
                                         }
                                     }
-                                    def jsonBuilder = new JsonBuilder(json)
-                                    file.withWriter {
-                                        it.write jsonBuilder.toPrettyString()
-                                    }
+                                }
+                                def jsonBuilder = new JsonBuilder(json)
+                                file.withWriter {
+                                    it.write jsonBuilder.toPrettyString()
                                 }
                             }
                         }
