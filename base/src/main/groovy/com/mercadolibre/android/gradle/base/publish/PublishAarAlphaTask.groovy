@@ -21,6 +21,8 @@ class PublishAarAlphaTask extends PublishAarTask {
         } else {
             return project.task(builder.taskName) {
                 doFirst {
+                    // To avoid the .aar to finish with -VARIANT
+                    variant.outputs[0].packageLibrary.classifier = ''
                     BintrayConfiguration.setBintrayConfig(new BintrayConfiguration.Builder().with {
                         project = this.project
                         bintrayRepository = BINTRAY_RELEASE_REPOSITORY

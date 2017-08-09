@@ -21,6 +21,8 @@ class PublishAarExperimentalTask extends PublishAarTask {
         } else {
             return project.task(builder.taskName) {
                 doFirst {
+                    // To avoid the .aar to finish with -VARIANT
+                    variant.outputs[0].packageLibrary.classifier = ''
                     BintrayConfiguration.setBintrayConfig(new BintrayConfiguration.Builder().with {
                         project = this.project
                         bintrayRepository = BINTRAY_EXPERIMENTAL_REPOSITORY
@@ -30,7 +32,7 @@ class PublishAarExperimentalTask extends PublishAarTask {
                 }
                 group = TASK_GROUP
 
-                dependsOn "bundle${variant.name.capitalize()}", "check", "${variant.name}SourcesJar", "${variant.name}JavadocJar"
+                dependsOn "bundle${variant.name.capitalize()}", "${variant.name}SourcesJar", "${variant.name}JavadocJar"
                 finalizedBy 'bintrayUpload'
             }
         }

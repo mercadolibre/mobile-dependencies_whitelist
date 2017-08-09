@@ -98,9 +98,6 @@ abstract class PublishAarTask extends PublishTask {
                 groupId = project.group
                 version = VersionContainer.get(taskName, project.version as String)
 
-                // To avoid the .aar to finish with -FLAVOR
-                variant.outputs[0].packageLibrary.classifier = ''
-
                 artifacts = [variant.outputs[0].packageLibrary, sourcesJar, javadocJar]
 
                 pom.withXml { XmlProvider xmlProvider ->
