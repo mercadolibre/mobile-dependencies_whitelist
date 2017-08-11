@@ -100,6 +100,12 @@ abstract class PublishAarTask extends PublishTask {
 
                 artifacts = [variant.outputs[0].packageLibrary, sourcesJar, javadocJar]
 
+                // Only avoid adding the classifier if the task is any publish task
+                if (project.gradle.startParameter.taskNames.toListString().contains("publish")) {
+                    // To avoid the .aar to finish with -VARIANT since bintray requires this to upload the file
+                    variant.outputs[0].packageLibrary.classifier = ''
+                }
+
                 pom.withXml { XmlProvider xmlProvider ->
                     xmlProvider.asNode().packaging*.value = 'aar'
 
