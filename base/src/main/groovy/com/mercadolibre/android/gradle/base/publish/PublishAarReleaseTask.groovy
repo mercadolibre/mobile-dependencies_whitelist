@@ -3,7 +3,6 @@ package com.mercadolibre.android.gradle.base.publish
 import com.mercadolibre.android.gradle.base.utils.BintrayConfiguration
 import com.mercadolibre.android.gradle.base.utils.VersionContainer
 import org.gradle.api.Task
-
 /**
  * Created by saguilera on 7/23/17.
  */
