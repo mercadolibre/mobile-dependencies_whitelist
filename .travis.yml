@@ -32,20 +32,15 @@ matrix:
 
 env:
     matrix:
-    - TEST_SUITE="application:build" MODULE_DIR="application"
-    - TEST_SUITE="base:build" MODULE_DIR="build"
-    - TEST_SUITE="jacoco:build" MODULE_DIR="jacoco"
-    - TEST_SUITE="library:build" MODULE_DIR="library"
-    - TEST_SUITE="lint:build" MODULE_DIR="lint"
-    - TEST_SUITE="robolectric:build" MODULE_DIR="robolectric"
+    - TEST_SUITE="base:build" MODULE_DIR="base"
     global:
     - TERM=dumb
     - export GRADLE_VERSION=$(sed -n "/[0-9]\.[0-9]/p" gradle/wrapper/gradle-wrapper.properties | cut -c 67-69)
     - COVERALLS_REPO_TOKEN=V2CzZy3bleLuF0X86Aw8yp7UzGTyqR65E
     - TRAVIS_LEADER_TOKEN="TEST_SUITE"
     - TRAVIS_LEADER_VALUE="base:build"
-    - LIB_PROJECT_NAMES="base,robolectric,jacoco,lint,library,application"
-    - LIB_PROJECT_DIRS="base,robolectric,jacoco,lint,library,application"
+    - LIB_PROJECT_NAMES="base"
+    - LIB_PROJECT_DIRS="base"
 
 before_install:
     - bash "travis/run_before_install.sh"
