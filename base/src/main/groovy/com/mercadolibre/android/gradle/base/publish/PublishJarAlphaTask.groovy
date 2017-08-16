@@ -30,7 +30,7 @@ class PublishJarAlphaTask extends PublishJarTask {
                 }
                 group = TASK_GROUP
 
-                dependsOn "check", "jar", "${variant.name}JavadocJar"
+                dependsOn "jar", "${variant.name}JavadocJar"
                 finalizedBy 'bintrayUpload'
             }
         }

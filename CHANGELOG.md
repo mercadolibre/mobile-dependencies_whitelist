@@ -1,3 +1,7 @@
+# v4.1.0
+## Cambiado
+- Dejamos de depender de `check` para todas las task de release
+
 # v4.0.1
 ## Arreglado
 - Los .jar de alpha, experimental y release estaban siendo pisados por los sources.

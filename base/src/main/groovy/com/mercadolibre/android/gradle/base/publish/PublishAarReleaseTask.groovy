@@ -29,7 +29,7 @@ class PublishAarReleaseTask extends PublishAarTask {
                 }
                 group = TASK_GROUP
 
-                dependsOn "bundle${variant.name.capitalize()}", "check", "${variant.name}SourcesJar", "${variant.name}JavadocJar"
+                dependsOn "bundle${variant.name.capitalize()}", "${variant.name}SourcesJar", "${variant.name}JavadocJar"
                 finalizedBy 'bintrayUpload'
             }
         }
