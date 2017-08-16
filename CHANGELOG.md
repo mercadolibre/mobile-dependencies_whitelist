@@ -1,7 +1,14 @@
-### Changelog
+# v4.0.1
+## Arreglado
+- Los .jar de alpha, experimental y release estaban siendo pisados por los sources.
 
-### 4.0.0
+## Cambiado
+- Dejamos de correr `check` al publicar versiones experimentales de los .jar.
 
+## Eliminado
+- Dejamos de publicar los sources de los .jar.
+
+# v4.0.0
 - Se tiro abajo lo anterior y se hizo de nuevo
 - Se agrega un solo plugin con modulos independientes adentro
 - Se da soporte a publicacion de AAR y JAR
