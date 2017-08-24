@@ -39,7 +39,7 @@ final class PomUtils {
                         dependencyNode.appendNode('groupId', it.group)
                         dependencyNode.appendNode('artifactId', it.name)
 
-                        if (it.group == xmlProvider.asNode().groupId.text()) {
+                        if (it.group == xmlProvider.asNode().groupId.text() && !it.version) {
                             // Its a local dependency, so lets further check
                             // if maybe the version has a timestamp, in which
                             // case, we should convert it to a dynamic version.
