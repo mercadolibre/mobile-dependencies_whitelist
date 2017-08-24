@@ -1,3 +1,7 @@
+# v4.1.1
+## Arreglado
+- Arreglamos un error que hacia que las otras libs con el mismo groupId queden con la version propia
+
 # v4.1.0
 ## Cambiado
 - Dejamos de depender de `check` para todas las task de release
