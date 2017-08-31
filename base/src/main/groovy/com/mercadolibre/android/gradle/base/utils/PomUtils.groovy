@@ -39,8 +39,6 @@ final class PomUtils {
                         dependencyNode.appendNode('groupId', it.group)
                         dependencyNode.appendNode('artifactId', it.name)
 
-                        println it.version
-
                         // If the group is the same and the version doesn't exist then its a local dependency
                         if (it.group == xmlProvider.asNode().groupId.text() &&
                                 artifactIsFromProject(project.rootProject, it.name)) {
