@@ -1,3 +1,7 @@
+# v4.1.2
+## Arreglado
+- Arreglamos las versiones locales para que sean de la forma LOCAL-:version-TIMESTAMP. [PullRequest](https://github.com/mercadolibre/mobile-android_gradle/pull/103)
+
 # v4.1.1
 ## Arreglado
 - Arreglamos un error que hacia que las otras libs con el mismo groupId queden con la version propia
