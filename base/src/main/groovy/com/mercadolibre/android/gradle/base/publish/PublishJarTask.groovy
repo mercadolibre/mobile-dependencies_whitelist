@@ -80,7 +80,7 @@ abstract class PublishJarTask extends PublishTask {
                 sourcesJar = project.task("${variant.name}SourcesJar", type: Jar) {
                     description "Puts sources for ${variant.name} in a jar."
                     from sourceDirs
-                    classifier = '' // pure jars need the no-suffix that already brings the sources
+                    classifier = 'sources'
                 }
             }
 
@@ -88,7 +88,7 @@ abstract class PublishJarTask extends PublishTask {
                 artifactId = project.name
                 groupId = project.group
                 version = VersionContainer.get(taskName, project.version as String)
-                artifacts = [sourcesJar, javadocJar]
+                artifacts = [project.tasks.jar, sourcesJar, javadocJar]
 
                 pom.withXml { XmlProvider xmlProvider ->
                     xmlProvider.asNode().packaging*.value = 'jar'
