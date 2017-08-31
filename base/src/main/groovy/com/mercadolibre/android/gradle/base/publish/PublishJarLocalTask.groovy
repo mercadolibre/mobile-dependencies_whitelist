@@ -23,7 +23,9 @@ class PublishJarLocalTask extends PublishJarTask {
                     VersionContainer.logVersion("${project.group}:${project.name}:${VersionContainer.get(builder.taskName, project.version as String)}")
                 }
                 group = TASK_GROUP
-                dependsOn "publish${taskName.capitalize()}PublicationToMavenLocal"
+
+                dependsOn "jar", "${variant.name}SourcesJar", "${variant.name}JavadocJar"
+                finalizedBy "publish${taskName.capitalize()}PublicationToMavenLocal"
             }
         }
     }
