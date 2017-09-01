@@ -11,15 +11,21 @@ class PublishJarLocalTask extends PublishJarTask {
     Task create(PublishTask.Builder builder) {
         super.create(builder)
 
+        VersionContainer.put(builder.taskName, "LOCAL-${project.version}-${getTimestamp()}")
+
+        createMavenPublication()
+
         if (project.tasks.findByName(builder.taskName)) {
             return project.tasks."$taskName"
         } else {
             return project.task(builder.taskName) {
                 doFirst {
-                    VersionContainer.logVersion("${project.group}:${project.name}:${project.version}")
+                    VersionContainer.logVersion("${project.group}:${project.name}:${VersionContainer.get(builder.taskName, project.version as String)}")
                 }
                 group = TASK_GROUP
-                dependsOn "install"
+
+                dependsOn "jar", "${variant.name}SourcesJar", "${variant.name}JavadocJar"
+                finalizedBy "publish${taskName.capitalize()}PublicationToMavenLocal"
             }
         }
     }

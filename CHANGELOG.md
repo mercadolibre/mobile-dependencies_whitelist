@@ -1,3 +1,8 @@
+# v4.1.3
+## Arreglado
+- Arreglamos el formateo de versiones en POM que siempre estaba entrando a un mismo clause
+- Arreglamos la publicacion de jars locales ya que no se prefijaba la version correcta
+
 # v4.1.2
 ## Arreglado
 - Arreglamos las versiones locales para que sean de la forma LOCAL-:version-TIMESTAMP. [PullRequest](https://github.com/mercadolibre/mobile-android_gradle/pull/103)
