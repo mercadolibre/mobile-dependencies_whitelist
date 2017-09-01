@@ -39,8 +39,9 @@ final class PomUtils {
                         dependencyNode.appendNode('groupId', it.group)
                         dependencyNode.appendNode('artifactId', it.name)
 
-                        // Its the group is the same and the version doesn't exist then its a local dependency
-                        if (it.group == xmlProvider.asNode().groupId.text() && !it.version) {
+                        // If the group is the same and the version doesn't exist then its a local dependency
+                        if (it.group == xmlProvider.asNode().groupId.text() &&
+                                artifactIsFromProject(project.rootProject, it.name)) {
                             // Its a local dependency, so lets further check
                             // if maybe the version has a timestamp, in which
                             // case, we should convert it to a dynamic version.
@@ -84,6 +85,10 @@ final class PomUtils {
                 }
             }
         }
+    }
+
+    static boolean artifactIsFromProject(Project project, String artifactName) {
+        return project.subprojects.find { it.name == artifactName } != null
     }
 
     static void composeDynamicDependencies(Project project, XmlProvider xmlProvider) {
