@@ -1,3 +1,7 @@
+# v4.1.4
+## Arreglado
+- Arreglamos la task lintGradle que fallaba al detectar repositorios locales, pensando que eran externos.
+
 # v4.1.3
 ## Arreglado
 - Arreglamos el formateo de versiones en POM que siempre estaba entrando a un mismo clause
