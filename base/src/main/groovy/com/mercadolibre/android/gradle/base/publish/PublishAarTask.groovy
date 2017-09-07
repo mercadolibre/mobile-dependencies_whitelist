@@ -68,7 +68,9 @@ abstract class PublishAarTask extends PublishTask {
                     // Yes, javaCompile is deprecated, but whats the alternative?
                     destinationDir = javaDocDestDir
                     classpath += project.files(project.android.getBootClasspath().join(File.pathSeparator))
-                    classpath += project.files(project.configurations.compile)
+                    project.configurations.each {
+                        classpath += it
+                    }
                     options.links("http://docs.oracle.com/javase/7/docs/api/");
                     options.links("http://d.android.com/reference/");
                     exclude '**/BuildConfig.java'
@@ -93,11 +95,7 @@ abstract class PublishAarTask extends PublishTask {
                 }
             }
 
-            // Only avoid adding the classifier if the task is any publish task
-            if (project.gradle.startParameter.taskNames.toListString().contains("publish")) {
-                // To avoid the .aar to finish with -VARIANT since bintray requires this to upload the file
-                variant.outputs[0].packageLibrary.classifier = ''
-            }
+            generateDefaultOutput(variant.outputs[0])
 
             "$taskName"(MavenPublication) {
                 artifactId = project.name
@@ -126,6 +124,33 @@ abstract class PublishAarTask extends PublishTask {
                         project.tasks.findByName(hookedTask).dependsOn it
                     }
                 }
+            }
+        }
+    }
+
+    /**
+     * Since prior to gradle 4.X we have to use publishNonDefault property to compile locally different variants,
+     * when publishing we cant change the classifier to 'none' (as the publisher would need to) because the
+     * publishNonDefault property breaks (its a mutually exclusive state, either one or the other succeeds).
+     *
+     * For this, since the publish module wont upload this artifact (because its from a dependency, its only used
+     * for compilation), we will create an identical copy of the release artifact but renamed in the way
+     * the publisher module asks for.
+     *
+     * With this, the local development is left intact as no changes apply. And the publishing task will always compile
+     * its local dependencies as the first encountered (per defined in the buildTypes of the build.gradle file. If none
+     * are specified, then release will be).
+     */
+    void generateDefaultOutput(def output) {
+        def outputFile = output.outputFile
+
+        if (outputFile.exists()) {
+            def classifier = output.packageLibrary.classifier
+            def newFile = project.file("${outputFile.path.replaceAll(/-$classifier\.aar/, '.aar')}")
+
+            if (outputFile.absolutePath != newFile.absolutePath) {
+                newFile << outputFile.bytes
+                newFile.deleteOnExit()
             }
         }
     }
