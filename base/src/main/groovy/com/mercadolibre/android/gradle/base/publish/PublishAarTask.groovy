@@ -95,14 +95,16 @@ abstract class PublishAarTask extends PublishTask {
                 }
             }
 
-            generateDefaultOutput(variant.outputs[0])
-
             "$taskName"(MavenPublication) {
                 artifactId = project.name
                 groupId = project.group
                 version = VersionContainer.get(taskName, project.version as String)
 
-                artifacts = [variant.outputs[0].packageLibrary, sourcesJar, javadocJar]
+                artifacts = [
+                        "$project.buildDir/outputs/aar/${project.getName()}-${variant.name}.aar",
+                        sourcesJar,
+                        javadocJar
+                ]
 
                 pom.withXml { XmlProvider xmlProvider ->
                     xmlProvider.asNode().packaging*.value = 'aar'
@@ -124,33 +126,6 @@ abstract class PublishAarTask extends PublishTask {
                         project.tasks.findByName(hookedTask).dependsOn it
                     }
                 }
-            }
-        }
-    }
-
-    /**
-     * Since prior to gradle 4.X we have to use publishNonDefault property to compile locally different variants,
-     * when publishing we cant change the classifier to 'none' (as the publisher would need to) because the
-     * publishNonDefault property breaks (its a mutually exclusive state, either one or the other succeeds).
-     *
-     * For this, since the publish module wont upload this artifact (because its from a dependency, its only used
-     * for compilation), we will create an identical copy of the release artifact but renamed in the way
-     * the publisher module asks for.
-     *
-     * With this, the local development is left intact as no changes apply. And the publishing task will always compile
-     * its local dependencies as the first encountered (per defined in the buildTypes of the build.gradle file. If none
-     * are specified, then release will be).
-     */
-    void generateDefaultOutput(def output) {
-        def outputFile = output.outputFile
-
-        if (outputFile.exists()) {
-            def classifier = output.packageLibrary.classifier
-            def newFile = project.file("${outputFile.path.replaceAll(/-$classifier\.aar/, '.aar')}")
-
-            if (outputFile.absolutePath != newFile.absolutePath) {
-                newFile << outputFile.bytes
-                newFile.deleteOnExit()
             }
         }
     }
