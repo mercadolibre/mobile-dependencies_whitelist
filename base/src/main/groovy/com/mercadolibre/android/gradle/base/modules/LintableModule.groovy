@@ -1,11 +1,14 @@
 package com.mercadolibre.android.gradle.base.modules
 
+import com.mercadolibre.android.gradle.base.BasePlugin
 import com.mercadolibre.android.gradle.base.lint.Lint
 import com.mercadolibre.android.gradle.base.lint.LintGradleExtension
 import com.mercadolibre.android.gradle.base.lint.dependencies.DependenciesLint
+import com.mercadolibre.android.gradle.base.lint.dependencies.ReleaseDependenciesLint
 import org.gradle.api.GradleException
 import org.gradle.api.Project
 import org.gradle.api.Task
+import org.gradle.api.plugins.JavaPlugin
 import org.gradle.api.tasks.StopActionException
 
 /**
@@ -28,13 +31,14 @@ class LintableModule implements Module {
     /**
      * The project.
      */
-    protected def project
+    protected Project project
 
     /**
      * Array with instances of the lints to run
      */
     protected final Lint[] linters = [
-            new DependenciesLint()
+            new DependenciesLint(),
+            new ReleaseDependenciesLint()
     ]
 
     /**
@@ -69,7 +73,7 @@ class LintableModule implements Module {
         }
     }
 
-    public static void createExtension(Project project) {
+    static void createExtension(Project project) {
         String extensionName = LintGradleExtension.simpleName.replaceAll("Extension", '')
         extensionName = (Character.toLowerCase(extensionName.charAt(0)) as String) + extensionName.substring(1)
 
@@ -80,7 +84,18 @@ class LintableModule implements Module {
      * Set up gradle lint to run in every assemble task.
      */
     protected void setUpLint() {
-        project.android.libraryVariants.all { variant -> variants.add(variant) }
+        /**
+         * Inflate variants according to the type of project
+         */
+        project.plugins.withId(BasePlugin.ANDROID_LIBRARY_PLUGIN) {
+            project.android.libraryVariants.all { variants.add(it) }
+        }
+        project.plugins.withId(BasePlugin.ANDROID_APPLICATION_PLUGIN) {
+            project.android.applicationVariants.all { variants.add(it) }
+        }
+        project.plugins.withType(JavaPlugin) {
+            project.sourceSets.each { variants.add(it) }
+        }
 
         /**
          * Creation of the lint task
