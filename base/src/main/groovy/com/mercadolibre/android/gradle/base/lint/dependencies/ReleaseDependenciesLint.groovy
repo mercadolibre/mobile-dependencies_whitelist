@@ -14,7 +14,7 @@ class ReleaseDependenciesLint implements Lint {
 
     private static final String ERROR_TITLE = "Error. Found non-release dependencies in the module release version:"
 
-    private static final String FILE = "build/reports/${ReleaseDependenciesLint.class.simpleName}/${LINT_FILENAME}"
+    private static final String FILE = "build/reports/${ReleaseDependenciesLint.class.simpleName}/${Lint.LINT_FILENAME}"
 
     /**
      * Checks the dependencies the project contains are all release.

@@ -16,7 +16,7 @@ class LibraryWhitelistedDependenciesLint implements Lint {
     private static final String ERROR_TITLE = "Error: Found dependencies not allowed:"
     private static final String ERROR_ALLOWED_DEPENDENCIES = "Please check your dependencies.\nYou can see the allowed dependencies at:"
 
-    private static final String FILE = "build/reports/${LibraryWhitelistedDependenciesLint.class.simpleName}/${LINT_FILENAME}"
+    private static final String FILE = "build/reports/${LibraryWhitelistedDependenciesLint.class.simpleName}/${Lint.LINT_FILENAME}"
 
     /**
      * Array with whitelisted dependencies
