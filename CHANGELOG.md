@@ -2,6 +2,10 @@
 ## Nuevo
 - Agregamos excludes para un bug que tiene findbugs con jsr305 en las aplicaciones
 
+# v4.1.5
+## Arreglado
+- Arreglamos las task de publish con modulos que tienen activado el publishNonDefault
+
 # v4.1.4
 ## Arreglado
 - Arreglamos la task lintGradle que fallaba al detectar repositorios locales, pensando que eran externos.
@@ -45,3 +49,4 @@
 - Se agrega task 'jacocoFullReport' que permite generar todos los reportes posibles
 - Se agrega modulo para lockear dependencias
 - Se le da soporte a kotlin o cualquier superset de java
+

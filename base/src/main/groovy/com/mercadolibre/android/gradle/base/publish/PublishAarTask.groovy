@@ -68,7 +68,9 @@ abstract class PublishAarTask extends PublishTask {
                     // Yes, javaCompile is deprecated, but whats the alternative?
                     destinationDir = javaDocDestDir
                     classpath += project.files(project.android.getBootClasspath().join(File.pathSeparator))
-                    classpath += project.files(project.configurations.compile)
+                    project.configurations.each {
+                        classpath += it
+                    }
                     options.links("http://docs.oracle.com/javase/7/docs/api/");
                     options.links("http://d.android.com/reference/");
                     exclude '**/BuildConfig.java'
@@ -98,13 +100,11 @@ abstract class PublishAarTask extends PublishTask {
                 groupId = project.group
                 version = VersionContainer.get(taskName, project.version as String)
 
-                artifacts = [variant.outputs[0].packageLibrary, sourcesJar, javadocJar]
-
-                // Only avoid adding the classifier if the task is any publish task
-                if (project.gradle.startParameter.taskNames.toListString().contains("publish")) {
-                    // To avoid the .aar to finish with -VARIANT since bintray requires this to upload the file
-                    variant.outputs[0].packageLibrary.classifier = ''
-                }
+                artifacts = [
+                        "$project.buildDir/outputs/aar/${project.getName()}-${variant.name}.aar",
+                        sourcesJar,
+                        javadocJar
+                ]
 
                 pom.withXml { XmlProvider xmlProvider ->
                     xmlProvider.asNode().packaging*.value = 'aar'
