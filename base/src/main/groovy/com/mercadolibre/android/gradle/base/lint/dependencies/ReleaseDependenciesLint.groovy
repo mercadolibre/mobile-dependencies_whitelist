@@ -12,9 +12,9 @@ import org.gradle.api.Project
  */
 class ReleaseDependenciesLint implements Lint {
 
-    private static final String ERROR_TITLE = "Error: Found non-release dependencies in the application release:"
+    private static final String ERROR_TITLE = "Error. Found non-release dependencies in the module release version:"
 
-    private static final String FILE = "build/reports/lint_release_dependencies/lint.ld"
+    private static final String FILE = "build/reports/${ReleaseDependenciesLint.class.simpleName}/${LINT_FILENAME}"
 
     /**
      * Checks the dependencies the project contains are all release.
@@ -37,10 +37,11 @@ class ReleaseDependenciesLint implements Lint {
             lintResultsFile.delete()
         }
 
-        if (project.plugins.hasPlugin(BasePlugin.ANDROID_APPLICATION_PLUGIN)) {
+        if (project.plugins.hasPlugin(BasePlugin.ANDROID_APPLICATION_PLUGIN) ||
+                project.plugins.hasPlugin(BasePlugin.ANDROID_LIBRARY_PLUGIN)) {
             project.configurations
                     .stream()
-                    .map { config -> config.allDependencies }
+                    .map { config -> config.dependencies }
                     .flatMap { dependencies -> dependencies.stream() }
                     .filter { dependency -> dependency.version.contains("EXPERIMENTAL") ||
                                         dependency.version.contains("ALPHA") }
@@ -65,7 +66,7 @@ class ReleaseDependenciesLint implements Lint {
 
     /**
      * Checks if it should ran the lint. This will only happen when the task is ran from a CI
-     * and we are in a PR with staging or production target branch
+     * and we are in a PR with production target branch
      * @return true if it should ran the lint, false otherwise
      */
     boolean shouldRanLint() {
@@ -73,10 +74,8 @@ class ReleaseDependenciesLint implements Lint {
         String ciBranch = System.getenv('CI_BRANCH')
 
         return (isPR &&
-                // Either 'develop' or 'development'
-                (ciBranch =~ /^develop(ment)?$/ ||
-                // Or 'master'
-                ciBranch =~ /^master$/ ||
+                // And we are merging to 'master'
+                (ciBranch =~ /^master$/ ||
                 // Or 'release-8' or 'release-8.9' or 'release/191919-222389'
                 ciBranch =~ /^release[\-\/][0-9]+\.?[0-9]*$/))
     }

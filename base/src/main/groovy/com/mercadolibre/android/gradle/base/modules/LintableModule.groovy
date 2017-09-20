@@ -3,7 +3,7 @@ package com.mercadolibre.android.gradle.base.modules
 import com.mercadolibre.android.gradle.base.BasePlugin
 import com.mercadolibre.android.gradle.base.lint.Lint
 import com.mercadolibre.android.gradle.base.lint.LintGradleExtension
-import com.mercadolibre.android.gradle.base.lint.dependencies.DependenciesLint
+import com.mercadolibre.android.gradle.base.lint.dependencies.LibraryWhitelistedDependenciesLint
 import com.mercadolibre.android.gradle.base.lint.dependencies.ReleaseDependenciesLint
 import org.gradle.api.GradleException
 import org.gradle.api.Project
@@ -37,7 +37,7 @@ class LintableModule implements Module {
      * Array with instances of the lints to run
      */
     protected final Lint[] linters = [
-            new DependenciesLint(),
+            new LibraryWhitelistedDependenciesLint(),
             new ReleaseDependenciesLint()
     ]
 
