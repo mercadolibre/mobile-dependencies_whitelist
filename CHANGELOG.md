@@ -1,3 +1,7 @@
+# v4.2.0
+## Nuevo
+- Agregamos excludes para un bug que tiene findbugs con jsr305 en las aplicaciones
+
 # v4.1.4
 ## Arreglado
 - Arreglamos la task lintGradle que fallaba al detectar repositorios locales, pensando que eran externos.
