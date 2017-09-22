@@ -19,7 +19,7 @@ class ReleaseDependenciesLint implements Lint {
     /**
      * Checks the dependencies the project contains are all release.
      *
-     * This is only ran if the code is going to be going to master/develop/release-X
+     * This is only ran if the code is going to be going to master/release-^/X
      * 
      * This throws GradleException if errors are found.
      */
@@ -29,10 +29,10 @@ class ReleaseDependenciesLint implements Lint {
             return false
         }
 
-        boolean hasFailed = false
+        boolean hasFailed
         File lintResultsFile = project.file(FILE)
 
-        // This is a new run, so remove the file if it exists, we will override id
+        // This is a new run, so remove the file if it exists, we will override it
         if (lintResultsFile.exists()) {
             lintResultsFile.delete()
         }
