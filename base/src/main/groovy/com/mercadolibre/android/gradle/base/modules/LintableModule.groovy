@@ -45,8 +45,7 @@ class LintableModule implements Module {
      * Array of tasks that this lint depends of
      */
     protected final String[] dependencies = [
-            'assemble',
-            'bundle'
+            'check'
     ]
 
     /**
@@ -116,13 +115,7 @@ class LintableModule implements Module {
                 }
 
                 if (buildErrored) {
-                    if (project.gradle.startParameter.taskNames.toListString().contains(task.name)) {
-                        // If they are specifically running lint, break the build and error it
-                        throw new GradleException(TASK_FAIL_MESSAGE)
-                    } else {
-                        // If they are assembling, let them know about the errors but dont fail the build
-                        throw new StopActionException(TASK_FAIL_MESSAGE)
-                    }
+                    throw new GradleException(TASK_FAIL_MESSAGE)
                 }
             }
         }
