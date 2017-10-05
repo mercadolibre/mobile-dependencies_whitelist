@@ -22,6 +22,10 @@
 		{
 			"name": "MPTopFloatingView",
 			"version": "^~>\\s?0.[0-9]+$"
-		}
+		},
+                {
+                        "name": "Firebase/AppIndexing",
+                        "version": "^~>\\s?3.[0-9]+$"
+                }
 	]
 }
