@@ -27,6 +27,10 @@
     {
       "name": "MLPlace",
       "version": "^~>\\s?3.[0-9]+"
-    }
+    },
+	{
+	  "name": "Firebase/AppIndexing",
+	  "version": "^~>\\s?3.4.0$"
+	}
   ]
 }
