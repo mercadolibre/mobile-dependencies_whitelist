@@ -1,3 +1,7 @@
+# v4.1.6
+## Arreglado
+- Arreglamos las task de locks que generaban falsos positivos en dependencias no locales pero con mismo group
+
 # v4.1.5
 ## Arreglado
 - Arreglamos las task de publish con modulos que tienen activado el publishNonDefault
