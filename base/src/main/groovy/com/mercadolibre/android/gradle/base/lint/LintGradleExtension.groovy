@@ -18,7 +18,6 @@ class LintGradleExtension {
     /**
      * If the release dependencies lint should be ran in the Application/Library or not.
      * This lint will check that only release dependencies are being compiled in the application
-     * This lint is only ran when targetting production branches in your CI environment
      */
     boolean releaseDependenciesLintEnabled = true
 

@@ -24,8 +24,7 @@ class ReleaseDependenciesLint implements Lint {
      * This throws GradleException if errors are found.
      */
     boolean lint(Project project, def variants) {
-        if (!project.rootProject.lintGradle.releaseDependenciesLintEnabled ||
-                !shouldRanLint()) {
+        if (!project.rootProject.lintGradle.releaseDependenciesLintEnabled) {
             return false
         }
 
@@ -63,22 +62,6 @@ class ReleaseDependenciesLint implements Lint {
         }
 
         return hasFailed
-    }
-
-    /**
-     * Checks if it should ran the lint. This will only happen when the task is ran from a CI
-     * and we are in a PR with production target branch
-     * @return true if it should ran the lint, false otherwise
-     */
-    boolean shouldRanLint() {
-        boolean isPR = System.getenv('CI_PULL_REQUEST') != "false"
-        String ciBranch = System.getenv('CI_BRANCH')
-
-        return (isPR &&
-                // And we are merging to 'master'
-                (ciBranch =~ /^master$/ ||
-                // Or 'release-8' or 'release-8.9' or 'release/191919-222389'
-                ciBranch =~ /^release[\-\/][0-9]+\.?[0-9]*$/))
     }
 
     /**
