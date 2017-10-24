@@ -75,6 +75,8 @@ class BasePlugin implements Plugin<Project> {
 
             subproject.plugins.withId(ANDROID_APPLICATION_PLUGIN) {
                 ANDROID_APPLICATION_MODULES().each { module -> module.configure(subproject) }
+
+                fixFindbugsDuplicateDexEntryWithJSR305()
             }
 
             // Depending on added classpaths, this modules will apply plugins
@@ -85,6 +87,28 @@ class BasePlugin implements Plugin<Project> {
 
                 new LintableModule().configure(subproject)
             }
+        }
+    }
+
+    /**
+     * This method, as the name suggests fixes a findbugs duplicate dex entry with JSR305.
+     * Info:
+     * - Findbugs adds in its plugin an own JSR305 annotations (This means annotations such as
+     * CheckForNull) are added not only by the JavaPlugin but also the exact same (but in a different
+     * group:artifact) by findbugs.
+     * - In .dex files, this cant happen, since it will create an exact same (or duplicate) entry in its
+     * vtable. Hence we are forced to remove one of the two from the applications
+     * - This happens because when the POM is built, findbugs dependency is added in a provided
+     * configuration, making it resolvable for all flavors (as a provided/compileOnly way ofc).
+     * Because of this, we are including it as provided in the POM file, but making it compilable for an APK,
+     * creating the issue
+     *
+     * TODO: This should be removed when SCA stops including findbugs.
+     */
+    void fixFindbugsDuplicateDexEntryWithJSR305() {
+        project.configurations {
+            all*.exclude module: "jsr305"
+            all*.exclude module: "jcip-annotations"
         }
     }
 
