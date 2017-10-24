@@ -45,8 +45,11 @@ class LockableModule implements Module {
             }
 
             // Add a dependency filter so that it wont lock local dependencies
+            def localDeps = []
+            project.rootProject.subprojects.each { localDeps.add("$it.group:$it.name") }
+
             project.dependencyLock.dependencyFilter { String group, String name, String version ->
-                group != project.group
+                return !localDeps.contains("$group:$name")
             }
 
             // Create a task that wraps the flow of the locking logic
