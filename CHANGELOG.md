@@ -1,3 +1,7 @@
+# v4.2.0
+## Nuevo
+- Agregamos excludes para un bug que tiene findbugs con jsr305 en las aplicaciones
+
 # v4.1.6
 ## Arreglado
 - Arreglamos las task de locks que generaban falsos positivos en dependencias no locales pero con mismo group
