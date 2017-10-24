@@ -9,6 +9,8 @@ import org.gradle.api.Project
  */
 interface Lint {
 
+    static final String LINT_FILENAME = "lint.ld"
+
     /**
      * Return a string with the name of the lint task
      */
