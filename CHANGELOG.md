@@ -1,3 +1,7 @@
+# v4.2.0
+## Nuevo
+- Agregamos lint para dependencias de release
+
 # v4.1.4
 ## Arreglado
 - Arreglamos la task lintGradle que fallaba al detectar repositorios locales, pensando que eran externos.

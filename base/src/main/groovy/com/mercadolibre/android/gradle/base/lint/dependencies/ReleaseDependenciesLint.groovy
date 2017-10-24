@@ -17,7 +17,7 @@ class ReleaseDependenciesLint implements Lint {
     private static final String FILE = "build/reports/${ReleaseDependenciesLint.class.simpleName}/${Lint.LINT_FILENAME}"
 
     /**
-     * Checks the dependencies the project contains are all release.
+     * Checks the dependencies the project contains are all release or alpha.
      *
      * This is only ran if the code is going to be going to master/release-^/X
      * 
@@ -43,7 +43,6 @@ class ReleaseDependenciesLint implements Lint {
                     .map { config -> config.dependencies }
                     .flatMap { dependencies -> dependencies.stream() }
                     .filter { dependency -> dependency.version.contains("EXPERIMENTAL") ||
-                                        dependency.version.contains("ALPHA") ||
                                         dependency.version.contains("LOCAL") }
                     .map { dependency -> "${dependency.group}:${dependency.name}:${dependency.version}" }
                     .distinct()
