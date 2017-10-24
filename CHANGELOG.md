@@ -1,5 +1,6 @@
 # v4.2.0
 ## Nuevo
+- Agregamos lint para dependencias de release
 - Agregamos excludes para un bug que tiene findbugs con jsr305 en las aplicaciones
 
 # v4.1.6
@@ -53,4 +54,3 @@
 - Se agrega task 'jacocoFullReport' que permite generar todos los reportes posibles
 - Se agrega modulo para lockear dependencias
 - Se le da soporte a kotlin o cualquier superset de java
-

@@ -11,16 +11,15 @@ import org.gradle.api.plugins.JavaPlugin
  */
 class BasePlugin implements Plugin<Project> {
 
-    private static final String ANDROID_LIBRARY_PLUGIN = 'com.android.library'
-    private static final String ANDROID_APPLICATION_PLUGIN = 'com.android.application'
+    public static final String ANDROID_LIBRARY_PLUGIN = 'com.android.library'
+    public static final String ANDROID_APPLICATION_PLUGIN = 'com.android.application'
 
     private static final String NEBULA_LOCK_CLASSPATH = "com.netflix.nebula/gradle-dependency-lock-plugin"
 
     private static final ANDROID_LIBRARY_MODULES = { ->
         return [
                 new AndroidLibraryPublishableModule(),
-                new AndroidJacocoModule(),
-                new LintableModule()
+                new AndroidJacocoModule()
         ]
     }
 
@@ -85,6 +84,8 @@ class BasePlugin implements Plugin<Project> {
                 if (project.hasClasspath(NEBULA_LOCK_CLASSPATH)) {
                     new LockableModule().configure(subproject)
                 }
+
+                new LintableModule().configure(subproject)
             }
         }
     }

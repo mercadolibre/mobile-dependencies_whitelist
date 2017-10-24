@@ -5,10 +5,25 @@ package com.mercadolibre.android.gradle.base.lint
  */
 class LintGradleExtension {
 
-    // If the plugin should run or not
+    /**
+     * If the plugin should run or not
+     */
     boolean enabled = true
 
-    // Whitelist url where it will fetch the json
+    /**
+     * If the dependenciesLint should be run or not
+     */
+    boolean dependenciesLintEnabled = true
+
+    /**
+     * If the release dependencies lint should be ran in the Application/Library or not.
+     * This lint will check that only release dependencies are being compiled in the application
+     */
+    boolean releaseDependenciesLintEnabled = true
+
+    /**
+     * Whitelist url where it will fetch the json
+     */
     String dependencyWhitelistUrl = "https://raw.githubusercontent.com/mercadolibre/mobile-dependencies_whitelist/master/android-whitelist.json"
 
 }
