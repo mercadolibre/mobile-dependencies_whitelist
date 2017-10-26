@@ -35,6 +35,11 @@
     {
       "name": "MLSearch/Suggestion",
       "version": "^~>\\s?3.[0-9]+$"
+    },
+    {
+      "name": "CHTCollectionViewWaterfallLayout",
+      "version": "^~>\\s?0.[0-9]+$",
+      "expire": "2017-12-01"
     }
   ]
 }
