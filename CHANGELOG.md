@@ -1,6 +1,6 @@
 # v4.2.1
 ## Nuevo
-- Se fixea hook de la task lintGradle
+- Se fixea hook de la task lintGradle. #115
 
 # v4.2.0
 ## Nuevo
