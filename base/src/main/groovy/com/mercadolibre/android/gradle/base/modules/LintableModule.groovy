@@ -42,13 +42,6 @@ class LintableModule implements Module {
     ]
 
     /**
-     * Array of tasks that this lint depends of
-     */
-    protected final String[] dependencies = [
-            'check'
-    ]
-
-    /**
      * Array with available variants
      *
      * We have to save them before, else gradle
@@ -63,12 +56,6 @@ class LintableModule implements Module {
 
         project.afterEvaluate {
             setUpLint()
-        }
-
-        project.tasks.whenTaskAdded { addedTask ->
-            if (project.tasks.findByName(TASK_NAME) && dependencies.contains(addedTask.name)) {
-                addedTask.dependsOn TASK_NAME
-            }
         }
     }
 
@@ -119,6 +106,8 @@ class LintableModule implements Module {
                 }
             }
         }
+
+        project.tasks.check.dependsOn TASK_NAME
     }
 
 }
