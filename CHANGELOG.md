@@ -1,6 +1,6 @@
 # v4.2.2
 ## Cambiado
-- Se fixea una race condition con la task check al agregarle una dependencia - https://github.com/mercadolibre/mobile-android_gradle/pull/117
+- Se fixea una race condition con la task check al agregarle una dependencia - #117
 
 # v4.2.1
 ## Nuevo
