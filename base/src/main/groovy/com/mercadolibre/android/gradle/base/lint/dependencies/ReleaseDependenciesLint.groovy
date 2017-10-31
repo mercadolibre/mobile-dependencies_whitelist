@@ -42,8 +42,8 @@ class ReleaseDependenciesLint implements Lint {
                     .stream()
                     .map { config -> config.dependencies }
                     .flatMap { dependencies -> dependencies.stream() }
-                    .filter { dependency -> dependency.version.contains("EXPERIMENTAL") ||
-                                        dependency.version.contains("LOCAL") }
+                    .filter { dependency -> dependency.version?.contains("EXPERIMENTAL") ||
+                                        dependency.version?.contains("LOCAL") }
                     .map { dependency -> "${dependency.group}:${dependency.name}:${dependency.version}" }
                     .distinct()
                     .forEach { dependency ->
