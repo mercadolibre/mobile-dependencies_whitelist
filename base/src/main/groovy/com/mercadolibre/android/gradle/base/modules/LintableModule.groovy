@@ -107,7 +107,16 @@ class LintableModule implements Module {
             }
         }
 
-        project.tasks.check.dependsOn TASK_NAME
+        if (project.tasks.findByName('check')) {
+            project.tasks.check.dependsOn TASK_NAME
+        } else {
+            project.tasks.whenTaskAdded {
+                if (it.name == 'check') {
+                    it.dependsOn TASK_NAME
+                }
+            }
+        }
+
     }
 
 }

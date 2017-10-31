@@ -1,6 +1,7 @@
 # v4.2.2
 ## Cambiado
 - Se fixea issue en lockVersions, cambiando configuraciones ya resueltas - #116
+- Se fixea una race condition con la task check al agregarle una dependencia - #117
 - Se fixea NPE con jars locales como dependencias en el lintReleaseDependencies - #118
 
 # v4.2.1
