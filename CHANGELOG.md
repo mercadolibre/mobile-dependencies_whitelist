@@ -1,3 +1,7 @@
+# v4.2.2
+## Cambiado
+- Se fixea NPE con jars locales como dependencias en el lintReleaseDependencies - #118
+
 # v4.2.1
 ## Nuevo
 - Se fixea hook de la task lintGradle. #115
