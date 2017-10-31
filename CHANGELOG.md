@@ -1,6 +1,6 @@
 # v4.2.2
 ## Cambiado
-- Se fixea una race condition con la task check y agregarle una dependencia
+- Se fixea una race condition con la task check al agregarle una dependencia
 
 # v4.2.1
 ## Nuevo
