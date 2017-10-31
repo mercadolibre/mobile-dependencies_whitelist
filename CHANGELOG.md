@@ -1,3 +1,7 @@
+# v4.2.2
+## Cambiado
+- Se fixea una race condition con la task check y agregarle una dependencia
+
 # v4.2.1
 ## Nuevo
 - Se fixea hook de la task lintGradle. #115
