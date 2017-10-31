@@ -1,6 +1,6 @@
 # v4.2.2
 ## Cambios
-- Se fixea issue en lockVersions, cambiando configuraciones ya resueltas
+- Se fixea issue en lockVersions, cambiando configuraciones ya resueltas - #116
 
 # v4.2.1
 ## Nuevo
