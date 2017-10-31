@@ -1,3 +1,7 @@
+# v4.2.2
+## Cambios
+- Se fixea issue en lockVersions, cambiando configuraciones ya resueltas
+
 # v4.2.1
 ## Nuevo
 - Se fixea hook de la task lintGradle. #115
