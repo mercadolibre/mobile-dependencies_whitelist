@@ -2,6 +2,7 @@ package com.mercadolibre.android.gradle.base.modules
 
 import org.gradle.api.Project
 import org.gradle.api.artifacts.ComponentSelection
+import org.gradle.api.artifacts.Configuration
 
 /**
  * Module that is in charge of managing the locking of dynamic dependencies into static ones
@@ -31,13 +32,15 @@ class LockableModule implements Module {
             // this way we will only lock to release versions (or experimentals if explicitly added)
             if (project.gradle.startParameter.taskNames.toListString().toLowerCase().contains(NEBULA_LOCK_TASKS_NAME_MATCHER)) {
                 project.configurations.all {
-                    resolutionStrategy {
-                        componentSelection.all { ComponentSelection selection ->
-                            // If the version has an alpha and it's not me reject the version
-                            // If it's me, we will change it later
-                            if (!selection.candidate.group.contentEquals(project.group) &&
-                                    selection.candidate.version.contains(VERSION_ALPHA)) {
-                                selection.reject("Bad version. We dont accept alphas on the lock stage.")
+                    if (it.state == Configuration.State.UNRESOLVED) {
+                        resolutionStrategy {
+                            componentSelection.all { ComponentSelection selection ->
+                                // If the version has an alpha and it's not me reject the version
+                                // If it's me, we will change it later
+                                if (!selection.candidate.group.contentEquals(project.group) &&
+                                        selection.candidate.version.contains(VERSION_ALPHA)) {
+                                    selection.reject("Bad version. We dont accept alphas on the lock stage.")
+                                }
                             }
                         }
                     }

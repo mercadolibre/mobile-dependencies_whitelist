@@ -69,11 +69,13 @@ Se agregan lints especificos. Hay un closure sobre cada proyecto donde podemos h
 ```gradle
 lintGradle {
   enabled = true
+  dependenciesLintEnabled = true
+  releaseDependenciesLintEnabled = true
   dependencyWhitelistUrl = "https://raw.githubusercontent.com/mercadolibre/mobile-dependencies_whitelist/master/android-whitelist.json" // Si alguien distinto a Meli quiere su whitelist, deberia cambiar esto
 }
 ```
 
-Este modulo genera la task `lintGradle`, la cual aplica todos los lints. De ser ejecutada especificamente va a Fallar en caso de error. Sino (por ejemplo corriendo `assemble`/`lint`/`bundleRelease`, si falla no va a parar la ejecucion)
+Este modulo genera la task `lintGradle`, la cual aplica todos los lints. La misma se hookea a la task `check`.
 
 ### Jacoco
 
