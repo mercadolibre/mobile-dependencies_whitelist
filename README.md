@@ -12,9 +12,10 @@ Each of the dependencies is a JSON Object that will be matched against each of t
 
 **NOTE1:** Remember that this are regexes, so if you want to declare `com.example` it should be `com\\.example`
 **NOTE2**: The repository will validate against resolved dependencies. Thus, if declaring as version `4\\.\\+` it **will** match against a dependency `4.2.1` (it wont be explicitly the string `4.+`)
-**NOTE3**: You can expirable dependencies (by adding the `expires` field). If no field added, the dependency is considered as non-expirable
+**NOTE3**: You can have expirable dependencies by adding the `expires` field. If no field is added, the dependency is considered as non-expirable
+**NOTE4**: If no group / name / version is provided, they will default to `.*` (any string)
 
-Example of the json:
+JSON Schema:
 ```
 {
   "whitelist": [
@@ -28,9 +29,6 @@ Example of the json:
   ]
 }
 ```
-
-- If no group / name / version is provided, they will default to `.*` (anystring)
-- If no expires field is provided, the dependency is considered non-expirable.
 
 ### iOS
 iOS whitelist dependencies consist of a set of dependencies that are available for front-ends and high-level repositories to consume from the Mercadolibre-mobile group.
