@@ -85,17 +85,21 @@ class LibraryWhitelistedDependenciesLint implements Lint {
                 }
             }
 
-            // Check dependencies of each variant available first
-            variants.each { variant ->
-                String variantName = variant.name
+            project.afterEvaluate {
+                // Check dependencies of each variant available first
+                variants.each { variant ->
+                    String variantName = variant.name
 
-                if (project.configurations.hasProperty("${variantName}Compile")) {
-                    project.configurations."${variantName}Compile".dependencies.each { analizeDependency(it) }
+                    if (project.configurations.hasProperty("${variantName}Compile")) {
+                        project.configurations."${variantName}Compile".dependencies.each {
+                            analizeDependency(it)
+                        }
+                    }
                 }
-            }
 
-            // Check the default compiling deps
-            project.configurations.compile.dependencies.each { analizeDependency(it) }
+                // Check the default compiling deps
+                project.configurations.compile.dependencies.each { analizeDependency(it) }
+            }
 
             if (hasFailed) {
                 report("${ERROR_ALLOWED_DEPENDENCIES} ${project.rootProject.lintGradle.dependencyWhitelistUrl}")
