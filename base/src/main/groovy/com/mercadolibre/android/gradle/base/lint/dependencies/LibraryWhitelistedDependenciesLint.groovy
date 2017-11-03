@@ -21,7 +21,7 @@ class LibraryWhitelistedDependenciesLint implements Lint {
     /**
      * Array with whitelisted dependencies
      */
-    List<String> WHITELIST_DEPENDENCIES
+    List<Dependency> WHITELIST_DEPENDENCIES
 
     /**
      * Checks the dependencies the project contains are in the whitelist
@@ -113,17 +113,16 @@ class LibraryWhitelistedDependenciesLint implements Lint {
     }
 
     /**
-    * Method to check if a part of a string is contained in
-    * at least one of the strings of the array
-    * eg array = [ "abc", "def", "ghi" ]
-    * array.containsPartOf("ab") -> true
-    * array.containsPartOf("hi") -> true
-    * 
-    * Supports regular expressions for the array values.
-    */
+     * Method to check if a dependency exists in the whitelist.
+     * In case it does exist, but the dependency is expired in the whitelist, it will still return
+     * false
+     *
+     * Supports regular expressions for the array values.
+     */
     def dependencyIsInWhitelist(String dependency) {
-        for (String whitelistDep : WHITELIST_DEPENDENCIES) {
-            if (dependency =~ /${whitelistDep}/) {
+        for (Dependency whitelistDep : WHITELIST_DEPENDENCIES) {
+            if (dependency =~ /${whitelistDep.group}:${whitelistDep.name}:${whitelistDep.version}/ &&
+                System.currentTimeMillis() < whitelistDep.timeoutMs) {
                 return true
             }
         }
@@ -137,9 +136,26 @@ class LibraryWhitelistedDependenciesLint implements Lint {
         new URL(whitelistUrl).openConnection().with { conn ->
             def jsonSlurper = new JsonSlurper().parseText(conn.inputStream.text)
             jsonSlurper.whitelist.each { dependency ->
-                WHITELIST_DEPENDENCIES.add(dependency)
+                WHITELIST_DEPENDENCIES.add(new Dependency().with {
+                    group = dependency.group ?: '.*'
+                    name = dependency.name ?: '.*'
+                    version = dependency.version ?: '.*'
+
+                    timeoutMs = dependency.expires ?
+                            new Date().parse("yyyy-M-d", dependency.expires).time :
+                            Long.MAX_VALUE
+
+                    return it
+                })
             }
         }
+    }
+
+    static class Dependency {
+        String group
+        String name
+        String version
+        long timeoutMs
     }
 
 }
