@@ -7,8 +7,8 @@
             "group":"com\\.mercadolibre\\.android\\.recommendations"
         },
         {
-            "group":"com\\.android\\.support\\.constraint",
-            "name":"constraint-layout"
+            "group":"com\\.android\\.support\\..*",
+            "expires":"2017-11-04"
         },
         {
             "group":"com\\.mercadolibre\\.android",
