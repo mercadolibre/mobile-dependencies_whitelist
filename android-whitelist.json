@@ -7,8 +7,8 @@
             "group":"com\\.mercadolibre\\.android\\.recommendations"
         },
         {
-            "group":"com\\.android\\.support.*",
-            "version":"25\\.3\\.[0-9]+"
+            "group":"com\\.android\\.support\\.constraint",
+            "name":"constraint-layout"
         },
         {
             "group":"com\\.mercadolibre\\.android",
