@@ -49,23 +49,25 @@ class LibraryWhitelistedDependenciesLint implements Lint {
              */
             def report = { message ->
                 File file = project.file(FILE)
+                // This will happen only the first time (since the first time it hasnt 'already failed'
                 if (!hasFailed) {
-                    // This is the first time it will find an error..
+                    // Create the file
                     if (!file.exists()) {
                         file.getParentFile().mkdirs()
                     }
-                    // If it fails, we flag it as such and we write to the stdout and file output.
+                    // Flag it as failed and write to the stdout and file output.
                     hasFailed = true
                     println ERROR_TITLE
                     file << ERROR_TITLE
                 }
+
+                // Write file and stdout with message
                 file.append("${System.getProperty("line.separator")}${message}")
                 println message
             }
 
             // Core logic
             def analizeDependency = { dependency ->
-                // The ASCII chars make the stdout look red.
                 String dependencyFullName = "${dependency.group}:${dependency.name}:${dependency.version}"
                 String message = "- ${dependencyFullName}"
                 boolean isLocalModule =
@@ -79,12 +81,15 @@ class LibraryWhitelistedDependenciesLint implements Lint {
                  * Only if all of the above meet it will error.
                  */
                 if (!dependencyFullName.contains(DEFAULT_GRADLE_VERSION_VALUE)
-                        && !isLocalModule
-                        && !dependencyIsInWhitelist(dependencyFullName)) {
-                    report(message)
+                        && !isLocalModule) {
+                    Status result = dependencyIsInWhitelist(dependencyFullName)
+                    if (result == Status.INVALID || result == Status.EXPIRED) {
+                        report("${message}${result == Status.EXPIRED ? " (expired)" : ""}")
+                    }
                 }
             }
 
+            // Let the dependencies be resolved, so we lint against non-dynamic ones
             project.afterEvaluate {
                 // Check dependencies of each variant available first
                 variants.each { variant ->
@@ -123,18 +128,21 @@ class LibraryWhitelistedDependenciesLint implements Lint {
      *
      * Supports regular expressions for the array values.
      */
-    def dependencyIsInWhitelist(String dependency) {
+    Status dependencyIsInWhitelist(String dependency) {
         for (Dependency whitelistDep : WHITELIST_DEPENDENCIES) {
-            if (dependency =~ /${whitelistDep.group}:${whitelistDep.name}:${whitelistDep.version}/ &&
-                System.currentTimeMillis() < whitelistDep.timeoutMs) {
-                return true
+            if (dependency =~ /${whitelistDep.group}:${whitelistDep.name}:${whitelistDep.version}/) {
+                if (System.currentTimeMillis() < whitelistDep.timeoutMs) {
+                    return Status.AVAILABLE
+                } else {
+                    return Status.EXPIRED
+                }
             }
         }
         
-        return false
+        return Status.INVALID
     }
 
-    def setUpWhitelist(String whitelistUrl) {
+    void setUpWhitelist(String whitelistUrl) {
         WHITELIST_DEPENDENCIES = new ArrayList<String>()
 
         new URL(whitelistUrl).openConnection().with { conn ->
@@ -153,6 +161,12 @@ class LibraryWhitelistedDependenciesLint implements Lint {
                 })
             }
         }
+    }
+
+    static enum Status {
+        AVAILABLE,
+        INVALID,
+        EXPIRED
     }
 
     static class Dependency {
