@@ -13,8 +13,9 @@ import org.gradle.api.Project
  */
 class LibraryWhitelistedDependenciesLint implements Lint {
 
-    private static final String ERROR_TITLE = "Error: Found dependencies not allowed:"
-    private static final String ERROR_ALLOWED_DEPENDENCIES = "Please check your dependencies.\nYou can see the allowed dependencies at:"
+    private static final String ERROR_TITLE = "Error: The following dependencies are not allowed:"
+    private static final String ERROR_ALLOWED_DEPENDENCIES_PREFIX = "Your project can only contain the dependencies listed in:"
+    private static final String ERROR_ALLOWED_DEPENDENCIES_SUFFIX = "If you think one of them should be in the whitelist, please contact mobile-arquitectura@"
 
     private static final String FILE = "build/reports/${LibraryWhitelistedDependenciesLint.class.simpleName}/${Lint.LINT_FILENAME}"
 
@@ -25,8 +26,6 @@ class LibraryWhitelistedDependenciesLint implements Lint {
 
     /**
      * Checks the dependencies the project contains are in the whitelist
-     * 
-     * This throws GradleException if errors are found.
      */
     boolean lint(Project project, def variants) {
         if (!project.rootProject.lintGradle.dependenciesLintEnabled) {
@@ -69,7 +68,6 @@ class LibraryWhitelistedDependenciesLint implements Lint {
             // Core logic
             def analizeDependency = { dependency ->
                 String dependencyFullName = "${dependency.group}:${dependency.name}:${dependency.version}"
-                String message = "- ${dependencyFullName}"
                 boolean isLocalModule =
                         project.rootProject.subprojects
                                 .find { dependencyFullName.contains("${project.group}:${it.name}") } != null
@@ -83,31 +81,28 @@ class LibraryWhitelistedDependenciesLint implements Lint {
                 if (!dependencyFullName.contains(DEFAULT_GRADLE_VERSION_VALUE)
                         && !isLocalModule) {
                     Status result = dependencyIsInWhitelist(dependencyFullName)
-                    if (result == Status.INVALID || result == Status.EXPIRED) {
-                        report("${message}${result == Status.EXPIRED ? " (expired)" : ""}")
+                    if (result.reportable()) {
+                        report result.message(dependencyFullName)
                     }
                 }
             }
 
-            // Let the dependencies be resolved, so we lint against non-dynamic ones
-            project.afterEvaluate {
-                // Check dependencies of each variant available first
-                variants.each { variant ->
-                    String variantName = variant.name
+            // Check dependencies of each variant available first
+            variants.each { variant ->
+                String variantName = variant.name
 
-                    if (project.configurations.hasProperty("${variantName}Compile")) {
-                        project.configurations."${variantName}Compile".dependencies.each {
-                            analizeDependency(it)
-                        }
+                if (project.configurations.hasProperty("${variantName}Compile")) {
+                    project.configurations."${variantName}Compile".dependencies.each {
+                        analizeDependency(it)
                     }
                 }
-
-                // Check the default compiling deps
-                project.configurations.compile.dependencies.each { analizeDependency(it) }
             }
+
+            // Check the default compiling deps
+            project.configurations.compile.dependencies.each { analizeDependency(it) }
 
             if (hasFailed) {
-                report("${ERROR_ALLOWED_DEPENDENCIES} ${project.rootProject.lintGradle.dependencyWhitelistUrl}")
+                report("${ERROR_ALLOWED_DEPENDENCIES_PREFIX} ${project.rootProject.lintGradle.dependencyWhitelistUrl}\n${ERROR_ALLOWED_DEPENDENCIES_SUFFIX}")
             }
         }
 
@@ -164,9 +159,23 @@ class LibraryWhitelistedDependenciesLint implements Lint {
     }
 
     static enum Status {
-        AVAILABLE,
-        INVALID,
-        EXPIRED
+        AVAILABLE(false),
+        INVALID(true),
+        EXPIRED(true)
+
+        private boolean shouldReport
+
+        Status(boolean shouldReport) {
+            this.shouldReport = shouldReport
+        }
+
+        boolean reportable() {
+            return shouldReport
+        }
+
+        String message(String dependency) {
+            return "- ${dependency} (${name().toLowerCase().capitalize()})"
+        }
     }
 
     static class Dependency {
