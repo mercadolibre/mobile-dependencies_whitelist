@@ -118,15 +118,12 @@ class LibraryWhitelistedDependenciesLint implements Lint {
 
     /**
      * Method to check if a dependency exists in the whitelist.
-     * In case it does exist, but the dependency is expired in the whitelist, it will still return
-     * false
-     *
-     * Supports regular expressions for the array values.
+     * @returns Status notifying the result
      */
     Status dependencyIsInWhitelist(String dependency) {
         for (Dependency whitelistDep : WHITELIST_DEPENDENCIES) {
             if (dependency =~ /${whitelistDep.group}:${whitelistDep.name}:${whitelistDep.version}/) {
-                if (System.currentTimeMillis() < whitelistDep.timeoutMs) {
+                if (System.currentTimeMillis() < whitelistDep.expires) {
                     return Status.AVAILABLE
                 } else {
                     return Status.EXPIRED
@@ -137,6 +134,11 @@ class LibraryWhitelistedDependenciesLint implements Lint {
         return Status.INVALID
     }
 
+    /**
+     * Sets up the whitelist, this will get a json from the whitelistUrl defined
+     * and parse the formatted JSON into a list of dependencies
+     * @param whitelistUrl well formed url with JSON content
+     */
     void setUpWhitelist(String whitelistUrl) {
         WHITELIST_DEPENDENCIES = new ArrayList<String>()
 
@@ -148,7 +150,7 @@ class LibraryWhitelistedDependenciesLint implements Lint {
                     name = dependency.name ?: '.*'
                     version = dependency.version ?: '.*'
 
-                    timeoutMs = dependency.expires ?
+                    expires = dependency.expires ?
                             new Date().parse("yyyy-M-d", dependency.expires).time :
                             Long.MAX_VALUE
 
@@ -158,9 +160,26 @@ class LibraryWhitelistedDependenciesLint implements Lint {
         }
     }
 
+    /**
+     * Status for a dependency respecting the whitelist
+     */
     static enum Status {
+        /**
+         * Implies that the dependency is in the whitelist
+         * The repository can use this dependency
+         */
         AVAILABLE(false),
+        /**
+         * Implies that the dependency is not in the whitelist or the version
+         * is not the correct one.
+         * The repository shouldnt have this dependency, or this particular version.
+         */
         INVALID(true),
+        /**
+         * Implies that the dependency is in the whitelist, but it has already expired
+         * The repository should either remove this dependency, or update its expiry time
+         * in the whitelist.
+         */
         EXPIRED(true)
 
         private boolean shouldReport
@@ -169,20 +188,56 @@ class LibraryWhitelistedDependenciesLint implements Lint {
             this.shouldReport = shouldReport
         }
 
+        /**
+         * If the status can be reported or not
+         * @return boolean notifying if the status can be reported
+         */
         boolean reportable() {
             return shouldReport
         }
 
+        /**
+         * Returns a formatted message for the dependency
+         * @param dependency to format in the message
+         * @return formatted message to print
+         * @throws IllegalAccessException if trying to report a non reportable status
+         */
         String message(String dependency) {
+            if (!reportable()) {
+                throw new IllegalAccessException('Cant report this type of dependency')
+            }
             return "- ${dependency} (${name().toLowerCase().capitalize()})"
         }
     }
 
+    /**
+     * Whitelist Dependency DTO
+     */
     static class Dependency {
+
+        /**
+         * groupId per pom definition
+         */
         String group
+
+        /**
+         * name / artifactId per pom definition
+         */
         String name
+
+        /**
+         * Versionper pom definition
+         */
         String version
-        long timeoutMs
+
+        /**
+         * Date time when the dependency becomes invalid. Until then, its considered
+         * as a valid dependency
+         *
+         * Time is measured in milliseconds
+         */
+        long expires
+
     }
 
 }
