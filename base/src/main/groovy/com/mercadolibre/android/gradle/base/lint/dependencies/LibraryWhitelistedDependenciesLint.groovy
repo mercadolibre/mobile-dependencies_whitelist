@@ -13,20 +13,19 @@ import org.gradle.api.Project
  */
 class LibraryWhitelistedDependenciesLint implements Lint {
 
-    private static final String ERROR_TITLE = "Error: Found dependencies not allowed:"
-    private static final String ERROR_ALLOWED_DEPENDENCIES = "Please check your dependencies.\nYou can see the allowed dependencies at:"
+    private static final String ERROR_TITLE = "Error: The following dependencies are not allowed:"
+    private static final String ERROR_ALLOWED_DEPENDENCIES_PREFIX = "Your project can only contain the dependencies listed in:"
+    private static final String ERROR_ALLOWED_DEPENDENCIES_SUFFIX = "If you think one of them should be in the whitelist, please contact mobile-arquitectura@"
 
     private static final String FILE = "build/reports/${LibraryWhitelistedDependenciesLint.class.simpleName}/${Lint.LINT_FILENAME}"
 
     /**
      * Array with whitelisted dependencies
      */
-    List<String> WHITELIST_DEPENDENCIES
+    List<Dependency> WHITELIST_DEPENDENCIES
 
     /**
      * Checks the dependencies the project contains are in the whitelist
-     * 
-     * This throws GradleException if errors are found.
      */
     boolean lint(Project project, def variants) {
         if (!project.rootProject.lintGradle.dependenciesLintEnabled) {
@@ -49,25 +48,26 @@ class LibraryWhitelistedDependenciesLint implements Lint {
              */
             def report = { message ->
                 File file = project.file(FILE)
+                // This will happen only the first time (since the first time it hasnt 'already failed'
                 if (!hasFailed) {
-                    // This is the first time it will find an error..
+                    // Create the file
                     if (!file.exists()) {
                         file.getParentFile().mkdirs()
                     }
-                    // If it fails, we flag it as such and we write to the stdout and file output.
+                    // Flag it as failed and write to the stdout and file output.
                     hasFailed = true
                     println ERROR_TITLE
                     file << ERROR_TITLE
                 }
+
+                // Write file and stdout with message
                 file.append("${System.getProperty("line.separator")}${message}")
                 println message
             }
 
             // Core logic
             def analizeDependency = { dependency ->
-                // The ASCII chars make the stdout look red.
                 String dependencyFullName = "${dependency.group}:${dependency.name}:${dependency.version}"
-                String message = "- ${dependencyFullName}"
                 boolean isLocalModule =
                         project.rootProject.subprojects
                                 .find { dependencyFullName.contains("${project.group}:${it.name}") } != null
@@ -79,9 +79,11 @@ class LibraryWhitelistedDependenciesLint implements Lint {
                  * Only if all of the above meet it will error.
                  */
                 if (!dependencyFullName.contains(DEFAULT_GRADLE_VERSION_VALUE)
-                        && !isLocalModule
-                        && !dependencyIsInWhitelist(dependencyFullName)) {
-                    report(message)
+                        && !isLocalModule) {
+                    Status result = dependencyIsInWhitelist(dependencyFullName)
+                    if (result.reportable()) {
+                        report result.message(dependencyFullName)
+                    }
                 }
             }
 
@@ -90,7 +92,9 @@ class LibraryWhitelistedDependenciesLint implements Lint {
                 String variantName = variant.name
 
                 if (project.configurations.hasProperty("${variantName}Compile")) {
-                    project.configurations."${variantName}Compile".dependencies.each { analizeDependency(it) }
+                    project.configurations."${variantName}Compile".dependencies.each {
+                        analizeDependency(it)
+                    }
                 }
             }
 
@@ -98,7 +102,7 @@ class LibraryWhitelistedDependenciesLint implements Lint {
             project.configurations.compile.dependencies.each { analizeDependency(it) }
 
             if (hasFailed) {
-                report("${ERROR_ALLOWED_DEPENDENCIES} ${project.rootProject.lintGradle.dependencyWhitelistUrl}")
+                report("${ERROR_ALLOWED_DEPENDENCIES_PREFIX} ${project.rootProject.lintGradle.dependencyWhitelistUrl}\n${ERROR_ALLOWED_DEPENDENCIES_SUFFIX}")
             }
         }
 
@@ -113,33 +117,127 @@ class LibraryWhitelistedDependenciesLint implements Lint {
     }
 
     /**
-    * Method to check if a part of a string is contained in
-    * at least one of the strings of the array
-    * eg array = [ "abc", "def", "ghi" ]
-    * array.containsPartOf("ab") -> true
-    * array.containsPartOf("hi") -> true
-    * 
-    * Supports regular expressions for the array values.
-    */
-    def dependencyIsInWhitelist(String dependency) {
-        for (String whitelistDep : WHITELIST_DEPENDENCIES) {
-            if (dependency =~ /${whitelistDep}/) {
-                return true
+     * Method to check if a dependency exists in the whitelist.
+     * @returns Status notifying the result
+     */
+    Status dependencyIsInWhitelist(String dependency) {
+        for (Dependency whitelistDep : WHITELIST_DEPENDENCIES) {
+            if (dependency =~ /${whitelistDep.group}:${whitelistDep.name}:${whitelistDep.version}/) {
+                if (System.currentTimeMillis() < whitelistDep.expires) {
+                    return Status.AVAILABLE
+                } else {
+                    return Status.EXPIRED
+                }
             }
         }
         
-        return false
+        return Status.INVALID
     }
 
-    def setUpWhitelist(String whitelistUrl) {
+    /**
+     * Sets up the whitelist, this will get a json from the whitelistUrl defined
+     * and parse the formatted JSON into a list of dependencies
+     * @param whitelistUrl well formed url with JSON content
+     */
+    void setUpWhitelist(String whitelistUrl) {
         WHITELIST_DEPENDENCIES = new ArrayList<String>()
 
         new URL(whitelistUrl).openConnection().with { conn ->
             def jsonSlurper = new JsonSlurper().parseText(conn.inputStream.text)
             jsonSlurper.whitelist.each { dependency ->
-                WHITELIST_DEPENDENCIES.add(dependency)
+                WHITELIST_DEPENDENCIES.add(new Dependency().with {
+                    group = dependency.group ?: '.*'
+                    name = dependency.name ?: '.*'
+                    version = dependency.version ?: '.*'
+
+                    expires = dependency.expires ?
+                            new Date().parse("yyyy-M-d", dependency.expires).time :
+                            Long.MAX_VALUE
+
+                    return it
+                })
             }
         }
+    }
+
+    /**
+     * Status for a dependency respecting the whitelist
+     */
+    static enum Status {
+        /**
+         * Implies that the dependency is in the whitelist
+         * The repository can use this dependency
+         */
+        AVAILABLE(false),
+        /**
+         * Implies that the dependency is not in the whitelist or the version
+         * is not the correct one.
+         * The repository shouldnt have this dependency, or this particular version.
+         */
+        INVALID(true),
+        /**
+         * Implies that the dependency is in the whitelist, but it has already expired
+         * The repository should either remove this dependency, or update its expiry time
+         * in the whitelist.
+         */
+        EXPIRED(true)
+
+        private boolean shouldReport
+
+        Status(boolean shouldReport) {
+            this.shouldReport = shouldReport
+        }
+
+        /**
+         * If the status can be reported or not
+         * @return boolean notifying if the status can be reported
+         */
+        boolean reportable() {
+            return shouldReport
+        }
+
+        /**
+         * Returns a formatted message for the dependency
+         * @param dependency to format in the message
+         * @return formatted message to print
+         * @throws IllegalAccessException if trying to report a non reportable status
+         */
+        String message(String dependency) {
+            if (!reportable()) {
+                throw new IllegalAccessException('Cant report this type of dependency')
+            }
+            return "- ${dependency} (${name().toLowerCase().capitalize()})"
+        }
+    }
+
+    /**
+     * Whitelist Dependency DTO
+     */
+    static class Dependency {
+
+        /**
+         * groupId per pom definition
+         */
+        String group
+
+        /**
+         * name / artifactId per pom definition
+         */
+        String name
+
+        /**
+         * Versionper pom definition
+         */
+        String version
+
+        /**
+         * Date time when the dependency becomes invalid. Until then, its considered
+         * as a valid dependency
+         *
+         * Time is measured in milliseconds
+         */
+        long expires
+
     }
 
 }

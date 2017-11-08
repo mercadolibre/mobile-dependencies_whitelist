@@ -89,9 +89,9 @@ class LintableModule implements Module {
         project.task (TASK_NAME) { Task task ->
             task.description "Lints the project dependencies to check they are in the allowed whitelist"
             task.doLast {
-                def buildErrored = false
-
                 if (project.rootProject.lintGradle.enabled) {
+                    def buildErrored = false
+
                     linters.each {
                         println ":${project.name}:${it.name()}"
                         def lintErrored = it.lint(project, variants)
@@ -99,10 +99,10 @@ class LintableModule implements Module {
                             buildErrored = true
                         }
                     }
-                }
 
-                if (buildErrored) {
-                    throw new GradleException(TASK_FAIL_MESSAGE)
+                    if (buildErrored) {
+                        throw new GradleException(TASK_FAIL_MESSAGE)
+                    }
                 }
             }
         }
