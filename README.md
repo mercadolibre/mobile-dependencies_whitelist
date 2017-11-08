@@ -8,17 +8,25 @@ Android whitelist dependencies consist of a set of dependencies that are availab
 
 This set of dependencies is parsed in the form of a JSON text. The root level property should be called `whitelist`.
 
-Each of the dependencies is a single String that will be matched against each of the dependencies in the repository. The repository dependencies will be a string formed as `group:name:version`. The whitelist string SUPPORTS regex expression, so you can form match cases for groups in single strings.
+Each of the dependencies is a JSON Object that will be matched against each of the unresolved dependencies of the repository. The repository dependencies will be a string formed as `group:name:version`. The whitelist fields SUPPORTS regex expressions, so you can form match cases for groups in single strings.
 
-Example:
+**NOTE1:** Remember that this are regexes, so if you want to declare `com.example` it should be `com\\.example`
+**NOTE2**: The repository will validate against unresolved dependencies. Thus, if declaring as version `4\\.\\+` it **will** match against a dependency `4.+` (it wont be for example the string `4.2.3`)
+**NOTE3**: You can have expirable dependencies by adding the `expires` field. If no field is added, the dependency is considered as non-expirable
+**NOTE4**: If no group / name / version is provided, they will default to `.*` (any string)
+
+JSON Schema:
 ```
 {
-    "whitelist": [
-        # This will match all names of the group 'com.mercadolibre.my_repo' with the version '3.+' (The repo must have 3.+, not 3.9)
-        "com\\.mercadolibre\\.my_repo:.*:3\\.\\+", 
-        # This will match against all the dependencies that are from the group 'com.another.[whatever]'. It doesnt matter which version or name it has!
-        "com\\.another\\." 
-    ]
+  "whitelist": [
+    {
+      "group": "group_regex",
+      "name": "name_regex",
+      "version": "version_regex",
+      "expires": "yyyy-MM-dd"
+    },
+    ...
+  ]
 }
 ```
 
