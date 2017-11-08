@@ -1,7 +1,7 @@
 default: &defaultJob
   docker:
       - image: circleci/openjdk:8
-      - image: circleci/ruby:latest
+      - image: circleci/ruby:latest-node
   resource_class: small
   environment:
     TEST_TASK: ":build"
