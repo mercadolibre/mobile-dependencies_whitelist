@@ -1,3 +1,8 @@
+# v4.3.0
+## Nuevo
+- Se refactorea el JSON para el lint de dependencias
+- Se agrega campo `expires` para cada dependencia de la whitelist
+
 # v4.2.2
 ## Cambiado
 - Se fixea issue en lockVersions, cambiando configuraciones ya resueltas - #116
