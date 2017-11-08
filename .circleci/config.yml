@@ -1,0 +1,106 @@
+default: &defaultJob
+  docker:
+      - image: circleci/openjdk:8
+  resource_class: small
+  environment:
+    TEST_TASK: ":build"
+init-job: &initJob
+  <<: *defaultJob
+  steps:
+      - checkout
+      - add_ssh_keys
+      - run:
+          name: Install Mobile requirements
+          command: ./scripts/ci/run_mobile_requirements.sh
+      - run:
+          name: Lock/Unlock Dependencies
+          command: ./mobile-cd/scripts/android/run_lock_dependencies.sh
+build-job: &buildJob
+  <<: *defaultJob
+  steps:
+      - checkout
+      - add_ssh_keys
+      - restore_cache:
+          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "build.gradle" }}
+      - run:
+          name: Install Mobile requirements
+          command: ./scripts/ci/run_mobile_requirements.sh
+      - run:
+          name: Run Tests
+          command: ./scripts/ci/run_test.sh
+      - run:
+          name: Run Mobile Lints
+          command: ./mobile-cd/scripts/run_script.sh
+      - run:
+          name: Run Coverage Report
+          command: ./scripts/ci/run_coverage_report.sh
+      - save_cache:
+          paths:
+          - ~/.gradle
+          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "build.gradle" }}
+      - run:
+          name: "Copy reports"
+          command: ./scripts/ci/run_copy_test_reports.sh
+          when: always
+      - store_artifacts:
+          path: "tmp/build/reports"
+          destination: reports
+      - store_test_results:
+          path: "tmp/build/test-results"
+deploy-job: &deployJob
+  <<: *defaultJob
+  steps:
+      - checkout
+      - add_ssh_keys
+      - restore_cache:
+          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "build.gradle" }}
+      - run:
+          name: Install Mobile requirements
+          command: ./scripts/ci/run_mobile_requirements.sh
+      - run:
+          name: Run Deploy
+          command: ./mobile-cd/scripts/run_after_success.sh
+default-workflow: &defaultWorkflow
+  requires:
+    - init
+  filters:
+    branches:
+      ignore: 
+        - master
+        - /release\/.*$/
+deploy-alpha-workflow: &deployAlphaWorkflow
+  requires:
+    - base
+  filters:
+    branches:
+      only:
+        - develop       
+deploy-workflow: &deployWorkflow
+  requires:
+    - init
+  filters:
+    branches:
+      only:
+        - master
+        - /release\/.*$/
+version: 2
+jobs:
+  init:
+    <<: *initJob
+  base:
+    <<: *buildJob
+  deployAlpha:
+    <<: *deployJob
+  deploy:
+    <<: *deployJob
+workflows:
+  version: 2
+  build-test-deploy:
+    jobs:
+      - init
+      - base:
+          <<: *defaultWorkflow
+      - deployAlpha:
+         <<: *deployAlphaWorkflow          
+      - deploy:
+          <<: *deployWorkflow
