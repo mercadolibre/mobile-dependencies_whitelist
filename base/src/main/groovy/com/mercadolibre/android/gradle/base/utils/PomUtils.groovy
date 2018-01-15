@@ -85,17 +85,12 @@ final class PomUtils {
                         dependencyNode.appendNode('scope', scope)
 
                         // Add the exclusions of the dependency
-                        if (configuration.state != Configuration.State.UNRESOLVED &&
-                                !configuration.resolvedConfiguration.resolvedArtifacts.empty) {
-                            exclusionsNode = dependencyNode.appendNode('exclusions')
-                            configuration.resolvedConfiguration.resolvedArtifacts.each { artifact ->
-                                ModuleVersionIdentifier moduleVersionIdentifier = artifact.moduleVersion.id
-                                if (xmlProvider.asNode().groupId.text() == moduleVersionIdentifier.group &&
-                                        artifactIsFromProject(project.rootProject, moduleVersionIdentifier.name)) {
-                                    Node exclusion = exclusions.appendNode('exclusion')
-                                    exclusion.appendNode('groupId', transitiveDep.group)
-                                    exclusion.appendNode('artifactId', transitiveDep.name)
-                                }
+                        if (!it.excludeRules.isEmpty()) {
+                            Node exclusionsNode = dependencyNode.appendNode('exclusions')
+                            it.excludeRules.each { rule ->
+                                Node exclusionNode = exclusionsNode.appendNode('exclusion')
+                                exclusionNode.appendNode('groupId', rule.group)
+                                exclusionNode.appendNode('artifactId', rule.module)
                             }
                         }
                     }
