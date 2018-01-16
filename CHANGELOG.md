@@ -1,3 +1,7 @@
+# v4.3.1
+## Cambiado
+- Se fixea issue en el pom, no agregando los nodos de exclusiones.
+
 # v4.3.0
 ## Nuevo
 - Se refactorea el JSON para el lint de dependencias

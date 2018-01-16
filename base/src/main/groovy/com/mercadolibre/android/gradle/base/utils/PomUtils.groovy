@@ -4,6 +4,7 @@ import groovy.json.JsonSlurper
 import org.gradle.api.Project
 import org.gradle.api.XmlProvider
 import org.gradle.api.artifacts.Configuration
+import org.gradle.api.artifacts.ModuleVersionIdentifier
 
 /**
  * Created by saguilera on 7/21/17.
@@ -65,6 +66,7 @@ final class PomUtils {
                             dependencyNode.appendNode('version', it.version)
                         }
 
+                        // Attach a scope to the dependency node
                         def scope
                         switch (configuration.name) {
                             case providedConfigurations:
@@ -81,6 +83,16 @@ final class PomUtils {
                                 break
                         }
                         dependencyNode.appendNode('scope', scope)
+
+                        // Add the exclusions of the dependency
+                        if (!it.excludeRules.isEmpty()) {
+                            Node exclusionsNode = dependencyNode.appendNode('exclusions')
+                            it.excludeRules.each { rule ->
+                                Node exclusionNode = exclusionsNode.appendNode('exclusion')
+                                exclusionNode.appendNode('groupId', rule.group)
+                                exclusionNode.appendNode('artifactId', rule.module)
+                            }
+                        }
                     }
                 }
             }
