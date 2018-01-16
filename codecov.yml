@@ -1,0 +1,30 @@
+coverage:
+  status:
+    project:
+      default: off
+      minimum:
+        target: 0%
+      decrement:
+        target: auto
+        threshold: 0.5%
+        if_not_found: success
+      base:
+        target: 0%
+        flags: base
+    patch:
+      default: off
+      pr_coverage:
+        target: 0%
+flags:
+  # filter the folder(s) you wish to measure by that flag
+  base:
+    # only include files in the backend folder
+    paths:
+      - base/src/main/groovy/com/mercadolibre/android/gradle/
+comment:
+  layout: "diff, flags"
+  behavior: default
+  require_changes: false  # if true: only post the comment if coverage changes
+  require_base: no        # [yes :: must have a base report to post]
+  require_head: no       # [yes :: must have a head report to post]
+  branches: null
