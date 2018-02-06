@@ -21,6 +21,22 @@
         {
             "group":"com\\.mercadolibre\\.android\\.search",
             "name":"input"
+        },
+        {
+            "group":"com\\.mercadopago",
+            "name":"sdk"
+        },
+        {
+            "group":"com\\.mercadopago\\.android\\.ml_esc_manager",
+            "name":"ml_esc_manager"
+        },
+        {
+            "group":"com\\.mercadopago\\.android",
+            "name":"account_money_plugin"
+        },
+        {
+            "group":"com\\.mercadopago\\.android",
+            "name":"payment_processor"
         }
     ]
 }
