@@ -45,6 +45,22 @@
       "name": "MLShippingComponents",
       "version": "^~>\\s?1.[0-9]+$",
       "expire": "2017-12-15"
+    },
+    {
+      "name": "MercadoPagoSDK",
+      "version": null
+    },
+    {
+      "name": "PXMLPaymentProcessor",
+      "version": null
+    },
+    {
+      "name": "PXAccountMoneyPlugin",
+      "version": null
+    },
+    {
+      "name": "MLESCManager",
+      "version": null
     }
   ]
 }
