@@ -39,11 +39,13 @@
             "name":"payment_processor"
         },
         {
-            "group": "io\\.reactivex\\.rxjava2:rxandroid:",
+            "group": "io\\.reactivex\\.rxjava2",
+            "name": "rxandroid",
             "version": "2\\.0\\.1"
         },
         {
-            "group": "io.reactivex.rxjava2:rxjava:",
+            "group": "io.reactivex.rxjava2",
+            "name": "rxjava",
             "version": "2\\.1\\.9"
         }
     ]
