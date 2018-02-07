@@ -37,6 +37,14 @@
         {
             "group":"com\\.mercadopago\\.android",
             "name":"payment_processor"
+        },
+        {
+            "group": "io\\.reactivex\\.rxjava2:rxandroid:",
+            "version": "2\\.0\\.1"
+        },
+        {
+            "group": "io.reactivex.rxjava2:rxjava:",
+            "version": "2\\.1\\.9"
         }
     ]
 }
