@@ -76,7 +76,7 @@ class BasePlugin implements Plugin<Project> {
             subproject.plugins.withId(ANDROID_APPLICATION_PLUGIN) {
                 ANDROID_APPLICATION_MODULES().each { module -> module.configure(subproject) }
 
-                fixFindbugsDuplicateDexEntryWithJSR305()
+                fixFindbugsDuplicateDexEntryWithJSR305(subproject)
             }
 
             // Depending on added classpaths, this modules will apply plugins
@@ -105,7 +105,7 @@ class BasePlugin implements Plugin<Project> {
      *
      * TODO: This should be removed when SCA stops including findbugs.
      */
-    void fixFindbugsDuplicateDexEntryWithJSR305() {
+    void fixFindbugsDuplicateDexEntryWithJSR305(Project project) {
         project.configurations {
             all*.exclude module: "jsr305"
             all*.exclude module: "jcip-annotations"
