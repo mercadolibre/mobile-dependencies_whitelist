@@ -72,14 +72,13 @@ final class PomUtils {
             // Its a local dependency, so lets further check
             // if maybe the version has a timestamp, in which
             // case, we should convert it to a dynamic version.
-            if (xmlProvider.asNode().version.text() ==~ /^.*-\d{10,16}/) {
+            if (dependency.version ==~ /^.*-\d{10,16}/) {
                 // The version has at the end a timestamp.
                 // We will add the version as dynamic
                 // If the user doesnt want this, he should before publishing
                 // a module, publish its dependants and change
                 // the local compilation
-                node.appendNode('version', xmlProvider.asNode().version.text()
-                        .replaceAll(/-\d{10,16}/, '-+'))
+                node.appendNode('version', dependency.version.replaceAll(/-\d{10,16}/, '-+'))
             } else {
                 // If it doesnt have a timestamp, we should assume its a
                 // production publication, where the user explicitly
