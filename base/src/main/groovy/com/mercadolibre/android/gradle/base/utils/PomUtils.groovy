@@ -18,7 +18,8 @@ final class PomUtils {
         // Here I declare all the configurations we support to upload to the pom.
         // We also take into account flavored ones
         final String[] compileConfigurations = ['default', 'archives', 'compile', "${variantName}Compile",
-                                                'implementation', "${variantName}Implementation"]
+                                                'implementation', "${variantName}Implementation",
+                                                'api', "${variantName}Api"]
         final String[] testConfigurations = ['test', "test${variantName.capitalize()}", 'testCompile',
                                             "testCompile${variantName.capitalize()}"]
         final String[] runtimeConfigurations = ['runtime', 'runtimeOnly', "${variantName}Runtime",
