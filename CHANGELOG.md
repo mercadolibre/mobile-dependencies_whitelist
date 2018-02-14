@@ -1,3 +1,7 @@
+# v4.4.1
+## Cambiado
+- Se arregla pom con dependencias locales dinamicas que quedaban fijas
+
 # v4.4.0
 ## Cambiado
 - Se refactoriza la creacion de los poms
