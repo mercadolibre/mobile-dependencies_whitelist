@@ -1,3 +1,9 @@
+# v4.4.0
+## Cambiado
+- Se refactoriza la creacion de los poms
+- Se saca findbugs ya que figura como 'compile' para proyectos de java puros
+- Se da soporte para poms con configuration de gradle 4.X
+
 # v4.3.1
 ## Cambiado
 - Se fixea issue en el pom, no agregando los nodos de exclusiones.

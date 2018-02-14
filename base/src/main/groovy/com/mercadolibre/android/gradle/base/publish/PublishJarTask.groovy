@@ -3,12 +3,14 @@ package com.mercadolibre.android.gradle.base.publish
 import com.mercadolibre.android.gradle.base.utils.PomUtils
 import com.mercadolibre.android.gradle.base.utils.VersionContainer
 import org.gradle.api.GradleException
+import org.gradle.api.JavaVersion
 import org.gradle.api.Project
 import org.gradle.api.Task
 import org.gradle.api.XmlProvider
 import org.gradle.api.publish.maven.MavenPublication
 import org.gradle.api.tasks.bundling.Jar
 import org.gradle.api.tasks.javadoc.Javadoc
+import org.gradle.external.javadoc.JavadocMemberLevel
 
 /**
  * Created by saguilera on 7/23/17.
@@ -61,9 +63,17 @@ abstract class PublishJarTask extends PublishTask {
             if (!javadoc) {
                 javadoc = project.task("${variant.name}Javadoc", type: Javadoc) {
                     description "Generates Javadoc for ${variant.name}."
+                    group 'Documentation'
                     source = sourceDirs
                     destinationDir = javaDocDestDir
-                    options.links("http://docs.oracle.com/javase/7/docs/api/");
+
+                    if (JavaVersion.current().isJava8Compatible()) {
+                        options.addStringOption('Xdoclint:none', '-quiet')
+                    }
+
+                    options.memberLevel = JavadocMemberLevel.PROTECTED
+
+                    options.links("http://docs.oracle.com/javase/7/docs/api/")
                     failOnError false
                 }
             }
@@ -71,6 +81,7 @@ abstract class PublishJarTask extends PublishTask {
             if (!javadocJar) {
                 javadocJar = project.task("${variant.name}JavadocJar", type: Jar, dependsOn: javadoc) {
                     description "Puts Javadoc for ${variant.name} in a jar."
+                    group 'Documentation'
                     classifier = 'javadoc'
                     from javadoc.destinationDir
                 }
@@ -79,6 +90,7 @@ abstract class PublishJarTask extends PublishTask {
             if (!sourcesJar) {
                 sourcesJar = project.task("${variant.name}SourcesJar", type: Jar) {
                     description "Puts sources for ${variant.name} in a jar."
+                    group 'Packaging'
                     from sourceDirs
                     classifier = 'sources'
                 }
