@@ -1,106 +1,146 @@
+####
+# Default job.
+# This job simply defines the android image, some environment variables
+# and stuff that all jobs should have
+##
 default: &defaultJob
+  # The docker image all jobs that inherit from us will have (Which should be all of them)
   docker:
       - image: circleci/android:api-25-alpha
-  resource_class: small
-  environment:
-    TEST_TASK: ":build"
-init-job: &initJob
-  <<: *defaultJob
-  steps:
-      - checkout
-      - add_ssh_keys
-      - run:
-          name: Install Mobile requirements
-          command: ./scripts/ci/run_mobile_requirements.sh
-      - run:
-          name: Lock/Unlock Dependencies
-          command: ./mobile-cd/scripts/android/run_lock_dependencies.sh
+##
+# We define a job for building. This job will be in charge of running:
+# - Install mobile-cd build automation: 'kelli'
+# - Run code analysis for a specific module
+# - Run tests for a specific module
+# - Run an assemble for a specific module
+# - Run a build analysis for a specific module
+# - Specifying a place for storing artifacts and test results.
+##
 build-job: &buildJob
+  # It will inherit the defaultJob.
   <<: *defaultJob
   steps:
+      # Checkout to our repo and add the ssh keys for doing git stuff
       - checkout
       - add_ssh_keys
+      # Restore the cache if a hashed build.gradle is found as key
       - restore_cache:
-          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "build.gradle" }}
+          key: jars-{{ checksum  "build.gradle" }}
       - run:
-          name: Install Mobile requirements
-          command: ./scripts/ci/run_mobile_requirements.sh
+          name: Install Mobile Requirements
+          command: eval $GET_MOBILE_CD | ruby
+      - run:
+          name: Run Code Analysis
+          command: kelli code-analyzer --module $MODULE
       - run:
           name: Run Tests
-          command: ./scripts/ci/run_test.sh
+          command: kelli test --module $MODULE
       - run:
-          name: Run Mobile Lints
-          command: ./mobile-cd/scripts/run_script.sh
+          name: Run Assemble
+          command: kelli assemble --module $MODULE
       - run:
-          name: Run Coverage Report
-          command: ./scripts/ci/run_coverage_report.sh
+          name: Run Build Analysis
+          command: kelli build-analyzer --module $MODULE
+      # Save the cache for this build.gradle
       - save_cache:
           paths:
           - ~/.gradle
-          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "build.gradle" }}
-      - run:
-          name: "Copy reports"
-          command: ./scripts/ci/run_copy_test_reports.sh
-          when: always
+          key: jars-{{ checksum "build.gradle" }}
+      # Setup store paths, everything inside $CI_ARTIFACTS_DIR will be uploaded.
+      # Since 2.0 still doesnt support envvars in store_artifacts, we use its value directly....
       - store_artifacts:
-          path: "tmp/build/reports"
-          destination: reports
-      - store_test_results:
-          path: "tmp/build/test-results"
-deploy-job: &deployJob
+          path: "mobile-cd/artifacts"
+##
+# We define a job for deploying. This job will be in charge of running:
+# - Install mobile-cd build automation: 'kelli'
+# - Run deploy of a lib | application as release
+##
+deploy-release-job: &deployReleaseJob
   <<: *defaultJob
   steps:
+      # Checkout to our repo and add the ssh keys for doing git stuff
       - checkout
       - add_ssh_keys
+      # Restore the cache if a hashed build.gradle is found as key
       - restore_cache:
-          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "build.gradle" }}
+          key: jars-{{ checksum "build.gradle" }}
       - run:
-          name: Install Mobile requirements
-          command: ./scripts/ci/run_mobile_requirements.sh
+          name: Install Mobile Requirements
+          command: eval $GET_MOBILE_CD | ruby
       - run:
           name: Run Deploy
-          command: ./mobile-cd/scripts/run_after_success.sh
+          command: kelli deploy lib --release
+##
+# We define a job for deploying as alpha. This job will be in charge of running:
+# - Install mobile-cd build automation: 'kelli'
+# - Run deploy of a lib | application as release
+##
+deploy-alpha-job: &deployAlphaJob
+  <<: *defaultJob
+  steps:
+      # Checkout to our repo and add the ssh keys for doing git stuff
+      - checkout
+      - add_ssh_keys
+      # Restore the cache if a hashed build.gradle is found as key
+      - restore_cache:
+          key: jars-{{ checksum "build.gradle" }}
+      - run:
+          name: Install Mobile Requirements
+          command: eval $GET_MOBILE_CD | ruby
+      - run:
+          name: Run Deploy
+          command: kelli deploy lib --alpha
+##
+# We define our default workflow
+# This workflow will be used by our default builds
+# The following workflow runs on every branch except master or release/?
+##
 default-workflow: &defaultWorkflow
-  requires:
-    - init
   filters:
     branches:
-      ignore: 
+      ignore:
         - master
         - /release\/.*$/
+##
+# We define our alpha deploy workflow
+# The following workflow runs only on develop branch
+# And depends of all the default workflows
+##
 deploy-alpha-workflow: &deployAlphaWorkflow
   requires:
     - base
+
   filters:
     branches:
       only:
-        - develop       
-deploy-workflow: &deployWorkflow
-  requires:
-    - init
-  filters:
-    branches:
-      only:
-        - master
-        - /release\/.*$/
+        - develop
+
+##
+# Create our jobs, making them inherit from the defined jobs
+# The ones that will inherit from buildJob need to create the environment variable
+# MODULE. Check the steps defined for that job so you understand why :)
+##
 version: 2
 jobs:
-  init:
-    <<: *initJob
   base:
     <<: *buildJob
+    environment:
+      MODULE: base
   deployAlpha:
-    <<: *deployJob
-  deploy:
-    <<: *deployJob
+    <<: *deployAlphaJob
+  build: # Do NOT rename this "build" job because Circle CI expects this name.
+    <<: *deployReleaseJob
+
+##
+# We define here workflows. We will add all our jobs
+# to a common workflow, and for each job of the workflow we will make it
+# inherit its properties from a specific workflow
+##
 workflows:
   version: 2
   build-test-deploy:
     jobs:
-      - init
       - base:
           <<: *defaultWorkflow
-      - deployAlpha:
-         <<: *deployAlphaWorkflow          
-      - deploy:
-          <<: *deployWorkflow
+      - deployAlpha: 
+          <<: *deployAlphaWorkflow
