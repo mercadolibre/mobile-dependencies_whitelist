@@ -1,3 +1,8 @@
+# v4.4.2
+## Cambiado
+- Se arregla validacion de si una dependencia es local o no cuando tienen groups distintos dentro del mismo repositorio
+- Se arregla conflicto entre las versiones de cada tipo de publicacion
+
 # v4.4.1
 ## Cambiado
 - Se arregla pom con dependencias locales dinamicas que quedaban fijas

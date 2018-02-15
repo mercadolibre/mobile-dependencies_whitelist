@@ -12,7 +12,7 @@ final class VersionContainer {
     }
 
     private static String key(String projectName, String publicationName) {
-        return "${projectName}-${publicationName}"
+        return "${projectName}:${publicationName}"
     }
 
     public static void put(String projectName, String publicationName, String version) {
