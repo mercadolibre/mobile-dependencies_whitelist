@@ -11,7 +11,7 @@ class PublishAarLocalTask extends PublishAarTask {
     Task create(PublishTask.Builder builder) {
         super.create(builder)
 
-        VersionContainer.put(builder.taskName, flavorVersion("LOCAL-${project.version}-${getTimestamp()}", builder.variant))
+        VersionContainer.put(project.name, builder.taskName, flavorVersion("LOCAL-${project.version}-${getTimestamp()}", builder.variant))
 
         createMavenPublication()
 
@@ -20,7 +20,7 @@ class PublishAarLocalTask extends PublishAarTask {
         } else {
             return project.task(builder.taskName) {
                 doLast {
-                    VersionContainer.logVersion("${project.group}:${project.name}:${VersionContainer.get(builder.taskName, project.version as String)}")
+                    VersionContainer.logVersion("${project.group}:${project.name}:${VersionContainer.get(project.name, builder.taskName, project.version as String)}")
                 }
                 group = TASK_GROUP
 

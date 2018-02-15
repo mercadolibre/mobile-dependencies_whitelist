@@ -12,7 +12,7 @@ class PublishAarExperimentalTask extends PublishAarTask {
     Task create(PublishTask.Builder builder) {
         super.create(builder)
 
-        VersionContainer.put(builder.taskName, flavorVersion("EXPERIMENTAL-${project.version}-${getTimestamp()}", builder.variant))
+        VersionContainer.put(project.name, builder.taskName, flavorVersion("EXPERIMENTAL-${project.version}-${getTimestamp()}", builder.variant))
 
         createMavenPublication()
 

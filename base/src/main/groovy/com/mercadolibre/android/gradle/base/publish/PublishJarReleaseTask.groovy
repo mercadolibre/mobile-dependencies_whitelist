@@ -12,7 +12,7 @@ class PublishJarReleaseTask extends PublishJarTask {
     Task create(PublishTask.Builder builder) {
         super.create(builder)
 
-        VersionContainer.put(builder.taskName, project.version as String)
+        VersionContainer.put(project.name, builder.taskName, project.version as String)
 
         createMavenPublication()
 

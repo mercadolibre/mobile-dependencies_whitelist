@@ -116,7 +116,7 @@ abstract class PublishAarTask extends PublishTask {
             "$taskName"(MavenPublication) {
                 artifactId = project.name
                 groupId = project.group
-                version = VersionContainer.get(taskName, project.version as String)
+                version = VersionContainer.get(project.name, taskName, project.version as String)
 
                 artifacts = [
                         "$project.buildDir/outputs/aar/${project.getName()}-${variant.name}.aar",

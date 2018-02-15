@@ -99,7 +99,7 @@ abstract class PublishJarTask extends PublishTask {
             "$taskName"(MavenPublication) {
                 artifactId = project.name
                 groupId = project.group
-                version = VersionContainer.get(taskName, project.version as String)
+                version = VersionContainer.get(project.name, taskName, project.version as String)
                 artifacts = [project.tasks.jar, sourcesJar, javadocJar]
 
                 pom.withXml { XmlProvider xmlProvider ->
