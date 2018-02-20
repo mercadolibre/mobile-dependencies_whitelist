@@ -1,6 +1,6 @@
 # v4.4.3
 ## Cambiado
-- Se fixea el aar que se provee ya que en los flavored el name viene en camelcase, y queremos hypencase. Paso a buscar del variant output
+- Se fixea el aar que se provee al publicar, ya que en las publicaciones flavored el name viene en camelcase y necesitamos hypencase
 
 # v4.4.2
 ## Cambiado
