@@ -1,3 +1,7 @@
+# v4.4.3
+## Cambiado
+- Se fixea el aar que se provee ya que en los flavored el name viene en camelcase, y queremos hypencase. Paso a buscar del variant output
+
 # v4.4.2
 ## Cambiado
 - Se arregla validacion de si una dependencia es local o no cuando tienen groups distintos dentro del mismo repositorio
