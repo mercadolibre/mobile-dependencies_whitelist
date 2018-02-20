@@ -11,14 +11,18 @@ final class VersionContainer {
         map = new HashMap<>()
     }
 
-    public static void put(String publicationName, String version) {
-        if (!map.get(publicationName)) {
-            map.put(publicationName, version)
+    private static String key(String projectName, String publicationName) {
+        return "${projectName}:${publicationName}"
+    }
+
+    public static void put(String projectName, String publicationName, String version) {
+        if (!map.get(key(projectName, publicationName))) {
+            map.put(key(projectName, publicationName), version)
         }
     }
 
-    public static String get(String publicationName, String defaultValue = '') {
-        return map.get(publicationName, defaultValue)
+    public static String get(String projectName, String publicationName, String defaultValue = '') {
+        return map.get(key(projectName, publicationName), defaultValue)
     }
 
     public static void logVersion(String version) {

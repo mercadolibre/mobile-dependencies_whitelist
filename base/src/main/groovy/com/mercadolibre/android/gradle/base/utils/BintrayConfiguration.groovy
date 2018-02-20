@@ -23,13 +23,13 @@ final class BintrayConfiguration {
 
             publications = [publicationName]
 
-            versionVcsTag = "${VersionContainer.get(publicationName, project.version as String)}"
+            versionVcsTag = "${VersionContainer.get(project.name, publicationName, project.version as String)}"
 
             dryRun = false
             publish = true
             userOrg = 'mercadolibre'
             packageName = "${project.group}.${project.name}"
-            versionName = "${VersionContainer.get(publicationName, project.version as String)}"
+            versionName = "${VersionContainer.get(project.name, publicationName, project.version as String)}"
 
             packagePublicDownloadNumbers = false
 
@@ -38,7 +38,7 @@ final class BintrayConfiguration {
 
         loadBintrayCredentials(project)
 
-        VersionContainer.logVersion("${project.group}:${project.name}:${VersionContainer.get(publicationName, project.version as String)}")
+        VersionContainer.logVersion("${project.group}:${project.name}:${VersionContainer.get(project.name, publicationName, project.version as String)}")
     }
 
     private static def loadBintrayCredentials(Project project) {
