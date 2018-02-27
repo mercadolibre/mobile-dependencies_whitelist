@@ -46,11 +46,11 @@
         {
             "group": "io\\.reactivex",
             "name": "rxjava",
-            "version": "1\\.3\\.0"
+            "version": "1\\.3\\.6"
         },
         {
             "group": "com\\.squareup\\.retrofit2",
-            "name": "adapter-rxjava2",
+            "name": "adapter-rxjava",
             "version": "2\\.3\\.0"
         }
     ]
