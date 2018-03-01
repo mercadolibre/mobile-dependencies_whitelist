@@ -21,6 +21,14 @@
         {
             "group":"com\\.mercadolibre\\.android\\.search",
             "name":"input"
+        },
+        {
+            "group":"com\\.mercadolibre\\.android\\.progress-circle",
+            "name":"sell\\progress-circle"
+        },
+        {
+            "group":"com\\.mercadolibre\\.android\\.multi_image_view",
+            "name":"sell\\multi_image_view"
         }
     ]
 }
