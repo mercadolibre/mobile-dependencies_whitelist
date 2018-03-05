@@ -47,6 +47,14 @@
       "expire": "2017-12-15"
     },
     {
+      "name": "MLProgressCircle",
+      "version": "^~>\\s?1.[0-9]+$" 
+    },
+    {
+      "name": "MLMultiImageView",
+      "version": "^~>\\s?1.[0-9]+$" 
+    },
+    {
       "name": "MercadoPagoSDK",
       "version": null
     },
