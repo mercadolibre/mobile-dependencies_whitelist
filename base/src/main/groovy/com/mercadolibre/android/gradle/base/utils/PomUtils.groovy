@@ -1,6 +1,8 @@
 package com.mercadolibre.android.gradle.base.utils
 
 import groovy.json.JsonSlurper
+import groovyjarjarantlr.StringUtils
+import org.codehaus.groovy.util.StringUtil
 import org.gradle.api.Project
 import org.gradle.api.XmlProvider
 import org.gradle.api.artifacts.Configuration
@@ -102,8 +104,8 @@ final class PomUtils {
             Node exclusionsNode = node.appendNode('exclusions')
             dependency.excludeRules.each { rule ->
                 Node exclusionNode = exclusionsNode.appendNode('exclusion')
-                exclusionNode.appendNode('groupId', rule.group)
-                exclusionNode.appendNode('artifactId', rule.module)
+                exclusionNode.appendNode('groupId', rule.group ?: '*')
+                exclusionNode.appendNode('artifactId', rule.module ?: '*')
             }
         }
     }
