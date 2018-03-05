@@ -102,8 +102,8 @@ final class PomUtils {
             Node exclusionsNode = node.appendNode('exclusions')
             dependency.excludeRules.each { rule ->
                 Node exclusionNode = exclusionsNode.appendNode('exclusion')
-                exclusionNode.appendNode('groupId', rule.group)
-                exclusionNode.appendNode('artifactId', rule.module)
+                exclusionNode.appendNode('groupId', rule.group ?: '*')
+                exclusionNode.appendNode('artifactId', rule.module ?: '*')
             }
         }
     }
