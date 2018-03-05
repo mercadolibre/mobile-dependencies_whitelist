@@ -1,3 +1,7 @@
+# v4.4.3
+## Cambiado
+- Se fixea issue en el pom, no agregando correctamente nodos de exclusiones.
+
 # v4.4.2
 ## Cambiado
 - Se arregla validacion de si una dependencia es local o no cuando tienen groups distintos dentro del mismo repositorio
