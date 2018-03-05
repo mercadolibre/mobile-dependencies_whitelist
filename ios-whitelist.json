@@ -53,6 +53,22 @@
     {
       "name": "MLMultiImageView",
       "version": "^~>\\s?1.[0-9]+$" 
+    },
+    {
+      "name": "MercadoPagoSDK",
+      "version": null
+    },
+    {
+      "name": "PXMLPaymentProcessor",
+      "version": null
+    },
+    {
+      "name": "PXAccountMoneyPlugin",
+      "version": null
+    },
+    {
+      "name": "MLESCManager",
+      "version": null
     }
   ]
 }
