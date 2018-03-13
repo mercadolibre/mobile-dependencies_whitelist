@@ -1,3 +1,11 @@
+# v4.4.4
+## Cambiado
+- Se fixea el aar que se provee al publicar, ya que en las publicaciones flavored el name viene en camelcase y necesitamos hypencase (ver https://github.com/mercadolibre/mobile-android_gradle/pull/131)
+
+# v4.4.3
+## Cambiado
+- Se fixea issue en el pom, no agregando correctamente nodos de exclusiones.
+
 # v4.4.2
 ## Cambiado
 - Se arregla validacion de si una dependencia es local o no cuando tienen groups distintos dentro del mismo repositorio

@@ -119,7 +119,7 @@ abstract class PublishAarTask extends PublishTask {
                 version = VersionContainer.get(project.name, taskName, project.version as String)
 
                 artifacts = [
-                        "$project.buildDir/outputs/aar/${project.getName()}-${variant.name}.aar",
+                        variant.outputs.first().outputFile,
                         sourcesJar,
                         javadocJar
                 ]
