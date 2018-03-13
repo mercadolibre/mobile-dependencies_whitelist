@@ -1,6 +1,6 @@
 # v4.4.4
 ## Cambiado
-- Se fixea el aar que se provee al publicar, ya que en las publicaciones flavored el name viene en camelcase y necesitamos hypencase
+- Se fixea el aar que se provee al publicar, ya que en las publicaciones flavored el name viene en camelcase y necesitamos hypencase (ver https://github.com/mercadolibre/mobile-android_gradle/pull/131)
 
 # v4.4.3
 ## Cambiado
