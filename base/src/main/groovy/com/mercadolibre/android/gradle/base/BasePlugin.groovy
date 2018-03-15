@@ -91,7 +91,7 @@ class BasePlugin implements Plugin<Project> {
             // We are disabling findbugs because it imposes a huge latency in the running builds
             // and its not providing any real benefit that other SCA tools already do
             subproject.tasks.whenTaskAdded { task ->
-                if (task.name == 'findbugs') {
+                if (task.name.toLowerCase().contains('findbugs')) {
                     task.enabled = false
                 }
             }

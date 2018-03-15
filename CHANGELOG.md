@@ -1,3 +1,7 @@
+# v4.4.6
+## Cambiado
+- Typo de la 4.4.5
+
 # v4.4.5
 ## Cambiado
 - Se desactiva findbugs de todos los proyectos automaticamente
