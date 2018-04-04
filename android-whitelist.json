@@ -60,6 +60,10 @@
             "group": "com\\.squareup\\.retrofit2",
             "name": "adapter-rxjava",
             "version": "2\\.3\\.0"
+        },
+        {
+            "group": "com\\.mercadolibre\\.android\\.myml\\.commons",
+            "name": "core"
         }
     ]
 }
