@@ -62,6 +62,10 @@
             "version": "2\\.3\\.0"
         },
         {
+           "group": "com.android.support",
+           "name": "appcompat-v7",
+        },
+        {
             "group": "com\\.mercadolibre\\.android\\.myml\\.commons",
             "name": "core"
         }
