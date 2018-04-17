@@ -71,8 +71,8 @@
         }, 
         {
             "group": "org\\.jetbrains\\.kotlin",
-            "name": "kotlin-stdlib-jdk7",
-            "version": "1\\.2\\.31"
+            "name": "kotlin-stdlib-*",
+            "version": "1\\.2\\.*"
         }
     ]
 }
