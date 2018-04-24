@@ -29,8 +29,12 @@
       "version": "^~>\\s?3.[0-9]+"
     },
     {
-      "name": "Firebase/AppIndexing",
-      "version": "^~>\\s?3.4.0$"
+      "name": "Firebase/Core",
+      "version": "^~>\\s?4.13.0$"
+    },
+    {
+      "name": "Firebase/DynamicLinks",
+      "version": "^~>\\s?4.13.0$"
     },
     {
       "name": "MLSearch/Suggestion",
