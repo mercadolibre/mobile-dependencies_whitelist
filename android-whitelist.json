@@ -68,6 +68,11 @@
         {
             "group": "com\\.mercadolibre\\.android\\.myml\\.commons",
             "name": "core"
+        }, 
+        {
+            "group": "org\\.jetbrains\\.kotlin",
+            "name": "kotlin-stdlib-*",
+            "version": "1\\.2\\.*"
         }
     ]
 }
