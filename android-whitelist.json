@@ -72,6 +72,11 @@
         {
             "group": "org\\.jetbrains\\.kotlin",
             "name": "kotlin-stdlib-jdk7"
+        },
+        {
+            "group": "com\\.airbnb\\.android",
+            "name": "lottie",
+            "version": "2\\.2\\.0"
         }
     ]
 }
