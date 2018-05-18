@@ -86,6 +86,10 @@
             "name": "configuration-manager"
         },
         {
+            "group": "com\\.mercadolibre\\.android",
+            "name": "restclient"
+        },
+        {
             "group": "com\\.airbnb\\.android",
             "name": "lottie",
             "version": "2\\.2\\.0"
