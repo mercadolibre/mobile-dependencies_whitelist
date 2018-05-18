@@ -70,12 +70,20 @@
             "name": "core"
         },
         {
+            "group": "com\\.mercadolibre\\.android\\.commons",
+            "name": "core"
+        },
+        {
             "group": "com\\.mercadolibre\\.android\\.maps",
             "name": "core"
         }, 
         {
             "group": "org\\.jetbrains\\.kotlin",
             "name": "kotlin-stdlib-jdk7"
+        },
+        {
+            "group": "com\\.mercadolibre\\.android",
+            "name": "configuration-manager"
         },
         {
             "group": "com\\.airbnb\\.android",
