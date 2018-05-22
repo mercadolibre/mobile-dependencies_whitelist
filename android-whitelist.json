@@ -11,6 +11,10 @@
             "name":"constraint-layout"
         },
         {
+            "group":"android\\.arch\\.lifecycle",
+            "name":"extensions"
+        },
+        {
             "group":"com\\.mercadolibre\\.android",
             "name":"shipping\\-components"
         },
