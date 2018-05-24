@@ -1,3 +1,7 @@
+# v4.5.0
+## Agregado
+- Agregamos la url de nuestro repo publico
+
 # v4.4.6
 ## Cambiado
 - Typo de la 4.4.5
