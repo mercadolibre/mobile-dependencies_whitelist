@@ -160,6 +160,9 @@ class BasePlugin implements Plugin<Project> {
                     url 'https://maven.google.com'
                 }
                 maven {
+                    url "https://dl.bintray.com/mercadolibre/android-public"
+                }
+                maven {
                     url "https://dl.bintray.com/mercadolibre/android-releases"
                     credentials {
                         username 'bintray-read'
@@ -172,9 +175,6 @@ class BasePlugin implements Plugin<Project> {
                         username 'bintray-read'
                         password 'ff5072eaf799961add07d5484a6283eb3939556b'
                     }
-                }
-                maven {
-                    url "https://dl.bintray.com/mercadolibre/android-public"
                 }
             }
         }
