@@ -173,6 +173,9 @@ class BasePlugin implements Plugin<Project> {
                         password 'ff5072eaf799961add07d5484a6283eb3939556b'
                     }
                 }
+                maven {
+                    url "https://dl.bintray.com/mercadolibre/android-public"
+                }
             }
         }
     }
