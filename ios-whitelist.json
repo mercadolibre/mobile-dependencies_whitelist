@@ -120,7 +120,7 @@
     },
     {
       "name": "Bugsnag",
-      "version": "5.15.3"
+      "version": "^~>5.[0-9]+$"
     },
     {
       "name": "MLNotifications",
