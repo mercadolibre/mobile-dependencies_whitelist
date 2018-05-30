@@ -1,18 +1,86 @@
 {
     "whitelist": [
         {
-            "group":"com\\.mercadolibre\\.android\\.sdk"
+            "group": "com\\.mercadolibre\\.android",
+            "name": "configuration-manager"
+        },
+        {
+        	"group": "com\\.mercadolibre\\.android\\.commons",
+        	"name": "all"
+        },
+        {
+            "group": "com\\.mercadolibre\\.android\\.commons",
+            "name": "core"
+        },
+        {
+        	"group": "com\\.mercadolibre\\.android",
+        	"name": "ui"
+        },
+        {
+        	"group": "com\\.mercadolibre\\.android",
+        	"name": "analytics"
+        },
+        {
+        	"group": "com\\.mercadolibre\\.android",
+        	"name": "melidata-sdk"
+        },
+        {
+        	"group": "com\\.mercadolibre\\.android",
+        	"name": "pms"
+        },
+        {
+        	"group": "com\\.mercadolibre\\.android",
+        	"name": "authentication"
+        },
+        {
+            "group": "com\\.mercadolibre\\.android",
+            "name": "restclient"
+        },
+        {
+        	"group": "com\\.mercadolibre\\.android\\.on_demand_resources",
+        	"name": "core"
+        },
+        {
+        	"group": "com\\.mercadolibre\\.android\\.on_demand_resources",
+        	"name": "renderer-fresco"
+        },
+        {
+        	"group": "com\\.mercadolibre\\.android\\.traffic",
+        	"name": "registration"
+        },
+        {
+        	"group": "com\\.mercadolibre\\.android",
+        	"name": "login"
+        },
+        {
+        	"group": "com\\.mercadolibre\\.android\\.place",
+        	"name": "core"
+        },
+        {
+        	"group": "com\\.mercadolibre\\.android",
+        	"name": "notifications"
+        },
+    	{
+            "group": "com\\.mercadolibre\\.android\\.myml\\.commons",
+            "name": "core"
+        },
+        {
+            "group": "com\\.mercadolibre\\.android\\.maps",
+            "name": "core"
+        },
+    	{
+            "group":"com\\.mercadolibre\\.android",
+            "name":"progress-circle"
+        },
+        {
+            "group":"com\\.mercadolibre\\.android",
+            "name": "multiimageview"
         },
         {
             "group":"com\\.mercadolibre\\.android\\.recommendations"
         },
         {
-            "group":"com\\.android\\.support\\.constraint",
-            "name":"constraint-layout"
-        },
-        {
-            "group":"android\\.arch\\.lifecycle",
-            "name":"extensions"
+            "group":"com\\.mercadolibre\\.android\\.sdk"
         },
         {
             "group":"com\\.mercadolibre\\.android",
@@ -26,14 +94,8 @@
             "group":"com\\.mercadolibre\\.android\\.search",
             "name":"input"
         },
-        {
-            "group":"com\\.mercadolibre\\.android",
-            "name":"progress-circle"
-        },
-        {
-            "group":"com\\.mercadolibre\\.android",
-            "name": "multiimageview"
-        },
+
+
         {
             "group":"com\\.mercadopago",
             "name":"sdk"
@@ -50,6 +112,86 @@
             "group":"com\\.mercadopago\\.android",
             "name":"payment_processor"
         },
+
+
+        {
+            "group":"android\\.arch\\.lifecycle",
+            "name":"extensions"
+        },
+        {
+        	"group": "com\\.android\\.support",
+        	"name": "appcompat-v7"
+        },
+        {
+        	"group": "com\\.android\\.support",
+        	"name": "cardview-v7"
+        },
+        {
+        	"group": "com\\.android\\.support",
+        	"name": "design"
+        },
+        {
+        	"group": "com\\.android\\.support",
+        	"name": "percent"
+        },
+        {
+        	"group": "com\\.android\\.support",
+        	"name": "recyclerview-v7"
+        },
+        {
+        	"group": "com\\.android\\.support",
+        	"name": "support-annotations"
+        },
+        {
+        	"group": "com\\.android\\.support",
+        	"name": "transition"
+        },
+        {
+            "group": "com\\.android\\.support\\.constraint",
+            "name": "constraint-layout"
+        },
+        {
+        	"group": "com\\.google\\.firebase",
+        	"name": "firebase-appindexing"
+        },
+        {
+        	"group": "com\\.google\\.firebase",
+        	"name": "firebase-core"
+        },
+        {
+        	"group": "com\\.google\\.maps\\.android",
+        	"name": "android-maps-utils"
+        },
+
+
+        {
+            "group": "com\\.airbnb\\.android",
+            "name": "lottie",
+            "version": "2\\.2\\.0"
+        },
+        {
+        	"group": "com\\.github\\.ksoichiro",
+        	"name": "android-observablescrollview"
+        },
+        {
+        	"group": "com\\.journeyapps",
+        	"name": "zxing-android-embedded"
+        },
+        {
+            "group": "com\\.squareup\\.retrofit2",
+            "name": "adapter-rxjava",
+            "version": "2\\.3\\.0"
+        },
+        {
+        	"group": "com\\.theartofdev\\.edmodo",
+        	"name": "android-image-cropper",
+        	"version": "2\\.3\\.1"
+        },
+        {
+        	"group": "com\\.tonicartos",
+        	"name": "superslim",
+        	"version": "0\\.4\\.13"
+        },
         {
             "group": "io\\.reactivex",
             "name": "rxandroid",
@@ -61,42 +203,13 @@
             "version": "1\\.3\\.6"
         },
         {
-            "group": "com\\.squareup\\.retrofit2",
-            "name": "adapter-rxjava",
-            "version": "2\\.3\\.0"
+        	"group": "org\\.apache\\.commons",
+        	"name": "commons-lang3",
+        	"version": "3\\.6"
         },
-        {
-            "group": "com\\.android\\.support",
-            "name": "appcompat-v7",
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.myml\\.commons",
-            "name": "core"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.commons",
-            "name": "core"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.maps",
-            "name": "core"
-        }, 
         {
             "group": "org\\.jetbrains\\.kotlin",
             "name": "kotlin-stdlib-jdk7"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android",
-            "name": "configuration-manager"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android",
-            "name": "restclient"
-        },
-        {
-            "group": "com\\.airbnb\\.android",
-            "name": "lottie",
-            "version": "2\\.2\\.0"
         }
     ]
 }
