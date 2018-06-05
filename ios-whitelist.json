@@ -56,11 +56,11 @@
     },
     {
       "name": "MLProgressCircle",
-      "version": "^~>\\s?1.[0-9]+$" 
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLMultiImageView",
-      "version": "^~>\\s?1.[0-9]+$" 
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MercadoPagoSDK",
@@ -71,7 +71,11 @@
       "version": null
     },
     {
-      "name": "PXAccountMoneyPlugin",
+      "name": "PXMLPaymentProcessor",
+      "version": null
+    },
+    {
+      "name": "MIPXPaymentProcessorPlugin",
       "version": null
     },
     {
