@@ -91,8 +91,72 @@
       "version": "2.5.0"
     },
     {
-    "name" : "MLVariations",
-    "version": "^~>\\s?1.[0-9]+$"
+      "name" : "MLVariations",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLNetworking",
+      "version": "^~>\\s?12.[0-9]+$"
+    },
+    {
+      "name": "MLCommons",
+      "version": "^~>1.[0-9]+$"
+    },
+    {
+      "name": "MLUI",
+      "version": "^~>4.[0-9]+$"
+    },
+    {
+      "name": "MLPMS",
+      "version": "^~>1.[0-9]+$"
+    },
+    {
+      "name": "MLBookmarks",
+      "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "name": "MLMelidata",
+      "version": "^~>\\s?3.[0-9]+$"
+    },
+    {
+      "name": "MLReachability",
+      "version": "^~>2.[0-9]+$"
+    },
+    {
+      "name": "MLAnalytics",
+      "version": "^~>2.[0-9]+$"
+    },
+    {
+      "name": "MLNotifications",
+      "version": "^~>2.[0-9]+$"
+    },
+    {
+      "name": "StyledPageControl",
+      "version": "1.0"
+    },
+    {
+      "name": "PureLayout",
+      "version": "3.0.2"
+    },
+    {
+      "name": "FXBlurView",
+      "version": "1.6.4"
+    },
+    {
+      "name": "MGSwipeTableCell",
+      "version": "1.6.1"
+    },
+    {
+      "name": "MLOnDemandResources",
+      "version": "^~>1.[0-9]+$"
+    },
+    {
+      "name": "MLUIComponents",
+      "version": "^~>1.[0-9]+$"
+    },
+    {
+      "name": "MLAuthentication",
+      "version": "^~>0.[0-9]+$"
     }
   ]
 }
