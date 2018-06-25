@@ -1,4 +1,4 @@
-{
+A{
   "whitelist": [
     {
       "name": "MeliSDK",
@@ -56,11 +56,11 @@
     },
     {
       "name": "MLProgressCircle",
-      "version": "^~>\\s?1.[0-9]+$" 
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLMultiImageView",
-      "version": "^~>\\s?1.[0-9]+$" 
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MercadoPagoSDK",
@@ -88,7 +88,7 @@
     },
     {
       "name": "lottie-ios",
-      "version": "2.5.0"
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name" : "MLVariations",
