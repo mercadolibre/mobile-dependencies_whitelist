@@ -240,6 +240,10 @@
         {
             "group": "org\\.jetbrains\\.kotlin",
             "name": "kotlin-stdlib-jdk7"
+        },
+        {
+            "group": "com\\.squareup\\.picasso",
+            "name": "picasso"
         }
     ]
 }
