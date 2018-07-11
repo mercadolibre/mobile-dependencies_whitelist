@@ -1,6 +1,6 @@
 default: &defaultJob
   docker:
-    - image: circleci/nodejs:latest
+    - image: circleci/node:latest
   resource_class: xsmall
   steps:
     - checkout
