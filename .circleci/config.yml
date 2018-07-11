@@ -6,7 +6,7 @@ default: &defaultJob
     - checkout
     - run:
         name: "Install linter"
-        command: npm install jsonlint -g
+        command: sudo npm install jsonlint -g
     - run:
         name: "Run linter"
         command: jsonlint $FILE
