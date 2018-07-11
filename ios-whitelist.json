@@ -100,15 +100,15 @@
     },
     {
       "name": "MLCommons",
-      "version": "^~>1.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLUI",
-      "version": "^~>4.[0-9]+$"
+      "version": "^~>\\s?4.[0-9]+$"
     },
     {
       "name": "MLPMS",
-      "version": "^~>1.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLBookmarks",
@@ -120,15 +120,15 @@
     },
     {
       "name": "MLReachability",
-      "version": "^~>2.[0-9]+$"
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "MLAnalytics",
-      "version": "^~>2.[0-9]+$"
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "MLNotifications",
-      "version": "^~>2.[0-9]+$"
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "StyledPageControl",
@@ -148,15 +148,15 @@
     },
     {
       "name": "MLOnDemandResources",
-      "version": "^~>1.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLUIComponents",
-      "version": "^~>1.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLAuthentication",
-      "version": "^~>0.[0-9]+$"
+      "version": "^~>\\s?0.[0-9]+$"
     }
   ]
 }
