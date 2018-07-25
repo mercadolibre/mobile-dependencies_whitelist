@@ -1,0 +1,28 @@
+default: &defaultJob
+  docker:
+    - image: circleci/node:latest
+  resource_class: small
+  steps:
+    - checkout
+    - run:
+        name: "Install linter"
+        command: sudo npm install jsonlint -g
+    - run:
+        name: "Run linter"
+        command: jsonlint $FILE
+version: 2
+jobs:
+  android:
+    <<: *defaultJob
+    environment:
+      FILE: "android-whitelist.json"
+  ios:
+    <<: *defaultJob
+    environment:
+      FILE: "ios-whitelist.json"
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - android
+      - ios
