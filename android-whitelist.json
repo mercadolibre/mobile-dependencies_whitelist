@@ -1,6 +1,18 @@
 {
     "whitelist": [
         {
+            "group": "com\\.mercadolibre\\.android\\.uicomponents",
+            "name": "permissions"
+        },
+        {
+            "group": "com\\.mercadolibre\\.android\\.uicomponents",
+            "name": "mvp"
+        },
+        {
+            "group": "com\\.mercadolibre\\.android\\.uicomponents",
+            "name": "errorhandler"
+        },
+        {
             "group": "com\\.mercadolibre\\.android",
             "name": "configuration-manager"
         },
@@ -240,6 +252,10 @@
         {
             "group": "org\\.jetbrains\\.kotlin",
             "name": "kotlin-stdlib-jdk7"
+        },
+        {
+            "group": "com\\.polidea\\.rxandroidble",
+            "name": "rxandroidble"
         },
         {
             "group": "com\\.squareup\\.picasso",
