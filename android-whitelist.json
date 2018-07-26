@@ -1,6 +1,18 @@
 {
     "whitelist": [
         {
+            "group": "com\\.mercadolibre\\.android\\.uicomponents",
+            "name": "permissions"
+        },
+        {
+            "group": "com\\.mercadolibre\\.android\\.uicomponents",
+            "name": "mvp"
+        },
+        {
+            "group": "com\\.mercadolibre\\.android\\.uicomponents",
+            "name": "errorhandler"
+        },
+        {
             "group": "com\\.mercadolibre\\.android",
             "name": "configuration-manager"
         },
@@ -236,6 +248,10 @@
             "group": "org\\.apache\\.commons",
             "name": "commons-lang3",
             "version": "3\\.6"
+        },
+        {
+            "group": "com\\.polidea\\.rxandroidble",
+            "name": "rxandroidble"
         },
         {
             "group": "org\\.jetbrains\\.kotlin",
