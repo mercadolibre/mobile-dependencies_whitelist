@@ -2,15 +2,6 @@
     "whitelist": [
         {
             "group": "com\\.mercadolibre\\.android\\.uicomponents",
-            "name": "permissions"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.uicomponents",
-            "name": "mvp"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.uicomponents",
-            "name": "errorhandler"
         },
         {
             "group": "com\\.mercadolibre\\.android",
@@ -251,7 +242,12 @@
         },
         {
             "group": "com\\.polidea\\.rxandroidble",
-            "name": "rxandroidble"
+            "name": "rxandroidble",
+            "version": "1\\.5\\.0"
+        },
+        {
+            "group": "com\\.mercadopago\\.android\\.px",
+            "name": "checkout"
         },
         {
             "group": "org\\.jetbrains\\.kotlin",
