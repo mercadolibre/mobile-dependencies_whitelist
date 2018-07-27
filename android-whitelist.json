@@ -248,6 +248,15 @@
         {
             "group": "org\\.jetbrains\\.kotlin",
             "name": "kotlin-stdlib-jdk7"
+        },
+        {
+            "group": "org\\.jetbrains\\.kotlin",
+            "name": "kotlin-android-extensions-runtime"
+        },
+        {
+            "group": "com\\.squareup\\.picasso",
+            "name": "picasso",
+            "expires": "2018-09-01"
         }
     ]
 }
