@@ -1,6 +1,9 @@
 {
     "whitelist": [
         {
+            "group": "com\\.mercadolibre\\.android\\.uicomponents",
+        },
+        {
             "group": "com\\.mercadolibre\\.android",
             "name": "configuration-manager"
         },
@@ -87,14 +90,6 @@
         {
             "group": "com\\.mercadolibre\\.android\\.search",
             "name": "input"
-        },
-        {
-            "group": "com\\.mercadopago\\.android\\.px",
-            "name": "checkout"
-        },
-        {
-            "group": "com\\.mercadopago",
-            "name": "sdk"
         },
         {
             "group": "com\\.mercadopago\\.android\\.ml_esc_manager",
@@ -240,6 +235,16 @@
             "group": "org\\.apache\\.commons",
             "name": "commons-lang3",
             "version": "3\\.6"
+        },
+        {
+            "group": "com\\.polidea\\.rxandroidble",
+            "name": "rxandroidble",
+            "version": "1\\.5\\.0"
+        },
+        {
+            "group": "com\\.mercadopago\\.android\\.px",
+            "name": "checkout",
+            "version": "4\\.0\\.0"
         },
         {
             "group": "org\\.jetbrains\\.kotlin",
