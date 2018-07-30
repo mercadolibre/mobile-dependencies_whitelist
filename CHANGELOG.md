@@ -1,3 +1,7 @@
+# v4.5.1
+## Arreglado
+- Se valida por nombre de repo al rejectear alphas tambien
+
 # v4.5.0
 ## Agregado
 - Agregamos la url de nuestro repo publico
