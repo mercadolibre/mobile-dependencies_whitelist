@@ -43,7 +43,8 @@ class LockableModule implements Module {
                             componentSelection.all { ComponentSelection selection ->
                                 // If the version has an alpha and it's not me reject the version
                                 // If it's me, we will change it later
-                                if (!artifactIsFromProject(localDeps, selection.candidate) &&
+                                String artifact = "${selection.candidate.group}:${selection.candidate.module}"
+                                if (!artifactIsFromProject(localDeps, artifact) &&
                                         selection.candidate.version.contains(VERSION_ALPHA)) {
                                     selection.reject("Bad version. We dont accept alphas on the lock stage.")
                                 }
@@ -54,7 +55,7 @@ class LockableModule implements Module {
             }
 
             project.dependencyLock.dependencyFilter { String group, String name, String version ->
-                return !localDeps.contains("$group:$name")
+                return !artifactIsFromProject(localDeps, "$group:$name")
             }
 
             // Create a task that wraps the flow of the locking logic
@@ -65,8 +66,8 @@ class LockableModule implements Module {
         }
     }
 
-    static boolean artifactIsFromProject(def localDeps, ModuleComponentIdentifier dependency) {
-        return localDeps.contains("${dependency.group}:${dependency.module}")
+    static boolean artifactIsFromProject(def localDeps, String artifact) {
+        return localDeps.contains(artifact)
     }
 
 }
