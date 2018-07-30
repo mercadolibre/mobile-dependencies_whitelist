@@ -3,6 +3,8 @@ package com.mercadolibre.android.gradle.base.modules
 import org.gradle.api.Project
 import org.gradle.api.artifacts.ComponentSelection
 import org.gradle.api.artifacts.Configuration
+import org.gradle.api.artifacts.Dependency
+import org.gradle.api.artifacts.component.ModuleComponentIdentifier
 
 /**
  * Module that is in charge of managing the locking of dynamic dependencies into static ones
@@ -37,7 +39,7 @@ class LockableModule implements Module {
                             componentSelection.all { ComponentSelection selection ->
                                 // If the version has an alpha and it's not me reject the version
                                 // If it's me, we will change it later
-                                if (!selection.candidate.group.contentEquals(project.group) &&
+                                if (!artifactIsFromProject(project, selection.candidate) &&
                                         selection.candidate.version.contains(VERSION_ALPHA)) {
                                     selection.reject("Bad version. We dont accept alphas on the lock stage.")
                                 }
@@ -61,6 +63,10 @@ class LockableModule implements Module {
                 dependsOn NEBULA_LOCK_TASKS
             }
         }
+    }
+
+    static boolean artifactIsFromProject(Project project, ModuleComponentIdentifier dependency) {
+        return project.subprojects.find { it.name == dependency.module && it.group == dependency.group } != null
     }
 
 }
