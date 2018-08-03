@@ -6,8 +6,6 @@ import org.gradle.api.Task
 import org.gradle.api.artifacts.ComponentSelection
 import org.gradle.api.artifacts.Configuration
 import org.gradle.api.tasks.TaskAction
-import org.gradle.api.artifacts.Dependency
-import org.gradle.api.artifacts.component.ModuleComponentIdentifier
 
 /**
  * Module that is in charge of managing the locking of dynamic dependencies into static ones
@@ -24,34 +22,33 @@ class LockableModule implements Module {
     @Override
     void configure(Project project) {
         project.afterEvaluate {
-                project.configurations.all {
-                    it.resolutionStrategy.activateDependencyLocking()
-                    if (it.state == Configuration.State.UNRESOLVED) {
-                        it.resolutionStrategy {
-                            componentSelection.all { ComponentSelection selection ->
-                                // If the version has an alpha and it's not me reject the version
-                                // If it's me, we will change it later
-                                String artifact = "${selection.candidate.group}:${selection.candidate.module}"
-                                if (!artifactIsFromProject(localDeps, artifact) &&
-                                        selection.candidate.version.contains(VERSION_ALPHA)) {
-                                    selection.reject("Bad version. We dont accept alphas on the lock stage.")
-                                }
+            project.configurations.all {
+                it.resolutionStrategy.activateDependencyLocking()
+                if (it.state == Configuration.State.UNRESOLVED) {
+                    it.resolutionStrategy {
+                        componentSelection.all { ComponentSelection selection ->
+                            // If the version has an alpha and it's not me reject the version
+                            // If it's me, we will change it later
+                            String artifact = "${selection.candidate.group}:${selection.candidate.module}"
+                            if (!artifactIsFromProject(localDeps, artifact) &&
+                                    selection.candidate.version.contains(VERSION_ALPHA)) {
+                                selection.reject("Bad version. We dont accept alphas on the lock stage.")
                             }
                         }
                     }
                 }
             }
-
-            createTask(project, TASK_LOCK_VERSIONS, { Project p ->
-                return [project.gradle.startParameter.writeDependencyLocks, "--write-locks"]
-            })
-
-            createTask(project, TASK_UPDATE_LOCKS, { Project p ->
-                return [!project.gradle.startParameter.getLockedDependenciesToUpdate().isEmpty(), "--update-locks"]
-            })
-
-            project.tasks.create("modifyLocks", UpdateLockTask)
         }
+
+        createTask(project, TASK_LOCK_VERSIONS, { Project p ->
+            return [project.gradle.startParameter.writeDependencyLocks, "--write-locks"]
+        })
+
+        createTask(project, TASK_UPDATE_LOCKS, { Project p ->
+            return [!project.gradle.startParameter.getLockedDependenciesToUpdate().isEmpty(), "--update-locks"]
+        })
+
+        project.tasks.create("modifyLocks", UpdateLockTask)
     }
 
     def createTask(Project project, String name, def validate) {
@@ -80,6 +77,10 @@ class LockableModule implements Module {
 }
 
 class UpdateLockTask extends DefaultTask {
+    UpdateLockTask() {
+        group = "locking"
+    }
+
     @TaskAction
     void update() {
         if (!project.hasProperty("modules")) {
