@@ -41,11 +41,11 @@ class LockableModule implements Module {
         }
 
         createTask(project, TASK_LOCK_VERSIONS, { Project p ->
-            return [project.gradle.startParameter.writeDependencyLocks, "--write-locks"]
+            return [p.gradle.startParameter.writeDependencyLocks, "--write-locks"]
         })
 
         createTask(project, TASK_UPDATE_LOCKS, { Project p ->
-            return [!project.gradle.startParameter.getLockedDependenciesToUpdate().isEmpty(), "--update-locks"]
+            return [!p.gradle.startParameter.getLockedDependenciesToUpdate().isEmpty(), "--update-locks"]
         })
 
         project.tasks.create("modifyLocks", UpdateLockTask)
@@ -84,7 +84,7 @@ class UpdateLockTask extends DefaultTask {
     @TaskAction
     void update() {
         if (!project.hasProperty("modules")) {
-            throw new IllegalArgumentException("Did you use the --modules argument?")
+            throw new IllegalArgumentException("Did you use the -Pmodules=\${modules} argument?")
         }
 
         def modules = project.properties["modules"]
@@ -92,7 +92,7 @@ class UpdateLockTask extends DefaultTask {
         def locksFolder = new File("${project.projectDir}/gradle/dependency-locks/")
 
         if (!locksFolder.exists() || !locksFolder.isDirectory() || locksFolder.listFiles().length == 0) {
-            throw new IllegalStateException("Did you create the locks first?")
+            throw new IllegalStateException("Did you create the locks?")
         }
 
         locksFolder.eachFile { File file ->
@@ -103,9 +103,8 @@ class UpdateLockTask extends DefaultTask {
                     def (fileGroup, fileName, fileVersion) = line.split(":")
                     // For each line check if it matches any module
                     modules.each { String module ->
-
                         def (moduleGroup, moduleName, moduleVersion) = module.split(":")
-                        if (!validate(moduleGroup, moduleName, moduleVersion)) {
+                        if (!moduleGroup || !moduleName || !moduleVersion) {
                             throw new IllegalArgumentException("$moduleGroup:$moduleName:$moduleVersion is an invalid parameter. Are you sure this is right?")
                         }
                         if (fileGroup =~ moduleGroup && fileName =~ moduleName) {
@@ -120,15 +119,5 @@ class UpdateLockTask extends DefaultTask {
             }
             file.withWriter { out -> outLines.each { out.println it } }
         }
-    }
-
-    boolean validate(String group, String name, String version) {
-        return group &&
-                name &&
-                version &&
-                // Check we have a full version
-                version.count(".") == 2 &&
-                // Check version is alphanumeric
-                version =~ "[0-9]+.[0.9]+.[0-9]"
     }
 }
