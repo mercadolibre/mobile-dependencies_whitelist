@@ -17,6 +17,8 @@ class LockableModule implements Module {
     private static final String TASK_LOCK_VERSIONS = "lockVersions"
     private static final String TASK_UPDATE_LOCKS = "updateLocks"
 
+    private static final String DEPENDENCIES_TASK = "dependencies"
+
     private static final String VERSION_ALPHA = "ALPHA"
 
     @Override
@@ -38,17 +40,17 @@ class LockableModule implements Module {
                     }
                 }
             }
+
+            createTask(project, TASK_LOCK_VERSIONS, { Project p ->
+                return [p.gradle.startParameter.writeDependencyLocks, "--write-locks"]
+            })
+
+            createTask(project, TASK_UPDATE_LOCKS, { Project p ->
+                return [!p.gradle.startParameter.getLockedDependenciesToUpdate().isEmpty(), "--update-locks"]
+            })
+
+            project.tasks.create("modifyLocks", UpdateLockTask)
         }
-
-        createTask(project, TASK_LOCK_VERSIONS, { Project p ->
-            return [p.gradle.startParameter.writeDependencyLocks, "--write-locks"]
-        })
-
-        createTask(project, TASK_UPDATE_LOCKS, { Project p ->
-            return [!p.gradle.startParameter.getLockedDependenciesToUpdate().isEmpty(), "--update-locks"]
-        })
-
-        project.tasks.create("modifyLocks", UpdateLockTask)
     }
 
     def createTask(Project project, String name, def validate) {
@@ -60,7 +62,7 @@ class LockableModule implements Module {
                 throw new IllegalArgumentException("Did you add the ${result[1]} flag?")
             }
         }
-        task.dependsOn project.tasks.findByName("dependencies")
+        task.dependsOn project.tasks.findByName(DEPENDENCIES_TASK)
         task.doLast {
             new File("${project.projectDir}/gradle/dependency-locks/").eachFile { File file ->
                 boolean onlyHasComments = true
