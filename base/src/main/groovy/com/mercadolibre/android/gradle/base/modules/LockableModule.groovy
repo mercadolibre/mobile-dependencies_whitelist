@@ -6,6 +6,8 @@ import org.gradle.api.Task
 import org.gradle.api.artifacts.ComponentSelection
 import org.gradle.api.artifacts.Configuration
 import org.gradle.api.tasks.TaskAction
+import org.gradle.api.artifacts.Dependency
+import org.gradle.api.artifacts.component.ModuleComponentIdentifier
 
 /**
  * Module that is in charge of managing the locking of dynamic dependencies into static ones
@@ -22,7 +24,6 @@ class LockableModule implements Module {
     @Override
     void configure(Project project) {
         project.afterEvaluate {
-            if (project.gradle.startParameter.taskNames.contains(TASK_LOCK_VERSIONS) || project.gradle.startParameter.taskNames.contains(TASK_UPDATE_LOCKS)) {
                 project.configurations.all {
                     it.resolutionStrategy.activateDependencyLocking()
                     if (it.state == Configuration.State.UNRESOLVED) {
@@ -30,7 +31,8 @@ class LockableModule implements Module {
                             componentSelection.all { ComponentSelection selection ->
                                 // If the version has an alpha and it's not me reject the version
                                 // If it's me, we will change it later
-                                if (!selection.candidate.group.contentEquals(project.group) &&
+                                String artifact = "${selection.candidate.group}:${selection.candidate.module}"
+                                if (!artifactIsFromProject(localDeps, artifact) &&
                                         selection.candidate.version.contains(VERSION_ALPHA)) {
                                     selection.reject("Bad version. We dont accept alphas on the lock stage.")
                                 }
