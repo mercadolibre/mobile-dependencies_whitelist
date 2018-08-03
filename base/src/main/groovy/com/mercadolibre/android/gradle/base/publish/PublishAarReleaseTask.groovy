@@ -13,12 +13,11 @@ class PublishAarReleaseTask extends PublishAarTask {
 
         VersionContainer.put(project.name, builder.taskName, flavorVersion(project.version as String, builder.variant))
 
-        createMavenPublication()
-
+        Task task
         if (project.tasks.findByName(builder.taskName)) {
-            return project.tasks."$taskName"
+            task = project.tasks."$taskName"
         } else {
-            return project.task(builder.taskName) {
+            task = project.tasks.create(builder.taskName, {
                 doFirst {
                     BintrayConfiguration.setBintrayConfig(new BintrayConfiguration.Builder().with {
                         project = this.project
@@ -31,8 +30,11 @@ class PublishAarReleaseTask extends PublishAarTask {
 
                 dependsOn "bundle${variant.name.capitalize()}", "${variant.name}SourcesJar", "${variant.name}JavadocJar"
                 finalizedBy 'bintrayUpload'
-            }
+            })
         }
+        createMavenPublication()
+
+        return task
     }
 
 }

@@ -74,7 +74,7 @@ class AndroidLibraryPublishableModule extends PublishableModule {
         if (project.tasks.findByName(name)) {
             project.tasks."$name".dependsOn realTask
         } else {
-            project.task(name) { Task it ->
+            project.tasks.create(name) { Task it ->
                 it.group = PublishTask.TASK_GROUP
                 it.dependsOn realTask
             }

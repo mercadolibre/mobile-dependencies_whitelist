@@ -14,12 +14,11 @@ class PublishJarExperimentalTask extends PublishJarTask {
 
         VersionContainer.put(project.name, builder.taskName, "EXPERIMENTAL-${project.version}-${getTimestamp()}")
 
-        createMavenPublication()
-
+        Task task
         if (project.tasks.findByName(builder.taskName)) {
-            return project.tasks."$taskName"
+            task = project.tasks."$taskName"
         } else {
-            return project.task(builder.taskName) {
+            task = project.tasks.create(builder.taskName) {
                 doFirst {
                     BintrayConfiguration.setBintrayConfig(new BintrayConfiguration.Builder().with {
                         project = this.project
@@ -34,5 +33,7 @@ class PublishJarExperimentalTask extends PublishJarTask {
                 finalizedBy 'bintrayUpload'
             }
         }
+        createMavenPublication()
+        return task
     }
 }
