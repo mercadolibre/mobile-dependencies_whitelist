@@ -24,6 +24,9 @@ class LockableModule implements Module {
     @Override
     void configure(Project project) {
         project.afterEvaluate {
+            // Add a dependency filter so that it wont lock local dependencies
+            def localDeps = []
+            project.rootProject.subprojects.each { localDeps.add("$it.group:$it.name") }
             project.configurations.all {
                 it.resolutionStrategy.activateDependencyLocking()
                 if (it.state == Configuration.State.UNRESOLVED) {
@@ -32,7 +35,7 @@ class LockableModule implements Module {
                             // If the version has an alpha and it's not me reject the version
                             // If it's me, we will change it later
                             String artifact = "${selection.candidate.group}:${selection.candidate.module}"
-                            if (!artifactIsFromProject(localDeps, artifact) &&
+                            if (!localDeps.contains(artifact) &&
                                     selection.candidate.version.contains(VERSION_ALPHA)) {
                                 selection.reject("Bad version. We dont accept alphas on the lock stage.")
                             }
@@ -50,6 +53,7 @@ class LockableModule implements Module {
             })
 
             project.tasks.create("modifyLocks", UpdateLockTask)
+            project.tasks.create("deleteLocks", DeleteLocksTask)
         }
     }
 
@@ -78,7 +82,19 @@ class LockableModule implements Module {
 
 }
 
-class UpdateLockTask extends DefaultTask {
+class LocksTask extends DefaultTask {
+    File getLocksFolder(){
+        def locksFolder = new File("${project.projectDir}/gradle/dependency-locks/")
+
+        if (!locksFolder.exists() || !locksFolder.isDirectory() || locksFolder.listFiles().length == 0) {
+            throw new IllegalStateException("Did you create the locks?")
+        }
+
+        return locksFolder
+    }
+}
+
+class UpdateLockTask extends LocksTask {
     UpdateLockTask() {
         group = "locking"
     }
@@ -90,12 +106,6 @@ class UpdateLockTask extends DefaultTask {
         }
 
         def modules = project.properties["modules"]
-
-        def locksFolder = new File("${project.projectDir}/gradle/dependency-locks/")
-
-        if (!locksFolder.exists() || !locksFolder.isDirectory() || locksFolder.listFiles().length == 0) {
-            throw new IllegalStateException("Did you create the locks?")
-        }
 
         locksFolder.eachFile { File file ->
             def outLines = []
@@ -120,6 +130,17 @@ class UpdateLockTask extends DefaultTask {
                 }
             }
             file.withWriter { out -> outLines.each { out.println it } }
+        }
+    }
+}
+
+class DeleteLocksTask extends LocksTask {
+    @TaskAction
+    def delete(){
+        locksFolder.eachFile { File file ->
+            if (file.name.toLowerCase() =~ "^.*\\.lockfile\$") {
+                file.delete()
+            }
         }
     }
 }
