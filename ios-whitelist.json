@@ -108,7 +108,7 @@
     },
     {
       "name": "MLUI",
-      "version": "^~>\\s?4.[0-9]+$"
+      "version": "^~>\\s?5.[0-9]+$"
     },
     {
       "name": "MLPMS",
@@ -161,6 +161,10 @@
     {
       "name": "MLAuthentication",
       "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "InStore-Discovery",
+      "version": "^~>\\s?1.[0-9]+$"
     }
   ]
 }
