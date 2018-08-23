@@ -13,12 +13,12 @@ class PublishAarLocalTask extends PublishAarTask {
 
         VersionContainer.put(project.name, builder.taskName, flavorVersion("LOCAL-${project.version}-${getTimestamp()}", builder.variant))
 
-        createMavenPublication()
+        Task task
 
         if (project.tasks.findByName(builder.taskName)) {
-            return project.tasks."$taskName"
+            task = project.tasks."$taskName"
         } else {
-            return project.task(builder.taskName) {
+            task = project.tasks.create(builder.taskName, {
                 doLast {
                     VersionContainer.logVersion("${project.group}:${project.name}:${VersionContainer.get(project.name, builder.taskName, project.version as String)}")
                 }
@@ -26,7 +26,10 @@ class PublishAarLocalTask extends PublishAarTask {
 
                 dependsOn "bundle${variant.name.capitalize()}", "${variant.name}SourcesJar", "${variant.name}JavadocJar"
                 finalizedBy "publish${taskName.capitalize()}PublicationToMavenLocal"
-            }
+            })
         }
+        createMavenPublication()
+
+        return task
     }
 }

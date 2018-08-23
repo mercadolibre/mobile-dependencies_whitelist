@@ -81,10 +81,7 @@ class BasePlugin implements Plugin<Project> {
 
             // Depending on added classpaths, this modules will apply plugins
             project.afterEvaluate {
-                if (project.hasClasspath(NEBULA_LOCK_CLASSPATH)) {
-                    new LockableModule().configure(subproject)
-                }
-
+                new LockableModule().configure(subproject)
                 new LintableModule().configure(subproject)
             }
 

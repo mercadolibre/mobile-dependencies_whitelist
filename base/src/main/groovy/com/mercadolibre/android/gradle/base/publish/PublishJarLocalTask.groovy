@@ -13,12 +13,11 @@ class PublishJarLocalTask extends PublishJarTask {
 
         VersionContainer.put(project.name, builder.taskName, "LOCAL-${project.version}-${getTimestamp()}")
 
-        createMavenPublication()
-
+        Task task
         if (project.tasks.findByName(builder.taskName)) {
-            return project.tasks."$taskName"
+            task = project.tasks."$taskName"
         } else {
-            return project.task(builder.taskName) {
+            task = project.tasks.create(builder.taskName) {
                 doFirst {
                     VersionContainer.logVersion("${project.group}:${project.name}:${VersionContainer.get(project.name, builder.taskName, project.version as String)}")
                 }
@@ -28,5 +27,8 @@ class PublishJarLocalTask extends PublishJarTask {
                 finalizedBy "publish${taskName.capitalize()}PublicationToMavenLocal"
             }
         }
+        createMavenPublication()
+
+        return task
     }
 }
