@@ -1,3 +1,7 @@
+# v5.0.0
+## Cambiado
+- Soporte para gradle 4
+
 # v4.5.0
 ## Agregado
 - Agregamos la url de nuestro repo publico
