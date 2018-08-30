@@ -1,7 +1,7 @@
 {
     "whitelist": [
         {
-            "group": "com\\.mercadolibre\\.android\\.uicomponents",
+            "group": "com\\.mercadolibre\\.android\\.uicomponents"
         },
         {
             "group": "com\\.mercadolibre\\.android",
@@ -98,6 +98,14 @@
         {
             "group": "com\\.mercadolibre\\.android\\.search",
             "name": "input"
+        },
+        {
+            "group": "com\\.mercadolibre\\.android\\.biometrics",
+            "name": "sdk"
+        },
+        {
+            "group": "com\\.mercadopago",
+            "name": "sdk"
         },
         {
             "group": "com\\.mercadopago\\.android\\.ml_esc_manager",
