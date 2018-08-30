@@ -14,12 +14,11 @@ class PublishJarAlphaTask extends PublishJarTask {
 
         VersionContainer.put(project.name, builder.taskName, "${project.version}-ALPHA-${getTimestamp()}")
 
-        createMavenPublication()
-
+        Task task
         if (project.tasks.findByName(builder.taskName)) {
-            return project.tasks."$taskName"
+            task = project.tasks."$taskName"
         } else {
-            return project.task(builder.taskName) {
+            task = project.tasks.create(builder.taskName) {
                 doFirst {
                     BintrayConfiguration.setBintrayConfig(new BintrayConfiguration.Builder().with {
                         project = this.project
@@ -34,6 +33,9 @@ class PublishJarAlphaTask extends PublishJarTask {
                 finalizedBy 'bintrayUpload'
             }
         }
+
+        createMavenPublication()
+        return task
     }
 
 }

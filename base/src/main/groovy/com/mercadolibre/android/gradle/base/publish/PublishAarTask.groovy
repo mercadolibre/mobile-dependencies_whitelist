@@ -2,12 +2,7 @@ package com.mercadolibre.android.gradle.base.publish
 
 import com.mercadolibre.android.gradle.base.utils.PomUtils
 import com.mercadolibre.android.gradle.base.utils.VersionContainer
-
-import org.gradle.api.GradleException
-import org.gradle.api.JavaVersion
-import org.gradle.api.Project
-import org.gradle.api.Task
-import org.gradle.api.XmlProvider
+import org.gradle.api.*
 import org.gradle.api.artifacts.Configuration
 import org.gradle.api.publish.maven.MavenPublication
 import org.gradle.api.tasks.bundling.Jar
@@ -66,7 +61,7 @@ abstract class PublishAarTask extends PublishTask {
             }
             def javadoc = project.tasks.findByName("${variant.name}Javadoc")
             if (!javadoc) {
-                javadoc = project.task("${variant.name}Javadoc", type: Javadoc) {
+                javadoc = project.tasks.create(name: "${variant.name}Javadoc", type: Javadoc) {
                     description "Generates Javadoc for ${variant.name}."
                     group 'Documentation'
 
@@ -95,7 +90,7 @@ abstract class PublishAarTask extends PublishTask {
             }
             def javadocJar = project.tasks.findByName("${variant.name}JavadocJar")
             if (!javadocJar) {
-                javadocJar = project.task("${variant.name}JavadocJar", type: Jar, dependsOn: javadoc) {
+                javadocJar = project.tasks.create(name: "${variant.name}JavadocJar", type: Jar, dependsOn: javadoc) {
                     description "Puts Javadoc for ${variant.name} in a jar."
                     group 'Documentation'
                     classifier = 'javadoc'
@@ -104,7 +99,7 @@ abstract class PublishAarTask extends PublishTask {
             }
             def sourcesJar = project.tasks.findByName("${variant.name}SourcesJar")
             if (!sourcesJar) {
-                sourcesJar = project.task("${variant.name}SourcesJar", type: Jar) {
+                sourcesJar = project.tasks.create(name: "${variant.name}SourcesJar", type: Jar) {
                     description "Puts sources for ${variant.name} in a jar."
                     group 'Packaging'
 
@@ -135,16 +130,27 @@ abstract class PublishAarTask extends PublishTask {
                 }
             }
 
-            project.tasks.whenTaskAdded {
+            Task pomTask = project.tasks.findByName("generatePomFileFor${taskName.capitalize()}Publication")
+            if (pomTask != null) {
+                project.tasks.findByName(taskName).dependsOn(pomTask)
+            }
+
+            /*project.tasks.whenTaskAdded {
                 if (it.name.contains('generatePomFileFor')) {
                     String hookedTask = it.name.replaceFirst('generatePomFileFor', '').replaceFirst("Publication", '')
 
                     if (hookedTask != null && hookedTask.length() != 0) {
                         hookedTask = (Character.toLowerCase(hookedTask.charAt(0)) as String) + hookedTask.substring(1)
-                        project.tasks.findByName(hookedTask).dependsOn it
+                        println "Hooked task is $hookedTask"
+                        println "Projects task is ${project.tasks.findByName(hookedTask)}"
+                        println "Project tasks are $project.tasks"
+                        def task = project.tasks.findByName(hookedTask)
+                        if (task != null){
+                            task.dependsOn it
+                        }
                     }
                 }
-            }
+            }*/
         }
     }
 

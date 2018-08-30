@@ -1,6 +1,17 @@
+# v5.0.2
+## Arreglado
+- Arreglamos que no se estaban tomando los alphas en develop
+
+# v5.0.1
+- No cambia nada, fue necesario porque el 5.0.0 se publico mal
+
 # v5.0.0
-## Cambiado
-- Soporte para gradle 4
+## Agregado
+- Soporte a gradle 4
+
+# v4.5.1
+## Arreglado
+- Se valida por nombre de repo al rejectear alphas tambien
 
 # v4.5.0
 ## Agregado
