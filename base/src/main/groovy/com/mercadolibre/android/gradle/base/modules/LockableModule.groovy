@@ -25,23 +25,9 @@ class LockableModule implements Module {
     void configure(Project project) {
         project.afterEvaluate {
             // Add a dependency filter so that it wont lock local dependencies
-            def localDeps = []
-            project.rootProject.subprojects.each { localDeps.add("$it.group:$it.name") }
-            project.configurations.all {
-                it.resolutionStrategy.activateDependencyLocking()
-                if (it.state == Configuration.State.UNRESOLVED) {
-                    it.resolutionStrategy {
-                        componentSelection.all { ComponentSelection selection ->
-                            // If the version has an alpha and it's not me reject the version
-                            // If it's me, we will change it later
-                            String artifact = "${selection.candidate.group}:${selection.candidate.module}"
-                            if (!localDeps.contains(artifact) &&
-                                    selection.candidate.version.contains(VERSION_ALPHA)) {
-                                selection.reject("Bad version. We dont accept alphas on the lock stage.")
-                            }
-                        }
-                    }
-                }
+            def tasks = project.gradle.startParameter.taskNames.toListString()
+            if (tasks.contains(TASK_LOCK_VERSIONS) || tasks.contains(TASK_UPDATE_LOCKS)) {
+                rejectAlphas(project)
             }
 
             createTask(project, TASK_LOCK_VERSIONS, { Project p ->
@@ -54,6 +40,27 @@ class LockableModule implements Module {
 
             project.tasks.create("modifyLocks", UpdateLockTask)
             project.tasks.create("deleteLocks", DeleteLocksTask)
+        }
+    }
+
+    def rejectAlphas(Project project) {
+        def localDeps = []
+        project.rootProject.subprojects.each { localDeps.add("$it.group:$it.name") }
+        project.configurations.all {
+            it.resolutionStrategy.activateDependencyLocking()
+            if (it.state == Configuration.State.UNRESOLVED) {
+                it.resolutionStrategy {
+                    componentSelection.all { ComponentSelection selection ->
+                        // If the version has an alpha and it's not me reject the version
+                        // If it's me, we will change it later
+                        String artifact = "${selection.candidate.group}:${selection.candidate.module}"
+                        if (!localDeps.contains(artifact) &&
+                                selection.candidate.version.contains(VERSION_ALPHA)) {
+                            selection.reject("Bad version. We dont accept alphas on the lock stage.")
+                        }
+                    }
+                }
+            }
         }
     }
 
