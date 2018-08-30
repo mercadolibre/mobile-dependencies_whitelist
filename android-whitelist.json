@@ -1,6 +1,9 @@
 {
     "whitelist": [
         {
+            "group": "com\\.mercadolibre\\.android\\.uicomponents",
+        },
+        {
             "group": "com\\.mercadolibre\\.android",
             "name": "configuration-manager"
         },
@@ -83,6 +86,10 @@
         {
             "group": "com\\.mercadolibre\\.android",
             "name": "shipping\\-components"
+        },
+        {
+            "group": "com\\.mercadolibre\\.android\\.marketplace\\.map",
+            "name": "marketplace\\-map"
         },
         {
             "group": "com\\.mercadolibre\\.android\\.cart",
@@ -250,8 +257,27 @@
             "version": "3\\.6"
         },
         {
+            "group": "com\\.polidea\\.rxandroidble",
+            "name": "rxandroidble",
+            "version": "1\\.5\\.0"
+        },
+        {
+            "group": "com\\.mercadopago\\.android\\.px",
+            "name": "checkout",
+            "version": "4\\.0\\.0"
+        },
+        {
             "group": "org\\.jetbrains\\.kotlin",
             "name": "kotlin-stdlib-jdk7"
+        },
+        {
+            "group": "org\\.jetbrains\\.kotlin",
+            "name": "kotlin-android-extensions-runtime"
+        },
+        {
+            "group": "com\\.squareup\\.picasso",
+            "name": "picasso",
+            "expires": "2018-09-01"
         }
     ]
 }
