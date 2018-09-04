@@ -112,7 +112,13 @@ class UpdateLockTask extends LocksTask {
             throw new IllegalArgumentException("Did you use the -Pmodules=\${modules} argument?")
         }
 
-        def modules = project.properties["modules"]
+        def modules = new ArrayList<String>()
+        def property = project.properties["modules"] as String
+        if (property.contains(',')) {
+            modules.addAll(property.split(','))
+        } else {
+            modules.add(property)
+        }
 
         locksFolder.eachFile { File file ->
             def outLines = []
