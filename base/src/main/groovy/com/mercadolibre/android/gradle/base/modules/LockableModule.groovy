@@ -25,6 +25,10 @@ class LockableModule implements Module {
     void configure(Project project) {
         project.afterEvaluate {
             // Add a dependency filter so that it wont lock local dependencies
+            project.configurations.all {
+                it.resolutionStrategy.activateDependencyLocking()
+            }
+
             def tasks = project.gradle.startParameter.taskNames.toListString()
             if (tasks.contains(TASK_LOCK_VERSIONS) || tasks.contains(TASK_UPDATE_LOCKS)) {
                 rejectAlphas(project)
@@ -47,7 +51,6 @@ class LockableModule implements Module {
         def localDeps = []
         project.rootProject.subprojects.each { localDeps.add("$it.group:$it.name") }
         project.configurations.all {
-            it.resolutionStrategy.activateDependencyLocking()
             if (it.state == Configuration.State.UNRESOLVED) {
                 it.resolutionStrategy {
                     componentSelection.all { ComponentSelection selection ->

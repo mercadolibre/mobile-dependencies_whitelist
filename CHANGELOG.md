@@ -1,3 +1,6 @@
+# v5.0.5
+- Activamos dependencyLocking siempre
+
 # v5.0.4
 - Quedo mal creado el release
 
