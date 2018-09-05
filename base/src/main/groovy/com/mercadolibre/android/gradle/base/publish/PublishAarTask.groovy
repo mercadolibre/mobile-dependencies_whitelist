@@ -122,7 +122,7 @@ abstract class PublishAarTask extends PublishTask {
                 pom.withXml { XmlProvider xmlProvider ->
                     xmlProvider.asNode().packaging*.value = 'aar'
 
-                    PomUtils.injectDependencies(project, xmlProvider, variant.name)
+                    PomUtils.injectDependencies(project, xmlProvider, variant.name, variant.flavorName)
                     PomUtils.composeDynamicDependencies(project, xmlProvider)
 
                     project.file("${project.buildDir}/publications/${taskName}/pom-default.xml")

@@ -12,14 +12,20 @@ import org.gradle.api.artifacts.ModuleVersionIdentifier
  */
 final class PomUtils {
 
-    private static final String DEPENDENCY_LOCK_FILE_NAME = "dependencies.lock"
+    private static final String DEPENDENCY_LOCK_FOLDER_NAME = "gradle/dependency-locks"
 
-    private static String scope(String configuration, String variantName) {
+    private static String scope(String configuration, String variantName, String flavor) {
         // Here I declare all the configurations we support to upload to the pom.
         // We also take into account flavored ones
-        final String[] compileConfigurations = ['default', 'archives', 'compile', "${variantName}Compile",
-                                                'implementation', "${variantName}Implementation",
-                                                'api', "${variantName}Api"]
+        List<String> compileConfigurations = ['default', 'archives', 'compile', "${variantName}Compile",
+                                     'implementation', "${variantName}Implementation",
+                                     'api', "${variantName}Api"]
+        if (flavor) {
+            compileConfigurations << "${flavor}Api".toString()
+            compileConfigurations << "${flavor}Implementation".toString()
+            compileConfigurations << "${flavor}Compile".toString()
+        }
+
         final String[] testConfigurations = ['test', "test${variantName.capitalize()}", 'testCompile',
                                             "testCompile${variantName.capitalize()}"]
         final String[] runtimeConfigurations = ['runtime', 'runtimeOnly', "${variantName}Runtime",
@@ -109,7 +115,7 @@ final class PomUtils {
     }
 
     @SuppressWarnings("GroovyAssignabilityCheck")
-    static void injectDependencies(Project project, XmlProvider xmlProvider, String variantName = 'release') {
+    static void injectDependencies(Project project, XmlProvider xmlProvider, String variantName = 'release', String flavor = '') {
         // Since maven-publish has a bug in the current version because it resolves lazily
         // we have to add the dependencies barehanded
         // https://discuss.gradle.org/t/maven-publish-doesnt-include-dependencies-in-the-project-pom-file/8544
@@ -119,7 +125,7 @@ final class PomUtils {
         List<Dependency> addedDeps = new ArrayList<>()
 
         project.configurations.all { Configuration configuration ->
-            def scope = scope(configuration.name, variantName)
+            def scope = scope(configuration.name, variantName, flavor)
             if (scope) {
                 configuration.allDependencies.each { Dependency dependency ->
                     // Check they all exists. For example if using
@@ -147,18 +153,19 @@ final class PomUtils {
         // This is another compose where we change dynamic versions by the ones declared in the .lock (if existent)
         // If the dependency lock file exists then change + for locked.
         // Else its just a dynamic dependency declared by someone who wants it like that
-        if (project.file(DEPENDENCY_LOCK_FILE_NAME).exists()) {
-            def json = new JsonSlurper().parse(project.file(DEPENDENCY_LOCK_FILE_NAME))
+        if (project.file(DEPENDENCY_LOCK_FOLDER_NAME).exists()) {
             //For now they are all release, so check in release and compile. If in a future
             //we have also for debug, change here to find the release or debug accordingly
             xmlProvider.asNode().dependencies.'*'.findAll() {
                 it.version.text().contains('+')
             }.each { def dependency ->
                 // Look in the json if the dependency name exists
-                json.each { def config ->
-                    def jsonDependency = config.value["${dependency.groupId.text()}:${dependency.artifactId.text()}"]
-                    if (jsonDependency && jsonDependency.locked && !jsonDependency.locked.contains('+')) {
-                        dependency.version*.value = jsonDependency.locked
+                project.file(DEPENDENCY_LOCK_FOLDER_NAME).eachFile {
+                    def module = "${dependency.groupId[0]*.value[0]}:${dependency.artifactId[0]*.value[0]}"
+                    it.eachLine { line ->
+                        if (dependency.version[0]*.value[0].contains('+') && line.startsWith(module)) {
+                            dependency.version*.value = line.split(':')[2]
+                        }
                     }
                 }
             }
