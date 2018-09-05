@@ -1,3 +1,6 @@
+# v5.0.4
+- Quedo mal creado el release
+
 # v5.0.3
 ## Arreglado
 - No se estaban agregando las deps por variant al pom
