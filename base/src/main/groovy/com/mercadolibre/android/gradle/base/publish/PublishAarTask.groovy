@@ -114,7 +114,7 @@ abstract class PublishAarTask extends PublishTask {
                 version = VersionContainer.get(project.name, taskName, project.version as String)
 
                 artifacts = [
-                        variant.outputs.first().outputFile,
+                        variant.outputs.first().packageLibrary,
                         sourcesJar,
                         javadocJar
                 ]
@@ -135,22 +135,6 @@ abstract class PublishAarTask extends PublishTask {
                 project.tasks.findByName(taskName).dependsOn(pomTask)
             }
 
-            /*project.tasks.whenTaskAdded {
-                if (it.name.contains('generatePomFileFor')) {
-                    String hookedTask = it.name.replaceFirst('generatePomFileFor', '').replaceFirst("Publication", '')
-
-                    if (hookedTask != null && hookedTask.length() != 0) {
-                        hookedTask = (Character.toLowerCase(hookedTask.charAt(0)) as String) + hookedTask.substring(1)
-                        println "Hooked task is $hookedTask"
-                        println "Projects task is ${project.tasks.findByName(hookedTask)}"
-                        println "Project tasks are $project.tasks"
-                        def task = project.tasks.findByName(hookedTask)
-                        if (task != null){
-                            task.dependsOn it
-                        }
-                    }
-                }
-            }*/
         }
     }
 

@@ -17,11 +17,22 @@ final class BintrayConfiguration {
         Project project = builder.project
         String publicationName = builder.publicationName
         String bintrayRepository = builder.bintrayRepository
+        String publicationType = builder.publicationType
+        String publicationPackaging = builder.publicationPackaging
+
+        def finalPublications
+        if (project.hasProperty('android')) {
+            finalPublications = project.android?.productFlavors?.collect {
+                "publish${publicationPackaging.capitalize()}Release${it.name.capitalize()}${publicationType.capitalize()}"
+            } ?: [publicationName]
+        } else {
+            finalPublications = [publicationName]
+        }
 
         project.tasks.bintrayUpload.with {
             repoName = bintrayRepository
 
-            publications = [publicationName]
+            publications = finalPublications
 
             versionVcsTag = "${VersionContainer.get(project.name, publicationName, project.version as String)}"
 
@@ -42,10 +53,10 @@ final class BintrayConfiguration {
     }
 
     private static def loadBintrayCredentials(Project project) {
-        File propsFile = project.file(BINTRAY_PROP_FILE);
+        File propsFile = project.file(BINTRAY_PROP_FILE)
         if (propsFile.exists()) {
             println "[!] Load Bintray credentials from '${BINTRAY_PROP_FILE}'. Please don't versioning this file."
-            Properties props = new Properties();
+            Properties props = new Properties()
             props.load(new FileInputStream(propsFile))
             project.bintrayUpload.user = props.getProperty(BINTRAY_USER_PROP)
             project.bintrayUpload.apiKey = props.getProperty(BINTRAY_KEY_PROP)
@@ -63,6 +74,8 @@ final class BintrayConfiguration {
         Project project
         String publicationName
         String bintrayRepository
+        String publicationType
+        String publicationPackaging
     }
 
 }

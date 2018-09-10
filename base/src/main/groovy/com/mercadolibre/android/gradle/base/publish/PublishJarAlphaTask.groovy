@@ -1,5 +1,6 @@
 package com.mercadolibre.android.gradle.base.publish
 
+import com.mercadolibre.android.gradle.base.modules.JavaPublishableModule
 import com.mercadolibre.android.gradle.base.utils.BintrayConfiguration
 import com.mercadolibre.android.gradle.base.utils.VersionContainer
 import org.gradle.api.Task
@@ -24,6 +25,8 @@ class PublishJarAlphaTask extends PublishJarTask {
                         project = this.project
                         bintrayRepository = BINTRAY_RELEASE_REPOSITORY
                         publicationName = this.taskName
+                        publicationPackaging = JavaPublishableModule.PACKAGING
+                        publicationType = 'Alpha'
                         return it
                     })
                 }
