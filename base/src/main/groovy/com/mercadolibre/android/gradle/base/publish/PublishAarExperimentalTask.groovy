@@ -24,6 +24,7 @@ class PublishAarExperimentalTask extends PublishAarTask {
                     BintrayConfiguration.setBintrayConfig(new BintrayConfiguration.Builder().with {
                         project = this.project
                         bintrayRepository = BINTRAY_EXPERIMENTAL_REPOSITORY
+                        publicationName = this.taskName
                         publicationPackaging = AndroidLibraryPublishableModule.PACKAGING
                         publicationType = 'Experimental'
                         return it

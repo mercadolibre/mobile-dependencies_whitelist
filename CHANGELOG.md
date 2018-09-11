@@ -1,3 +1,6 @@
+# v5.0.7
+- Agregamos una variable de configuracion que faltaba para los experimental 
+
 # v5.0.6
 - Fixeamos la publicacion de libs con variants que subian solo el ultimo
 
