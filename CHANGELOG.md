@@ -1,3 +1,21 @@
+# v5.0.7
+- Agregamos una variable de configuracion que faltaba para los experimental 
+
+# v5.0.6
+- Fixeamos la publicacion de libs con variants que subian solo el ultimo
+
+# v5.0.5
+- Activamos dependencyLocking siempre
+
+# v5.0.4
+- Quedo mal creado el release
+
+# v5.0.3
+## Arreglado
+- No se estaban agregando las deps por variant al pom
+- No se podia modificar un solo modulo del lock
+- No se estaban aplicando los locks a los poms
+
 # v5.0.2
 ## Arreglado
 - Arreglamos que no se estaban tomando los alphas en develop

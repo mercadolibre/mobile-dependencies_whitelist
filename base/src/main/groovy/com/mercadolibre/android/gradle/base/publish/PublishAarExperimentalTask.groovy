@@ -1,5 +1,6 @@
 package com.mercadolibre.android.gradle.base.publish
 
+import com.mercadolibre.android.gradle.base.modules.AndroidLibraryPublishableModule
 import com.mercadolibre.android.gradle.base.utils.BintrayConfiguration
 import com.mercadolibre.android.gradle.base.utils.VersionContainer
 import org.gradle.api.Task
@@ -24,6 +25,8 @@ class PublishAarExperimentalTask extends PublishAarTask {
                         project = this.project
                         bintrayRepository = BINTRAY_EXPERIMENTAL_REPOSITORY
                         publicationName = this.taskName
+                        publicationPackaging = AndroidLibraryPublishableModule.PACKAGING
+                        publicationType = 'Experimental'
                         return it
                     })
                 }

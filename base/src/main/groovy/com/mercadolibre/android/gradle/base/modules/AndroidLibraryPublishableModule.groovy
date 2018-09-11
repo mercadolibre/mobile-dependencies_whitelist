@@ -13,7 +13,7 @@ import org.gradle.api.Task
  */
 class AndroidLibraryPublishableModule extends PublishableModule {
 
-    private static final String PACKAGING = 'Aar'
+    public static final String PACKAGING = 'Aar'
 
     private Project project
 

@@ -16,7 +16,7 @@ class JavaPublishableModule extends PublishableModule {
     private static final String SOURCE_SETS_TEST = 'test'
     private static final String SOURCE_SETS_DEFAULT = 'main'
 
-    private static final String PACKAGING = 'Jar'
+    public static final String PACKAGING = 'Jar'
 
     private Project project
 
