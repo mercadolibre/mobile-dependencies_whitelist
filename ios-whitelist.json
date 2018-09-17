@@ -140,7 +140,7 @@
     },
     {
       "name": "PureLayout",
-      "version": "3.0.2"
+      "version": "3.1.2"
     },
     {
       "name": "FXBlurView",
@@ -169,6 +169,10 @@
     {
       "name": "MPSDK",
       "version": "^~>\\s?9.[0-9]+$"
+    },
+    { 
+      "name": "MLMap",
+      "version": "^~>\\s?1.[0-9]+$"
     }
   ]
 }
