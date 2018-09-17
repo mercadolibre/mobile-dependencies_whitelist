@@ -165,6 +165,10 @@
     {
       "name": "InStore-Discovery",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MPSDK",
+      "version": "^~>\\s?9.[0-9]+$"
     }
   ]
 }
