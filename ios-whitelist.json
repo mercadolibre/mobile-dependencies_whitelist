@@ -175,20 +175,12 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "name": "MPCommons",
-      "version": "^~>\\s?2.[0-9]+$"
-    },
-    {
       "name": "MPUI",
       "version": "^~>\\s?3.[0-9]+$"
     },
     {
       "name": "Realm",
       "version": "2.10.0"
-    },
-    {
-      "name": "MPTracking",
-      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "MPTopFloatingView",
@@ -201,6 +193,18 @@
     {
       "name": "RazzleDazzle",
       "version": "0.1.5"
+    },
+    {
+      "name": "MPDynamicSkeleton",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "ISO8601DateFormatter",
+      "version": "0.8"
+    },
+    {
+      "name": "FSQCollectionViewAlignedLayout",
+      "version": "1.1.1"
     }
   ]
 }
