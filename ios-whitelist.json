@@ -173,6 +173,46 @@
     { 
       "name": "MLMap",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "Realm",
+      "version": "2.10.0"
+    },
+    {
+      "name": "SDWebImage",
+      "version": "^~>\\s?3.[0-9]+$"
+    },
+    {
+      "name": "RazzleDazzle",
+      "version": "0.1.5"
+    },
+    {
+      "name": "MPDynamicSkeleton",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "ISO8601DateFormatter",
+      "version": "0.8"
+    },
+    {
+      "name": "FSQCollectionViewAlignedLayout",
+      "version": "1.1.1"
+    },
+    {
+      "name": "FBSDKCoreKit",
+      "version": "4.15.0"
+    },
+    {
+      "name": "FBSDKLoginKit",
+      "version": "4.15.0"
+    },
+    {
+      "name": "MPSignUpLibs",
+      "version": "0.2.0"
+    },
+    {
+      "name": "RSKImageCropper",
+      "version": "1.6.3"
     }
   ]
 }
