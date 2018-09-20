@@ -278,6 +278,10 @@
             "group": "com\\.squareup\\.picasso",
             "name": "picasso",
             "expires": "2018-09-01"
+        },
+        {
+            "group": "com\\.mercadopago\\.android\\.sdk",
+            "name": "sdk"
         }
     ]
 }
