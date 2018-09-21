@@ -164,7 +164,7 @@
         },
         {
             "group": "com\\.android\\.support",
-            "name": "preference",
+            "name": "preference-v7",
             "version": "27\\.1\\.1"
         },
         {
@@ -314,6 +314,10 @@
         {
             "group": "com\\.mercadopago\\.android\\.payment",
             "name": "payment"
+        },
+        {
+            "group": "com\\.mercadopago\\.point\\.pos",
+            "name": "point_pos"
         },
         {
             "group": "me\\.dm7\\.barcodescanner",
