@@ -63,6 +63,11 @@ class BasePlugin implements Plugin<Project> {
             }
         }
 
+        project.afterEvaluate {
+            new LockableModule().configure(project)
+            new LintableModule().configure(project)
+        }
+
         project.subprojects.each { Project subproject ->
             // Apply modules depending on already applied plugins
             subproject.plugins.withType(JavaPlugin) {
