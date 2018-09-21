@@ -60,8 +60,10 @@ class LintableModule implements Module {
     static void createExtension(Project project) {
         String extensionName = LintGradleExtension.simpleName.replaceAll("Extension", '')
         extensionName = (Character.toLowerCase(extensionName.charAt(0)) as String) + extensionName.substring(1)
-
         project.extensions.create(extensionName, LintGradleExtension)
+        project.subprojects.each {
+            it.extensions.create(extensionName, LintGradleExtension)
+        }
     }
 
     /**
