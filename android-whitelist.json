@@ -163,6 +163,11 @@
             "version": "27\\.0\\.2"
         },
         {
+            "group": "com\\.android\\.support",
+            "name": "preference",
+            "version": "27\\.1\\.1"
+        },
+        {
             "group": "com\\.android\\.support\\.constraint",
             "name": "constraint-layout"
         },
@@ -233,8 +238,7 @@
         },
         {
             "group": "com\\.theartofdev\\.edmodo",
-            "name": "android-image-cropper",
-            "version": "2\\.3\\.1"
+            "name": "android-image-cropper"
         },
         {
             "group": "com\\.tonicartos",
@@ -290,6 +294,30 @@
         {
             "group": "com\\.mercadopago\\.android\\.commons",
             "name": "commons"
+        },
+        {
+            "group": "com\\.mercadopago\\.android\\.checkout",
+            "name": "checkout"
+        },
+        {
+            "group": "com\\.mercadopago\\.android\\.checkoutpx",
+            "name": "checkoutpx"
+        },
+        {
+            "group": "com\\.mercadopago\\.android\\.cards",
+            "name": "cards"
+        },
+        {
+            "group": "com\\.mercadopago\\.android\\.balance",
+            "name": "balance"
+        },
+        {
+            "group": "com\\.mercadopago\\.android\\.payment",
+            "name": "payment"
+        },
+        {
+            "group": "me\\.dm7\\.barcodescanner",
+            "name": "zbar"
         },
         {
             "group": "com\\.f2prateek\\.rx\\.preferences",
