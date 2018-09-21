@@ -282,6 +282,24 @@
         {
             "group": "com\\.mercadopago\\.android\\.sdk",
             "name": "sdk"
+        },
+        {
+            "group": "com\\.mercadopago\\.android\\.contacts",
+            "name": "contacts"
+        },
+        {
+            "group": "com\\.mercadopago\\.android\\.commons",
+            "name": "commons"
+        },
+        {
+            "group": "com\\.f2prateek\\.rx\\.preferences",
+            "name": "rx-preferences",
+            "version": "1\\.0\\.2"
+        },
+        {
+            "group": "com\\.facebook\\.android",
+            "name": "facebook-android-sdk",
+            "version": "4\\.24\\.0"
         }
     ]
 }
