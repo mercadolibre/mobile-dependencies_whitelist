@@ -96,6 +96,9 @@ class LibraryWhitelistedDependenciesLint implements Lint {
                 project.configurations."${variantName}Implementation".dependencies.each {
                     analizeDependency(it)
                 }
+                project.configurations."${variantName}Compile".dependencies.each {
+                    analizeDependency(it)
+                }
             }
 
             // Check the default compiling deps
@@ -103,6 +106,9 @@ class LibraryWhitelistedDependenciesLint implements Lint {
                 analizeDependency(it)
             }
             project.configurations.implementation.dependencies.each {
+                analizeDependency(it)
+            }
+            project.configurations.compile.dependencies.each {
                 analizeDependency(it)
             }
 
