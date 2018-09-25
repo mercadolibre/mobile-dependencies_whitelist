@@ -31,6 +31,21 @@
             "name": "authentication"
         },
         {
+            "group": "com\\.squareup\\.okhttp3",
+            "name": "okhttp",
+            "version": "3\\.11\\.0"
+        },
+        {
+            "group": "com\\.squareup\\.retrofit2",
+            "name": "retrofit",
+            "version": "2\\.3\\.0"
+        },
+        {
+            "group": "com\\.squareup\\.retrofit2",
+            "name": "adapter-rxjava2",
+            "version": "2\\.3\\.0"
+        },
+        {
             "group": "com\\.mercadolibre\\.android",
             "name": "restclient"
         },
