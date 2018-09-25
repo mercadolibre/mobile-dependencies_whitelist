@@ -35,6 +35,22 @@
             "name": "restclient"
         },
         {
+            "group": "com\\.mercadolibre\\.android",
+            "name": "restclient-legacy"
+        },
+        {
+            "group": "com\\.mercadolibre\\.android",
+            "name": "restclient-adapter-bus"
+        },
+        {
+            "group": "com\\.mercadolibre\\.android",
+            "name": "restclient-adapter-rx2"
+        },
+        {
+            "group": "com\\.mercadolibre\\.android",
+            "name": "restclient-converter-json"
+        },
+        {
             "group": "com\\.mercadolibre\\.android\\.on_demand_resources",
             "name": "core"
         },
