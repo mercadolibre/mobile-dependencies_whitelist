@@ -1,3 +1,7 @@
+# v5.1.0
+- Se fixea las tareas de linteo para que corran en gradle 4
+- Se agrega soporte configuracion de linteo por modulo
+
 # v5.0.9
 - Arreglamos la publicacion de variants
 

@@ -24,7 +24,7 @@ class ReleaseDependenciesLint implements Lint {
      * This throws GradleException if errors are found.
      */
     boolean lint(Project project, def variants) {
-        if (!project.rootProject.lintGradle.releaseDependenciesLintEnabled) {
+        if (!project.lintGradle.releaseDependenciesLintEnabled) {
             return false
         }
 

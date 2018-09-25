@@ -7,9 +7,7 @@ import com.mercadolibre.android.gradle.base.lint.dependencies.LibraryWhitelisted
 import com.mercadolibre.android.gradle.base.lint.dependencies.ReleaseDependenciesLint
 import org.gradle.api.GradleException
 import org.gradle.api.Project
-import org.gradle.api.Task
 import org.gradle.api.plugins.JavaPlugin
-import org.gradle.api.tasks.StopActionException
 
 /**
  * Module that applies lints to android libraries
@@ -62,8 +60,10 @@ class LintableModule implements Module {
     static void createExtension(Project project) {
         String extensionName = LintGradleExtension.simpleName.replaceAll("Extension", '')
         extensionName = (Character.toLowerCase(extensionName.charAt(0)) as String) + extensionName.substring(1)
-
         project.extensions.create(extensionName, LintGradleExtension)
+        project.subprojects.each {
+            it.extensions.create(extensionName, LintGradleExtension)
+        }
     }
 
     /**
@@ -86,12 +86,11 @@ class LintableModule implements Module {
         /**
          * Creation of the lint task
          */
-        project.task (TASK_NAME) { Task task ->
-            task.description "Lints the project dependencies to check they are in the allowed whitelist"
-            task.doLast {
-                if (project.rootProject.lintGradle.enabled) {
+        project.tasks.create(TASK_NAME, {
+            description "Lints the project dependencies to check they are in the allowed whitelist"
+            doLast {
+                if (project.lintGradle.enabled) {
                     def buildErrored = false
-
                     linters.each {
                         println ":${project.name}:${it.name()}"
                         def lintErrored = it.lint(project, variants)
@@ -105,7 +104,7 @@ class LintableModule implements Module {
                     }
                 }
             }
-        }
+        })
 
         if (project.tasks.findByName('check')) {
             project.tasks.check.dependsOn TASK_NAME
