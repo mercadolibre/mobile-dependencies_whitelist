@@ -1,3 +1,9 @@
+# v5.0.9
+- Arreglamos la publicacion de variants
+
+# v5.0.8
+- Solo habilitamos el lock de dependencias si es un task que lo necesita o si los files existen
+
 # v5.0.7
 - Agregamos una variable de configuracion que faltaba para los experimental 
 

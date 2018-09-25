@@ -25,12 +25,13 @@ class LockableModule implements Module {
     void configure(Project project) {
         project.afterEvaluate {
             // Add a dependency filter so that it wont lock local dependencies
-            project.configurations.all {
-                it.resolutionStrategy.activateDependencyLocking()
+            if (runningLockTask(project) || hasLockFiles(project)) {
+                project.configurations.all {
+                    it.resolutionStrategy.activateDependencyLocking()
+                }
             }
 
-            def tasks = project.gradle.startParameter.taskNames.toListString()
-            if (tasks.contains(TASK_LOCK_VERSIONS) || tasks.contains(TASK_UPDATE_LOCKS)) {
+            if (runningLockTask(project)) {
                 rejectAlphas(project)
             }
 
@@ -45,6 +46,16 @@ class LockableModule implements Module {
             project.tasks.create("modifyLocks", UpdateLockTask)
             project.tasks.create("deleteLocks", DeleteLocksTask)
         }
+    }
+
+    boolean runningLockTask(Project project){
+        def tasks = project.gradle.startParameter.taskNames.toListString()
+        return tasks.contains(TASK_LOCK_VERSIONS) || tasks.contains(TASK_UPDATE_LOCKS)
+    }
+
+    boolean hasLockFiles(Project project){
+        def locksFolder = new File("${project.projectDir}/gradle/dependency-locks/");
+        locksFolder.exists() && locksFolder.isDirectory() && locksFolder.listFiles().length > 0
     }
 
     def rejectAlphas(Project project) {
