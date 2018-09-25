@@ -23,7 +23,7 @@ final class BintrayConfiguration {
         def finalPublications
         if (project.hasProperty('android')) {
             finalPublications = project.android?.productFlavors?.collect {
-                "publish${publicationPackaging.capitalize()}Release${it.name.capitalize()}${publicationType.capitalize()}"
+                "publish${publicationPackaging.capitalize()}${publicationType.capitalize()}${it.name.capitalize()}Release"
             } ?: [publicationName]
         } else {
             finalPublications = [publicationName]
