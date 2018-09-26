@@ -31,8 +31,39 @@
             "name": "authentication"
         },
         {
+            "group": "com\\.squareup\\.okhttp3",
+            "name": "okhttp",
+            "version": "3\\.11\\.0"
+        },
+        {
+            "group": "com\\.squareup\\.retrofit2",
+            "name": "retrofit",
+            "version": "2\\.3\\.0"
+        },
+        {
+            "group": "com\\.squareup\\.retrofit2",
+            "name": "adapter-rxjava2",
+            "version": "2\\.3\\.0"
+        },
+        {
             "group": "com\\.mercadolibre\\.android",
             "name": "restclient"
+        },
+        {
+            "group": "com\\.mercadolibre\\.android",
+            "name": "restclient-legacy"
+        },
+        {
+            "group": "com\\.mercadolibre\\.android",
+            "name": "restclient-adapter-bus"
+        },
+        {
+            "group": "com\\.mercadolibre\\.android",
+            "name": "restclient-adapter-rx2"
+        },
+        {
+            "group": "com\\.mercadolibre\\.android",
+            "name": "restclient-converter-json"
         },
         {
             "group": "com\\.mercadolibre\\.android\\.on_demand_resources",
@@ -332,6 +363,11 @@
             "group": "com\\.facebook\\.android",
             "name": "facebook-android-sdk",
             "version": "4\\.24\\.0"
+        },
+        {
+            "group": "uk\\.co\\.chrisjenx",
+            "name": "calligraphy",
+            "version": "2\\.1\\.0"
         }
     ]
 }
