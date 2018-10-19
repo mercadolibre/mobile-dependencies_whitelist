@@ -1,4 +1,4 @@
-# v5.2.0
+# v5.1.1
 ## Arreglado
 - Se arregla el auto publish de bintray
 
