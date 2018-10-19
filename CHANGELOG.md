@@ -1,3 +1,7 @@
+# v5.1.1
+## Arreglado
+- Se arregla el auto publish de bintray
+
 # v5.1.0
 - Se fixea las tareas de linteo para que corran en gradle 4
 - Se agrega soporte configuracion de linteo por modulo
