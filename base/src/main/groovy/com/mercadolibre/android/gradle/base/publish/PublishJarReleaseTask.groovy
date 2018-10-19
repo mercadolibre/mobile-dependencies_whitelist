@@ -27,7 +27,6 @@ class PublishJarReleaseTask extends PublishJarTask {
                         publicationName = this.taskName
                         publicationPackaging = JavaPublishableModule.PACKAGING
                         publicationType = 'Release'
-                        publish = true
                         return it
                     })
                 }
