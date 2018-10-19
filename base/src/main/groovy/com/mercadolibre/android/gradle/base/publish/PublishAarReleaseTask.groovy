@@ -26,6 +26,7 @@ class PublishAarReleaseTask extends PublishAarTask {
                         publicationName = this.taskName
                         publicationPackaging = AndroidLibraryPublishableModule.PACKAGING
                         publicationType = 'Release'
+                        publish = true
                         return it
                     })
                 }

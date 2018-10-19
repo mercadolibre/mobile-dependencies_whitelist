@@ -27,6 +27,7 @@ class PublishJarExperimentalTask extends PublishJarTask {
                         publicationName = this.taskName
                         publicationPackaging = JavaPublishableModule.PACKAGING
                         publicationType = 'Experimental'
+                        publish = true
                         return it
                     })
                 }

@@ -27,6 +27,7 @@ class PublishJarAlphaTask extends PublishJarTask {
                         publicationName = this.taskName
                         publicationPackaging = JavaPublishableModule.PACKAGING
                         publicationType = 'Alpha'
+                        publish = true
                         return it
                     })
                 }
