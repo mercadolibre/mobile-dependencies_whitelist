@@ -92,6 +92,11 @@ class BasePlugin implements Plugin<Project> {
                     task.enabled = false
                 }
             }
+
+            // We ensure all artifacts have been published
+            project.gradle.buildFinished { buildResult ->
+                project.bintrayPublish.taskAction()
+            }
         }
     }
 
