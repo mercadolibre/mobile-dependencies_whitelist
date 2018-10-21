@@ -1,3 +1,11 @@
+# v5.1.4
+## Agregado
+- Se agrega la ejecucion de la tarea 'bintrayPublish' para asegurar que todos los artifacts se publiquen
+
+# v5.1.3
+## Revertido
+- Se revierte el auto publish de bintray
+
 # v5.1.1
 ## Arreglado
 - Se arregla el auto publish de bintray
