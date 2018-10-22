@@ -90,12 +90,12 @@ class BasePlugin implements Plugin<Project> {
             subproject.tasks.whenTaskAdded { task ->
                 if (task.name.toLowerCase().contains('findbugs')) {
                     task.enabled = false
+                } else if (task.name.toLowerCase().startsWith('publish')) {
+                    // We ensure all artifacts have been published
+                    project.gradle.buildFinished { buildResult ->
+                        project.bintrayPublish.taskAction()
+                    }
                 }
-            }
-
-            // We ensure all artifacts have been published
-            project.gradle.buildFinished { buildResult ->
-                project.bintrayPublish.taskAction()
             }
         }
     }
