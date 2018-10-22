@@ -201,7 +201,17 @@
         },
         {
             "group": "com\\.android\\.support",
+            "name": "support-v4",
+            "version": "27\\.0\\.2"
+        },
+        {
+            "group": "com\\.android\\.support",
             "name": "support-annotations",
+            "version": "27\\.0\\.2"
+        },
+        {
+            "group": "com\\.android\\.support",
+            "name": "support-media-compat",
             "version": "27\\.0\\.2"
         },
         {
