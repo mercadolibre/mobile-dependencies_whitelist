@@ -18,7 +18,7 @@ class BasePlugin implements Plugin<Project> {
     public static final String ANDROID_LIBRARY_PLUGIN = 'com.android.library'
     public static final String ANDROID_APPLICATION_PLUGIN = 'com.android.application'
 
-    private static final String BINTRAY_PUBLISHABLE_TAKS_REGEX = /^publish(Release|Experimental|Alpha)$/
+    private static final String BINTRAY_UPLOAD_TASK_NAME = "bintrayUpload"
     private static final String NEBULA_LOCK_CLASSPATH = "com.netflix.nebula/gradle-dependency-lock-plugin"
 
     private static final ANDROID_LIBRARY_MODULES = { ->
@@ -107,7 +107,7 @@ class BasePlugin implements Plugin<Project> {
     }
 
     boolean checkIfTaskGraphHasPublishableTasks(DefaultTaskGraphExecuter taskGraph) {
-        return taskGraph.getAllTasks().any{ task -> task ==~ BINTRAY_PUBLISHABLE_TAKS_REGEX }
+        return taskGraph.getAllTasks().any{ task -> task == BINTRAY_UPLOAD_TASK_NAME }
     }
 
     /**
