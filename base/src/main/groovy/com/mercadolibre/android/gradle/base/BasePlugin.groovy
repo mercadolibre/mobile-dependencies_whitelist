@@ -5,6 +5,10 @@ import com.mercadolibre.android.gradle.base.utils.VersionContainer
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.plugins.JavaPlugin
+import org.gradle.BuildResult
+import org.gradle.api.Task
+import org.gradle.api.tasks.TaskState
+import org.gradle.execution.taskgraph.DefaultTaskGraphExecuter
 
 /**
  * Gradle base plugin for MercadoLibre Android projects/modules.
@@ -14,6 +18,7 @@ class BasePlugin implements Plugin<Project> {
     public static final String ANDROID_LIBRARY_PLUGIN = 'com.android.library'
     public static final String ANDROID_APPLICATION_PLUGIN = 'com.android.application'
 
+    private static final String BINTRAY_UPLOAD_TASK_NAME = "bintrayUpload"
     private static final String NEBULA_LOCK_CLASSPATH = "com.netflix.nebula/gradle-dependency-lock-plugin"
 
     private static final ANDROID_LIBRARY_MODULES = { ->
@@ -93,6 +98,16 @@ class BasePlugin implements Plugin<Project> {
                 }
             }
         }
+
+        project.gradle.taskGraph.whenReady{
+            if (checkIfTaskGraphHasPublishableTasks(project.gradle.taskGraph)) {
+                project.gradle.startParameter.taskNames << "bintrayPublish"
+            }
+        }
+    }
+
+    boolean checkIfTaskGraphHasPublishableTasks(DefaultTaskGraphExecuter taskGraph) {
+        return taskGraph.getAllTasks().any{ task -> task == BINTRAY_UPLOAD_TASK_NAME }
     }
 
     /**
