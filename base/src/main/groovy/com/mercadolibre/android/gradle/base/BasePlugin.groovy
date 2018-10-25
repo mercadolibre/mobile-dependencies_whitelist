@@ -8,7 +8,6 @@ import org.gradle.api.plugins.JavaPlugin
 import org.gradle.BuildResult
 import org.gradle.api.Task
 import org.gradle.api.tasks.TaskState
-import org.gradle.execution.taskgraph.DefaultTaskGraphExecuter
 
 /**
  * Gradle base plugin for MercadoLibre Android projects/modules.
@@ -106,7 +105,7 @@ class BasePlugin implements Plugin<Project> {
         }
     }
 
-    boolean checkIfTaskGraphHasPublishableTasks(DefaultTaskGraphExecuter taskGraph) {
+    boolean checkIfTaskGraphHasPublishableTasks(def taskGraph) {
         return taskGraph.getAllTasks().any{ task -> task == BINTRAY_UPLOAD_TASK_NAME }
     }
 

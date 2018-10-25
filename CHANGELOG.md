@@ -1,3 +1,7 @@
+# v5.1.5
+## Arreglado
+- Se arregla una dependencia haciendo que Groovy la infiera
+
 # v5.1.4
 ## Agregado
 - Se agrega la ejecucion de la tarea 'bintrayPublish' para asegurar que todos los artifacts se publiquen
