@@ -98,15 +98,17 @@ class BasePlugin implements Plugin<Project> {
             }
         }
 
-        project.gradle.taskGraph.whenReady{
-            if (checkIfTaskGraphHasPublishableTasks(project.gradle.taskGraph)) {
-                project.gradle.startParameter.taskNames << "bintrayPublish"
+        // We ensure all artifacts are published
+        project.gradle.buildFinished{ buildResult ->
+            if (!buildResult.failure && checkIfTaskGraphHasPublishableTasks(project.gradle.taskGraph)) {
+                println 'Publishing artifacts to bintray'
+                project.tasks.bintrayPublish.taskAction()
             }
         }
     }
 
     boolean checkIfTaskGraphHasPublishableTasks(def taskGraph) {
-        return taskGraph.getAllTasks().any{ task -> task == BINTRAY_UPLOAD_TASK_NAME }
+        return taskGraph.getAllTasks().any{ task -> task.getName() == BINTRAY_UPLOAD_TASK_NAME }
     }
 
     /**
