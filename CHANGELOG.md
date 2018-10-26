@@ -1,3 +1,7 @@
+# v5.1.6
+## Arreglado
+- Se arregla el chequeo de las Publish Task al final de la ejecucion para poder publicar los artifacts
+
 # v5.1.5
 ## Arreglado
 - Se arregla una dependencia haciendo que Groovy la infiera
