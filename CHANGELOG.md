@@ -1,3 +1,7 @@
+# v5.1.7
+## Arreglado
+- Se mueve el chequeo de las Publish Task post generacion del TaskGraph debido a que en el build se corria y no se podia obtener las tasks
+
 # v5.1.6
 ## Arreglado
 - Se arregla el chequeo de las Publish Task al final de la ejecucion para poder publicar los artifacts

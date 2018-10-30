@@ -44,6 +44,8 @@ class BasePlugin implements Plugin<Project> {
      * The project.
      */
     private Project project
+    
+    private boolean doesTaskGraphHasPublishableTasks = false
 
     /**
      * Method called by Gradle when applying this plugin.
@@ -98,9 +100,13 @@ class BasePlugin implements Plugin<Project> {
             }
         }
 
+        project.gradle.taskGraph.whenReady { taskGraph ->
+            doesTaskGraphHasPublishableTasks = checkIfTaskGraphHasPublishableTasks(project.gradle.taskGraph)
+        }
+
         // We ensure all artifacts are published
         project.gradle.buildFinished{ buildResult ->
-            if (!buildResult.failure && checkIfTaskGraphHasPublishableTasks(project.gradle.taskGraph)) {
+            if (!buildResult.failure && doesTaskGraphHasPublishableTasks) {
                 println 'Publishing artifacts to bintray'
                 project.tasks.bintrayPublish.taskAction()
             }
