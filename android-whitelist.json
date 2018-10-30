@@ -147,8 +147,12 @@
             "name": "navigationcp"
         },
         {
+            "group": "com\\.mercadolibre\\.android\\.navigationcp",
+            "name": "locationdata"
+        },
+        {
             "group": "com\\.mercadolibre\\.android\\.uinavigationcp",
-            "name": "uinavigationcp"
+            "name": "addresshub"
         },
         {
             "group": "com\\.mercadolibre\\.android\\.mlwallet",
