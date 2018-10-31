@@ -95,7 +95,7 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
-      "name" : "MLVariations",
+      "name": "MLVariations",
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
@@ -130,7 +130,7 @@
       "name": "MLAnalytics",
       "version": "^~>\\s?2.[0-9]+$"
     },
-    { 
+    {
       "name": "MLNavigationBarTransition",
       "version": "^~>\\s?1.[0-9]+$"
     },
@@ -174,7 +174,7 @@
       "name": "MPSDK",
       "version": "^~>\\s?9.[0-9]+$"
     },
-    { 
+    {
       "name": "MLMap",
       "version": "^~>\\s?1.[0-9]+$"
     },
@@ -188,7 +188,7 @@
     },
     {
       "name": "MLUINavigationCP",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+"
     },
     {
       "name": "Realm",
