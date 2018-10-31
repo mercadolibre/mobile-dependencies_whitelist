@@ -1,3 +1,23 @@
+# v5.1.7
+## Arreglado
+- Se mueve el chequeo de las Publish Task post generacion del TaskGraph debido a que en el build se corria y no se podia obtener las tasks
+
+# v5.1.6
+## Arreglado
+- Se arregla el chequeo de las Publish Task al final de la ejecucion para poder publicar los artifacts
+
+# v5.1.5
+## Arreglado
+- Se arregla una dependencia haciendo que Groovy la infiera
+
+# v5.1.4
+## Agregado
+- Se agrega la ejecucion de la tarea 'bintrayPublish' para asegurar que todos los artifacts se publiquen
+
+# v5.1.3
+## Revertido
+- Se revierte el auto publish de bintray
+
 # v5.1.1
 ## Arreglado
 - Se arregla el auto publish de bintray

@@ -27,7 +27,6 @@ class PublishAarAlphaTask extends PublishAarTask {
                         publicationName = this.taskName
                         publicationPackaging = AndroidLibraryPublishableModule.PACKAGING
                         publicationType = 'Alpha'
-                        publish = true
                         return it
                     })
                 }

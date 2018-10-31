@@ -5,6 +5,9 @@ import com.mercadolibre.android.gradle.base.utils.VersionContainer
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.plugins.JavaPlugin
+import org.gradle.BuildResult
+import org.gradle.api.Task
+import org.gradle.api.tasks.TaskState
 
 /**
  * Gradle base plugin for MercadoLibre Android projects/modules.
@@ -14,6 +17,7 @@ class BasePlugin implements Plugin<Project> {
     public static final String ANDROID_LIBRARY_PLUGIN = 'com.android.library'
     public static final String ANDROID_APPLICATION_PLUGIN = 'com.android.application'
 
+    private static final String BINTRAY_UPLOAD_TASK_NAME = "bintrayUpload"
     private static final String NEBULA_LOCK_CLASSPATH = "com.netflix.nebula/gradle-dependency-lock-plugin"
 
     private static final ANDROID_LIBRARY_MODULES = { ->
@@ -40,6 +44,8 @@ class BasePlugin implements Plugin<Project> {
      * The project.
      */
     private Project project
+    
+    private boolean doesTaskGraphHasPublishableTasks = false
 
     /**
      * Method called by Gradle when applying this plugin.
@@ -93,6 +99,22 @@ class BasePlugin implements Plugin<Project> {
                 }
             }
         }
+
+        project.gradle.taskGraph.whenReady { taskGraph ->
+            doesTaskGraphHasPublishableTasks = checkIfTaskGraphHasPublishableTasks(project.gradle.taskGraph)
+        }
+
+        // We ensure all artifacts are published
+        project.gradle.buildFinished{ buildResult ->
+            if (!buildResult.failure && doesTaskGraphHasPublishableTasks) {
+                println 'Publishing artifacts to bintray'
+                project.tasks.bintrayPublish.taskAction()
+            }
+        }
+    }
+
+    boolean checkIfTaskGraphHasPublishableTasks(def taskGraph) {
+        return taskGraph.getAllTasks().any{ task -> task.getName() == BINTRAY_UPLOAD_TASK_NAME }
     }
 
     /**

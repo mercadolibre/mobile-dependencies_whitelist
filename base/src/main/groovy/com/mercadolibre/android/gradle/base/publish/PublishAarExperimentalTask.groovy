@@ -27,7 +27,6 @@ class PublishAarExperimentalTask extends PublishAarTask {
                         publicationName = this.taskName
                         publicationPackaging = AndroidLibraryPublishableModule.PACKAGING
                         publicationType = 'Experimental'
-                        publish = true
                         return it
                     })
                 }
