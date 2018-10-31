@@ -8,7 +8,6 @@ import org.gradle.api.plugins.JavaPlugin
 import org.gradle.BuildResult
 import org.gradle.api.Task
 import org.gradle.api.tasks.TaskState
-import org.gradle.execution.taskgraph.DefaultTaskGraphExecuter
 
 /**
  * Gradle base plugin for MercadoLibre Android projects/modules.
@@ -45,6 +44,8 @@ class BasePlugin implements Plugin<Project> {
      * The project.
      */
     private Project project
+    
+    private boolean doesTaskGraphHasPublishableTasks = false
 
     /**
      * Method called by Gradle when applying this plugin.
@@ -99,15 +100,21 @@ class BasePlugin implements Plugin<Project> {
             }
         }
 
-        project.gradle.taskGraph.whenReady{
-            if (checkIfTaskGraphHasPublishableTasks(project.gradle.taskGraph)) {
-                project.gradle.startParameter.taskNames << "bintrayPublish"
+        project.gradle.taskGraph.whenReady { taskGraph ->
+            doesTaskGraphHasPublishableTasks = checkIfTaskGraphHasPublishableTasks(project.gradle.taskGraph)
+        }
+
+        // We ensure all artifacts are published
+        project.gradle.buildFinished{ buildResult ->
+            if (!buildResult.failure && doesTaskGraphHasPublishableTasks) {
+                println 'Publishing artifacts to bintray'
+                project.tasks.bintrayPublish.taskAction()
             }
         }
     }
 
-    boolean checkIfTaskGraphHasPublishableTasks(DefaultTaskGraphExecuter taskGraph) {
-        return taskGraph.getAllTasks().any{ task -> task == BINTRAY_UPLOAD_TASK_NAME }
+    boolean checkIfTaskGraphHasPublishableTasks(def taskGraph) {
+        return taskGraph.getAllTasks().any{ task -> task.getName() == BINTRAY_UPLOAD_TASK_NAME }
     }
 
     /**
