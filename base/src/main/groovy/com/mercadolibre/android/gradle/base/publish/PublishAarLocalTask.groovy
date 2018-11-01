@@ -24,7 +24,7 @@ class PublishAarLocalTask extends PublishAarTask {
                 }
                 group = TASK_GROUP
 
-                dependsOn getBundleTaskName(project, variant), getSourcesJarTaskName(variant), getJavaDocJarTask(variant)
+                dependsOn getBundleTaskName(project, variant), getSourcesJarTaskName(variant), getJavadocJarTask(variant)
                 finalizedBy "publish${taskName.capitalize()}PublicationToMavenLocal"
             })
         }

@@ -158,12 +158,9 @@ abstract class PublishAarTask extends PublishTask {
      * @param variant
      * @return bundle task name
      */
-    protected String getBundleTaskName(def project, def variant) {
+    protected static String getBundleTaskName(def project, def variant) {
         def bundleTask = "bundle${variant.name.capitalize()}"
-        if (project.tasks.findByName("${bundleTask}Aar")) {
-            return "${bundleTask}Aar"
-        }
-        return bundleTask
+        return project.tasks.findByName("${bundleTask}Aar") ? "${bundleTask}Aar" : bundleTask
     }
 
     /**
@@ -171,7 +168,7 @@ abstract class PublishAarTask extends PublishTask {
      * @param variant
      * @return ${variant.name}SourcesJar string
      */
-    protected String getSourcesJarTaskName(def variant) {
+    protected static String getSourcesJarTaskName(def variant) {
         return "${variant.name}SourcesJar"
     }
 
@@ -180,7 +177,7 @@ abstract class PublishAarTask extends PublishTask {
      * @param variant
      * @return ${variant.name}JavadocJar string
      */
-    protected String getJavaDocJarTask(def variant) {
+    protected static String getJavadocJarTask(def variant) {
         return "${variant.name}JavadocJar"
     }
 
