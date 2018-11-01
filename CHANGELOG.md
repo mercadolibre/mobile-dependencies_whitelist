@@ -1,3 +1,7 @@
+# v5.2.0
+## Arreglado
+- Se resuelve un cambio en el nombre de una task que cambio a partir de la version 3.2.0+ del plugin android de gradle
+
 # v5.1.7
 ## Arreglado
 - Se mueve el chequeo de las Publish Task post generacion del TaskGraph debido a que en el build se corria y no se podia obtener las tasks
