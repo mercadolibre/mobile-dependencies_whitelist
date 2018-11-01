@@ -156,7 +156,7 @@ abstract class PublishAarTask extends PublishTask {
      * otherwise bundle${variant.name.capitalize()}
      * @param project
      * @param variant
-     * @return Return bundle task name
+     * @return bundle task name
      */
     protected String getBundleTaskName(def project, def variant) {
         def bundleTask = "bundle${variant.name.capitalize()}"
@@ -169,7 +169,7 @@ abstract class PublishAarTask extends PublishTask {
     /**
      * Returns source jar task name
      * @param variant
-     * @return ${variant.name}SourcesJar
+     * @return ${variant.name}SourcesJar string
      */
     protected String getSourcesJarTaskName(def variant) {
         return "${variant.name}SourcesJar"
@@ -178,7 +178,7 @@ abstract class PublishAarTask extends PublishTask {
     /**
      * Returns javadoc jar task name
      * @param variant
-     * @return ${variant.name}JavadocJar
+     * @return ${variant.name}JavadocJar string
      */
     protected String getJavaDocJarTask(def variant) {
         return "${variant.name}JavadocJar"
