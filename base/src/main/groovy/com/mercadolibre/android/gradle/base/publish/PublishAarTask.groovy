@@ -151,4 +151,38 @@ abstract class PublishAarTask extends PublishTask {
         return version
     }
 
+    /**
+     * Returns bundle task name. For AGP 3.2.0 or higher return bundle${variant.name.capitalize()}Aar
+     * otherwise return bundle${variant.name.capitalize()}
+     * @param project
+     * @param variant
+     * @return Return bundle task name
+     */
+    protected String getBundleTaskName(def project, def variant) {
+        def bundleTask = "bundle${variant.name.capitalize()}"
+        if (project.tasks.findByName("${bundleTask}Aar")) {
+            return "${bundleTask}Aar"
+        }
+        return bundleTask
+    }
+
+    /**
+     * Returns source jar task name
+     * @param variant
+     * @return ${variant.name}SourcesJar
+     */
+    protected String getSourcesJarTaskName(def variant) {
+        return "${variant.name}SourcesJar"
+    }
+
+    /**
+     * Returns javadoc jar task name
+     * @param variant
+     * @return ${variant.name}JavadocJar
+     */
+    protected String getJavaDocJarTask(def variant) {
+        return "${variant.name}JavadocJar"
+    }
+
+
 }
