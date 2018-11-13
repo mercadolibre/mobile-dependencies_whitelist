@@ -91,37 +91,7 @@
         },
         {
             "group": "com\\.google\\.android\\.gms",
-            "name": "play-services-location",
-            "version": "16\\.0\\.0"
-        },
-        {
-            "group": "com\\.google\\.android\\.gms",
-            "name": "play-services-places",
-            "version": "16\\.0\\.0"
-        },
-        {
-            "group": "com\\.google\\.android\\.gms",
-            "name": "play-services-analytics",
-            "version": "16\\.0\\.4"
-        },
-        {
-            "group": "com\\.google\\.android\\.gms",
-            "name": "play-services-ads",
-            "version": "16\\.0\\.0"
-        },
-        {
-            "group": "com\\.google\\.android\\.gms",
             "name": "play-services-base",
-            "version": "16\\.0\\.1"
-        },
-        {
-            "group": "com\\.google\\.android\\.gms",
-            "name": "play-services-maps",
-            "version": "16\\.0\\.0"
-        },
-        {
-            "group": "com\\.google\\.android\\.gms",
-            "name": "play-services-auth",
             "version": "16\\.0\\.1"
         },
         {
@@ -133,16 +103,6 @@
             "group": "com\\.google\\.firebase",
             "name": "firebase-perf",
             "version": "16\\.2\\.0"
-        },
-        {
-            "group": "com\\.google\\.firebase",
-            "name": "firebase-core",
-            "version": "16\\.0\\.4"
-        },
-        {
-            "group": "com\\.google\\.firebase",
-            "name": "firebase-appindexing",
-            "version": "16\\.0\\.2"
         },
         {
             "group": "com\\.mercadolibre\\.android",
@@ -306,42 +266,42 @@
         {
             "group": "com\\.google\\.android\\.gms",
             "name": "play-services-ads",
-            "version": "10\\.2\\.6"
+            "version": "16\\.0\\.0 | 10\\.2\\.6"
         },
         {
             "group": "com\\.google\\.android\\.gms",
             "name": "play-services-analytics",
-            "version": "10\\.2\\.6"
+            "version": "16\\.0\\.4 | 10\\.2\\.6"
         },
         {
             "group": "com\\.google\\.android\\.gms",
             "name": "play-services-auth",
-            "version": "10\\.2\\.6"
+            "version": "16\\.0\\.1 | 10\\.2\\.6"
         },
         {
             "group": "com\\.google\\.android\\.gms",
             "name": "play-services-location",
-            "version": "10\\.2\\.6"
+            "version": "16\\.0\\.0 | 10\\.2\\.6"
         },
         {
             "group": "com\\.google\\.android\\.gms",
             "name": "play-services-maps",
-            "version": "10\\.2\\.6"
+            "version": "16\\.0\\.0 | 10\\.2\\.6"
         },
         {
             "group": "com\\.google\\.android\\.gms",
             "name": "play-services-places",
-            "version": "10\\.2\\.6"
+            "version": "16\\.0\\.0 | 10\\.2\\.6"
         },
         {
             "group": "com\\.google\\.firebase",
             "name": "firebase-appindexing",
-            "version": "10\\.2\\.6"
+            "version": "16\\.0\\.2 | 10\\.2\\.6"
         },
         {
             "group": "com\\.google\\.firebase",
             "name": "firebase-core",
-            "version": "10\\.2\\.6"
+            "version": "16\\.0\\.4 | 10\\.2\\.6"
         },
         {
             "group": "com\\.google\\.maps\\.android",
