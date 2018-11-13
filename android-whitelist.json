@@ -131,6 +131,11 @@
         },
         {
             "group": "com\\.google\\.firebase",
+            "name": "firebase-perf",
+            "version": "16\\.2\\.0"
+        },
+        {
+            "group": "com\\.google\\.firebase",
             "name": "firebase-core",
             "version": "16\\.0\\.4"
         },
