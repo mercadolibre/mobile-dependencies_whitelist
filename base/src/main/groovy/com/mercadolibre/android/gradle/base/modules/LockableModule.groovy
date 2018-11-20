@@ -82,16 +82,13 @@ class LockableModule implements Module {
     def checkLockSuccessful(Project project) {
         def localDeps = []
         boolean isSuccessful = true
-
         project.rootProject.subprojects.each { localDeps.add("$it.group:$it.name") }
         project.configurations.all {
-
-            if (it.toString().contains("CompileClasspath") || it.toString().contains("RuntimeClasspath"))
-            if (it.state == Configuration.State.RESOLVED_WITH_FAILURES) {
-
-
-                isSuccessful = false
-                return
+            if (it.toString().contains("CompileClasspath") || it.toString().contains("RuntimeClasspath")) {
+                if (it.state == Configuration.State.RESOLVED_WITH_FAILURES) {
+                    isSuccessful = false
+                    return
+                }
             }
             if (it.state == Configuration.State.UNRESOLVED) {
                 it.resolutionStrategy {
@@ -105,8 +102,6 @@ class LockableModule implements Module {
                         }
                     }
                 }
-
-
             }
         }
         return isSuccessful
@@ -123,7 +118,6 @@ class LockableModule implements Module {
         }
         task.dependsOn project.tasks.findByName(DEPENDENCIES_TASK)
         task.doLast {
-
             if (checkLockSuccessful(project)) {
                 new File("${project.projectDir}/gradle/dependency-locks/").eachFile { File file ->
                     boolean onlyHasComments = true
