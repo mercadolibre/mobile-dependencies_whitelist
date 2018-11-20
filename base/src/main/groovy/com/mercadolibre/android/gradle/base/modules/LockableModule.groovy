@@ -82,7 +82,6 @@ class LockableModule implements Module {
     def checkLockSuccessful(Project project) {
         def localDeps = []
         boolean isSuccessful = true
-        String notLockedVersion = "Non"
 
         project.rootProject.subprojects.each { localDeps.add("$it.group:$it.name") }
         project.configurations.all {
@@ -90,7 +89,6 @@ class LockableModule implements Module {
             if (it.toString().contains("CompileClasspath") || it.toString().contains("RuntimeClasspath"))
             if (it.state == Configuration.State.RESOLVED_WITH_FAILURES) {
 
-                notLockedVersion = it.toString() + "resolveWFail"
 
                 isSuccessful = false
                 return
@@ -102,9 +100,6 @@ class LockableModule implements Module {
                         // If it's me, we will change it later
                         String artifact = "${selection.candidate.group}:${selection.candidate.module}"
                         if (selection.candidate.version.contains(VERSION_ALPHA)) {
-
-                            notLockedVersion = selection.candidate.module.toString() + "Hello"
-
                             isSuccessful = false
                             return
                         }
@@ -114,7 +109,6 @@ class LockableModule implements Module {
 
             }
         }
-        println(notLockedVersion)
         return isSuccessful
     }
 
