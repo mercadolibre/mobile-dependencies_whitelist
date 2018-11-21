@@ -346,7 +346,7 @@
             "group": "io\\.reactivex",
             "name": "rxjava",
             "version": "1\\.3\\.6"
-        },
+        },  
         {
             "group": "io\\.reactivex\\.rxjava2",
             "name": "rxandroid"
@@ -354,7 +354,7 @@
         {
             "group": "io\\.reactivex\\.rxjava2",
             "name": "rxjava"
-        },
+        },     
         {
             "group": "org\\.apache\\.commons",
             "name": "commons-lang3",
@@ -442,18 +442,6 @@
             "group": "uk\\.co\\.chrisjenx",
             "name": "calligraphy",
             "version": "2\\.1\\.0"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.dagger",
-            "name": "core"
-        },
-        {
-            "group": "com\\.google\\.dagger",
-            "name": "dagger-compiler"
-        },
-        {
-            "group": "com\\.google\\.dagger",
-            "name": "dagger-android-processor"
         },
         {
             "group": "com\\.mercadolibre\\.android\\.cpg",
