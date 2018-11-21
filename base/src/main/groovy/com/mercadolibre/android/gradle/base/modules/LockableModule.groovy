@@ -1,6 +1,7 @@
 package com.mercadolibre.android.gradle.base.modules
 
 import org.gradle.api.DefaultTask
+import org.gradle.api.GradleException
 import org.gradle.api.Project
 import org.gradle.api.Task
 import org.gradle.api.artifacts.ComponentSelection
@@ -20,6 +21,9 @@ class LockableModule implements Module {
     private static final String DEPENDENCIES_TASK = "dependencies"
 
     private static final String VERSION_ALPHA = "ALPHA"
+
+    private static final String COMPILE_CONFIGURATIONS = "CompileClasspath"
+    private static final String RUNTIME_CONFIGURATIONS = "RuntimeClasspath"
 
     @Override
     void configure(Project project) {
@@ -48,12 +52,12 @@ class LockableModule implements Module {
         }
     }
 
-    boolean runningLockTask(Project project){
+    boolean runningLockTask(Project project) {
         def tasks = project.gradle.startParameter.taskNames.toListString()
         return tasks.contains(TASK_LOCK_VERSIONS) || tasks.contains(TASK_UPDATE_LOCKS)
     }
 
-    boolean hasLockFiles(Project project){
+    boolean hasLockFiles(Project project) {
         def locksFolder = new File("${project.projectDir}/gradle/dependency-locks/");
         locksFolder.exists() && locksFolder.isDirectory() && locksFolder.listFiles().length > 0
     }
@@ -78,6 +82,34 @@ class LockableModule implements Module {
         }
     }
 
+    def checkLockSuccessful(Project project) {
+        def localDeps = []
+        boolean isSuccessful = true
+        project.rootProject.subprojects.each { localDeps.add("$it.group:$it.name") }
+        project.configurations.all {
+            if (it.toString().contains(COMPILE_CONFIGURATIONS) || it.toString().contains(RUNTIME_CONFIGURATIONS)) {
+                if (it.state == Configuration.State.RESOLVED_WITH_FAILURES) {
+                    isSuccessful = false
+                    return
+                }
+            }
+            if (it.state == Configuration.State.UNRESOLVED) {
+                it.resolutionStrategy {
+                    componentSelection.all { ComponentSelection selection ->
+                        // If the version has an alpha and it's not me reject the version
+                        // If it's me, we will change it later
+                        String artifact = "${selection.candidate.group}:${selection.candidate.module}"
+                        if (selection.candidate.version.contains(VERSION_ALPHA)) {
+                            isSuccessful = false
+                            return
+                        }
+                    }
+                }
+            }
+        }
+        return isSuccessful
+    }
+
     def createTask(Project project, String name, def validate) {
         Task task = project.tasks.create(name)
         task.group = "locking"
@@ -89,14 +121,18 @@ class LockableModule implements Module {
         }
         task.dependsOn project.tasks.findByName(DEPENDENCIES_TASK)
         task.doLast {
-            new File("${project.projectDir}/gradle/dependency-locks/").eachFile { File file ->
-                boolean onlyHasComments = true
-                file.eachLine {
-                    onlyHasComments &= it.toString().startsWith("#")
+            if (checkLockSuccessful(project)) {
+                new File("${project.projectDir}/gradle/dependency-locks/").eachFile { File file ->
+                    boolean onlyHasComments = true
+                    file.eachLine {
+                        onlyHasComments &= it.toString().startsWith("#")
+                    }
+                    if (onlyHasComments) {
+                        file.delete()
+                    }
                 }
-                if (onlyHasComments) {
-                    file.delete()
-                }
+            } else {
+                throw new GradleException("Lock Unsuccessful. Check your versions")
             }
         }
     }
@@ -104,7 +140,7 @@ class LockableModule implements Module {
 }
 
 class LocksTask extends DefaultTask {
-    File getLocksFolder(){
+    File getLocksFolder() {
         def locksFolder = new File("${project.projectDir}/gradle/dependency-locks/")
 
         if (!locksFolder.exists() || !locksFolder.isDirectory() || locksFolder.listFiles().length == 0) {
@@ -163,7 +199,7 @@ class UpdateLockTask extends LocksTask {
 
 class DeleteLocksTask extends LocksTask {
     @TaskAction
-    def delete(){
+    def delete() {
         locksFolder.eachFile { File file ->
             if (file.name.toLowerCase() =~ "^.*\\.lockfile\$") {
                 file.delete()
