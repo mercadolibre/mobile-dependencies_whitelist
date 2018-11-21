@@ -22,6 +22,9 @@ class LockableModule implements Module {
 
     private static final String VERSION_ALPHA = "ALPHA"
 
+    private static final String COMPILE_CONFIGURATIONS = "CompileClasspath"
+    private static final String RUNTIME_CONFIGURATIONS = "RuntimeClasspath"
+
     @Override
     void configure(Project project) {
         project.afterEvaluate {
@@ -84,7 +87,7 @@ class LockableModule implements Module {
         boolean isSuccessful = true
         project.rootProject.subprojects.each { localDeps.add("$it.group:$it.name") }
         project.configurations.all {
-            if (it.toString().contains("CompileClasspath") || it.toString().contains("RuntimeClasspath")) {
+            if (it.toString().contains(COMPILE_CONFIGURATIONS) || it.toString().contains(RUNTIME_CONFIGURATIONS)) {
                 if (it.state == Configuration.State.RESOLVED_WITH_FAILURES) {
                     isSuccessful = false
                     return
