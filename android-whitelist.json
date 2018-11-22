@@ -446,6 +446,11 @@
         {
             "group": "com\\.mercadolibre\\.android\\.cpg",
             "name": "ui_components"
+        },
+        {
+            "group": "com\\.google\\.android\\.gms",
+            "name": "play-services-safetynet",
+            "version": "16\\.0\\.0"
         }
     ]
 }
