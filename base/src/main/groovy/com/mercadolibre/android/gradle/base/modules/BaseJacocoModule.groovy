@@ -22,6 +22,11 @@ abstract class BaseJacocoModule implements Module {
         project.with {
             apply plugin: JacocoPlugin
 
+            jacoco {
+                // default is "0.7.8", JacocoPlugin.DEFAULT_JACOCO_VERSION
+                toolVersion = '0.8.2'
+            }
+
             tasks.withType(Test) {
                 testLogging {
                     events "FAILED"
