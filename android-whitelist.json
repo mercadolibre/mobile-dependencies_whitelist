@@ -451,6 +451,11 @@
             "group": "com\\.google\\.android\\.gms",
             "name": "play-services-safetynet",
             "version": "16\\.0\\.0"
+        },
+        {
+            "group": "com\\.mercadolibre\\.android\\.flox",
+            "name": "engine"
         }
+
     ]
 }
