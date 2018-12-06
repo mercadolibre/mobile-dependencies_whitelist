@@ -249,6 +249,10 @@
     {
       "name": "MLClassifiedsDynamicFlow",
       "version": null
+    },
+    {
+      "name": "AmountLabel",
+      "version": "^~>\\s?1.[0-9]+$"
     }
   ]
 }
