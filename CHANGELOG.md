@@ -1,3 +1,7 @@
+# v5.4.0
+## Agregado
+- Se sube el tiempo que duran las caches de dependencias dinámicas
+
 # v5.3.0
 ## Arreglado
 - Se fixea el fail del lock en caso de que no pueda resolver las dependencias

@@ -150,7 +150,7 @@ class BasePlugin implements Plugin<Project> {
         // For all sub-projects...
         project.allprojects {
             configurations.all {
-                resolutionStrategy.cacheDynamicVersionsFor 15, 'minutes'
+                resolutionStrategy.cacheDynamicVersionsFor 2, 'hours'
             }
         }
     }
