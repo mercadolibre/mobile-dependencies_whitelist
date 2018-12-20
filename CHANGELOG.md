@@ -1,3 +1,8 @@
+# v5.9.0
+## Actualizado
+- Se acutualiza la versión de Jacoco a la 0.8.2
+- Se incluyen clases Kotlin en el informe de cobertura
+
 # v5.8.0
 ## Arreglado
 - Cobertura con plugin de android 3 y kotlin

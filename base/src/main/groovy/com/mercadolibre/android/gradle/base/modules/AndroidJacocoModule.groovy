@@ -115,7 +115,7 @@ class AndroidJacocoModule extends BaseJacocoModule {
     }
 
     protected def classesDir(variant) {
-        variant.javaCompile.destinationDir
+        variant.javaCompile.destinationDir + project.files("$buildDir/tmp/kotlin-classes/${variant.name}")
     }
 
     protected def testTask(variant) {
