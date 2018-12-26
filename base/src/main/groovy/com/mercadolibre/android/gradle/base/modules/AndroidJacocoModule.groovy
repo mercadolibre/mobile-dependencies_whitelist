@@ -114,6 +114,8 @@ class AndroidJacocoModule extends BaseJacocoModule {
         variant.sourceSets.java.srcDirs.collect { it.path }.flatten()
     }
 
+    // Kotlin generated code output folder comes from:
+    // https://github.com/JetBrains/kotlin/blob/v1.3.11/libraries/tools/kotlin-gradle-plugin/src/main/kotlin/org/jetbrains/kotlin/gradle/plugin/KotlinPlugin.kt#L726
     protected def classesDir(variant) {
         variant.javaCompile.destinationDir + project.files("$buildDir/tmp/kotlin-classes/${variant.name}")
     }
