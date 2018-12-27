@@ -465,6 +465,11 @@
             "group": "com\\.mercadolibre\\.android\\.classifieds",
             "name": "dynamic-flow",
             "version": "0\\.\\+"
+        },
+        {
+            "group": "com\\.android\\.support",
+            "name": "multidex",
+            "version": "1\\.0\\.1"
         }
 
     ]
