@@ -18,7 +18,6 @@ class BasePlugin implements Plugin<Project> {
     public static final String ANDROID_APPLICATION_PLUGIN = 'com.android.application'
 
     private static final String BINTRAY_UPLOAD_TASK_NAME = "bintrayUpload"
-    private static final String NEBULA_LOCK_CLASSPATH = "com.netflix.nebula/gradle-dependency-lock-plugin"
 
     private static final ANDROID_LIBRARY_MODULES = { ->
         return [
@@ -29,7 +28,8 @@ class BasePlugin implements Plugin<Project> {
 
     private static final ANDROID_APPLICATION_MODULES = { ->
         return [
-                new AndroidJacocoModule()
+                new AndroidJacocoModule(),
+                new KeystoreModule()
         ]
     }
 
