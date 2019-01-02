@@ -1,3 +1,8 @@
+# v5.5.0
+## Agregado
+- Se embebe un keystore de debug para todas las aplicaciones por default. De esta forma todas las aplicaciones van a tener las mismas credenciales para debug.
+- Se evita utilizar el keystore embebido en caso de encontrar una configuracion para firmar en debug ya seteada.
+
 # v5.4.0
 ## Agregado
 - Se sube el tiempo que duran las caches de dependencias dinámicas
