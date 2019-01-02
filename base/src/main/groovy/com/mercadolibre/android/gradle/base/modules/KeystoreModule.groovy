@@ -13,8 +13,8 @@ class KeystoreModule implements Module {
 
     private final int BUFFER_LENGTH = 1024
 
-    private final String directoryName = "keystores"
-    private final String fileName = "debug_keystore"
+    private final String DIRECTORY_NAME = "keystores"
+    private final String FILE_NAME = "debug_keystore"
 
     private final String KEY_STORE_PASSWORD = "android"
     private final String KEY_ALIAS = "androiddebugkey"
@@ -28,11 +28,11 @@ class KeystoreModule implements Module {
             return
         }
 
-        final File directory = project.mkdir("${project.buildDir}${File.separator}${directoryName}")
-        final File keystore = project.file("${directory.absolutePath}${File.separator}${fileName}")
+        final File directory = project.mkdir("${project.buildDir}${File.separator}${DIRECTORY_NAME}")
+        final File keystore = project.file("${directory.absolutePath}${File.separator}${FILE_NAME}")
 
         // Write the keystore file into the build directory
-        final InputStream inputStream = KeystoreModule.class.getResourceAsStream("${File.separator}${directoryName}${File.separator}${fileName}")
+        final InputStream inputStream = KeystoreModule.class.getResourceAsStream("${File.separator}${DIRECTORY_NAME}${File.separator}${FILE_NAME}")
         keystore.withOutputStream { outputStream ->
             int read = 0
             byte[] bytes = new byte[BUFFER_LENGTH]
