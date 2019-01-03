@@ -14,17 +14,10 @@ class PackageModule implements Module {
 
     @Override
     void configure(Project project) {
-        super.configure(project)
-
         project.afterEvaluate {
-            final String packageName = project.android.defaultConfig.applicationId
-
-            if (packageName == null) {
-                throw new IllegalStateException("Package name not found as applicationId")
+            project.android.applicationVariants.all { variant ->
+                variant.resValue "string", "application_id", "\"${variant.applicationId}\""
             }
-
-            buildConfigField 'String', 'PACKAGE_NAME', "\"${packageName}\""
-            resValue "string", "build_config_package_name", "\"${packageName}\""
         }
     }
 

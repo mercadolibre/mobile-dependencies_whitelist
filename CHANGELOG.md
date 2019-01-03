@@ -2,6 +2,7 @@
 ## Agregado
 - Se embebe un keystore de debug para todas las aplicaciones por default. De esta forma todas las aplicaciones van a tener las mismas credenciales para debug.
 - Se evita utilizar el keystore embebido en caso de encontrar una configuracion para firmar en debug ya seteada.
+- Se agrega modulo para el package. Generamos dinamicamente una entry en los resources para el applicationId. Asi es accesible desde los XML (No es agregado via codigo, ya que android ya genera el `BuildConfig.APPLICATION_ID` analogo automaticamente)
 
 # v5.4.0
 ## Agregado
