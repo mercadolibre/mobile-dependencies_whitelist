@@ -6,7 +6,7 @@ import org.gradle.api.tasks.testing.Test
 import org.gradle.testing.jacoco.tasks.JacocoReport
 
 /**
- * Module in charge of configuring jacoco reports for android projects so that any coverage application can obtain them
+ * Module in charge of creating entry values for the application ID. Android already provides by default the java field (BuildConfig.APPLICATION_ID)
  *
  * Created by saguilera on 7/22/17.
  */
