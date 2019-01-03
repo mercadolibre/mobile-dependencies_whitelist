@@ -22,12 +22,6 @@ class KeystoreModule implements Module {
 
     @Override
     void configure(Project project) {
-        // If the project has an already configured signing configuration for debug, skip.
-        if (project.android.signingConfigs.debug != null) {
-            println "[SKIPPED] This project has a predefined signing config, skipping unified keystore setup."
-            return
-        }
-
         final File directory = project.mkdir("${project.buildDir}${File.separator}${DIRECTORY_NAME}")
         final File keystore = project.file("${directory.absolutePath}${File.separator}${FILE_NAME}")
 

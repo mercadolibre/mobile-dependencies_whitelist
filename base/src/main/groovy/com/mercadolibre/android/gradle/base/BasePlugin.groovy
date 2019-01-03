@@ -29,7 +29,8 @@ class BasePlugin implements Plugin<Project> {
     private static final ANDROID_APPLICATION_MODULES = { ->
         return [
                 new AndroidJacocoModule(),
-                new KeystoreModule()
+                new KeystoreModule(),
+                new PackageModule()
         ]
     }
 
