@@ -1,3 +1,7 @@
+# v5.5.1
+## Arreglado
+- Se agrega el prefijo dynamic_ al application_id por problemas con el lint de Android
+
 # v5.5.0
 ## Agregado
 - Se embebe un keystore de debug para todas las aplicaciones por default. De esta forma todas las aplicaciones van a tener las mismas credenciales para debug.
