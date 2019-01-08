@@ -13,7 +13,7 @@ class PackageModule implements Module {
     void configure(Project project) {
         project.afterEvaluate {
             project.android.applicationVariants.all { variant ->
-                variant.resValue "string", "dynamic_application_id", "${variant.applicationId}"
+                variant.resValue "string", "application_id_dynamic", "${variant.applicationId}"   
             }
         }
     }
