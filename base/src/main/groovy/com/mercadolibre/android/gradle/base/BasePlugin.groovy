@@ -185,15 +185,15 @@ class BasePlugin implements Plugin<Project> {
                 maven {
                     url "https://dl.bintray.com/mercadolibre/android-releases"
                     credentials {
-                        username 'bintray-read'
-                        password 'ff5072eaf799961add07d5484a6283eb3939556b'
+                        username 'bintray-read-only'
+                        password 'f8a81e46551b9e29af6b3bd449a96bddff58cbd7'
                     }
                 }
                 maven {
                     url "https://dl.bintray.com/mercadolibre/android-experimental"
                     credentials {
-                        username 'bintray-read'
-                        password 'ff5072eaf799961add07d5484a6283eb3939556b'
+                        username 'bintray-read-only'
+                        password 'f8a81e46551b9e29af6b3bd449a96bddff58cbd7'
                     }
                 }
             }
