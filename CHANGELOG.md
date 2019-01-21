@@ -1,3 +1,15 @@
+# v5.7.0
+## Cambiado
+- Se migra el plugin a Gradle 4
+
+# v5.6.0
+## Cambiado
+- Se cambia la key de bintray read por la nueva
+
+# v4.5.1
+## Cambiado
+- Se cambia la key de bintray read por la nueva
+
 # v5.5.1
 ## Arreglado
 - Se agrega el prefijo dynamic_ al application_id por problemas con el lint de Android
