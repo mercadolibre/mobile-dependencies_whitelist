@@ -467,9 +467,11 @@
         },
         {
             "group": "com\\.mercadolibre\\.android\\.classifieds",
-            "name": "dynamic-flow",
-            "version": "0\\.\\+"
+            "name": "dynamic-flow"
+        },
+        {
+            "group": "com\\.mercadolibre\\.android\\.classifieds",
+            "name": "listing"
         }
-
     ]
 }
