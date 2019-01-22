@@ -3,6 +3,7 @@ package com.mercadolibre.android.gradle.base.modules
 import org.gradle.api.Project
 import org.gradle.api.Task
 import org.gradle.api.tasks.testing.Test
+import org.gradle.platform.base.Variant
 import org.gradle.testing.jacoco.tasks.JacocoReport
 
 /**
@@ -102,7 +103,7 @@ class AndroidJacocoModule extends BaseJacocoModule {
     }
 
     protected def classesDir(variant) {
-        variant.javaCompile.destinationDir
+        variant.javaCompileProvider.get().destinationDir
     }
 
     protected def testTask(variant) {

@@ -1,6 +1,6 @@
-# v5.7.0
+# v6.0.0
 ## Cambiado
-- Se migra el plugin a Gradle 4
+- Se migra el plugin a Gradle 5
 
 # v5.6.0
 ## Cambiado
