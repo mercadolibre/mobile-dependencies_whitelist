@@ -477,6 +477,10 @@
             "group": "io\\.fotoapparat",
             "name": "fotoapparat",
             "version": "2\\.5\\.0"
+        },
+        {
+            "group": "com\\.mercadolibre\\.android\\.security",
+            "name": "attestation"
         }
     ]
 }
