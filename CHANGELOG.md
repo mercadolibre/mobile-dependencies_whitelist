@@ -1,3 +1,7 @@
+# v5.6.0
+## Arreglado
+- El modulo de keystore hace el unpack previo a validar las configs.
+
 # v5.5.1
 ## Arreglado
 - Se agrega el prefijo dynamic_ al application_id por problemas con el lint de Android
