@@ -1,6 +1,7 @@
 package com.mercadolibre.android.gradle.base.modules
 
 import org.gradle.api.Project
+import org.gradle.api.Task
 
 /**
  * Module that signs the application in the debug buildType with a default public keystore.
@@ -22,17 +23,30 @@ class KeystoreModule implements Module {
 
     @Override
     void configure(Project project) {
+        // Create info we will rely on
         final File directory = project.mkdir("${project.buildDir}${File.separator}${DIRECTORY_NAME}")
         final File keystore = project.file("${directory.absolutePath}${File.separator}${FILE_NAME}")
 
-        // Write the keystore file into the build directory
-        final InputStream inputStream = KeystoreModule.class.getResourceAsStream("${File.separator}${DIRECTORY_NAME}${File.separator}${FILE_NAME}")
-        keystore.withOutputStream { outputStream ->
-            int read = 0
-            byte[] bytes = new byte[BUFFER_LENGTH]
-            while ((read = inputStream.read(bytes)) != -1) {
-                outputStream.write(bytes, 0, read)
+        // Define a task to unpack the keystore were we will place it
+        final Task unpackKeystoreTask = project.tasks.create("unpackDebugKeystore") {
+            group = 'keystore'
+            description = 'Unpack the debug keystore into the build directory of the project'
+            doLast {
+                // Write the keystore file into the build directory
+                final InputStream inputStream = KeystoreModule.class.getResourceAsStream("${File.separator}${DIRECTORY_NAME}${File.separator}${FILE_NAME}")
+                keystore.withOutputStream { outputStream ->
+                    int read = 0
+                    byte[] bytes = new byte[BUFFER_LENGTH]
+                    while ((read = inputStream.read(bytes)) != -1) {
+                        outputStream.write(bytes, 0, read)
+                    }
+                }
             }
+        }
+
+        // Make every validate signing task depend on it
+        project.android.applicationVariants.all { variant ->
+            project.tasks."validateSigning${variant.name.capitalize()}".dependsOn unpackKeystoreTask
         }
 
         // Setup project signing configurations with the keystore file and credentials
