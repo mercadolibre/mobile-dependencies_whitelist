@@ -1,6 +1,11 @@
 # v5.7.0
 ## Arreglado
+- Se agrega el prefijo dynamic_ al application_id por problemas con el lint de Android
 - Cobertura con plugin de android 3 y kotlin
+
+# v5.6.0
+## Arreglado
+- Anda a saber que incluye este release, no agregaron changelog
 
 # v5.5.1
 ## Arreglado
