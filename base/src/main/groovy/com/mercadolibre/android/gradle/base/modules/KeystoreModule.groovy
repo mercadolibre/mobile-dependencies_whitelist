@@ -24,7 +24,7 @@ class KeystoreModule implements Module {
     @Override
     void configure(Project project) {
         // Create info we will rely on
-        final File directory = project.mkdir("${project.buildDir}${File.separator}${DIRECTORY_NAME}")
+        final File directory = project.file("${project.buildDir}${File.separator}${DIRECTORY_NAME}")
         final File keystore = project.file("${directory.absolutePath}${File.separator}${FILE_NAME}")
 
         // Define a task to unpack the keystore were we will place it
@@ -32,6 +32,9 @@ class KeystoreModule implements Module {
             group = 'keystore'
             description = 'Unpack the debug keystore into the build directory of the project'
             doLast {
+                // Create the directory
+                directory.mkdirs()
+                
                 // Write the keystore file into the build directory
                 final InputStream inputStream = KeystoreModule.class.getResourceAsStream("${File.separator}${DIRECTORY_NAME}${File.separator}${FILE_NAME}")
                 keystore.withOutputStream { outputStream ->
