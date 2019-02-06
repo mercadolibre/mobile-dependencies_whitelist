@@ -93,7 +93,7 @@ class AndroidJacocoModule extends BaseJacocoModule {
 
             if (project.plugins.hasPlugin("kotlin-android")) {
                 classDirectories += project.fileTree(
-                        dir: "${project.buildDir}/tmp/kotlin-classes/releaseUnitTest",
+                        dir: "${project.buildDir}/tmp/kotlin-classes/${variant.name}",
                         excludes: exclude
                 )
                 sourceDirectories.add("src/main/kotlin")
