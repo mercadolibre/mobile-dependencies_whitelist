@@ -49,7 +49,10 @@ class KeystoreModule implements Module {
 
         // Make every validate signing task depend on it
         project.android.applicationVariants.all { variant ->
-            project.tasks."validateSigning${variant.name.capitalize()}".dependsOn unpackKeystoreTask
+            final Task validateTask = project.tasks.findByName("validateSigning${variant.name.capitalize()}")
+            if (validateTask) {
+                validateTask.dependsOn unpackKeystoreTask
+            }
         }
 
         // Setup project signing configurations with the keystore file and credentials
