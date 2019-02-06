@@ -2,6 +2,8 @@
 ## Arreglado
 - Se agrega el prefijo dynamic_ al application_id por problemas con el lint de Android
 - Cobertura con plugin de android 3 y kotlin
+- Fix keystore unpacking, making it a task
+
 
 # v5.6.0
 ## Arreglado
