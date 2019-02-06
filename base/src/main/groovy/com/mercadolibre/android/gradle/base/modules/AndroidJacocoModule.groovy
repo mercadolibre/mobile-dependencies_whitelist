@@ -72,23 +72,36 @@ class AndroidJacocoModule extends BaseJacocoModule {
             reportTask.group = "reporting"
             reportTask.description = "Generates Jacoco coverage reports for the ${variant.name} variant."
             reportTask.executionData = project.files(executionData)
-            reportTask.sourceDirectories = project.files(sourceDirs)
-            reportTask.classDirectories =
-                    project.fileTree(dir: classesDir, excludes: [
-                            '**/R.class',
-                            '**/R$*.class',
-                            '**/BuildConfig.class',
-                            '**/*$ViewInjector*.*',
-                            '**/*$ViewBinder*.*',
-                            '**/Manifest*.*',
-                            '**/*$Lambda$*.*',
-                            '**/*Module.*',
-                            '**/*Dagger*.*',
-                            '**/*MembersInjector*.*',
-                            '**/*_Provide*Factory*.*',
-                            '**/*_Factory*.*',
-                            '**/*$*$*.*'
-                    ])
+            def exclude = [
+                    '**/R.class',
+                    '**/R$*.class',
+                    '**/BuildConfig.class',
+                    '**/*$ViewInjector*.*',
+                    '**/*$ViewBinder*.*',
+                    '**/Manifest*.*',
+                    '**/*$Lambda$*.*',
+                    '**/*Module.*',
+                    '**/*Dagger*.*',
+                    '**/*MembersInjector*.*',
+                    '**/*_Provide*Factory*.*',
+                    '**/*_Factory*.*',
+                    '**/*$*$*.*'
+            ]
+
+            def sourceDirectories = sourceDirs
+            def classDirectories = project.fileTree(dir: classesDir, excludes: exclude)
+
+            if (project.plugins.hasPlugin("kotlin-android")) {
+                classDirectories += project.fileTree(
+                        dir: "${project.buildDir}/tmp/kotlin-classes/releaseUnitTest",
+                        excludes: exclude
+                )
+                sourceDirectories.add("src/main/kotlin")
+            }
+
+            reportTask.sourceDirectories = project.files(sourceDirectories)
+            reportTask.classDirectories = classDirectories
+
             reportTask.reports {
                 csv.enabled false
                 html.enabled true
