@@ -1,3 +1,7 @@
+# v5.8.0
+## Arreglado
+- Cobertura con plugin de android 3 y kotlin
+
 # v5.7.0
 ## Arreglado
 - Fix keystore unpacking, making it a task
