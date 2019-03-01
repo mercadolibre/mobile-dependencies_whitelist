@@ -277,6 +277,11 @@
             "group": "com\\.android\\.support\\.constraint",
             "name": "constraint-layout"
         },
+                {
+            "group": "com\\.android\\.support",
+            "name": "gridlayout-v7",
+            "version": "27\\.0\\.2"
+        },
         {
             "group": "com\\.google\\.android\\.gms",
             "name": "play-services-ads",
