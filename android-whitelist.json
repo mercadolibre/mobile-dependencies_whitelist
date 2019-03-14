@@ -147,8 +147,17 @@
             "name": "shipping\\-components"
         },
         {
+            "group": "com\\.mercadolibre\\.android\\.buyingflow\\.bridge",
+            "name": "core"
+        },
+        {
             "group": "com\\.mercadolibre\\.android\\.marketplace\\.map",
             "name": "marketplace\\-map"
+        },
+        {
+            "group": "com\\.mercadolibre\\.android\\.rule\\.engine",
+            "name": "rule\\-engine",
+            "version": "1\\.\\+"
         },
         {
             "group": "com\\.mercadolibre\\.android\\.card\\.header",
@@ -268,6 +277,11 @@
             "group": "com\\.android\\.support\\.constraint",
             "name": "constraint-layout"
         },
+                {
+            "group": "com\\.android\\.support",
+            "name": "gridlayout-v7",
+            "version": "27\\.0\\.2"
+        },
         {
             "group": "com\\.google\\.android\\.gms",
             "name": "play-services-ads",
@@ -316,12 +330,12 @@
         {
             "group": "com\\.airbnb\\.android",
             "name": "lottie",
-            "version": "2\\.2\\.0"
+            "version": "2\\.7\\.0"
         },
         {
             "group": "com\\.github\\.ksoichiro",
             "name": "android-observablescrollview",
-            "version": "1\\.5\\.1"
+            "version": "1\\.6\\.0"
         },
         {
             "group": "com\\.journeyapps",
@@ -463,9 +477,34 @@
         },
         {
             "group": "com\\.mercadolibre\\.android\\.classifieds",
-            "name": "dynamic-flow",
-            "version": "0\\.\\+"
+            "name": "dynamic-flow"
+        },
+        {
+            "group": "com\\.mercadolibre\\.android\\.classifieds",
+            "name": "listing"
+        },
+        {
+            "group": "io\\.fotoapparat",
+            "name": "fotoapparat",
+            "version": "2\\.5\\.0"
+        },
+        {
+            "group": "com\\.github\\.PhilJay",
+            "name": "MPAndroidChart",
+            "version": "v3\\.0\\.3"
+        },
+        {
+            "group": "com\\.mercadolibre\\.android\\.security",
+            "name": "attestation"
+        },
+        {
+            "group": "com\\.mercadolibre\\.android\\.security",
+            "name": "biometrics_ui"
+        },
+        {
+            "group": "com\\.mercadolibre\\.android\\.activity",
+            "name": "shortlist",
+            "version": "4\\.\\+"
         }
-
     ]
 }

@@ -164,7 +164,7 @@
     },
     {
       "name": "MLAuthentication",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+"
     },
     {
       "name": "InStore-Discovery",
@@ -176,7 +176,7 @@
     },
     {
       "name": "MLMap",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "MLCard",
@@ -253,6 +253,30 @@
     {
       "name": "AmountLabel",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLCollaborators",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "Flox",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "Charts",
+      "version": "3.2.1"
+    },
+    {
+      "name": "MLRuleEngine",
+      "version": "^~>\\s?0.[0-9]+"
+    },
+    {
+      "name": "MLVIP/URLScanner",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "RxSwift",
+      "version": "4.4.1"
     }
   ]
 }
