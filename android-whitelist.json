@@ -502,6 +502,11 @@
             "name": "zbar"
         },
         {
+            "group": "com\\.android\\.support",
+            "name": "multidex",
+            "version": "1\\.0"
+        },
+        {
             "group": "org\\.apache\\.commons",
             "name": "commons-lang3",
             "version": "3\\.6"
