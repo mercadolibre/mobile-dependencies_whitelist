@@ -6,7 +6,7 @@
 default: &defaultJob
   # The docker image all jobs that inherit from us will have (Which should be all of them)
   docker:
-      - image: circleci/android:api-27-alpha
+      - image: circleci/android:api-28
 ##
 # We define a job for building. This job will be in charge of running:
 # - Install mobile-cd build automation: 'kelli'
@@ -74,13 +74,6 @@ deploy-release-job: &deployReleaseJob
       # Checkout to our repo and add the ssh keys for doing git stuff
       - checkout
       - add_ssh_keys
-      # Restore the cache if a hashed build.gradle is found as key
-      - restore_cache:
-          key: buildscript-{{ checksum "build.gradle" }}
-      - restore_cache:
-          key: gradlew-{{ checksum "./gradle/wrapper/gradle-wrapper.properties" }}
-      - restore_cache:
-          key: dependencies-{{ checksum "base/build.gradle" }}
       - run:
           name: Install Mobile Requirements
           command: eval $GET_MOBILE_CD | ruby
@@ -98,13 +91,6 @@ deploy-alpha-job: &deployAlphaJob
       # Checkout to our repo and add the ssh keys for doing git stuff
       - checkout
       - add_ssh_keys
-      # Restore the cache if a hashed build.gradle is found as key
-      - restore_cache:
-          key: buildscript-{{ checksum "build.gradle" }}
-      - restore_cache:
-          key: gradlew-{{ checksum "./gradle/wrapper/gradle-wrapper.properties" }}
-      - restore_cache:
-          key: dependencies-{{ checksum "base/build.gradle" }}
       - run:
           name: Install Mobile Requirements
           command: eval $GET_MOBILE_CD | ruby
