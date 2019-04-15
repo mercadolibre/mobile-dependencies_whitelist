@@ -3,6 +3,7 @@ package com.mercadolibre.android.gradle.base.modules
 import org.gradle.api.Project
 import org.gradle.api.Task
 import org.gradle.api.tasks.testing.Test
+import org.gradle.platform.base.Variant
 import org.gradle.testing.jacoco.tasks.JacocoReport
 
 /**
@@ -117,7 +118,7 @@ class AndroidJacocoModule extends BaseJacocoModule {
     // Kotlin generated code output folder comes from:
     // https://github.com/JetBrains/kotlin/blob/v1.3.11/libraries/tools/kotlin-gradle-plugin/src/main/kotlin/org/jetbrains/kotlin/gradle/plugin/KotlinPlugin.kt#L726
     protected def classesDir(variant) {
-        variant.javaCompile.destinationDir + project.files("$buildDir/tmp/kotlin-classes/${variant.name}")
+        variant.javaCompile.destinationDir
     }
 
     protected def testTask(variant) {

@@ -1,3 +1,7 @@
+# v5.10.0
+## Cambiado
+- Se migra el plugin a Gradle 4
+
 # v5.9.0
 ## Actualizado
 - Se acutualiza la versión de Jacoco a la 0.8.2
@@ -13,7 +17,11 @@
 
 # v5.6.0
 ## Arreglado
-- Anda a saber que incluye este release, no agregaron changelog
+- Se cambia la key de bintray read por la nueva
+
+# v4.5.1
+## Cambiado
+- Se cambia la key de bintray read por la nueva
 
 # v5.5.1
 ## Arreglado
