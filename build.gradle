@@ -1,7 +1,7 @@
-apply plugin: 'mercadolibre.mobile'
 
 buildscript {
     repositories {
+        mavenLocal()
         jcenter()
         maven {
             url "https://dl.bintray.com/mercadolibre/android-releases"
@@ -9,6 +9,17 @@ buildscript {
                 username 'bintray-read-only'
                 password 'f8a81e46551b9e29af6b3bd449a96bddff58cbd7'
             }
+        }
+
+        maven {
+            url "https://dl.bintray.com/mercadolibre/android-experimental"
+            credentials {
+                username 'bintray-read-only'
+                password 'f8a81e46551b9e29af6b3bd449a96bddff58cbd7'
+            }
+        }
+        maven {
+            url "https://plugins.gradle.org/m2/"
         }
     }
 
@@ -19,6 +30,12 @@ buildscript {
     }
 }
 
+plugins {
+    id "com.gradle.build-scan" version "1.16"
+}
+
+apply plugin: 'mercadolibre.mobile'
+
 allprojects {
     repositories {
         jcenter()
@@ -26,4 +43,16 @@ allprojects {
 
     group = projectGroup
     version = projectVersion
+}
+
+
+
+buildScan {
+    publishAlwaysIf(true)
+    // customs values
+    background {
+        String branchName = 'git rev-parse --abbrev-ref HEAD'.execute().text.trim()
+        value "Git branch", branchName
+        link 'github', "https://github.com/mercadolibre/mobile-android_gradle/tree/${branchName}"
+    }
 }
