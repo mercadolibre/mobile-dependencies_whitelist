@@ -3,6 +3,7 @@ package com.mercadolibre.android.gradle.base.modules
 import org.gradle.api.Project
 import org.gradle.api.Task
 import org.gradle.api.tasks.testing.Test
+import org.gradle.platform.base.Variant
 import org.gradle.testing.jacoco.tasks.JacocoReport
 
 /**
@@ -72,23 +73,36 @@ class AndroidJacocoModule extends BaseJacocoModule {
             reportTask.group = "reporting"
             reportTask.description = "Generates Jacoco coverage reports for the ${variant.name} variant."
             reportTask.executionData = project.files(executionData)
-            reportTask.sourceDirectories = project.files(sourceDirs)
-            reportTask.classDirectories =
-                    project.fileTree(dir: classesDir, excludes: [
-                            '**/R.class',
-                            '**/R$*.class',
-                            '**/BuildConfig.class',
-                            '**/*$ViewInjector*.*',
-                            '**/*$ViewBinder*.*',
-                            '**/Manifest*.*',
-                            '**/*$Lambda$*.*',
-                            '**/*Module.*',
-                            '**/*Dagger*.*',
-                            '**/*MembersInjector*.*',
-                            '**/*_Provide*Factory*.*',
-                            '**/*_Factory*.*',
-                            '**/*$*$*.*'
-                    ])
+            def exclude = [
+                    '**/R.class',
+                    '**/R$*.class',
+                    '**/BuildConfig.class',
+                    '**/*$ViewInjector*.*',
+                    '**/*$ViewBinder*.*',
+                    '**/Manifest*.*',
+                    '**/*$Lambda$*.*',
+                    '**/*Module.*',
+                    '**/*Dagger*.*',
+                    '**/*MembersInjector*.*',
+                    '**/*_Provide*Factory*.*',
+                    '**/*_Factory*.*',
+                    '**/*$*$*.*'
+            ]
+
+            def sourceDirectories = sourceDirs
+            def classDirectories = project.fileTree(dir: classesDir, excludes: exclude)
+
+            if (project.plugins.hasPlugin("kotlin-android")) {
+                classDirectories += project.fileTree(
+                        dir: "${project.buildDir}/tmp/kotlin-classes/${variant.name}",
+                        excludes: exclude
+                )
+                sourceDirectories.add("src/main/kotlin")
+            }
+
+            reportTask.sourceDirectories = project.files(sourceDirectories)
+            reportTask.classDirectories = classDirectories
+
             reportTask.reports {
                 csv.enabled false
                 html.enabled true
@@ -101,6 +115,8 @@ class AndroidJacocoModule extends BaseJacocoModule {
         variant.sourceSets.java.srcDirs.collect { it.path }.flatten()
     }
 
+    // Kotlin generated code output folder comes from:
+    // https://github.com/JetBrains/kotlin/blob/v1.3.11/libraries/tools/kotlin-gradle-plugin/src/main/kotlin/org/jetbrains/kotlin/gradle/plugin/KotlinPlugin.kt#L726
     protected def classesDir(variant) {
         variant.javaCompile.destinationDir
     }

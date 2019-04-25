@@ -3,6 +3,7 @@ buildscript {
     repositories {
         mavenLocal()
         jcenter()
+        mavenLocal()
         maven {
             url "https://dl.bintray.com/mercadolibre/android-releases"
             credentials {
@@ -24,9 +25,9 @@ buildscript {
     }
 
     dependencies {
-        classpath "com.mercadolibre.android.gradle:base:${innerProjectVersion}"
-        classpath "com.jfrog.bintray.gradle:gradle-bintray-plugin:${gradleBintrayPlugin}"
-        classpath "com.github.dcendents:android-maven-gradle-plugin:${androidMavenGradlePlugin}"
+        classpath "com.mercadolibre.android.gradle:base:$innerProjectVersion"
+        classpath "com.jfrog.bintray.gradle:gradle-bintray-plugin:$gradleBintrayPlugin"
+        classpath "com.github.dcendents:android-maven-gradle-plugin:$androidMavenGradlePlugin"
     }
 }
 
@@ -42,7 +43,7 @@ allprojects {
     }
 
     group = projectGroup
-    version = projectVersion
+    version = libraryVersion
 }
 
 
