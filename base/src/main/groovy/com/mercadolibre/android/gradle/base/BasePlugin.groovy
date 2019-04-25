@@ -1,6 +1,5 @@
 package com.mercadolibre.android.gradle.base
 
-
 import com.mercadolibre.android.gradle.base.modules.AndroidJacocoModule
 import com.mercadolibre.android.gradle.base.modules.AndroidLibraryPublishableModule
 import com.mercadolibre.android.gradle.base.modules.BuildScanModule
@@ -63,6 +62,7 @@ class BasePlugin implements Plugin<Project> {
      * Method called by Gradle when applying this plugin.
      * @param project the Gradle project.
      */
+    @Override
     void apply(Project project) {
         this.project = project
 
@@ -214,5 +214,4 @@ class BasePlugin implements Plugin<Project> {
             }
         }
     }
-
 }

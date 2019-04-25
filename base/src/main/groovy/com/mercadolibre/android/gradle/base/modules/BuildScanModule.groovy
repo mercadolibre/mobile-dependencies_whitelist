@@ -19,7 +19,7 @@ class BuildScanModule implements Module {
             buildScan {
                 server = 'https://gradle.adminml.com/'
                 // tags
-                tag project.getName()
+                tag project.getRootDir().getName()
                 if (System.getenv().containsKey("CI")) {
                     tag 'CI'
                 } else {
