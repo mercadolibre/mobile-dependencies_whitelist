@@ -68,17 +68,6 @@ class BasePlugin implements Plugin<Project> {
 
         VersionContainer.init()
 
-        project.buildscript {
-
-            maven {
-                url "https://plugins.gradle.org/m2/"
-            }
-
-            dependencies {
-                classpath "com.gradle:build-scan-plugin:1.16"
-            }
-        }
-
         avoidCacheForDynamicVersions()
         addHasClasspathMethod()
         setupRepositories()
