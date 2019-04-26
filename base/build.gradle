@@ -6,5 +6,4 @@ dependencies {
     implementation localGroovy()
 
     testImplementation 'junit:junit:4.12'
-
 }
