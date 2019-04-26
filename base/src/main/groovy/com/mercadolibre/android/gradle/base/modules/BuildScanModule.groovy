@@ -34,6 +34,7 @@ class BuildScanModule implements Module {
                     value "Git branch", branchName
                     value "user_name", 'git config user.name'.execute().text.trim()
                     value "user_email", 'git config user.email'.execute().text.trim()
+                    value "remote_url", 'git config --get remote.origin.url'.execute().text.trim()
                 }
             }
         }
