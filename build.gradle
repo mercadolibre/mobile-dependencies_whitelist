@@ -1,3 +1,4 @@
+apply plugin: 'com.gradle.build-scan'
 apply plugin: 'mercadolibre.mobile'
 
 buildscript {
@@ -11,14 +12,20 @@ buildscript {
                 password 'f8a81e46551b9e29af6b3bd449a96bddff58cbd7'
             }
         }
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
     }
 
     dependencies {
         classpath "com.mercadolibre.android.gradle:base:$innerProjectVersion"
         classpath "com.jfrog.bintray.gradle:gradle-bintray-plugin:$gradleBintrayPlugin"
         classpath "com.github.dcendents:android-maven-gradle-plugin:$androidMavenGradlePlugin"
+        classpath "com.gradle:build-scan-plugin:$gradleBuildScanVersion"
     }
 }
+
+
 
 allprojects {
     repositories {
@@ -27,4 +34,10 @@ allprojects {
 
     group = projectGroup
     version = libraryVersion
+}
+
+
+
+buildScan {
+    publishAlwaysIf(true)
 }

@@ -1,14 +1,18 @@
 package com.mercadolibre.android.gradle.base
 
-import com.mercadolibre.android.gradle.base.modules.*
+import com.mercadolibre.android.gradle.base.modules.AndroidJacocoModule
+import com.mercadolibre.android.gradle.base.modules.AndroidLibraryPublishableModule
+import com.mercadolibre.android.gradle.base.modules.BuildScanModule
+import com.mercadolibre.android.gradle.base.modules.JavaJacocoModule
+import com.mercadolibre.android.gradle.base.modules.JavaPublishableModule
+import com.mercadolibre.android.gradle.base.modules.KeystoreModule
+import com.mercadolibre.android.gradle.base.modules.LintableModule
+import com.mercadolibre.android.gradle.base.modules.LockableModule
+import com.mercadolibre.android.gradle.base.modules.PackageModule
 import com.mercadolibre.android.gradle.base.utils.VersionContainer
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.plugins.JavaPlugin
-import org.gradle.BuildResult
-import org.gradle.api.Task
-import org.gradle.api.tasks.TaskState
-
 /**
  * Gradle base plugin for MercadoLibre Android projects/modules.
  */
@@ -21,23 +25,29 @@ class BasePlugin implements Plugin<Project> {
 
     private static final ANDROID_LIBRARY_MODULES = { ->
         return [
-                new AndroidLibraryPublishableModule(),
-                new AndroidJacocoModule()
+            new AndroidLibraryPublishableModule(),
+            new AndroidJacocoModule()
         ]
     }
 
     private static final ANDROID_APPLICATION_MODULES = { ->
         return [
-                new AndroidJacocoModule(),
-                new KeystoreModule(),
-                new PackageModule()
+            new AndroidJacocoModule(),
+            new KeystoreModule(),
+            new PackageModule()
         ]
     }
 
     private static final JAVA_MODULES = { ->
         return [
-                new JavaPublishableModule(),
-                new JavaJacocoModule()
+            new JavaPublishableModule(),
+            new JavaJacocoModule()
+        ]
+    }
+
+    private static final PROJECT_MODULES = { ->
+        return [
+            new BuildScanModule()
         ]
     }
 
@@ -45,13 +55,14 @@ class BasePlugin implements Plugin<Project> {
      * The project.
      */
     private Project project
-    
+
     private boolean doesTaskGraphHasPublishableTasks = false
 
     /**
      * Method called by Gradle when applying this plugin.
      * @param project the Gradle project.
      */
+    @Override
     void apply(Project project) {
         this.project = project
 
@@ -101,12 +112,16 @@ class BasePlugin implements Plugin<Project> {
             }
         }
 
+        PROJECT_MODULES().each {
+            module -> module.configure(project)
+        }
+
         project.gradle.taskGraph.whenReady { taskGraph ->
             doesTaskGraphHasPublishableTasks = checkIfTaskGraphHasPublishableTasks(project.gradle.taskGraph)
         }
 
         // We ensure all artifacts are published
-        project.gradle.buildFinished{ buildResult ->
+        project.gradle.buildFinished { buildResult ->
             if (!buildResult.failure && doesTaskGraphHasPublishableTasks) {
                 println 'Publishing artifacts to bintray'
                 project.tasks.bintrayPublish.taskAction()
@@ -115,7 +130,7 @@ class BasePlugin implements Plugin<Project> {
     }
 
     boolean checkIfTaskGraphHasPublishableTasks(def taskGraph) {
-        return taskGraph.getAllTasks().any{ task -> task.getName() == BINTRAY_UPLOAD_TASK_NAME }
+        return taskGraph.getAllTasks().any { task -> task.getName() == BINTRAY_UPLOAD_TASK_NAME }
     }
 
     /**
@@ -135,8 +150,8 @@ class BasePlugin implements Plugin<Project> {
      */
     void fixFindbugsDuplicateDexEntryWithJSR305(Project project) {
         project.configurations {
-            all*.exclude module: "jsr305"
-            all*.exclude module: "jcip-annotations"
+            all*.exclude module:"jsr305"
+            all*.exclude module:"jcip-annotations"
         }
     }
 
@@ -199,5 +214,4 @@ class BasePlugin implements Plugin<Project> {
             }
         }
     }
-
 }
