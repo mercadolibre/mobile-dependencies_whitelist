@@ -1,3 +1,7 @@
+# v6.0.0
+## Agregado
+- Se Agrega el soporte para publicar los builds a Gradle Enterprise
+
 # v5.10.0
 ## Cambiado
 - Se migra el plugin a Gradle 4
