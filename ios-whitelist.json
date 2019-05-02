@@ -260,11 +260,11 @@
     },
     {
       "name": "Flox",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+"
     },
     {
       "name": "Charts",
-      "version": "3.2.1"
+      "version": "3.2.2"
     },
     {
       "name": "MLRuleEngine",
@@ -281,6 +281,39 @@
     {
       "name": "PINRemoteImage",
       "version": "2.1.4"
-    }
+    },
+    {
+      "name": "MLFirebase",
+      "version": "^~>\\s?0.[0-9]+"
+    },
+    {
+      "name": "HomeSectionsApi",
+      "version": "^~>\\s?0.[0-9]+"
+    },
+    {
+      "name": "OperationDetail/Commons",
+      "version": "^~>\\s?3.[0-9]+"
+    },
+    {
+      "name": "OperationDetail/RealtimeActivities",
+      "version": "^~>\\s?3.[0-9]+"
+    },
+    {
+      "name": "InStoreHomeSections",
+      "version": "^~>\\s?0.[0-9]+"
+    },
+    {
+      "name": "MPMerchEngine",
+      "version": "^~>\\s?0.[0-9]+"
+    },
+    {
+      "name": "MLRemedy",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "WalletCongrats",
+      "version": "^~>\\s?1.[0-9]+"
+    }   
+
   ]
 }
