@@ -565,6 +565,26 @@
             "group": "com\\.mercadolibre\\.android\\.remedy",
             "name": "remedy",
             "version": "mercadolibre-1\\.0\\.+"
+        },
+        {
+            "group": "org\\.jetbrains\\.kotlin",
+            "name": "kotlin-stdlib",
+            "version": "1\\.3\\.11"
+        },
+        {
+            "group": "org\\.jetbrains\\.kotlin",
+            "name": "kotlin-stdlib-common",
+            "version": "1\\.3\\.11"
+        },
+        {
+            "group": "com\\.android\\.support\\.constraint",
+            "name": "constraint-layout-solver",
+            "version": "1\\.3\\.11"
+        },
+        {
+            "group": "com\\.mercadolibre\\.android",
+            "name": "ui_legacy",
+            "version": "5\\.11\\.0"
         }
     ]
 }
