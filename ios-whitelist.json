@@ -34,7 +34,7 @@
     },
     {
       "name": "MLPlace",
-      "version": "^~>\\s?3.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "Firebase/Core",
@@ -312,7 +312,14 @@
     {
       "name": "WalletCongrats",
       "version": "^~>\\s?1.[0-9]+"
-    }   
-
+    },
+    {
+      "name": "MLCreditsBehaviours",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MLMetrics",
+      "version": "^~>\\s?0.[0-9]+"
+    }
   ]
 }
