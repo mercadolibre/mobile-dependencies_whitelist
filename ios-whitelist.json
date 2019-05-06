@@ -34,7 +34,7 @@
     },
     {
       "name": "MLPlace",
-      "version": "^~>\\s?3.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "Firebase/Core",
@@ -50,8 +50,7 @@
     },
     {
       "name": "CHTCollectionViewWaterfallLayout",
-      "version": "^~>\\s?0.[0-9]+$",
-      "expire": "2017-12-01"
+      "version": "0.8"
     },
     {
       "name": "MLShippingComponents",
@@ -283,28 +282,32 @@
       "version": "4.4.1"
     },
     {
+      "name": "PINRemoteImage",
+      "version": "2.1.4"
+    },
+    {
       "name": "MLFirebase",
       "version": "^~>\\s?0.[0-9]+"
     },
     {
       "name": "HomeSectionsApi",
-      "version": "^~>\\s?0.[0-9]+"
+      "version": null
     },
     {
       "name": "OperationDetail/Commons",
-      "version": "^~>\\s?3.[0-9]+"
+      "version": null
     },
     {
       "name": "OperationDetail/RealtimeActivities",
-      "version": "^~>\\s?3.[0-9]+"
+      "version": null
     },
     {
       "name": "InStoreHomeSections",
-      "version": "^~>\\s?0.[0-9]+"
+      "version": null
     },
     {
       "name": "MPMerchEngine",
-      "version": "^~>\\s?0.[0-9]+"
+      "version": null
     },
     {
       "name": "MLRemedy",
@@ -313,6 +316,14 @@
     {
       "name": "WalletCongrats",
       "version": "^~>\\s?1.[0-9]+"
-    }   
+    },
+    {
+      "name": "MLCreditsBehaviours",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MLMetrics",
+      "version": "^~>\\s?0.[0-9]+"
+    }
   ]
 }
