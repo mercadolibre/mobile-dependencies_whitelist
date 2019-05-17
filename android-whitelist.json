@@ -603,6 +603,16 @@
         {
             "group": "com\\.mercadolibre\\.android",
             "name": "ui_legacy"
+        },
+        {
+            "group": "com\\.adjust\\.sdk",
+            "name": "adjust-android",
+            "version": "4\\.17\\.0"
+        },
+        {
+            "group": "com\\.android\\.installreferrer",
+            "name": "installreferrer",
+            "version": "1\\.0"
         }
     ]
 }
