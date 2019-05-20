@@ -14,9 +14,19 @@
             "name": "viewmodel"
         },
         {
+            "group": "com\\.adjust\\.sdk",
+            "name": "adjust-android",
+            "version": "4\\.17\\.0"
+        },
+        {
             "group": "com\\.airbnb\\.android",
             "name": "lottie",
             "version": "2\\.7\\.0"
+        },
+        {
+            "group": "com\\.android\\.installreferrer",
+            "name": "installreferrer",
+            "version": "1\\.0"
         },
         {
             "group": "com\\.android\\.support",
@@ -37,6 +47,11 @@
             "group": "com\\.android\\.support",
             "name": "gridlayout-v7",
             "version": "27\\.0\\.2|27\\.1\\.0|28\\.0\\.0"
+        },
+        {
+            "group": "com\\.android\\.support",
+            "name": "multidex",
+            "version": "1\\.0\\.+"
         },
         {
             "group": "com\\.android\\.support",
@@ -78,6 +93,20 @@
             "name": "constraint-layout"
         },
         {
+            "group": "com\\.android\\.support\\.constraint",
+            "name": "constraint-layout-solver",
+            "version": "1\\.1\\.3"
+        },
+        {
+            "group": "com\\.android\\.support\\.constraint",
+            "name": "constraint-layout-solver",
+            "version": "1\\.3\\.11"
+        },
+        {
+            "group": "com\\.bugsnag",
+            "name": "bugsnag-android"
+        },
+        {
             "group": "com\\.f2prateek\\.rx\\.preferences",
             "name": "rx-preferences",
             "version": "1\\.0\\.2"
@@ -98,15 +127,14 @@
             "version": "v3\\.1\\.0"
         },
         {
-            "group": "com\\.github\\.ksoichiro",
-            "name": "android-observablescrollview",
-            "version": "1\\.6\\.0"
-        },
-        {
             "group": "com\\.github\\.joshjdevl\\.libsodiumjni",
             "name": "libsodium-jni-aar",
             "version": "2\\.0\\.1"
-
+        },
+        {
+            "group": "com\\.github\\.ksoichiro",
+            "name": "android-observablescrollview",
+            "version": "1\\.6\\.0"
         },
         {
             "group": "com\\.google\\.android\\.gms",
@@ -147,6 +175,10 @@
             "group": "com\\.google\\.android\\.gms",
             "name": "play-services-safetynet",
             "version": "16\\.0\\.0"
+        },
+        {
+            "group": "com\\.google\\.code\\.gson",
+            "name": "gson"
         },
         {
             "group": "com\\.google\\.firebase",
@@ -192,7 +224,15 @@
         },
         {
             "group": "com\\.mercadolibre\\.android",
+            "name": "login"
+        },
+        {
+            "group": "com\\.mercadolibre\\.android",
             "name": "melidata-sdk"
+        },
+        {
+            "group": "com\\.mercadolibre\\.android",
+            "name": "milestone-tracker"
         },
         {
             "group": "com\\.mercadolibre\\.android",
@@ -216,10 +256,6 @@
         },
         {
             "group": "com\\.mercadolibre\\.android",
-            "name": "milestone-tracker"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android",
             "name": "restclient"
         },
         {
@@ -236,11 +272,11 @@
         },
         {
             "group": "com\\.mercadolibre\\.android",
-            "name": "restclient-legacy"
+            "name": "restclient-extension-header"
         },
         {
             "group": "com\\.mercadolibre\\.android",
-            "name": "restclient-extension-header"
+            "name": "restclient-legacy"
         },
         {
             "group": "com\\.mercadolibre\\.android",
@@ -249,6 +285,10 @@
         {
             "group": "com\\.mercadolibre\\.android",
             "name": "ui"
+        },
+        {
+            "group": "com\\.mercadolibre\\.android",
+            "name": "ui_legacy"
         },
         {
             "group": "com\\.mercadolibre\\.android\\.activity",
@@ -307,12 +347,37 @@
             "name": "history"
         },
         {
+            "group": "com\\.mercadolibre\\.android\\.instore\\.home\\.sections",
+            "name": "instore_home_sections",
+            "version": "mercadopago-1\\.+"
+        },
+        {
             "group": "com\\.mercadolibre\\.android\\.maps",
             "name": "core"
         },
         {
             "group": "com\\.mercadolibre\\.android\\.marketplace\\.map",
             "name": "marketplace\\-map"
+        },
+        {
+            "group": "com\\.mercadolibre\\.android\\.merchengine",
+            "name": "banner",
+            "version": "0\\.\\+"
+        },
+        {
+            "group": "com\\.mercadolibre\\.android\\.merchengine",
+            "name": "carrousel",
+            "version": "0\\.\\+"
+        },
+        {
+            "group": "com\\.mercadolibre\\.android\\.merchengine",
+            "name": "discount_benefits",
+            "version": "0\\.\\+"
+        },
+        {
+            "group": "com\\.mercadolibre\\.android\\.mlcharts",
+            "name": "mlcharts",
+            "version": "0\\.+"
         },
         {
             "group": "com\\.mercadolibre\\.android\\.mlwallet",
@@ -362,6 +427,11 @@
             "group": "com\\.mercadolibre\\.android\\.recommendations"
         },
         {
+            "group": "com\\.mercadolibre\\.android\\.remedy",
+            "name": "remedy",
+            "version": "mercadolibre-1\\.0\\.+"
+        },
+        {
             "group": "com\\.mercadolibre\\.android\\.rule\\.engine",
             "name": "rule\\-engine",
             "version": "1\\.\\+"
@@ -382,10 +452,6 @@
             "name": "biometrics_ui"
         },
         {
-            "group": "com\\.mercadolibre\\.android",
-            "name": "login"
-        },
-        {
             "group": "com\\.mercadolibre\\.android\\.uicomponents"
         },
         {
@@ -396,9 +462,8 @@
             "group": "com\\.mercadolibre\\.android\\.variations"
         },
         {
-            "group": "com\\.mercadolibre\\.android\\.mlcharts",
-            "name": "mlcharts",
-            "version": "0\\.+"
+            "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
+            "name": "api"
         },
         {
             "group": "com\\.mercadopago",
@@ -433,6 +498,11 @@
             "name": "commons"
         },
         {
+            "group": "com\\.mercadopago\\.android\\.congrats",
+            "name": "congrats",
+            "version": "1\\.\\+"
+        },
+        {
             "group": "com\\.mercadopago\\.android\\.contacts",
             "name": "contacts"
         },
@@ -456,11 +526,6 @@
         {
             "group": "com\\.mercadopago\\.point\\.pos",
             "name": "point_pos"
-        },
-        {
-            "group": "com\\.mercadopago\\.android\\.congrats",
-            "name": "congrats",
-            "version": "1\\.\\+"
         },
         {
             "group": "com\\.polidea\\.rxandroidble",
@@ -502,6 +567,10 @@
             "version": "0\\.4\\.13"
         },
         {
+            "group": "de.\\.greenrobot",
+            "name": "eventbus"
+        },
+        {
             "group": "io\\.fotoapparat",
             "name": "fotoapparat",
             "version": "2\\.5\\.0"
@@ -529,11 +598,6 @@
             "name": "zbar"
         },
         {
-            "group": "com\\.android\\.support",
-            "name": "multidex",
-            "version": "1\\.0\\.+"
-        },
-        {
             "group": "org\\.apache\\.commons",
             "name": "commons-lang3",
             "version": "3\\.6"
@@ -541,44 +605,6 @@
         {
             "group": "org\\.jetbrains\\.kotlin",
             "name": "kotlin-android-extensions-runtime"
-        },
-        {
-            "group": "org\\.jetbrains\\.kotlin",
-            "name": "kotlin-stdlib-jdk7"
-        },
-        {
-            "group": "uk\\.co\\.chrisjenx",
-            "name": "calligraphy",
-            "version": "2\\.1\\.0"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
-            "name": "api"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.merchengine",
-            "name": "banner",
-            "version": "0\\.\\+" 
-        }, 
-        {     
-            "group": "com\\.mercadolibre\\.android\\.merchengine",
-            "name": "discount_benefits",
-            "version": "0\\.\\+"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.merchengine",
-            "name": "carrousel",
-            "version": "0\\.\\+"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.instore\\.home\\.sections",
-            "name": "instore_home_sections",
-            "version": "mercadopago-1\\.+"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.remedy",
-            "name": "remedy",
-            "version": "mercadolibre-1\\.0\\.+"
         },
         {
             "group": "org\\.jetbrains\\.kotlin",
@@ -591,28 +617,13 @@
             "version": "1\\.3\\.11"
         },
         {
-            "group": "com\\.android\\.support\\.constraint",
-            "name": "constraint-layout-solver",
-            "version": "1\\.3\\.11"
+            "group": "org\\.jetbrains\\.kotlin",
+            "name": "kotlin-stdlib-jdk7"
         },
         {
-            "group": "com\\.android\\.support\\.constraint",
-            "name": "constraint-layout-solver",
-            "version": "1\\.1\\.3"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android",
-            "name": "ui_legacy"
-        },
-        {
-            "group": "com\\.adjust\\.sdk",
-            "name": "adjust-android",
-            "version": "4\\.17\\.0"
-        },
-        {
-            "group": "com\\.android\\.installreferrer",
-            "name": "installreferrer",
-            "version": "1\\.0"
+            "group": "uk\\.co\\.chrisjenx",
+            "name": "calligraphy",
+            "version": "2\\.1\\.0"
         }
     ]
 }
