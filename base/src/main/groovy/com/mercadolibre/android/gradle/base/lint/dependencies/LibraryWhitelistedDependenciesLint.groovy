@@ -69,8 +69,8 @@ class LibraryWhitelistedDependenciesLint implements Lint {
             def analizeDependency = { dependency ->
                 String dependencyFullName = "${dependency.group}:${dependency.name}:${dependency.version}"
                 boolean isLocalModule =
-                        project.rootProject.subprojects
-                                .find { dependencyFullName.contains("${project.group}:${it.name}") } != null
+                        project.rootProject.allprojects
+                                .find { dependencyFullName.contains("${it.group}:${it.name}") } != null
 
                 /**
                  * - Dependency cant be found in whitelist
