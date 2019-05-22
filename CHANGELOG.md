@@ -1,7 +1,11 @@
-# v6.0.1
+# v6.0.2
 ## Arreglado
 - Se fixea lintGradle no soportando depth>1 (ejemplo :inner1:inner2)
 - Se fixea lintGradle no reconociendo modulos locales con distinto group
+
+# v6.0.1
+## Agregado
+- Se agrega el soporte para publicar los builds a Gradle Enterprise
 
 # v6.0.0
 ## Agregado
