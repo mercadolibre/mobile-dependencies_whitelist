@@ -122,6 +122,11 @@
             "version": "1\\.3\\.0|1\\.13\\.0"
         },
         {
+            "group": "com\\.facebook\\.fresco",
+            "name": "imagepipeline-okhttp3",
+            "version": "1\\.3\\.0|1\\.13\\.0"
+        },
+        {
             "group": "com\\.github\\.PhilJay",
             "name": "MPAndroidChart",
             "version": "v3\\.1\\.0"
@@ -189,6 +194,11 @@
             "group": "com\\.google\\.firebase",
             "name": "firebase-core",
             "version": "16\\.0\\.4|10\\.2\\.6"
+        },
+        {
+            "group": "com\\.google\\.firebase",
+            "name": "firebase-auth",
+            "version": "17\\.0\\.0"
         },
         {
             "group": "com\\.google\\.firebase",
@@ -567,6 +577,16 @@
             "version": "0\\.4\\.13"
         },
         {
+            "group": "com\\.trello\\.rxlifecycle2",
+            "name": "rxlifecycle",
+            "version": "2\\.2\\.2"
+        },
+        {
+            "group": "com\\.trello\\.rxlifecycle2",
+            "name": "rxlifecycle-android-lifecycle",
+            "version": "2\\.2\\.2"
+        },
+        {
             "group": "de\\.greenrobot",
             "name": "eventbus"
         },
@@ -592,6 +612,10 @@
         {
             "group": "io\\.reactivex\\.rxjava2",
             "name": "rxjava"
+        },
+        {
+            "group": "io\\.reactivex\\.rxjava2",
+            "name": "rxkotlin"
         },
         {
             "group": "me\\.dm7\\.barcodescanner",
