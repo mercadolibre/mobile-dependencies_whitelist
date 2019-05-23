@@ -34,7 +34,11 @@
     },
     {
       "name": "MLPlace",
-      "version": "^~>\\s?3.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "Adjust",
+      "version": "^~>\\s?4.[0-9]+.[0-9]+$"
     },
     {
       "name": "Firebase/Core",
@@ -50,8 +54,7 @@
     },
     {
       "name": "CHTCollectionViewWaterfallLayout",
-      "version": "^~>\\s?0.[0-9]+$",
-      "expire": "2017-12-01"
+      "version": "0.8"
     },
     {
       "name": "MLShippingComponents",
@@ -267,6 +270,10 @@
       "version": "3.2.2"
     },
     {
+      "name": "MLCharts",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
       "name": "MLRuleEngine",
       "version": "^~>\\s?0.[0-9]+"
     },
@@ -279,28 +286,60 @@
       "version": "4.4.1"
     },
     {
+      "name": "RxBlocking",
+      "version": "4.4.1"
+    },
+    {
+      "name": "PINRemoteImage",
+      "version": "2.1.4"
+    },
+    {
       "name": "MLFirebase",
       "version": "^~>\\s?0.[0-9]+"
     },
     {
       "name": "HomeSectionsApi",
-      "version": "^~>\\s?0.[0-9]+"
+      "version": null
     },
     {
       "name": "OperationDetail/Commons",
-      "version": "^~>\\s?3.[0-9]+"
+      "version": null
     },
     {
       "name": "OperationDetail/RealtimeActivities",
-      "version": "^~>\\s?3.[0-9]+"
+      "version": null
     },
     {
       "name": "InStoreHomeSections",
-      "version": "^~>\\s?0.[0-9]+"
+      "version": null
     },
     {
       "name": "MPMerchEngine",
+      "version": null
+    },
+    {
+      "name": "MLRemedy",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "WalletCongrats",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MLCreditsBehaviours",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MLMetrics",
       "version": "^~>\\s?0.[0-9]+"
+    },
+    {
+      "name": "MLMilestoneTracker",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MLVPP",
+      "version": null
     }
   ]
 }
