@@ -340,6 +340,10 @@
     {
       "name": "MLVPP",
       "version": null
+    },
+    {
+      "name": "MLLogin",
+      "version": "^~>\\s?1.[0-9]+$"
     }
   ]
 }
