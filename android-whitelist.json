@@ -392,6 +392,11 @@
             "version": "0\\.+"
         },
         {
+            "group": "com\\.mercadolibre\\.android\\.charts",
+            "name": "charts",
+            "version": "0\\.+"
+        },
+        {
             "group": "com\\.mercadolibre\\.android\\.mlwallet",
             "name": "header"
         },
@@ -568,6 +573,11 @@
             "group": "com\\.squareup\\.retrofit2",
             "name": "retrofit",
             "version": "2\\.3\\.0"
+        },
+        {
+            "group": "com\\.squareup\\.timessquare",
+            "name": "timessquare",
+            "version": "1\\.6\\.5"
         },
         {
             "group": "com\\.theartofdev\\.edmodo",
