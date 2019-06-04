@@ -344,6 +344,10 @@
     {
       "name": "MLLogin",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "Bugsnag",
+      "version": "^~>\\s?5.[0-22]+$"
     }
   ]
 }
