@@ -481,6 +481,11 @@
             "name": "api"
         },
         {
+            "group": "com\\.mercadolibre\\.android\\.registration",
+            "name": "core",
+            "expire": "2019-10-31"
+        },
+        {
             "group": "com\\.mercadopago",
             "name": "sdk"
         },
