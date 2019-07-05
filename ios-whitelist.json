@@ -6,7 +6,7 @@
     },
     {
       "name": "MLMapComponent",
-      "version": "^~>\\s?2.[0-9]+$"
+      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "MLCart",
@@ -34,7 +34,11 @@
     },
     {
       "name": "MLPlace",
-      "version": "^~>\\s?3.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "Adjust",
+      "version": "^~>\\s?[0-9]+.[0-9]+$"
     },
     {
       "name": "Firebase/Core",
@@ -50,8 +54,7 @@
     },
     {
       "name": "CHTCollectionViewWaterfallLayout",
-      "version": "^~>\\s?0.[0-9]+$",
-      "expire": "2017-12-01"
+      "version": "0.8"
     },
     {
       "name": "MLShippingComponents",
@@ -69,6 +72,10 @@
     {
       "name": "MercadoPagoSDK",
       "version": null
+    },
+    {
+      "name": "MercadoPagoSDKV4",
+      "version": "^~>\\s?4.[0-9]+$"
     },
     {
       "name": "PXMLPaymentProcessor",
@@ -95,7 +102,7 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
-      "name" : "MLVariations",
+      "name": "MLVariations",
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
@@ -131,6 +138,10 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
+      "name": "MLNavigationBarTransition",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "MLNotifications",
       "version": "^~>\\s?2.[0-9]+$"
     },
@@ -160,7 +171,7 @@
     },
     {
       "name": "MLAuthentication",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?0.[0-9]+"
     },
     {
       "name": "InStore-Discovery",
@@ -168,23 +179,27 @@
     },
     {
       "name": "MPSDK",
-      "version": "^~>\\s?9.[0-9]+$"
+      "version": "^~>\\s?10.[0-9]+$"
     },
-    { 
+    {
       "name": "MLMap",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "MLCard",
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "name": "MLCardDrawer",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "MLNavigationCP",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?[1-2]+.[0-9]+"
     },
     {
       "name": "MLUINavigationCP",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+"
     },
     {
       "name": "Realm",
@@ -229,6 +244,126 @@
     {
       "name": "MLDynamicModal",
       "version": "0.2.0"
+    },
+    {
+      "name": "MLCPG",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLSupermarket",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLBiometrics",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLClassifiedsDynamicFlow",
+      "version": null
+    },
+    {
+      "name": "AmountLabel",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLCollaborators",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "Flox",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "Charts",
+      "version": "3.2.2"
+    },
+    {
+      "name": "MLCharts",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLRuleEngine",
+      "version": "^~>\\s?0.[0-9]+"
+    },
+    {
+      "name": "MLVIP/URLScanner",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "RxSwift",
+      "version": "4.4.1"
+    },
+    {
+      "name": "RxBlocking",
+      "version": "4.4.1"
+    },
+    {
+      "name": "PINRemoteImage",
+      "version": "2.1.4"
+    },
+    {
+      "name": "MLFirebase",
+      "version": "^~>\\s?0.[0-9]+"
+    },
+    {
+      "name": "HomeSectionsApi",
+      "version": null
+    },
+    {
+      "name": "OperationDetail/Commons",
+      "version": null
+    },
+    {
+      "name": "OperationDetail/RealtimeActivities",
+      "version": null
+    },
+    {
+      "name": "InStoreHomeSections",
+      "version": null
+    },
+    {
+      "name": "MPMerchEngine",
+      "version": null
+    },
+    {
+      "name": "MLRemedy",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "WalletCongrats",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MLCreditsBehaviours",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MLMetrics",
+      "version": "^~>\\s?0.[0-9]+"
+    },
+    {
+      "name": "MLMilestoneTracker",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MLVPP",
+      "version": null
+    },
+    {
+      "name": "MLLogin",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "Bugsnag",
+      "version": "^~>\\s?5.[0-2][0-9]+"
+    },
+    {
+      "name": "MLSecurity",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "SmiSdk",
+      "version": "3.6.0"
     }
   ]
 }
