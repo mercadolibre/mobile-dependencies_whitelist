@@ -523,6 +523,11 @@
             "name": "commons"
         },
         {
+            "group": "com\\.google\\.zxing",
+            "name": "core",
+            "version": "3\\.3\\.0"
+        },
+        {
             "group": "com\\.mercadopago\\.android\\.congrats",
             "name": "congrats",
             "version": "1\\.\\+"
