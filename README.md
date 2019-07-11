@@ -50,7 +50,7 @@ Las tasks creadas son de la forma:
 Donde:
 
 - \<Packaging>: aar - jar
-- \<Type>: Local - Release - Alpha - Experimental
+- \<Type>: Local - Release - Experimental
 - \<Flavor>: Definido por cada uno, si no tiene la aplicacion, desestimarlo
 - \<BuildType>: Debug - Release. El developer puede agregar mas, asi que tambien es definido por cada uno.
 
@@ -59,7 +59,7 @@ Notas a tener en cuenta:
 - Soporta tanto proyectos AAR como JAR. 
 - Soporta flavors, buildTypes dentro de cada uno para proyectos de Android. Para proyectos Java soporta sourceSets (serian los flavors de Java)
 - Soporta cualquier superset de java, es decir que si tenemos codigo Kotlin, lo va a agregar.
-- En caso de tener dependencias locales, agregarlas como `compile project(path: '...')` y automaticamente nosotros vamos a referenciarlas como corresponde.
+- En caso de tener dependencias locales, agregarlas como `implementation project(path: '...')` y automaticamente nosotros vamos a referenciarlas como corresponde.
 - En caso de haber productFlavors, los mismos para diferenciarlos en una misma publicacion van a tener su nombre como prefijo en la version "Ejemplo com.mercadolibre.group:artifact:flavorA-1.0.0"
 
 ### Lint

@@ -20,6 +20,7 @@ class LockableModule implements Module {
 
     private static final String DEPENDENCIES_TASK = "dependencies"
 
+    //TODO: this should be removed once all alphas had been outaded by newer version
     private static final String VERSION_ALPHA = "ALPHA"
 
     private static final String COMPILE_CONFIGURATIONS = "CompileClasspath"
@@ -35,6 +36,7 @@ class LockableModule implements Module {
                 }
             }
 
+            //TODO: this should be removed once all alphas had been outaded by newer version
             if (runningLockTask(project)) {
                 rejectAlphas(project)
             }
@@ -62,6 +64,7 @@ class LockableModule implements Module {
         locksFolder.exists() && locksFolder.isDirectory() && locksFolder.listFiles().length > 0
     }
 
+    //TODO: this should be removed once all alphas had been outaded by newer version
     def rejectAlphas(Project project) {
         def localDeps = []
         project.rootProject.subprojects.each { localDeps.add("$it.group:$it.name") }
