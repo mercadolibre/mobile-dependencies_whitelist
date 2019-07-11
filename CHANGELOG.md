@@ -1,3 +1,11 @@
+# v6.1.0
+## Actualizado
+- Gradle a 4.10.3
+- Android Gradle Plugin a 3.3.2
+
+## Eliminado
+- Se eliminaron las tasks para generar Alphas, junto a código que servía para mantener este flujo
+
 # v6.0.2
 ## Arreglado
 - Se fixea lintGradle no soportando depth>1 (ejemplo :inner1:inner2)

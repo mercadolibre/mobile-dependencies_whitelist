@@ -11,7 +11,6 @@ import org.gradle.api.publish.maven.plugins.MavenPublishPlugin
  */
 abstract class PublishableModule implements Module {
 
-    protected static final String TASK_TYPE_ALPHA = 'Alpha'
     protected static final String TASK_TYPE_RELEASE = 'Release'
     protected static final String TASK_TYPE_EXPERIMENTAL = 'Experimental'
     protected static final String TASK_TYPE_LOCAL = 'Local'

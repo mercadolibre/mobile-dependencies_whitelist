@@ -7,7 +7,7 @@ import org.gradle.api.Task
 /**
  * Android library publishing module. It will create tasks for each available variant and flavor.
  *
- * Currently it will create publish tasks for ALPHA / RELEASE / EXPERIMENTAL / LOCAL
+ * Currently it will create publish tasks for RELEASE / EXPERIMENTAL / LOCAL
  *
  * Created by saguilera on 7/21/17.
  */
@@ -37,8 +37,6 @@ class AndroidLibraryPublishableModule extends PublishableModule {
     protected void createTasksFor(def libraryVariant) {
         String variantName = libraryVariant.name
 
-        def alphaTask = createTask(new PublishAarAlphaTask(), libraryVariant,
-                getTaskName(TASK_TYPE_ALPHA, PACKAGING, variantName))
         def experimentalTask = createTask(new PublishAarExperimentalTask(), libraryVariant,
                 getTaskName(TASK_TYPE_EXPERIMENTAL, PACKAGING, variantName))
         def releaseTask = createTask(new PublishAarReleaseTask(), libraryVariant,
@@ -48,13 +46,11 @@ class AndroidLibraryPublishableModule extends PublishableModule {
 
         if (libraryVariant.name.toLowerCase().contains(TASK_TYPE_RELEASE.toLowerCase())) {
             // Create tasks without the variant suffix that default to the main sourcesets
-            createStubTask(getTaskName(TASK_TYPE_ALPHA, PACKAGING), alphaTask)
             createStubTask(getTaskName(TASK_TYPE_EXPERIMENTAL, PACKAGING), experimentalTask)
             createStubTask(getTaskName(TASK_TYPE_RELEASE, PACKAGING), releaseTask)
             createStubTask(getTaskName(TASK_TYPE_LOCAL, PACKAGING), localTask)
 
             // Create tasks without the variant and package type suffix, defaulting to release
-            createStubTask(getTaskName(TASK_TYPE_ALPHA), alphaTask)
             createStubTask(getTaskName(TASK_TYPE_EXPERIMENTAL), experimentalTask)
             createStubTask(getTaskName(TASK_TYPE_RELEASE), releaseTask)
             createStubTask(getTaskName(TASK_TYPE_LOCAL), localTask)

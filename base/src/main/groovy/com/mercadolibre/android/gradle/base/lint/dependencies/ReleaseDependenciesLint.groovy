@@ -17,7 +17,7 @@ class ReleaseDependenciesLint implements Lint {
     private static final String FILE = "build/reports/${ReleaseDependenciesLint.class.simpleName}/${Lint.LINT_FILENAME}"
 
     /**
-     * Checks the dependencies the project contains are all release or alpha.
+     * Checks the dependencies the project contains are all release.
      *
      * This is only ran if the code is going to be going to master/release-^/X
      * 
