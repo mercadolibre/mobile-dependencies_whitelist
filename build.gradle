@@ -4,7 +4,6 @@ apply plugin: 'mercadolibre.mobile'
 buildscript {
     repositories {
         jcenter()
-        mavenLocal()
         maven {
             url "https://dl.bintray.com/mercadolibre/android-releases"
             credentials {
@@ -25,18 +24,10 @@ buildscript {
     }
 }
 
-
-
 allprojects {
-    repositories {
-        jcenter()
-    }
-
     group = projectGroup
     version = libraryVersion
 }
-
-
 
 buildScan {
     publishAlwaysIf(true)
