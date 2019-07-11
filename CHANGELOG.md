@@ -1,3 +1,7 @@
+# v6.1.0
+## Cambiado
+- Se migra el plugin a Gradle 5.5.1
+
 # v6.0.2
 ## Arreglado
 - Se fixea lintGradle no soportando depth>1 (ejemplo :inner1:inner2)
