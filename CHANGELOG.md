@@ -1,6 +1,9 @@
 # v6.1.0
-## Cambiado
+## Actualizado
 - Se migra el plugin a Gradle 5.5.1
+
+## Eliminado
+- Se eliminaron las tasks para generar Alphas, junto a código que servía para mantener este flujo
 
 # v6.0.2
 ## Arreglado

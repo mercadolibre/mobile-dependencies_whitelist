@@ -7,7 +7,7 @@ import org.gradle.api.Project
  * Java publishing module in charge of creating tasks for each available sourceSet, and letting it publish it to bintray
  * or mavenLocal
  *
- * Currently it will create publish tasks for ALPHA / RELEASE / EXPERIMENTAL / LOCAL
+ * Currently it will create publish tasks for RELEASE / EXPERIMENTAL / LOCAL
  *
  * Created by saguilera on 7/21/17.
  */
@@ -44,8 +44,6 @@ class JavaPublishableModule extends PublishableModule {
         project.sourceSets.each {
             if (it.name != SOURCE_SETS_TEST) {
                 String variantName = it.name
-                createTask(new PublishJarAlphaTask(), it,
-                        getTaskName(TASK_TYPE_ALPHA, PACKAGING, variantName))
                 createTask(new PublishJarReleaseTask(), it,
                         getTaskName(TASK_TYPE_RELEASE, PACKAGING, variantName))
                 createTask(new PublishJarExperimentalTask(), it,
@@ -56,13 +54,11 @@ class JavaPublishableModule extends PublishableModule {
 
             if (it.name == SOURCE_SETS_DEFAULT) {
                 // If release, create mirror tasks without the flavor name
-                createTask(new PublishJarAlphaTask(), it, getTaskName(TASK_TYPE_ALPHA, PACKAGING))
                 createTask(new PublishJarReleaseTask(), it, getTaskName(TASK_TYPE_RELEASE, PACKAGING))
                 createTask(new PublishJarExperimentalTask(), it, getTaskName(TASK_TYPE_EXPERIMENTAL, PACKAGING))
                 createTask(new PublishJarLocalTask(), it, getTaskName(TASK_TYPE_LOCAL, PACKAGING))
 
                 // And also mirror them without the Jar suffix too
-                createTask(new PublishJarAlphaTask(), it, getTaskName(TASK_TYPE_ALPHA))
                 createTask(new PublishJarReleaseTask(), it, getTaskName(TASK_TYPE_RELEASE))
                 createTask(new PublishJarExperimentalTask(), it, getTaskName(TASK_TYPE_EXPERIMENTAL))
                 createTask(new PublishJarLocalTask(), it, getTaskName(TASK_TYPE_LOCAL))
