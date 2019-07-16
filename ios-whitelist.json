@@ -15,7 +15,7 @@
       },
       {
           "name": "Bugsnag",
-          "version": "^~>\\s?5.[0-2][0-9]+"
+          "version": "5.22.2"
       },
       {
           "name": "CHTCollectionViewWaterfallLayout",
@@ -135,7 +135,7 @@
       },
       {
           "name": "MLDynamicModal",
-          "version": "0.2.0"
+          "version": "^~>\\s?0.[0-9]+$"
       },
       {
           "name": "MLESCManager",
@@ -283,7 +283,7 @@
       },
       {
           "name": "MPSignUpLibs",
-          "version": "0.2.0"
+          "version": "^~>\\s?0.[0-9]+$"
       },
       {
           "name": "MPTopFloatingView",
@@ -363,7 +363,7 @@
       },
       {
           "name": "lottie-ios",
-          "version": "^~>\\s?2.[0-9]+$"
+          "version": "2.5.0"
       }
   ]
 }
