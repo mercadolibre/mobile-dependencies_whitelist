@@ -10,6 +10,14 @@ default: &defaultJob
     - run:
         name: "Run linter"
         command: jsonlint $FILE
+    - run:
+        name: "Install JSON sorter"
+        command: sudo npm install sort-json -g
+    - run:
+        name: "Run JSON sorter lint"
+        command: | 
+          sort-json $FILE
+          if [[ `git ls-files -m | wc -l | xargs` != 0 ]]; then exit 1; fi
 version: 2
 jobs:
   android:
