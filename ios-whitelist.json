@@ -18,7 +18,7 @@
     },
     {
       "name": "MLRecommendationCombo",
-      "version": null
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "MLAppRater",
@@ -71,7 +71,7 @@
     },
     {
       "name": "MercadoPagoSDK",
-      "version": null
+      "version": "^~>\\s?4.[0-9]+$"
     },
     {
       "name": "MercadoPagoSDKV4",
@@ -79,23 +79,23 @@
     },
     {
       "name": "PXMLPaymentProcessor",
-      "version": null
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "MIPXPaymentProcessorPlugin",
-      "version": null
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "PXAccountMoneyPlugin",
-      "version": null
+      "version": "^~>\\s?4.[0-9]+$"
     },
     {
       "name": "MLESCManager",
-      "version": null
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "MLMYMLCommons",
-      "version": null
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "lottie-ios",
@@ -259,7 +259,7 @@
     },
     {
       "name": "MLClassifiedsDynamicFlow",
-      "version": null
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "AmountLabel",
@@ -307,23 +307,23 @@
     },
     {
       "name": "HomeSectionsApi",
-      "version": null
+      "version": "^~>\\s?1.[0-9]+"
     },
     {
       "name": "OperationDetail/Commons",
-      "version": null
+      "version": "^~>\\s?1.[0-9]+"
     },
     {
       "name": "OperationDetail/RealtimeActivities",
-      "version": null
+      "version": "^~>\\s?1.[0-9]+"
     },
     {
       "name": "InStoreHomeSections",
-      "version": null
+      "version": "^~>\\s?1.[0-9]+"
     },
     {
       "name": "MPMerchEngine",
-      "version": null
+      "version": "^~>\\s?1.[0-9]+"
     },
     {
       "name": "MLRemedy",
