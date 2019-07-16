@@ -81,23 +81,6 @@ deploy-release-job: &deployReleaseJob
           name: Run Deploy
           command: kelli deploy lib --release
 ##
-# We define a job for deploying as alpha. This job will be in charge of running:
-# - Install mobile-cd build automation: 'kelli'
-# - Run deploy of a lib | application as release
-##
-deploy-alpha-job: &deployAlphaJob
-  <<: *defaultJob
-  steps:
-      # Checkout to our repo and add the ssh keys for doing git stuff
-      - checkout
-      - add_ssh_keys
-      - run:
-          name: Install Mobile Requirements
-          command: eval $GET_MOBILE_CD | ruby
-      - run:
-          name: Run Deploy
-          command: kelli deploy lib --alpha
-##
 # We define our default workflow
 # This workflow will be used by our default builds
 # The following workflow runs on every branch except master or release/?
@@ -108,19 +91,6 @@ default-workflow: &defaultWorkflow
       ignore:
         - master
         - /release\/.*$/
-##
-# We define our alpha deploy workflow
-# The following workflow runs only on develop branch
-# And depends of all the default workflows
-##
-deploy-alpha-workflow: &deployAlphaWorkflow
-  requires:
-    - base
-
-  filters:
-    branches:
-      only:
-        - develop
 
 ##
 # Create our jobs, making them inherit from the defined jobs
@@ -133,8 +103,6 @@ jobs:
     <<: *buildJob
     environment:
       MODULE: base
-  deployAlpha:
-    <<: *deployAlphaJob
   build: # Do NOT rename this "build" job because Circle CI expects this name.
     <<: *deployReleaseJob
 
@@ -149,5 +117,3 @@ workflows:
     jobs:
       - base:
           <<: *defaultWorkflow
-      - deployAlpha: 
-          <<: *deployAlphaWorkflow
