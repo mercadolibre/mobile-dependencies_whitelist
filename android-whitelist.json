@@ -1,6 +1,12 @@
 {
     "whitelist": [
         {
+            "expire": "2019-10-31",
+            "group": "com\\.mercadolibre\\.android\\.registration",
+            "name": "core",
+            "version": "mercadolibre-6\\.\\+"
+        },
+        {
             "expires": "2018-09-01",
             "group": "com\\.squareup\\.picasso",
             "name": "picasso",
@@ -44,6 +50,11 @@
         {
             "group": "com\\.android\\.support",
             "name": "cardview-v7",
+            "version": "28\\.0\\.0"
+        },
+        {
+            "group": "com\\.android\\.support",
+            "name": "customtabs",
             "version": "28\\.0\\.0"
         },
         {
@@ -111,15 +122,15 @@
             "name": "constraint-layout-solver",
             "version": "1\\.3\\.11"
         },
-	{
-            "group": "com\\.android\\.support",
-            "name": "customtabs",
-            "version": "28\\.0\\.0"
-        },
         {
             "group": "com\\.bugsnag",
             "name": "bugsnag-android",
             "version": "4\\.15\\.0"
+        },
+        {
+            "group": "com\\.datami",
+            "name": "smisdk",
+            "version": "3\\.4\\.4"
         },
         {
             "group": "com\\.f2prateek\\.rx\\.preferences",
@@ -187,14 +198,14 @@
             "version": "16\\.0\\.0|10\\.2\\.6"
         },
         {
-            "group": "com\\.google\\.android\\.libraries\\.places",
-            "name": "places-compat",
-            "version": "1\\.1\\.0"
-        },
-        {
             "group": "com\\.google\\.android\\.gms",
             "name": "play-services-safetynet",
             "version": "16\\.0\\.0"
+        },
+        {
+            "group": "com\\.google\\.android\\.libraries\\.places",
+            "name": "places-compat",
+            "version": "1\\.1\\.0"
         },
         {
             "group": "com\\.google\\.code\\.gson",
@@ -208,13 +219,13 @@
         },
         {
             "group": "com\\.google\\.firebase",
-            "name": "firebase-core",
-            "version": "16\\.0\\.4|10\\.2\\.6"
+            "name": "firebase-auth",
+            "version": "17\\.0\\.0"
         },
         {
             "group": "com\\.google\\.firebase",
-            "name": "firebase-auth",
-            "version": "17\\.0\\.0"
+            "name": "firebase-core",
+            "version": "16\\.0\\.4|10\\.2\\.6"
         },
         {
             "group": "com\\.google\\.firebase",
@@ -230,6 +241,11 @@
             "group": "com\\.google\\.maps\\.android",
             "name": "android-maps-utils",
             "version": "0\\.4\\.4"
+        },
+        {
+            "group": "com\\.google\\.zxing",
+            "name": "core",
+            "version": "3\\.3\\.0"
         },
         {
             "group": "com\\.journeyapps",
@@ -285,11 +301,6 @@
             "group": "com\\.mercadolibre\\.android",
             "name": "pms",
             "version": "10\\.\\+"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.matt",
-            "name": "core",
-            "version": "mercadolibre-2\\.\\+"
         },
         {
             "group": "com\\.mercadolibre\\.android",
@@ -377,6 +388,11 @@
             "version": "4\\.\\+"
         },
         {
+            "group": "com\\.mercadolibre\\.android\\.charts",
+            "name": "melicharts",
+            "version": "0\\.\\+"
+        },
+        {
             "group": "com\\.mercadolibre\\.android\\.classifieds",
             "name": "dynamic-flow",
             "version": "0\\.\\+"
@@ -405,6 +421,10 @@
             "version": "1\\.\\+"
         },
         {
+            "group": "com\\.mercadolibre\\.android\\.fontela",
+            "version": "3\\.\\+"
+        },
+        {
             "group": "com\\.mercadolibre\\.android\\.history",
             "name": "history",
             "version": "2\\.\\+"
@@ -425,17 +445,17 @@
             "version": "4\\.\\+"
         },
         {
+            "group": "com\\.mercadolibre\\.android\\.matt",
+            "name": "core",
+            "version": "mercadolibre-2\\.\\+"
+        },
+        {
             "group": "com\\.mercadolibre\\.android\\.merchengine",
             "version": "1\\.\\+"
         },
         {
             "group": "com\\.mercadolibre\\.android\\.mlcharts",
             "name": "mlcharts",
-            "version": "0\\.\\+"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.charts",
-            "name": "melicharts",
             "version": "0\\.\\+"
         },
         {
@@ -531,10 +551,6 @@
             "version": "6\\.\\+"
         },
         {
-            "group": "com\\.mercadolibre\\.android\\.fontela",
-            "version": "3\\.\\+"
-        },
-        {
             "group": "com\\.mercadolibre\\.android\\.uinavigationcp",
             "name": "addresshub",
             "version": "2\\.\\+"
@@ -547,12 +563,6 @@
             "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
             "name": "api",
             "version": "1\\.\\+"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.registration",
-            "name": "core",
-            "expire": "2019-10-31",
-            "version": "mercadolibre-6\\.\\+"
         },
         {
             "group": "com\\.mercadopago",
@@ -595,11 +605,6 @@
             "version": "7\\.\\+"
         },
         {
-            "group": "com\\.google\\.zxing",
-            "name": "core",
-            "version": "3\\.3\\.0"
-        },
-        {
             "group": "com\\.mercadopago\\.android\\.congrats",
             "name": "congrats",
             "version": "1\\.\\+"
@@ -640,6 +645,11 @@
             "version": "1\\.5\\.0"
         },
         {
+            "group": "com\\.squareup",
+            "name": "android-times-square",
+            "version": "1\\.7\\.10"
+        },
+        {
             "group": "com\\.squareup\\.okhttp3",
             "name": "okhttp",
             "version": "3\\.11\\.0"
@@ -663,11 +673,6 @@
             "group": "com\\.squareup\\.retrofit2",
             "name": "retrofit",
             "version": "2\\.3\\.0"
-        },
-        {
-            "group": "com\\.squareup",
-            "name": "android-times-square",
-            "version": "1\\.7\\.10"
         },
         {
             "group": "com\\.theartofdev\\.edmodo",
@@ -763,11 +768,6 @@
             "group": "uk\\.co\\.chrisjenx",
             "name": "calligraphy",
             "version": "2\\.1\\.0"
-        },
-        {
-            "group": "com\\.datami",
-            "name": "smisdk",
-            "version": "3\\.4\\.4"
         }
     ]
 }
