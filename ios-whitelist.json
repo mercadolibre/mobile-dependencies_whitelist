@@ -15,7 +15,7 @@
         },
         {
             "name": "Bugsnag",
-            "version": "5.22.2"
+            "version": "^~>\\s?5.[0-9]+$"
         },
         {
             "name": "CHTCollectionViewWaterfallLayout",
