@@ -542,6 +542,10 @@
             "name": "contacts"
         },
         {
+            "group": "com\\.mercadopago\\.android\\.moneytransfer",
+            "name": "contacts_moneytransfer"
+        },
+        {
             "group": "com\\.mercadopago\\.android\\.ml_esc_manager",
             "name": "ml_esc_manager"
         },
