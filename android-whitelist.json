@@ -287,6 +287,11 @@
             "version": "10\\.\\+"
         },
         {
+            "group": "com\\.mercadolibre\\.android\\.adjust",
+            "name": "core",
+            "version": "mercadopago-1\\.\\+"
+        },
+        {
             "group": "com\\.mercadolibre\\.android\\.matt",
             "name": "core",
             "version": "mercadolibre-2\\.\\+"
@@ -610,6 +615,11 @@
             "version": "4\\.\\+"
         },
         {
+            "group": "com\\.mercadopago\\.android\\.moneytransfer",
+            "name": "contacts",
+            "version": "5\\.\\+"
+        },
+        {
             "group": "com\\.mercadopago\\.android\\.ml_esc_manager",
             "name": "ml_esc_manager",
             "version": "2\\.\\+"
@@ -768,6 +778,11 @@
             "group": "com\\.datami",
             "name": "smisdk",
             "version": "3\\.4\\.4"
+        },
+        {
+            "group": "com\\.mercadolibre\\.android",
+            "name": "carddrawer",
+            "version": "1\\.\\+"
         }
     ]
 }
