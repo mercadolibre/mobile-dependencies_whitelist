@@ -303,6 +303,11 @@
             "version": "10\\.\\+"
         },
         {
+            "group": "com\\.mercadolibre\\.android\\.adjust",
+            "name": "core",
+            "version": "mercadopago-1\\.\\+"
+        },
+        {
             "group": "com\\.mercadolibre\\.android",
             "name": "progress-circle",
             "version": "1\\.\\+"
@@ -615,6 +620,11 @@
             "version": "4\\.\\+"
         },
         {
+            "group": "com\\.mercadopago\\.android\\.moneytransfer",
+            "name": "contacts",
+            "version": "5\\.\\+"
+        },
+        {
             "group": "com\\.mercadopago\\.android\\.ml_esc_manager",
             "name": "ml_esc_manager",
             "version": "2\\.\\+"
@@ -768,6 +778,10 @@
             "group": "uk\\.co\\.chrisjenx",
             "name": "calligraphy",
             "version": "2\\.1\\.0"
+        {
+            "group": "com\\.mercadolibre\\.android",
+            "name": "carddrawer",
+            "version": "1\\.\\+"
         }
     ]
 }
