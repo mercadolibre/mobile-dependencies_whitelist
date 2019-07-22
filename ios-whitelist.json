@@ -1,39 +1,8 @@
 {
   "whitelist": [
     {
-      "name": "MeliSDK",
-      "version": "^~>\\s?6.[0-9]+$"
-    },
-    {
-      "name": "MLMapComponent",
-      "version": "^~>\\s?2.[0-9]+"
-    },
-    {
-      "name": "MLCart",
-      "version": "^~>\\s?2.[0-9]+$"
-    },
-    {
-      "name": "MLRecommendations",
-      "version": "^~>\\s?4.[0-9]+$"
-    },
-    {
-      "name": "MLRecommendationCombo",
-      "version": "^~>\\s?2.[0-9]+$"
-    },
-    {
-      "name": "MLAppRater",
-      "version": "^~>\\s?3.[0-9]+$"
-    },
-    {
-      "name": "MLImagePicker",
-      "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "name": "MPTopFloatingView",
-      "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "name": "MLPlace",
+      "expire": "2017-12-15",
+      "name": "MLShippingComponents",
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
@@ -41,189 +10,20 @@
       "version": "^~>\\s?[0-9]+.[0-9]+$"
     },
     {
-      "name": "Firebase/Core",
-      "version": "^~>\\s?4.13.0$"
+      "name": "AmountLabel",
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "name": "Firebase/DynamicLinks",
-      "version": "^~>\\s?4.13.0$"
-    },
-    {
-      "name": "MLSearch/Suggestion",
-      "version": "^~>\\s?3.[0-9]+$"
+      "name": "Bugsnag",
+      "version": "5.22.2"
     },
     {
       "name": "CHTCollectionViewWaterfallLayout",
       "version": "0.8"
     },
     {
-      "name": "MLShippingComponents",
-      "version": "^~>\\s?1.[0-9]+$",
-      "expire": "2017-12-15"
-    },
-    {
-      "name": "MLProgressCircle",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "name": "MLMultiImageView",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "name": "MercadoPagoSDK",
-      "version": "^~>\\s?4.[0-9]+$"
-    },
-    {
-      "name": "MercadoPagoSDKV4",
-      "version": "^~>\\s?4.[0-9]+$"
-    },
-    {
-      "name": "PXMLPaymentProcessor",
-      "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "name": "MIPXPaymentProcessorPlugin",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "name": "PXAccountMoneyPlugin",
-      "version": "^~>\\s?4.[0-9]+$"
-    },
-    {
-      "name": "MLESCManager",
-      "version": "^~>\\s?2.[0-9]+$"
-    },
-    {
-      "name": "MLMYMLCommons",
-      "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "name": "lottie-ios",
-      "version": "2.0.2|2.5.0"
-    },
-    {
-      "name": "MLVariations",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "name": "MLNetworking",
-      "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "name": "MLCommons",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "name": "MLUI",
-      "version": "^~>\\s?5.[0-9]+$"
-    },
-    {
-      "name": "MLPMS",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "name": "MLBookmarks",
-      "version": "^~>\\s?2.[0-9]+$"
-    },
-    {
-      "name": "MLMelidata",
-      "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "name": "MLReachability",
-      "version": "^~>\\s?2.[0-9]+$"
-    },
-    {
-      "name": "MLAnalytics",
-      "version": "^~>\\s?2.[0-9]+$"
-    },
-    {
-      "name": "MLNavigationBarTransition",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "name": "MLNotifications",
-      "version": "^~>\\s?2.[0-9]+$"
-    },
-    {
-      "name": "StyledPageControl",
-      "version": "1.0"
-    },
-    {
-      "name": "PureLayout",
-      "version": "3.1.2"
-    },
-    {
-      "name": "FXBlurView",
-      "version": "1.6.4"
-    },
-    {
-      "name": "MGSwipeTableCell",
-      "version": "1.6.1"
-    },
-    {
-      "name": "MLOnDemandResources",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "name": "MLUIComponents",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "name": "MLAuthentication",
-      "version": "^~>\\s?0.[0-9]+"
-    },
-    {
-      "name": "InStore-Discovery",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "name": "MPSDK",
-      "version": "^~>\\s?10.[0-9]+$"
-    },
-    {
-      "name": "MLMap",
-      "version": "^~>\\s?2.[0-9]+"
-    },
-    {
-      "name": "MLCard",
-      "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "name": "MLCardDrawer",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "name": "MLNavigationCP",
-      "version": "^~>\\s?[1-2]+.[0-9]+"
-    },
-    {
-      "name": "MLUINavigationCP",
-      "version": "^~>\\s?1.[0-9]+"
-    },
-    {
-      "name": "Realm",
-      "version": "2.10.0"
-    },
-    {
-      "name": "SDWebImage",
-      "version": "^~>\\s?3.[0-9]+$"
-    },
-    {
-      "name": "RazzleDazzle",
-      "version": "0.1.5"
-    },
-    {
-      "name": "MPDynamicSkeleton",
-      "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "name": "ISO8601DateFormatter",
-      "version": "0.8"
-    },
-    {
-      "name": "FSQCollectionViewAlignedLayout",
-      "version": "1.1.1"
+      "name": "Charts",
+      "version": "3.2.2"
     },
     {
       "name": "FBSDKCoreKit",
@@ -234,108 +34,140 @@
       "version": "4.15.0"
     },
     {
-      "name": "MPSignUpLibs",
-      "version": "^~>\\s?0.[0-9]+$"
+      "name": "FSQCollectionViewAlignedLayout",
+      "version": "1.1.1"
     },
     {
-      "name": "RSKImageCropper",
-      "version": "1.6.3"
+      "name": "FXBlurView",
+      "version": "1.6.4"
     },
     {
-      "name": "MLDynamicModal",
-      "version": "^~>\\s?0.[0-9]+$"
+      "name": "Firebase/Core",
+      "version": "^~>\\s?4.13.0$"
     },
     {
-      "name": "MLCPG",
-      "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "name": "MLSupermarket",
-      "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "name": "MLBiometrics",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "name": "MLClassifiedsDynamicFlow",
-      "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "name": "AmountLabel",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "name": "MLCollaborators",
-      "version": "^~>\\s?0.[0-9]+$"
+      "name": "Firebase/DynamicLinks",
+      "version": "^~>\\s?4.13.0$"
     },
     {
       "name": "Flox",
       "version": "^~>\\s?2.[0-9]+"
     },
     {
-      "name": "Charts",
-      "version": "3.2.2"
-    },
-    {
-      "name": "MLCharts",
-      "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "name": "MLRuleEngine",
-      "version": "^~>\\s?0.[0-9]+"
-    },
-    {
-      "name": "MLVIP/URLScanner",
-      "version": "^~>\\s?1.[0-9]+"
-    },
-    {
-      "name": "RxSwift",
-      "version": "4.4.1"
-    },
-    {
-      "name": "RxBlocking",
-      "version": "4.4.1"
-    },
-    {
-      "name": "PINRemoteImage",
-      "version": "2.1.4"
-    },
-    {
-      "name": "MLFirebase",
-      "version": "^~>\\s?0.[0-9]+"
-    },
-    {
       "name": "HomeSectionsApi",
       "version": "^~>\\s?1.[0-9]+"
     },
     {
-      "name": "OperationDetail/Commons",
-      "version": "^~>\\s?1.[0-9]+"
+      "name": "ISO8601DateFormatter",
+      "version": "0.8"
     },
     {
-      "name": "OperationDetail/RealtimeActivities",
-      "version": "^~>\\s?1.[0-9]+"
+      "name": "InStore-Discovery",
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "InStoreHomeSections",
       "version": "^~>\\s?1.[0-9]+"
     },
     {
-      "name": "MPMerchEngine",
-      "version": "^~>\\s?1.[0-9]+"
+      "name": "MGSwipeTableCell",
+      "version": "1.6.1"
     },
     {
-      "name": "MLRemedy",
-      "version": "^~>\\s?1.[0-9]+"
+      "name": "MIPXPaymentProcessorPlugin",
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "name": "WalletCongrats",
-      "version": "^~>\\s?1.[0-9]+"
+      "name": "MLAnalytics",
+      "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "name": "MLAppRater",
+      "version": "^~>\\s?3.[0-9]+$"
+    },
+    {
+      "name": "MLAuthentication",
+      "version": "^~>\\s?0.[0-9]+"
+    },
+    {
+      "name": "MLBiometrics",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLBookmarks",
+      "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "name": "MLCPG",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLCard",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLCardDrawer",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLCart",
+      "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "name": "MLCharts",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLClassifiedsDynamicFlow",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLCollaborators",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLCommons",
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLCreditsBehaviours",
       "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MLDynamicModal",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLESCManager",
+      "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "name": "MLFirebase",
+      "version": "^~>\\s?0.[0-9]+"
+    },
+    {
+      "name": "MLImagePicker",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLLogin",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLMYMLCommons",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLMap",
+      "version": "^~>\\s?2.[0-9]+"
+    },
+    {
+      "name": "MLMapComponent",
+      "version": "^~>\\s?2.[0-9]+"
+    },
+    {
+      "name": "MLMelidata",
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "MLMetrics",
@@ -346,24 +178,192 @@
       "version": "^~>\\s?1.[0-9]+"
     },
     {
-      "name": "MLVPP",
-      "version": "^~>\\s?[0-1]+.[0-9]+"
-    },
-    {
-      "name": "MLLogin",
+      "name": "MLMultiImageView",
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "name": "Bugsnag",
-      "version": "5.22.2"
+      "name": "MLNavigationBarTransition",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLNavigationCP",
+      "version": "^~>\\s?[1-2]+.[0-9]+"
+    },
+    {
+      "name": "MLNetworking",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLNotifications",
+      "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "name": "MLOnDemandResources",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLPMS",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLPlace",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLProgressCircle",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLReachability",
+      "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "name": "MLRecommendationCombo",
+      "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "name": "MLRecommendations",
+      "version": "^~>\\s?4.[0-9]+$"
+    },
+    {
+      "name": "MLRemedy",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MLRuleEngine",
+      "version": "^~>\\s?0.[0-9]+"
+    },
+    {
+      "name": "MLSearch/Suggestion",
+      "version": "^~>\\s?3.[0-9]+$"
     },
     {
       "name": "MLSecurity",
       "version": "^~>\\s?1.[0-9]+"
     },
     {
+      "name": "MLSupermarket",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLUI",
+      "version": "^~>\\s?5.[0-9]+$"
+    },
+    {
+      "name": "MLUIComponents",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLUINavigationCP",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MLVIP/URLScanner",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MLVPP",
+      "version": "^~>\\s?[0-1]+.[0-9]+"
+    },
+    {
+      "name": "MLVariations",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MPDynamicSkeleton",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MPMerchEngine",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MPSDK",
+      "version": "^~>\\s?10.[0-9]+$"
+    },
+    {
+      "name": "MPSignUpLibs",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MPTopFloatingView",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MeliSDK",
+      "version": "^~>\\s?6.[0-9]+$"
+    },
+    {
+      "name": "MercadoPagoSDK",
+      "version": "^~>\\s?4.[0-9]+$"
+    },
+    {
+      "name": "MercadoPagoSDKV4",
+      "version": "^~>\\s?4.[0-9]+$"
+    },
+    {
+      "name": "OperationDetail/Commons",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "OperationDetail/RealtimeActivities",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "PINRemoteImage",
+      "version": "2.1.4"
+    },
+    {
+      "name": "PXAccountMoneyPlugin",
+      "version": "^~>\\s?4.[0-9]+$"
+    },
+    {
+      "name": "PXMLPaymentProcessor",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "PureLayout",
+      "version": "3.1.2"
+    },
+    {
+      "name": "RSKImageCropper",
+      "version": "1.6.3"
+    },
+    {
+      "name": "RazzleDazzle",
+      "version": "0.1.5"
+    },
+    {
+      "name": "Realm",
+      "version": "2.10.0"
+    },
+    {
+      "name": "RxBlocking",
+      "version": "4.4.1"
+    },
+    {
+      "name": "RxSwift",
+      "version": "4.4.1"
+    },
+    {
+      "name": "SDWebImage",
+      "version": "^~>\\s?3.[0-9]+$"
+    },
+    {
       "name": "SmiSdk",
       "version": "3.6.0"
+    },
+    {
+      "name": "StyledPageControl",
+      "version": "1.0"
+    },
+    {
+      "name": "WalletCongrats",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "lottie-ios",
+      "version": "2.0.2|2.5.0"
     }
   ]
 }
