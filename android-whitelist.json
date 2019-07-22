@@ -487,7 +487,8 @@
             "group": "com\\.mercadolibre\\.android\\.variations"
         },
         {
-            "group": "com\\.mercadolibre\\.android\\.vpp\\.vipcommons"
+            "group": "com\\.mercadolibre\\.android\\.vpp\\.vipcommons",
+	    "version": "1\\.\\+"
 	},
 	{
             "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
