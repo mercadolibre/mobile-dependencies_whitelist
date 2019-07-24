@@ -303,11 +303,11 @@
     },
     {
       "name": "OperationDetail/Commons",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?3+.[0-9]+$"
     },
     {
       "name": "OperationDetail/RealtimeActivities",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?3+.[0-9]+$"
     },
     {
       "name": "PINRemoteImage",
