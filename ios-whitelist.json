@@ -380,6 +380,10 @@
     {
       "name": "MLFluxClient",
       "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MLGodzippa",
+      "version": "^~>\\s?0.[0-9]+$"
     }
   ]
 }
