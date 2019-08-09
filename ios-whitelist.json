@@ -218,6 +218,14 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
+      "name": "MLRxRestClient",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MLCommonUIComponents",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
       "name": "MLRecommendationCombo",
       "version": "^~>\\s?2.[0-9]+$"
     },
@@ -235,7 +243,7 @@
     },
     {
       "name": "MLSearch/Suggestion",
-      "version": "^~>\\s?3.[0-9]+$"
+      "version": "^~>\\s?4.[0-9]+$"
     },
     {
       "name": "MLSecurity",
@@ -303,11 +311,11 @@
     },
     {
       "name": "OperationDetail/Commons",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?3+.[0-9]+$"
     },
     {
       "name": "OperationDetail/RealtimeActivities",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?3+.[0-9]+$"
     },
     {
       "name": "PINRemoteImage",
@@ -336,10 +344,6 @@
     {
       "name": "Realm",
       "version": "2.10.0"
-    },
-    {
-      "name": "RxBlocking",
-      "version": "4.4.1"
     },
     {
       "name": "RxSwift",
@@ -371,7 +375,15 @@
     },
     {
       "name": "lottie-ios",
-      "version": "2.0.2|2.5.0"
+      "version": "2.0.6|2.5.0"
+    },
+    {
+      "name": "MLFluxClient",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MLGodzippa",
+      "version": "^~>\\s?0.[0-9]+$"
     }
   ]
 }
