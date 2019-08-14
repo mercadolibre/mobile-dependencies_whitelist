@@ -15,7 +15,7 @@
     },
     {
       "name": "Bugsnag",
-      "version": "5.22.2"
+      "version": "5.22.4"
     },
     {
       "name": "CHTCollectionViewWaterfallLayout",
@@ -232,6 +232,10 @@
     {
       "name": "MLRecommendations",
       "version": "^~>\\s?4.[0-9]+$"
+    },
+    {
+      "name": "MLRecommendationsComparator",
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLRemedy",
