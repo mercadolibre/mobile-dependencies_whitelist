@@ -816,6 +816,14 @@
       "group": "android\\.arch\\.work",
       "name": "work-runtime",
       "version": "1\\.0\\.1"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.security",
+      "name": "security_ui"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.security",
+      "name": "security_preferences"
     }
   ]
 }
