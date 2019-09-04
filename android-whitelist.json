@@ -383,14 +383,14 @@
       "version": "4\\.\\+"
     },
     {
-      "group": "com\\.mercadolibre\\.android\\.adjust",
-      "name": "core",
-      "version": "mercadopago-1\\.\\+"
-    },
-    {
         "group": "com\\.mercadolibre\\.android\\.adjust",
         "name": "core",
         "version": "mercadolibre-1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.adjust",
+      "name": "core",
+      "version": "mercadopago-1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.biometrics",
