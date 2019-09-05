@@ -10,7 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d664bf2e-7376-43c3-93da-e33f349a9a8f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/android-whitelist.json" beforeDir="false" afterPath="$PROJECT_DIR$/android-whitelist.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,21 +22,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="android-whitelist.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="android-whitelist.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/android-whitelist.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="262" column="87" selection-start-line="262" selection-start-column="87" selection-end-line="262" selection-end-column="87" />
+            <state relative-caret-position="249">
+              <caret line="260" column="25" lean-forward="true" selection-start-line="260" selection-start-column="25" selection-end-line="260" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret lean-forward="true" />
-            </state>
+            <state />
           </provider>
         </entry>
       </file>
@@ -67,8 +66,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/android-whitelist.json" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -91,11 +90,6 @@
             <path>
               <item name="mobile-dependencies_whitelist" type="b2602c69:ProjectViewProjectNode" />
               <item name="mobile-dependencies_whitelist" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mobile-dependencies_whitelist" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mobile-dependencies_whitelist" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -192,10 +186,10 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" />
+      <window_info anchor="bottom" id="Terminal" visible="true" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Theme Preview" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
@@ -214,18 +208,16 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/android-whitelist.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
+        <state relative-caret-position="249">
+          <caret line="260" column="25" lean-forward="true" selection-start-line="260" selection-start-column="25" selection-end-line="260" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/android-whitelist.json">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="262" column="87" selection-start-line="262" selection-start-column="87" selection-end-line="262" selection-end-column="87" />
-        </state>
+        <state />
       </provider>
     </entry>
   </component>
