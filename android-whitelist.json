@@ -830,6 +830,21 @@
       "group": "android\\.arch\\.work",
       "name": "work-runtime",
       "version": "1\\.0\\.1"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.userbiometrics",
+      "name": "core",
+      "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.security",
+      "name": "security_ui",
+      "version": "mercadopago-1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.security",
+      "name": "security_preferences",
+      "version": "mercadopago-1\\.\\+"
     }
   ]
 }
