@@ -7,7 +7,7 @@
     },
     {
       "name": "Adjust",
-      "version": "4.18.([1-9][0-9]*)$"
+      "version": "^~>\\s?4.18.([1-9][0-9]*)$"
     },
     {
       "name": "AmountLabel",
