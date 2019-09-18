@@ -278,6 +278,11 @@
       "version": "3\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.ignite",
+      "name": "core",
+      "version": "0\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android",
       "name": "login",
       "version": "9\\.\\+"
@@ -830,6 +835,41 @@
       "group": "android\\.arch\\.work",
       "name": "work-runtime",
       "version": "1\\.0\\.1"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.userbiometrics",
+      "name": "core",
+      "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.security",
+      "name": "security_ui",
+      "version": "mercadopago-1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.security",
+      "name": "security_preferences",
+      "version": "mercadopago-1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.loyalty",
+      "name": "commons",
+      "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.loyalty",
+      "name": "webview",
+      "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.loyalty",
+      "name": "drawer",
+      "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.loyalty\\.datamanager",
+      "name": "data-manager",
+      "version": "1\\.\\+"
     }
   ]
 }

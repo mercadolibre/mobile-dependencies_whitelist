@@ -7,7 +7,7 @@
     },
     {
       "name": "Adjust",
-      "version": "4.18.1"
+      "version": "4.18.([1-9][0-9]*)$"
     },
     {
       "name": "AmountLabel",
@@ -410,11 +410,19 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "name": "MLBiometricSecurity",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
       "name": "MLNotificationsHelpers",
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLBusinessComponents",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLInsightsMetric",
       "version": "^~>\\s?1.[0-9]+$"
     }
   ]
