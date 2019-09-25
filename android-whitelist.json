@@ -465,6 +465,16 @@
       "version": "mercadopago-1\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.local\\.storage",
+      "name": "core",
+      "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.local\\.storage",
+      "name": "kvs-defaults",
+      "version": "1\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.maps",
       "name": "core",
       "version": "4\\.\\+"
