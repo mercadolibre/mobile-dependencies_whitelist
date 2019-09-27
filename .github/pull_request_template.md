@@ -36,11 +36,11 @@ _No, OkHttp no requiere inicializacion en el `Application`_
 
 #### ¿Utiliza librerías nativas? Tiene soporte para las diferentes arquitecturas de devices?
 
-_No, OkHttp no tiene codigo en la NDK_
+_No, OkHttp no tiene codigo con NDK_
 
 #### ¿Que versiones android/ios soportan las libs, min api level o deployment targets en ios?
 
-_Tiene Min Api Level 21_
+_Tiene Min api level 21_
 
 # Que caso de uso las requiere
 
