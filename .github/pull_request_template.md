@@ -34,7 +34,7 @@ _Si, existe volley. Preferimos esta porque:_
 
 _No, OkHttp no requiere inicializacion en el `Application`_
 
-#### ¿Utiliza librerías nativas? Tiene soporte para las diferentes arquitecturas de devices?
+#### ¿Utiliza libs nativas? ¿Tiene soporte para las diferentes arquitecturas de devices?
 
 _No, OkHttp no tiene codigo con NDK_
 
