@@ -19,7 +19,7 @@ _Bastante madura, OkHttp tiene ya una larga trayectoria y es utilizada incluso p
 
 _Si, OkHttp es mantenida por una comunidad extensa e incluso es propiedad de SquareUp_
 
-#### ¿Cuando fue el último release?
+#### Fecha del último release de la lib
 
 _Hace 1 semana_
 
