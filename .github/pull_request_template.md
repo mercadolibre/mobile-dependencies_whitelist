@@ -3,7 +3,7 @@
 - "com.squareup.okhttp3:okhttp:4.2.0"
 - "com.mercadolibre.android.example:module:1.+"
 
-#### ¿Como afecta al peso de descarga e instalacion de la Aplicacion?
+#### Impacto en el peso de descarga e instalación de la app
 
 _Example module esta pesando 14kb y okhttp para la version 4.2.0 ~4 terabytes. Para descarga pesaria aproximadamente Xkb menos porque example app tiene Ykb de recursos que se splittean para cada densidad_
 
