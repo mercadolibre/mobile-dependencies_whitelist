@@ -62,6 +62,6 @@ _Estamos creando un nuevo frontend 'example' y necesita hacer api calls con un w
 
 - [ ] Mercado Libre
 - [ ] Mercado Pago
-- [ ] Flex / Logistics
+- [ ] Flex / Logistics
 - [ ] WMS
 - [ ] Meli Store
