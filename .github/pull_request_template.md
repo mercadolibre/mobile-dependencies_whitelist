@@ -7,7 +7,7 @@
 
 _Example module esta pesando 14kb y okhttp para la version 4.2.0 ~4 terabytes. Para descarga pesaria aproximadamente Xkb menos porque example app tiene Ykb de recursos que se splittean para cada densidad_
 
-#### ¿Existen algunos casos de uso con éxito de empresas conocidas?
+#### Empresas conocidas que actualmente usan esta lib
 
 _Si, OkHttp es actualmente usada por X, Y, Z, etc empresas._
 
