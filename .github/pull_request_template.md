@@ -13,7 +13,7 @@ _Si, OkHttp es actualmente usada por X, Y, Z, etc empresas._
 
 #### ¿Que tan madura esta la lib?
 
-_Bastante, OkHttp tiene ya una larga trayectoria y es utilizada incluso por Android intermanete_
+_Bastante madura, OkHttp tiene ya una larga trayectoria y es utilizada incluso por Android internamente_
 
 #### ¿Tienen desarrollo activo? 
 
