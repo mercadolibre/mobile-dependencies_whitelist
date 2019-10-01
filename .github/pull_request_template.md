@@ -11,7 +11,7 @@ _Example module esta pesando 14kb y okhttp para la version 4.2.0 ~4 terabytes. P
 
 _Si, OkHttp es actualmente usada por X, Y, Z, etc empresas._
 
-#### ¿Que tan madura esta la lib?
+#### Madures de la lib
 
 _Bastante madura, OkHttp tiene ya una larga trayectoria y es utilizada incluso por Android internamente_
 
