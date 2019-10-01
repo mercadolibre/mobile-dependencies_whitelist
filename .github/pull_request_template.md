@@ -46,7 +46,7 @@ _Tiene Min API level 21_
 
 _Estamos creando un nuevo frontend 'example' y necesita hacer api calls con un websocket custom porque vamos a permitir llamados en real time (vamos a utilizar OkHttp para el mismo). Creamos una API example-module que nos wrappea la logica de negocio_
 
-#### Hay PRs abiertos con el use case?
+#### PRs abiertos con este Caso de uso
 
 - [example PR](www.github.com/mercadolibre)
 
