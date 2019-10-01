@@ -23,7 +23,11 @@ _Si, OkHttp es mantenida por una comunidad extensa e incluso es propiedad de Squ
 
 _Hace 1 semana_
 
-#### ¿Existe alguna alternativa? ¿Evaluaron tradeoffs?
+#### ¿Se va a wrappear el uso de una libreria externa? ¿Quien va a ser owner de la misma?
+
+_Creemos que no es necesario un wrapper de la lib. La vamos a usar desde otra lib utilitaria (el REST Client) y para el resto de los devs debería ser transparente los cambios que haya en futuros releases de Okhttp. El ownership va a ser el [equipo de X](mailto:x-team@mercadolibre.com)_
+
+#### Alternativas disponibles en el mercado: Tradeoffs
 
 _Si, existe volley. Preferimos esta porque:_
 - Razon X
