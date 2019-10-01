@@ -56,4 +56,8 @@ _Estamos creando un nuevo frontend 'example' y necesita hacer api calls con un w
 
 # En que apps impacta mi dependencia
 
-MercadoExample
+[ ] Mercado Libre
+[ ] Mercado Pago
+[ ] Flex / Logistics
+[ ] WMS
+[ ] Meli Store
