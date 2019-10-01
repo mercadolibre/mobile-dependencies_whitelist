@@ -15,7 +15,7 @@ _Si, OkHttp es actualmente usada por X, Y, Z, etc empresas._
 
 _Bastante madura, OkHttp tiene ya una larga trayectoria y es utilizada incluso por Android internamente_
 
-#### ¿Tienen desarrollo activo? 
+#### Mantenimiento externo de la lib (A.K.A. ¿está en desarrollo activo?)
 
 _Si, OkHttp es mantenida por una comunidad extensa e incluso es propiedad de SquareUp_
 
