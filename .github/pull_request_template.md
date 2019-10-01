@@ -30,7 +30,7 @@ _Si, existe volley. Preferimos esta porque:_
 - Razon Y
 - Razon Z
 
-#### ¿Afecta al coldstart de alguna forma?
+#### ¿Afecta al start-up time de alguna forma?
 
 _No, OkHttp no requiere inicializacion en el `Application`_
 
