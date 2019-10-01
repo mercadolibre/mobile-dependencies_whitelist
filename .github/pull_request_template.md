@@ -42,7 +42,7 @@ _No, OkHttp no tiene codigo con NDK_
 
 _Tiene Min API level 21_
 
-# Que caso de uso las requiere
+# Caso de uso donde necesitamos usar esta lib
 
 _Estamos creando un nuevo frontend 'example' y necesita hacer api calls con un websocket custom porque vamos a permitir llamados en real time (vamos a utilizar OkHttp para el mismo). Creamos una API example-module que nos wrappea la logica de negocio_
 
