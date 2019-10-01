@@ -40,7 +40,7 @@ _No, OkHttp no tiene codigo con NDK_
 
 #### Versiones mínimas y máximas del sistema operativo soportadas
 
-_Tiene Min api level 21_
+_Tiene Min API level 21_
 
 # Que caso de uso las requiere
 
