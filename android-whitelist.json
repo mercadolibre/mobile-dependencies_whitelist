@@ -925,6 +925,11 @@
       "version": "develop-1\\.+"
     },
     {
+      "group": "org\\.aspectj",
+      "name": "aspectjrt",
+      "version": "1\\.9\\.2"
+    },
+    {
       "group": "com\\.mercadolibre\\.android",
       "name": "user_configuration",
       "version": "production-1\\.+"
