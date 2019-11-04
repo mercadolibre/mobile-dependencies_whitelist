@@ -930,13 +930,13 @@
       "version": "production-1\\.+"
     },
     {
-      "group": "org\\.jetbrains\\.kotlin",
-      "name": "kotlin-android-extensions-runtime",
+      "group": "org\\.jetbrains\\.kotlinx",
+      "name": "kotlinx-coroutines-core",
       "version": "1\\.2\\.2"
     },
     {
-      "group": "org\\.jetbrains\\.kotlin",
-      "name": "kotlin-android-extensions-runtime",
+      "group": "org\\.jetbrains\\.kotlinx",
+      "name": "kotlinx-coroutines-android",
       "version": "1\\.2\\.2"
     }
   ]
