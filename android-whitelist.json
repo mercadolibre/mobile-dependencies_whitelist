@@ -928,6 +928,16 @@
       "group": "com\\.mercadolibre\\.android",
       "name": "user_configuration",
       "version": "production-1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "hint-picker",
+      "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "sms-verification",
+      "version": "1\\.+"
     }
   ]
 }
