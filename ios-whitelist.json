@@ -1,11 +1,6 @@
 {
   "whitelist": [
     {
-      "expire": "2017-12-15",
-      "name": "MLShippingComponents",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
       "name": "Adjust",
       "version": "4.18.([1-9][0-9]*)$"
     },
@@ -322,10 +317,6 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "name": "MeliSDK",
-      "version": "^~>\\s?6.[0-9]+$"
-    },
-    {
       "name": "MercadoPagoSDK",
       "version": "^~>\\s?4.[0-9]+$"
     },
@@ -390,10 +381,6 @@
       "version": "^~>\\s?1.[0-9]+"
     },
     {
-      "name": "SmiSdk",
-      "version": "3.6.0"
-    },
-    {
       "name": "MLHistory",
       "version": "^~>\\s?1.[0-9]+"
     },
@@ -440,6 +427,10 @@
     {
       "name": "MLNavigation",
       "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLQADB",
+      "version": "^~>\\s?1.[0-9]+$"
     }
   ]
 }
