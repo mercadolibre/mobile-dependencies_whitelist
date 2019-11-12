@@ -270,7 +270,7 @@
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "analytics",
-      "version": "production-7\\.\\+|develop-7\\.\\+"
+      "version": "production-6\\.\\+|production-7\\.\\+|develop-6\\.\\+|develop-7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -634,7 +634,7 @@
     },
     {
       "group": "com\\.mercadolibre\\.android\\.uicomponents",
-      "version": "7\\.\\+"
+      "version": "6\\.\\+|7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.uinavigationcp",
