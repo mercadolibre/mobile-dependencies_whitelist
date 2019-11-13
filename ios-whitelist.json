@@ -297,6 +297,10 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "MPBalance",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "MPDynamicSkeleton",
       "version": "^~>\\s?0.[0-9]+$"
     },
@@ -435,6 +439,10 @@
     {
       "name": "MLQADB",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "UIImage-ResizeMagick",
+      "version": "0.0.1"
     }
   ]
 }
