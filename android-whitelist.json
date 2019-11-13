@@ -270,7 +270,7 @@
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "analytics",
-      "version": "production-6\\.\\+|develop-6\\.\\+"
+      "version": "production-6\\.\\+|production-7\\.\\+|develop-6\\.\\+|develop-7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -419,6 +419,16 @@
       "group": "com\\.mercadolibre\\.android\\.adjust",
       "name": "core",
       "version": "mercadopago-1\\.\\+|mercadolibre-1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "apprater",
+      "version": "10\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "apprater-ml",
+      "version": "10\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.biometrics",
@@ -629,7 +639,7 @@
     },
     {
       "group": "com\\.mercadolibre\\.android\\.uicomponents",
-      "version": "6\\.\\+"
+      "version": "6\\.\\+|7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.uinavigationcp",
