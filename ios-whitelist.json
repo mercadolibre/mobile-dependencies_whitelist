@@ -45,6 +45,10 @@
       "version": "^~>\\s?(4.13.0|6.9.0)$"
     },
     {
+      "name": "Firebase/Analytics",
+      "version": "^~>\\s?(4.13.0|6.9.0)$"
+    },
+    {
       "name": "Firebase/MLVision",
       "version": "6.9.0"
     },
@@ -451,6 +455,10 @@
     {
       "name": "UIImage-ResizeMagick",
       "version": "0.0.1"
+    },
+    {
+      "name": "MeliCards",
+      "version": "^~>\\s?1.[0-9]+$"
     }
   ]
 }
