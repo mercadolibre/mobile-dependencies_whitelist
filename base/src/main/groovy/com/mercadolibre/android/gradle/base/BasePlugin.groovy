@@ -201,14 +201,14 @@ class BasePlugin implements Plugin<Project> {
                     url "https://dl.bintray.com/mercadolibre/android-releases"
                     credentials {
                         username 'bintray-read-only'
-                        password 'f8a81e46551b9e29af6b3bd449a96bddff58cbd7'
+                        password 'e7b8b22a0b84527c04194c31f90bc0b879d8fd9d'
                     }
                 }
                 maven {
                     url "https://dl.bintray.com/mercadolibre/android-experimental"
                     credentials {
                         username 'bintray-read-only'
-                        password 'f8a81e46551b9e29af6b3bd449a96bddff58cbd7'
+                        password 'e7b8b22a0b84527c04194c31f90bc0b879d8fd9d'
                     }
                 }
             }
