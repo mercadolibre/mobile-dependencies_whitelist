@@ -1,6 +1,6 @@
 # v6.1.1
 ## Actualizado
-- Se actualiza la key de bintray
+- Se actualiza la key de bintray read
 
 # v6.1.0
 ## Actualizado
