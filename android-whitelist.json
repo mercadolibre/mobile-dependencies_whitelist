@@ -987,6 +987,11 @@
       "group": "com\\.mercadolibre\\.android\\.traceability",
       "name": "traceability",
       "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.ui_modal",
+      "name": "ui_modal",
+      "version": "mercadopago-1\\.\\+|mercadolibre-1\\.\\+”
     }
   ]
 }
