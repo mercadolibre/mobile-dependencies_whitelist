@@ -209,8 +209,13 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "expires": "2019-12-20",
       "name": "MLNotifications",
       "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "name": "MLNotifications",
+      "version": "^~>\\s?3.[0-9]+$"
     },
     {
       "name": "MLOnDemandResources",
