@@ -988,7 +988,12 @@
       "name": "traceability",
       "version": "1\\.+"
     },
-     {
+    {
+      "group": "com\\.mercadolibre\\.android\\.inappupdates",
+      "name": "in-app-updates",
+      "version": "1\\.+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.scanner",
       "name": "scanner",
       "version": "0\\.\\+"
