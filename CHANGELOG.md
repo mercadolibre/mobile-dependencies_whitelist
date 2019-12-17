@@ -1,3 +1,7 @@
+# v6.2.0
+## Actualizado
+- Se agrega un repositorio para soporte a las library templates
+
 # v6.1.1
 ## Actualizado
 - Se actualiza la key de bintray read
