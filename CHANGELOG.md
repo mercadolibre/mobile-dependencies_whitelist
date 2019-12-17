@@ -1,4 +1,4 @@
-# v6.1.2
+# v6.2.0
 ## Actualizado
 - Se agrega un repositorio para soporte a las library templates
 
