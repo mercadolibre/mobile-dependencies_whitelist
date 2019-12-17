@@ -211,6 +211,9 @@ class BasePlugin implements Plugin<Project> {
                         password 'e7b8b22a0b84527c04194c31f90bc0b879d8fd9d'
                     }
                 }
+                maven {
+                    url "https://s3.amazonaws.com/sdk-ga-releases.cloudmi.datami.com/android/mvn/smisdk/"
+                }
             }
         }
     }
