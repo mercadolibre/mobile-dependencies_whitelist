@@ -80,6 +80,7 @@ deploy-release-job: &deployReleaseJob
       - run:
           name: Run Deploy
           command: kelli deploy lib --release
+
 ##
 # We define our default workflow
 # This workflow will be used by our default builds
