@@ -289,9 +289,15 @@
       "version": "13\\.0\\.\\+"
     },
     {
+      "expires": "2020-01-01",
       "group": "com\\.mercadolibre\\.android",
       "name": "carddrawer",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "carddrawer",
+      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -647,7 +653,7 @@
     {
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "input",
-      "version": "7\\.\\+|8\\.\\+"
+      "version": "7\\.\\+|8\\.\\+|9\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.security",
@@ -919,14 +925,30 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2020-02-01",
       "group": "com\\.mercadolibre\\.android\\.security",
       "name": "security_ui",
       "version": "mercadopago-1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.security",
+      "name": "security_ui",
+      "version": "mercadopago-2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.security",
       "name": "security_preferences",
       "version": "mercadopago-1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.security",
+      "name": "security_preferences",
+      "version": "mercadopago-2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.security",
+      "name": "security_preferences",
+      "version": "mercadolibre-2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.loyalty",
@@ -989,9 +1011,19 @@
       "version": "1\\.+"
     },
     {
-      "group": "com\\.mercadolibre\\.android\\.ui_modal",
-      "name": "ui_modal",
-      "version": "mercadopago-1\\.\\+|mercadolibre-1\\.\\+”
+      "group": "com\\.mercadolibre\\.android\\.inappupdates",
+      "name": "in-app-updates",
+      "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.scanner",
+      "name": "scanner",
+      "version": "0\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.andesui",
+      "name": "draft-modal",
+      "version": "1\\.+"
     }
   ]
 }

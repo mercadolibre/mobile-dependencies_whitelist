@@ -49,6 +49,14 @@
       "version": "^~>\\s?(4.13.0|6.9.0)$"
     },
     {
+      "name": "Firebase/MLVision",
+      "version": "6.9.0"
+    },
+    {
+      "name": "Firebase/MLVisionFaceModel",
+      "version": "6.9.0"
+    },
+    {
       "name": "Flox",
       "version": "^~>\\s?2.[0-9]+"
     },
@@ -142,7 +150,7 @@
     },
     {
       "name": "MLDynamicModal",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?0.[0-9].*$"
     },
     {
       "name": "MLESCManager",
@@ -460,6 +468,10 @@
     {
       "name": "MLScanner",
       "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "Traceability",
+      "version": "^~>\\s?1.[0-9]+$"
     }
   ]
 }
