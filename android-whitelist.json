@@ -1019,6 +1019,11 @@
       "group": "com\\.mercadolibre\\.android\\.scanner",
       "name": "scanner",
       "version": "0\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.profileengine", 
+      "name": "peui",
+      "version": "1\\.+"
     }
   ]
 }
