@@ -1,3 +1,7 @@
+# v7.0.0
+## Agregado
+- Se agrega KtLint junto a Detekt para detección de errores en las librerías con Kotlin 
+
 # v6.2.0
 ## Actualizado
 - Se agrega un repositorio para soporte a las library templates

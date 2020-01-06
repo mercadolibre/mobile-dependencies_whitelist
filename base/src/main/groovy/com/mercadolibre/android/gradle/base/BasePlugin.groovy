@@ -3,6 +3,7 @@ package com.mercadolibre.android.gradle.base
 import com.mercadolibre.android.gradle.base.modules.AndroidJacocoModule
 import com.mercadolibre.android.gradle.base.modules.AndroidLibraryPublishableModule
 import com.mercadolibre.android.gradle.base.modules.BuildScanModule
+import com.mercadolibre.android.gradle.base.modules.KotlinCheckModule
 import com.mercadolibre.android.gradle.base.modules.JavaJacocoModule
 import com.mercadolibre.android.gradle.base.modules.JavaPublishableModule
 import com.mercadolibre.android.gradle.base.modules.KeystoreModule
@@ -20,6 +21,7 @@ class BasePlugin implements Plugin<Project> {
 
     public static final String ANDROID_LIBRARY_PLUGIN = 'com.android.library'
     public static final String ANDROID_APPLICATION_PLUGIN = 'com.android.application'
+    public static final String KOTLIN_ANDROID_PLUGIN = 'kotlin-android'
 
     private static final String BINTRAY_UPLOAD_TASK_NAME = "bintrayUpload"
 
@@ -48,6 +50,12 @@ class BasePlugin implements Plugin<Project> {
     private static final PROJECT_MODULES = { ->
         return [
             new BuildScanModule()
+        ]
+    }
+
+    private static final KOTLIN_MODULES = { ->
+        return [
+            new KotlinCheckModule()
         ]
     }
 
@@ -89,6 +97,10 @@ class BasePlugin implements Plugin<Project> {
 
             subproject.plugins.withId(ANDROID_LIBRARY_PLUGIN) {
                 ANDROID_LIBRARY_MODULES().each { module -> module.configure(subproject) }
+            }
+
+            subproject.plugins.withId(KOTLIN_ANDROID_PLUGIN) {
+                KOTLIN_MODULES().each { module -> module.configure(subproject) }
             }
 
             subproject.plugins.withId(ANDROID_APPLICATION_PLUGIN) {
