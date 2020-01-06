@@ -14,6 +14,7 @@ import com.mercadolibre.android.gradle.base.utils.VersionContainer
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.plugins.JavaPlugin
+
 /**
  * Gradle base plugin for MercadoLibre Android projects/modules.
  */
