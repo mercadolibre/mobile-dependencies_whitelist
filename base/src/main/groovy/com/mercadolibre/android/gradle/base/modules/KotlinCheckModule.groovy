@@ -6,13 +6,11 @@ import org.gradle.api.Project
  * Check module for Kotlin subprojects
  */
 class KotlinCheckModule implements Module {
-    //TODO: version should be variable (from properties)
     private static final String DETEKT_VERSION = '1.3.1'
     private static final String DETEKT_PACKAGE_NAME = 'io.gitlab.arturbosch.detekt'
     private static final String DETEKT_MODULE_NAME = 'detekt-formatting'
     private static final String DETEKT_LINT_TASK_NAME = 'detekt'
     private static final String DETEKT_CONFIG_TASK_NAME = 'detektGenerateConfig'
-    //TODO: check flavours support
     private static final String DETEKT_CONFIG_FILE_PATH = 'config/detekt/detekt.yml'
     private static final String DETEKT_REPORT_HTML_FILE_PATH = 'build/reports/detekt_report.html'
     private static final String DETEKT_REPORT_XML_FILE_PATH = 'build/reports/detekt_report.xml'
