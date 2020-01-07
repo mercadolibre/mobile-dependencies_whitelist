@@ -1,3 +1,7 @@
+# v6.3.0
+## Agregado
+- Se agrega soporte a tasks de test genericas para flavors (ej: test${buildType}UnitTest)
+
 # v6.2.0
 ## Actualizado
 - Se agrega un repositorio para soporte a las library templates
