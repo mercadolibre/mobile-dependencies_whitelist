@@ -42,9 +42,6 @@ class KotlinCheckModule implements Module {
             }
         }
 
-        def file = new File(DETEKT_CONFIG_FILE_PATH)
-        if (!(file.exists() && file.canRead())) {
-            project.tasks.getByName(DETEKT_LINT_TASK_NAME).dependsOn DETEKT_CONFIG_TASK_NAME
-        }
+        project.tasks.getByName(DETEKT_LINT_TASK_NAME).dependsOn DETEKT_CONFIG_TASK_NAME
     }
 }
