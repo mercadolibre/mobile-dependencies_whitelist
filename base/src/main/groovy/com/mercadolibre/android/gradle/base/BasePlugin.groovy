@@ -2,6 +2,7 @@ package com.mercadolibre.android.gradle.base
 
 import com.mercadolibre.android.gradle.base.modules.AndroidJacocoModule
 import com.mercadolibre.android.gradle.base.modules.AndroidLibraryPublishableModule
+import com.mercadolibre.android.gradle.base.modules.AndroidLibraryTestableModule
 import com.mercadolibre.android.gradle.base.modules.BuildScanModule
 import com.mercadolibre.android.gradle.base.modules.JavaJacocoModule
 import com.mercadolibre.android.gradle.base.modules.JavaPublishableModule
@@ -26,6 +27,7 @@ class BasePlugin implements Plugin<Project> {
     private static final ANDROID_LIBRARY_MODULES = { ->
         return [
             new AndroidLibraryPublishableModule(),
+            new AndroidLibraryTestableModule(),
             new AndroidJacocoModule()
         ]
     }
