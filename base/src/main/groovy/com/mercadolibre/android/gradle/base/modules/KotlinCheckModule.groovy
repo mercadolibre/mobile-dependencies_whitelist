@@ -11,7 +11,7 @@ class KotlinCheckModule implements Module {
     private static final String DETEKT_MODULE_NAME = 'detekt-formatting'
     private static final String DETEKT_LINT_TASK_NAME = 'detekt'
     private static final String DETEKT_CONFIG_TASK_NAME = 'detektGenerateConfig'
-    private static final String DETEKT_CONFIG_FILE_PATH = 'config/detekt/detekt.yml'
+    private static final String DETEKT_CONFIG_FILE_PATH = 'detekt.yml'
     private static final String DETEKT_REPORT_HTML_FILE_PATH = 'build/reports/detekt_report.html'
     private static final String DETEKT_REPORT_XML_FILE_PATH = 'build/reports/detekt_report.xml'
     private static final String KOTLIN_FILES_REGEX = '.'
@@ -42,6 +42,9 @@ class KotlinCheckModule implements Module {
             }
         }
 
-        project.tasks.getByName(DETEKT_LINT_TASK_NAME).dependsOn DETEKT_CONFIG_TASK_NAME
+        def file = new File(DETEKT_CONFIG_FILE_PATH)
+        if (!(file.exists() && file.canRead())) {
+            project.tasks.getByName(DETEKT_LINT_TASK_NAME).dependsOn DETEKT_CONFIG_TASK_NAME
+        }
     }
 }
