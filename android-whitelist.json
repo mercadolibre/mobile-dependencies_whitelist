@@ -486,6 +486,10 @@
       "version": "13\\.\\+|14\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.remote\\.configuration",
+      "version": "1\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.cpg",
       "name": "ui_components",
       "version": "2\\.\\+"
@@ -1019,6 +1023,11 @@
       "group": "com\\.mercadolibre\\.android\\.scanner",
       "name": "scanner",
       "version": "0\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.andesui",
+      "name": "draft-modal",
+      "version": "1\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.profileengine", 
