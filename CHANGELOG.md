@@ -1,3 +1,8 @@
+# v7.0.0
+## Agregado
+- Se agrega KtLint junto a Detekt para detección de errores en las librerías con Kotlin
+- Bump de Gradle a 5.6.4 
+
 # v6.3.0
 ## Agregado
 - Se agrega soporte a tasks de test genericas para flavors (ej: test${buildType}UnitTest)
