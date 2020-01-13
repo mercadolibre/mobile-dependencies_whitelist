@@ -28,7 +28,7 @@ class KotlinCheckModule implements Module {
             }
 
             detekt {
-                input = project.rootProject.files(KOTLIN_FILES_REGEX)
+                input = project.files(KOTLIN_FILES_REGEX)
                 config = project.rootProject.files(DETEKT_CUSTOM_CONFIG_FILE_PATH + DETEKT_CONFIG_FILE_NAME)
 
                 // Enabling XML and HTML reports
