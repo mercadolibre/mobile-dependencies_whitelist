@@ -13,7 +13,7 @@ class KotlinCheckModule implements Module {
     private static final String DETEKT_CONFIG_TASK_NAME = 'detektGenerateConfig'
     private static final String DETEKT_CONFIG_FILE_NAME = 'detekt.yml'
     private static final String DETEKT_CONFIG_FILE_PATH = 'config/detekt/'
-    private static final String DETEKT_CUSTOM_CONFIG_FILE_PATH = './'
+    private static final String DETEKT_CUSTOM_CONFIG_FILE_PATH = 'config/'
     private static final String DETEKT_REPORT_HTML_FILE_PATH = 'build/reports/detekt_report.html'
     private static final String DETEKT_REPORT_XML_FILE_PATH = 'build/reports/detekt_report.xml'
     private static final String KOTLIN_FILES_REGEX = '.'
