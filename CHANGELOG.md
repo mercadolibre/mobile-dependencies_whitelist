@@ -1,3 +1,11 @@
+# v7.0.2
+## Arreglado
+- Se arregla el path del export de los reports de Detekt para que salgan en los PRs
+
+# v7.0.1
+## Arreglado
+- Se arregla el path de los sources que lintea Detekt para que no corra sobre todos los files en cualquier ejecucion
+
 # v7.0.0
 ## Agregado
 - Se agrega KtLint junto a Detekt para detección de errores en las librerías con Kotlin
