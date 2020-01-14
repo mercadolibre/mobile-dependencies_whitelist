@@ -35,11 +35,11 @@ class KotlinCheckModule implements Module {
                 reports {
                     xml {
                         enabled = true
-                        destination = file(DETEKT_REPORT_XML_FILE_PATH)
+                        destination = project.rootProject.file(DETEKT_REPORT_XML_FILE_PATH)
                     }
                     html {
                         enabled = true
-                        destination = file(DETEKT_REPORT_HTML_FILE_PATH)
+                        destination = project.rootProject.file(DETEKT_REPORT_HTML_FILE_PATH)
                     }
                 }
             }
