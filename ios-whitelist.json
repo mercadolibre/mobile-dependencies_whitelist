@@ -443,7 +443,12 @@
     },
     {
       "name": "MLBiometricSecurity",
+      "expires": "2020-01-31",
       "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLBiometricSecurity",
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLNotificationsHelpers",
