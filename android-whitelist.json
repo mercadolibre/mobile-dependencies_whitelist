@@ -1005,6 +1005,16 @@
       "version": "production-1\\.+"
     },
     {
+      "group": "org\\.jetbrains\\.kotlinx",
+      "name": "kotlinx-coroutines-core",
+      "version": "1\\.2\\.2"
+    },
+    {
+      "group": "org\\.jetbrains\\.kotlinx",
+      "name": "kotlinx-coroutines-android",
+      "version": "1\\.2\\.2"
+    },
+    {
       "group": "com\\.mercadolibre\\.android",
       "name": "hint-picker",
       "version": "1\\.+"
