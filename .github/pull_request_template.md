@@ -65,3 +65,8 @@ _Estamos creando un nuevo frontend 'example' y necesita hacer api calls con un w
 - [ ] Flex / Logistics
 - [ ] WMS
 - [ ] Meli Store
+
+# Documentación para otros equipos en la sección de libs [internas](https://sites.google.com/mercadolibre.com/mobile/arquitectura/libs-utilitarias/libs-internas) o [externas](https://sites.google.com/mercadolibre.com/mobile/arquitectura/libs-utilitarias/libs-externas#h.p_mZ_ODrm21KPv) en la wiki de Mobile
+
+- [ ] Ya existe, no tengo que agregar ni modificar nada.
+- [ ] Hay que agregar lo que pongo a continuación... 👇
