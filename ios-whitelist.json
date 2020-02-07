@@ -401,10 +401,6 @@
       "version": "^~>\\s?1.[0-9]+"
     },
     {
-        "name": "CreditsUIComponents",
-        "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
       "name": "MLGodzippa",
       "version": "^~>\\s?0.[0-9]+$"
     },
@@ -447,6 +443,10 @@
     {
       "name": "UIImage-ResizeMagick",
       "version": "0.0.1"
+    },
+    {
+      "name": "CreditsUIComponents",
+      "version": "^~>\\s?0.[0-9]+$"
     }
   ]
 }
