@@ -22,11 +22,11 @@
     },
     {
       "name": "FBSDKCoreKit",
-      "version": "5.3.0"
+      "version": "5.8.0"
     },
     {
       "name": "FBSDKLoginKit",
-      "version": "5.3.0"
+      "version": "5.8.0"
     },
     {
       "name": "FSQCollectionViewAlignedLayout",
@@ -38,11 +38,23 @@
     },
     {
       "name": "Firebase/Core",
-      "version": "^~>\\s?4.13.0$"
+      "version": "^~>\\s?(4.13.0|6.9.0)$"
     },
     {
       "name": "Firebase/DynamicLinks",
-      "version": "^~>\\s?4.13.0$"
+      "version": "^~>\\s?(4.13.0|6.9.0)$"
+    },
+    {
+      "name": "Firebase/Analytics",
+      "version": "^~>\\s?(4.13.0|6.9.0)$"
+    },
+    {
+      "name": "Firebase/MLVision",
+      "version": "6.9.0"
+    },
+    {
+      "name": "Firebase/MLVisionFaceModel",
+      "version": "6.9.0"
     },
     {
       "name": "Flox",
@@ -97,6 +109,10 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "MLCardForm",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
       "name": "MLBookmarks",
       "version": "^~>\\s?0.[0-9]+$"
     },
@@ -133,12 +149,16 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "MLRemoteConfigurations",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "MLCreditsBehaviours",
       "version": "^~>\\s?1.[0-9]+"
     },
     {
       "name": "MLDynamicModal",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?0.[0-9].*$"
     },
     {
       "name": "MLESCManager",
@@ -146,7 +166,7 @@
     },
     {
       "name": "MLFirebase",
-      "version": "^~>\\s?0.[0-9]+"
+      "version": "^~>\\s?(0.[0-9]+|1.[0-9]+)"
     },
     {
       "name": "MLIgnite",
@@ -182,7 +202,7 @@
     },
     {
       "name": "MLMetrics",
-      "version": "^~>\\s?0.[0-9]+"
+      "version": "^~>\\s?1.[0-9]+"
     },
     {
       "name": "MLMilestoneTracker",
@@ -205,8 +225,13 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "expires": "2019-12-20",
       "name": "MLNotifications",
       "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "name": "MLNotifications",
+      "version": "^~>\\s?3.[0-9]+$"
     },
     {
       "name": "MLOnDemandResources",
@@ -250,7 +275,7 @@
     },
     {
       "name": "MLRemedy",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "MLRemedies",
@@ -434,7 +459,7 @@
     },
     {
       "name": "MLNavigation",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLQADB",
@@ -443,6 +468,26 @@
     {
       "name": "UIImage-ResizeMagick",
       "version": "0.0.1"
+    },
+    {
+      "name": "MeliCards",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLScanner",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "Traceability",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "AndesUIDraftModal",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "AndesUI",
+      "version": "^~>\\s?1.[0-9]+"
     },
     {
       "name": "CreditsUIComponents",
