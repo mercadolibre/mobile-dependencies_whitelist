@@ -144,6 +144,11 @@
     },
     {
       "group": "com\\.facebook\\.android",
+      "name": "facebook-applinks",
+      "version": "5\\.15\\.3"
+    },
+    {
+      "group": "com\\.facebook\\.android",
       "name": "facebook-android-sdk",
       "version": "4\\.24\\.0"
     },
@@ -479,6 +484,11 @@
     {
       "group": "com\\.mercadolibre\\.android\\.credits",
       "name": "ui_components",
+      "version": "0\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cross_app_links",
+      "name": "core",
       "version": "0\\.\\+"
     },
     {
