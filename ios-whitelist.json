@@ -498,8 +498,13 @@
       "version": "^~>\\s?1.[0-9]+"
     },
     {
+      "expires": "2020-3-13",
       "name": "AndesUI",
-      "version": "^~>\\s?(1|2).[0-9]+"
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "AndesUI",
+      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "MLLoyalDM",
