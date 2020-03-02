@@ -801,9 +801,15 @@
       "version": "4\\.\\+"
     },
     {
+      "expires": "2020-03-06",
       "group": "com\\.mercadopago\\.android\\.sdk",
       "name": "sdk",
-      "version": "12\\.\\+|13\\.\\+"
+      "version": "13\\.\\+"
+    },
+    {
+      "group": "com\\.mercadopago\\.android\\.sdk",
+      "name": "sdk",
+      "version": "14\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.point\\.pos",
