@@ -16,6 +16,10 @@ _No, OkHttp no tiene codigo con NDK_
 
 _Tiene Min API level 21_
 
+### Impacto en el peso de descarga e instalación de la app
+
+_Example module esta pesando 14kb y okhttp para la version 4.2.0 ~4 terabytes. Para descarga pesaria aproximadamente Xkb menos porque example app tiene Ykb de recursos que se splittean para cada densidad_
+
 ## Libs internas (borrar si el PR es para una lib externa)
 
 ### Configuración de Bugsnag
@@ -33,9 +37,6 @@ El proyecto en Jira en el que se van a crear los crashes que ocurran es: **_${SP
 [¿Qué es el SLA de Crashes?]([https://sites.google.com/mercadolibre.com/mobile/release-process/seguimiento-de-errores](https://sites.google.com/mercadolibre.com/mobile/release-process/seguimiento-de-errores))
 
 ## Libs externas (borrar si el PR es para una lib interna)
-### Impacto en el peso de descarga e instalación de la app
-
-_Example module esta pesando 14kb y okhttp para la version 4.2.0 ~4 terabytes. Para descarga pesaria aproximadamente Xkb menos porque example app tiene Ykb de recursos que se splittean para cada densidad_
 
 ### Empresas conocidas que actualmente usan esta lib
 
