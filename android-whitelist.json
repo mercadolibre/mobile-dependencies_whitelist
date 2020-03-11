@@ -75,7 +75,7 @@
     {
       "group": "androidx\\.multidex",
       "name": "multidex",
-      "version": "1\\.0\\.3"
+      "version": "1\\.0\\.0"
     },
     {
       "group": "androidx\\.percentlayout",
@@ -85,7 +85,7 @@
     {
       "group": "androidx\\.preference",
       "name": "preference",
-      "version": "28\\.0\\.0"
+      "version": "1\\.0\\.0"
     },
     {
       "group": "androidx\\.recyclerview",
@@ -283,6 +283,11 @@
       "version": "13\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.profileengine",
+      "name": "peui",
+      "version": "1\\.0\\.7"
+    },
+    {
       "expires": "2020-01-01",
       "group": "com\\.mercadolibre\\.android",
       "name": "authentication",
@@ -312,7 +317,7 @@
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "login",
-      "version": "9\\.\\+"
+      "version": "10\\.1\\.0"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -424,7 +429,7 @@
     {
       "group": "com\\.mercadolibre\\.android\\.activity",
       "name": "storage",
-      "version": "4\\.\\+"
+      "version": "4\\.23\\.0"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.adjust",
@@ -681,7 +686,7 @@
     },
     {
       "group": "com\\.mercadolibre\\.android\\.uicomponents",
-      "version": "6\\.+|7\\.\\+"
+      "version": "7\\.12\\.0"
     },
     {
       "expires": "2020-02-15",
@@ -768,12 +773,12 @@
     {
       "group": "com\\.mercadopago\\.android\\.ml_esc_manager",
       "name": "ml_esc_manager",
-      "version": "2\\.\\+"
+      "version": "2\\.3\\.0"
     },
     {
       "group": "com\\.mercadopago\\.android\\.moneytransfer",
       "name": "contacts",
-      "version": "5\\.\\+"
+      "version": "5\\.5\\.5"
     },
     {
       "group": "com\\.mercadopago\\.android\\.payment",
@@ -783,7 +788,7 @@
     {
       "group": "com\\.mercadopago\\.android\\.px",
       "name": "checkout",
-      "version": "4\\.\\+"
+      "version": "4\\.37\\.0"
     },
     {
       "group": "com\\.mercadopago\\.android\\.px",
@@ -843,7 +848,7 @@
     {
       "group": "com\\.theartofdev\\.edmodo",
       "name": "android-image-cropper",
-      "version": "2\\.8\\.0"
+      "version": "2\\.4\\.6"
     },
     {
       "group": "com\\.tonicartos",
@@ -1079,7 +1084,7 @@
     {
       "group": "com\\.mercadolibre\\.android\\.andesui",
       "name": "components",
-      "version": "1\\.\\+"
+      "version": "1\\.4\\.2"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.discounts_touchpoint",
