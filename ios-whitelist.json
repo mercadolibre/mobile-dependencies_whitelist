@@ -1,6 +1,3 @@
-// 20200324131659
-// https://raw.githubusercontent.com/mercadolibre/mobile-dependencies_whitelist/master/ios-whitelist.json
-
 {
   "whitelist": [
     {
@@ -501,25 +498,12 @@
       "version": "^~>\\s?1.[0-9]+"
     },
     {
-      "expires": "2020-3-13",
       "name": "AndesUI",
       "version": "^~>\\s?1.[0-9]+"
-    },
-    {
-      "name": "AndesUI",
-      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "MLLoyalDM",
       "version": "^~>\\s?0.[0-9]+"
-    },
-    {
-      "name": "MLLoyalUIComponents",
-      "version": "^~>\\s?1.[0-9]+"
-    },
-    {
-      "name": "CreditsUIComponents",
-      "version": "^~>\\s?0.[0-9]+$"
     }
   ]
 }
