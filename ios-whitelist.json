@@ -507,6 +507,91 @@
     {
       "name": "MLLoyalDM",
       "version": "^~>\\s?0.[0-9]+"
-    }
+    },
+    {
+      "group": "androidx.installreferrer",
+      "name": "installreferrer",
+      "version": "1.0"
+    },
+    {
+      "group": "androidx.support",
+      "name": "appcompat-v7",
+      "version": "28.0.0"
+    },
+    {
+      "group": "androidx.support",
+      "name": "cardview-v7",
+      "version": "28.0.0"
+    },
+    {
+      "group": "androidx.support",
+      "name": "customtabs",
+      "version": "28.0.0"
+    },
+    {
+      "group": "androidx.support",
+      "name": "design",
+      "version": "28.0.0"
+    },
+    {
+      "group": "androidx.support",
+      "name": "gridlayout-v7",
+      "version": "28.0.0"
+    },
+    {
+      "group": "androidx.support",
+      "name": "multidex",
+      "version": "1.0.3"
+    },
+    {
+      "group": "androidx.support",
+      "name": "percent",
+      "version": "28.0.0"
+    },
+    {
+      "group": "androidx.support",
+      "name": "preference-v7",
+      "version": "28.0.0"
+    },
+    {
+      "group": "androidx.support",
+      "name": "recyclerview-v7",
+      "version": "28.0.0"
+    },
+    {
+      "group": "androidx.support",
+      "name": "support-annotations",
+      "version": "28.0.0"
+    },
+    {
+      "group": "androidx.support",
+      "name": "support-media-compat",
+      "version": "28.0.0"
+    },
+    {
+      "group": "androidx.support",
+      "name": "support-v4",
+      "version": "28.0.0"
+    },
+    {
+      "group": "androidx.support",
+      "name": "transition",
+      "version": "28.0.0"
+    },
+    {
+      "group": "androidx.support.constraint",
+      "name": "constraint-layout",
+      "version": "1.1.3"
+    },
+    {
+      "group": "androidx.support.constraint",
+      "name": "constraint-layout-solver",
+      "version": "1.1.3"
+    },
+    {
+      "group": "androidx.support.constraint",
+      "name": "constraint-layout-solver",
+      "version": "1.3.11"
+    },
   ]
 }
