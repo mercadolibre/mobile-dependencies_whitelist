@@ -34,7 +34,7 @@ El proyecto en Jira en el que se van a crear los crashes que ocurran es: **_${SP
 - [ ] Ya esta la configuración hecha.
 - [ ] Necesito que me ayuden a configurarlo.
 
-[¿Qué es el SLA de Crashes?]([https://sites.google.com/mercadolibre.com/mobile/release-process/seguimiento-de-errores](https://sites.google.com/mercadolibre.com/mobile/release-process/seguimiento-de-errores))
+[¿Qué es el SLA de Crashes?](https://sites.google.com/mercadolibre.com/mobile/release-process/seguimiento-de-errores)
 
 ## Libs externas (borrar si el PR es para una lib interna)
 
