@@ -48,6 +48,11 @@
       "version": "1\\.3\\.11"
     },
     {
+      "group": "com\\.bugsnag",
+      "name": "bugsnag-android",
+      "version": "4\\.22\\.3"
+    },
+    {
       "group": "com\\.android\\.support",
       "name": "appcompat-v7",
       "version": "28\\.0\\.0"
@@ -276,12 +281,12 @@
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "authentication",
-      "version": "13\\.\\+"
+      "version": "13\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.profileengine",
       "name": "peui",
-      "version": "1\\.0\\.7"
+      "version": "1\\.+"
     },
     {
       "expires": "2020-01-01",
@@ -430,7 +435,7 @@
     {
       "group": "com\\.mercadolibre\\.android\\.adjust",
       "name": "core",
-      "version": "mercadopago-1\\.+"
+      "version": "mercadopago-1\\.+|mercadolibre-1\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -749,7 +754,7 @@
     {
       "group": "com\\.mercadopago\\.android\\.checkoutpx",
       "name": "checkoutpx",
-      "version": "4\\.\\+|4\\.37\\.0+"
+      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.commons",
@@ -759,17 +764,17 @@
     {
       "group": "com\\.mercadopago\\.android\\.congrats",
       "name": "congrats",
-      "version": "2\\.\\+"
+      "version": "2\\.+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.contacts",
       "name": "contacts",
-      "version": "4\\.\\+|5\\.5\\.5"
+      "version": "4\\.\\+|5\\.+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.ml_esc_manager",
       "name": "ml_esc_manager",
-      "version": "2\\.\\+|2\\.3\\.0"
+      "version": "2\\.+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.moneytransfer",
@@ -784,7 +789,7 @@
     {
       "group": "com\\.mercadopago\\.android\\.px",
       "name": "checkout",
-      "version": "4\\.\\+"
+      "version": "4\\.+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.px",
