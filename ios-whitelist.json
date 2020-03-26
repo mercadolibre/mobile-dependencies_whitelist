@@ -21,6 +21,10 @@
       "version": "3.2.2"
     },
     {
+      "name": "DiscountTouchpoint",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "FBSDKCoreKit",
       "version": "5.8.0"
     },
@@ -75,6 +79,10 @@
     {
       "name": "InStoreHomeSections",
       "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "JRSwizzle",
+      "version": "1.1.0"
     },
     {
       "name": "MGSwipeTableCell",
@@ -138,6 +146,10 @@
     },
     {
       "name": "MLClassifiedsDynamicFlow",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLClassiCredits",
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
@@ -439,7 +451,7 @@
     },
     {
       "name": "MPTracking",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLBiometricSecurity",
@@ -475,7 +487,7 @@
     },
     {
       "name": "MLScanner",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "Traceability",
@@ -486,7 +498,32 @@
       "version": "^~>\\s?1.[0-9]+"
     },
     {
+      "name": "MLBFFloxComponent",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "expires": "2020-3-13",
       "name": "AndesUI",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "AndesUI",
+      "version": "^~>\\s?2.[0-9]+"
+    },
+    {
+      "name": "MLLoyalDM",
+      "version": "^~>\\s?0.[0-9]+"
+    },
+    {
+      "name": "MLLoyalUIComponents",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "CreditsUIComponents",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLCreditsCore",
       "version": "^~>\\s?1.[0-9]+"
     },
     {
