@@ -529,6 +529,14 @@
     {
       "name": "MPSPPrepaid",
       "version": "^~>\\s?1.+"
+    },
+    {
+      "name": "MLCreditsCore/MercadoLibre",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MLCreditsCore/MercadoPago",
+      "version": "^~>\\s?1.[0-9]+"
     }
   ]
 }
