@@ -35,12 +35,12 @@
     {
       "group": "com\\.adjust\\.sdk",
       "name": "adjust-android",
-      "version": "4\\.17\\.0"
+      "version": "4\\.17\\.0|4\\.20\\.0"
     },
     {
       "group": "com\\.airbnb\\.android",
       "name": "lottie",
-      "version": "2\\.7\\.0"
+      "version": "2\\.7\\.0|3\\.3\\.1"
     },
     {
       "group": "com\\.android\\.installreferrer",
@@ -130,7 +130,7 @@
     {
       "group": "com\\.bugsnag",
       "name": "bugsnag-android",
-      "version": "4\\.17\\.2"
+      "version": "4\\.17\\.2|4\\.22\\.3"
     },
     {
       "group": "com\\.datami",
@@ -150,12 +150,12 @@
     {
       "group": "com\\.facebook\\.fresco",
       "name": "fresco",
-      "version": "1\\.3\\.0|1\\.13\\.0"
+      "version": "2\\.1\\.0"
     },
     {
       "group": "com\\.facebook\\.fresco",
       "name": "imagepipeline-okhttp3",
-      "version": "1\\.3\\.0|1\\.13\\.0"
+      "version": "1\\.3\\.0|1\\.13\\.0|2\\.1\\.0|2\\.1\\.1|3\\.12\\.10"
     },
     {
       "group": "com\\.github\\.PhilJay",
@@ -175,7 +175,7 @@
     {
       "group": "com\\.google\\.android",
       "name": "flexbox",
-      "version": "0\\.3\\.0"
+      "version": "0\\.3\\.0|2\\.0\\.1"
     },
     {
       "group": "com\\.google\\.android\\.gms",
@@ -270,7 +270,7 @@
     {
       "group": "com\\.journeyapps",
       "name": "zxing-android-embedded",
-      "version": "3\\.6\\.0"
+      "version": "3\\.6\\.0|4\\.0\\.2"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -307,12 +307,12 @@
     {
       "group": "com\\.mercadolibre\\.android\\.ignite",
       "name": "core",
-      "version": "0\\.\\+"
+      "version": "0\\.\\+|1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "login",
-      "version": "9\\.\\+"
+      "version": "9\\.\\+|10\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -838,12 +838,12 @@
     {
       "group": "com\\.squareup\\.retrofit2",
       "name": "retrofit",
-      "version": "2\\.3\\.0"
+      "version": "2\\.3\\.0|2\\.6\\.4"
     },
     {
       "group": "com\\.theartofdev\\.edmodo",
       "name": "android-image-cropper",
-      "version": "2\\.7\\.0"
+      "version": "2\\.7\\.0|2\\.8\\.0"
     },
     {
       "group": "com\\.tonicartos",
@@ -873,12 +873,12 @@
     {
       "group": "io\\.fotoapparat",
       "name": "fotoapparat",
-      "version": "2\\.5\\.0"
+      "version": "2\\.5\\.0|2\\.7\\.0"
     },
     {
       "group": "com\\.otaliastudios",
       "name": "cameraview",
-      "version": "1\\.6\\.1"
+      "version": "1\\.6\\.1|2\\.6\\.2"
     },
     {
       "group": "io\\.reactivex",
@@ -948,7 +948,7 @@
     {
       "group": "android\\.arch\\.work",
       "name": "work-runtime",
-      "version": "1\\.0\\.1"
+      "version": "2\\.0\\.0"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.userbiometrics",
@@ -1085,6 +1085,91 @@
       "group": "com\\.mercadolibre\\.android\\.discounts_touchpoint",
       "name": "discounts_touchpoint",
       "version": "mercadopago-1\\.\\+|mercadolibre-1\\.\\+"
+    },
+    {
+      "group": "androidx.preference",
+      "name": "preference",
+      "version": "1\\.0\\.0"
+    },
+    {
+      "group": "androidx\\.appcompat",
+      "name": "appcompat",
+      "version": "1\\.1\\.0"
+    },
+    {
+      "group": "androidx\\.cardview",
+      "name": "cardview",
+      "version": "1\\.0\\.0"
+    },
+    {
+      "group": "androidx\\.browser",
+      "name": "customtabs",
+      "version": "1\\.0\\.0"
+    },
+    {
+      "group": "com\\.google\\.android\\.material",
+      "name": "material",
+      "version": "1\\.1\\.0"
+    },
+    {
+      "group": "androidx\\.gridlayout",
+      "name": "gridlayout",
+      "version": "1\\.0\\.0"
+    },
+    {
+      "group": "androidx\\.multidex:",
+      "name": "multidex",
+      "version": "2\\.0\\.1"
+    },
+    {
+      "group": "androidx\\.percentlayout",
+      "name": "widget",
+      "version": "1\\.0\\.0"
+    },
+    {
+      "group": "androidx\\.preference",
+      "name": "preference",
+      "version": "1\\.1\\.0"
+    },
+    {
+      "group": "androidx\\.recyclerview",
+      "name": "recyclerview",
+      "version": "1\\.1\\.0"
+    },
+    {
+      "group": "androidx\\.annotation",
+      "name": "annotation",
+      "version": "1\\.0\\.0"
+    },
+    {
+      "group": "androidx\\.media",
+      "name": "media",
+      "version": "1\\.1\\.0"
+    },
+    {
+      "group": "androidx\\.legacy",
+      "name": "legacy-support-v4",
+      "version": "1\\.1\\.0"
+    },
+    {
+      "group": "androidx\\.transition",
+      "name": "transition",
+      "version": "1\\.3\\.0"
+    },
+    {
+      "group": "androidx\\.constraintlayout",
+      "name": "constraintlayout",
+      "version": "1\\.1\\.3"
+    },
+    {
+      "group": "androidx\\.constraintlayout",
+      "name": "constraintlayout-solver",
+      "version": "1.\\1\\.3"
+    },
+    {
+      "group": "androidx\\.installreferrer",
+      "name": "installreferrer",
+      "version": "1\\.0"
     }
   ]
 }
