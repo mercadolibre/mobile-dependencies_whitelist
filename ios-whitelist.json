@@ -1,740 +1,534 @@
 {
-    "whitelist": [
-        {
-            "expires": "2018-09-01",
-            "group": "com\\.squareup\\.picasso",
-            "name": "picasso"
-        },
-        {
-            "group": "androidx\\.preference",
-            "name": "preference"
-        },
-        {
-            "group": "androidx\\.constraintlayout",
-            "name": "constraintlayout"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.andesui",
-            "name": "components"
-        },
-        {
-            "group": "android\\.arch\\.lifecycle",
-            "name": "extensions"
-        },
-        {
-            "group": "android\\.arch\\.lifecycle",
-            "name": "livedata-core"
-        },
-        {
-            "group": "android\\.arch\\.lifecycle",
-            "name": "viewmodel"
-        },
-        {
-            "group": "com\\.adjust\\.sdk",
-            "name": "adjust-android",
-            "version": "4\\.17\\.0"
-        },
-        {
-            "group": "com\\.airbnb\\.android",
-            "name": "lottie",
-            "version": "2\\.7\\.0"
-        },
-        {
-            "group": "com\\.android\\.installreferrer",
-            "name": "installreferrer",
-            "version": "1\\.0"
-        },
-               {
-            "group": "com\\.android\\.support",
-            "name": "appcompat-v7",
-            "version": "28\\.0\\.0"
-        },
-        {
-            "group": "com\\.android\\.support",
-            "name": "cardview-v7",
-            "version": "28\\.0\\.0"
-        },
-        {
-            "group": "com\\.android\\.support",
-            "name": "design",
-            "version": "28\\.0\\.0"
-        },
-        {
-            "group": "com\\.android\\.support",
-            "name": "gridlayout-v7",
-            "version": "28\\.0\\.0"
-        },
-        {
-            "group": "com\\.android\\.support",
-            "name": "multidex",
-            "version": "1\\.0\\.+"
-        },
-        {
-            "group": "com\\.android\\.support",
-            "name": "percent",
-            "version": "28\\.0\\.0"
-        },
-        {
-            "group": "com\\.android\\.support",
-            "name": "preference-v7",
-            "version": "28\\.0\\.0"
-        },
-        {
-            "group": "com\\.android\\.support",
-            "name": "recyclerview-v7",
-            "version": "28\\.0\\.0"
-        },
-        {
-            "group": "com\\.android\\.support",
-            "name": "support-annotations",
-            "version": "28\\.0\\.0"
-        },
-        {
-            "group": "com\\.android\\.support",
-            "name": "support-media-compat",
-            "version": "28\\.0\\.0"
-        },
-        {
-            "group": "com\\.android\\.support",
-            "name": "support-v4",
-            "version": "28\\.0\\.0"
-        },
-        {
-            "group": "com\\.android\\.support",
-            "name": "transition",
-            "version": "28\\.0\\.0"
-        },
-        {
-            "group": "com\\.android\\.support\\.constraint",
-            "name": "constraint-layout"
-        },
-        {
-            "group": "com\\.android\\.support\\.constraint",
-            "name": "constraint-layout-solver",
-            "version": "1\\.1\\.3"
-        },
-        {
-            "group": "com\\.android\\.support\\.constraint",
-            "name": "constraint-layout-solver",
-            "version": "1\\.3\\.11"
-        },
-	{
-            "group": "com\\.android\\.support",
-            "name": "customtabs",
-            "version": "28\\.0\\.0"
-        },
-        {
-            "group": "com\\.bugsnag",
-            "name": "bugsnag-android"
-        },
-        {
-            "group": "com\\.f2prateek\\.rx\\.preferences",
-            "name": "rx-preferences",
-            "version": "1\\.0\\.2"
-        },
-        {
-            "group": "com\\.facebook\\.android",
-            "name": "facebook-android-sdk",
-            "version": "4\\.24\\.0"
-        },
-        {
-            "group": "com\\.facebook\\.fresco",
-            "name": "fresco",
-            "version": "1\\.3\\.0|1\\.13\\.0"
-        },
-        {
-            "group": "com\\.facebook\\.fresco",
-            "name": "imagepipeline-okhttp3",
-            "version": "1\\.3\\.0|1\\.13\\.0"
-        },
-        {
-            "group": "com\\.github\\.PhilJay",
-            "name": "MPAndroidChart",
-            "version": "v3\\.1\\.0"
-        },
-        {
-            "group": "com\\.github\\.joshjdevl\\.libsodiumjni",
-            "name": "libsodium-jni-aar",
-            "version": "2\\.0\\.1"
-        },
-        {
-            "group": "com\\.github\\.ksoichiro",
-            "name": "android-observablescrollview",
-            "version": "1\\.6\\.0"
-        },
-        {
-            "group": "com\\.google\\.android\\.gms",
-            "name": "play-services-ads",
-            "version": "16\\.0\\.0|10\\.2\\.6"
-        },
-        {
-            "group": "com\\.google\\.android\\.gms",
-            "name": "play-services-analytics",
-            "version": "16\\.0\\.4|10\\.2\\.6"
-        },
-        {
-            "group": "com\\.google\\.android\\.gms",
-            "name": "play-services-auth",
-            "version": "16\\.0\\.1|10\\.2\\.6"
-        },
-        {
-            "group": "com\\.google\\.android\\.gms",
-            "name": "play-services-base",
-            "version": "16\\.0\\.1"
-        },
-        {
-            "group": "com\\.google\\.android\\.gms",
-            "name": "play-services-location",
-            "version": "16\\.0\\.0|10\\.2\\.6"
-        },
-        {
-            "group": "com\\.google\\.android\\.gms",
-            "name": "play-services-maps",
-            "version": "16\\.0\\.0|10\\.2\\.6"
-        },
-        {
-            "group": "com\\.google\\.android\\.libraries\\.places",
-            "name": "places-compat",
-            "version": "1\\.1\\.0"
-        },
-        {
-            "group": "com\\.google\\.android\\.gms",
-            "name": "play-services-safetynet",
-            "version": "16\\.0\\.0"
-        },
-        {
-            "group": "com\\.google\\.code\\.gson",
-            "name": "gson"
-        },
-        {
-            "group": "com\\.google\\.firebase",
-            "name": "firebase-appindexing",
-            "version": "16\\.0\\.2|10\\.2\\.6"
-        },
-        {
-            "group": "com\\.google\\.firebase",
-            "name": "firebase-core",
-            "version": "16\\.0\\.4|10\\.2\\.6"
-        },
-        {
-            "group": "com\\.google\\.firebase",
-            "name": "firebase-auth",
-            "version": "17\\.0\\.0"
-        },
-        {
-            "group": "com\\.google\\.firebase",
-            "name": "firebase-messaging",
-            "version": "17\\.3\\.4"
-        },
-        {
-            "group": "com\\.google\\.firebase",
-            "name": "firebase-perf",
-            "version": "16\\.2\\.0"
-        },
-        {
-            "group": "com\\.google\\.maps\\.android",
-            "name": "android-maps-utils",
-            "version": "0\\.4\\.4"
-        },
-        {
-            "group": "com\\.journeyapps",
-            "name": "zxing-android-embedded",
-            "version": "3\\.6\\.0"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android",
-            "name": "analytics"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android",
-            "name": "authentication"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android",
-            "name": "configuration-manager"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android",
-            "name": "login"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android",
-            "name": "melidata-sdk"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android",
-            "name": "milestone-tracker"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android",
-            "name": "multiimageview"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android",
-            "name": "networking"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android",
-            "name": "notifications"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android",
-            "name": "pms"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.adjust",
-            "name": "core"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.matt",
-            "name": "core"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android",
-            "name": "progress-circle"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android",
-            "name": "restclient"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android",
-            "name": "restclient-adapter-bus"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android",
-            "name": "restclient-adapter-rx2"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android",
-            "name": "restclient-converter-json"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android",
-            "name": "restclient-extension-header"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android",
-            "name": "restclient-legacy"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android",
-            "name": "shipping\\-components"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android",
-            "name": "ui"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android",
-            "name": "ui_legacy"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.activity",
-            "name": "shortlist",
-            "version": "4\\.\\+"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.activity",
-            "name": "storage"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.biometrics",
-            "name": "sdk"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.bookmarks",
-            "name": "bookmarks"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.buyingflow\\.bridge",
-            "name": "core"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.card\\.header",
-            "name": "card\\-header"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.cart",
-            "name": "manager"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.classifieds",
-            "name": "dynamic-flow"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.classifieds",
-            "name": "listing"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.commons"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.cpg",
-            "name": "ui_components"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.discovery",
-            "version": "1\\.\\+"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.flox",
-            "name": "engine"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.history",
-            "name": "history"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.instore\\.home\\.sections",
-            "name": "instore_home_sections",
-            "version": "mercadopago-1\\.+"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.maps",
-            "name": "core"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.marketplace\\.map",
-            "name": "marketplace\\-map"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.merchengine",
-            "version": "1\\.\\+"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.mlcharts",
-            "name": "mlcharts",
-            "version": "0\\.+"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.charts",
-            "name": "melicharts",
-            "version": "0\\.+"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.mlwallet",
-            "name": "header"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.mydata",
-            "name": "profile-data"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.mydata",
-            "name": "profile-picture"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.myml\\.commons",
-            "name": "core"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.navigationcp",
-            "name": "navigationcp"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.navigationcp",
-            "name": "shipping-address"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
-            "name": "core"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
-            "name": "renderer-fresco"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.place",
-            "name": "annotation"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.place",
-            "name": "core"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.place",
-            "name": "processor"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.recommendations"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.remedy",
-            "name": "remedy",
-            "version": "mercadolibre-1\\.+"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.rule\\.engine",
-            "name": "rule\\-engine",
-            "version": "1\\.\\+|2\\.\\+"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.sdk"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.search",
-            "name": "input"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.security",
-            "name": "attestation"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.security",
-            "name": "biometrics_ui"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.security",
-            "name": "security_preferences",
-            "version": "mercadopago-1\\.+"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.security",
-            "name": "security_preferences",
-            "version": "mercadopago-2\\.+"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.uicomponents"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.fontela"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.uinavigationcp",
-            "name": "addresshub"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.variations"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
-            "name": "api"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.registration",
-            "name": "core",
-            "expire": "2019-10-31"
-        },
-        {
-            "group": "com\\.mercadopago",
-            "name": "sdk"
-        },
-        {
-            "group": "com\\.mercadopago\\.android",
-            "name": "account_money_plugin"
-        },
-        {
-            "group": "com\\.mercadopago\\.android",
-            "name": "payment_processor"
-        },
-        {
-            "group": "com\\.mercadopago\\.android\\.balance",
-            "name": "balance"
-        },
-        {
-            "group": "com\\.mercadopago\\.android\\.cards",
-            "name": "cards"
-        },
-        {
-            "group": "com\\.mercadopago\\.android\\.checkout",
-            "name": "checkout"
-        },
-        {
-            "group": "com\\.mercadopago\\.android\\.checkoutpx",
-            "name": "checkoutpx"
-        },
-        {
-            "group": "com\\.mercadopago\\.android\\.commons",
-            "name": "commons"
-        },
-        {
-            "group": "com\\.google\\.zxing",
-            "name": "core",
-            "version": "3\\.3\\.0"
-        },
-        {
-            "group": "com\\.mercadopago\\.android\\.congrats",
-            "name": "congrats",
-            "version": "1\\.+"
-        },
-        {
-            "group": "com\\.mercadopago\\.android\\.contacts",
-            "name": "contacts"
-        },
-        {
-            "group": "com\\.mercadopago\\.android\\.moneytransfer",
-            "name": "contacts",
-            "version": "5\\.+"
-        },
-        {
-            "group": "com\\.mercadopago\\.android\\.ml_esc_manager",
-            "name": "ml_esc_manager"
-        },
-        {
-            "group": "com\\.mercadopago\\.android\\.payment",
-            "name": "payment"
-        },
-        {
-            "group": "com\\.mercadopago\\.android\\.px",
-            "name": "checkout",
-            "version": "4\\.+"
-        },
-        {
-            "group": "com\\.mercadopago\\.android\\.sdk",
-            "name": "sdk"
-        },
-        {
-            "group": "com\\.mercadopago\\.point\\.pos",
-            "name": "point_pos"
-        },
-        {
-            "group": "com\\.polidea\\.rxandroidble",
-            "name": "rxandroidble",
-            "version": "1\\.5\\.0"
-        },
-        {
-            "group": "com\\.squareup\\.okhttp3",
-            "name": "okhttp",
-            "version": "3\\.11\\.0"
-        },
-        {
-            "group": "com\\.squareup\\.retrofit2",
-            "name": "adapter-rxjava",
-            "version": "2\\.3\\.0"
-        },
-        {
-            "group": "com\\.squareup\\.retrofit2",
-            "name": "adapter-rxjava2",
-            "version": "2\\.3\\.0"
-        },
-        {
-            "group": "com\\.squareup\\.retrofit2",
-            "name": "converter-gson",
-            "version": "2\\.3\\.0"
-        },
-        {
-            "group": "com\\.squareup\\.retrofit2",
-            "name": "retrofit",
-            "version": "2\\.3\\.0"
-        },
-        {
-            "group": "com\\.squareup",
-            "name": "android-times-square",
-            "version": "1\\.7\\.10"
-        },
-        {
-            "group": "com\\.theartofdev\\.edmodo",
-            "name": "android-image-cropper"
-        },
-        {
-            "group": "com\\.tonicartos",
-            "name": "superslim",
-            "version": "0\\.4\\.13"
-        },
-        {
-            "group": "com\\.trello\\.rxlifecycle2",
-            "name": "rxlifecycle",
-            "version": "2\\.2\\.2"
-        },
-        {
-            "group": "com\\.trello\\.rxlifecycle2",
-            "name": "rxlifecycle-android",
-            "version": "2\\.2\\.2"
-        },
-        {
-            "group": "com\\.trello\\.rxlifecycle2",
-            "name": "rxlifecycle-android-lifecycle",
-            "version": "2\\.2\\.2"
-        },
-        {
-            "group": "de\\.greenrobot",
-            "name": "eventbus"
-        },
-        {
-            "group": "io\\.fotoapparat",
-            "name": "fotoapparat",
-            "version": "2\\.5\\.0"
-        },
-        {
-            "group": "io\\.reactivex",
-            "name": "rxandroid",
-            "version": "1\\.2\\.1"
-        },
-        {
-            "group": "io\\.reactivex",
-            "name": "rxjava",
-            "version": "1\\.3\\.6"
-        },
-        {
-            "group": "io\\.reactivex\\.rxjava2",
-            "name": "rxandroid"
-        },
-        {
-            "group": "io\\.reactivex\\.rxjava2",
-            "name": "rxjava"
-        },
-        {
-            "group": "io\\.reactivex\\.rxjava2",
-            "name": "rxkotlin"
-        },
-        {
-            "group": "me\\.dm7\\.barcodescanner",
-            "name": "zbar"
-        },
-        {
-            "group": "org\\.apache\\.commons",
-            "name": "commons-lang3",
-            "version": "3\\.6"
-        },
-        {
-            "group": "org\\.jetbrains\\.kotlin",
-            "name": "kotlin-android-extensions-runtime"
-        },
-        {
-            "group": "org\\.jetbrains\\.kotlin",
-            "name": "kotlin-stdlib",
-            "version": "1\\.3\\.11"
-        },
-        {
-            "group": "org\\.jetbrains\\.kotlin",
-            "name": "kotlin-stdlib-common",
-            "version": "1\\.3\\.11"
-        },
-        {
-            "group": "org\\.jetbrains\\.kotlin",
-            "name": "kotlin-stdlib-jdk7"
-        },
-        {
-            "group": "uk\\.co\\.chrisjenx",
-            "name": "calligraphy",
-            "version": "2\\.1\\.0"
-        },
-        {
-            "group": "com\\.datami",
-            "name": "smisdk",
-            "version": "3\\.5\\.1"
-
-        },
-        {
-            "group": "com\\.mercadolibre\\.android",
-            "name": "carddrawer",
-            "version": "1\\.\\+"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.profileengine",
-            "name": "peui",
-            "version": "1\\.+"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.andesui",
-            "name": "components",
-            "version": "2\\.+"
-        },
-        {
-            "group": "com\\.mercadolibre\\.android\\.traceability",
-            "name": "traceability",
-            "version": "2\\.+"
-        }
-    ]
+  "whitelist": [
+    {
+      "name": "Adjust",
+      "version": "4.18.([1-9][0-9]*)$"
+    },
+    {
+      "name": "AmountLabel",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "Bugsnag",
+      "version": "5.22.4"
+    },
+    {
+      "name": "CHTCollectionViewWaterfallLayout",
+      "version": "0.8"
+    },
+    {
+      "name": "Charts",
+      "version": "3.2.2"
+    },
+    {
+      "name": "DiscountTouchpoint",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "FBSDKCoreKit",
+      "version": "5.8.0"
+    },
+    {
+      "name": "FBSDKLoginKit",
+      "version": "5.8.0"
+    },
+    {
+      "name": "FSQCollectionViewAlignedLayout",
+      "version": "1.1.1"
+    },
+    {
+      "name": "FXBlurView",
+      "version": "1.6.4"
+    },
+    {
+      "name": "Firebase/Core",
+      "version": "^~>\\s?(4.13.0|6.9.0)$"
+    },
+    {
+      "name": "Firebase/DynamicLinks",
+      "version": "^~>\\s?(4.13.0|6.9.0)$"
+    },
+    {
+      "name": "Firebase/Analytics",
+      "version": "^~>\\s?(4.13.0|6.9.0)$"
+    },
+    {
+      "name": "Firebase/MLVision",
+      "version": "6.9.0"
+    },
+    {
+      "name": "Firebase/MLVisionFaceModel",
+      "version": "6.9.0"
+    },
+    {
+      "name": "Flox",
+      "version": "^~>\\s?2.[0-9]+"
+    },
+    {
+      "name": "HomeSectionsApi",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "ISO8601DateFormatter",
+      "version": "0.8"
+    },
+    {
+      "name": "InStore-Discovery",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "InStoreHomeSections",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "JRSwizzle",
+      "version": "1.1.0"
+    },
+    {
+      "name": "MGSwipeTableCell",
+      "version": "1.6.1"
+    },
+    {
+      "name": "MIPXPaymentProcessorPlugin",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLAnalytics",
+      "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "name": "MLAppRater",
+      "version": "^~>\\s?3.[0-9]+$"
+    },
+    {
+      "name": "MLAuthentication",
+      "version": "^~>\\s?0.[0-9]+"
+    },
+    {
+      "name": "MLBiometrics",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MPThreeDS",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "PXAddon",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLCardForm",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLBookmarks",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLCPG",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLCard",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLCardDrawer",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLCart",
+      "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "name": "MLCharts",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLClassifiedsDynamicFlow",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLClassiCredits",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLCollaborators",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLCommons",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLRemoteConfigurations",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLCreditsBehaviours",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MLDynamicModal",
+      "version": "^~>\\s?0.[0-9].*$"
+    },
+    {
+      "name": "MLESCManager",
+      "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "name": "MLFirebase",
+      "version": "^~>\\s?(0.[0-9]+|1.[0-9]+)"
+    },
+    {
+      "name": "MLIgnite",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLImagePicker",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLLocalStorage",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLLogin",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLMYMLCommons",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLMap",
+      "version": "^~>\\s?2.[0-9]+"
+    },
+    {
+      "name": "MLMapComponent",
+      "version": "^~>\\s?2.[0-9]+"
+    },
+    {
+      "name": "MLMelidata",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLMetrics",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MLMilestoneTracker",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MLMultiImageView",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLNavigationBarTransition",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLNavigationCP",
+      "version": "^~>\\s?[1-2]+.[0-9]+"
+    },
+    {
+      "name": "MLNetworking",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "expires": "2019-12-20",
+      "name": "MLNotifications",
+      "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "name": "MLNotifications",
+      "version": "^~>\\s?3.[0-9]+$"
+    },
+    {
+      "name": "MLOnDemandResources",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLPMS",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLPlace",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLProgressCircle",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLReachability",
+      "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "name": "MLRxRestClient",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MLCommonUIComponents",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MLRecommendationCombo",
+      "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "name": "MLRecommendations",
+      "version": "^~>\\s?4.[0-9]+$"
+    },
+    {
+      "name": "MLRecommendationsComparator",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLRemedy",
+      "version": "^~>\\s?2.[0-9]+"
+    },
+    {
+      "name": "MLRemedies",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MLRuleEngine",
+      "version": "^~>\\s?0.[0-9]+"
+    },
+    {
+      "name": "MLSearch/Suggestion",
+      "version": "^~>\\s?4.[0-9]+$"
+    },
+    {
+      "name": "MLSecurity",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MLSupermarket",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLUI",
+      "version": "^~>\\s?5.[0-9]+$"
+    },
+    {
+      "name": "MLUIComponents",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLUINavigationCP",
+      "version": "^~>\\s?[1-2]+.[0-9]+"
+    },
+    {
+      "name": "MLVIP/URLScanner",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MLVPP",
+      "version": "^~>\\s?[0-1]+.[0-9]+"
+    },
+    {
+      "name": "MLVariations",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MPBalance",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MPDynamicSkeleton",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MPMerchEngine",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MPSDK",
+      "version": "^~>\\s?10.[0-9]+$"
+    },
+    {
+      "name": "MPSignUpLibs",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MPTopFloatingView",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MercadoPagoSDK",
+      "version": "^~>\\s?4.[0-9]+$"
+    },
+    {
+      "name": "MercadoPagoSDKV4",
+      "version": "^~>\\s?4.[0-9]+$"
+    },
+    {
+      "name": "OperationDetail/Commons",
+      "version": "^~>\\s?3+.[0-9]+$"
+    },
+    {
+      "name": "OperationDetail/RealtimeActivities",
+      "version": "^~>\\s?3+.[0-9]+$"
+    },
+    {
+      "name": "PINRemoteImage",
+      "version": "2.1.4"
+    },
+    {
+      "name": "PXAccountMoneyPlugin",
+      "version": "^~>\\s?4.[0-9]+$"
+    },
+    {
+      "name": "PXMLPaymentProcessor",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "PureLayout",
+      "version": "3.1.2"
+    },
+    {
+      "name": "RSKImageCropper",
+      "version": "1.6.3"
+    },
+    {
+      "name": "RazzleDazzle",
+      "version": "0.1.5"
+    },
+    {
+      "name": "Realm",
+      "version": "2.10.0"
+    },
+    {
+      "name": "RxSwift",
+      "version": "4.4.1"
+    },
+    {
+      "name": "SDWebImage",
+      "version": "^~>\\s?3.[0-9]+$"
+    },
+    {
+      "name": "SmiSdk",
+      "version": "3.6.0"
+    },
+    {
+      "name": "Sodium",
+      "version": "0.8.0"
+    },
+    {
+      "name": "StyledPageControl",
+      "version": "1.0"
+    },
+    {
+      "name": "WalletCongrats",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MLHistory",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "lottie-ios",
+      "version": "2.0.6|2.5.0"
+    },
+    {
+      "name": "MLFluxClient",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MLGodzippa",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MPCommons",
+      "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "name": "MPUI",
+      "version": "^~>\\s?3.[0-9]+$"
+    },
+    {
+      "name": "MPTracking",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLBiometricSecurity",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLNotificationsHelpers",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLBusinessComponents",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLInsightsMetric",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLNavigation",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLQADB",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "UIImage-ResizeMagick",
+      "version": "0.0.1"
+    },
+    {
+      "name": "MeliCards",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLScanner",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "Traceability",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "AndesUIDraftModal",
+      "version": "^~>\\s?2.[0-9]+"
+    },
+    {
+      "name": "MLBFFloxComponent",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "expires": "2020-3-13",
+      "name": "AndesUI",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "AndesUI",
+      "version": "^~>\\s?2.[0-9]+"
+    },
+    {
+      "name": "MLLoyalDM",
+      "version": "^~>\\s?0.[0-9]+"
+    },
+    {
+      "name": "MLLoyalUIComponents",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "CreditsUIComponents",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLCreditsCore",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MPSPPrepaid",
+      "version": "^~>\\s?1.+"
+    }
+  ]
 }

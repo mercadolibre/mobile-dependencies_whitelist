@@ -45,7 +45,7 @@
     {
       "group": "com\\.android\\.installreferrer",
       "name": "installreferrer",
-      "version": "1\\.0"
+      "version": "1\\.1\\.2"
     },
     {
       "group": "com\\.android\\.support",
@@ -141,6 +141,11 @@
       "group": "com\\.f2prateek\\.rx\\.preferences",
       "name": "rx-preferences",
       "version": "1\\.0\\.2"
+    },
+    {
+      "group": "com\\.facebook\\.android",
+      "name": "facebook-applinks",
+      "version": "5\\.15\\.3"
     },
     {
       "group": "com\\.facebook\\.android",
@@ -429,7 +434,7 @@
     {
       "group": "com\\.mercadolibre\\.android\\.adjust",
       "name": "core",
-      "version": "mercadopago-1\\.\\+|mercadolibre-1\\.\\+"
+      "version": "mercadopago-1\\.\\+|mercadolibre-1\\.\\+|2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -482,6 +487,11 @@
       "version": "0\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.cross_app_links",
+      "name": "core",
+      "version": "1\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.charts",
       "name": "melicharts",
       "version": "0\\.\\+"
@@ -495,6 +505,11 @@
       "group": "com\\.mercadolibre\\.android\\.classifieds",
       "name": "listing",
       "version": "0\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.classifieds",
+      "name": "credits",
+      "version": "1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.commons",
@@ -1002,6 +1017,11 @@
       "version": "1\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.loyalty_ui_components",
+      "name": "components",
+      "version": "1\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.mlbusinesscomponents",
       "name": "mlbusinesscomponents",
       "version": "1\\.+"
@@ -1049,7 +1069,13 @@
     {
       "group": "com\\.mercadolibre\\.android\\.traceability",
       "name": "traceability",
-      "version": "1\\.+"
+      "version": "2\\.\\+"
+    },
+    {
+      "expires": "2020-03-04",
+      "group": "com\\.mercadolibre\\.android\\.traceability",
+      "name": "traceability",
+      "version": "1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.inappupdates",
@@ -1064,7 +1090,7 @@
     {
       "group": "com\\.mercadolibre\\.android\\.draftandesui",
       "name": "draft-modal",
-      "version": "2\\.+"
+      "version": "3\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cardform",
@@ -1077,6 +1103,12 @@
       "version": "1\\.+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.andesui",
+      "name": "components",
+      "version": "2\\.+"
+    },
+    {
+      "expires": "2020-03-13",
       "group": "com\\.mercadolibre\\.android\\.andesui",
       "name": "components",
       "version": "1\\.+"
