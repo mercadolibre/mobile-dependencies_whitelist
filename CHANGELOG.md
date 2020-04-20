@@ -1,3 +1,7 @@
+# v7.0.3
+## Agregado
+- Se agrega la configuración de stale para github
+
 # v7.0.2
 ## Arreglado
 - Se arregla el path del export de los reports de Detekt para que salgan en los PRs
@@ -13,7 +17,7 @@
 
 # v6.3.0
 ## Agregado
-- Se agrega soporte a tasks de test genericas para flavors (ej: test${buildType}UnitTest)
+- Se agrega soporte a tasks de test genéricas para flavors (ej: test${buildType}UnitTest)
 
 # v6.2.0
 ## Actualizado
