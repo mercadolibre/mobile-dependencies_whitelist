@@ -1230,6 +1230,21 @@
       "version": "2\\.0\\.1"
     },
     {
+      "group": "androidx\\.room",
+      "name": "room-runtime",
+      "version": "2\\.2\\.5"
+    },
+    {
+      "group": "androidx\\.room",
+      "name": "room-compiler",
+      "version": "2\\.2\\.5"
+    },
+    {
+      "group": "androidx\\.room",
+      "name": "room-ktx",
+      "version": "2\\.2\\.5"
+    },
+    {
       "group": "org\\.mockito",
       "name": "mockito-core",
       "version": "3\\.3\\.0"
