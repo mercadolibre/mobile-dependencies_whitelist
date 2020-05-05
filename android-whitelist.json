@@ -1288,6 +1288,21 @@
       "group": "com\\.jakewharton\\.timber",
       "name": "timber",
       "version": "4\\.5\\.1"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.collaboratorsui",
+      "name": "collaboratorsui",
+      "version": "1\\.\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.profileengine",
+      "name": "peui",
+      "version": "1\\.\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.mldashboard",
+      "name": "mldashboard",
+      "version": "1\\.\\.+"
     }
   ]
 }
