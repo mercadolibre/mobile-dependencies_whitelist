@@ -30,6 +30,13 @@ JSON Schema:
 }
 ```
 
+**NOTE5**: If you want to try if its working correctly from your fork, just add this line to de build.gradle:
+```
+lintGradle {
+    dependencyWhitelistUrl = "https://raw.githubusercontent.com/YOUR_GITHUB_USER/mobile-dependencies_whitelist/master/android-whitelist.json"
+}
+```
+
 ### iOS
 iOS whitelist dependencies consist of a set of dependencies that are available for front-ends and high-level repositories to consume from the Mercadolibre-mobile group.
 

@@ -1,13 +1,8 @@
 {
   "whitelist": [
     {
-      "expire": "2017-12-15",
-      "name": "MLShippingComponents",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
       "name": "Adjust",
-      "version": "^~>\\s?4.18.([1-9][0-9]*)$"
+      "version": "4.18.([1-9][0-9]*)$"
     },
     {
       "name": "AmountLabel",
@@ -26,12 +21,16 @@
       "version": "3.2.2"
     },
     {
+      "name": "DiscountTouchpoint",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "FBSDKCoreKit",
-      "version": "4.15.0"
+      "version": "5.8.0"
     },
     {
       "name": "FBSDKLoginKit",
-      "version": "4.15.0"
+      "version": "5.8.0"
     },
     {
       "name": "FSQCollectionViewAlignedLayout",
@@ -43,11 +42,23 @@
     },
     {
       "name": "Firebase/Core",
-      "version": "^~>\\s?4.13.0$"
+      "version": "^~>\\s?(4.13.0|6.9.0)$"
     },
     {
       "name": "Firebase/DynamicLinks",
-      "version": "^~>\\s?4.13.0$"
+      "version": "^~>\\s?(4.13.0|6.9.0)$"
+    },
+    {
+      "name": "Firebase/Analytics",
+      "version": "^~>\\s?(4.13.0|6.9.0)$"
+    },
+    {
+      "name": "Firebase/MLVision",
+      "version": "6.9.0"
+    },
+    {
+      "name": "Firebase/MLVisionFaceModel",
+      "version": "6.9.0"
     },
     {
       "name": "Flox",
@@ -68,6 +79,10 @@
     {
       "name": "InStoreHomeSections",
       "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "JRSwizzle",
+      "version": "1.1.0"
     },
     {
       "name": "MGSwipeTableCell",
@@ -92,6 +107,18 @@
     {
       "name": "MLBiometrics",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MPThreeDS",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "PXAddon",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLCardForm",
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "MLBookmarks",
@@ -122,6 +149,10 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "MLClassiCredits",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "MLCollaborators",
       "version": "^~>\\s?0.[0-9]+$"
     },
@@ -130,12 +161,16 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "MLRemoteConfigurations",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "MLCreditsBehaviours",
       "version": "^~>\\s?1.[0-9]+"
     },
     {
       "name": "MLDynamicModal",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?0.[0-9].*$"
     },
     {
       "name": "MLESCManager",
@@ -143,7 +178,7 @@
     },
     {
       "name": "MLFirebase",
-      "version": "^~>\\s?0.[0-9]+"
+      "version": "^~>\\s?(0.[0-9]+|1.[0-9]+)"
     },
     {
       "name": "MLIgnite",
@@ -151,6 +186,10 @@
     },
     {
       "name": "MLImagePicker",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLLocalStorage",
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
@@ -175,7 +214,7 @@
     },
     {
       "name": "MLMetrics",
-      "version": "^~>\\s?0.[0-9]+"
+      "version": "^~>\\s?1.[0-9]+"
     },
     {
       "name": "MLMilestoneTracker",
@@ -198,8 +237,13 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "expires": "2019-12-20",
       "name": "MLNotifications",
       "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "name": "MLNotifications",
+      "version": "^~>\\s?3.[0-9]+$"
     },
     {
       "name": "MLOnDemandResources",
@@ -243,7 +287,7 @@
     },
     {
       "name": "MLRemedy",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "MLRemedies",
@@ -290,6 +334,10 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "MPBalance",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "MPDynamicSkeleton",
       "version": "^~>\\s?0.[0-9]+$"
     },
@@ -308,10 +356,6 @@
     {
       "name": "MPTopFloatingView",
       "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "name": "MeliSDK",
-      "version": "^~>\\s?6.[0-9]+$"
     },
     {
       "name": "MercadoPagoSDK",
@@ -370,16 +414,16 @@
       "version": "3.6.0"
     },
     {
+      "name": "Sodium",
+      "version": "0.8.0"
+    },
+    {
       "name": "StyledPageControl",
       "version": "1.0"
     },
     {
       "name": "WalletCongrats",
       "version": "^~>\\s?1.[0-9]+"
-    },
-    {
-      "name": "SmiSdk",
-      "version": "3.6.0"
     },
     {
       "name": "MLHistory",
@@ -407,7 +451,7 @@
     },
     {
       "name": "MPTracking",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLBiometricSecurity",
@@ -418,12 +462,89 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "MLBusinessComponents",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "MLInsightsMetric",
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MPAppRater",
       "version": "^~>\\s?3.[0-9]+$"
+    },
+    {
+      "name": "MLNavigation",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLQADB",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "UIImage-ResizeMagick",
+      "version": "0.0.1"
+    },
+    {
+      "name": "MeliCards",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLScanner",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "Traceability",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "AndesUIDraftModal",
+      "version": "^~>\\s?2.[0-9]+"
+    },
+    {
+      "name": "MLBFFloxComponent",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "expires": "2020-5-15",
+      "name": "AndesUI",
+      "version": "^~>\\s?2.[0-9]+"
+    },
+    {
+      "name": "AndesUI",
+      "version": "^~>\\s?3.[0-9]+"
+    },
+    {
+      "name": "MLLoyalDM",
+      "version": "^~>\\s?0.[0-9]+"
+    },
+    {
+      "name": "MLLoyalUIComponents",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "CreditsUIComponents",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLCreditsCore",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MPSPPrepaid",
+      "version": "^~>\\s?1.+"
+    },
+    {
+      "name": "MLCrossAppLinks",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLPurchases/Integration",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "CardsEngagement/Feedback",
+      "version": "^~>\\s?1.[0-9]+$"
     }
   ]
 }
