@@ -1,3 +1,7 @@
+# 7.1.0
+## Actualizado
+- Se actualiza la version del plugin de gradle enterprise a [3.3.2](https://gradle.com/enterprise/releases/2020.2/#background-build-scan-publication) para poder tener scan en background
+
 # v7.0.3
 ## Agregado
 - Se agrega la configuración de stale para github
