@@ -18,7 +18,6 @@ class BuildScanModule implements Module {
             apply plugin:'com.gradle.build-scan'
             buildScan {
                 server = 'https://gradle.adminml.com/'
-                uploadInBackground = !System.getenv().containsKey("CI")
                 // tags
                 tag project.getRootDir().getName()
                 if (System.getenv().containsKey("CI")) {
