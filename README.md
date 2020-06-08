@@ -60,3 +60,37 @@ Example:
 	}]
 }
 ```
+
+# Contexts Whitelist
+
+This json represents the contexts for our apps, both for iOS and Android. Which will be consumed by Kelli, in the "Deploy" job, and will be pushed into the apps, in their respective branches. 
+The apps will use it to create the Initiative map, and will use, the "key" to looks for the context of the errors, to pass it on to Bugsnag.
+
+This set of context is parsed in the form of a JSON text. The root level property should be called “context”.
+
+Each context is an object with three properties:
+
+- **“name”**: which represents the context.
+- "iOS" and "Android" objects, which have two properties:
+    - **“key”**: which represents, the "package" in Android and the "Module" in iOS, and it will be used to match and set the context for each error occurs in the apps.
+    - **"repo”**: the link to the respective GitHub repository.
+
+Example:
+```
+{
+    "context": [
+        {
+            "name": "ab_user_onboarding",
+            "iOS": {
+                "key": "ABUserOnboarding",
+                "repo": "https://github.com/mercadolibre/fury_ab-user-onboarding-ios"
+            },
+            "Android": {
+                "key": "com.mercadopago.android.useronboarding",
+                "repo": "https://github.com/mercadolibre/fury_ab-user-onboarding-android"
+            }
+        },
+        …
+    ]
+}
+```
