@@ -18,7 +18,11 @@
     },
     {
       "name": "Charts",
-      "version": "3.2.2"
+      "version": "3.4.0"
+    },
+    {
+      "name": "DiscountTouchpoint",
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "FBSDKCoreKit",
@@ -77,6 +81,10 @@
       "version": "^~>\\s?1.[0-9]+"
     },
     {
+      "name": "JRSwizzle",
+      "version": "1.1.0"
+    },
+    {
       "name": "MGSwipeTableCell",
       "version": "1.6.1"
     },
@@ -109,6 +117,10 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "MLCardForm",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
       "name": "MLBookmarks",
       "version": "^~>\\s?0.[0-9]+$"
     },
@@ -137,11 +149,19 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "MLClassiCredits",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "MLCollaborators",
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "MLCommons",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLRemoteConfigurations",
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
@@ -431,7 +451,7 @@
     },
     {
       "name": "MPTracking",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLBiometricSecurity",
@@ -448,6 +468,10 @@
     {
       "name": "MLInsightsMetric",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MPAppRater",
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "MLNavigation",
@@ -467,7 +491,64 @@
     },
     {
       "name": "MLScanner",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "Traceability",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "AndesUIDraftModal",
+      "version": "^~>\\s?2.[0-9]+"
+    },
+    {
+      "name": "MLBFFloxComponent",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "expires": "2020-5-15",
+      "name": "AndesUI",
+      "version": "^~>\\s?2.[0-9]+"
+    },
+    {
+      "name": "AndesUI",
+      "version": "^~>\\s?3.[0-9]+"
+    },
+    {
+      "name": "MLLoyalDM",
+      "version": "^~>\\s?0.[0-9]+"
+    },
+    {
+      "name": "MLLoyalUIComponents",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "CreditsUIComponents",
       "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLCreditsCore",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MPSPPrepaid",
+      "version": "^~>\\s?1.+"
+    },
+    {
+      "name": "MLCrossAppLinks",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLPurchases/Integration",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "CardsEngagement/Feedback",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "CardsComponents",
+      "version": "^~>\\s?1.[0-9]+$"
     }
   ]
 }
