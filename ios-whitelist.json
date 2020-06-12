@@ -554,6 +554,10 @@
     {
       "name": "CardsComponents",
       "version": "^~>\\s?1.[0-9]+$"
-    }
+    },
+    {
+      "name": "MLUserBlocker",
+      "version": "^~>\\s?1.[0-9]+"
+    },
   ]
 }
