@@ -2727,6 +2727,17 @@
                 "key": "com.mercadopago.withdraw",
                 "repo": "https://github.com/mercadolibre/mpmobile-android_wallet"
             }
+        },
+        {
+            "name": "tfs_commons",
+            "iOS": {
+                "key": "MLTFSCommons",
+                "repo": "https://github.com/mercadolibre/fury_tfs-commons-ios"
+            },
+            "Android": {
+                "key": "",
+                "repo": ""
+            }
         }
     ]
 }
