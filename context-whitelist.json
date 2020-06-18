@@ -80,6 +80,17 @@
         {
             "name": "app_rater",
             "iOS": {
+                "key": "MLAppRating",
+                "repo": "https://github.com/mercadolibre/mobile-ios_apprater"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.apprater",
+                "repo": "https://github.com/mercadolibre/mobile-android_apprater"
+            }
+        },
+        {
+            "name": "app_rater",
+            "iOS": {
                 "key": "MPAppRater",
                 "repo": "https://github.com/mercadolibre/mpmobile-ios_apprater"
             },
@@ -103,7 +114,7 @@
             "name": "authentication",
             "iOS": {
                 "key": "MLAuthentication",
-                "repo": "https://github.com/mercadolibre/auth-mobile_ios"
+                "repo": "https://github.com/mercadolibre/auth-ios_authentication/"
             },
             "Android": {
                 "key": "com.mercadolibre.android.authentication",
@@ -157,7 +168,7 @@
         {
             "name": "card_drawer",
             "iOS": {
-                "key": "",
+                "key": "MLCardDrawer",
                 "repo": "https://github.com/mercadolibre/meli-card-drawer-ios"
             },
             "Android": {
@@ -243,10 +254,32 @@
             }
         },
         {
+            "name": "classi_cancellations",
+            "iOS": {
+                "key": "MLCLT",
+                "repo": "https://github.com/mercadolibre/fury_classi-cancellations-ios"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.classifieds.cancellation",
+                "repo": "https://github.com/mercadolibre/fury_classi-cancellations-android"
+            }
+        },
+        {
             "name": "classi_homes",
             "iOS": {
                 "key": "MLClassifiedsHomes",
-                "repo": "https://github.com/mercadolibre/classifieds-homes"
+                "repo": "https://github.com/mercadolibre/classifieds-homes_ios"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.classifieds.homes",
+                "repo": "https://github.com/mercadolibre/classifieds-homes_android"
+            }
+        },
+        {
+            "name": "classi_homes",
+            "iOS": {
+                "key": "MLCHome",
+                "repo": "https://github.com/mercadolibre/classifieds-homes_ios"
             },
             "Android": {
                 "key": "com.mercadolibre.android.classifieds.homes",
@@ -257,6 +290,17 @@
             "name": "classi_quotation",
             "iOS": {
                 "key": "MLQuotation",
+                "repo": "https://github.com/mercadolibre/classifieds-quotation_ios"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.quotation",
+                "repo": "https://github.com/mercadolibre/classifieds-quotation_android"
+            }
+        },
+        {
+            "name": "classi_quotation",
+            "iOS": {
+                "key": "MLQT",
                 "repo": "https://github.com/mercadolibre/classifieds-quotation_ios"
             },
             "Android": {
@@ -287,6 +331,17 @@
             }
         },
         {
+            "name": "classifieds_listing",
+            "iOS": {
+                "key": "MLCQL",
+                "repo": "https://github.com/mercadolibre/fury_classifieds-quote-list-ios"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.classifieds.listing",
+                "repo": "https://github.com/mercadolibre/fury_classifieds-quote-list-android"
+            }
+        },
+        {
             "name": "classifieds_quote",
             "iOS": {
                 "key": "MLQuote",
@@ -298,10 +353,43 @@
             }
         },
         {
+            "name": "classifieds_quote",
+            "iOS": {
+                "key": "MLQQT",
+                "repo": "https://github.com/mercadolibre/fury_classifieds-quote-ios"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.quote",
+                "repo": "https://github.com/mercadolibre/fury_classifieds-quote-ios"
+            }
+        },
+        {
             "name": "collaborators",
             "iOS": {
                 "key": "MLCollaborators",
-                "repo": ""
+                "repo": "https://github.com/mercadolibre/fury_tfs-operators-ios"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.collaborators",
+                "repo": "https://github.com/mercadolibre/fury_ui-components-android"
+            }
+        },
+        {
+            "name": "collaborators",
+            "iOS": {
+                "key": "MLCollaborator",
+                "repo": "https://github.com/mercadolibre/fury_tfs-operators-ios"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.collaborators",
+                "repo": "https://github.com/mercadolibre/fury_ui-components-android"
+            }
+        },
+        {
+            "name": "collaborators",
+            "iOS": {
+                "key": "MLC",
+                "repo": "https://github.com/mercadolibre/fury_tfs-operators-ios"
             },
             "Android": {
                 "key": "com.mercadolibre.android.collaborators",
@@ -366,7 +454,7 @@
         {
             "name": "configuration-providers",
             "iOS": {
-                "key": "MLConfigurationProvider",
+                "key": "MLCP",
                 "repo": "https://github.com/mercadolibre/fury_ml-config-provider-ios"
             },
             "Android": {
@@ -771,6 +859,17 @@
             }
         },
         {
+            "name": "credits_consumer",
+            "iOS": {
+                "key": "MLCC",
+                "repo": "https://github.com/mercadolibre/fury_classi-credits-ios"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.credits",
+                "repo": "https://github.com/mercadolibre/fury_credits-android"
+            }
+        },
+        {
             "name": "credits_merchant",
             "iOS": {
                 "key": "MPExpressMoney",
@@ -895,7 +994,7 @@
             "name": "discount_payers",
             "iOS": {
                 "key": "DiscountPayers",
-                "repo": ""
+                "repo": "https://github.com/mercadolibre/fury_discounts-center-ios"
             },
             "Android": {
                 "key": "com.mercadolibre.android.discounts.payers",
@@ -1046,6 +1145,17 @@
             }
         },
         {
+            "name": "google-analytics",
+            "iOS": {
+                "key": "MLGAI",
+                "repo": "https://github.com/mercadolibre/mobile-ios_analytics"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.analytics",
+                "repo": "https://github.com/mercadolibre/mobile-android_analytics"
+            }
+        },
+        {
             "name": "history",
             "iOS": {
                 "key": "MLHistory",
@@ -1071,7 +1181,18 @@
             "name": "identityvalidation",
             "iOS": {
                 "key": "MPIdentityValidation",
-                "repo": ""
+                "repo": "https://github.com/mercadolibre/auth-identity_validation_mobile_ios_mp"
+            },
+            "Android": {
+                "key": "com.mercadopago.identityvalidation",
+                "repo": "https://github.com/mercadolibre/mpmobile-android_wallet"
+            }
+        },
+        {
+            "name": "identityvalidation",
+            "iOS": {
+                "key": "MPIV",
+                "repo": "https://github.com/mercadolibre/auth-identity_validation_mobile_ios_mp"
             },
             "Android": {
                 "key": "com.mercadopago.identityvalidation",
@@ -1147,7 +1268,7 @@
         {
             "name": "instore",
             "iOS": {
-                "key": "InStore",
+                "key": "IS",
                 "repo": "https://github.com/mercadolibre/fury_instore-ios"
             },
             "Android": {
@@ -1332,6 +1453,17 @@
             }
         },
         {
+            "name": "milestone_tracker",
+            "iOS": {
+                "key": "MLMT",
+                "repo": "https://github.com/mercadolibre/fury_milestone-tracker-ios"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.milestone_tracker",
+                "repo": "https://github.com/mercadolibre/fury_milestone-tracker-android"
+            }
+        },
+        {
             "name": "ml_esc_manager",
             "iOS": {
                 "key": "MLESCManager",
@@ -1346,7 +1478,7 @@
             "name": "mlwallet",
             "iOS": {
                 "key": "MLWallet",
-                "repo": ""
+                "repo": "https://github.com/mercadolibre/fury_ml-wallet-ios"
             },
             "Android": {
                 "key": "com.mercadolibre.android.mlwallet",
@@ -1378,8 +1510,8 @@
         {
             "name": "money_advance",
             "iOS": {
-                "key": "",
-                "repo": ""
+                "key": "MPMoneyAdvance",
+                "repo": "https://github.com/mercadolibre/fury_credits-money-advance-ios/tree/develop"
             },
             "Android": {
                 "key": "com.mercadolibre.android.moneyadvance",
@@ -1390,6 +1522,17 @@
             "name": "money_transfer",
             "iOS": {
                 "key": "MPMoneyTransfer",
+                "repo": "https://github.com/mercadolibre/mpmobile-ios_moneytransfer"
+            },
+            "Android": {
+                "key": "com.mercadopago.android.moneytransfer",
+                "repo": "https://github.com/mercadolibre/fury_moneytransfer-android"
+            }
+        },
+        {
+            "name": "money_transfer",
+            "iOS": {
+                "key": "MPMT",
                 "repo": "https://github.com/mercadolibre/mpmobile-ios_moneytransfer"
             },
             "Android": {
@@ -1477,6 +1620,17 @@
         {
             "name": "multiplayer",
             "iOS": {
+                "key": "MPC",
+                "repo": "https://github.com/mercadolibre/mpmobile-ios_contacts"
+            },
+            "Android": {
+                "key": "com.mercadopago.contacts",
+                "repo": "https://github.com/mercadolibre/mpmobile-android_wallet"
+            }
+        },
+        {
+            "name": "multiplayer",
+            "iOS": {
                 "key": "",
                 "repo": ""
             },
@@ -1488,8 +1642,8 @@
         {
             "name": "myml_commons",
             "iOS": {
-                "key": "-",
-                "repo": "-"
+                "key": "MLMYMLCommons",
+                "repo": "https://github.com/mercadolibre/myml-ios_commons"
             },
             "Android": {
                 "key": "com.mercadolibre.android.myml.commons",
@@ -1508,9 +1662,31 @@
             }
         },
         {
+            "name": "myml_messages",
+            "iOS": {
+                "key": "MLM",
+                "repo": "https://github.com/mercadolibre/myml-ios_messages"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.myml.messages",
+                "repo": "https://github.com/mercadolibre/myml-messages_android"
+            }
+        },
+        {
             "name": "myml_my_data",
             "iOS": {
                 "key": "MLMyData",
+                "repo": "https://github.com/mercadolibre/fury_myml-mydata-ios"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.mydata",
+                "repo": "https://github.com/mercadolibre/myml-android_mydata"
+            }
+        },
+        {
+            "name": "myml_my_data",
+            "iOS": {
+                "key": "MLMD",
                 "repo": "https://github.com/mercadolibre/fury_myml-mydata-ios"
             },
             "Android": {
@@ -1533,6 +1709,17 @@
             "name": "myml_questions",
             "iOS": {
                 "key": "MLQuestions",
+                "repo": "https://github.com/mercadolibre/myml-ios_questions"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.questions",
+                "repo": "https://github.com/mercadolibre/myml-android_questions"
+            }
+        },
+        {
+            "name": "myml_questions",
+            "iOS": {
+                "key": "MLQ",
                 "repo": "https://github.com/mercadolibre/myml-ios_questions"
             },
             "Android": {
@@ -1585,9 +1772,31 @@
             }
         },
         {
+            "name": "navigation_menu",
+            "iOS": {
+                "key": "MLN",
+                "repo": "https://github.com/mercadolibre/fury_navigation-ios"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.navigation.menu",
+                "repo": "https://github.com/mercadolibre/fury_mobile-android-navigation-menu"
+            }
+        },
+        {
             "name": "networking",
             "iOS": {
                 "key": "MLNetworking",
+                "repo": "https://github.com/mercadolibre/mobile-ios_networking"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.networking",
+                "repo": "https://github.com/mercadolibre/mobile-android_networking"
+            }
+        },
+        {
+            "name": "networking",
+            "iOS": {
+                "key": "MLRestClient",
                 "repo": "https://github.com/mercadolibre/mobile-ios_networking"
             },
             "Android": {
@@ -1618,9 +1827,31 @@
             }
         },
         {
+            "name": "notifications",
+            "iOS": {
+                "key": "MLNotification",
+                "repo": "https://github.com/mercadolibre/mobile-ios_notifications"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.notifications",
+                "repo": "https://github.com/mercadolibre/mobile-android_notifications"
+            }
+        },
+        {
             "name": "officialstores",
             "iOS": {
                 "key": "MLOfficialStores",
+                "repo": "https://github.com/mercadolibre/largesellers-officialstores_mobile_ios"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.officialstores",
+                "repo": "https://github.com/mercadolibre/largesellers-officialstores_mobile_android"
+            }
+        },
+        {
+            "name": "officialstores",
+            "iOS": {
+                "key": "MLOfficialStore",
                 "repo": "https://github.com/mercadolibre/largesellers-officialstores_mobile_ios"
             },
             "Android": {
@@ -1640,9 +1871,20 @@
             }
         },
         {
+            "name": "on_demand_resources",
+            "iOS": {
+                "key": "MLOD",
+                "repo": "https://github.com/mercadolibre/mobile-ios_on_demand_resources"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.on.demand.resources",
+                "repo": "https://github.com/mercadolibre/mobile-android_on_demand_resources"
+            }
+        },
+        {
             "name": "pay_preference",
             "iOS": {
-                "key": "",
+                "key": "MPPreference",
                 "repo": "https://github.com/mercadolibre/fury_pay-preference-ios"
             },
             "Android": {
@@ -1772,6 +2014,17 @@
             }
         },
         {
+            "name": "post_purchase",
+            "iOS": {
+                "key": "MLPP",
+                "repo": "https://github.com/mercadolibre/fury_post-purchase-ios"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.post_purchase",
+                "repo": "https://github.com/mercadolibre/fury_post-purchase-android"
+            }
+        },
+        {
             "name": "progress_circle",
             "iOS": {
                 "key": "MLProgressCircle",
@@ -1797,7 +2050,7 @@
             "name": "px",
             "iOS": {
                 "key": "MercadoPagoSDKV4",
-                "repo": "https://github.com/mercadolibre/px-ios"
+                "repo": "https://github.com/mercadopago/px-ios"
             },
             "Android": {
                 "key": "com.mercadopago.android.px",
@@ -1841,6 +2094,17 @@
             "name": "remedies",
             "iOS": {
                 "key": "MLRemedies",
+                "repo": "https://github.com/mercadolibre/fury_auth-remedies-mobile-ios"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.remedies",
+                "repo": "https://github.com/mercadolibre/fury_auth-remedies-mobile-android"
+            }
+        },
+        {
+            "name": "remedies",
+            "iOS": {
+                "key": "MLRMY",
                 "repo": "https://github.com/mercadolibre/fury_auth-remedies-mobile-ios"
             },
             "Android": {
@@ -1928,7 +2192,7 @@
         {
             "name": "security",
             "iOS": {
-                "key": "MLBiometricSecurity",
+                "key": "",
                 "repo": ""
             },
             "Android": {
@@ -1961,7 +2225,7 @@
         {
             "name": "security",
             "iOS": {
-                "key": "MLBIometricSecurity",
+                "key": "MLBiometricSecurity",
                 "repo": "https://github.com/mercadolibre/fury_biometric-security-ios"
             },
             "Android": {
@@ -2005,8 +2269,8 @@
         {
             "name": "seller_rep_delivered",
             "iOS": {
-                "key": "-",
-                "repo": "-"
+                "key": "",
+                "repo": ""
             },
             "Android": {
                 "key": "com.mercadolibre.android.order.delivered",
@@ -2036,6 +2300,17 @@
             }
         },
         {
+            "name": "shipping_components",
+            "iOS": {
+                "key": "MLSC",
+                "repo": "https://github.com/mercadolibre/mobile-ios_shipping_components"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.shipping.components",
+                "repo": "https://github.com/mercadolibre/mobile-android_shipping_components"
+            }
+        },
+        {
             "name": "single_player",
             "iOS": {
                 "key": "MPSinglePlayer",
@@ -2049,7 +2324,7 @@
         {
             "name": "single_player",
             "iOS": {
-                "key": "MPSinglePlayer",
+                "key": "MPSP",
                 "repo": "https://github.com/mercadolibre/mpmobile-singleplayer_ios"
             },
             "Android": {
@@ -2060,8 +2335,8 @@
         {
             "name": "single_player_postpaid",
             "iOS": {
-                "key": "MPSinglePlayer",
-                "repo": "https://github.com/mercadolibre/mpmobile-singleplayer_ios"
+                "key": "BillPayments",
+                "repo": "https://github.com/mercadolibre/fury_billpayments-ios"
             },
             "Android": {
                 "key": "com.mercadolibre.android.singleplayer.billpayments",
@@ -2083,6 +2358,17 @@
             "name": "single_player_prepaid",
             "iOS": {
                 "key": "MPCellphoneRecharge",
+                "repo": "https://github.com/mercadolibre/mpmobile-ios_cellphonerecharge"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.singleplayer.cellphonerecharge",
+                "repo": "https://github.com/mercadolibre/mpmobile-android_mlrecharge"
+            }
+        },
+        {
+            "name": "single_player_prepaid",
+            "iOS": {
+                "key": "MPCR",
                 "repo": "https://github.com/mercadolibre/mpmobile-ios_cellphonerecharge"
             },
             "Android": {
@@ -2115,8 +2401,19 @@
         {
             "name": "subscriptions",
             "iOS": {
-                "key": "",
-                "repo": "-"
+                "key": "MLSubcriptions",
+                "repo": "https://github.com/mercadolibre/myml-ios_subscriptions"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.myml.subscriptions",
+                "repo": "https://github.com/mercadolibre/myml-android_subscriptions"
+            }
+        },
+        {
+            "name": "subscriptions",
+            "iOS": {
+                "key": "MLSUB",
+                "repo": "https://github.com/mercadolibre/myml-ios_subscriptions"
             },
             "Android": {
                 "key": "com.mercadolibre.android.myml.subscriptions",
@@ -2126,8 +2423,8 @@
         {
             "name": "suggested_discounts",
             "iOS": {
-                "key": "",
-                "repo": ""
+                "key": "MLSuggestedDiscounts",
+                "repo": "https://github.com/mercadolibre/deals-suggested_discounts_mobile_ios"
             },
             "Android": {
                 "key": "com.mercadolibre.android.suggesteddiscounts",
@@ -2148,8 +2445,8 @@
         {
             "name": "tools_for_sellers",
             "iOS": {
-                "key": "MLDashboard",
-                "repo": ""
+                "key": "MeliChart",
+                "repo": "https://github.com/mercadolibre/fury_meli-charts-ios"
             },
             "Android": {
                 "key": "com.mercadolibre.android.charts",
@@ -2159,8 +2456,8 @@
         {
             "name": "tools_for_sellers",
             "iOS": {
-                "key": "MLDashboard",
-                "repo": ""
+                "key": "MeliChart",
+                "repo": "https://github.com/mercadolibre/fury_meli-charts-ios"
             },
             "Android": {
                 "key": "com.mercadolibre.android.melicharts",
@@ -2171,7 +2468,7 @@
             "name": "tools_for_sellers",
             "iOS": {
                 "key": "MLCharts",
-                "repo": ""
+                "repo": "https://github.com/mercadolibre/fury_mobile-charts-ios"
             },
             "Android": {
                 "key": "com.mercadolibre.android.mlcharts",
@@ -2192,8 +2489,8 @@
         {
             "name": "tools_for_sellers",
             "iOS": {
-                "key": "MLDashboard",
-                "repo": ""
+                "key": "PEUI",
+                "repo": "https://github.com/mercadolibre/fury_profile-engine-ui-ios"
             },
             "Android": {
                 "key": "com.mercadolibre.android.profileengine",
@@ -2225,7 +2522,7 @@
         {
             "name": "ui-components",
             "iOS": {
-                "key": "MLUIComponents",
+                "key": "MLUIC",
                 "repo": "https://github.com/mercadolibre/fury_ui-components-ios"
             },
             "Android": {
