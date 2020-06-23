@@ -18,7 +18,7 @@
     },
     {
       "name": "Charts",
-      "version": "3.2.2"
+      "version": "3.4.0"
     },
     {
       "name": "DiscountTouchpoint",
@@ -182,7 +182,7 @@
     },
     {
       "name": "MLIgnite",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLImagePicker",
@@ -290,8 +290,17 @@
       "version": "^~>\\s?2.[0-9]+"
     },
     {
+      "name": "MLUserBlocker",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "expires": "2020-8-01",
       "name": "MLRemedies",
       "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MLRemedies",
+      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "MLRuleEngine",
@@ -431,7 +440,7 @@
     },
     {
       "name": "lottie-ios",
-      "version": "2.0.6|2.5.0"
+      "version": "2.0.6|2.5.0|^~>\\s?2.0$"
     },
     {
       "name": "MLFluxClient",
@@ -544,6 +553,10 @@
     },
     {
       "name": "CardsEngagement/Feedback",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "CardsComponents",
       "version": "^~>\\s?1.[0-9]+$"
     }
   ]

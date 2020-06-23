@@ -29,6 +29,9 @@ _Example module esta pesando 14kb y okhttp para la version 4.2.0 ~4 terabytes. P
 
 Nota: Si tu equipo no tiene acceso, entonces debes completar el siguiente form de [acceso a herramientas]([https://sites.google.com/mercadolibre.com/mobile/arquitectura/acceso-a-herramientas](https://sites.google.com/mercadolibre.com/mobile/arquitectura/acceso-a-herramientas)).
 
+### Contextos
+- [ ] Ya agregue y/o actualice el contexto en la [context-whitelist](https://github.com/mercadolibre/mobile-dependencies_whitelist/blob/master/context-whitelist.json)
+
 ### Configuración para el SLA de Crashes
 El proyecto en Jira en el que se van a crear los crashes que ocurran es: **_${SPYN}_**
 - [ ] Ya esta la configuración hecha.
