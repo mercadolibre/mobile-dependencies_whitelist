@@ -3,6 +3,7 @@ package com.mercadolibre.android.gradle.base.modules
 import groovy.text.SimpleTemplateEngine
 import org.gradle.api.Project
 import org.gradle.api.Task
+import org.gradle.api.tasks.TaskProvider
 
 class AndroidLibraryTestableModule implements Module {
     private static final UNIT_TEST_FLAVOR_TEST_TASK_NAME = 'test${variant}UnitTest'
@@ -35,13 +36,14 @@ class AndroidLibraryTestableModule implements Module {
                     String flavorTaskName = ENGINE.createTemplate(task.taskName).make(["variant": variantName]).toString()
                     String genericTaskName = ENGINE.createTemplate(task.taskName).make(["variant": build]).toString()
 
-                    Task flavorTask = project.tasks.findByName(flavorTaskName)
-                    Task genericTask = project.tasks.findByName(genericTaskName)
+                    TaskProvider<Task> flavorTask = project.tasks.named(flavorTaskName)
 
-                    if (genericTask) {
-                        genericTask.dependsOn flavorTask
+                    if (project.tasks.names.contains(genericTaskName)) {
+                        project.tasks.named(genericTaskName).configure {
+                            dependsOn flavorTask
+                        }
                     } else {
-                        project.tasks.create(genericTaskName) { Task it ->
+                        project.tasks.register(genericTaskName).configure { Task it ->
                             it.group = task.group
                             it.description = ENGINE.createTemplate(task.description).make(["build": build]).toString()
                             it.dependsOn flavorTask

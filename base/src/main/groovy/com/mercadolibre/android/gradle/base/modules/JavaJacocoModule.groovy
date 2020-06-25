@@ -2,6 +2,7 @@ package com.mercadolibre.android.gradle.base.modules
 
 import org.gradle.api.Project
 import org.gradle.api.Task
+import org.gradle.api.tasks.TaskProvider
 
 /**
  * Java module for customizing jacoco reports, so they can be accesed by whichever coverage application we use
@@ -15,14 +16,18 @@ class JavaJacocoModule extends BaseJacocoModule {
         super.configure(project)
 
         project.afterEvaluate {
-            Task jacocoTestReport = project.tasks.findByName("jacocoTestReport")
+            TaskProvider<Task> jacocoTestReport = project.tasks.named("jacocoTestReport")
 
-            jacocoTestReport.dependsOn project.tasks.test // For some reason its not depending on it. It should.
+            jacocoTestReport.configure {
+                dependsOn project.tasks.test // For some reason its not depending on it. It should.
+            }
 
-            if (project.tasks.findByName(JACOCO_FULL_REPORT_TASK)) {
-                project.tasks."$JACOCO_FULL_REPORT_TASK".dependsOn jacocoTestReport
+            if (project.tasks.names.contains(JACOCO_FULL_REPORT_TASK)) {
+                project.tasks.named(JACOCO_FULL_REPORT_TASK).configure {
+                    dependsOn jacocoTestReport
+                }
             } else {
-                project.tasks.whenTaskAdded {
+                project.tasks.configureEach {
                     if (it.name.contentEquals(JACOCO_FULL_REPORT_TASK)) {
                         it.dependsOn jacocoTestReport
                     }

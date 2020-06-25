@@ -26,14 +26,14 @@ abstract class BaseJacocoModule implements Module {
                 toolVersion = '0.8.2'
             }
 
-            tasks.withType(Test) {
+            tasks.withType(Test).configureEach {
                 testLogging {
                     events "FAILED"
                     exceptionFormat "full"
                 }
             }
 
-            task(JACOCO_FULL_REPORT_TASK) {
+            tasks.register(JACOCO_FULL_REPORT_TASK).configure {
                 it.group 'reporting'
             }
         }

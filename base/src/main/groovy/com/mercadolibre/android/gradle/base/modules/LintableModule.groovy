@@ -8,6 +8,7 @@ import com.mercadolibre.android.gradle.base.lint.dependencies.ReleaseDependencie
 import org.gradle.api.GradleException
 import org.gradle.api.Project
 import org.gradle.api.plugins.JavaPlugin
+import org.gradle.language.base.plugins.LifecycleBasePlugin
 
 /**
  * Module that applies lints to android libraries
@@ -86,7 +87,7 @@ class LintableModule implements Module {
         /**
          * Creation of the lint task
          */
-        project.tasks.create(TASK_NAME, {
+        project.tasks.register(TASK_NAME).configure {
             description "Lints the project dependencies to check they are in the allowed whitelist"
             doLast {
                 if (project.lintGradle.enabled) {
@@ -104,13 +105,15 @@ class LintableModule implements Module {
                     }
                 }
             }
-        })
+        }
 
-        if (project.tasks.findByName('check')) {
-            project.tasks.check.dependsOn TASK_NAME
+        if (project.tasks.names.contains(LifecycleBasePlugin.CHECK_TASK_NAME)) {
+            project.tasks.named(LifecycleBasePlugin.CHECK_TASK_NAME).configure {
+                dependsOn TASK_NAME
+            }
         } else {
-            project.tasks.whenTaskAdded {
-                if (it.name == 'check') {
+            project.tasks.configureEach {
+                if (it.name == LifecycleBasePlugin.CHECK_TASK_NAME) {
                     it.dependsOn TASK_NAME
                 }
             }

@@ -2,6 +2,7 @@ package com.mercadolibre.android.gradle.base.modules
 
 import org.gradle.api.Project
 import org.gradle.api.Task
+import org.gradle.api.tasks.TaskProvider
 
 /**
  * Module that signs the application in the debug buildType with a default public keystore.
@@ -28,7 +29,8 @@ class KeystoreModule implements Module {
         final File keystore = project.file("${directory.absolutePath}${File.separator}${FILE_NAME}")
 
         // Define a task to unpack the keystore were we will place it
-        final Task unpackKeystoreTask = project.tasks.create("unpackDebugKeystore") {
+        final TaskProvider<Task> unpackKeystoreTask = project.tasks.register("unpackDebugKeystore")
+        unpackKeystoreTask.configure {
             group = 'keystore'
             description = 'Unpack the debug keystore into the build directory of the project'
             doLast {
@@ -49,9 +51,11 @@ class KeystoreModule implements Module {
 
         // Make every validate signing task depend on it
         project.android.applicationVariants.all { variant ->
-            final Task validateTask = project.tasks.findByName("validateSigning${variant.name.capitalize()}")
-            if (validateTask) {
-                validateTask.dependsOn unpackKeystoreTask
+            final String validateTaskName = "validateSigning${variant.name.capitalize()}"
+            if (project.tasks.names.contains(validateTaskName)) {
+                project.tasks.named(validateTaskName).configure {
+                    dependsOn unpackKeystoreTask
+                }
             }
         }
 

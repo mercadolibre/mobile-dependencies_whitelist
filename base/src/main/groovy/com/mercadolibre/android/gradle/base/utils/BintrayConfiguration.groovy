@@ -29,7 +29,7 @@ final class BintrayConfiguration {
             finalPublications = [publicationName]
         }
 
-        project.tasks.bintrayUpload.with {
+        project.tasks.named('bintrayUpload').configure {
             repoName = bintrayRepository
 
             publications = finalPublications

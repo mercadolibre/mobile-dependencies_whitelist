@@ -1,8 +1,10 @@
 package com.mercadolibre.android.gradle.base.modules
 
 import org.gradle.api.Project
+import org.gradle.api.Task
 import org.gradle.api.plugins.MavenPlugin
 import org.gradle.api.publish.maven.plugins.MavenPublishPlugin
+import org.gradle.api.tasks.TaskProvider
 
 /**
  * Abstract module in charge of publishing archives into maven/bintray/whatever
@@ -38,21 +40,23 @@ abstract class PublishableModule implements Module {
      * Creates the "getProjectVersion" task.
      */
     private void createGetProjectVersionTask(Project project) {
-        def task = project.tasks.create TASK_GET_PROJECT_VERSION
-        task.setDescription('Gets project version')
+        TaskProvider<Task> task = project.tasks.register(TASK_GET_PROJECT_VERSION)
+        task.configure { Task it ->
+            it.setDescription('Gets project version')
 
-        task.doLast {
-            def projectVersion = project.version
+            it.doLast {
+                def projectVersion = project.version
 
-            def fileName = "project.version"
-            def folder = new File('build')
-            if (!folder.exists()) {
-                folder.mkdirs()
+                def fileName = "project.version"
+                def folder = new File('build')
+                if (!folder.exists()) {
+                    folder.mkdirs()
+                }
+
+                def inputFile = new File("${folder}/${fileName}")
+                inputFile.write("version: ${projectVersion}")
+                println "See '${folder}/${fileName}' file"
             }
-
-            def inputFile = new File("${folder}/${fileName}")
-            inputFile.write("version: ${projectVersion}")
-            println "See '${folder}/${fileName}' file"
         }
     }
 

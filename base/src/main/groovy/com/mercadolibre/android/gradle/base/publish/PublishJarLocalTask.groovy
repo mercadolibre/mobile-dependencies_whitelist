@@ -2,22 +2,25 @@ package com.mercadolibre.android.gradle.base.publish
 
 import com.mercadolibre.android.gradle.base.utils.VersionContainer
 import org.gradle.api.Task
+import org.gradle.api.tasks.TaskProvider
 
 /**
  * Created by saguilera on 7/23/17.
  */
 class PublishJarLocalTask extends PublishJarTask {
 
-    Task create(PublishTask.Builder builder) {
-        super.create(builder)
+    @Override
+    TaskProvider<Task> register(PublishTask.Builder builder) {
+        super.register(builder)
 
         VersionContainer.put(project.name, builder.taskName, "LOCAL-${project.version}-${getTimestamp()}")
 
-        Task task
-        if (project.tasks.findByName(builder.taskName)) {
-            task = project.tasks."$taskName"
+        TaskProvider<Task> task
+        if (project.tasks.names.contains(builder.taskName)) {
+            task = project.tasksnamed(builder.taskName)
         } else {
-            task = project.tasks.create(builder.taskName) {
+            task = project.tasks.register(builder.taskName)
+            task.configure {
                 doFirst {
                     VersionContainer.logVersion("${project.group}:${project.name}:${VersionContainer.get(project.name, builder.taskName, project.version as String)}")
                 }
