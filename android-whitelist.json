@@ -619,7 +619,7 @@
     },
     {
       "group": "com\\.mercadolibre\\.android\\.merchengine",
-      "version": "2\\.\\+|mercadopago-2\\.\\+|mercadolibre-2\\.\\+"
+      "version": "3\\.\\+|mercadopago-3\\.\\+|mercadolibre-3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.metrics",
@@ -1131,9 +1131,15 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2020-07-17",
       "group": "com\\.mercadolibre\\.android\\.draftandesui",
       "name": "draft-modal",
       "version": "3\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.draftandesui",
+      "name": "draft-modal",
+      "version": "4\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cardform",
