@@ -16,8 +16,6 @@ import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.plugins.JavaPlugin
 
-import java.util.regex.Pattern
-
 /**
  * Gradle base plugin for MercadoLibre Android projects/modules.
  */
