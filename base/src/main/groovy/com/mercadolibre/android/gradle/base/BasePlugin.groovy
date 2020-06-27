@@ -16,6 +16,8 @@ import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.plugins.JavaPlugin
 
+import java.util.regex.Pattern
+
 /**
  * Gradle base plugin for MercadoLibre Android projects/modules.
  */
@@ -204,31 +206,79 @@ class BasePlugin implements Plugin<Project> {
     private void setupRepositories() {
         project.allprojects {
             repositories {
+                // Google libs
+                google {
+                    content {
+                        includeGroupByRegex 'android\\.arch\\..*'
+                        includeGroupByRegex 'androidx\\..*'
+                        includeGroupByRegex 'com\\.android.*'
+                        includeGroupByRegex 'com\\.google\\..*'
+                    }
+                }
+
+                // Meli internal release libs
+                maven {
+                    url 'https://mercadolibre.bintray.com/android-releases'
+                    credentials {
+                        username 'bintray-read-only'
+                        password 'e7b8b22a0b84527c04194c31f90bc0b879d8fd9d'
+                    }
+                    content {
+                        // only releases
+                        includeVersionByRegex('com\\.mercadolibre\\..*', '.*', '^((?!EXPERIMENTAL-|LOCAL-).)*$')
+                        includeVersionByRegex('com\\.mercadopago\\..*', '.*', '^((?!EXPERIMENTAL-|LOCAL-).)*$')
+                        includeGroup 'com.bugsnag'
+                    }
+                }
+
+                // Meli public libs - these are fewer than the private ones, so we try it later
+                maven {
+                    url 'https://mercadolibre.bintray.com/android-public'
+                    content {
+                        // only releases
+                        includeVersionByRegex('com\\.mercadolibre\\.android.*', '.*', '^((?!EXPERIMENTAL-|LOCAL-).)*$')
+                    }
+                }
+
+                // only for datami SDK
+                maven {
+                    url 'https://s3.amazonaws.com/sdk-ga-releases.cloudmi.datami.com/android/mvn/smisdk/'
+                    content {
+                        includeGroup 'com.datami'
+                    }
+                }
+
+                // only used for github repositories
+                maven {
+                    url 'https://jitpack.io'
+                    content {
+                        includeGroupByRegex 'com\\.github\\..*'
+                    }
+                }
+
+                // only used for experimental libs
+                maven {
+                    url 'https://mercadolibre.bintray.com/android-experimental'
+                    credentials {
+                        username 'bintray-read-only'
+                        password 'e7b8b22a0b84527c04194c31f90bc0b879d8fd9d'
+                    }
+                    content {
+                        includeVersionByRegex('com\\.mercadolibre\\.android.*', '.*', '^(.*-)?EXPERIMENTAL-.*$')
+                        includeVersionByRegex('com\\.mercadopago\\.android.*', '.*', '^(.*-)?EXPERIMENTAL-.*$')
+                    }
+                }
+
+                // only used for local published libs
+                mavenLocal {
+                    content {
+                        includeVersionByRegex('com\\.mercadolibre\\.android.*', '.*', '^(.*-)?LOCAL-.*$')
+                        includeVersionByRegex('com\\.mercadopago\\.android.*', '.*', '^(.*-)?LOCAL-.*$')
+                    }
+                }
+
+                // catch all repositories
                 jcenter()
-                mavenLocal()
-                maven {
-                    url 'https://maven.google.com'
-                }
-                maven {
-                    url "https://dl.bintray.com/mercadolibre/android-public"
-                }
-                maven {
-                    url "https://dl.bintray.com/mercadolibre/android-releases"
-                    credentials {
-                        username 'bintray-read-only'
-                        password 'e7b8b22a0b84527c04194c31f90bc0b879d8fd9d'
-                    }
-                }
-                maven {
-                    url "https://dl.bintray.com/mercadolibre/android-experimental"
-                    credentials {
-                        username 'bintray-read-only'
-                        password 'e7b8b22a0b84527c04194c31f90bc0b879d8fd9d'
-                    }
-                }
-                maven {
-                    url "https://s3.amazonaws.com/sdk-ga-releases.cloudmi.datami.com/android/mvn/smisdk/"
-                }
             }
         }
     }
