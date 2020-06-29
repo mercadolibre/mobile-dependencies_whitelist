@@ -130,11 +130,10 @@ class BasePlugin implements Plugin<Project> {
         }
 
         project.tasks.register(LIST_PROJECTS_TASK_NAME) { Task it ->
-            it.group = PublishTask.TASK_GROUP
             it.configure {
                 setDescription('List all subprojects in this project')
                 doLast {
-                    subprojects.forEach { println(it.name) }
+                    project.subprojects.forEach { println(it.name) }
                 }
             }
         }
