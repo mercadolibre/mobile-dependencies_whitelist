@@ -4,7 +4,9 @@ import com.mercadolibre.android.gradle.base.utils.PomUtils
 import com.mercadolibre.android.gradle.base.utils.VersionContainer
 import org.gradle.api.*
 import org.gradle.api.artifacts.Configuration
+import org.gradle.api.publish.PublicationContainer
 import org.gradle.api.publish.maven.MavenPublication
+import org.gradle.api.tasks.TaskProvider
 import org.gradle.api.tasks.bundling.Jar
 import org.gradle.api.tasks.javadoc.Javadoc
 import org.gradle.external.javadoc.JavadocMemberLevel
@@ -20,7 +22,7 @@ abstract class PublishAarTask extends PublishTask {
 
     String taskName
 
-    Task create(PublishTask.Builder builder) {
+    TaskProvider<Task> register(Builder builder) {
         project = builder.project
         variant = builder.variant
         taskName = builder.taskName
@@ -31,7 +33,7 @@ abstract class PublishAarTask extends PublishTask {
     }
 
     protected void createMavenPublication() {
-        project.publishing.publications {
+        project.publishing.publications { PublicationContainer it ->
             def flavored = variant.flavorName && !variant.flavorName.isEmpty()
 
             /**
@@ -59,9 +61,14 @@ abstract class PublishAarTask extends PublishTask {
             def sourceDirs = variant.sourceSets.collect {
                 it.javaDirectories // Also includes kotlin sources if any.
             }
-            def javadoc = project.tasks.findByName("${variant.name}Javadoc")
-            if (!javadoc) {
-                javadoc = project.tasks.create(name: "${variant.name}Javadoc", type: Javadoc) {
+
+            String javadocTaskName = "${variant.name}Javadoc"
+            TaskProvider<Javadoc> javadoc
+            if (project.tasks.names.contains(javadocTaskName)) {
+                javadoc = project.tasks.named(javadocTaskName)
+            } else {
+                javadoc = project.tasks.register(javadocTaskName, Javadoc)
+                javadoc.configure {
                     description "Generates Javadoc for ${variant.name}."
                     group 'Documentation'
 
@@ -88,18 +95,29 @@ abstract class PublishAarTask extends PublishTask {
                     failOnError false
                 }
             }
-            def javadocJar = project.tasks.findByName("${variant.name}JavadocJar")
-            if (!javadocJar) {
-                javadocJar = project.tasks.create(name: "${variant.name}JavadocJar", type: Jar, dependsOn: javadoc) {
+
+            String javadocJarTaskName = "${variant.name}JavadocJar"
+            TaskProvider<Jar> javadocJar
+            if (project.tasks.names.contains(javadocJarTaskName)) {
+                javadocJar = project.tasks.named(javadocJarTaskName)
+            } else {
+                javadocJar = project.tasks.register(javadocJarTaskName, Jar)
+                javadocJar.configure {
+                    dependsOn javadoc
                     description "Puts Javadoc for ${variant.name} in a jar."
                     group 'Documentation'
                     classifier = 'javadoc'
-                    from javadoc.destinationDir
+                    from javadoc.get().destinationDir
                 }
             }
-            def sourcesJar = project.tasks.findByName("${variant.name}SourcesJar")
-            if (!sourcesJar) {
-                sourcesJar = project.tasks.create(name: "${variant.name}SourcesJar", type: Jar) {
+
+            String sourcesTaskName = "${variant.name}SourcesJar"
+            TaskProvider<Jar> sourcesJar
+            if (project.tasks.names.contains(sourcesTaskName)) {
+                sourcesJar = project.tasks.named(sourcesTaskName)
+            } else {
+                sourcesJar = project.tasks.register(sourcesTaskName, Jar)
+                sourcesJar.configure {
                     description "Puts sources for ${variant.name} in a jar."
                     group 'Packaging'
 
@@ -108,15 +126,15 @@ abstract class PublishAarTask extends PublishTask {
                 }
             }
 
-            "$taskName"(MavenPublication) {
+            it.register(taskName, MavenPublication).configure {
                 artifactId = project.name
                 groupId = project.group
                 version = VersionContainer.get(project.name, taskName, project.version as String)
 
                 artifacts = [
                         variant.outputs.first().packageLibrary,
-                        sourcesJar,
-                        javadocJar
+                        sourcesJar.get(),
+                        javadocJar.get()
                 ]
 
                 pom.withXml { XmlProvider xmlProvider ->
@@ -130,9 +148,11 @@ abstract class PublishAarTask extends PublishTask {
                 }
             }
 
-            Task pomTask = project.tasks.findByName("generatePomFileFor${taskName.capitalize()}Publication")
-            if (pomTask != null) {
-                project.tasks.findByName(taskName).dependsOn(pomTask)
+            String pomTaskName = "generatePomFileFor${taskName.capitalize()}Publication"
+            if (project.tasks.names.contains(pomTaskName)) {
+                project.tasks.named(taskName).configure {
+                    dependsOn pomTaskName
+                }
             }
 
         }
@@ -158,9 +178,9 @@ abstract class PublishAarTask extends PublishTask {
      * @param variant
      * @return bundle task name
      */
-    protected static String getBundleTaskName(def project, def variant) {
+    protected static String getBundleTaskName(Project project, def variant) {
         def bundleTask = "bundle${variant.name.capitalize()}"
-        return project.tasks.findByName("${bundleTask}Aar") ? "${bundleTask}Aar" : bundleTask
+        return project.tasks.names.contains("${bundleTask}Aar") ? "${bundleTask}Aar" : bundleTask
     }
 
     /**

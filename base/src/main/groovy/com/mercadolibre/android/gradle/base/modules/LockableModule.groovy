@@ -7,6 +7,7 @@ import org.gradle.api.Task
 import org.gradle.api.artifacts.ComponentSelection
 import org.gradle.api.artifacts.Configuration
 import org.gradle.api.tasks.TaskAction
+import org.gradle.api.tasks.TaskProvider
 
 /**
  * Module that is in charge of managing the locking of dynamic dependencies into static ones
@@ -49,8 +50,8 @@ class LockableModule implements Module {
                 return [!p.gradle.startParameter.getLockedDependenciesToUpdate().isEmpty(), "--update-locks"]
             })
 
-            project.tasks.create("modifyLocks", UpdateLockTask)
-            project.tasks.create("deleteLocks", DeleteLocksTask)
+            project.tasks.register("modifyLocks", UpdateLockTask)
+            project.tasks.register("deleteLocks", DeleteLocksTask)
         }
     }
 
@@ -114,29 +115,31 @@ class LockableModule implements Module {
     }
 
     def createTask(Project project, String name, def validate) {
-        Task task = project.tasks.create(name)
-        task.group = "locking"
-        task.doFirst {
-            def result = validate(project)
-            if (!result[0]) {
-                throw new IllegalArgumentException("Did you add the ${result[1]} flag?")
-            }
-        }
-        task.dependsOn project.tasks.findByName(DEPENDENCIES_TASK)
-        task.doLast {
-            if (checkLockSuccessful(project)) {
-                new File("${project.projectDir}/gradle/dependency-locks/").eachFile { File file ->
-                    boolean onlyHasComments = true
-                    file.eachLine {
-                        onlyHasComments &= it.toString().startsWith("#")
-                    }
-                    if (onlyHasComments) {
-                        file.delete()
-                    }
+        TaskProvider<Task> task = project.tasks.register(name)
+        task.configure {
+            group = "locking"
+            doFirst {
+                def result = validate(project)
+                if (!result[0]) {
+                    throw new IllegalArgumentException("Did you add the ${result[1]} flag?")
                 }
-            } else {
-                throw new GradleException("Lock Unsuccessful. Check your versions")
+
+                if (checkLockSuccessful(project)) {
+                    new File("${project.projectDir}/gradle/dependency-locks/").eachFile { File file ->
+                        boolean onlyHasComments = true
+                        file.eachLine {
+                            onlyHasComments &= it.toString().startsWith("#")
+                        }
+                        if (onlyHasComments) {
+                            file.delete()
+                        }
+                    }
+                } else {
+                    throw new GradleException("Lock Unsuccessful. Check your versions")
+                }
             }
+
+            dependsOn DEPENDENCIES_TASK
         }
     }
 

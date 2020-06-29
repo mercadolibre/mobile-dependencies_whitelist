@@ -2,6 +2,7 @@ package com.mercadolibre.android.gradle.base.modules
 
 import org.gradle.api.Project
 import org.gradle.api.Task
+import org.gradle.api.tasks.TaskProvider
 import org.gradle.api.tasks.testing.Test
 import org.gradle.platform.base.Variant
 import org.gradle.testing.jacoco.tasks.JacocoReport
@@ -27,17 +28,21 @@ class AndroidJacocoModule extends BaseJacocoModule {
             }
         }
 
-        Task jacocoTestReportTask = findOrCreateJacocoTestReportTask()
+        TaskProvider<Task> jacocoTestReportTask = findOrCreateJacocoTestReportTask()
 
         getVariants().all { variant ->
-            JacocoReport reportTask = createReportTask(variant)
-            jacocoTestReportTask.dependsOn reportTask
+            TaskProvider<JacocoReport> reportTask = createReportTask(variant)
+            jacocoTestReportTask.configure {
+                dependsOn reportTask
+            }
         }
 
-        if (project.tasks.findByName(JACOCO_FULL_REPORT_TASK)) {
-            project.tasks."$JACOCO_FULL_REPORT_TASK".dependsOn jacocoTestReportTask
+        if (project.tasks.names.contains(JACOCO_FULL_REPORT_TASK)) {
+            project.tasks.named(JACOCO_FULL_REPORT_TASK).configure {
+                dependsOn jacocoTestReportTask
+            }
         } else {
-            project.tasks.whenTaskAdded {
+            project.tasks.configureEach {
                 if (it.name.contentEquals(JACOCO_FULL_REPORT_TASK)) {
                     it.dependsOn jacocoTestReportTask
                 }
@@ -45,12 +50,15 @@ class AndroidJacocoModule extends BaseJacocoModule {
         }
     }
 
-    private def findOrCreateJacocoTestReportTask() {
-        Task jacocoTestReportTask = project.tasks.findByName("jacocoTestReport")
-        if (!jacocoTestReportTask) {
-            jacocoTestReportTask = project.task("jacocoTestReport") {
-                group = "reporting"
-            }
+    private TaskProvider<Task> findOrCreateJacocoTestReportTask() {
+        final String taskName = "jacocoTestReport"
+        if (project.tasks.names.contains(taskName)) {
+            return project.tasks.named(taskName)
+        }
+
+        TaskProvider<Task> jacocoTestReportTask = project.tasks.register(taskName)
+        jacocoTestReportTask.configure {
+            group = "reporting"
         }
         return jacocoTestReportTask
     }
@@ -63,16 +71,17 @@ class AndroidJacocoModule extends BaseJacocoModule {
         }
     }
 
-    private def createReportTask(def variant) {
+    private TaskProvider<JacocoReport> createReportTask(def variant) {
         def sourceDirs = sourceDirs(variant)
         def classesDir = classesDir(variant)
-        def testTask = testTask(variant)
-        def executionData = executionDataFile(testTask)
-        return project.task("jacoco${testTask.name.capitalize()}Report", type: JacocoReport) { JacocoReport reportTask ->
+        TaskProvider<Test> testTask = testTask(variant)
+
+        TaskProvider<JacocoReport> reportTaskProvider = project.tasks.register("jacoco${testTask.name.capitalize()}Report", JacocoReport)
+        reportTaskProvider.configure { JacocoReport reportTask ->
             reportTask.dependsOn testTask
             reportTask.group = "reporting"
             reportTask.description = "Generates Jacoco coverage reports for the ${variant.name} variant."
-            reportTask.executionData = project.files(executionData)
+            reportTask.executionData = project.files(executionDataFile(testTask.get()))
             def exclude = [
                     '**/R.class',
                     '**/R$*.class',
@@ -109,6 +118,8 @@ class AndroidJacocoModule extends BaseJacocoModule {
                 xml.enabled true
             }
         }
+
+        return reportTaskProvider
     }
 
     protected def sourceDirs(variant) {
@@ -121,8 +132,8 @@ class AndroidJacocoModule extends BaseJacocoModule {
         variant.javaCompile.destinationDir
     }
 
-    protected def testTask(variant) {
-        project.tasks.withType(Test).find { task -> task.name =~ /test${variant.name.capitalize()}UnitTest/ }
+    protected TaskProvider<Test> testTask(variant) {
+        project.tasks.named("test${variant.name.capitalize()}UnitTest", Test)
     }
 
     protected def executionDataFile(Task testTask) {

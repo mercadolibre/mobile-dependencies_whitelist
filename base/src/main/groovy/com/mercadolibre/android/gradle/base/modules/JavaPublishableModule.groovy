@@ -30,7 +30,7 @@ class JavaPublishableModule extends PublishableModule {
     }
 
     protected void createTask(PublishJarTask task, def libraryVariant, String theTaskName) {
-        task.create(new PublishTask.Builder().with {
+        task.register(new PublishTask.Builder().with {
             project = this.project
             variant = libraryVariant
             taskName = theTaskName

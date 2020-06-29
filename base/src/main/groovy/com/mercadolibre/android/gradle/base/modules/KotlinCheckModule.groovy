@@ -56,11 +56,13 @@ class KotlinCheckModule implements Module {
      * @param project to get the task and move the file
      */
     private static void configureDetektConfigTask(Project project) {
-        project.tasks.getByName(DETEKT_CONFIG_TASK_NAME).doLast {
-            def file = project.rootProject.file(DETEKT_CUSTOM_CONFIG_FILE_PATH + DETEKT_CONFIG_FILE_NAME)
-            if (!file.exists()) {
-                project.rootProject.ant.move file: project.rootProject.file(DETEKT_CONFIG_FILE_PATH + DETEKT_CONFIG_FILE_NAME).toString(),
-                        todir: project.rootProject.file(DETEKT_CUSTOM_CONFIG_FILE_PATH).toString()
+        project.tasks.named(DETEKT_CONFIG_TASK_NAME).configure {
+            doLast {
+                def file = project.rootProject.file(DETEKT_CUSTOM_CONFIG_FILE_PATH + DETEKT_CONFIG_FILE_NAME)
+                if (!file.exists()) {
+                    project.rootProject.ant.move file:project.rootProject.file(DETEKT_CONFIG_FILE_PATH + DETEKT_CONFIG_FILE_NAME).toString(),
+                        todir:project.rootProject.file(DETEKT_CUSTOM_CONFIG_FILE_PATH).toString()
+                }
             }
         }
     }
@@ -73,6 +75,8 @@ class KotlinCheckModule implements Module {
      * @param project to set Detekt's config task to run always
      */
     private static void makeDetektGenerateConfigAlways(Project project) {
-        project.tasks.getByName(DETEKT_LINT_TASK_NAME).dependsOn DETEKT_CONFIG_TASK_NAME
+        project.tasks.named(DETEKT_LINT_TASK_NAME).configure {
+            dependsOn DETEKT_CONFIG_TASK_NAME
+        }
     }
 }

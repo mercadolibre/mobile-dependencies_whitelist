@@ -4,22 +4,25 @@ import com.mercadolibre.android.gradle.base.modules.AndroidLibraryPublishableMod
 import com.mercadolibre.android.gradle.base.utils.BintrayConfiguration
 import com.mercadolibre.android.gradle.base.utils.VersionContainer
 import org.gradle.api.Task
+import org.gradle.api.tasks.TaskProvider
 
 /**
  * Created by saguilera on 7/23/17.
  */
 class PublishAarExperimentalTask extends PublishAarTask {
 
-    Task create(PublishTask.Builder builder) {
-        super.create(builder)
+    @Override
+    TaskProvider<Task> register(PublishTask.Builder builder) {
+        super.register(builder)
 
         VersionContainer.put(project.name, builder.taskName, flavorVersion("EXPERIMENTAL-${project.version}-${getTimestamp()}", builder.variant))
 
-        Task task
-        if (project.tasks.findByName(builder.taskName)) {
-            task = project.tasks."$taskName"
+        TaskProvider<Task> task
+        if (project.tasks.names.contains(builder.taskName)) {
+            task = project.tasks.named(builder.taskName)
         } else {
-            task = project.tasks.create(builder.taskName, {
+            task = project.tasks.register(builder.taskName)
+            task.configure {
                 doFirst {
                     BintrayConfiguration.setBintrayConfig(new BintrayConfiguration.Builder().with {
                         project = this.project
@@ -34,7 +37,7 @@ class PublishAarExperimentalTask extends PublishAarTask {
 
                 dependsOn getBundleTaskName(project, variant), getSourcesJarTaskName(variant), getJavadocJarTask(variant)
                 finalizedBy 'bintrayUpload'
-            })
+            }
         }
 
         createMavenPublication()

@@ -3,6 +3,7 @@ package com.mercadolibre.android.gradle.base.modules
 import com.mercadolibre.android.gradle.base.publish.*
 import org.gradle.api.Project
 import org.gradle.api.Task
+import org.gradle.api.tasks.TaskProvider
 
 /**
  * Android library publishing module. It will create tasks for each available variant and flavor.
@@ -57,8 +58,8 @@ class AndroidLibraryPublishableModule extends PublishableModule {
         }
     }
 
-    protected Task createTask(PublishAarTask task, def libraryVariant, String theTaskName) {
-        return task.create(new PublishTask.Builder().with {
+    protected TaskProvider<Task> createTask(PublishAarTask task, def libraryVariant, String theTaskName) {
+        return task.register(new PublishTask.Builder().with {
             project = this.project
             variant = libraryVariant
             taskName = theTaskName
@@ -66,16 +67,17 @@ class AndroidLibraryPublishableModule extends PublishableModule {
         })
     }
 
-    protected Task createStubTask(String name, Task realTask) {
-        if (project.tasks.findByName(name)) {
-            project.tasks."$name".dependsOn realTask
+    protected void createStubTask(String name, TaskProvider<Task> realTask) {
+        if (project.tasks.names.contains(name)) {
+            project.tasks.named(name).configure {
+                dependsOn realTask
+            }
         } else {
-            project.tasks.create(name) { Task it ->
+            project.tasks.register(name) { Task it ->
                 it.group = PublishTask.TASK_GROUP
                 it.dependsOn realTask
             }
         }
-        return project.tasks."$name"
     }
 
 }

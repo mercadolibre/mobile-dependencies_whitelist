@@ -1,4 +1,8 @@
 # 8.1.0
+
+## Arreglado
+- Stop being eager about task configuration
+
 ## Agregado
 - Los repositorios inyectados por default ahora incluyen el content filtering que recomendamos
 
