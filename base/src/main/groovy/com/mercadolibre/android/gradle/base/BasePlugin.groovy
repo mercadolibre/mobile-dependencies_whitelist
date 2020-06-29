@@ -26,6 +26,7 @@ class BasePlugin implements Plugin<Project> {
     public static final String KOTLIN_ANDROID_PLUGIN = 'kotlin-android'
 
     private static final String BINTRAY_UPLOAD_TASK_NAME = "bintrayUpload"
+    private static final String LIST_PROJECTS_TASK_NAME = "listProjects"
 
     private static final ANDROID_LIBRARY_MODULES = { ->
         return [
@@ -125,6 +126,16 @@ class BasePlugin implements Plugin<Project> {
 
         project.gradle.taskGraph.whenReady { taskGraph ->
             doesTaskGraphHasPublishableTasks = checkIfTaskGraphHasPublishableTasks(project.gradle.taskGraph)
+        }
+
+        project.tasks.register(LIST_PROJECTS_TASK_NAME) { Task it ->
+            it.group = PublishTask.TASK_GROUP
+            it.configure {
+                setDescription('List all subprojects in this project')
+                doLast {
+                    subprojects.forEach { println(it.name) }
+                }
+            }
         }
 
         // We ensure all artifacts are published
