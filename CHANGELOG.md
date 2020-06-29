@@ -1,3 +1,7 @@
+# 8.1.0
+## Agregado
+- Los repositorios inyectados por default ahora incluyen el content filtering que recomendamos
+
 # 8.0.0
 ## Actualizado
 - Volvemos agregar nueva version del plugin de gradle enterprise a [3.3.2](https://gradle.com/enterprise/releases/2020.2/#background-build-scan-publication) para poder tener scan en background
