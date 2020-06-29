@@ -117,14 +117,6 @@ class BasePlugin implements Plugin<Project> {
                 new LockableModule().configure(subproject)
                 new LintableModule().configure(subproject)
             }
-
-            // We are disabling findbugs because it imposes a huge latency in the running builds
-            // and its not providing any real benefit that other SCA tools already do
-            subproject.tasks.configureEach { task ->
-                if (task.name.toLowerCase().contains('findbugs')) {
-                    task.enabled = false
-                }
-            }
         }
 
         PROJECT_MODULES().each {
