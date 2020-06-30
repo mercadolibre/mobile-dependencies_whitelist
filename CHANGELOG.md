@@ -5,6 +5,7 @@
 
 ## Agregado
 - Los repositorios inyectados por default ahora incluyen el content filtering que recomendamos
+- Se agrega la task `listProjects` para listar los modulos de todo el proyecto
 
 # 8.0.0
 ## Actualizado
