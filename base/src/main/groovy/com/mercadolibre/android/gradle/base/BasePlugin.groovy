@@ -181,7 +181,7 @@ class BasePlugin implements Plugin<Project> {
     void fixNoClassesConfiguredForSpotBugsAnalysis(Project project) {
         project.subprojects {
             afterEvaluate {
-                tasks.matching { it.name =~ /^spotbugs.+/ }.all {
+                tasks.matching { it.name =~ /^spotbugs.+/ }.configureEach {
                     it.onlyIf { !it.classes.empty }
                 }
             }
