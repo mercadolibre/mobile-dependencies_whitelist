@@ -145,6 +145,8 @@ class BasePlugin implements Plugin<Project> {
                 project.tasks.bintrayPublish.taskAction()
             }
         }
+
+        fixNoClassesConfiguredForSpotBugsAnalysis(project)
     }
 
     boolean checkIfTaskGraphHasPublishableTasks(def taskGraph) {
@@ -170,6 +172,17 @@ class BasePlugin implements Plugin<Project> {
         project.configurations {
             all*.exclude module:"jsr305"
             all*.exclude module:"jcip-annotations"
+        }
+    }
+    /**
+     * Workaround: No classes configured for SpotBugs analysis
+     * see : https://github.com/spotbugs/spotbugs-gradle-plugin/issues/23
+     */
+    void fixNoClassesConfiguredForSpotBugsAnalysis(Project project) {
+        project.subprojects {
+            tasks.matching { it.name =~ /^spotbugs.+/ }.configureEach {
+                it.onlyIf { !it.classes.empty }
+            }
         }
     }
 

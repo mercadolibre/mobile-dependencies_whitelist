@@ -1,5 +1,8 @@
-# 8.1.0
+# 8.1.1
+## Arreglado
+- Workaround to 'No classes configured for SpotBugs analysis'
 
+# 8.1.0
 ## Arreglado
 - Stop being eager about task configuration
 
