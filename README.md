@@ -73,7 +73,6 @@ Each context is an object with three properties:
 - **“name”**: which represents the context.
 - "iOS" and "Android" objects, which have two properties:
     - **“key”**: which represents, the "package" in Android and the "Module" in iOS, and it will be used to match and set the context for each error occurs in the apps.
-    - **"repo”**: the link to the respective GitHub repository.
 
 Example:
 ```
@@ -82,12 +81,10 @@ Example:
         {
             "name": "ab_user_onboarding",
             "iOS": {
-                "key": "ABUserOnboarding",
-                "repo": "https://github.com/mercadolibre/fury_ab-user-onboarding-ios"
+                "key": "ABUserOnboarding"
             },
             "Android": {
-                "key": "com.mercadopago.android.useronboarding",
-                "repo": "https://github.com/mercadolibre/fury_ab-user-onboarding-android"
+                "key": "com.mercadopago.android.useronboarding"
             }
         },
         …
