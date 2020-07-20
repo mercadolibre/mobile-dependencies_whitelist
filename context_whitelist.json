@@ -127,15 +127,6 @@
             }
         },
         {
-            "name": "buyer_adquisition",
-            "iOS": {
-                "key": ""
-            },
-            "Android": {
-                "key": "com.mercadolibre.android.mp.qrpromo"
-            }
-        },
-        {
             "name": "card_drawer",
             "iOS": {
                 "key": "MLCardDrawer"
@@ -352,7 +343,7 @@
             }
         },
         {
-            "name": "recommendations_comparator",
+            "name": "recommendations-comparator",
             "iOS": {
                 "key": "MLRecommendationsComparator"
             },
@@ -1000,24 +991,6 @@
             }
         },
         {
-            "name": "identityvalidation",
-            "iOS": {
-                "key": "MPIdentityValidation"
-            },
-            "Android": {
-                "key": "com.mercadopago.identityvalidation"
-            }
-        },
-        {
-            "name": "identityvalidation",
-            "iOS": {
-                "key": "MPIV"
-            },
-            "Android": {
-                "key": "com.mercadopago.identityvalidation"
-            }
-        },
-        {
             "name": "ignite",
             "iOS": {
                 "key": "MLIgnite"
@@ -1027,7 +1000,7 @@
             }
         },
         {
-            "name": "in_app_updates",
+            "name": "in-app-updates",
             "iOS": {
                 "key": ""
             },
@@ -1036,7 +1009,7 @@
             }
         },
         {
-            "name": "in_app_updates",
+            "name": "in-app-updates",
             "iOS": {
                 "key": ""
             },
@@ -1486,7 +1459,7 @@
             }
         },
         {
-            "name": "navigation",
+            "name": "navigation_sections",
             "iOS": {
                 "key": "NS"
             },
@@ -1495,7 +1468,7 @@
             }
         },
         {
-            "name": "navigation",
+            "name": "navigation_sections",
             "iOS": {
                 "key": "NavigationSections"
             },
@@ -1767,7 +1740,7 @@
         {
             "name": "remedies",
             "iOS": {
-                "key": "MLRMY"º
+                "key": "MLRMY"
             },
             "Android": {
                 "key": "com.mercadolibre.android.remedies"
@@ -2017,33 +1990,6 @@
             }
         },
         {
-            "name": "subscriptions",
-            "iOS": {
-                "key": "MLSubcriptions"
-            },
-            "Android": {
-                "key": "com.mercadolibre.android.myml.subscriptions"
-            }
-        },
-        {
-            "name": "subscriptions",
-            "iOS": {
-                "key": "MLSUB"
-            },
-            "Android": {
-                "key": "com.mercadolibre.android.myml.subscriptions"
-            }
-        },
-        {
-            "name": "suggested_discounts",
-            "iOS": {
-                "key": "MLSuggestedDiscounts"
-            },
-            "Android": {
-                "key": "com.mercadolibre.android.suggesteddiscounts"
-            }
-        },
-        {
             "name": "supermarket",
             "iOS": {
                 "key": "MLSupermarket"
@@ -2064,7 +2010,7 @@
         {
             "name": "tools_for_sellers",
             "iOS": {
-                "key": "MLDashboard"
+                "key": "MeliChart"
             },
             "Android": {
                 "key": "com.mercadolibre.android.melicharts"
@@ -2073,7 +2019,7 @@
         {
             "name": "tools_for_sellers",
             "iOS": {
-                "key": "MeliChart"
+                "key": "MLCharts"
             },
             "Android": {
                 "key": "com.mercadolibre.android.mlcharts"
