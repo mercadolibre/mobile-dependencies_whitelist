@@ -190,7 +190,7 @@
             }
         },
         {
-            "name": "checkout_on_bf_flox_components",
+            "name": "cho_flox_components",
             "iOS": {
                 "key": "MLBFFloxComponent"
             },
@@ -343,9 +343,9 @@
             }
         },
         {
-            "name": "comparator",
+            "name": "recommendations_comparator",
             "iOS": {
-                "key": ""
+                "key": "MLRecommendationsComparator"
             },
             "Android": {
                 "key": "com.mercadolibre.android.comparator"
@@ -795,7 +795,7 @@
         {
             "name": "disbursments",
             "iOS": {
-                "key": ""
+                "key": "Disbursments"
             },
             "Android": {
                 "key": "com.mercadopago.android.disbursments"
@@ -804,7 +804,7 @@
         {
             "name": "discount_payers",
             "iOS": {
-                "key": "DiscountPayers"
+                "key": "DiscountTouchpoint"
             },
             "Android": {
                 "key": "com.mercadolibre.android.discounts_touchpoint"
@@ -924,7 +924,7 @@
                 "key": ""
             },
             "Android": {
-                "key": "com.mercadopago.android.google_connect"
+                "key": "com.mercadopago.android.google.connect"
             }
         },
         {
@@ -991,7 +991,7 @@
             }
         },
         {
-            "name": "in-app-updates",
+            "name": "in_app_updates",
             "iOS": {
                 "key": ""
             },
@@ -1000,7 +1000,7 @@
             }
         },
         {
-            "name": "in-app-updates",
+            "name": "in_app_updates",
             "iOS": {
                 "key": ""
             },
@@ -1110,7 +1110,7 @@
         {
             "name": "loyalty",
             "iOS": {
-                "key": "MLLoyal"
+                "key": "MLLoyalDM"
             },
             "Android": {
                 "key": "com.mercadolibre.android.loyalty.datamanager"
@@ -1225,7 +1225,7 @@
             }
         },
         {
-            "name": "modalsengine",
+            "name": "payers_growth",
             "iOS": {
                 "key": "MPModalsEngine"
             },
@@ -1695,7 +1695,7 @@
         {
             "name": "recommendations_fe",
             "iOS": {
-                "key": "MLRecommendationsComparator"
+                "key": "MLRecommendations"
             },
             "Android": {
                 "key": "com.mercadolibre.android.rcm"
@@ -1794,7 +1794,7 @@
         {
             "name": "security",
             "iOS": {
-                "key": ""
+                "key": "MLBiometricSecurity"
             },
             "Android": {
                 "key": "com.mercadolibre.android.biometrics"
@@ -1902,7 +1902,7 @@
         {
             "name": "single_player",
             "iOS": {
-                "key": "MPSP"
+                "key": "MPSinglePlayer"
             },
             "Android": {
                 "key": "com.mercadopago.singleplayer"
@@ -1911,7 +1911,7 @@
         {
             "name": "single_player_postpaid",
             "iOS": {
-                "key": "BillPayments"
+                "key": "MPSinglePlayer"
             },
             "Android": {
                 "key": "com.mercadolibre.android.singleplayer.billpayments"
@@ -2001,7 +2001,7 @@
         {
             "name": "tools_for_sellers",
             "iOS": {
-                "key": "MeliChart"
+                "key": "MLDashboard"
             },
             "Android": {
                 "key": "com.mercadolibre.android.charts"
@@ -2010,7 +2010,7 @@
         {
             "name": "tools_for_sellers",
             "iOS": {
-                "key": "MeliChart"
+                "key": "MLDashboard"
             },
             "Android": {
                 "key": "com.mercadolibre.android.melicharts"
@@ -2019,7 +2019,7 @@
         {
             "name": "tools_for_sellers",
             "iOS": {
-                "key": "MLCharts"
+                "key": "MLDashboard"
             },
             "Android": {
                 "key": "com.mercadolibre.android.mlcharts"
@@ -2199,7 +2199,7 @@
         {
             "name": "webkit",
             "iOS": {
-                "key": ""
+                "key": "MLUIComponents"
             },
             "Android": {
                 "key": "com.mercadolibre.android.uicomponents.webkit"
@@ -2208,7 +2208,7 @@
         {
             "name": "webkit",
             "iOS": {
-                "key": ""
+                "key": "MLUIComponents"
             },
             "Android": {
                 "key": "com.mercadolibre.android.uicomponents.webkitcomponent"
@@ -2217,7 +2217,7 @@
         {
             "name": "webkit",
             "iOS": {
-                "key": ""
+                "key": "MLUIComponents"
             },
             "Android": {
                 "key": "com.mercadolibre.android.webkit"
