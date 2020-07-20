@@ -18,7 +18,11 @@
     },
     {
       "name": "Charts",
-      "version": "3.2.2"
+      "version": "3.4.0"
+    },
+    {
+      "name": "DiscountTouchpoint",
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "FBSDKCoreKit",
@@ -75,6 +79,10 @@
     {
       "name": "InStoreHomeSections",
       "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "JRSwizzle",
+      "version": "1.1.0"
     },
     {
       "name": "MGSwipeTableCell",
@@ -141,6 +149,10 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "MLClassiCredits",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "MLCollaborators",
       "version": "^~>\\s?0.[0-9]+$"
     },
@@ -170,7 +182,7 @@
     },
     {
       "name": "MLIgnite",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLImagePicker",
@@ -278,8 +290,17 @@
       "version": "^~>\\s?2.[0-9]+"
     },
     {
+      "name": "MLUserBlocker",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "expires": "2020-8-01",
       "name": "MLRemedies",
       "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MLRemedies",
+      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "MLRuleEngine",
@@ -419,7 +440,7 @@
     },
     {
       "name": "lottie-ios",
-      "version": "2.0.6|2.5.0"
+      "version": "2.0.6|2.5.0|^~>\\s?2.0$"
     },
     {
       "name": "MLFluxClient",
@@ -439,7 +460,7 @@
     },
     {
       "name": "MPTracking",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLBiometricSecurity",
@@ -456,6 +477,10 @@
     {
       "name": "MLInsightsMetric",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MPAppRater",
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "MLNavigation",
@@ -475,7 +500,7 @@
     },
     {
       "name": "MLScanner",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "Traceability",
@@ -483,11 +508,60 @@
     },
     {
       "name": "AndesUIDraftModal",
+      "version": "^~>\\s?2.[0-9]+"
+    },
+    {
+      "name": "MLBFFloxComponent",
       "version": "^~>\\s?1.[0-9]+"
     },
     {
+      "expires": "2020-5-15",
       "name": "AndesUI",
+      "version": "^~>\\s?2.[0-9]+"
+    },
+    {
+      "name": "AndesUI",
+      "version": "^~>\\s?3.[0-9]+"
+    },
+    {
+      "name": "MLLoyalDM",
+      "version": "^~>\\s?0.[0-9]+"
+    },
+    {
+      "name": "MLLoyalUIComponents",
       "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "CreditsUIComponents",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLCreditsCore",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MPSPPrepaid",
+      "version": "^~>\\s?1.+"
+    },
+    {
+      "name": "MLCrossAppLinks",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLPurchases/Integration",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "CardsEngagement/Feedback",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "CardsComponents",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLTFSCommons",
+      "version": "^~>\\s?0.[0-9]+$"
     }
   ]
 }
