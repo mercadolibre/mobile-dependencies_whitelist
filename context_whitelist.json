@@ -298,18 +298,9 @@
             }
         },
         {
-            "name": "collaborators",
+            "name": "collaborators_ui",
             "iOS": {
                 "key": "MLCollaborators"
-            },
-            "Android": {
-                "key": "com.mercadolibre.android.collaborators"
-            }
-        },
-        {
-            "name": "collaborators",
-            "iOS": {
-                "key": "MLCollaborator"
             },
             "Android": {
                 "key": "com.mercadolibre.android.collaborators"
