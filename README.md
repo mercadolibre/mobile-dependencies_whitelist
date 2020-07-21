@@ -30,6 +30,13 @@ JSON Schema:
 }
 ```
 
+**NOTE5**: If you want to try if its working correctly from your fork, just add this line to de build.gradle:
+```
+lintGradle {
+    dependencyWhitelistUrl = "https://raw.githubusercontent.com/YOUR_GITHUB_USER/mobile-dependencies_whitelist/master/android-whitelist.json"
+}
+```
+
 ### iOS
 iOS whitelist dependencies consist of a set of dependencies that are available for front-ends and high-level repositories to consume from the Mercadolibre-mobile group.
 
@@ -51,5 +58,36 @@ Example:
 		"name": "MLRecommendations",
 		"version": null
 	}]
+}
+```
+
+# Contexts Whitelist
+
+This json represents the contexts for our apps, both for iOS and Android. Which will be consumed by Kelli, in the "Deploy" job, and will be pushed into the apps, in their respective branches. 
+The apps will use it to create the Initiative map, and will use, the "key" to looks for the context of the errors, to pass it on to Bugsnag.
+
+This set of context is parsed in the form of a JSON text. The root level property should be called “context”.
+
+Each context is an object with three properties:
+
+- **“name”**: which represents the context.
+- "iOS" and "Android" objects, which have two properties:
+    - **“key”**: which represents, the "package" in Android and the "Module" in iOS, and it will be used to match and set the context for each error occurs in the apps.
+
+Example:
+```
+{
+    "context": [
+        {
+            "name": "ab_user_onboarding",
+            "iOS": {
+                "key": "ABUserOnboarding"
+            },
+            "Android": {
+                "key": "com.mercadopago.android.useronboarding"
+            }
+        },
+        …
+    ]
 }
 ```
