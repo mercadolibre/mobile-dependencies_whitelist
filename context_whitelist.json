@@ -66,6 +66,15 @@
         {
             "name": "app_rater",
             "iOS": {
+                "key": "MLAppRating"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.apprater"
+            }
+        },
+        {
+            "name": "app_rater",
+            "iOS": {
                 "key": "MPAppRater"
             },
             "Android": {
@@ -199,6 +208,15 @@
             }
         },
         {
+            "name": "classi_cancellations",
+            "iOS": {
+                "key": "MLCLT"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.classifieds.cancellation"
+            }
+        },
+        {
             "name": "classi_homes",
             "iOS": {
                 "key": "MLClassifiedsHomes"
@@ -208,9 +226,27 @@
             }
         },
         {
+            "name": "classi_homes",
+            "iOS": {
+                "key": "MLCHome"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.classifieds.homes"
+            }
+        },
+        {
             "name": "classi_quotation",
             "iOS": {
                 "key": "MLQuotation"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.quotation"
+            }
+        },
+        {
+            "name": "classi_quotation",
+            "iOS": {
+                "key": "MLQT"
             },
             "Android": {
                 "key": "com.mercadolibre.android.quotation"
@@ -235,6 +271,15 @@
             }
         },
         {
+            "name": "classifieds_listing",
+            "iOS": {
+                "key": "MLCQL"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.classifieds.listing"
+            }
+        },
+        {
             "name": "classifieds_quote",
             "iOS": {
                 "key": "MLQuote"
@@ -244,9 +289,36 @@
             }
         },
         {
+            "name": "classifieds_quote",
+            "iOS": {
+                "key": "MLQQT"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.quote"
+            }
+        },
+        {
+            "name": "collaborators",
+            "iOS": {
+                "key": "MLCollaborator"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.collaborators"
+            }
+        },
+        {
             "name": "collaborators",
             "iOS": {
                 "key": "MLCollaborators"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.collaborators"
+            }
+        },
+        {
+            "name": "collaborators",
+            "iOS": {
+                "key": "MLC"
             },
             "Android": {
                 "key": "com.mercadolibre.android.collaborators"
@@ -282,7 +354,7 @@
         {
             "name": "configuration-manager",
             "iOS": {
-                "key": "-"
+                "key": ""
             },
             "Android": {
                 "key": "com.mercadolibre.android.configuration.manager"
@@ -292,6 +364,15 @@
             "name": "configuration-providers",
             "iOS": {
                 "key": "MLConfigurationProvider"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.configuration"
+            }
+        },
+        {
+            "name": "configuration-providers",
+            "iOS": {
+                "key": "MLCP"
             },
             "Android": {
                 "key": "com.mercadolibre.android.configurationprovider"
@@ -622,6 +703,24 @@
             }
         },
         {
+            "name": "credits_consumer",
+            "iOS": {
+                "key": "MLCreditsBehaviours"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.credits"
+            }
+        },
+        {
+            "name": "credits_consumer",
+            "iOS": {
+                "key": "MLCC"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.credits"
+            }
+        },
+        {
             "name": "credits_merchant",
             "iOS": {
                 "key": "MPExpressMoney"
@@ -730,6 +829,24 @@
             }
         },
         {
+            "name": "dynamic_flow",
+            "iOS": {
+                "key": "MLCDF"
+            },
+            "Android": {
+                "key": ""
+            }
+        },
+        {
+            "name": "dynamic_flow",
+            "iOS": {
+                "key": "MLClassifiedsDynamicFlow"
+            },
+            "Android": {
+                "key": ""
+            }
+        },
+        {
             "name": "flox",
             "iOS": {
                 "key": "Flox"
@@ -822,7 +939,7 @@
         {
             "name": "garex",
             "iOS": {
-                "key": "-"
+                "key": ""
             },
             "Android": {
                 "key": "com.mercadolibre.android.garex"
@@ -841,6 +958,15 @@
             "name": "google-analytics",
             "iOS": {
                 "key": "MLAnalytics"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.analytics"
+            }
+        },
+        {
+            "name": "google-analytics",
+            "iOS": {
+                "key": "MLGAI"
             },
             "Android": {
                 "key": "com.mercadolibre.android.analytics"
@@ -874,9 +1000,9 @@
             }
         },
         {
-            "name": "in_app_updates",
+            "name": "in-app-updates",
             "iOS": {
-                "key": "-"
+                "key": ""
             },
             "Android": {
                 "key": "com.mercadolibre.android.inappupdates"
@@ -885,7 +1011,7 @@
         {
             "name": "in-app-updates",
             "iOS": {
-                "key": "-"
+                "key": ""
             },
             "Android": {
                 "key": "com.mercadolibre.android.mlinappupdates"
@@ -921,7 +1047,7 @@
         {
             "name": "instore",
             "iOS": {
-                "key": "InStore"
+                "key": "IS"
             },
             "Android": {
                 "key": "com.mercadolibre.android.instore.geofencing"
@@ -1029,7 +1155,7 @@
         {
             "name": "matt",
             "iOS": {
-                "key": "-"
+                "key": ""
             },
             "Android": {
                 "key": "com.mercadolibre.android.matt"
@@ -1072,6 +1198,15 @@
             }
         },
         {
+            "name": "milestone_tracker",
+            "iOS": {
+                "key": "MLMT"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.milestone_tracker"
+            }
+        },
+        {
             "name": "ml_esc_manager",
             "iOS": {
                 "key": "MLESCManager"
@@ -1081,7 +1216,16 @@
             }
         },
         {
-            "name": "MPBalance",
+            "name": "mlwallet",
+            "iOS": {
+                "key": "MLWallet"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.mlwallet"
+            }
+        },
+        {
+            "name": "mlwallet",
             "iOS": {
                 "key": "MPBalance"
             },
@@ -1102,6 +1246,15 @@
             "name": "money_transfer",
             "iOS": {
                 "key": "MPMoneyTransfer"
+            },
+            "Android": {
+                "key": "com.mercadopago.android.moneytransfer"
+            }
+        },
+        {
+            "name": "money_transfer",
+            "iOS": {
+                "key": "MPMT"
             },
             "Android": {
                 "key": "com.mercadopago.android.moneytransfer"
@@ -1173,6 +1326,15 @@
         {
             "name": "multiplayer",
             "iOS": {
+                "key": "MPC"
+            },
+            "Android": {
+                "key": "com.mercadopago.contacts"
+            }
+        },
+        {
+            "name": "multiplayer",
+            "iOS": {
                 "key": ""
             },
             "Android": {
@@ -1182,7 +1344,7 @@
         {
             "name": "myml_commons",
             "iOS": {
-                "key": "-"
+                "key": "MLMYMLCommons"
             },
             "Android": {
                 "key": "com.mercadolibre.android.myml.commons"
@@ -1198,9 +1360,27 @@
             }
         },
         {
+            "name": "myml_messages",
+            "iOS": {
+                "key": "MLM"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.myml.messages"
+            }
+        },
+        {
             "name": "myml_my_data",
             "iOS": {
                 "key": "MLMyData"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.mydata"
+            }
+        },
+        {
+            "name": "myml_my_data",
+            "iOS": {
+                "key": "MLMD"
             },
             "Android": {
                 "key": "com.mercadolibre.android.mydata"
@@ -1225,6 +1405,15 @@
             }
         },
         {
+            "name": "myml_questions",
+            "iOS": {
+                "key": "MLQ"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.questions"
+            }
+        },
+        {
             "name": "navigation_cp",
             "iOS": {
                 "key": "MLNavigationCP"
@@ -1236,7 +1425,7 @@
         {
             "name": "navigation_cp",
             "iOS": {
-                "key": "-"
+                "key": ""
             },
             "Android": {
                 "key": "com.mercadolibre.android.shippingaddress"
@@ -1261,9 +1450,45 @@
             }
         },
         {
+            "name": "navigation_menu",
+            "iOS": {
+                "key": "MLN"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.navigation.menu"
+            }
+        },
+        {
+            "name": "navigation_sections",
+            "iOS": {
+                "key": "NS"
+            },
+            "Android": {
+                "key": ""
+            }
+        },
+        {
+            "name": "navigation_sections",
+            "iOS": {
+                "key": "NavigationSections"
+            },
+            "Android": {
+                "key": ""
+            }
+        },
+        {
             "name": "networking",
             "iOS": {
                 "key": "MLNetworking"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.networking"
+            }
+        },
+        {
+            "name": "networking",
+            "iOS": {
+                "key": "MLRestClient"
             },
             "Android": {
                 "key": "com.mercadolibre.android.networking"
@@ -1276,6 +1501,15 @@
             },
             "Android": {
                 "key": "com.mercadolibre.notificationcenter"
+            }
+        },
+        {
+            "name": "notifications",
+            "iOS": {
+                "key": "MLNotification"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.notifications"
             }
         },
         {
@@ -1297,9 +1531,27 @@
             }
         },
         {
+            "name": "officialstores",
+            "iOS": {
+                "key": "MLOfficialStore"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.officialstores"
+            }
+        },
+        {
             "name": "on_demand_resources",
             "iOS": {
                 "key": "MLOnDemandResources"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.on.demand.resources"
+            }
+        },
+        {
+            "name": "on_demand_resources",
+            "iOS": {
+                "key": "MLOD"
             },
             "Android": {
                 "key": "com.mercadolibre.android.on.demand.resources"
@@ -1383,6 +1635,15 @@
                 "key": "MPPoint"
             },
             "Android": {
+                "key": "com.mercadopago.merchant"
+            }
+        },
+        {
+            "name": "point",
+            "iOS": {
+                "key": "MPPoint"
+            },
+            "Android": {
                 "key": "com.mercadopago.payment.flow"
             }
         },
@@ -1399,6 +1660,15 @@
             "name": "post_purchase",
             "iOS": {
                 "key": "MLPostPurchase"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.post_purchase"
+            }
+        },
+        {
+            "name": "post_purchase",
+            "iOS": {
+                "key": "MLPP"
             },
             "Android": {
                 "key": "com.mercadolibre.android.post_purchase"
@@ -1468,6 +1738,15 @@
             }
         },
         {
+            "name": "remedies",
+            "iOS": {
+                "key": "MLRMY"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.remedies"
+            }
+        },
+        {
             "name": "remedy",
             "iOS": {
                 "key": "MLRemedy"
@@ -1479,7 +1758,7 @@
         {
             "name": "rest_client",
             "iOS": {
-                "key": "-"
+                "key": ""
             },
             "Android": {
                 "key": "com.mercadolibre.android.restclient"
@@ -1560,7 +1839,7 @@
         {
             "name": "security",
             "iOS": {
-                "key": "MLBIometricSecurity"
+                "key": "MLBiometricSecurity"
             },
             "Android": {
                 "key": "com.mercadolibre.android.userbiometric"
@@ -1596,7 +1875,7 @@
         {
             "name": "seller_rep_delivered",
             "iOS": {
-                "key": "-"
+                "key": ""
             },
             "Android": {
                 "key": "com.mercadolibre.android.order.delivered"
@@ -1621,12 +1900,30 @@
             }
         },
         {
+            "name": "shipping_components",
+            "iOS": {
+                "key": "MLSC"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.shipping.components"
+            }
+        },
+        {
             "name": "single_player",
             "iOS": {
                 "key": "MPSinglePlayer"
             },
             "Android": {
                 "key": "com.mercadopago.paybills"
+            }
+        },
+        {
+            "name": "single_player",
+            "iOS": {
+                "key": "MPSP"
+            },
+            "Android": {
+                "key": "com.mercadopago.singleplayer"
             }
         },
         {
@@ -1641,7 +1938,7 @@
         {
             "name": "single_player_postpaid",
             "iOS": {
-                "key": "MPSinglePlayer"
+                "key": "Billpayments"
             },
             "Android": {
                 "key": "com.mercadolibre.android.singleplayer.billpayments"
@@ -1653,7 +1950,34 @@
                 "key": "MLSinglePlayer"
             },
             "Android": {
+                "key": "com.mercadolibre.android.singleplayer"
+            }
+        },
+        {
+            "name": "single_player_prepaid",
+            "iOS": {
+                "key": "MPCellphoneRecharge"
+            },
+            "Android": {
                 "key": "com.mercadolibre.android.singleplayer.cellphonerecharge"
+            }
+        },
+        {
+            "name": "single_player_prepaid",
+            "iOS": {
+                "key": "MPCR"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.singleplayer.cellphonerecharge"
+            }
+        },
+        {
+            "name": "single_player_prepaid",
+            "iOS": {
+                "key": "MPSPPrepaid"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.singleplayer.prepaid"
             }
         },
         {
@@ -1686,7 +2010,7 @@
         {
             "name": "tools_for_sellers",
             "iOS": {
-                "key": "MLDashboard"
+                "key": "MeliChart"
             },
             "Android": {
                 "key": "com.mercadolibre.android.melicharts"
@@ -1713,7 +2037,7 @@
         {
             "name": "tools_for_sellers",
             "iOS": {
-                "key": "MLDashboard"
+                "key": "PEUI"
             },
             "Android": {
                 "key": "com.mercadolibre.android.profileengine"
@@ -1735,6 +2059,15 @@
             },
             "Android": {
                 "key": "com.mercadolibre.android.action.bar"
+            }
+        },
+        {
+            "name": "ui-components",
+            "iOS": {
+                "key": "MLUIC"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.calligraphy"
             }
         },
         {
@@ -1830,7 +2163,16 @@
         {
             "name": "user_blocker",
             "iOS": {
-                "key": ""
+                "key": "MLUB"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.user_blocker"
+            }
+        },
+        {
+            "name": "user_blocker",
+            "iOS": {
+                "key": "MLUserBlocker"
             },
             "Android": {
                 "key": "com.mercadolibre.android.user_blocker"
@@ -1866,7 +2208,7 @@
         {
             "name": "webkit",
             "iOS": {
-                "key": "MLUIComponents"
+                "key": ""
             },
             "Android": {
                 "key": "com.mercadolibre.android.uicomponents.webkit"
@@ -1875,7 +2217,7 @@
         {
             "name": "webkit",
             "iOS": {
-                "key": "MLUIComponents"
+                "key": ""
             },
             "Android": {
                 "key": "com.mercadolibre.android.uicomponents.webkitcomponent"
@@ -1884,7 +2226,7 @@
         {
             "name": "webkit",
             "iOS": {
-                "key": "MLUIComponents"
+                "key": ""
             },
             "Android": {
                 "key": "com.mercadolibre.android.webkit"
@@ -1897,6 +2239,15 @@
             },
             "Android": {
                 "key": "com.mercadopago.withdraw"
+            }
+        },
+        {
+            "name": "tfs_commons",
+            "iOS": {
+                "key": "MLTFSCommons"
+            },
+            "Android": {
+                "key": ""
             }
         }
     ]
