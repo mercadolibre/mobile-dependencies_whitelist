@@ -2044,6 +2044,24 @@
             }
         },
         {
+            "name": "tools_for_sellers",
+            "iOS": {
+                "key": "CollaboratorsUI"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.collaboratorsui"
+            }
+        },
+        {
+            "name": "tools_for_sellers",
+            "iOS": {
+                "key": "MLFeesAndInstallments"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.fees_installments"
+            }
+        },
+        {
             "name": "ui",
             "iOS": {
                 "key": "MLUI"
