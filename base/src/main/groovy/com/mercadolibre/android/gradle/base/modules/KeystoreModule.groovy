@@ -30,13 +30,12 @@ class KeystoreModule implements Module {
         final File keystore = project.file("${directory.absolutePath}${File.separator}${FILE_NAME}")
 
         // Define a task to unpack the keystore were we will place it
-        final TaskProvider<Task> unpackKeystoreTask = project.tasks.register("unpackDebugKeystore") {
-            it.outputs.file keystore
-        }
+        final TaskProvider<Task> unpackKeystoreTask = project.tasks.register("unpackDebugKeystore")
 
         unpackKeystoreTask.configure {
             group = 'keystore'
             description = 'Unpack the debug keystore into the build directory of the project'
+            it.outputs.file keystore
             doLast {
                 // Create the directory
                 directory.mkdirs()
