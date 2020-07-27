@@ -1,3 +1,7 @@
+# 8.2.0
+## Arreglado
+- Fix task unpackKeystoreTask. Se agrega output para poder aprovechar incremental builds: Más [info](https://blog.gradle.org/introducing-incremental-build-support)
+
 # 8.1.1
 ## Arreglado
 - Workaround to 'No classes configured for SpotBugs analysis'
