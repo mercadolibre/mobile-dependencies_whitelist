@@ -1,6 +1,5 @@
 # 8.3.0
 - Fix shadowing de la variable de instancia
-- Remove deprecated
 
 # 8.2.0
 ## Arreglado
