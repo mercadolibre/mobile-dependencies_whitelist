@@ -11,6 +11,7 @@ import com.mercadolibre.android.gradle.base.modules.KeystoreModule
 import com.mercadolibre.android.gradle.base.modules.LintableModule
 import com.mercadolibre.android.gradle.base.modules.LockableModule
 import com.mercadolibre.android.gradle.base.modules.PackageModule
+import com.mercadolibre.android.gradle.base.modules.ApplicationLintOptionsModule
 import com.mercadolibre.android.gradle.base.utils.VersionContainer
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -41,7 +42,8 @@ class BasePlugin implements Plugin<Project> {
         return [
             new AndroidJacocoModule(),
             new KeystoreModule(),
-            new PackageModule()
+            new PackageModule(),
+            new ApplicationLintOptionsModule()
         ]
     }
 
