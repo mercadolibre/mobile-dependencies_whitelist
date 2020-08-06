@@ -295,7 +295,7 @@
     },
     {
       "name": "MLRemedy",
-      "version": "^~>\\s?2.[0-9]+"
+      "version": "^~>\\s?3.[0-9]+"
     },
     {
       "name": "MLUserBlocker",
@@ -569,6 +569,10 @@
     },
     {
       "name": "MLTFSCommons",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "GarexGpage",
       "version": "^~>\\s?0.[0-9]+$"
     }
   ]

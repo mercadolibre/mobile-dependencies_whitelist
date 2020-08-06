@@ -1346,6 +1346,21 @@
       "group": "com\\.mercadolibre\\.android\\.user_blocker",
       "name": "user_blocker",
       "version": "mercadopago-1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.collaboratorsui",
+      "name": "collaboratorsui",
+      "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.profileengine",
+      "name": "peui",
+      "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.mldashboard",
+      "name": "mldashboard",
+      "version": "1\\.\\+"
     }
   ]
 }
