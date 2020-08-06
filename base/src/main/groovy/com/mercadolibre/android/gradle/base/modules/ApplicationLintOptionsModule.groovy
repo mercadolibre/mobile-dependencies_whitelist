@@ -2,6 +2,11 @@ package com.mercadolibre.android.gradle.base.modules
 
 import org.gradle.api.Project
 
+/**
+ * Module that configure lint options for android application modules
+ *
+ * Created by lcaramelo on 05/08/20.
+ */
 class ApplicationLintOptionsModule implements Module {
 
     @Override
