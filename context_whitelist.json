@@ -298,42 +298,6 @@
             }
         },
         {
-            "name": "collaborators",
-            "iOS": {
-                "key": "MLCollaborator"
-            },
-            "Android": {
-                "key": "com.mercadolibre.android.collaborators"
-            }
-        },
-        {
-            "name": "collaborators",
-            "iOS": {
-                "key": "MLCollaborators"
-            },
-            "Android": {
-                "key": "com.mercadolibre.android.collaborators"
-            }
-        },
-        {
-            "name": "collaborators",
-            "iOS": {
-                "key": "MLC"
-            },
-            "Android": {
-                "key": "com.mercadolibre.android.collaborators"
-            }
-        },
-        {
-            "name": "collaborators_ui",
-            "iOS": {
-                "key": "CollaboratorsUI"
-            },
-            "Android": {
-                "key": "com.mercadolibre.android.collaboratorsui"
-            }
-        },
-        {
             "name": "commons",
             "iOS": {
                 "key": "MLCommons"
@@ -2041,6 +2005,15 @@
             },
             "Android": {
                 "key": "com.mercadolibre.android.profileengine"
+            }
+        },
+        {
+            "name": "tools_for_sellers",
+            "iOS": {
+                "key": "MLCollaborators"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.collaborators"
             }
         },
         {
