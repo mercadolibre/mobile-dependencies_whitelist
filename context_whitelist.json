@@ -1965,15 +1965,6 @@
         {
             "name": "tools_for_sellers",
             "iOS": {
-                "key": "MLDashboard"
-            },
-            "Android": {
-                "key": "com.mercadolibre.android.charts"
-            }
-        },
-        {
-            "name": "tools_for_sellers",
-            "iOS": {
                 "key": "MeliChart"
             },
             "Android": {
@@ -1983,10 +1974,19 @@
         {
             "name": "tools_for_sellers",
             "iOS": {
+                "key": "MLDashboardComponent"
+            },
+            "Android": {
+                "key": ""
+            }
+        },
+        {
+            "name": "tools_for_sellers",
+            "iOS": {
                 "key": "MLCharts"
             },
             "Android": {
-                "key": "com.mercadolibre.android.mlcharts"
+                "key": ""
             }
         },
         {
@@ -2233,7 +2233,7 @@
             }
         },
         {
-            "name": "tfs_commons",
+            "name": "tools_for_sellers",
             "iOS": {
                 "key": "MLTFSCommons"
             },
