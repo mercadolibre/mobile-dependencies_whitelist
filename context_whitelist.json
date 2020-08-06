@@ -595,6 +595,15 @@
             }
         },
         {
+            "name": "congrats",
+            "iOS": {
+                "key": "StaticResources"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.static_resources"
+            }
+        },
+        {
             "name": "core",
             "iOS": {
                 "key": "Traceability"
