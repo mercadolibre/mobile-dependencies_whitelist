@@ -594,15 +594,15 @@
                 "key": "com.mercadopago.android.congrats"
             }
         },
-		{
-			"name": "static-resources",
-			"iOS": {
-				"key": "StaticResources"
-			},
-			"Android": {
-				"key": "com.mercadolibre.android.static_resources"
-			}
-		},
+        {
+            "name": "static-resources",
+            "iOS": {
+                "key": "StaticResources"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.static_resources"
+            }
+        },
         {
             "name": "core",
             "iOS": {
