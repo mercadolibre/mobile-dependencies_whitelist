@@ -1,3 +1,7 @@
+# 8.4.0
+## Arreglado
+- Se agrega lint checkDependencies para los application modules, asi podemos tener un report mejor de lint. ej UnusedResources
+
 # 8.3.0
 - Fix shadowing de la variable de instancia
 
