@@ -1360,6 +1360,15 @@
             }
         },
         {
+            "name": "profile_picture",
+            "iOS": {
+                "key": "MLMyData"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.mydata.profile.picture"
+            }
+        },
+        {
             "name": "myml_orders",
             "iOS": {
                 "key": "MLVOP"
