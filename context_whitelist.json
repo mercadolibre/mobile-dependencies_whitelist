@@ -1361,6 +1361,9 @@
         },
         {
             "name": "profile_picture",
+            "iOS": {
+                "key": ""
+            },
             "Android": {
                 "key": "com.mercadolibre.android.mydata.profile.picture"
             }
