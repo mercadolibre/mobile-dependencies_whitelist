@@ -627,11 +627,6 @@
       "version": "2\\.\\+"
     },
     {
-      "group": "com\\.mercadolibre\\.android\\.mlcharts",
-      "name": "mlcharts",
-      "version": "0\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.mlwallet",
       "name": "header",
       "version": "5\\.\\+"
@@ -821,6 +816,11 @@
       "version": "2\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.static_resources",
+      "name": "static_resources",
+      "version": "1\\.\\+"
+    },
+    {
       "group": "com\\.mercadopago\\.android\\.contacts",
       "name": "contacts",
       "version": "4\\.\\+"
@@ -938,7 +938,7 @@
     {
       "group": "com\\.otaliastudios",
       "name": "cameraview",
-      "version": "1\\.6\\.1|2\\.6\\.2"
+      "version": "1\\.6\\.1|2\\.6\\.3"
     },
     {
       "group": "io\\.reactivex",
@@ -1351,6 +1351,21 @@
       "group": "com\\.mercadolibre\\.android\\.user_blocker",
       "name": "user_blocker",
       "version": "mercadopago-1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.collaboratorsui",
+      "name": "collaboratorsui",
+      "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.profileengine",
+      "name": "peui",
+      "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.mldashboard",
+      "name": "mldashboard",
+      "version": "1\\.\\+"
     }
   ]
 }

@@ -145,6 +145,14 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "name": "MeliChart",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLDashboardComponent",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
       "name": "MLClassifiedsDynamicFlow",
       "version": "^~>\\s?1.[0-9]+$"
     },
@@ -191,6 +199,10 @@
     {
       "name": "MLLocalStorage",
       "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "StaticResources",
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLLogin",
@@ -287,7 +299,7 @@
     },
     {
       "name": "MLRemedy",
-      "version": "^~>\\s?2.[0-9]+"
+      "version": "^~>\\s?3.[0-9]+"
     },
     {
       "name": "MLUserBlocker",
@@ -569,6 +581,10 @@
     },
     {
       "name": "PointUI",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "GarexGpage",
       "version": "^~>\\s?0.[0-9]+$"
     }
   ]

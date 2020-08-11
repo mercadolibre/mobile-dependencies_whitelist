@@ -298,42 +298,6 @@
             }
         },
         {
-            "name": "collaborators",
-            "iOS": {
-                "key": "MLCollaborator"
-            },
-            "Android": {
-                "key": "com.mercadolibre.android.collaborators"
-            }
-        },
-        {
-            "name": "collaborators",
-            "iOS": {
-                "key": "MLCollaborators"
-            },
-            "Android": {
-                "key": "com.mercadolibre.android.collaborators"
-            }
-        },
-        {
-            "name": "collaborators",
-            "iOS": {
-                "key": "MLC"
-            },
-            "Android": {
-                "key": "com.mercadolibre.android.collaborators"
-            }
-        },
-        {
-            "name": "collaborators_ui",
-            "iOS": {
-                "key": "CollaboratorsUI"
-            },
-            "Android": {
-                "key": "com.mercadolibre.android.collaboratorsui"
-            }
-        },
-        {
             "name": "commons",
             "iOS": {
                 "key": "MLCommons"
@@ -628,6 +592,15 @@
             },
             "Android": {
                 "key": "com.mercadopago.android.congrats"
+            }
+        },
+        {
+            "name": "congrats",
+            "iOS": {
+                "key": "StaticResources"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.static_resources"
             }
         },
         {
@@ -939,7 +912,7 @@
         {
             "name": "garex",
             "iOS": {
-                "key": ""
+                "key": "GarexGpage"
             },
             "Android": {
                 "key": "com.mercadolibre.android.garex"
@@ -1384,6 +1357,15 @@
             },
             "Android": {
                 "key": "com.mercadolibre.android.mydata"
+            }
+        },
+        {
+            "name": "profile_picture",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.mydata.profile.picture"
             }
         },
         {
@@ -2019,15 +2001,6 @@
         {
             "name": "tools_for_sellers",
             "iOS": {
-                "key": "MLDashboard"
-            },
-            "Android": {
-                "key": "com.mercadolibre.android.charts"
-            }
-        },
-        {
-            "name": "tools_for_sellers",
-            "iOS": {
                 "key": "MeliChart"
             },
             "Android": {
@@ -2037,10 +2010,19 @@
         {
             "name": "tools_for_sellers",
             "iOS": {
+                "key": "MLDashboardComponent"
+            },
+            "Android": {
+                "key": ""
+            }
+        },
+        {
+            "name": "tools_for_sellers",
+            "iOS": {
                 "key": "MLCharts"
             },
             "Android": {
-                "key": "com.mercadolibre.android.mlcharts"
+                "key": ""
             }
         },
         {
@@ -2059,6 +2041,33 @@
             },
             "Android": {
                 "key": "com.mercadolibre.android.profileengine"
+            }
+        },
+        {
+            "name": "tools_for_sellers",
+            "iOS": {
+                "key": "MLCollaborators"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.collaborators"
+            }
+        },
+        {
+            "name": "tools_for_sellers",
+            "iOS": {
+                "key": "CollaboratorsUI"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.collaboratorsui"
+            }
+        },
+        {
+            "name": "tools_for_sellers",
+            "iOS": {
+                "key": "MLFeesAndInstallments"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.fees_installments"
             }
         },
         {
@@ -2260,7 +2269,7 @@
             }
         },
         {
-            "name": "tfs_commons",
+            "name": "tools_for_sellers",
             "iOS": {
                 "key": "MLTFSCommons"
             },
