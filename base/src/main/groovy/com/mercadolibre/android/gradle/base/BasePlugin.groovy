@@ -18,8 +18,6 @@ import org.gradle.api.Project
 import org.gradle.api.Task
 import org.gradle.api.initialization.Settings
 import org.gradle.api.plugins.JavaPlugin
-import org.gradle.util.VersionNumber
-
 /**
  * Gradle base plugin for MercadoLibre Android projects/modules.
  */
@@ -31,8 +29,6 @@ class BasePlugin implements Plugin<Object> {
 
     private static final String BINTRAY_UPLOAD_TASK_NAME = "bintrayUpload"
     private static final String LIST_PROJECTS_TASK_NAME = "listProjects"
-
-    private static final int GRADLE_VERSION_SIX = 6
 
     private static final ANDROID_LIBRARY_MODULES = { ->
         return [
@@ -59,6 +55,12 @@ class BasePlugin implements Plugin<Object> {
     }
 
     private static final PROJECT_MODULES = { ->
+        return [
+            new BuildScanModule()
+        ]
+    }
+
+    private static final SETTINGS_MODULES = {
         return [
             new BuildScanModule()
         ]
@@ -103,12 +105,10 @@ class BasePlugin implements Plugin<Object> {
     void apply(Settings settings) {
         this.settings = settings
 
-        def projectGradleVersion = VersionNumber.parse(settings.gradle.gradleVersion)
-        if (projectGradleVersion.major >= GRADLE_VERSION_SIX) {
-            PROJECT_MODULES().each {
-                module -> module.configure(settings)
-            }
+        SETTINGS_MODULES().each {
+            module -> module.configure(settings)
         }
+
     }
 
     /**
@@ -160,11 +160,8 @@ class BasePlugin implements Plugin<Object> {
             }
         }
 
-        def projectGradleVersion = VersionNumber.parse(project.gradle.gradleVersion)
-        if (projectGradleVersion.major < GRADLE_VERSION_SIX) {
-            PROJECT_MODULES().each {
-                module -> module.configure(project)
-            }
+        PROJECT_MODULES().each {
+            module -> module.configure(project)
         }
 
         project.gradle.taskGraph.whenReady { taskGraph ->

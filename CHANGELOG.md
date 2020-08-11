@@ -1,3 +1,6 @@
+# 9.0.0
+- Migracion a Gradle 6. Ahora gradle entreprise plugin tiene que ser aplicado en settings para proyectos con gradle 6.
+
 # 8.4.0
 ## Arreglado
 - Se agrega lint checkDependencies para los application modules, asi podemos tener un report mejor de lint. ej UnusedResources

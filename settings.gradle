@@ -1,1 +1,18 @@
+buildscript {
+    repositories {
+        // have the same repositories applied to buildscript…
+        apply from:"$rootDir/gradle/repositories.gradle", to: buildscript
+    }
+
+    dependencies {
+        classpath "com.mercadolibre.android.gradle:base:$innerProjectVersion"
+    }
+}
+
+plugins {
+    // …
+    id "com.gradle.enterprise" version "3.4"
+}
+
+apply plugin: 'mercadolibre.mobile'
 include ':base'

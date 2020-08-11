@@ -2,22 +2,8 @@ apply plugin: 'mercadolibre.mobile'
 
 buildscript {
     repositories {
-        jcenter()
-        maven {
-            url "https://dl.bintray.com/mercadolibre/android-releases"
-            credentials {
-                username 'bintray-read-only'
-                password 'e7b8b22a0b84527c04194c31f90bc0b879d8fd9d'
-            }
-        }
-
-        maven {
-            url "https://dl.bintray.com/mercadolibre/android-experimental"
-            credentials {
-                username 'bintray-read-only'
-                password 'e7b8b22a0b84527c04194c31f90bc0b879d8fd9d'
-            }
-        }
+        // have the same repositories applied to buildscript…
+        apply from:"$rootDir/gradle/repositories.gradle", to: buildscript
 
         maven {
             url "https://plugins.gradle.org/m2/"

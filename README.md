@@ -22,6 +22,21 @@ Y lo aplicamos en el root `build.gradle` del proyecto
 apply plugin: 'mercadolibre-mobile'
 ```
 
+El plugin se debe aplicar en build.gradle del root del proyecto.
+
+En caso de estar en gradle 6, tambien debemos aplicarlo en settings.gradle
+#### Only Gradle 6.x
+
+```groovy
+plugins {
+	// …
+	id "com.gradle.enterprise" version "<<version>>"
+	// …
+}
+
+apply plugin: 'mercadolibre-mobile'
+```
+
 Listo. Con eso el plugin ya va a hacer lo suyo.
 
 ## Modulos

@@ -3,12 +3,16 @@ package com.mercadolibre.android.gradle.base.modules
 
 import org.gradle.api.Project
 import org.gradle.api.initialization.Settings
+import org.gradle.util.VersionNumber
+
 /**
  * Build Scan module for creating a task that will publish build scans
  *
  * Created by mafunes on 24/04/19.
  */
 class BuildScanModule implements Module, SettingsModule {
+
+    private static final int GRADLE_VERSION_SIX = 6
 
     def configure(Object object, String projectName) {
         object.with {
@@ -40,17 +44,23 @@ class BuildScanModule implements Module, SettingsModule {
             }
         }
     }
+
     @Override
     void configure(final Settings settings) {
-        configure(settings, settings.getRootDir().getName())
+        def projectGradleVersion = VersionNumber.parse(settings.gradle.gradleVersion)
+        if (projectGradleVersion.major >= GRADLE_VERSION_SIX) {
+            configure(settings, settings.getRootProject().getName())
+        }
     }
 
     @Override
     void configure(Project project) {
-        project.with {
-            apply plugin:'com.gradle.build-scan'
+        def projectGradleVersion = VersionNumber.parse(project.gradle.gradleVersion)
+        if (projectGradleVersion.major < GRADLE_VERSION_SIX) {
+            project.with {
+                apply plugin:'com.gradle.build-scan'
+            }
+            configure(project, project.getRootProject().getName())
         }
-        configure(project, project.getProject().getName())
     }
-
 }
