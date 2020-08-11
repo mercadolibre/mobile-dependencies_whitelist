@@ -3,25 +3,27 @@ package com.mercadolibre.android.gradle.base
 import com.mercadolibre.android.gradle.base.modules.AndroidJacocoModule
 import com.mercadolibre.android.gradle.base.modules.AndroidLibraryPublishableModule
 import com.mercadolibre.android.gradle.base.modules.AndroidLibraryTestableModule
+import com.mercadolibre.android.gradle.base.modules.ApplicationLintOptionsModule
 import com.mercadolibre.android.gradle.base.modules.BuildScanModule
-import com.mercadolibre.android.gradle.base.modules.KotlinCheckModule
 import com.mercadolibre.android.gradle.base.modules.JavaJacocoModule
 import com.mercadolibre.android.gradle.base.modules.JavaPublishableModule
 import com.mercadolibre.android.gradle.base.modules.KeystoreModule
+import com.mercadolibre.android.gradle.base.modules.KotlinCheckModule
 import com.mercadolibre.android.gradle.base.modules.LintableModule
 import com.mercadolibre.android.gradle.base.modules.LockableModule
 import com.mercadolibre.android.gradle.base.modules.PackageModule
-import com.mercadolibre.android.gradle.base.modules.ApplicationLintOptionsModule
 import com.mercadolibre.android.gradle.base.utils.VersionContainer
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.Task
+import org.gradle.api.initialization.Settings
 import org.gradle.api.plugins.JavaPlugin
+import org.gradle.util.VersionNumber
 
 /**
  * Gradle base plugin for MercadoLibre Android projects/modules.
  */
-class BasePlugin implements Plugin<Project> {
+class BasePlugin implements Plugin<Object> {
 
     public static final String ANDROID_LIBRARY_PLUGIN = 'com.android.library'
     public static final String ANDROID_APPLICATION_PLUGIN = 'com.android.application'
@@ -29,6 +31,8 @@ class BasePlugin implements Plugin<Project> {
 
     private static final String BINTRAY_UPLOAD_TASK_NAME = "bintrayUpload"
     private static final String LIST_PROJECTS_TASK_NAME = "listProjects"
+
+    private static final int GRADLE_VERSION_SIX = 6
 
     private static final ANDROID_LIBRARY_MODULES = { ->
         return [
@@ -71,13 +75,46 @@ class BasePlugin implements Plugin<Project> {
      */
     private Project project
 
+    /**
+     * The Settings.
+     */
+    private Settings settings
+
     private boolean doesTaskGraphHasPublishableTasks = false
+
+    /**
+     * Method called by Gradle when applying this plugin.
+     * @param target the Gradle target which can be Gradle Settings o Gradle project
+     */
+    @Override
+    void apply(Object target) {
+        if (target instanceof Settings) {
+            apply((Settings) target);
+        }
+        else if (target instanceof Project) {
+            apply((Project) target);
+        }
+    }
+
+    /**
+     * Method called by Gradle when applying this plugin.
+     * @param settings the Settings project.
+     */
+    void apply(Settings settings) {
+        this.settings = settings
+
+        def projectGradleVersion = VersionNumber.parse(settings.gradle.gradleVersion)
+        if (projectGradleVersion.major >= GRADLE_VERSION_SIX) {
+            PROJECT_MODULES().each {
+                module -> module.configure(settings)
+            }
+        }
+    }
 
     /**
      * Method called by Gradle when applying this plugin.
      * @param project the Gradle project.
      */
-    @Override
     void apply(Project project) {
         this.project = project
 
@@ -123,8 +160,11 @@ class BasePlugin implements Plugin<Project> {
             }
         }
 
-        PROJECT_MODULES().each {
-            module -> module.configure(project)
+        def projectGradleVersion = VersionNumber.parse(project.gradle.gradleVersion)
+        if (projectGradleVersion.major < GRADLE_VERSION_SIX) {
+            PROJECT_MODULES().each {
+                module -> module.configure(project)
+            }
         }
 
         project.gradle.taskGraph.whenReady { taskGraph ->

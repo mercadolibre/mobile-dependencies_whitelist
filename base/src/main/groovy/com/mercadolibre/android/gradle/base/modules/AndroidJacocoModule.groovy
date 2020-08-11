@@ -81,7 +81,7 @@ class AndroidJacocoModule extends BaseJacocoModule {
             reportTask.dependsOn testTask
             reportTask.group = "reporting"
             reportTask.description = "Generates Jacoco coverage reports for the ${variant.name} variant."
-            reportTask.executionData = project.files(executionDataFile(testTask.get()))
+            reportTask.executionData.from = project.files(executionDataFile(testTask.get()))
             def exclude = [
                     '**/R.class',
                     '**/R$*.class',
@@ -109,8 +109,8 @@ class AndroidJacocoModule extends BaseJacocoModule {
                 sourceDirectories.add("src/main/kotlin")
             }
 
-            reportTask.sourceDirectories = project.files(sourceDirectories)
-            reportTask.classDirectories = classDirectories
+            reportTask.sourceDirectories.from = project.files(sourceDirectories)
+            reportTask.classDirectories.from = classDirectories
 
             reportTask.reports {
                 csv.enabled false
