@@ -11,7 +11,7 @@ buildscript {
 
 plugins {
     // …
-    id "com.gradle.enterprise" version "3.4"
+    id "com.gradle.enterprise" version "$gradleBuildScanVersion"
 }
 
 rootProject.name='MercadoLibre Mobile Gradle Plugin'
