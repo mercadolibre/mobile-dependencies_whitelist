@@ -14,5 +14,6 @@ plugins {
     id "com.gradle.enterprise" version "3.4"
 }
 
-apply plugin: 'mercadolibre.mobile'
+rootProject.name='MercadoLibre Mobile Gradle Plugin'
 include ':base'
+apply plugin: 'mercadolibre.mobile'
