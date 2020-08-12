@@ -1639,6 +1639,24 @@
             }
         },
         {
+            "name": "point",
+            "iOS": {
+                "key": "PointFlowEngine"
+            },
+            "Android": {
+                "key": ""
+            }
+        },
+        {
+            "name": "point",
+            "iOS": {
+                "key": "PointUI"
+            },
+            "Android": {
+                "key": ""
+            }
+        },
+        {
             "name": "post_purchase",
             "iOS": {
                 "key": "MLPostPurchase"
