@@ -1029,6 +1029,15 @@
         {
             "name": "instore",
             "iOS": {
+                "key": "InStore-Reviews"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.instore.reviews"
+            }
+        },
+        {
+            "name": "instore",
+            "iOS": {
                 "key": "InStore"
             },
             "Android": {
