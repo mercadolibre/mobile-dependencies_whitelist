@@ -18,7 +18,7 @@
     },
     {
       "name": "Charts",
-      "version": "3.2.2"
+      "version": "3.4.0"
     },
     {
       "name": "DiscountTouchpoint",
@@ -145,6 +145,14 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "name": "MeliChart",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLDashboardComponent",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
       "name": "MLClassifiedsDynamicFlow",
       "version": "^~>\\s?1.[0-9]+$"
     },
@@ -182,7 +190,7 @@
     },
     {
       "name": "MLIgnite",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLImagePicker",
@@ -191,6 +199,10 @@
     {
       "name": "MLLocalStorage",
       "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "StaticResources",
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLLogin",
@@ -287,11 +299,20 @@
     },
     {
       "name": "MLRemedy",
-      "version": "^~>\\s?2.[0-9]+"
+      "version": "^~>\\s?3.[0-9]+"
+    },
+    {
+      "name": "MLUserBlocker",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "expires": "2020-8-01",
+      "name": "MLRemedies",
+      "version": "^~>\\s?1.[0-9]+"
     },
     {
       "name": "MLRemedies",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "MLRuleEngine",
@@ -431,7 +452,7 @@
     },
     {
       "name": "lottie-ios",
-      "version": "2.0.6|2.5.0"
+      "version": "2.0.6|2.5.0|^~>\\s?2.0$"
     },
     {
       "name": "MLFluxClient",
@@ -470,6 +491,10 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "MPAppRater",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
       "name": "MLNavigation",
       "version": "^~>\\s?1.[0-9]+$"
     },
@@ -502,13 +527,13 @@
       "version": "^~>\\s?1.[0-9]+"
     },
     {
-      "expires": "2020-3-13",
+      "expires": "2020-5-15",
       "name": "AndesUI",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "AndesUI",
-      "version": "^~>\\s?2.[0-9]+"
+      "version": "^~>\\s?3.[0-9]+"
     },
     {
       "name": "MLLoyalDM",
@@ -541,6 +566,26 @@
     {
       "name": "CardsEngagement/Feedback",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "CardsComponents",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLTFSCommons",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "PointFlowEngine",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "PointUI",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "GarexGpage",
+      "version": "^~>\\s?0.[0-9]+$"
     }
   ]
 }
