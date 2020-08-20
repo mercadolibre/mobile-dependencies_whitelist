@@ -27,24 +27,22 @@ class ListProjectsModule implements Module {
     @Override
     void configure(final Project project) {
         project.tasks.register(LIST_PROJECTS_TASK_NAME) { Task it ->
-            it.configure {
-                setDescription(LIST_PROJECTS_TASK_DESCRIPTION)
-                doLast {
-                    println(BEGINNING_TOKEN)
-                    try {
-                        switch (AndroidProjectTypes.valueOf((project.property(TYPE_PROPERTY_NAME) as String).toUpperCase())) {
-                            case AndroidProjectTypes.APPLICATION:
-                                printSubprojectsNameByType(project, ANDROID_APPLICATION_PLUGIN)
-                                break
-                            case AndroidProjectTypes.LIBRARY:
-                                printSubprojectsNameByType(project, ANDROID_LIBRARY_PLUGIN)
-                                break
-                        }
-                    } catch (final MissingPropertyException ignored) {
-                        project.subprojects.forEach { println(it.name) }
-                    } catch (final IllegalArgumentException ignored) {
-                        throw new GradleException(TYPE_NOT_RECOGNISED_MESSAGE)
+            setDescription(LIST_PROJECTS_TASK_DESCRIPTION)
+            doLast {
+                println(BEGINNING_TOKEN)
+                try {
+                    switch (AndroidProjectTypes.valueOf((project.property(TYPE_PROPERTY_NAME) as String).toUpperCase())) {
+                        case AndroidProjectTypes.APPLICATION:
+                            printSubprojectsNameByType(project, ANDROID_APPLICATION_PLUGIN)
+                            break
+                        case AndroidProjectTypes.LIBRARY:
+                            printSubprojectsNameByType(project, ANDROID_LIBRARY_PLUGIN)
+                            break
                     }
+                } catch (final MissingPropertyException ignored) {
+                    project.subprojects.forEach { println(it.name) }
+                } catch (final IllegalArgumentException ignored) {
+                    throw new GradleException(TYPE_NOT_RECOGNISED_MESSAGE)
                 }
             }
         }
