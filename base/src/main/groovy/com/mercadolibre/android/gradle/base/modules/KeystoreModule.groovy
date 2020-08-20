@@ -2,6 +2,7 @@ package com.mercadolibre.android.gradle.base.modules
 
 import org.gradle.api.Project
 import org.gradle.api.Task
+import org.gradle.api.tasks.OutputDirectory
 import org.gradle.api.tasks.TaskProvider
 
 /**
@@ -30,9 +31,11 @@ class KeystoreModule implements Module {
 
         // Define a task to unpack the keystore were we will place it
         final TaskProvider<Task> unpackKeystoreTask = project.tasks.register("unpackDebugKeystore")
+
         unpackKeystoreTask.configure {
             group = 'keystore'
             description = 'Unpack the debug keystore into the build directory of the project'
+            it.outputs.file keystore
             doLast {
                 // Create the directory
                 directory.mkdirs()

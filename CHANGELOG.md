@@ -1,5 +1,19 @@
-# 8.1.0
+# 8.4.0
+## Arreglado
+- Se agrega lint checkDependencies para los application modules, asi podemos tener un report mejor de lint. ej UnusedResources
 
+# 8.3.0
+- Fix shadowing de la variable de instancia
+
+# 8.2.0
+## Arreglado
+- Fix task unpackKeystoreTask. Se agrega output para poder aprovechar incremental builds: Más [info](https://blog.gradle.org/introducing-incremental-build-support)
+
+# 8.1.1
+## Arreglado
+- Workaround to 'No classes configured for SpotBugs analysis'
+
+# 8.1.0
 ## Arreglado
 - Stop being eager about task configuration
 

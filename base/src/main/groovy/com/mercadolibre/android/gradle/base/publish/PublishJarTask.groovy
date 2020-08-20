@@ -57,13 +57,13 @@ abstract class PublishJarTask extends PublishTask {
              * Includes
              */
             def sourceDirs = variant.allSource
-            String taskName = "${variant.name}Javadoc"
+            String taskNameJavaDoc = "${variant.name}Javadoc"
             TaskProvider<Javadoc> javadoc
 
-            if (project.tasks.names.contains(taskName)) {
-                javadoc = project.tasks.named(taskName)
+            if (project.tasks.names.contains(taskNameJavaDoc)) {
+                javadoc = project.tasks.named(taskNameJavaDoc)
             } else {
-                javadoc = project.tasks.register(taskName, Javadoc)
+                javadoc = project.tasks.register(taskNameJavaDoc, Javadoc)
                 javadoc.configure {
                     description "Generates Javadoc for ${variant.name}."
                     group 'Documentation'
@@ -125,7 +125,7 @@ abstract class PublishJarTask extends PublishTask {
                     PomUtils.composeDynamicDependencies(project, xmlProvider)
 
                     project.file("${project.buildDir}/publications/${taskName}/pom-default.xml")
-                            .write(xmlProvider.asString().toString())
+                        .write(xmlProvider.asString().toString())
                 }
             }
 
