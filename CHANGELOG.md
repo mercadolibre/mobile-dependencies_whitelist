@@ -1,3 +1,7 @@
+# 8.5.0
+## Agregado
+- Se agrega filtro por tipo de projecto para la task `listProjects`
+
 # 8.4.0
 ## Arreglado
 - Se agrega lint checkDependencies para los application modules, asi podemos tener un report mejor de lint. ej UnusedResources
