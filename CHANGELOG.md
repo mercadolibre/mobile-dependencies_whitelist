@@ -1,3 +1,7 @@
+# 8.5.1
+## Arreglado
+- Se hace re-deploy del plugin porque estabamos deployando con un Java mas nuevo del que necesitabamos
+
 # 8.5.0
 ## Agregado
 - Se agrega filtro por tipo de projecto para la task `listProjects`

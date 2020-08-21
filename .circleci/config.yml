@@ -6,7 +6,7 @@
 default: &defaultJob
   # The docker image all jobs that inherit from us will have (Which should be all of them)
   docker:
-      - image: circleci/android:api-28
+      - image: circleci/android@sha256:061e2535826cc3fe4c4a440e716bf06c36c80401ee635c339c6803b3e427ebb3
 ##
 # We define a job for building. This job will be in charge of running:
 # - Install mobile-cd build automation: 'kelli'
