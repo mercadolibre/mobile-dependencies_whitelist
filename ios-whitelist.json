@@ -85,6 +85,10 @@
       "version": "^~>\\s?1.[0-9]+"
     },
     {
+      "name": "InsurtechFloxComponents",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
       "name": "JRSwizzle",
       "version": "1.1.0"
     },
@@ -399,6 +403,10 @@
       "version": "^~>\\s?3+.[0-9]+$"
     },
     {
+      "name": "PINCache",
+      "version": "2.3"
+    },
+    {
       "name": "PINRemoteImage",
       "version": "2.1.4"
     },
@@ -590,6 +598,10 @@
     {
       "name": "GarexGpage",
       "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "CardsAcquisition",
+      "version": "^~>\\s?1.[0-9]+$"
     }
   ]
 }

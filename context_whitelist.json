@@ -1029,7 +1029,7 @@
         {
             "name": "instore",
             "iOS": {
-                "key": "InStore-Reviews"
+                "key": "InStoreReviews"
             },
             "Android": {
                 "key": "com.mercadolibre.android.instore.reviews"
@@ -1051,6 +1051,24 @@
             },
             "Android": {
                 "key": "com.mercadopago.instore.miniapps"
+            }
+        },
+        {
+            "name": "instore",
+            "iOS": {
+                "key": "InStoreUIComponents"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.instore_ui_components"
+            }
+        },
+        {
+            "name": "insurtech",
+            "iOS": {
+                "key": "InsurtechFloxComponents"
+            },
+            "Android": {
+                "key": ""
             }
         },
         {
