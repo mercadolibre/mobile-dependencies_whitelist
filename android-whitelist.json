@@ -1418,6 +1418,11 @@
     {
       "group": "com\\.mercadolibre\\.android\\.cardsengagement",
       "version": "1\\.\\+|2\\.\\+|3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.navigation",
+      "name": "menu",
+      "version": "3\\.\\+"
     }
   ]
 }
