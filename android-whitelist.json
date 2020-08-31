@@ -504,6 +504,10 @@
       "version": "0\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.credits\\.behaviour",
+      "version": "2\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.cross_app_links",
       "name": "core",
       "version": "1\\.\\+"
@@ -1142,6 +1146,11 @@
       "version": "1\\.+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.mlinappupdates",
+      "name": "ml-in-app-updates",
+      "version": "1\\.+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.scanner",
       "name": "scanner",
       "version": "1\\.\\+"
@@ -1392,6 +1401,10 @@
       "group": "com\\.smartlook\\.recording",
       "name": "app",
       "version": "1\\.5\\.2\\-native"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.configuration\\.provider",
+      "version": "11\\.\\+|12\\.\\+"
     }
   ]
 }
