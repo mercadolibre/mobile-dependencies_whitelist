@@ -320,9 +320,15 @@
       "version": "9\\.\\+"
     },
     {
+      "expires": "2020-10-01",
       "group": "com\\.mercadolibre\\.android",
       "name": "melidata-sdk",
-      "version": "4\\.\\+"
+      "version": "4\\.\\+|5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "melidata-sdk",
+      "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
