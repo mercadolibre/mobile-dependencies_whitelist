@@ -12,7 +12,6 @@
       "version": "mercadolibre-6\\.0\\.\\+"
     },
     {
-      "expires": "2018-09-01",
       "group": "com\\.squareup\\.picasso",
       "name": "picasso",
       "version": "2\\.5\\.2"
@@ -1405,6 +1404,10 @@
     {
       "group": "com\\.mercadolibre\\.android\\.configuration\\.provider",
       "version": "11\\.\\+|12\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cardsengagement",
+      "version": "1\\.+"
     }
   ]
 }
