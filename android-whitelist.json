@@ -1147,7 +1147,7 @@
     {
       "group": "com\\.mercadolibre\\.android\\.mlinappupdates",
       "name": "ml-in-app-updates",
-      "version": "1\\.+"
+      "version": "1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.scanner",
@@ -1407,7 +1407,7 @@
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cardsengagement",
-      "version": "1\\.+"
+      "version": "1\\.\\+|2\\.\\+|3\\.\\+"
     }
   ]
 }
