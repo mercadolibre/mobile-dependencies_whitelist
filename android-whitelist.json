@@ -1032,33 +1032,17 @@
     {
       "group": "com\\.mercadolibre\\.android\\.userbiometrics",
       "name": "core",
-      "version": "1\\.\\+"
-    },
-    {
-      "expires": "2020-02-01",
-      "group": "com\\.mercadolibre\\.android\\.security",
-      "name": "security_ui",
-      "version": "mercadopago-1\\.\\+"
+      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.security",
       "name": "security_ui",
-      "version": "mercadopago-2\\.\\+"
+      "version": "mercadopago-3\\.\\+|mercadolibre-3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.security",
       "name": "security_preferences",
-      "version": "mercadopago-1\\.\\+"
-    },
-    {
-      "group": "com\\.mercadolibre\\.android\\.security",
-      "name": "security_preferences",
-      "version": "mercadopago-2\\.\\+"
-    },
-    {
-      "group": "com\\.mercadolibre\\.android\\.security",
-      "name": "security_preferences",
-      "version": "mercadolibre-2\\.\\+"
+      "version": "mercadopago-2\\.\\+|mercadolibre-2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.security_two_fa",
