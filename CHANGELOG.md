@@ -1,3 +1,7 @@
+# 8.5.2
+## Arreglado
+- Se cambio la evaluacion de la regex de dependencias de la whitelist
+
 # 8.5.1
 ## Arreglado
 - Se hace re-deploy del plugin porque estabamos deployando con un Java mas nuevo del que necesitabamos

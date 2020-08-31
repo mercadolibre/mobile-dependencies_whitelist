@@ -133,7 +133,7 @@ class LibraryWhitelistedDependenciesLint implements Lint {
      */
     Status dependencyIsInWhitelist(String dependency) {
         for (Dependency whitelistDep : WHITELIST_DEPENDENCIES) {
-            if (dependency =~ /${whitelistDep.group}:${whitelistDep.name}:${whitelistDep.version}/) {
+            if (dependency =~ /${whitelistDep.group}:${whitelistDep.name}:(${whitelistDep.version})/) {
                 if (System.currentTimeMillis() < whitelistDep.expires) {
                     return Status.AVAILABLE
                 } else {
