@@ -1054,6 +1054,15 @@
             }
         },
         {
+            "name": "instore",
+            "iOS": {
+                "key": "InStoreUIComponents"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.instore_ui_components"
+            }
+        },
+        {
             "name": "insurtech",
             "iOS": {
                 "key": "InsurtechFloxComponents"
@@ -2293,6 +2302,15 @@
             },
             "Android": {
                 "key": ""
+            }
+        },
+        {
+            "name": "digital_accounts_components",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
+                "key": "com.mercadopago.android.digital_accounts_components"
             }
         }
     ]
