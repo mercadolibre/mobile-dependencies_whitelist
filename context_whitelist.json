@@ -1,6 +1,15 @@
 {
     "context": [
         {
+            "name": "pp_magnes_wrapper",
+            "iOS": {
+                "key": "PPMagnesWrapper"
+            },
+            "Android": {
+                "key": ""
+            }
+        },
+        {
             "name": "ab_user_onboarding",
             "iOS": {
                 "key": "ABUserOnboarding"
