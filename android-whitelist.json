@@ -550,7 +550,7 @@
     },
     {
       "group": "com\\.mercadolibre\\.android\\.commons",
-      "version": "15\\.\\+"
+      "version": "14\\.\\+|15\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.remote\\.configuration",
@@ -837,7 +837,7 @@
     {
       "group": "com\\.mercadopago\\.android\\.congrats",
       "name": "congrats",
-      "version": "2\\.\\+"
+      "version": "2\\.\\+|3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.static_resources",
@@ -1162,7 +1162,7 @@
     {
       "group": "com\\.mercadolibre\\.android\\.scanner",
       "name": "scanner",
-      "version": "1\\.\\+"
+      "version": "mercadolibre-1\\.\\+|mercadopago-1\\.\\+"
     },
     {
       "expires": "2020-07-17",
@@ -1427,7 +1427,7 @@
     {
       "group": "com\\.mercadolibre\\.android\\.navigation",
       "name": "menu",
-      "version": "3\\.\\+"
+      "version": "mercadolibre-3\\.\\+|mercadopago-3\\.\\+"
     }
   ]
 }
