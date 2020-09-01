@@ -154,7 +154,7 @@
     {
       "group": "com\\.facebook\\.fresco",
       "name": "fresco",
-      "version": "1\\.13\\.0|2\\.1\\.0"
+      "version": "1\\.13\\.0|2\\.2\\.0"
     },
     {
       "group": "com\\.facebook\\.fresco",
@@ -628,11 +628,16 @@
     {
       "group": "com\\.mercadolibre\\.android\\.matt",
       "name": "core",
-      "version": "mercadolibre-2\\.\\+"
+      "version": "mercadolibre-2\\.\\+|mercadopago-2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.merchengine",
       "version": "3\\.\\+|mercadopago-3\\.\\+|mercadolibre-3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.metrics",
+      "name": "metrics-extension-default-traces",
+      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.metrics",
