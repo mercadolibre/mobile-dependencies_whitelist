@@ -1295,7 +1295,12 @@
     {
       "group": "androidx\\.lifecycle",
       "name": "lifecycle-extensions",
-      "version": "2\\.0\\.0"
+      "version": "2\\.2\\.0"
+    },
+    {
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-viewmodel",
+      "version": "2\\.2\\.0"
     },
     {
       "group": "androidx\\.work",
