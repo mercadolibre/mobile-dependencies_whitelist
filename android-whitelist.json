@@ -708,6 +708,10 @@
       "version": "6\\.\\+|7\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.remedies",
+      "version": ":mercadopago-3\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.comparator",
       "version": "3\\.\\+"
     },
@@ -874,7 +878,7 @@
     {
       "group": "com\\.mercadopago\\.android\\.px",
       "name": "addons",
-      "version": "4\\.\\+"
+      "version": "4\\.\\55\\.\\+|4\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.sdk",
@@ -1081,7 +1085,7 @@
     {
       "group": "com\\.mercadolibre\\.android\\.loyalty",
       "name": "drawer",
-      "version": "6\\.\\+"
+      "version": "8\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.loyalty\\.datamanager",
