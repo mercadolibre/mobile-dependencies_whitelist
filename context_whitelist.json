@@ -2321,6 +2321,24 @@
             "Android": {
                 "key": "com.mercadopago.android.digital_accounts_components"
             }
+        },
+        {
+            "name": "disbursements",
+            "iOS": {
+                "key": "Disbursments"
+            },
+            "Android": {
+                "key": "com.mercadopago.android.disbursments"
+            }
+        },
+        {
+            "name": "cashout",
+            "iOS": {
+                "key": "Cashout"
+            },
+            "Android": {
+                "key": "com.mercadopago.android.cashout"
+            }
         }
     ]
 }
