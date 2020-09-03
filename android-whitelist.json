@@ -1424,6 +1424,11 @@
       "group": "com\\.mercadolibre\\.android\\.navigation",
       "name": "menu",
       "version": "mercadolibre-3\\.\\+|mercadopago-3\\.\\+"
+    },
+    {
+      "group": "com\\.squareup\\.leakcanary",
+      "name": "leakcanary-android",
+      "version": "1\\.6\\.3|2\\.2"
     }
   ]
 }
