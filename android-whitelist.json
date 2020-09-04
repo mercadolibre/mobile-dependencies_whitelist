@@ -129,7 +129,13 @@
     {
       "group": "com\\.bugsnag",
       "name": "bugsnag-android",
-      "version": "4\\.17\\.2|4\\.22\\.3"
+      "version": "4\\.17\\.2",
+      "expires": "2020-10-04"
+    },
+    {
+      "group": "com\\.bugsnag",
+      "name": "bugsnag-android",
+      "version": "4\\.22\\.3"
     },
     {
       "group": "com\\.datami",
@@ -1434,7 +1440,7 @@
       "group": "com\\.bugsnag",
       "name": "bugsnag-android-core",
       "version": "4\\.17\\.2",
-      "expires": "2020-12-01",
+      "expires": "2020-10-04"
     },
     {
       "group": "com\\.bugsnag",
