@@ -1,21 +1,11 @@
 package com.mercadolibre.android.gradle.base
 
-import com.mercadolibre.android.gradle.base.modules.AndroidJacocoModule
-import com.mercadolibre.android.gradle.base.modules.AndroidLibraryPublishableModule
-import com.mercadolibre.android.gradle.base.modules.AndroidLibraryTestableModule
+import com.mercadolibre.android.gradle.base.modules.*
 import com.mercadolibre.android.gradle.base.modules.ApplicationLintOptionsModule
-import com.mercadolibre.android.gradle.base.modules.BuildScanModule
-import com.mercadolibre.android.gradle.base.modules.JavaJacocoModule
-import com.mercadolibre.android.gradle.base.modules.JavaPublishableModule
-import com.mercadolibre.android.gradle.base.modules.KeystoreModule
 import com.mercadolibre.android.gradle.base.modules.KotlinCheckModule
-import com.mercadolibre.android.gradle.base.modules.LintableModule
-import com.mercadolibre.android.gradle.base.modules.LockableModule
-import com.mercadolibre.android.gradle.base.modules.PackageModule
 import com.mercadolibre.android.gradle.base.utils.VersionContainer
 import org.gradle.api.Plugin
 import org.gradle.api.Project
-import org.gradle.api.Task
 import org.gradle.api.initialization.Settings
 import org.gradle.api.plugins.JavaPlugin
 /**
@@ -28,7 +18,6 @@ class BasePlugin implements Plugin<Object> {
     public static final String KOTLIN_ANDROID_PLUGIN = 'kotlin-android'
 
     private static final String BINTRAY_UPLOAD_TASK_NAME = "bintrayUpload"
-    private static final String LIST_PROJECTS_TASK_NAME = "listProjects"
 
     private static final ANDROID_LIBRARY_MODULES = { ->
         return [
@@ -56,7 +45,8 @@ class BasePlugin implements Plugin<Object> {
 
     private static final PROJECT_MODULES = { ->
         return [
-            new BuildScanModule()
+            new BuildScanModule(),
+            new ListProjectsModule()
         ]
     }
 
@@ -166,15 +156,6 @@ class BasePlugin implements Plugin<Object> {
 
         project.gradle.taskGraph.whenReady { taskGraph ->
             doesTaskGraphHasPublishableTasks = checkIfTaskGraphHasPublishableTasks(project.gradle.taskGraph)
-        }
-
-        project.tasks.register(LIST_PROJECTS_TASK_NAME) { Task it ->
-            it.configure {
-                setDescription('List all subprojects in this project')
-                doLast {
-                    project.subprojects.forEach { println(it.name) }
-                }
-            }
         }
 
         // We ensure all artifacts are published

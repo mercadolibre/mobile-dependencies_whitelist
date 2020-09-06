@@ -1,6 +1,18 @@
 # 9.0.0
 - Migracion a Gradle 6. Ahora gradle entreprise plugin tiene que ser aplicado en settings para proyectos con gradle 6.
 
+# 8.5.2
+## Arreglado
+- Se cambio la evaluacion de la regex de dependencias de la whitelist
+
+# 8.5.1
+## Arreglado
+- Se hace re-deploy del plugin porque estabamos deployando con un Java mas nuevo del que necesitabamos
+
+# 8.5.0
+## Agregado
+- Se agrega filtro por tipo de projecto para la task `listProjects`
+
 # 8.4.0
 ## Arreglado
 - Se agrega lint checkDependencies para los application modules, asi podemos tener un report mejor de lint. ej UnusedResources
