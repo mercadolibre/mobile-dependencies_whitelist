@@ -242,6 +242,14 @@ class BasePlugin implements Plugin<Project> {
                     }
                 }
 
+                // Smartlook/Norway
+                maven {
+                    url "https://sdk.smartlook.com/android/release"
+                    content {
+                        includeGroup 'com.smartlook.recording'
+                    }
+                }
+
                 // only used for github repositories
                 maven {
                     url 'https://jitpack.io'
