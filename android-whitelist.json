@@ -1434,6 +1434,11 @@
       "group": "com\\.bugsnag",
       "name": "bugsnag-android-core",
       "version": "4\\.17\\.2|4\\.22\\.3"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "notificationcenter",
+      "version": "mercadolibre-5\\.\\+|mercadopago-5\\.\\+"
     }
   ]
 }
