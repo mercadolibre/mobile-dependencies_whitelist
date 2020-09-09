@@ -1588,6 +1588,11 @@
       "group": "com\\.mercadolibre\\.android\\.liveness_detection",
       "name": "facetec",
       "version": "sdk-9\\.+"
+    },
+    {
+      "group": "com\\.madgag\\.spongycastle",
+      "name": "pkix",
+      "version": "1\\.54\\.0\\.0"
     }
   ]
 }
