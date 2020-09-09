@@ -900,6 +900,11 @@
       "version": "3\\.11\\.0|3\\.12\\.10"
     },
     {
+      "group": "com\\.squareup\\.okhttp3",
+      "name": "logging-interceptor",
+      "version": "3\\.11\\.0|3\\.12\\.10"
+    },
+    {
       "group": "com\\.squareup\\.retrofit2",
       "name": "adapter-rxjava",
       "version": "2\\.6\\.4"
