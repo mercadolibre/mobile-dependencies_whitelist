@@ -1449,6 +1449,11 @@
       "group": "com\\.mercadolibre\\.android",
       "name": "notificationcenter",
       "version": "mercadolibre-(4\\.\\+|5\\.\\+)|mercadopago-(4\\.\\+|5\\.\\+)"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.devices_sdk",
+      "name": "devices",
+      "version": "1\\.\\+"
     }
   ]
 }

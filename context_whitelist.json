@@ -2339,6 +2339,15 @@
             "Android": {
                 "key": "com.mercadopago.android.cashout"
             }
+        },
+        {
+            "name": "devices",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.devices_sdk"
+            }
         }
     ]
 }
