@@ -598,6 +598,11 @@
       "version": "1\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.instore",
+      "name": "instore",
+      "version": "mercadolibre-7\\.\\+|mercadopago-7\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.local\\.storage",
       "name": "core",
       "version": "1\\.\\+"
