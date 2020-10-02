@@ -1,6 +1,15 @@
 {
     "context": [
         {
+            "name": "pp_magnes_wrapper",
+            "iOS": {
+                "key": "PPMagnesWrapper"
+            },
+            "Android": {
+                "key": ""
+            }
+        },
+        {
             "name": "ab_user_onboarding",
             "iOS": {
                 "key": "ABUserOnboarding"
@@ -298,42 +307,6 @@
             }
         },
         {
-            "name": "collaborators",
-            "iOS": {
-                "key": "MLCollaborator"
-            },
-            "Android": {
-                "key": "com.mercadolibre.android.collaborators"
-            }
-        },
-        {
-            "name": "collaborators",
-            "iOS": {
-                "key": "MLCollaborators"
-            },
-            "Android": {
-                "key": "com.mercadolibre.android.collaborators"
-            }
-        },
-        {
-            "name": "collaborators",
-            "iOS": {
-                "key": "MLC"
-            },
-            "Android": {
-                "key": "com.mercadolibre.android.collaborators"
-            }
-        },
-        {
-            "name": "collaborators_ui",
-            "iOS": {
-                "key": "CollaboratorsUI"
-            },
-            "Android": {
-                "key": "com.mercadolibre.android.collaboratorsui"
-            }
-        },
-        {
             "name": "commons",
             "iOS": {
                 "key": "MLCommons"
@@ -628,6 +601,15 @@
             },
             "Android": {
                 "key": "com.mercadopago.android.congrats"
+            }
+        },
+        {
+            "name": "congrats",
+            "iOS": {
+                "key": "StaticResources"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.static_resources"
             }
         },
         {
@@ -1056,6 +1038,15 @@
         {
             "name": "instore",
             "iOS": {
+                "key": "InStoreReviews"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.instore.reviews"
+            }
+        },
+        {
+            "name": "instore",
+            "iOS": {
                 "key": "InStore"
             },
             "Android": {
@@ -1069,6 +1060,24 @@
             },
             "Android": {
                 "key": "com.mercadopago.instore.miniapps"
+            }
+        },
+        {
+            "name": "instore",
+            "iOS": {
+                "key": "InStoreUIComponents"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.instore_ui_components"
+            }
+        },
+        {
+            "name": "insurtech",
+            "iOS": {
+                "key": "InsurtechFloxComponents"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.insu_flox_components"
             }
         },
         {
@@ -1387,6 +1396,15 @@
             }
         },
         {
+            "name": "profile_picture",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.mydata.profile.picture"
+            }
+        },
+        {
             "name": "myml_orders",
             "iOS": {
                 "key": "MLVOP"
@@ -1654,6 +1672,24 @@
             },
             "Android": {
                 "key": "com.mercadopago.point"
+            }
+        },
+        {
+            "name": "point",
+            "iOS": {
+                "key": "PointFlowEngine"
+            },
+            "Android": {
+                "key": ""
+            }
+        },
+        {
+            "name": "point",
+            "iOS": {
+                "key": "PointUI"
+            },
+            "Android": {
+                "key": ""
             }
         },
         {
@@ -2001,15 +2037,6 @@
         {
             "name": "tools_for_sellers",
             "iOS": {
-                "key": "MLDashboard"
-            },
-            "Android": {
-                "key": "com.mercadolibre.android.charts"
-            }
-        },
-        {
-            "name": "tools_for_sellers",
-            "iOS": {
                 "key": "MeliChart"
             },
             "Android": {
@@ -2019,10 +2046,19 @@
         {
             "name": "tools_for_sellers",
             "iOS": {
+                "key": "MLDashboardComponent"
+            },
+            "Android": {
+                "key": ""
+            }
+        },
+        {
+            "name": "tools_for_sellers",
+            "iOS": {
                 "key": "MLCharts"
             },
             "Android": {
-                "key": "com.mercadolibre.android.mlcharts"
+                "key": ""
             }
         },
         {
@@ -2041,6 +2077,15 @@
             },
             "Android": {
                 "key": "com.mercadolibre.android.profileengine"
+            }
+        },
+        {
+            "name": "tools_for_sellers",
+            "iOS": {
+                "key": "MLCollaborators"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.collaborators"
             }
         },
         {
@@ -2260,12 +2305,48 @@
             }
         },
         {
-            "name": "tfs_commons",
+            "name": "tools_for_sellers",
             "iOS": {
                 "key": "MLTFSCommons"
             },
             "Android": {
                 "key": ""
+            }
+        },
+        {
+            "name": "digital_accounts_components",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
+                "key": "com.mercadopago.android.digital_accounts_components"
+            }
+        },
+        {
+            "name": "disbursements",
+            "iOS": {
+                "key": "Disbursments"
+            },
+            "Android": {
+                "key": "com.mercadopago.android.disbursments"
+            }
+        },
+        {
+            "name": "cashout",
+            "iOS": {
+                "key": "Cashout"
+            },
+            "Android": {
+                "key": "com.mercadopago.android.cashout"
+            }
+        },
+        {
+            "name": "devices",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.devices_sdk"
             }
         }
     ]

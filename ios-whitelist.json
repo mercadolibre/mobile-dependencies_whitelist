@@ -1,8 +1,12 @@
 {
   "whitelist": [
     {
+      "name": "PPMagnesWrapper",
+      "version": "^~>\\s?0.[0-9]+"
+    },
+    {
       "name": "Adjust",
-      "version": "4.18.([1-9][0-9]*)$"
+      "version": "(4.18.([1-9][0-9]*)|4.23.([0-9]+))$"
     },
     {
       "name": "AmountLabel",
@@ -42,23 +46,23 @@
     },
     {
       "name": "Firebase/Core",
-      "version": "^~>\\s?(4.13.0|6.9.0)$"
+      "version": "^~>\\s?(6.31.1|6.9.0)$"
     },
     {
       "name": "Firebase/DynamicLinks",
-      "version": "^~>\\s?(4.13.0|6.9.0)$"
+      "version": "^~>\\s?(6.31.1|6.9.0)$"
     },
     {
       "name": "Firebase/Analytics",
-      "version": "^~>\\s?(4.13.0|6.9.0)$"
+      "version": "^~>\\s?(6.31.1|6.9.0)$"
     },
     {
       "name": "Firebase/MLVision",
-      "version": "6.9.0"
+      "version": "^(6.31.1|6.9.0)$"
     },
     {
       "name": "Firebase/MLVisionFaceModel",
-      "version": "6.9.0"
+      "version": "^(6.31.1|6.9.0)$"
     },
     {
       "name": "Flox",
@@ -79,6 +83,18 @@
     {
       "name": "InStoreHomeSections",
       "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "InstoreReviews",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "InsurtechFloxComponents",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "InStoreUIComponents",
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "JRSwizzle",
@@ -134,7 +150,7 @@
     },
     {
       "name": "MLCardDrawer",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
     },
     {
       "name": "MLCart",
@@ -142,6 +158,14 @@
     },
     {
       "name": "MLCharts",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MeliChart",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLDashboardComponent",
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
@@ -191,6 +215,10 @@
     {
       "name": "MLLocalStorage",
       "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "StaticResources",
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLLogin",
@@ -287,7 +315,7 @@
     },
     {
       "name": "MLRemedy",
-      "version": "^~>\\s?2.[0-9]+"
+      "version": "^~>\\s?3.[0-9]+"
     },
     {
       "name": "MLUserBlocker",
@@ -381,6 +409,10 @@
     {
       "name": "OperationDetail/RealtimeActivities",
       "version": "^~>\\s?3+.[0-9]+$"
+    },
+    {
+      "name": "PINCache",
+      "version": "2.3"
     },
     {
       "name": "PINRemoteImage",
@@ -562,6 +594,22 @@
     {
       "name": "MLTFSCommons",
       "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "PointFlowEngine",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "PointUI",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "GarexGpage",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "CardsAcquisition",
+      "version": "^~>\\s?1.[0-9]+$"
     }
   ]
 }
