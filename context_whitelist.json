@@ -1074,6 +1074,15 @@
         {
             "name": "insurtech",
             "iOS": {
+                "key": "InsuranceCheckMobile"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.insurance_check_mobile"
+            }
+        },
+        {
+            "name": "insurtech",
+            "iOS": {
                 "key": "InsurtechFloxComponents"
             },
             "Android": {
