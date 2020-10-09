@@ -487,6 +487,16 @@
       "version": "4\\.\\+|5\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.purchases",
+      "name": "purchases",
+      "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.purchases",
+      "name": "experimentals",
+      "version": "1\\.\\+"
+    },
+    {
       "expires": "2020-10-31",
       "group": "com\\.mercadolibre\\.android\\.credits\\.ui_components",
       "version": "0\\.\\+"
