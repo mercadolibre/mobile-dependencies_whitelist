@@ -2125,6 +2125,15 @@
             }
         },
         {
+            "name": "tools_for_sellers",
+            "iOS": {
+                "key": "PricingUI"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.pricing_ui"
+            }
+        },
+        {
             "name": "ui",
             "iOS": {
                 "key": "MLUI"
