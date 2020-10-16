@@ -2125,6 +2125,15 @@
             }
         },
         {
+            "name": "tools_for_sellers",
+            "iOS": {
+                "key": "BusinessConfigUi"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.business_config_ui"
+            }
+        },
+        {
             "name": "ui",
             "iOS": {
                 "key": "MLUI"
