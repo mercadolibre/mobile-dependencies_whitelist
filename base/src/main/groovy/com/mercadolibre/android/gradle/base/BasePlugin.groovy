@@ -1,14 +1,17 @@
 package com.mercadolibre.android.gradle.base
 
 import com.mercadolibre.android.gradle.base.modules.*
+import com.mercadolibre.android.gradle.base.modules.ApplicationLintOptionsModule
+import com.mercadolibre.android.gradle.base.modules.KotlinCheckModule
 import com.mercadolibre.android.gradle.base.utils.VersionContainer
 import org.gradle.api.Plugin
 import org.gradle.api.Project
+import org.gradle.api.initialization.Settings
 import org.gradle.api.plugins.JavaPlugin
 /**
  * Gradle base plugin for MercadoLibre Android projects/modules.
  */
-class BasePlugin implements Plugin<Project> {
+class BasePlugin implements Plugin<Object> {
 
     public static final String ANDROID_LIBRARY_PLUGIN = 'com.android.library'
     public static final String ANDROID_APPLICATION_PLUGIN = 'com.android.application'
@@ -47,6 +50,12 @@ class BasePlugin implements Plugin<Project> {
         ]
     }
 
+    private static final SETTINGS_MODULES = {
+        return [
+            new BuildScanModule()
+        ]
+    }
+
     private static final KOTLIN_MODULES = { ->
         return [
             new KotlinCheckModule()
@@ -58,13 +67,44 @@ class BasePlugin implements Plugin<Project> {
      */
     private Project project
 
+    /**
+     * The Settings.
+     */
+    private Settings settings
+
     private boolean doesTaskGraphHasPublishableTasks = false
+
+    /**
+     * Method called by Gradle when applying this plugin.
+     * @param target the Gradle target which can be Gradle Settings o Gradle project
+     */
+    @Override
+    void apply(Object target) {
+        if (target instanceof Settings) {
+            apply((Settings) target);
+        }
+        else if (target instanceof Project) {
+            apply((Project) target);
+        }
+    }
+
+    /**
+     * Method called by Gradle when applying this plugin.
+     * @param settings the Settings project.
+     */
+    void apply(Settings settings) {
+        this.settings = settings
+
+        SETTINGS_MODULES().each {
+            module -> module.configure(settings)
+        }
+
+    }
 
     /**
      * Method called by Gradle when applying this plugin.
      * @param project the Gradle project.
      */
-    @Override
     void apply(Project project) {
         this.project = project
 
