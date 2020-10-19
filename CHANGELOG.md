@@ -1,6 +1,10 @@
 # 9.0.0
 - Migracion a Gradle 6. Ahora gradle entreprise plugin tiene que ser aplicado en settings para proyectos con gradle 6.
 
+# 8.6.0
+## Agregado
+- Se agrega un repositorio para resolver el SDK de Smartlook
+
 # 8.5.2
 ## Arreglado
 - Se cambio la evaluacion de la regex de dependencias de la whitelist
