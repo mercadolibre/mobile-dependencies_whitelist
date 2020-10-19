@@ -1891,6 +1891,15 @@
             }
         },
         {
+            "name": "security_options",
+            "iOS": {
+                "key": "SecurityOptions"
+            },
+            "Android": {
+                "key": ""
+            }
+        },
+        {
             "name": "sell",
             "iOS": {
                 "key": "MLSell"
