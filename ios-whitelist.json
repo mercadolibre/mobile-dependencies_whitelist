@@ -502,6 +502,10 @@
       "name": "MLBiometricSecurity",
       "version": "^~>\\s?0.[0-9]+$"
     },
+	{
+	  "name": "MobileDevicesSecurity",
+	  "version": "^~>\\s?0.[0-9]+$"
+	},
     {
       "name": "MLNotificationsHelpers",
       "version": "^~>\\s?1.[0-9]+$"

@@ -1890,6 +1890,15 @@
                 "key": "com.mercadolibre.android.userbiometric"
             }
         },
+		{
+			"name": "security",
+			"iOS": {
+				"key": "MobileDevicesSecurity"
+			},
+			"Android": {
+				"key": ""
+			}
+		},
         {
             "name": "sell",
             "iOS": {
