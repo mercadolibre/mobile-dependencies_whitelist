@@ -451,9 +451,15 @@
       "version": "10\\.\\+"
     },
     {
+      "expires": "2020-11-30",
       "group": "com\\.mercadolibre\\.android\\.biometrics",
       "name": "sdk",
       "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.biometrics",
+      "name": "sdk",
+      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.bookmarks",
