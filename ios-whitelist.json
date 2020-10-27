@@ -1,8 +1,12 @@
 {
   "whitelist": [
     {
+      "name": "PPMagnesWrapper",
+      "version": "^~>\\s?0.[0-9]+"
+    },
+    {
       "name": "Adjust",
-      "version": "4.18.([1-9][0-9]*)$"
+      "version": "(4.18.([1-9][0-9]*)|4.23.([0-9]+))$"
     },
     {
       "name": "AmountLabel",
@@ -18,7 +22,7 @@
     },
     {
       "name": "Charts",
-      "version": "3.2.2"
+      "version": "3.4.0"
     },
     {
       "name": "DiscountTouchpoint",
@@ -42,23 +46,23 @@
     },
     {
       "name": "Firebase/Core",
-      "version": "^~>\\s?(4.13.0|6.9.0)$"
+      "version": "^~>\\s?(6.31.1|6.9.0)$"
     },
     {
       "name": "Firebase/DynamicLinks",
-      "version": "^~>\\s?(4.13.0|6.9.0)$"
+      "version": "^~>\\s?(6.31.1|6.9.0)$"
     },
     {
       "name": "Firebase/Analytics",
-      "version": "^~>\\s?(4.13.0|6.9.0)$"
+      "version": "^~>\\s?(6.31.1|6.9.0)$"
     },
     {
       "name": "Firebase/MLVision",
-      "version": "6.9.0"
+      "version": "^(6.31.1|6.9.0)$"
     },
     {
       "name": "Firebase/MLVisionFaceModel",
-      "version": "6.9.0"
+      "version": "^(6.31.1|6.9.0)$"
     },
     {
       "name": "Flox",
@@ -79,6 +83,18 @@
     {
       "name": "InStoreHomeSections",
       "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "InstoreReviews",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "InsurtechFloxComponents",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "InStoreUIComponents",
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "JRSwizzle",
@@ -134,7 +150,7 @@
     },
     {
       "name": "MLCardDrawer",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
     },
     {
       "name": "MLCart",
@@ -145,11 +161,27 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "name": "MeliChart",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLDashboardComponent",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
       "name": "MLClassifiedsDynamicFlow",
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "MLClassiCredits",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "MLCollaborators",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLCollaboratorsV2",
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
@@ -178,7 +210,7 @@
     },
     {
       "name": "MLIgnite",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLImagePicker",
@@ -187,6 +219,10 @@
     {
       "name": "MLLocalStorage",
       "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "StaticResources",
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLLogin",
@@ -283,11 +319,20 @@
     },
     {
       "name": "MLRemedy",
-      "version": "^~>\\s?2.[0-9]+"
+      "version": "^~>\\s?3.[0-9]+"
+    },
+    {
+      "name": "MLUserBlocker",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "expires": "2020-8-01",
+      "name": "MLRemedies",
+      "version": "^~>\\s?1.[0-9]+"
     },
     {
       "name": "MLRemedies",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "MLRuleEngine",
@@ -370,6 +415,10 @@
       "version": "^~>\\s?3+.[0-9]+$"
     },
     {
+      "name": "PINCache",
+      "version": "2.3"
+    },
+    {
       "name": "PINRemoteImage",
       "version": "2.1.4"
     },
@@ -427,7 +476,7 @@
     },
     {
       "name": "lottie-ios",
-      "version": "2.0.6|2.5.0"
+      "version": "2.0.6|2.5.0|^~>\\s?2.0$"
     },
     {
       "name": "MLFluxClient",
@@ -466,6 +515,10 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "MPAppRater",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
       "name": "MLNavigation",
       "version": "^~>\\s?1.[0-9]+$"
     },
@@ -491,20 +544,20 @@
     },
     {
       "name": "AndesUIDraftModal",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "MLBFFloxComponent",
       "version": "^~>\\s?1.[0-9]+"
     },
     {
-      "expires": "2020-3-13",
+      "expires": "2020-5-15",
       "name": "AndesUI",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "AndesUI",
-      "version": "^~>\\s?2.[0-9]+"
+      "version": "^~>\\s?3.[0-9]+"
     },
     {
       "name": "MLLoyalDM",
@@ -513,6 +566,54 @@
     {
       "name": "MLLoyalUIComponents",
       "version": "^~>\\s?[1-2].[0-9]+"
+    },
+    {
+      "name": "CreditsUIComponents",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLCreditsCore",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MPSPPrepaid",
+      "version": "^~>\\s?1.+"
+    },
+    {
+      "name": "MLCrossAppLinks",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLPurchases/Integration",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "CardsEngagement/Feedback",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "CardsComponents",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLTFSCommons",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "PointFlowEngine",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "PointUI",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "GarexGpage",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "CardsAcquisition",
+      "version": "^~>\\s?1.[0-9]+$"
     }
   ]
 }
