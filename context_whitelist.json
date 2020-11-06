@@ -1891,6 +1891,15 @@
             }
         },
         {
+            "name": "security_enforcement",
+            "iOS": {
+                "key": "SecurityOptions"
+            },
+            "Android": {
+                "key": ""
+            }
+        },
+        {
             "name": "sell",
             "iOS": {
                 "key": "MLSell"
@@ -2127,6 +2136,15 @@
         {
             "name": "tools_for_sellers",
             "iOS": {
+                "key": "PricingUI"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.pricing_ui"
+            }
+        },
+        {
+            "name": "tools_for_sellers",
+            "iOS": {
                 "key": "BusinessConfigUi"
             },
             "Android": {
@@ -2347,6 +2365,24 @@
             },
             "Android": {
                 "key": "com.mercadopago.android.digital_accounts_components"
+            }
+        },
+        {
+            "name": "auth-challenges-android",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.authchallenges"
+            }
+        },
+        {
+            "name": "auth-hub-android",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.hub"
             }
         },
         {

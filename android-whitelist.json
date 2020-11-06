@@ -319,6 +319,16 @@
       "version": "11\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.authchallenges",
+      "name": "authchallenges",
+      "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.hub",
+      "name": "hub",
+      "version": "1\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android",
       "name": "melidata-sdk",
       "version": "5\\.\\+|6\\.\\+"
@@ -451,9 +461,15 @@
       "version": "10\\.\\+"
     },
     {
+      "expires": "2020-11-30",
       "group": "com\\.mercadolibre\\.android\\.biometrics",
       "name": "sdk",
       "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.biometrics",
+      "name": "sdk",
+      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.bookmarks",
@@ -497,7 +513,7 @@
       "version": "1\\.\\+"
     },
     {
-      "expires": "2020-10-31",
+      "expires": "2020-11-30",
       "group": "com\\.mercadolibre\\.android\\.credits\\.ui_components",
       "version": "0\\.\\+"
     },
@@ -1114,7 +1130,7 @@
     },
     {
       "group": "com\\.mercadolibre\\.android\\.loyalty_ui_components",
-      "version": "1\\.+|2\\.+"
+      "version": "2\\.+|3\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.mlbusinesscomponents",
@@ -1431,6 +1447,11 @@
     {
       "group": "com\\.mercadolibre\\.android\\.mldashboard",
       "name": "mldashboard",
+      "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.fees_installments",
+      "name": "mlfees",
       "version": "1\\.\\+"
     },
     {

@@ -169,6 +169,10 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "name": "MLFeesAndInstallments",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "MLClassifiedsDynamicFlow",
       "version": "^~>\\s?1.[0-9]+$"
     },
@@ -326,11 +330,11 @@
       "version": "^~>\\s?1.[0-9]+"
     },
     {
-      "expires": "2020-8-01",
       "name": "MLRemedies",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?3.[0-9]+"
     },
     {
+      "expires": "2020-12-30",
       "name": "MLRemedies",
       "version": "^~>\\s?2.[0-9]+"
     },
@@ -503,6 +507,10 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "name": "SecurityOptions",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "MLNotificationsHelpers",
       "version": "^~>\\s?1.[0-9]+$"
     },
@@ -565,7 +573,7 @@
     },
     {
       "name": "MLLoyalUIComponents",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?[1-2].[0-9]+"
     },
     {
       "name": "CreditsUIComponents",
