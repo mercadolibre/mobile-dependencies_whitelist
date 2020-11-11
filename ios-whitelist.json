@@ -1,8 +1,12 @@
 {
   "whitelist": [
     {
+      "name": "PPMagnesWrapper",
+      "version": "^~>\\s?0.[0-9]+"
+    },
+    {
       "name": "Adjust",
-      "version": "4.18.([1-9][0-9]*)$"
+      "version": "(4.18.([1-9][0-9]*)|4.23.([0-9]+))$"
     },
     {
       "name": "AmountLabel",
@@ -42,23 +46,23 @@
     },
     {
       "name": "Firebase/Core",
-      "version": "^~>\\s?(4.13.0|6.9.0)$"
+      "version": "^~>\\s?(6.31.1|6.9.0)$"
     },
     {
       "name": "Firebase/DynamicLinks",
-      "version": "^~>\\s?(4.13.0|6.9.0)$"
+      "version": "^~>\\s?(6.31.1|6.9.0)$"
     },
     {
       "name": "Firebase/Analytics",
-      "version": "^~>\\s?(4.13.0|6.9.0)$"
+      "version": "^~>\\s?(6.31.1|6.9.0)$"
     },
     {
       "name": "Firebase/MLVision",
-      "version": "6.9.0"
+      "version": "^(6.31.1|6.9.0)$"
     },
     {
       "name": "Firebase/MLVisionFaceModel",
-      "version": "6.9.0"
+      "version": "^(6.31.1|6.9.0)$"
     },
     {
       "name": "Flox",
@@ -81,8 +85,16 @@
       "version": "^~>\\s?1.[0-9]+"
     },
     {
+      "name": "InstoreReviews",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
       "name": "InsurtechFloxComponents",
       "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "InStoreUIComponents",
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "JRSwizzle",
@@ -138,7 +150,7 @@
     },
     {
       "name": "MLCardDrawer",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
     },
     {
       "name": "MLCart",
@@ -157,6 +169,10 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "name": "MLFeesAndInstallments",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "MLClassifiedsDynamicFlow",
       "version": "^~>\\s?1.[0-9]+$"
     },
@@ -166,6 +182,10 @@
     },
     {
       "name": "MLCollaborators",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLCollaboratorsV2",
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
@@ -310,11 +330,11 @@
       "version": "^~>\\s?1.[0-9]+"
     },
     {
-      "expires": "2020-8-01",
       "name": "MLRemedies",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?3.[0-9]+"
     },
     {
+      "expires": "2020-12-30",
       "name": "MLRemedies",
       "version": "^~>\\s?2.[0-9]+"
     },
@@ -487,6 +507,10 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "name": "SecurityOptions",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "MLNotificationsHelpers",
       "version": "^~>\\s?1.[0-9]+$"
     },
@@ -549,7 +573,7 @@
     },
     {
       "name": "MLLoyalUIComponents",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?[1-2].[0-9]+"
     },
     {
       "name": "CreditsUIComponents",

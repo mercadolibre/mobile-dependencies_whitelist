@@ -1,6 +1,15 @@
 {
     "context": [
         {
+            "name": "pp_magnes_wrapper",
+            "iOS": {
+                "key": "PPMagnesWrapper"
+            },
+            "Android": {
+                "key": ""
+            }
+        },
+        {
             "name": "ab_user_onboarding",
             "iOS": {
                 "key": "ABUserOnboarding"
@@ -1029,7 +1038,7 @@
         {
             "name": "instore",
             "iOS": {
-                "key": "InStore-Reviews"
+                "key": "InStoreReviews"
             },
             "Android": {
                 "key": "com.mercadolibre.android.instore.reviews"
@@ -1065,10 +1074,19 @@
         {
             "name": "insurtech",
             "iOS": {
+                "key": "InsuranceCheckMobile"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.insurance_check_mobile"
+            }
+        },
+        {
+            "name": "insurtech",
+            "iOS": {
                 "key": "InsurtechFloxComponents"
             },
             "Android": {
-                "key": ""
+                "key": "com.mercadolibre.android.insu_flox_components"
             }
         },
         {
@@ -1846,7 +1864,7 @@
             }
         },
         {
-            "name": "security",
+            "name": "mobile_devices_security",
             "iOS": {
                 "key": "MLBiometricSecurity"
             },
@@ -1855,7 +1873,7 @@
             }
         },
         {
-            "name": "security",
+            "name": "mobile_devices_security",
             "iOS": {
                 "key": "MLBiometricSecurity"
             },
@@ -1864,12 +1882,21 @@
             }
         },
         {
-            "name": "security",
+            "name": "mobile_devices_security",
             "iOS": {
                 "key": "MLBiometricSecurity"
             },
             "Android": {
                 "key": "com.mercadolibre.android.userbiometric"
+            }
+        },
+        {
+            "name": "security_enforcement",
+            "iOS": {
+                "key": "SecurityOptions"
+            },
+            "Android": {
+                "key": ""
             }
         },
         {
@@ -2082,6 +2109,15 @@
         {
             "name": "tools_for_sellers",
             "iOS": {
+                "key": "MLCollaboratorsV2"
+            },
+            "Android": {
+                "key": ""
+            }
+        },
+        {
+            "name": "tools_for_sellers",
+            "iOS": {
                 "key": "CollaboratorsUI"
             },
             "Android": {
@@ -2095,6 +2131,15 @@
             },
             "Android": {
                 "key": "com.mercadolibre.android.fees_installments"
+            }
+        },
+        {
+            "name": "tools_for_sellers",
+            "iOS": {
+                "key": "PricingUI"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.pricing_ui"
             }
         },
         {
@@ -2311,6 +2356,51 @@
             },
             "Android": {
                 "key": "com.mercadopago.android.digital_accounts_components"
+            }
+        },
+        {
+            "name": "auth-challenges-android",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.authchallenges"
+            }
+        },
+        {
+            "name": "auth-hub-android",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.hub"
+            }
+        },
+        {
+            "name": "disbursements",
+            "iOS": {
+                "key": "Disbursments"
+            },
+            "Android": {
+                "key": "com.mercadopago.android.disbursments"
+            }
+        },
+        {
+            "name": "cashout",
+            "iOS": {
+                "key": "Cashout"
+            },
+            "Android": {
+                "key": "com.mercadopago.android.cashout"
+            }
+        },
+        {
+            "name": "devices",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.devices_sdk"
             }
         }
     ]
