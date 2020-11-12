@@ -1109,6 +1109,12 @@
       "version": "1\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "security_options",
+      "version": "mercadopago-1\\.\\+|mercadolibre-1\\.\\+"
+    },
+
+    {
       "group": "com\\.mercadolibre\\.android\\.loyalty",
       "name": "commons",
       "version": "6\\.\\+"
