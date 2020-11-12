@@ -1864,7 +1864,7 @@
             }
         },
         {
-            "name": "security",
+            "name": "mobile_devices_security",
             "iOS": {
                 "key": "MLBiometricSecurity"
             },
@@ -1873,7 +1873,7 @@
             }
         },
         {
-            "name": "security",
+            "name": "mobile_devices_security",
             "iOS": {
                 "key": "MLBiometricSecurity"
             },
@@ -1882,7 +1882,7 @@
             }
         },
         {
-            "name": "security",
+            "name": "mobile_devices_security",
             "iOS": {
                 "key": "MLBiometricSecurity"
             },
@@ -1894,6 +1894,15 @@
             "name": "devices_security",
             "iOS": {
                 "key": "MobileDevicesSecurity"
+                      },
+            "Android": {
+                "key": ""
+            }
+        },
+      }
+            "name": "security_enforcement",
+            "iOS": {
+                "key": "SecurityOptions"
             },
             "Android": {
                 "key": ""
@@ -2134,6 +2143,24 @@
             }
         },
         {
+            "name": "tools_for_sellers",
+            "iOS": {
+                "key": "PricingUI"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.pricing_ui"
+            }
+        },
+        {
+            "name": "tools_for_sellers",
+            "iOS": {
+                "key": "BusinessConfigUi"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.business_config_ui"
+            }
+        },
+        {
             "name": "ui",
             "iOS": {
                 "key": "MLUI"
@@ -2347,6 +2374,24 @@
             },
             "Android": {
                 "key": "com.mercadopago.android.digital_accounts_components"
+            }
+        },
+        {
+            "name": "auth-challenges-android",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.authchallenges"
+            }
+        },
+        {
+            "name": "auth-hub-android",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.hub"
             }
         },
         {
