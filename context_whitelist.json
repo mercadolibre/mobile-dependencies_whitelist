@@ -334,6 +334,15 @@
             }
         },
         {
+            "name": "startup-initializer",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.startupinitializer.core"
+            }
+        },
+        {
             "name": "configuration-providers",
             "iOS": {
                 "key": "MLConfigurationProvider"
