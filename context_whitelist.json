@@ -1,6 +1,15 @@
 {
     "context": [
         {
+            "name": "checkout_on_sdk",
+            "iOS": {
+                "key": "MLCheckoutSDK"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.buyingflow.checkout"
+            }
+        },
+        {
             "name": "pp_magnes_wrapper",
             "iOS": {
                 "key": "PPMagnesWrapper"
