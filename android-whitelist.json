@@ -1,6 +1,11 @@
 {
   "whitelist": [
     {
+      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
+      "name": "buyingflow-cho-sdk",
+      "version": "0\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.registration",
       "name": "core",
       "version": "mercadolibre-6\\.\\+"
@@ -485,6 +490,11 @@
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.flox\\.components",
       "name": "core",
       "version": "2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.checkout",
+      "name": "congrats",
+      "version": "11\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.card\\.header",
@@ -1212,6 +1222,11 @@
       "group": "com\\.mercadolibre\\.android\\.insu_flox_components",
       "name": "floxcomponents",
       "version": "0\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.insu_qpage_on",
+      "name": "qpage_on",
+      "version": "1\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.andesui",
