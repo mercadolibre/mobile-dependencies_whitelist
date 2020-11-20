@@ -1092,6 +1092,15 @@
         {
             "name": "insurtech",
             "iOS": {
+                "key": "InsuWebview"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.insu_webview"
+            }
+        },
+        {
+            "name": "insurtech",
+            "iOS": {
                 "key": "InsurtechFloxComponents"
             },
             "Android": {
