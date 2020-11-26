@@ -1936,6 +1936,15 @@
             }
         },
         {
+            "name": "mobile_devices_security",
+            "iOS": {
+                "key": "MobileDevicesSecurity"
+                      },
+            "Android": {
+                "key": ""
+            }
+        },
+        {
             "name": "security_enforcement",
             "iOS": {
                 "key": "SecurityOptions"
