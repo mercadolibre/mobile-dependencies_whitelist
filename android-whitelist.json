@@ -1546,6 +1546,16 @@
       "group": "com\\.mercadolibre\\.android\\.devices_sdk",
       "name": "devices",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.addresses",
+      "name": "core",
+      "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.addresses",
+      "name": "zipcode",
+      "version": "3\\.\\+"
     }
   ]
 }
