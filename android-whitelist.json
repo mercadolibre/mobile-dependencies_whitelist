@@ -881,6 +881,12 @@
       "version": "4\\.\\+"
     },
     {
+      "expires": "2020-12-15",
+      "group": "com\\.mercadolibre\\.android\\.cardscomponents",
+      "name": "cards-components",
+      "version": "2\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.cardscomponents",
       "name": "cards-components",
       "version": "3\\.\\+"
@@ -1519,8 +1525,13 @@
       "version": "1\\.\\+|2\\.\\+"
     },
     {
+      "expires": "2020-12-15",
       "group": "com\\.mercadolibre\\.android\\.cardsengagement",
       "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cardsengagement",
+      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.navigation",
