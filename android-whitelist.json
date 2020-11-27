@@ -312,6 +312,11 @@
       "version": "3\\.6\\.0|4\\.0\\.2"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.startupinitializer",
+      "name": "core",
+      "version": "1\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android",
       "name": "analytics",
       "version": "production-6\\.\\+|production-7\\.\\+|develop-6\\.\\+|develop-7\\.\\+"
