@@ -821,7 +821,7 @@
     },
     {
       "group": "com\\.mercadolibre\\.android\\.uicomponents",
-      "version": "8\\.\\+|9\\.\\+"
+      "version": "9\\.\\+|10\\.\\+"
     },
     {
       "expires": "2021-01-01",
@@ -1511,7 +1511,7 @@
     },
     {
       "group": "com\\.mercadolibre\\.android\\.configuration\\.provider",
-      "version": "12\\.\\+|13\\.\\+"
+      "version": "13\\.\\+|14\\.\\+"
     },
     {
       "expires": "2020-01-01",
@@ -1525,7 +1525,7 @@
     {
       "group": "com\\.mercadolibre\\.android\\.navigation",
       "name": "menu",
-      "version": "mercadolibre-3\\.\\+|mercadopago-3\\.\\+|mercadolibre-4\\.\\+|mercadopago-4\\.\\+"
+      "version": "mercadolibre-4\\.\\+|mercadopago-4\\.\\+|mercadolibre-5\\.\\+|mercadopago-5\\.\\+"
     },
     {
       "group": "com\\.squareup\\.leakcanary",
