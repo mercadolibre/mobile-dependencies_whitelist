@@ -2483,6 +2483,42 @@
             "Android": {
                 "key": "com.mercadolibre.android.devices_sdk"
             }
+        },
+        {
+            "name": "nfc_payments",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.nfcpayments.core"
+            }
+        },
+        {
+            "name": "nfc_payments",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.nfcpayments.flows"
+            }
+        },
+        {
+            "name": "nfc_payments",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.nfcpayments.cardwidget"
+            }
+        },
+        {
+            "name": "nfc_payments",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.nfcpayments.hce-sdk"
+            }
         }
     ]
 }
