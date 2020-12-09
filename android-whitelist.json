@@ -254,7 +254,11 @@
     {
       "group": "com\\.google\\.android\\.play",
       "name": "core",
+<<<<<<< HEAD
       "version": "1\\.6\\.4|1\\.7\\.2"
+=======
+      "version": "1\\.7\\.2"
+>>>>>>> a20d85c7ed9b50efba707f78e925531978716c42
     },
     {
       "group": "com\\.google\\.android\\.libraries\\.places",
