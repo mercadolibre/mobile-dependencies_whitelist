@@ -1591,6 +1591,11 @@
     },
     {
       "group": "com\\.mercadolibre\\.android\\.nfcpayments",
+      "name": "core",
+      "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.nfcpayments",
       "name": "hce-sdk",
       "version": "6\\.+"
     },
