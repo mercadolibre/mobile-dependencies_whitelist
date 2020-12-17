@@ -631,8 +631,13 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2021-01-31",
       "group": "com\\.mercadolibre\\.android\\.instore_ui_components",
-      "version": "1\\.\\+|2\\.\\+"
+      "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.instore_ui_components",
+      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.flox",
