@@ -319,7 +319,7 @@
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "analytics",
-      "version": "production-6\\.\\+|production-7\\.\\+|develop-6\\.\\+|develop-7\\.\\+"
+      "version": "production-7\\.\\+|production-8\\.\\+|develop-7\\.\\+|develop-8\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -340,7 +340,7 @@
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "configuration-manager",
-      "version": "3\\.\\+"
+      "version": "3\\.\\+|4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.ignite",
@@ -416,32 +416,32 @@
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient",
-      "version": "13\\.\\+"
+      "version": "13\\.\\+|14\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-adapter-bus",
-      "version": "13\\.\\+"
+      "version": "13\\.\\+|14\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-adapter-rx2",
-      "version": "13\\.\\+"
+      "version": "13\\.\\+|14\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-converter-json",
-      "version": "13\\.\\+"
+      "version": "13\\.\\+|14\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-extension-header",
-      "version": "13\\.\\+"
+      "version": "13\\.\\+|14\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-legacy",
-      "version": "13\\.\\+"
+      "version": "13\\.\\+|14\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -451,24 +451,12 @@
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "ui",
-      "version": "8\\.\\+"
+      "version": "8\\.\\+|9\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "ui_legacy",
-      "version": "8\\.\\+"
-    },
-    {
-      "expires": "2019-11-09",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "ui",
-      "version": "7\\.\\+"
-    },
-    {
-      "expires": "2019-11-09",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "ui_legacy",
-      "version": "7\\.\\+"
+      "version": "8\\.\\+|9\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.activity",
@@ -676,7 +664,7 @@
     {
       "group": "com\\.mercadolibre\\.android\\.local\\.storage",
       "name": "core",
-      "version": "1\\.\\+"
+      "version": "1\\.\\+|2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.local\\.storage",
@@ -711,12 +699,12 @@
     {
       "group": "com\\.mercadolibre\\.android\\.metrics",
       "name": "metrics-extension-default-traces",
-      "version": "2\\.\\+"
+      "version": "2\\.\\+|3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.metrics",
       "name": "metrics",
-      "version": "2\\.\\+"
+      "version": "2\\.\\+|3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.mlwallet",
@@ -751,27 +739,27 @@
     {
       "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
       "name": "core",
-      "version": "5\\.\\+"
+      "version": "5\\.\\+|6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
       "name": "renderer-fresco",
-      "version": "5\\.\\+"
+      "version": "5\\.\\+|6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.place",
       "name": "annotation",
-      "version": "4\\.\\+"
+      "version": "4\\.\\+|5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.place",
       "name": "core",
-      "version": "4\\.\\+"
+      "version": "4\\.\\+|5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.place",
       "name": "processor",
-      "version": "4\\.\\+"
+      "version": "4\\.\\+|5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.recommendations",
@@ -1201,17 +1189,12 @@
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "user_configuration",
-      "version": "develop-1\\.+"
+      "version": "develop-1\\.+|develop-2\\.+|production-1\\.+|production-2\\.+"
     },
     {
       "group": "org\\.aspectj",
       "name": "aspectjrt",
       "version": "1\\.9\\.2"
-    },
-    {
-      "group": "com\\.mercadolibre\\.android",
-      "name": "user_configuration",
-      "version": "production-1\\.+"
     },
     {
       "group": "org\\.jetbrains\\.kotlinx",
@@ -1229,20 +1212,14 @@
       "version": "4\\.\\+|5\\.\\+"
     },
     {
-      "expires": "2020-12-15",
       "group": "com\\.mercadolibre\\.android\\.inappupdates",
       "name": "in-app-updates",
-      "version": "1\\.+"
-    },
-    {
-      "group": "com\\.mercadolibre\\.android\\.inappupdates",
-      "name": "in-app-updates",
-      "version": "2\\.+"
+      "version": "1\\.\\+|2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.mlinappupdates",
       "name": "ml-in-app-updates",
-      "version": "1\\.\\+"
+      "version": "1\\.\\+|2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.scanner",
