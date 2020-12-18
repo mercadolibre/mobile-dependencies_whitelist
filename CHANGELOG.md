@@ -1,3 +1,7 @@
+# 9.2.0
+## Migrado
+- Release process migration
+
 # 9.0.0
 - Migracion a Gradle 6. Ahora gradle entreprise plugin tiene que ser aplicado en settings para proyectos con gradle 6.
 
