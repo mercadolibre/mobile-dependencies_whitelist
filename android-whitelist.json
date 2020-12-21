@@ -389,19 +389,37 @@
       "version": "10\\.\\+"
     },
     {
+      "expires": "2021-01-04",
       "group": "com\\.mercadolibre\\.android",
       "name": "notifications",
       "version": "10\\.\\+"
     },
     {
+      "expires": "2021-01-04",
       "group": "com\\.mercadolibre\\.android",
       "name": "notifications",
       "version": "mercadolibre-11\\.\\+"
     },
     {
+      "expires": "2021-01-04",
       "group": "com\\.mercadolibre\\.android",
       "name": "notifications",
       "version": "mercadopago-11\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "notifications",
+      "version": "12\\.\\+|13\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "notifications",
+      "version": "mercadolibre-12\\.\\+|mercadolibre-13\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "notifications",
+      "version": "mercadopago-12\\.\\+|mercadopago-13\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
