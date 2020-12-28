@@ -5,8 +5,13 @@ parameters:
     type: enum
     enum: ["ci", "build", "default"]
     default: "default"
+  build_context:
+    type: string
+    default: ""
+
 orbs:
   meli: mercadolibre/android@volatile
+
 default-workflow: &defaultWorkflow
   filters:
     branches:
@@ -14,17 +19,27 @@ default-workflow: &defaultWorkflow
         - master
         - /release\/.*$/
         - /v\/.*$/
+
 workflows:
   ci:
     jobs:
       - meli/assemble:
           <<: *defaultWorkflow
           machine_size: xlarge
+          build_context: << pipeline.parameters.build_context >>
+          pipeline_id: << pipeline.id >>
+          pipeline_number: << pipeline.number >>
       - meli/check:
           <<: *defaultWorkflow
           machine_size: xlarge
+          build_context: << pipeline.parameters.build_context >>
+          pipeline_id: << pipeline.id >>
+          pipeline_number: << pipeline.number >>
   build:
     when:
-      equal: [build, << pipeline.parameters.type >>] 
+      equal: [build, << pipeline.parameters.type >>]
     jobs:
-      - meli/build
+      - meli/build:
+          build_context: << pipeline.parameters.build_context >>
+          pipeline_id: << pipeline.id >>
+          pipeline_number: << pipeline.number >>
