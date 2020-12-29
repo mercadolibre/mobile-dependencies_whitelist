@@ -2546,6 +2546,24 @@
             "Android": {
                 "key": "com.mercadolibre.android.credits.ui_components"
             }
+        },
+        {
+            "name": "credits_credit_card",
+            "iOS": {
+                "key": "CreditCardPayment"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.creditcard.payment"
+            }
+        },
+        {
+            "name": "credits_credit_card",
+            "iOS": {
+                "key": "CreditCardDisable"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.credit.card.disable"
+            }
         }
     ]
 }
