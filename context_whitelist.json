@@ -2519,6 +2519,51 @@
             "Android": {
                 "key": "com.mercadolibre.android.nfcpayments.hce-sdk"
             }
+        },
+        {
+            "name": "credits_credit_card",
+            "iOS": {
+                "key": "CreditCardUpgrade"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.credit_card.upgrade"
+            }
+        },
+        {
+            "name": "credits_credit_card",
+            "iOS": {
+                "key": "CreditCardStatements"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.credit_card.statements"
+            }
+        },
+        {
+            "name": "credits_credit_card",
+            "iOS": {
+                "key": "CreditsUIComponents"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.credits.ui_components"
+            }
+        },
+        {
+            "name": "credits_credit_card",
+            "iOS": {
+                "key": "CreditCardPayment"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.creditcard.payment"
+            }
+        },
+        {
+            "name": "credits_credit_card",
+            "iOS": {
+                "key": "CreditCardDisable"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.credit.card.disable"
+            }
         }
     ]
 }
