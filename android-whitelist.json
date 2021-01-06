@@ -1441,6 +1441,21 @@
       "version": "1\\.0\\.1"
     },
     {
+      "group": "androidx\\.databinding",
+      "name": "databinding-common",
+      "version": "3\\.6\\.+"
+    },
+    {
+      "group": "androidx\\.databinding",
+      "name": "databinding-runtime",
+      "version": "3\\.6\\.+"
+    },
+    {
+      "group": "androidx\\.databinding",
+      "name": "databinding-adapters",
+      "version": "3\\.6\\.+"
+    },
+    {
       "group": "org\\.mockito",
       "name": "mockito-core",
       "version": "3\\.3\\.0"
