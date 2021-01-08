@@ -28,6 +28,15 @@
             }
         },
         {
+            "name": "account_recovery",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.accountrecovery"
+            }
+        },
+        {
             "name": "activities",
             "iOS": {
                 "key": "OperationDetail"
