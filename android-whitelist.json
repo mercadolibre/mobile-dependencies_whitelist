@@ -1521,6 +1521,16 @@
       "version": "1\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.tfs_commons",
+      "name": "tracking",
+      "version": "mercadopago-0\\.\\+|mercadolibre-0\\.\\+|mercadopago-1\\.\\+|mercadolibre-1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.tfs_commons",
+      "name": "testuserlogin",
+      "version": "0\\.\\+|1\\.\\+"
+    },
+    {
       "group": "com\\.smartlook\\.recording",
       "name": "app",
       "version": "1\\.5\\.2\\-native"
