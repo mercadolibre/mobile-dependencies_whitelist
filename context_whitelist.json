@@ -2239,6 +2239,15 @@
             }
         },
         {
+            "name": "tools_for_sellers",
+            "iOS": {
+                "key": "MLTFSCommons"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.tfs_commons"
+            }
+        },
+        {
             "name": "ui",
             "iOS": {
                 "key": "MLUI"
