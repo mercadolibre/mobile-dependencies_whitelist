@@ -1249,6 +1249,11 @@
       "version": "5\\.+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.modalsengine",
+      "name": "modals-engine",
+      "version": "mercadolibre-3\\.\\+|mercadopago-3\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android",
       "name": "cardform",
       "version": "1\\.+"
@@ -1588,6 +1593,41 @@
       "group": "com\\.mercadolibre\\.android\\.addresses",
       "name": "zipcode",
       "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.liveness_detection",
+      "name": "facetec",
+      "version": "sdk-9\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.nfcpayments",
+      "name": "core",
+      "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.nfcpayments",
+      "name": "flows",
+      "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.nfcpayments",
+      "name": "card-widget",
+      "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.nfcpayments",
+      "name": "hce-sdk",
+      "version": "6\\.+"
+    },
+    {
+      "group": "com\\.madgag\\.spongycastle",
+      "name": "pkix",
+      "version": "1\\.54\\.0\\.0"
+    },
+    {
+      "group": "net\\.java\\.dev\\.jna",
+      "name": "jna",
+      "version": "5\\.1\\.0"
     }
   ]
 }
