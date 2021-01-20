@@ -615,9 +615,15 @@
       "version": "1\\.\\+|2\\.\\+"
     },
     {
+      "expires": "2021-20-02",
       "group": "com\\.mercadolibre\\.android\\.cpg",
       "name": "ui_components",
       "version": "2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cpg",
+      "name": "ui_components",
+      "version": "3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.discovery",
