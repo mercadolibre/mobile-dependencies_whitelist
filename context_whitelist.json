@@ -1170,6 +1170,15 @@
                 "key": "com.mercadolibre.android.remote.configuration.keepnite"
             }
         },
+	{
+            "name": "livecommerce",
+            "iOS": {
+                "key": "Livecommerce"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.livecommerce"
+            }
+        },
         {
             "name": "local_storage",
             "iOS": {
