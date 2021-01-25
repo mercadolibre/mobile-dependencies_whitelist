@@ -44,24 +44,28 @@ class JavaPublishableModule extends PublishableModule {
         project.sourceSets.each {
             if (it.name != SOURCE_SETS_TEST) {
                 String variantName = it.name
-                createTask(new PublishJarReleaseTask(), it,
-                        getTaskName(TASK_TYPE_RELEASE, PACKAGING, variantName))
+                createTask(new PublishJarPrivateReleaseTask(), it,
+                        getTaskName(TASK_TYPE_PRIVATE_RELEASE, PACKAGING, variantName))
                 createTask(new PublishJarExperimentalTask(), it,
                         getTaskName(TASK_TYPE_EXPERIMENTAL, PACKAGING, variantName))
                 createTask(new PublishJarLocalTask(), it,
                         getTaskName(TASK_TYPE_LOCAL, PACKAGING, variantName))
+                createTask(new PublishJarPublicReleaseTask(), it,
+                        getTaskName(TASK_TYPE_PUBLIC_RELEASE, PACKAGING, variantName))
             }
 
             if (it.name == SOURCE_SETS_DEFAULT) {
                 // If release, create mirror tasks without the flavor name
-                createTask(new PublishJarReleaseTask(), it, getTaskName(TASK_TYPE_RELEASE, PACKAGING))
+                createTask(new PublishJarPrivateReleaseTask(), it, getTaskName(TASK_TYPE_PRIVATE_RELEASE, PACKAGING))
                 createTask(new PublishJarExperimentalTask(), it, getTaskName(TASK_TYPE_EXPERIMENTAL, PACKAGING))
                 createTask(new PublishJarLocalTask(), it, getTaskName(TASK_TYPE_LOCAL, PACKAGING))
+                createTask(new PublishJarPublicReleaseTask(), it, getTaskName(TASK_TYPE_PUBLIC_RELEASE, PACKAGING))
 
                 // And also mirror them without the Jar suffix too
-                createTask(new PublishJarReleaseTask(), it, getTaskName(TASK_TYPE_RELEASE))
+                createTask(new PublishJarPrivateReleaseTask(), it, getTaskName(TASK_TYPE_PRIVATE_RELEASE))
                 createTask(new PublishJarExperimentalTask(), it, getTaskName(TASK_TYPE_EXPERIMENTAL))
                 createTask(new PublishJarLocalTask(), it, getTaskName(TASK_TYPE_LOCAL))
+                createTask(new PublishJarPublicReleaseTask(), it, getTaskName(TASK_TYPE_PUBLIC_RELEASE))
             }
         }
     }

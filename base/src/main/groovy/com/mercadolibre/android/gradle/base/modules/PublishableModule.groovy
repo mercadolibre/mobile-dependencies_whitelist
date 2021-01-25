@@ -13,7 +13,8 @@ import org.gradle.api.tasks.TaskProvider
  */
 abstract class PublishableModule implements Module {
 
-    protected static final String TASK_TYPE_RELEASE = 'Release'
+    protected static final String TASK_TYPE_PUBLIC_RELEASE = 'PublicRelease'
+    protected static final String TASK_TYPE_PRIVATE_RELEASE = 'PrivateRelease'
     protected static final String TASK_TYPE_EXPERIMENTAL = 'Experimental'
     protected static final String TASK_TYPE_LOCAL = 'Local'
 

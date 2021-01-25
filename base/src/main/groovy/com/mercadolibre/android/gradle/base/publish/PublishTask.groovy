@@ -11,6 +11,7 @@ import java.text.SimpleDateFormat
  */
 abstract class PublishTask {
 
+    protected static final String BINTRAY_PUBLIC_REPOSITORY = 'android-public'
     protected static final String BINTRAY_RELEASE_REPOSITORY = 'android-releases'
     protected static final String BINTRAY_EXPERIMENTAL_REPOSITORY = 'android-experimental'
 
