@@ -1,3 +1,10 @@
+# 9.3.0
+## Agregado
+- Se agregó la task `publishPublicRelease`
+  
+## Modificado
+- Se modificó la task `publishRelease` a `publishPrivateRelease`
+
 # 9.2.0
 ## Migrado
 - Release process migration
