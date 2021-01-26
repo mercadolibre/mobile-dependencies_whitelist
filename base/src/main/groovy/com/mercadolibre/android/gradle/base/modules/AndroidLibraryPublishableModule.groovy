@@ -15,6 +15,7 @@ import org.gradle.api.tasks.TaskProvider
 class AndroidLibraryPublishableModule extends PublishableModule {
 
     public static final String PACKAGING = 'Aar'
+    public static final String RELEASE_VARIANT = 'release'
 
     private Project project
 
@@ -47,7 +48,7 @@ class AndroidLibraryPublishableModule extends PublishableModule {
         def publicReleaseTask = createTask(new PublishAarPublicReleaseTask(), libraryVariant,
                 getTaskName(TASK_TYPE_PUBLIC_RELEASE, PACKAGING, variantName))
 
-        if (libraryVariant.name.toLowerCase().contains("release")) {
+        if (libraryVariant.name.toLowerCase().contains(RELEASE_VARIANT)) {
             // Create tasks without the variant suffix that default to the main sourcesets
             createStubTask(getTaskName(TASK_TYPE_EXPERIMENTAL, PACKAGING), experimentalTask)
             createStubTask(getTaskName(TASK_TYPE_PRIVATE_RELEASE, PACKAGING), privateReleaseTask)
