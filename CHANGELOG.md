@@ -1,9 +1,7 @@
 # 9.3.0
 ## Agregado
 - Se agregó la task `publishPublicRelease`
-  
-## Modificado
-- Se modificó la task `publishRelease` a `publishPrivateRelease`
+- Se agregó la task `publishPrivateRelease` que reemplaza a `publishRelease`. La mantenemos por retrocompatibilidad.
 
 # 9.2.0
 ## Migrado
