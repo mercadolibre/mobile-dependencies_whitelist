@@ -1,6 +1,15 @@
 {
     "context": [
         {
+            "name": "checkout_on_sdk",
+            "iOS": {
+                "key": "MLCheckoutSDK"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.buyingflow.checkout"
+            }
+        },
+        {
             "name": "pp_magnes_wrapper",
             "iOS": {
                 "key": "PPMagnesWrapper"
@@ -16,6 +25,15 @@
             },
             "Android": {
                 "key": "com.mercadopago.android.useronboarding"
+            }
+        },
+        {
+            "name": "account_recovery",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.accountrecovery"
             }
         },
         {
@@ -331,6 +349,15 @@
             },
             "Android": {
                 "key": "com.mercadolibre.android.configuration.manager"
+            }
+        },
+        {
+            "name": "startup-initializer",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.startupinitializer.core"
             }
         },
         {
@@ -1078,6 +1105,15 @@
             },
             "Android": {
                 "key": "com.mercadolibre.android.insurance_check_mobile"
+            }
+        },
+        {
+            "name": "insurtech",
+            "iOS": {
+                "key": "InsuWebview"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.insu_webview"
             }
         },
         {
@@ -1927,12 +1963,21 @@
             }
         },
         {
+            "name": "mobile_devices_security",
+            "iOS": {
+                "key": "MobileDevicesSecurity"
+                      },
+            "Android": {
+                "key": ""
+            }
+        },
+        {
             "name": "security_enforcement",
             "iOS": {
                 "key": "SecurityOptions"
             },
             "Android": {
-                "key": ""
+                "key": "com.mercadolibre.android.security_options.security_options"
             }
         },
         {
@@ -2071,6 +2116,12 @@
             }
         },
         {
+            "name": "startup_initializer",
+            "Android": {
+                "key": "com.mercadolibre.android.startupinitializer"
+            }
+        },
+        {
             "name": "single_player_prepaid",
             "iOS": {
                 "key": "MPSPPrepaid"
@@ -2185,6 +2236,15 @@
             },
             "Android": {
                 "key": "com.mercadolibre.android.business_config_ui"
+            }
+        },
+        {
+            "name": "tools_for_sellers",
+            "iOS": {
+                "key": "MLTFSCommons"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.tfs_commons"
             }
         },
         {
@@ -2446,6 +2506,87 @@
             },
             "Android": {
                 "key": "com.mercadolibre.android.devices_sdk"
+            }
+        },
+        {
+            "name": "nfc_payments",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.nfcpayments.core"
+            }
+        },
+        {
+            "name": "nfc_payments",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.nfcpayments.flows"
+            }
+        },
+        {
+            "name": "nfc_payments",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.nfcpayments.cardwidget"
+            }
+        },
+        {
+            "name": "nfc_payments",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.nfcpayments.hce-sdk"
+            }
+        },
+        {
+            "name": "credits_credit_card",
+            "iOS": {
+                "key": "CreditCardUpgrade"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.credit_card.upgrade"
+            }
+        },
+        {
+            "name": "credits_credit_card",
+            "iOS": {
+                "key": "CreditCardStatements"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.credit_card.statements"
+            }
+        },
+        {
+            "name": "credits_credit_card",
+            "iOS": {
+                "key": "CreditsUIComponents"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.credits.ui_components"
+            }
+        },
+        {
+            "name": "credits_credit_card",
+            "iOS": {
+                "key": "CreditCardPayment"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.creditcard.payment"
+            }
+        },
+        {
+            "name": "credits_credit_card",
+            "iOS": {
+                "key": "CreditCardDisable"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.credit.card.disable"
             }
         }
     ]
