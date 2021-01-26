@@ -51,14 +51,18 @@ class AndroidLibraryPublishableModule extends PublishableModule {
         if (libraryVariant.name.toLowerCase().contains(RELEASE_VARIANT)) {
             // Create tasks without the variant suffix that default to the main sourcesets
             createStubTask(getTaskName(TASK_TYPE_EXPERIMENTAL, PACKAGING), experimentalTask)
-            createStubTask(getTaskName(TASK_TYPE_PRIVATE_RELEASE, PACKAGING), privateReleaseTask)
+            // 'Release' Task name maintained for retrocompatibility
+            createStubTask(getTaskName(TASK_TYPE_RELEASE, PACKAGING), privateReleaseTask)
             createStubTask(getTaskName(TASK_TYPE_LOCAL, PACKAGING), localTask)
+            createStubTask(getTaskName(TASK_TYPE_PRIVATE_RELEASE, PACKAGING), privateReleaseTask)
             createStubTask(getTaskName(TASK_TYPE_PUBLIC_RELEASE, PACKAGING), publicReleaseTask)
 
             // Create tasks without the variant and package type suffix, defaulting to release
             createStubTask(getTaskName(TASK_TYPE_EXPERIMENTAL), experimentalTask)
-            createStubTask(getTaskName(TASK_TYPE_PRIVATE_RELEASE), privateReleaseTask)
+            // 'Release' Task name maintained for retrocompatibility
+            createStubTask(getTaskName(TASK_TYPE_RELEASE), privateReleaseTask)
             createStubTask(getTaskName(TASK_TYPE_LOCAL), localTask)
+            createStubTask(getTaskName(TASK_TYPE_PRIVATE_RELEASE), privateReleaseTask)
             createStubTask(getTaskName(TASK_TYPE_PUBLIC_RELEASE), publicReleaseTask)
         }
     }

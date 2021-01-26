@@ -56,15 +56,17 @@ class JavaPublishableModule extends PublishableModule {
 
             if (it.name == SOURCE_SETS_DEFAULT) {
                 // If release, create mirror tasks without the flavor name
-                createTask(new PublishJarPrivateReleaseTask(), it, getTaskName(TASK_TYPE_PRIVATE_RELEASE, PACKAGING))
+                createTask(new PublishJarPrivateReleaseTask(), it, getTaskName(TASK_TYPE_RELEASE, PACKAGING)) // TaskName mantained for retrocompat
                 createTask(new PublishJarExperimentalTask(), it, getTaskName(TASK_TYPE_EXPERIMENTAL, PACKAGING))
                 createTask(new PublishJarLocalTask(), it, getTaskName(TASK_TYPE_LOCAL, PACKAGING))
+                createTask(new PublishJarPrivateReleaseTask(), it, getTaskName(TASK_TYPE_PRIVATE_RELEASE, PACKAGING))
                 createTask(new PublishJarPublicReleaseTask(), it, getTaskName(TASK_TYPE_PUBLIC_RELEASE, PACKAGING))
 
                 // And also mirror them without the Jar suffix too
-                createTask(new PublishJarPrivateReleaseTask(), it, getTaskName(TASK_TYPE_PRIVATE_RELEASE))
+                createTask(new PublishJarPrivateReleaseTask(), it, getTaskName(TASK_TYPE_RELEASE)) // TaskName mantained for retrocompat
                 createTask(new PublishJarExperimentalTask(), it, getTaskName(TASK_TYPE_EXPERIMENTAL))
                 createTask(new PublishJarLocalTask(), it, getTaskName(TASK_TYPE_LOCAL))
+                createTask(new PublishJarPrivateReleaseTask(), it, getTaskName(TASK_TYPE_PRIVATE_RELEASE))
                 createTask(new PublishJarPublicReleaseTask(), it, getTaskName(TASK_TYPE_PUBLIC_RELEASE))
             }
         }
