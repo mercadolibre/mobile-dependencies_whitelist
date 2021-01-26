@@ -44,12 +44,15 @@ class JavaPublishableModule extends PublishableModule {
         project.sourceSets.each {
             if (it.name != SOURCE_SETS_TEST) {
                 String variantName = it.name
+                // 'Release' Task name maintained for retrocompatibility
                 createTask(new PublishJarPrivateReleaseTask(), it,
-                        getTaskName(TASK_TYPE_PRIVATE_RELEASE, PACKAGING, variantName))
+                        getTaskName(TASK_TYPE_RELEASE, PACKAGING, variantName))
                 createTask(new PublishJarExperimentalTask(), it,
                         getTaskName(TASK_TYPE_EXPERIMENTAL, PACKAGING, variantName))
                 createTask(new PublishJarLocalTask(), it,
                         getTaskName(TASK_TYPE_LOCAL, PACKAGING, variantName))
+                createTask(new PublishJarPrivateReleaseTask(), it,
+                        getTaskName(TASK_TYPE_PRIVATE_RELEASE, PACKAGING, variantName))
                 createTask(new PublishJarPublicReleaseTask(), it,
                         getTaskName(TASK_TYPE_PUBLIC_RELEASE, PACKAGING, variantName))
             }
