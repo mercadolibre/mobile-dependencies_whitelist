@@ -4,6 +4,7 @@ import com.mercadolibre.android.gradle.base.modules.AndroidLibraryPublishableMod
 import com.mercadolibre.android.gradle.base.utils.BintrayConfiguration
 
 class PublishAarPublicReleaseTask extends PublishAarReleaseTask {
+
     @Override
     BintrayConfiguration.Builder getBintrayConfiguration() {
         return new BintrayConfiguration.Builder().with {

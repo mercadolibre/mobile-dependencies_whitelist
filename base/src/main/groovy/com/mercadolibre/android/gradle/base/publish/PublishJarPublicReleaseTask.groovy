@@ -12,7 +12,7 @@ class PublishJarPublicReleaseTask extends PublishJarReleaseTask {
             bintrayRepository = BINTRAY_PUBLIC_REPOSITORY
             publicationName = this.taskName
             publicationPackaging = JavaPublishableModule.PACKAGING
-            publicationType = 'PublicRelease'
+            publicationType = 'Public'
             return it
         }
     }
