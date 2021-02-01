@@ -16,6 +16,8 @@ abstract class PublishableModule implements Module {
     protected static final String TASK_TYPE_RELEASE = 'Release'
     protected static final String TASK_TYPE_EXPERIMENTAL = 'Experimental'
     protected static final String TASK_TYPE_LOCAL = 'Local'
+    protected static final String TASK_TYPE_PUBLIC_RELEASE = 'PublicRelease'
+    protected static final String TASK_TYPE_PRIVATE_RELEASE = 'PrivateRelease'
 
     private static final String TASK_GET_PROJECT_VERSION = "getProjectVersion"
 

@@ -1,15 +1,11 @@
 package com.mercadolibre.android.gradle.base.publish
 
-import com.mercadolibre.android.gradle.base.modules.JavaPublishableModule
 import com.mercadolibre.android.gradle.base.utils.BintrayConfiguration
 import com.mercadolibre.android.gradle.base.utils.VersionContainer
 import org.gradle.api.Task
 import org.gradle.api.tasks.TaskProvider
 
-/**
- * Created by saguilera on 7/23/17.
- */
-class PublishJarReleaseTask extends PublishJarTask {
+abstract class PublishJarReleaseTask extends PublishJarTask {
 
     @Override
     TaskProvider<Task> register(PublishTask.Builder builder) {
@@ -24,14 +20,7 @@ class PublishJarReleaseTask extends PublishJarTask {
             task = project.tasks.register(builder.taskName)
             task.configure {
                 doFirst {
-                    BintrayConfiguration.setBintrayConfig(new BintrayConfiguration.Builder().with {
-                        project = this.project
-                        bintrayRepository = BINTRAY_RELEASE_REPOSITORY
-                        publicationName = this.taskName
-                        publicationPackaging = JavaPublishableModule.PACKAGING
-                        publicationType = 'Release'
-                        return it
-                    })
+                    BintrayConfiguration.setBintrayConfig(getBintrayConfiguration())
                 }
                 group = TASK_GROUP
 
@@ -42,4 +31,6 @@ class PublishJarReleaseTask extends PublishJarTask {
         createMavenPublication()
         return task
     }
+
+    abstract BintrayConfiguration.Builder getBintrayConfiguration()
 }

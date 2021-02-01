@@ -1,15 +1,11 @@
 package com.mercadolibre.android.gradle.base.publish
 
-import com.mercadolibre.android.gradle.base.modules.AndroidLibraryPublishableModule
 import com.mercadolibre.android.gradle.base.utils.BintrayConfiguration
 import com.mercadolibre.android.gradle.base.utils.VersionContainer
 import org.gradle.api.Task
 import org.gradle.api.tasks.TaskProvider
 
-/**
- * Created by saguilera on 7/23/17.
- */
-class PublishAarReleaseTask extends PublishAarTask {
+abstract class PublishAarReleaseTask extends PublishAarTask {
 
     @Override
     TaskProvider<Task> register(PublishTask.Builder builder) {
@@ -24,14 +20,7 @@ class PublishAarReleaseTask extends PublishAarTask {
             task = project.tasks.register(builder.taskName)
             task.configure {
                 doFirst {
-                    BintrayConfiguration.setBintrayConfig(new BintrayConfiguration.Builder().with {
-                        project = this.project
-                        bintrayRepository = BINTRAY_RELEASE_REPOSITORY
-                        publicationName = this.taskName
-                        publicationPackaging = AndroidLibraryPublishableModule.PACKAGING
-                        publicationType = 'Release'
-                        return it
-                    })
+                    BintrayConfiguration.setBintrayConfig(getBintrayConfiguration())
                 }
                 group = TASK_GROUP
 
@@ -44,4 +33,5 @@ class PublishAarReleaseTask extends PublishAarTask {
         return task
     }
 
+    abstract BintrayConfiguration.Builder getBintrayConfiguration()
 }

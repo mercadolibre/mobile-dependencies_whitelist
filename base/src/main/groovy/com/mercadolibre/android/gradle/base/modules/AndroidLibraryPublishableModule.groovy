@@ -15,6 +15,7 @@ import org.gradle.api.tasks.TaskProvider
 class AndroidLibraryPublishableModule extends PublishableModule {
 
     public static final String PACKAGING = 'Aar'
+    public static final String RELEASE_VARIANT = 'release'
 
     private Project project
 
@@ -40,21 +41,32 @@ class AndroidLibraryPublishableModule extends PublishableModule {
 
         def experimentalTask = createTask(new PublishAarExperimentalTask(), libraryVariant,
                 getTaskName(TASK_TYPE_EXPERIMENTAL, PACKAGING, variantName))
-        def releaseTask = createTask(new PublishAarReleaseTask(), libraryVariant,
+        // 'Release' Task name maintained for retrocompatibility
+        def releaseTask = createTask(new PublishAarPrivateReleaseTask(), libraryVariant,
                 getTaskName(TASK_TYPE_RELEASE, PACKAGING, variantName))
+        def privateReleaseTask = createTask(new PublishAarPrivateReleaseTask(), libraryVariant,
+                getTaskName(TASK_TYPE_PRIVATE_RELEASE, PACKAGING, variantName))
         def localTask = createTask(new PublishAarLocalTask(), libraryVariant,
                 getTaskName(TASK_TYPE_LOCAL, PACKAGING, variantName))
+        def publicReleaseTask = createTask(new PublishAarPublicReleaseTask(), libraryVariant,
+                getTaskName(TASK_TYPE_PUBLIC_RELEASE, PACKAGING, variantName))
 
-        if (libraryVariant.name.toLowerCase().contains(TASK_TYPE_RELEASE.toLowerCase())) {
+        if (libraryVariant.name.toLowerCase().contains(RELEASE_VARIANT)) {
             // Create tasks without the variant suffix that default to the main sourcesets
             createStubTask(getTaskName(TASK_TYPE_EXPERIMENTAL, PACKAGING), experimentalTask)
+            // 'Release' Task name maintained for retrocompatibility
             createStubTask(getTaskName(TASK_TYPE_RELEASE, PACKAGING), releaseTask)
             createStubTask(getTaskName(TASK_TYPE_LOCAL, PACKAGING), localTask)
+            createStubTask(getTaskName(TASK_TYPE_PRIVATE_RELEASE, PACKAGING), privateReleaseTask)
+            createStubTask(getTaskName(TASK_TYPE_PUBLIC_RELEASE, PACKAGING), publicReleaseTask)
 
             // Create tasks without the variant and package type suffix, defaulting to release
             createStubTask(getTaskName(TASK_TYPE_EXPERIMENTAL), experimentalTask)
+            // 'Release' Task name maintained for retrocompatibility
             createStubTask(getTaskName(TASK_TYPE_RELEASE), releaseTask)
             createStubTask(getTaskName(TASK_TYPE_LOCAL), localTask)
+            createStubTask(getTaskName(TASK_TYPE_PRIVATE_RELEASE), privateReleaseTask)
+            createStubTask(getTaskName(TASK_TYPE_PUBLIC_RELEASE), publicReleaseTask)
         }
     }
 
