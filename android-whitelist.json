@@ -552,13 +552,13 @@
     {
       "group": "com\\.mercadolibre\\.android\\.cart",
       "name": "manager",
-      "version": "7\\.\\+"
+      "version": "mercadolibre-8\\.\\+|mercadopago-8\\.\\+"
     },
     {
-      "expires": "2020-08-28",
+      "expires": "2021-05-02",
       "group": "com\\.mercadolibre\\.android\\.cart",
       "name": "manager",
-      "version": "4\\.\\+|5\\.\\+"
+      "version": "7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.purchases",
