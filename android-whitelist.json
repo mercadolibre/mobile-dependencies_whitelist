@@ -561,6 +561,17 @@
       "version": "7\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.cart",
+      "name": "cart",
+      "version": "mercadolibre-8\\.\\+|mercadopago-8\\.\\+"
+    },
+    {
+      "expires": "2021-05-02",
+      "group": "com\\.mercadolibre\\.android\\.cart",
+      "name": "cart",
+      "version": "6\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.purchases",
       "name": "purchases",
       "version": "1\\.\\+"
