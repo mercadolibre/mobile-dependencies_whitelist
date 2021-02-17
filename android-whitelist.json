@@ -1008,6 +1008,21 @@
       "version": "2\\.\\+"
     },
     {
+      "group": "com\\.mercadopago\\.android\\.point_flow_engine",
+      "name": "navigation",
+      "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadopago\\.android\\.point_ui",
+      "name": "components",
+      "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
+      "name": "paymentflowfcu",
+      "version": "1\\.\\+"
+    },
+    {
       "group": "com\\.polidea\\.rxandroidble",
       "name": "rxandroidble",
       "version": "1\\.5\\.0"

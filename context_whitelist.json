@@ -1761,7 +1761,7 @@
                 "key": "PointFlowEngine"
             },
             "Android": {
-                "key": ""
+                "key": "com.mercadopago.android.point_flow_engine"
             }
         },
         {
@@ -1770,7 +1770,16 @@
                 "key": "PointUI"
             },
             "Android": {
+                "key": "com.mercadopago.android.point_ui"
+            }
+        },
+        {
+            "name": "point",
+            "iOS": {
                 "key": ""
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.payment_flow_fcu"
             }
         },
         {
