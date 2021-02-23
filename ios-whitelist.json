@@ -43,7 +43,7 @@
     {
       "name": "FBSDKCoreKit",
       "version": "5.8.0",
-      "source": "private"
+      "source": "public"
     },
     {
       "name": "FBSDKLoginKit",
@@ -58,7 +58,7 @@
     {
       "name": "FXBlurView",
       "version": "1.6.4",
-      "source": "private"
+      "source": "public"
     },
     {
       "name": "Firebase/Core",
@@ -128,7 +128,7 @@
     {
       "name": "JRSwizzle",
       "version": "1.0",
-      "source": "private"
+      "source": "public"
     },
     {
       "name": "MGSwipeTableCell",
@@ -450,7 +450,7 @@
     {
       "name": "MLUI",
       "version": "^~>\\s?5.[0-9]+$",
-      "source": "private"
+      "source": "public"
     },
     {
       "name": "MLUIComponents",
@@ -485,7 +485,7 @@
     {
       "name": "MPDynamicSkeleton",
       "version": "^~>\\s?0.[0-9]+$",
-      "source": "private"
+      "source": "public"
     },
     {
       "name": "MPMerchEngine",
@@ -530,12 +530,12 @@
     {
       "name": "PINCache",
       "version": "2.3",
-      "source": "private"
+      "source": "public"
     },
     {
       "name": "PINRemoteImage",
       "version": "2.1.4",
-      "source": "private"
+      "source": "public"
     },
     {
       "name": "PXAccountMoneyPlugin",
@@ -550,7 +550,7 @@
     {
       "name": "PureLayout",
       "version": "3.1.2",
-      "source": "private"
+      "source": "public"
     },
     {
       "name": "RSKImageCropper",
@@ -711,12 +711,12 @@
       "expires": "2020-5-15",
       "name": "AndesUI",
       "version": "^~>\\s?2.[0-9]+",
-      "source": "private"
+      "source": "public"
     },
     {
       "name": "AndesUI",
       "version": "^~>\\s?3.[0-9]+",
-      "source": "private"
+      "source": "public"
     },
     {
       "name": "MLLoyalDM",
