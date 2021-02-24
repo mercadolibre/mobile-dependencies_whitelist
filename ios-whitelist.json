@@ -156,6 +156,11 @@
       "source": "public"
     },
     {
+      "name": "FLAnimatedImage",
+      "version": "1.0.15",
+      "source": "public"
+    },
+    {
       "name": "Protobuf",
       "version": "3.14.0",
       "source": "public"
@@ -877,6 +882,16 @@
       "name": "MLRegistration",
       "version": "^~>\\s?1.[0-9]+$",
       "source": "private"
+    },
+    {
+      "name": "Quick",
+      "version": "^~>\\s?1.[0-9]+$",
+      "source": "public"
+    },
+    {
+      "name": "Nimble",
+      "version": "^~>\\s?7.[0-9]+$",
+      "source": "public"
     }
   ]
 }
