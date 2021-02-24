@@ -71,6 +71,11 @@
       "source": "public"
     },
     {
+      "name": "FirebaseCoreDiagnostics",
+      "version": "1.7.0",
+      "source": "public"
+    },
+    {
       "name": "FirebaseInstallations",
       "version": "^~>\\s?(6.31.1|6.9.0)$",
       "source": "public"
@@ -113,6 +118,11 @@
     {
       "name": "nanopb",
       "version": "1.30906.0",
+      "source": "public"
+    },
+    {
+      "name": "PromisesObjC",
+      "version": "1.2.12",
       "source": "public"
     },
     {
@@ -600,7 +610,7 @@
     {
       "name": "RxSwift",
       "version": "4.4.1",
-      "source": "private"
+      "source": "public"
     },
     {
       "name": "SDWebImage",
