@@ -66,6 +66,16 @@
       "source": "public"
     },
     {
+      "name": "FirebaseCore",
+      "version": "^~>\\s?(6.31.1|6.9.0)$",
+      "source": "public"
+    },
+    {
+      "name": "FirebaseInstallations",
+      "version": "^~>\\s?(6.31.1|6.9.0)$",
+      "source": "public"
+    },
+    {
       "name": "Firebase/Core",
       "version": "^~>\\s?(6.31.1|6.9.0)$",
       "source": "public"
@@ -88,6 +98,21 @@
     {
       "name": "Firebase/MLVisionFaceModel",
       "version": "^(6.31.1|6.9.0)$",
+      "source": "public"
+    },
+    {
+      "name": "GoogleAppMeasurement",
+      "version": "6.8.0",
+      "source": "public"
+    },
+    {
+      "name": "GoogleUtilities",
+      "version": "6.7.2",
+      "source": "public"
+    },
+    {
+      "name": "nanopb",
+      "version": "1.30906.0",
       "source": "public"
     },
     {
@@ -610,7 +635,7 @@
     {
       "name": "lottie-ios",
       "version": "2.0.6|2.5.0|^~>\\s?2.0$",
-      "source": "private"
+      "source": "public"
     },
     {
       "name": "MLFluxClient",
