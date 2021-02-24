@@ -53,7 +53,7 @@
     {
       "name": "FSQCollectionViewAlignedLayout",
       "version": "1.1.1",
-      "source": "private"
+      "source": "public"
     },
     {
       "name": "FXBlurView",
@@ -61,29 +61,34 @@
       "source": "public"
     },
     {
+      "name": "Firebase",
+      "version": "^~>\\s?(6.31.1|6.9.0)$",
+      "source": "public"
+    },
+    {
       "name": "Firebase/Core",
       "version": "^~>\\s?(6.31.1|6.9.0)$",
-      "source": "private"
+      "source": "public"
     },
     {
       "name": "Firebase/DynamicLinks",
       "version": "^~>\\s?(6.31.1|6.9.0)$",
-      "source": "private"
+      "source": "public"
     },
     {
       "name": "Firebase/Analytics",
       "version": "^~>\\s?(6.31.1|6.9.0)$",
-      "source": "private"
+      "source": "public"
     },
     {
       "name": "Firebase/MLVision",
       "version": "^(6.31.1|6.9.0)$",
-      "source": "private"
+      "source": "public"
     },
     {
       "name": "Firebase/MLVisionFaceModel",
       "version": "^(6.31.1|6.9.0)$",
-      "source": "private"
+      "source": "public"
     },
     {
       "name": "Flox",
@@ -173,7 +178,7 @@
     {
       "name": "MLCardForm",
       "version": "^~>\\s?0.[0-9]+$",
-      "source": "private"
+      "source": "public"
     },
     {
       "name": "MLBookmarks",
@@ -193,7 +198,7 @@
     {
       "name": "MLCardDrawer",
       "version": "^~>\\s?1.[0-9]+.?[0-9]*$",
-      "source": "private"
+      "source": "public"
     },
     {
       "name": "MLCart",
@@ -785,6 +790,16 @@
     },
     {
       "name": "CardsAcquisition",
+      "version": "^~>\\s?1.[0-9]+$",
+      "source": "private"
+    },
+    {
+      "name": "MLConfigurationProvider",
+      "version": "^~>\\s?3.[0-9]+$",
+      "source": "private"
+    },
+    {
+      "name": "MLRegistration",
       "version": "^~>\\s?1.[0-9]+$",
       "source": "private"
     }
