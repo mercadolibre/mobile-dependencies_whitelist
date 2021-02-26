@@ -2597,6 +2597,15 @@
             "Android": {
                 "key": "com.mercadolibre.android.credit.card.disable"
             }
+        },
+        {
+            "name": "totp_in_app",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.security_two_fa.totpinapp"
+            }
         }
     ]
 }
