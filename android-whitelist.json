@@ -1865,7 +1865,12 @@
     {
       "group": "com\\.mercadolibre\\.android\\.fees_installments",
       "name": "mlfees",
-      "version": "1\\.\\+"
+      "version": "1\\.\\+|2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.fees_installments",
+      "name": "mlfees-legacy",
+      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.tfs_commons",
