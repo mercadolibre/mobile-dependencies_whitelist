@@ -55,12 +55,6 @@
       "version": "5.8.0"
     },
     {
-      "name": "FBSDKLoginKit",
-      "source": "private",
-      "target": "production",
-      "version": "5.8.0"
-    },
-    {
       "name": "FSQCollectionViewAlignedLayout",
       "source": "public",
       "target": "production",
@@ -583,13 +577,6 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "expires": "2019-12-20",
-      "name": "MLNotifications",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?2.[0-9]+$"
-    },
-    {
       "name": "MLNotifications",
       "source": "private",
       "target": "production",
@@ -672,13 +659,6 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?3.[0-9]+"
-    },
-    {
-      "expires": "2020-12-30",
-      "name": "MLRemedies",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "MLRuleEngine",
@@ -1023,13 +1003,6 @@
       "version": "^~>\\s?1.[0-9]+"
     },
     {
-      "expires": "2020-5-15",
-      "name": "AndesUI",
-      "source": "public",
-      "target": "production",
-      "version": "^~>\\s?2.[0-9]+"
-    },
-    {
       "name": "AndesUI",
       "source": "public",
       "target": "production",
@@ -1122,8 +1095,14 @@
     {
       "name": "MLConfigurationProvider",
       "source": "private",
-      "target": "production",
+      "target": "test",
       "version": "^~>\\s?3.[0-9]+$"
+    },
+    {
+      "name": "MPConfigurationProvider",
+      "source": "private",
+      "target": "test",
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "MLRegistration",
