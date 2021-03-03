@@ -85,6 +85,30 @@
       "target": "production"
     },
     {
+      "name": "FirebaseAnalytics",
+      "version": "6.8.0",
+      "source": "public",
+      "target": "production"
+    },
+    {
+      "name": "FirebaseMLVision",
+      "version": "^~>\\s?0.[0-9]+",
+      "source": "public",
+      "target": "production"
+    },
+    {
+      "name": "FirebaseMLCommon",
+      "version": "^~>\\s?0.[0-9]+",
+      "source": "public",
+      "target": "production"
+    },
+    {
+      "name": "FirebaseMLVisionFaceModel",
+      "version": "^~>\\s?0.[0-9]+",
+      "source": "public",
+      "target": "production"
+    },
+    {
       "name": "FirebaseDynamicLinks",
       "version": "4.3.1",
       "source": "public",
@@ -175,6 +199,12 @@
       "target": "production"
     },
     {
+      "name": "GoogleAPIClientForREST",
+      "version": "^~>\\s?1.[0-9]+$",
+      "source": "public",
+      "target": "production"
+    },
+    {
       "name": "nanopb",
       "version": "1.30906.0",
       "source": "public",
@@ -201,6 +231,18 @@
     {
       "name": "Protobuf",
       "version": "3.14.0",
+      "source": "public",
+      "target": "production"
+    },
+    {
+      "name": "CMPopTipView",
+      "version": "2.2.0",
+      "source": "public",
+      "target": "production"
+    },
+    {
+      "name": "CustomBadge",
+      "version": "2.0.0",
       "source": "public",
       "target": "production"
     },
@@ -261,7 +303,7 @@
     {
       "name": "MGSwipeTableCell",
       "version": "1.6.1",
-      "source": "private",
+      "source": "public",
       "target": "production"
     },
     {
@@ -707,7 +749,7 @@
     {
       "name": "MPTopFloatingView",
       "version": "^~>\\s?0.[0-9]+$",
-      "source": "private",
+      "source": "public",
       "target": "production"
     },
     {
@@ -815,7 +857,7 @@
     {
       "name": "StyledPageControl",
       "version": "1.0",
-      "source": "private",
+      "source": "public",
       "target": "production"
     },
     {
@@ -893,7 +935,7 @@
     {
       "name": "MLBusinessComponents",
       "version": "^~>\\s?1.[0-9]+$",
-      "source": "private",
+      "source": "public",
       "target": "production"
     },
     {
@@ -1074,6 +1116,12 @@
     {
       "name": "Nimble",
       "version": "^~>\\s?7.[0-9]+$",
+      "source": "public",
+      "target": "test"
+    },
+    {
+      "name": "OCMock",
+      "version": "^~>\\s?3.[0-9]+$",
       "source": "public",
       "target": "test"
     }
