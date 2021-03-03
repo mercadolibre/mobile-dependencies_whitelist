@@ -430,7 +430,7 @@
       "name": "MLFeesAndInstallments",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s2.[0-9]+$"
     },
     {
       "name": "MLClassifiedsDynamicFlow",
