@@ -39,7 +39,7 @@
     {
       "name": "Charts",
       "version": "3.4.0",
-      "source": "private",
+      "source": "public",
       "target": "production"
     },
     {
@@ -261,7 +261,7 @@
     {
       "name": "ISO8601DateFormatter",
       "version": "0.8",
-      "source": "private",
+      "source": "public",
       "target": "production"
     },
     {
@@ -303,6 +303,30 @@
     {
       "name": "MGSwipeTableCell",
       "version": "1.6.1",
+      "source": "public",
+      "target": "production"
+    },
+    {
+      "name": "DZNPhotoPickerController",
+      "version": "1.6.1",
+      "source": "public",
+      "target": "production"
+    },
+    {
+      "name": "UIImageEffects",
+      "version": "0.0.1",
+      "source": "public",
+      "target": "production"
+    },
+    {
+      "name": "MTBBarcodeScanner",
+      "version": "4.0.0",
+      "source": "public",
+      "target": "production"
+    },
+    {
+      "name": "SSPullToRefresh",
+      "version": "1.2.4",
       "source": "public",
       "target": "production"
     },
@@ -453,7 +477,7 @@
     {
       "name": "MLDynamicModal",
       "version": "^~>\\s?0.[0-9].*$",
-      "source": "private",
+      "source": "public",
       "target": "production"
     },
     {
@@ -809,7 +833,7 @@
     {
       "name": "RSKImageCropper",
       "version": "1.6.3",
-      "source": "private",
+      "source": "public",
       "target": "production"
     },
     {
@@ -839,7 +863,7 @@
     {
       "name": "SDWebImage",
       "version": "^~>\\s?3.[0-9]+$",
-      "source": "private",
+      "source": "public",
       "target": "production"
     },
     {
@@ -965,7 +989,7 @@
     {
       "name": "UIImage-ResizeMagick",
       "version": "0.0.1",
-      "source": "private",
+      "source": "public",
       "target": "production"
     },
     {
@@ -1104,6 +1128,18 @@
     {
       "name": "MLRegistration",
       "version": "^~>\\s?1.[0-9]+$",
+      "source": "private",
+      "target": "production"
+    },
+    {
+      "name": "OHHTTPStubs",
+      "version": "4.0.2",
+      "source": "private",
+      "target": "production"
+    },
+    {
+      "name": "SwiftLint",
+      "version": "0.25.1",
       "source": "private",
       "target": "production"
     },
