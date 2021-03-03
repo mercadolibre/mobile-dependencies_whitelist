@@ -1134,13 +1134,13 @@
     {
       "name": "OHHTTPStubs",
       "version": "4.0.2",
-      "source": "private",
+      "source": "public",
       "target": "production"
     },
     {
       "name": "SwiftLint",
       "version": "0.25.1",
-      "source": "private",
+      "source": "public",
       "target": "production"
     },
     {
