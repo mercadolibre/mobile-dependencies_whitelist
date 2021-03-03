@@ -92,19 +92,19 @@
     },
     {
       "name": "FirebaseMLVision",
-      "version": "^~>\\s?0.[0-9]+",
+      "version": "0.21.0",
       "source": "public",
       "target": "production"
     },
     {
       "name": "FirebaseMLCommon",
-      "version": "^~>\\s?0.[0-9]+",
+      "version": "0.21.0",
       "source": "public",
       "target": "production"
     },
     {
       "name": "FirebaseMLVisionFaceModel",
-      "version": "^~>\\s?0.[0-9]+",
+      "version": "0.21.0",
       "source": "public",
       "target": "production"
     },
@@ -140,7 +140,7 @@
     },
     {
       "name": "FirebaseInstallations",
-      "version": "^~>\\s?(6.31.1|6.9.0)$",
+      "version": "1.7.0",
       "source": "public",
       "target": "production"
     },
@@ -200,7 +200,7 @@
     },
     {
       "name": "GoogleAPIClientForREST",
-      "version": "^~>\\s?1.[0-9]+$",
+      "version": "1.5.1",
       "source": "public",
       "target": "production"
     },
