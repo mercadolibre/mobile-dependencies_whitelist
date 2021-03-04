@@ -1141,6 +1141,24 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "name": "HyperioniOS",
+      "source": "public",
+      "target": "test",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "RxBlocking",
+      "source": "public",
+      "target": "test",
+      "version": "^~>\\s?4.[0-9]+$"
+    },
+    {
+      "name": "RxTest",
+      "source": "public",
+      "target": "test",
+      "version": "^~>\\s?4.[0-9]+$"
+    },
+    {
       "name": "Nimble",
       "source": "public",
       "target": "test",
