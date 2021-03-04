@@ -296,6 +296,8 @@
     },
     {
       "name": "JWT",
+      "source": "public",
+      "target": "production",
       "version": "2.2.0"
     },
     {
@@ -1131,6 +1133,12 @@
       "source": "public",
       "target": "test",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "SwiftFormat",
+      "source": "public",
+      "target": "test",
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "Nimble",
