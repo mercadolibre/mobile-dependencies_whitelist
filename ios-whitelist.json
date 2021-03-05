@@ -296,7 +296,7 @@
     },
     {
       "name": "JWT",
-      "source": "public",
+      "source": "private",
       "target": "production",
       "version": "2.2.0"
     },
