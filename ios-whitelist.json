@@ -1191,6 +1191,18 @@
       "source": "public",
       "target": "test",
       "version": "^~>\\s?3.[0-9]+$"
+    },
+    {
+      "name": "IQKeyboardManager",
+      "source": "public",
+      "target": "test",
+      "version": "^~>\\s?6.[0-9]+$"
+    },
+    {
+      "name": "IQKeyboardManagerSwift",
+      "source": "public",
+      "target": "test",
+      "version": "^~>\\s?6.[0-9]+$"
     }
   ]
 }
