@@ -1103,6 +1103,12 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "name": "StartUPInitializer",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "PointUI",
       "source": "private",
       "target": "production",
