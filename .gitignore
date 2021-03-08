@@ -16,4 +16,5 @@ Rakefile
 mobile-cd
 project.properties
 test-project.properties
-*.log
+*.log## Ignoring Release Process Client
+rp
