@@ -1,3 +1,8 @@
+# 9.4.0
+## Agregado
+- Bump gradle 6.7
+- FS Watch enabled by default
+
 # 9.3.0
 ## Agregado
 - Se agregó la task `publishPublicRelease`
