@@ -1,7 +1,7 @@
 package com.mercadolibre.android.gradle.base.publish
 
 import com.mercadolibre.android.gradle.base.modules.AndroidLibraryPublishableModule
-import com.mercadolibre.android.gradle.base.utils.BintrayConfiguration
+import com.mercadolibre.android.gradle.base.modules.PublishableModule
 import com.mercadolibre.android.gradle.base.utils.VersionContainer
 import org.gradle.api.Task
 import org.gradle.api.tasks.TaskProvider
@@ -12,7 +12,7 @@ import org.gradle.api.tasks.TaskProvider
 class PublishAarExperimentalTask extends PublishAarTask {
 
     @Override
-    TaskProvider<Task> register(PublishTask.Builder builder) {
+    TaskProvider<Task> register(Builder builder) {
         super.register(builder)
 
         VersionContainer.put(project.name, builder.taskName, flavorVersion("EXPERIMENTAL-${project.version}-${getTimestamp()}", builder.variant))
@@ -23,20 +23,14 @@ class PublishAarExperimentalTask extends PublishAarTask {
         } else {
             task = project.tasks.register(builder.taskName)
             task.configure {
-                doFirst {
-                    BintrayConfiguration.setBintrayConfig(new BintrayConfiguration.Builder().with {
-                        project = this.project
-                        bintrayRepository = BINTRAY_EXPERIMENTAL_REPOSITORY
-                        publicationName = this.taskName
-                        publicationPackaging = AndroidLibraryPublishableModule.PACKAGING
-                        publicationType = 'Experimental'
-                        return it
-                    })
-                }
                 group = TASK_GROUP
 
+                doLast {
+                    VersionContainer.logVersion("${project.group}:${project.name}:${VersionContainer.get(project.name, task.name, project.version as String)}")
+                }
+
                 dependsOn getBundleTaskName(project, variant), getSourcesJarTaskName(variant), getJavadocJarTask(variant)
-                finalizedBy 'bintrayUpload'
+                finalizedBy "publish${taskName.capitalize()}PublicationTo${PublishableModule.Repository.ANDROID_EXPERIMENTAL.name}Repository"
             }
         }
 
@@ -44,5 +38,4 @@ class PublishAarExperimentalTask extends PublishAarTask {
 
         return task
     }
-
 }

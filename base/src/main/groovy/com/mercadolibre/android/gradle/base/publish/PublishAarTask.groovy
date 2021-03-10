@@ -74,9 +74,9 @@ abstract class PublishAarTask extends PublishTask {
 
                     // Yes, javaCompile is deprecated, but whats the alternative?
                     source = variant.javaCompile.source
-                    
+
                     destinationDir = javaDocDestDir
-                    
+
                     classpath += project.files(project.android.getBootClasspath().join(File.pathSeparator))
                     project.configurations.findAll { it.canBeResolved && it.state != Configuration.State.UNRESOLVED }.each {
                         classpath += it
@@ -85,7 +85,7 @@ abstract class PublishAarTask extends PublishTask {
                     if (JavaVersion.current().isJava8Compatible()) {
                         options.addStringOption('Xdoclint:none', '-quiet')
                     }
-                    
+
                     options.memberLevel = JavadocMemberLevel.PROTECTED
 
                     options.links("http://docs.oracle.com/javase/7/docs/api/")
@@ -144,7 +144,7 @@ abstract class PublishAarTask extends PublishTask {
                     PomUtils.composeDynamicDependencies(project, xmlProvider)
 
                     project.file("${project.buildDir}/publications/${taskName}/pom-default.xml")
-                        .write(xmlProvider.asString().toString())
+                            .write(xmlProvider.asString().toString())
                 }
             }
 
@@ -154,7 +154,6 @@ abstract class PublishAarTask extends PublishTask {
                     dependsOn pomTaskName
                 }
             }
-
         }
     }
 
@@ -164,7 +163,7 @@ abstract class PublishAarTask extends PublishTask {
      * @param variant possibly flavored
      * @return flavored version or the same
      */
-    protected String flavorVersion(String version, def variant) {
+    protected static String flavorVersion(String version, def variant) {
         if (variant.flavorName) {
             return "${variant.flavorName}-${version}"
         }
@@ -173,8 +172,7 @@ abstract class PublishAarTask extends PublishTask {
 
     /**
      * Returns for AGP 3.2.0 or higher bundle${variant.name.capitalize()}Aar
-     * otherwise bundle${variant.name.capitalize()}
-     * @param project
+     * otherwise bundle${variant.name.capitalize()}* @param project
      * @param variant
      * @return bundle task name
      */

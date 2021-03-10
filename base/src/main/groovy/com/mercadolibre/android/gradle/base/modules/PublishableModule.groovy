@@ -2,9 +2,9 @@ package com.mercadolibre.android.gradle.base.modules
 
 import org.gradle.api.Project
 import org.gradle.api.Task
-import org.gradle.api.plugins.MavenPlugin
 import org.gradle.api.publish.maven.plugins.MavenPublishPlugin
 import org.gradle.api.tasks.TaskProvider
+import org.omg.CORBA.RepositoryIdHelper
 
 /**
  * Abstract module in charge of publishing archives into maven/bintray/whatever
@@ -21,12 +21,34 @@ abstract class PublishableModule implements Module {
 
     private static final String TASK_GET_PROJECT_VERSION = "getProjectVersion"
 
+    enum Repository {
+        ANDROID_PUBLIC("AndroidPublic"),
+        ANDROID_RELEASES("AndroidReleases"),
+        ANDROID_EXPERIMENTAL("AndroidExperimental")
+
+        private String name
+
+        Repository(String name) {
+            this.name = name
+        }
+
+        String getName() {
+            return name
+        }
+    }
+
+    private static final Map<Repository, String> REPOSITORIES = new HashMap<Repository, String>() {
+        {
+            put(Repository.ANDROID_PUBLIC, "https://android-test.artifacts.furycloud.io/repository/internal")
+            put(Repository.ANDROID_EXPERIMENTAL, "https://android-test.artifacts.furycloud.io/repository/internal")
+            put(Repository.ANDROID_RELEASES, "https://android-test.artifacts.furycloud.io/repository/internal")
+        }
+    }
+
     @Override
     void configure(Project project) {
         project.with {
             apply plugin: MavenPublishPlugin
-            apply plugin: MavenPlugin
-            apply plugin: 'com.jfrog.bintray'
 
             configurations {
                 archives {
@@ -35,7 +57,24 @@ abstract class PublishableModule implements Module {
             }
         }
 
+        setupPublishingRepositories(project)
+
         createGetProjectVersionTask(project)
+    }
+
+    private void setupPublishingRepositories(Project project) {
+        REPOSITORIES.forEach({ repository, repUrl ->
+            project.publishing.repositories.maven {
+                name = repository.name
+                url = repUrl
+                credentials {
+                    credentials {
+                        username "mobile"
+                        password "123456"
+                    }
+                }
+            }
+        })
     }
 
     /**
