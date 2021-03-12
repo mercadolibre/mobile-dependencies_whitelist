@@ -172,7 +172,8 @@ abstract class PublishAarTask extends PublishTask {
 
     /**
      * Returns for AGP 3.2.0 or higher bundle${variant.name.capitalize()}Aar
-     * otherwise bundle${variant.name.capitalize()}* @param project
+     * otherwise bundle${variant.name.capitalize()}
+     * @param project
      * @param variant
      * @return bundle task name
      */
