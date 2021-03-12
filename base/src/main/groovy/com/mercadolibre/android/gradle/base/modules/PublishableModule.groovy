@@ -1,10 +1,12 @@
 package com.mercadolibre.android.gradle.base.modules
 
+import com.mercadolibre.android.gradle.base.publish.ProjectRepositoryConfiguration
+import com.mercadolibre.android.gradle.base.publish.Repository
+import com.mercadolibre.android.gradle.base.publish.RepositoryProvider
 import org.gradle.api.Project
 import org.gradle.api.Task
 import org.gradle.api.publish.maven.plugins.MavenPublishPlugin
 import org.gradle.api.tasks.TaskProvider
-import org.omg.CORBA.RepositoryIdHelper
 
 /**
  * Abstract module in charge of publishing archives into maven/bintray/whatever
@@ -21,30 +23,6 @@ abstract class PublishableModule implements Module {
 
     private static final String TASK_GET_PROJECT_VERSION = "getProjectVersion"
 
-    enum Repository {
-        ANDROID_PUBLIC("AndroidPublic"),
-        ANDROID_RELEASES("AndroidReleases"),
-        ANDROID_EXPERIMENTAL("AndroidExperimental")
-
-        private String name
-
-        Repository(String name) {
-            this.name = name
-        }
-
-        String getName() {
-            return name
-        }
-    }
-
-    private static final Map<Repository, String> REPOSITORIES = new HashMap<Repository, String>() {
-        {
-            put(Repository.ANDROID_PUBLIC, "https://android-test.artifacts.furycloud.io/repository/internal")
-            put(Repository.ANDROID_EXPERIMENTAL, "https://android-test.artifacts.furycloud.io/repository/internal")
-            put(Repository.ANDROID_RELEASES, "https://android-test.artifacts.furycloud.io/repository/internal")
-        }
-    }
-
     @Override
     void configure(Project project) {
         project.with {
@@ -57,30 +35,16 @@ abstract class PublishableModule implements Module {
             }
         }
 
-        setupPublishingRepositories(project)
+        List<Repository> repositories = RepositoryProvider.getRepositories()
+        ProjectRepositoryConfiguration.setupPublishingRepositories(project, repositories)
 
         createGetProjectVersionTask(project)
-    }
-
-    private void setupPublishingRepositories(Project project) {
-        REPOSITORIES.forEach({ repository, repUrl ->
-            project.publishing.repositories.maven {
-                name = repository.name
-                url = repUrl
-                credentials {
-                    credentials {
-                        username "mobile"
-                        password "123456"
-                    }
-                }
-            }
-        })
     }
 
     /**
      * Creates the "getProjectVersion" task.
      */
-    private void createGetProjectVersionTask(Project project) {
+    private static void createGetProjectVersionTask(Project project) {
         TaskProvider<Task> task = project.tasks.register(TASK_GET_PROJECT_VERSION)
         task.configure { Task it ->
             it.setDescription('Gets project version')
@@ -101,8 +65,7 @@ abstract class PublishableModule implements Module {
         }
     }
 
-    protected String getTaskName(String type, String packaging = '', String variantName = '') {
+    protected static String getTaskName(String type, String packaging = '', String variantName = '') {
         return "publish${packaging.capitalize()}${type}${variantName.capitalize()}"
     }
-
 }

@@ -1,16 +1,16 @@
 package com.mercadolibre.android.gradle.base.publish
 
-import com.mercadolibre.android.gradle.base.modules.PublishableModule
+
 import com.mercadolibre.android.gradle.base.utils.VersionContainer
 import org.gradle.api.Task
 import org.gradle.api.tasks.TaskProvider
 
 abstract class PublishJarReleaseTask extends PublishJarTask {
 
-    protected PublishableModule.Repository repository
+    protected String repositoryName
 
-    protected PublishJarReleaseTask(PublishableModule.Repository repository) {
-        this.repository = repository
+    protected PublishJarReleaseTask(String repositoryName) {
+        this.repositoryName = repositoryName
     }
 
     @Override
@@ -28,7 +28,7 @@ abstract class PublishJarReleaseTask extends PublishJarTask {
                 group = TASK_GROUP
 
                 dependsOn "jar", "${variant.name}SourcesJar", "${variant.name}JavadocJar"
-                finalizedBy "publish${taskName.capitalize()}PublicationTo${repository.name}Repository"
+                finalizedBy "publish${taskName.capitalize()}PublicationTo${repositoryName}Repository"
             }
         }
         createMavenPublication()
@@ -38,12 +38,12 @@ abstract class PublishJarReleaseTask extends PublishJarTask {
 
 class PublishJarPrivateReleaseTask extends PublishJarReleaseTask {
     PublishJarPrivateReleaseTask() {
-        super(PublishableModule.Repository.ANDROID_RELEASES)
+        super("AndroidRelease")
     }
 }
 
 class PublishJarPublicReleaseTask extends PublishJarReleaseTask {
     PublishJarPublicReleaseTask() {
-        super(PublishableModule.Repository.ANDROID_PUBLIC)
+        super("AndroidPublic")
     }
 }

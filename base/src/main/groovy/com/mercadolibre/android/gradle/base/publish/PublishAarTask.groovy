@@ -198,6 +198,4 @@ abstract class PublishAarTask extends PublishTask {
     protected static String getJavadocJarTask(def variant) {
         return "${variant.name}JavadocJar"
     }
-
-
 }

@@ -1,7 +1,5 @@
 package com.mercadolibre.android.gradle.base.publish
 
-import com.mercadolibre.android.gradle.base.modules.AndroidLibraryPublishableModule
-import com.mercadolibre.android.gradle.base.modules.PublishableModule
 import com.mercadolibre.android.gradle.base.utils.VersionContainer
 import org.gradle.api.Task
 import org.gradle.api.tasks.TaskProvider
@@ -30,7 +28,7 @@ class PublishAarExperimentalTask extends PublishAarTask {
                 }
 
                 dependsOn getBundleTaskName(project, variant), getSourcesJarTaskName(variant), getJavadocJarTask(variant)
-                finalizedBy "publish${taskName.capitalize()}PublicationTo${PublishableModule.Repository.ANDROID_EXPERIMENTAL.name}Repository"
+                finalizedBy "publish${taskName.capitalize()}PublicationToAndroidExperimentalRepository"
             }
         }
 

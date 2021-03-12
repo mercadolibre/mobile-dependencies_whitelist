@@ -137,5 +137,4 @@ abstract class PublishJarTask extends PublishTask {
             }
         }
     }
-
 }

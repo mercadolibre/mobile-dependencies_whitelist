@@ -1,7 +1,5 @@
 package com.mercadolibre.android.gradle.base.publish
 
-import com.mercadolibre.android.gradle.base.modules.JavaPublishableModule
-import com.mercadolibre.android.gradle.base.modules.PublishableModule
 import com.mercadolibre.android.gradle.base.utils.VersionContainer
 import org.gradle.api.Task
 import org.gradle.api.tasks.TaskProvider
@@ -26,7 +24,7 @@ class PublishJarExperimentalTask extends PublishJarTask {
                 group = TASK_GROUP
 
                 dependsOn "jar", "${variant.name}SourcesJar", "${variant.name}JavadocJar"
-                finalizedBy "publish${taskName.capitalize()}PublicationTo${PublishableModule.Repository.ANDROID_EXPERIMENTAL.name}Repository"
+                finalizedBy "publish${taskName.capitalize()}PublicationToAndroidExperimentalRepository"
             }
         }
         createMavenPublication()
