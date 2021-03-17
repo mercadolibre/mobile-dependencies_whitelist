@@ -2026,6 +2026,11 @@
       "group": "io\\.jsonwebtoken",
       "name": "jjwt-json",
       "version": "0\\.11\\.2"
+    },
+    {
+      "group": "com\\.google\\.android\\.gms",
+      "name": "play-services-recaptcha",
+      "version": "16\\.0\\.0"
     }
   ]
 }
