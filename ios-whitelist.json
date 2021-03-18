@@ -1221,6 +1221,12 @@
       "source": "public",
       "target": "test",
       "version": "^~>\\s?7.[0-9]+$"
+    },
+    {
+      "name": "Auth0",
+      "source": "public",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     }
   ]
 }
