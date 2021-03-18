@@ -1006,8 +1006,13 @@
       "version": "5\\.\\+"
     },
     {
+      "expires": "2021-03-29",
       "group": "com\\.mercadolibre\\.android\\.recommendations",
       "version": "7\\.\\+|8\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.recommendations",
+      "version": "9\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.remedies",
