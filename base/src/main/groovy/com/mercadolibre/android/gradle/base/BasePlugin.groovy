@@ -229,10 +229,6 @@ class BasePlugin implements Plugin<Object> {
                     }
                 }
 
-                maven {
-                    url 'https://android-test.artifacts.furycloud.io/repository/internal'
-                }
-
                 // Meli internal release libs
                 maven {
                     url 'https://mercadolibre.bintray.com/android-releases'
@@ -302,9 +298,34 @@ class BasePlugin implements Plugin<Object> {
                     }
                 }
 
-                // catch all repositories
                 maven {
-                    url 'https://maven.artifacts.furycloud.io/repository/all'
+                    url 'https://android.artifacts.furycloud.io/repository/releases/'
+                    if ("$System.env.MAVEN_DEPLOYER_USER" && "$System.env.MAVEN_DEPLOYER_PASSWORD") {
+                        credentials {
+                            username "$System.env.MAVEN_DEPLOYER_USER"
+                            password "$System.env.MAVEN_DEPLOYER_PASSWORD"
+                        }
+                    }
+                    content {
+                        // only releases
+                        includeVersionByRegex('com\\.mercadolibre\\..*', '.*', '^((?!EXPERIMENTAL-|LOCAL-).)*$')
+                        includeVersionByRegex('com\\.mercadopago\\..*', '.*', '^((?!EXPERIMENTAL-|LOCAL-).)*$')
+                        includeGroup 'com.bugsnag'
+                    }
+                }
+
+                maven {
+                    url 'https://android.artifacts.furycloud.io/repository/experimental/'
+                    if ("$System.env.MAVEN_DEPLOYER_USER" && "$System.env.MAVEN_DEPLOYER_PASSWORD") {
+                        credentials {
+                            username "$System.env.MAVEN_DEPLOYER_USER"
+                            password "$System.env.MAVEN_DEPLOYER_PASSWORD"
+                        }
+                    }
+                    content {
+                        includeVersionByRegex('com\\.mercadolibre\\.android.*', '.*', '^(.*-)?EXPERIMENTAL-.*$')
+                        includeVersionByRegex('com\\.mercadopago\\.android.*', '.*', '^(.*-)?EXPERIMENTAL-.*$')
+                    }
                 }
             }
         }

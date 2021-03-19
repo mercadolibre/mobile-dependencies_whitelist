@@ -12,17 +12,16 @@ interface Credentials {
 }
 
 class EnvironmentPublishCredentials implements Credentials {
-    private static final String REPOSITORY_USER_ENV = "REPOSITORY_USER"
-    private static final String REPOSITORY_PASSWORD_ENV = "REPOSITORY_PASSWORD"
-    private static final String CI = "CI"
+    private static final String REPOSITORY_USER_ENV = "MAVEN_DEPLOYER_USER"
+    private static final String REPOSITORY_PASSWORD_ENV = "MAVEN_DEPLOYER_PASSWORD"
 
     @Override
     String getUsername() {
-        return System.getenv(CI) ? System.getenv(REPOSITORY_USER_ENV) : ""
+        return System.getenv(REPOSITORY_USER_ENV)
     }
 
     @Override
     String getPassword() {
-        return System.getenv(CI) ? System.getenv(REPOSITORY_PASSWORD_ENV) : ""
+        return System.getenv(REPOSITORY_PASSWORD_ENV)
     }
 }

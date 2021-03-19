@@ -3,9 +3,9 @@ package com.mercadolibre.android.gradle.base.publish
 class RepositoryProvider {
     private static final List<Repository> REPOSITORIES = new ArrayList<Repository>() {
         {
-            add(new Repository("AndroidPublic", "https://android-test.artifacts.furycloud.io/repository/internal", new EnvironmentPublishCredentials()))
-            add(new Repository("AndroidExperimental", "https://android-test.artifacts.furycloud.io/repository/internal", new EnvironmentPublishCredentials()))
-            add(new Repository("AndroidReleases", "https://android-test.artifacts.furycloud.io/repository/internal", new EnvironmentPublishCredentials()))
+            add(new Repository("AndroidPublic", "https://artifacts.mercadolibre.com/repository/public", new EnvironmentPublishCredentials()))
+            add(new Repository("AndroidExperimental", "https://android.artifacts.furycloud.io/repository/releases", new EnvironmentPublishCredentials()))
+            add(new Repository("AndroidReleases", "https://android.artifacts.furycloud.io/repository/experimental", new EnvironmentPublishCredentials()))
         }
     }
 
