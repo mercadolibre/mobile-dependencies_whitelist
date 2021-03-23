@@ -2597,6 +2597,15 @@
             "Android": {
                 "key": "com.mercadolibre.android.security_two_fa.totpinapp"
             }
+        },
+        {
+            "name": "yuca_autentication",
+            "iOS": {
+                "key": "YucaAuthentication"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.yuca_authentication"
+            }
         }
     ]
 }
