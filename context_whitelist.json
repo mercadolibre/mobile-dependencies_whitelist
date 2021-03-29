@@ -1965,6 +1965,15 @@
         {
             "name": "mobile_devices_security",
             "iOS": {
+                "key": "NativeReauth"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.security.native_reauth"
+            }
+        },
+        {
+            "name": "mobile_devices_security",
+            "iOS": {
                 "key": "MobileDevicesSecurity"
                       },
             "Android": {
