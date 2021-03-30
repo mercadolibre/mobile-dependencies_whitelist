@@ -2433,6 +2433,33 @@
                 "key": ""
             },
             "Android": {
+                "key": "com.mercadolibre.android.mlwebkit.webkit"
+            }
+        },
+        {
+            "name": "webkit",
+            "iOS": {
+                "key": "MLWebkit"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.mlwebkit"
+            }
+        },
+        {
+            "name": "webkit",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.mlwebkit.webkitcomponent"
+            }
+        },
+        {
+            "name": "webkit",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
                 "key": "com.mercadolibre.android.webkit"
             }
         },
