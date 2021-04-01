@@ -52,7 +52,7 @@
       "name": "FBSDKCoreKit",
       "source": "public",
       "target": "production",
-      "version": "5.8.0"
+      "version": "^~>\\s?(5.8.0|9.0.0)$"
     },
     {
       "name": "FSQCollectionViewAlignedLayout",
