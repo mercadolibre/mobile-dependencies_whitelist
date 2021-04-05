@@ -394,6 +394,12 @@
       "version": "4\\.\\+"
     },
     {
+      "expires": "2021-04-12",
+      "group": "com\\.mercadolibre\\.android\\.ignite",
+      "name": "core",
+      "version": "1\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.ignite",
       "name": "core",
       "version": "2\\.\\+"
@@ -772,9 +778,21 @@
       "version": "4\\.\\+"
     },
     {
+      "expires": "2021-04-12",
+      "group": "com\\.mercadolibre\\.android\\.navigationcp",
+      "name": "navigationcp",
+      "version": "3\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.navigationcp",
       "name": "navigationcp",
       "version": "4\\.\\+"
+    },
+    {
+      "expires": "2021-04-12",
+      "group": "com\\.mercadolibre\\.android\\.navigationcp",
+      "name": "shipping-address",
+      "version": "3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.navigationcp",
