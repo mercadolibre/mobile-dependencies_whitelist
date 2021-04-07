@@ -1221,6 +1221,12 @@
       "source": "public",
       "target": "test",
       "version": "^~>\\s?7.[0-9]+$"
+    },
+    {
+      "name": "DeveloperMode",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
     }
   ]
 }
