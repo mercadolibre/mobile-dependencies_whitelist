@@ -2624,6 +2624,15 @@
             "Android": {
                 "key": "com.mercadolibre.android.security_two_fa.totpinapp"
             }
-        }
+        },
+        {
+            "name": "developer_mode",
+            "iOS": {
+                "key": "DeveloperMode"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.developer_mode"
+            }
+        },
     ]
 }
