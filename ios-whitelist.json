@@ -713,6 +713,12 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "MLWebkit",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "MLUINavigationCP",
       "source": "private",
       "target": "production",
