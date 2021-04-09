@@ -231,7 +231,7 @@ class BasePlugin implements Plugin<Object> {
 
                 // Meli internal release libs
                 maven {
-                    url 'https://android.artifacts.furycloud.io/repository/releases'
+                    url 'https://android.artifacts.furycloud.io/repository/releases/'
                     credentials {
                         username 'fury-user'
                         password '-^BVV4TCwLdEne@f'
@@ -247,7 +247,7 @@ class BasePlugin implements Plugin<Object> {
 
                 // Meli public libs - these are fewer than the private ones, so we try it later
                 maven {
-                    url 'https://artifacts.mercadolibre.com/repository/android-releases'
+                    url 'https://artifacts.mercadolibre.com/repository/android-releases/'
                     content {
                         // only releases
                         includeVersionByRegex('com\\.mercadolibre\\.android.*', '.*', '^((?!EXPERIMENTAL-|LOCAL-).)*$')
@@ -280,7 +280,7 @@ class BasePlugin implements Plugin<Object> {
 
                 // only used for experimental libs
                 maven {
-                    url 'https://android.artifacts.furycloud.io/repository/experimental'
+                    url 'https://android.artifacts.furycloud.io/repository/experimental/'
                     credentials {
                         username 'fury-user'
                         password '-^BVV4TCwLdEne@f'
