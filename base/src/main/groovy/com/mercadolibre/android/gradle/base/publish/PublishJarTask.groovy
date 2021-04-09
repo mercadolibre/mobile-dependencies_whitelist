@@ -125,7 +125,7 @@ abstract class PublishJarTask extends PublishTask {
                     PomUtils.composeDynamicDependencies(project, xmlProvider)
 
                     project.file("${project.buildDir}/publications/${taskName}/pom-default.xml")
-                        .write(xmlProvider.asString().toString())
+                            .write(xmlProvider.asString().toString())
                 }
             }
 
@@ -137,5 +137,4 @@ abstract class PublishJarTask extends PublishTask {
             }
         }
     }
-
 }

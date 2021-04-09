@@ -11,28 +11,21 @@ import java.text.SimpleDateFormat
  */
 abstract class PublishTask {
 
-    protected static final String BINTRAY_PUBLIC_REPOSITORY = 'android-public'
-    protected static final String BINTRAY_RELEASE_REPOSITORY = 'android-releases'
-    protected static final String BINTRAY_EXPERIMENTAL_REPOSITORY = 'android-experimental'
-
     public static final String TASK_GROUP = 'publishing'
 
     abstract TaskProvider<Task> register(Builder builder)
 
-    protected String getTimestamp() {
+    protected static String getTimestamp() {
         def sdf = new SimpleDateFormat('yyyyMMddHHmmss')
         sdf.timeZone = TimeZone.getTimeZone('UTC')
         return sdf.format(new Date())
     }
 
     static class Builder {
-
         Project project = null
 
         def variant = null
 
         String taskName = null
-
     }
-
 }

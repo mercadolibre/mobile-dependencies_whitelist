@@ -10,7 +10,7 @@ import org.gradle.api.tasks.TaskProvider
 class PublishJarLocalTask extends PublishJarTask {
 
     @Override
-    TaskProvider<Task> register(PublishTask.Builder builder) {
+    TaskProvider<Task> register(Builder builder) {
         super.register(builder)
 
         VersionContainer.put(project.name, builder.taskName, "LOCAL-${project.version}-${getTimestamp()}")
