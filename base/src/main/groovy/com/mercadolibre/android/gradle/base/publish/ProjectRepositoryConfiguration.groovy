@@ -11,7 +11,7 @@ class ProjectRepositoryConfiguration {
                 name = repository.name
                 url = repository.url
                 if (repository.credentials.username == null || repository.credentials.password == null) {
-                    println "[!] No repository credentials were found. Configuring publishing without them."
+                    println "[!] No repository credentials were found. Configuring ${repository.name} publishing without them."
                 } else {
                     credentials {
                         credentials {

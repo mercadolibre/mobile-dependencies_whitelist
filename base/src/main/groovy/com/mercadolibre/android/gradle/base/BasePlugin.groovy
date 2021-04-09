@@ -244,9 +244,24 @@ class BasePlugin implements Plugin<Object> {
                     }
                 }
 
+                maven {
+                    url 'https://android.artifacts.furycloud.io/repository/releases'
+                    credentials {
+                        username 'fury-user'
+                        password '-^BVV4TCwLdEne@f'
+                    }
+                    content {
+                        // only releases
+                        includeVersionByRegex('com\\.mercadolibre\\..*', '.*', '^((?!EXPERIMENTAL-|LOCAL-).)*$')
+                        includeVersionByRegex('com\\.mercadopago\\..*', '.*', '^((?!EXPERIMENTAL-|LOCAL-).)*$')
+                        includeGroup 'com.bugsnag'
+                    }
+                }
+
+
                 // Meli public libs - these are fewer than the private ones, so we try it later
                 maven {
-                    url 'https://mercadolibre.bintray.com/android-public'
+                    url 'https://artifacts.mercadolibre.com/repository/maven-releases'
                     content {
                         // only releases
                         includeVersionByRegex('com\\.mercadolibre\\.android.*', '.*', '^((?!EXPERIMENTAL-|LOCAL-).)*$')
@@ -279,10 +294,10 @@ class BasePlugin implements Plugin<Object> {
 
                 // only used for experimental libs
                 maven {
-                    url 'https://mercadolibre.bintray.com/android-experimental'
+                    url 'https://android.artifacts.furycloud.io/repository/experimental'
                     credentials {
-                        username 'bintray-read-only'
-                        password 'e7b8b22a0b84527c04194c31f90bc0b879d8fd9d'
+                        username 'fury-user'
+                        password '-^BVV4TCwLdEne@f'
                     }
                     content {
                         includeVersionByRegex('com\\.mercadolibre\\.android.*', '.*', '^(.*-)?EXPERIMENTAL-.*$')
@@ -298,35 +313,8 @@ class BasePlugin implements Plugin<Object> {
                     }
                 }
 
-                maven {
-                    url 'https://android.artifacts.furycloud.io/repository/releases/'
-                    if ("$System.env.MAVEN_DEPLOYER_USER" && "$System.env.MAVEN_DEPLOYER_PASSWORD") {
-                        credentials {
-                            username "$System.env.MAVEN_DEPLOYER_USER"
-                            password "$System.env.MAVEN_DEPLOYER_PASSWORD"
-                        }
-                    }
-                    content {
-                        // only releases
-                        includeVersionByRegex('com\\.mercadolibre\\..*', '.*', '^((?!EXPERIMENTAL-|LOCAL-).)*$')
-                        includeVersionByRegex('com\\.mercadopago\\..*', '.*', '^((?!EXPERIMENTAL-|LOCAL-).)*$')
-                        includeGroup 'com.bugsnag'
-                    }
-                }
-
-                maven {
-                    url 'https://android.artifacts.furycloud.io/repository/experimental/'
-                    if ("$System.env.MAVEN_DEPLOYER_USER" && "$System.env.MAVEN_DEPLOYER_PASSWORD") {
-                        credentials {
-                            username "$System.env.MAVEN_DEPLOYER_USER"
-                            password "$System.env.MAVEN_DEPLOYER_PASSWORD"
-                        }
-                    }
-                    content {
-                        includeVersionByRegex('com\\.mercadolibre\\.android.*', '.*', '^(.*-)?EXPERIMENTAL-.*$')
-                        includeVersionByRegex('com\\.mercadopago\\.android.*', '.*', '^(.*-)?EXPERIMENTAL-.*$')
-                    }
-                }
+                // catch all repositories
+                jcenter()
             }
         }
     }

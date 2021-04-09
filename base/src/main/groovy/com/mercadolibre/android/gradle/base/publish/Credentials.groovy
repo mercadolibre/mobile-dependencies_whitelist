@@ -12,8 +12,8 @@ interface Credentials {
 }
 
 class EnvironmentPublishCredentials implements Credentials {
-    private static final String REPOSITORY_USER_ENV = "MAVEN_DEPLOYER_USER"
-    private static final String REPOSITORY_PASSWORD_ENV = "MAVEN_DEPLOYER_PASSWORD"
+    private static final String REPOSITORY_USER_ENV = "NEXUS_DEPLOYER_USER"
+    private static final String REPOSITORY_PASSWORD_ENV = "NEXUS_DEPLOYER_PASSWORD"
 
     @Override
     String getUsername() {
