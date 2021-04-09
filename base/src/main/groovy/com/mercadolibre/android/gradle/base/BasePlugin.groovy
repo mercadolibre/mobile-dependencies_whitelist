@@ -231,20 +231,6 @@ class BasePlugin implements Plugin<Object> {
 
                 // Meli internal release libs
                 maven {
-                    url 'https://mercadolibre.bintray.com/android-releases'
-                    credentials {
-                        username 'bintray-read-only'
-                        password 'e7b8b22a0b84527c04194c31f90bc0b879d8fd9d'
-                    }
-                    content {
-                        // only releases
-                        includeVersionByRegex('com\\.mercadolibre\\..*', '.*', '^((?!EXPERIMENTAL-|LOCAL-).)*$')
-                        includeVersionByRegex('com\\.mercadopago\\..*', '.*', '^((?!EXPERIMENTAL-|LOCAL-).)*$')
-                        includeGroup 'com.bugsnag'
-                    }
-                }
-
-                maven {
                     url 'https://android.artifacts.furycloud.io/repository/releases'
                     credentials {
                         username 'fury-user'
