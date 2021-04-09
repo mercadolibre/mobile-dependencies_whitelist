@@ -6,6 +6,11 @@
 - Se modifican la publicación para soportar el Maven Gradle Plugin hacia un servicio Nexus privado interno
 - Se modifican los repositorios de Bintray que se inyectan a los repositorios, reemplazandolos por los del Nexus
 
+# 9.4.0
+## Agregado
+- Bump gradle 6.7
+- FS Watch enabled by default
+
 # 9.3.0
 ## Agregado
 - Se agregó la task `publishPublicRelease`
