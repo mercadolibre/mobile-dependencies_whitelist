@@ -247,7 +247,7 @@ class BasePlugin implements Plugin<Object> {
 
                 // Meli public libs - these are fewer than the private ones, so we try it later
                 maven {
-                    url 'https://artifacts.mercadolibre.com/repository/maven-releases'
+                    url 'https://artifacts.mercadolibre.com/repository/android-releases'
                     content {
                         // only releases
                         includeVersionByRegex('com\\.mercadolibre\\.android.*', '.*', '^((?!EXPERIMENTAL-|LOCAL-).)*$')
