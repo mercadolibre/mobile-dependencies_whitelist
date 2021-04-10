@@ -15,6 +15,8 @@ class ApplicationLintOptionsModule implements Module {
             android {
                 lintOptions {
                     checkDependencies true
+                    //TODO: Remove this when FloathMath AGP's lint error in SCA config files has been fixed
+                    disable 'LintError'
                 }
             }            
         }
