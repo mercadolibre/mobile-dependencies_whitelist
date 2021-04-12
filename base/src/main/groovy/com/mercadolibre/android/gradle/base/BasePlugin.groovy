@@ -1,13 +1,13 @@
 package com.mercadolibre.android.gradle.base
 
 import com.mercadolibre.android.gradle.base.modules.*
-import com.mercadolibre.android.gradle.base.modules.ApplicationLintOptionsModule
-import com.mercadolibre.android.gradle.base.modules.KotlinCheckModule
+import com.mercadolibre.android.gradle.base.publish.PublishTask
 import com.mercadolibre.android.gradle.base.utils.VersionContainer
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.initialization.Settings
 import org.gradle.api.plugins.JavaPlugin
+
 /**
  * Gradle base plugin for MercadoLibre Android projects/modules.
  */
@@ -17,13 +17,11 @@ class BasePlugin implements Plugin<Object> {
     public static final String ANDROID_APPLICATION_PLUGIN = 'com.android.application'
     public static final String KOTLIN_ANDROID_PLUGIN = 'kotlin-android'
 
-    private static final String BINTRAY_UPLOAD_TASK_NAME = "bintrayUpload"
-
     private static final ANDROID_LIBRARY_MODULES = { ->
         return [
-            new AndroidLibraryPublishableModule(),
-            new AndroidLibraryTestableModule(),
-            new AndroidJacocoModule()
+                new AndroidLibraryPublishableModule(),
+                new AndroidLibraryTestableModule(),
+                new AndroidJacocoModule()
         ]
     }
 
@@ -37,27 +35,27 @@ class BasePlugin implements Plugin<Object> {
 
     private static final JAVA_MODULES = { ->
         return [
-            new JavaPublishableModule(),
-            new JavaJacocoModule()
+                new JavaPublishableModule(),
+                new JavaJacocoModule()
         ]
     }
 
     private static final PROJECT_MODULES = { ->
         return [
-            new BuildScanModule(),
-            new ListProjectsModule()
+                new BuildScanModule(),
+                new ListProjectsModule()
         ]
     }
 
     private static final SETTINGS_MODULES = {
         return [
-            new BuildScanModule()
+                new BuildScanModule()
         ]
     }
 
     private static final KOTLIN_MODULES = { ->
         return [
-            new KotlinCheckModule()
+                new KotlinCheckModule()
         ]
     }
 
@@ -71,8 +69,6 @@ class BasePlugin implements Plugin<Object> {
      */
     private Settings settings
 
-    private boolean doesTaskGraphHasPublishableTasks = false
-
     /**
      * Method called by Gradle when applying this plugin.
      * @param target the Gradle target which can be Gradle Settings o Gradle project
@@ -80,10 +76,9 @@ class BasePlugin implements Plugin<Object> {
     @Override
     void apply(Object target) {
         if (target instanceof Settings) {
-            apply((Settings) target);
-        }
-        else if (target instanceof Project) {
-            apply((Project) target);
+            apply((Settings) target)
+        } else if (target instanceof Project) {
+            apply((Project) target)
         }
     }
 
@@ -111,7 +106,7 @@ class BasePlugin implements Plugin<Object> {
 
         avoidCacheForDynamicVersions()
         addHasClasspathMethod()
-        setupRepositories()
+        setupFetchingRepositories()
         createExtensions()
 
         project.allprojects {
@@ -153,23 +148,7 @@ class BasePlugin implements Plugin<Object> {
             module -> module.configure(project)
         }
 
-        project.gradle.taskGraph.whenReady { taskGraph ->
-            doesTaskGraphHasPublishableTasks = checkIfTaskGraphHasPublishableTasks(project.gradle.taskGraph)
-        }
-
-        // We ensure all artifacts are published
-        project.gradle.buildFinished { buildResult ->
-            if (!buildResult.failure && doesTaskGraphHasPublishableTasks) {
-                println 'Publishing artifacts to bintray'
-                project.tasks.bintrayPublish.taskAction()
-            }
-        }
-
         fixNoClassesConfiguredForSpotBugsAnalysis(project)
-    }
-
-    boolean checkIfTaskGraphHasPublishableTasks(def taskGraph) {
-        return taskGraph.getAllTasks().any { task -> task.getName() == BINTRAY_UPLOAD_TASK_NAME }
     }
 
     /**
@@ -189,8 +168,8 @@ class BasePlugin implements Plugin<Object> {
      */
     void fixFindbugsDuplicateDexEntryWithJSR305(Project project) {
         project.configurations {
-            all*.exclude module:"jsr305"
-            all*.exclude module:"jcip-annotations"
+            all*.exclude module: "jsr305"
+            all*.exclude module: "jcip-annotations"
         }
     }
     /**
@@ -236,7 +215,7 @@ class BasePlugin implements Plugin<Object> {
     /**
      * Sets up the repositories.
      */
-    private void setupRepositories() {
+    private void setupFetchingRepositories() {
         project.allprojects {
             repositories {
                 // Google libs
@@ -251,10 +230,10 @@ class BasePlugin implements Plugin<Object> {
 
                 // Meli internal release libs
                 maven {
-                    url 'https://mercadolibre.bintray.com/android-releases'
+                    url 'https://android.artifacts.furycloud.io/repository/releases'
                     credentials {
-                        username 'bintray-read-only'
-                        password 'e7b8b22a0b84527c04194c31f90bc0b879d8fd9d'
+                        username 'fury-user'
+                        password '-^BVV4TCwLdEne@f'
                     }
                     content {
                         // only releases
@@ -264,9 +243,10 @@ class BasePlugin implements Plugin<Object> {
                     }
                 }
 
+
                 // Meli public libs - these are fewer than the private ones, so we try it later
                 maven {
-                    url 'https://mercadolibre.bintray.com/android-public'
+                    url 'https://artifacts.mercadolibre.com/repository/android-releases'
                     content {
                         // only releases
                         includeVersionByRegex('com\\.mercadolibre\\.android.*', '.*', '^((?!EXPERIMENTAL-|LOCAL-).)*$')
@@ -299,10 +279,10 @@ class BasePlugin implements Plugin<Object> {
 
                 // only used for experimental libs
                 maven {
-                    url 'https://mercadolibre.bintray.com/android-experimental'
+                    url 'https://android.artifacts.furycloud.io/repository/experimental'
                     credentials {
-                        username 'bintray-read-only'
-                        password 'e7b8b22a0b84527c04194c31f90bc0b879d8fd9d'
+                        username 'fury-user'
+                        password '-^BVV4TCwLdEne@f'
                     }
                     content {
                         includeVersionByRegex('com\\.mercadolibre\\.android.*', '.*', '^(.*-)?EXPERIMENTAL-.*$')

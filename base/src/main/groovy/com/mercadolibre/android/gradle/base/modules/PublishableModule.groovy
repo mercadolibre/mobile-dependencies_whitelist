@@ -1,8 +1,10 @@
 package com.mercadolibre.android.gradle.base.modules
 
+import com.mercadolibre.android.gradle.base.publish.ProjectRepositoryConfiguration
+import com.mercadolibre.android.gradle.base.publish.Repository
+import com.mercadolibre.android.gradle.base.publish.RepositoryProvider
 import org.gradle.api.Project
 import org.gradle.api.Task
-import org.gradle.api.plugins.MavenPlugin
 import org.gradle.api.publish.maven.plugins.MavenPublishPlugin
 import org.gradle.api.tasks.TaskProvider
 
@@ -25,8 +27,6 @@ abstract class PublishableModule implements Module {
     void configure(Project project) {
         project.with {
             apply plugin: MavenPublishPlugin
-            apply plugin: MavenPlugin
-            apply plugin: 'com.jfrog.bintray'
 
             configurations {
                 archives {
@@ -35,13 +35,16 @@ abstract class PublishableModule implements Module {
             }
         }
 
+        List<Repository> repositories = RepositoryProvider.getRepositories()
+        ProjectRepositoryConfiguration.setupPublishingRepositories(project, repositories)
+
         createGetProjectVersionTask(project)
     }
 
     /**
      * Creates the "getProjectVersion" task.
      */
-    private void createGetProjectVersionTask(Project project) {
+    private static void createGetProjectVersionTask(Project project) {
         TaskProvider<Task> task = project.tasks.register(TASK_GET_PROJECT_VERSION)
         task.configure { Task it ->
             it.setDescription('Gets project version')
@@ -62,8 +65,7 @@ abstract class PublishableModule implements Module {
         }
     }
 
-    protected String getTaskName(String type, String packaging = '', String variantName = '') {
+    protected static String getTaskName(String type, String packaging = '', String variantName = '') {
         return "publish${packaging.capitalize()}${type}${variantName.capitalize()}"
     }
-
 }
