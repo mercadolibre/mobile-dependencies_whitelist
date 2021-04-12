@@ -1128,16 +1128,7 @@
         {
             "name": "insurtech",
             "iOS": {
-                "key": ""
-            },
-            "Android": {
-                "key": "com.mercadolibre.android.roda_qpage"
-            }
-        },
-        {
-            "name": "insurtech",
-            "iOS": {
-                "key": ""
+                "key": "InsuQpageOn"
             },
             "Android": {
                 "key": "com.mercadolibre.android.insu_qpage_on"
@@ -1150,15 +1141,6 @@
             },
             "Android": {
                 "key": "com.mercadolibre.android.insurance_payments"
-            }
-        },
-        {
-            "name": "insurtech",
-            "iOS": {
-                "key": ""
-            },
-            "Android": {
-                "key": "com.mercadolibre.android.insurance_protections"
             }
         },
         {
@@ -2451,6 +2433,33 @@
                 "key": ""
             },
             "Android": {
+                "key": "com.mercadolibre.android.mlwebkit.webkit"
+            }
+        },
+        {
+            "name": "webkit",
+            "iOS": {
+                "key": "MLWebkit"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.mlwebkit"
+            }
+        },
+        {
+            "name": "webkit",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.mlwebkit.webkitcomponent"
+            }
+        },
+        {
+            "name": "webkit",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
                 "key": "com.mercadolibre.android.webkit"
             }
         },
@@ -2614,6 +2623,15 @@
             },
             "Android": {
                 "key": "com.mercadolibre.android.security_two_fa.totpinapp"
+            }
+        },
+        {
+            "name": "developer_mode",
+            "iOS": {
+                "key": "DeveloperMode"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.developer_mode"
             }
         }
     ]
