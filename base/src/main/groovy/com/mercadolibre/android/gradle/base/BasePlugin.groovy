@@ -21,7 +21,8 @@ class BasePlugin implements Plugin<Object> {
         return [
                 new AndroidLibraryPublishableModule(),
                 new AndroidLibraryTestableModule(),
-                new AndroidJacocoModule()
+                new AndroidJacocoModule(),
+                new LintErrorDisableModule()
         ]
     }
 
