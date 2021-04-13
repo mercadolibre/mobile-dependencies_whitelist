@@ -2131,6 +2131,15 @@
             }
         },
         {
+            "name": "single_player_prepaid",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.spp_spirtech"
+            }
+        },
+        {
             "name": "supermarket",
             "iOS": {
                 "key": "MLSupermarket"
