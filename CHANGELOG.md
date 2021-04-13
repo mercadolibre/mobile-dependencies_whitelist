@@ -1,3 +1,7 @@
+# 10.0.1
+## Eliminado
+- Se elimina el flujo que tenia problemas con gradle 4.2 en apps, que se usaba para fontela.
+
 # 10.0.0
 ## Eliminado
 - Se elimina el Bintray Gradle Plugin junto a sus implementaciones dado que el 01/05/2021 Bintray da de baja sus servicios
