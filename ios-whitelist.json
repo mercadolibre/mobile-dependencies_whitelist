@@ -52,7 +52,7 @@
       "name": "FBSDKCoreKit",
       "source": "public",
       "target": "production",
-      "version": "^~>\\s?(5.8.0|9.0.0)$"
+      "version": "^~>\\s?(9.0.0)$"
     },
     {
       "name": "FSQCollectionViewAlignedLayout",
@@ -70,103 +70,73 @@
       "name": "Firebase",
       "source": "public",
       "target": "production",
-      "version": "^~>\\s?(6.31.1|6.9.0|7.8.0)$"
+      "version": "^~>\\s?(7.8.0)$"
     },
     {
       "name": "FirebaseCore",
       "source": "public",
       "target": "production",
-      "version": "6.10.1|7.8.0"
+      "version": "^~>\\s?(7.8.0)$"
     },
     {
       "name": "FirebaseAnalytics",
       "source": "public",
       "target": "production",
-      "version": "6.8.0|7.8.0"
-    },
-    {
-      "name": "FirebaseMLVision",
-      "source": "public",
-      "target": "production",
-      "version": "0.21.0|7.8.0"
-    },
-    {
-      "name": "FirebaseMLCommon",
-      "source": "public",
-      "target": "production",
-      "version": "0.21.0|7.8.0"
-    },
-    {
-      "name": "FirebaseMLVisionFaceModel",
-      "source": "public",
-      "target": "production",
-      "version": "0.21.0|7.8.0"
+      "version": "^~>\\s?(7.8.0)$"
     },
     {
       "name": "FirebaseDynamicLinks",
       "source": "public",
       "target": "production",
-      "version": "4.3.1|7.8.0"
+      "version": "^~>\\s?(7.8.0)$"
     },
     {
       "name": "FirebasePerformance",
       "source": "public",
       "target": "production",
-      "version": "3.3.0|7.8.0"
+      "version": "^~>\\s?(7.8.0)$"
     },
     {
       "name": "FirebaseCoreDiagnostics",
       "source": "public",
       "target": "production",
-      "version": "1.7.0|7.8.0"
+      "version": "^~>\\s?(7.8.0)$"
     },
     {
       "name": "FirebaseRemoteConfig",
       "source": "public",
       "target": "production",
-      "version": "4.9.1|7.8.0"
+      "version": "^~>\\s?(7.8.0)$"
     },
     {
       "name": "FirebaseABTesting",
       "source": "public",
       "target": "production",
-      "version": "4.2.0|7.8.0"
+      "version": "^~>\\s?(7.8.0)$"
     },
     {
       "name": "FirebaseInstallations",
       "source": "public",
       "target": "production",
-      "version": "1.7.0|7.8.0"
+      "version": "^~>\\s?(7.8.0)$"
     },
     {
       "name": "Firebase/Core",
       "source": "public",
       "target": "production",
-      "version": "^~>\\s?(6.31.1|6.9.0|7.8.0)$"
+      "version": "^~>\\s?(7.8.0)$"
     },
     {
       "name": "Firebase/DynamicLinks",
       "source": "public",
       "target": "production",
-      "version": "^~>\\s?(6.31.1|6.9.0|7.8.0)$"
+      "version": "^~>\\s?(7.8.0)$"
     },
     {
       "name": "Firebase/Analytics",
       "source": "public",
       "target": "production",
-      "version": "^~>\\s?(6.31.1|6.9.0|7.8.0)$"
-    },
-    {
-      "name": "Firebase/MLVision",
-      "source": "public",
-      "target": "production",
-      "version": "^(6.31.1|6.9.0|7.8.0)$"
-    },
-    {
-      "name": "Firebase/MLVisionFaceModel",
-      "source": "public",
-      "target": "production",
-      "version": "^(6.31.1|6.9.0|7.8.0)$"
+      "version": "^~>\\s?(7.8.0)$"
     },
     {
       "name": "GoogleAppMeasurement",
@@ -185,18 +155,6 @@
       "source": "public",
       "target": "production",
       "version": "7.5.1"
-    },
-    {
-      "name": "GoogleToolboxForMac",
-      "source": "public",
-      "target": "production",
-      "version": "2.3.1"
-    },
-    {
-      "name": "GoogleAPIClientForREST",
-      "source": "public",
-      "target": "production",
-      "version": "1.5.1"
     },
     {
       "name": "nanopb",
@@ -761,6 +719,7 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
+      "expires": "2021-05-27",
       "name": "MPSDK",
       "source": "private",
       "target": "production",
@@ -917,6 +876,7 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "expires": "2021-05-27",
       "name": "MPCommons",
       "source": "private",
       "target": "production",
@@ -935,12 +895,14 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
+      "expires": "2021-05-27",
       "name": "MPUI",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?3.[0-9]+$"
     },
     {
+      "expires": "2021-05-27",
       "name": "MPTracking",
       "source": "private",
       "target": "production",
