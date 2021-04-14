@@ -21,15 +21,17 @@ class BasePlugin implements Plugin<Object> {
         return [
                 new AndroidLibraryPublishableModule(),
                 new AndroidLibraryTestableModule(),
-                new AndroidJacocoModule()
+                new AndroidJacocoModule(),
+                new LintErrorDisableModule()
         ]
     }
 
     private static final ANDROID_APPLICATION_MODULES = { ->
         return [
-            new AndroidJacocoModule(),
-            new KeystoreModule(),
-            new ApplicationLintOptionsModule()
+                new AndroidJacocoModule(),
+                new KeystoreModule(),
+                new ApplicationLintOptionsModule(),
+                new LintErrorDisableModule()
         ]
     }
 
