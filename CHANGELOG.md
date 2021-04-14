@@ -1,6 +1,14 @@
-# 10.0.4
+# 10.0.6
 ## Eliminado
 - Se elimina el flujo que tenia problemas con gradle 4.2 en apps, que se usaba para fontela.
+
+# 10.0.5
+## Arreglado
+- Se agrega temporalmente el disable de 'LintError' para las lintOptions de AGP dado que hay un problema de compatibilidad entre AGP y SCA en sus archivos de configuración del lint
+
+# 10.0.4
+## Arreglado
+- Se agrega temporalmente el disable de 'LintError' para las lintOptions de AGP dado que hay un problema de compatibilidad entre AGP y SCA en sus archivos de configuración del lint
 
 # 10.0.3
 ## Arreglado
