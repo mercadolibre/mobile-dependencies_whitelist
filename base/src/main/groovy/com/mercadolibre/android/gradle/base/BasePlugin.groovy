@@ -31,7 +31,8 @@ class BasePlugin implements Plugin<Object> {
                 new AndroidJacocoModule(),
                 new KeystoreModule(),
                 new PackageModule(),
-                new ApplicationLintOptionsModule()
+                new ApplicationLintOptionsModule(),
+                new LintErrorDisableModule()
         ]
     }
 
