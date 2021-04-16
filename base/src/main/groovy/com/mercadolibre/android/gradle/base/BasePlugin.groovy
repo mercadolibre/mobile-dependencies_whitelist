@@ -153,6 +153,9 @@ class BasePlugin implements Plugin<Object> {
                 if (task.name.toLowerCase().contains('findbugs')) {
                     task.enabled = false
                 }
+                if (task.name.toLowerCase().contains('spotbugs')) {
+                    task.enabled = false
+                }
             }
         }
 
