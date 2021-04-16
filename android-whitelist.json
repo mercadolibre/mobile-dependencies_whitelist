@@ -305,42 +305,52 @@
     {
       "group": "com\\.google\\.firebase",
       "name": "firebase-appindexing",
-      "version": "16\\.0\\.2"
+      "version": "16\\.0\\.2|null"
     },
     {
       "group": "com\\.google\\.firebase",
       "name": "firebase-analytics",
-      "version": "16\\.0\\.6"
+      "version": "16\\.0\\.6|null"
     },
     {
       "group": "com\\.google\\.firebase",
       "name": "firebase-ml-vision",
-      "version": "17\\.0\\.1"
+      "version": "17\\.0\\.1|null"
     },
     {
       "group": "com\\.google\\.firebase",
       "name": "firebase-auth",
-      "version": "17\\.0\\.0"
+      "version": "17\\.0\\.0|null"
     },
     {
       "group": "com\\.google\\.firebase",
       "name": "firebase-common",
-      "version": "16\\.0\\.3"
+      "version": "16\\.0\\.3|null"
     },
     {
       "group": "com\\.google\\.firebase",
       "name": "firebase-core",
-      "version": "16\\.0\\.4"
+      "version": "16\\.0\\.4|null"
     },
     {
       "group": "com\\.google\\.firebase",
       "name": "firebase-messaging",
-      "version": "17\\.3\\.4"
+      "version": "17\\.3\\.4|null"
     },
     {
       "group": "com\\.google\\.firebase",
       "name": "firebase-perf",
-      "version": "16\\.2\\.4"
+      "version": "16\\.2\\.4|null"
+    },
+    {
+      "group": "com\\.google\\.firebase",
+      "name": "firebase-bom",
+      "version": "26\\.8\\.0"
+    },
+    {
+      "group": "com\\.google\\.firebase",
+      "name": "firebase-ads",
+      "version": "null"
     },
     {
       "group": "com\\.google\\.maps\\.android",
