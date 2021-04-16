@@ -1,3 +1,7 @@
+# 10.0.7
+## Agregado
+- Se deshabilita Spotbugs y Findbugs dado que no funcionan correctamente. Ésta última ya estaba previamente deshabilitada
+
 # 10.0.6
 ## Eliminado
 - Se elimina el flujo que tenia problemas con gradle 4.2 en apps, que se usaba para fontela.
