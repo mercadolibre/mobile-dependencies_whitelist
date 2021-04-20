@@ -250,42 +250,42 @@
     {
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-iid",
-      "version": "16\\.0\\.0"
+      "version": "16\\.0\\.0|17\\.0\\.0"
     },
     {
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-gcm",
-      "version": "16\\.0\\.0"
+      "version": "16\\.0\\.0|\"17\\\\.0\\\\.0"
     },
     {
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-analytics",
-      "version": "16\\.0\\.4"
+      "version": "16\\.0\\.4|17\\.0\\.0"
     },
     {
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-auth",
-      "version": "16\\.0\\.1"
+      "version": "16\\.0\\.1|\"18\\\\.1\\\\.0"
     },
     {
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-base",
-      "version": "16\\.0\\.1"
+      "version": "16\\.0\\.1|17\\.0\\.5"
     },
     {
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-location",
-      "version": "16\\.0\\.0"
+      "version": "16\\.0\\.0|17\\.1\\.0"
     },
     {
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-maps",
-      "version": "16\\.0\\.0"
+      "version": "16\\.0\\.0|17\\.0\\.0"
     },
     {
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-safetynet",
-      "version": "16\\.0\\.0"
+      "version": "16\\.0\\.0|17\\.0\\.0"
     },
     {
       "group": "com\\.google\\.android\\.play",
