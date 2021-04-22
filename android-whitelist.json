@@ -674,8 +674,13 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2021-05-30",
       "group": "com\\.mercadolibre\\.android\\.commons",
-      "version": "16\\.\\+|17\\.\\+"
+      "version": "16\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.commons",
+      "version": "17\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.remote\\.configuration",
