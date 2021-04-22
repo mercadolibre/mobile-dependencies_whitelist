@@ -1128,7 +1128,7 @@
         {
             "name": "insurtech",
             "iOS": {
-                "key": ""
+                "key": "InsuQpageOn"
             },
             "Android": {
                 "key": "com.mercadolibre.android.insu_qpage_on"
@@ -2131,6 +2131,15 @@
             }
         },
         {
+            "name": "single_player_prepaid",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.spp_spirtech"
+            }
+        },
+        {
             "name": "supermarket",
             "iOS": {
                 "key": "MLSupermarket"
@@ -2433,6 +2442,33 @@
                 "key": ""
             },
             "Android": {
+                "key": "com.mercadolibre.android.mlwebkit.webkit"
+            }
+        },
+        {
+            "name": "webkit",
+            "iOS": {
+                "key": "MLWebkit"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.mlwebkit"
+            }
+        },
+        {
+            "name": "webkit",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.mlwebkit.webkitcomponent"
+            }
+        },
+        {
+            "name": "webkit",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
                 "key": "com.mercadolibre.android.webkit"
             }
         },
@@ -2605,6 +2641,15 @@
             },
             "Android": {
                 "key": "com.mercadolibre.android.yuca_authentication"
+            }
+        },
+        {
+            "name": "developer_mode",
+            "iOS": {
+                "key": "DeveloperMode"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.developer_mode"
             }
         }
     ]
