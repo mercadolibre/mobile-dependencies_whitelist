@@ -2635,6 +2635,15 @@
             }
         },
         {
+            "name": "yuca_autentication",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.yuca_authentication"
+            }
+        },
+        {
             "name": "developer_mode",
             "iOS": {
                 "key": "DeveloperMode"

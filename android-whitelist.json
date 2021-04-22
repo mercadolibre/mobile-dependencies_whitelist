@@ -1807,6 +1807,16 @@
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-recaptcha",
       "version": "16\\.0\\.0"
+    },
+    {
+      "group": "com\\.auth0\\.android",
+      "name": "auth0",
+      "version": "1\\.+"
+    },
+    {
+      "group": "com\\.auth0\\.android",
+      "name": "jwtdecode",
+      "version": "1\\.+"
     }
   ]
 }
