@@ -22,13 +22,6 @@ _Example module está pesando 14kb y okhttp para la versión 4.2.0 ~4 terabytes.
 
 ## Libs internas (borrar si el PR es para una lib externa)
 
-### Configuración de Bugsnag
-
-- [ ] Ya tenemos usuario en Bugsnag, es: **_${blah@mercadolibre.com}_**
-- [ ] Ya está configurado el contexto del módulo en las apps: **ML** [Android](https://github.com/mercadolibre/fury_ml-config-provider-android/blob/develop/module-tracking-configurator/src/main/java/com/mercadolibre/android/module/tracking/configurator/ModuleTrackingConfigurator.java), [iOS](https://github.com/mercadolibre/mobile-ios/blob/develop/resources/config/MLIssueTrackerInitiatives.plist) y **MP** [Android](https://github.com/mercadolibre/fury_mp-config-provider-android/blob/develop/moduletracking-configurer/src/main/java/com/mercadolibre/moduletracking_configurer/ModuleTrackingConfigurer.java), [iOS](https://github.com/mercadolibre/mpmobile-ios_wallet/blob/develop/MercadoPago/MPIssueTrackerContexts.plist)
-
-Nota: Si tu equipo no tiene acceso, entonces debes completar el siguiente form de [acceso a herramientas]([https://sites.google.com/mercadolibre.com/mobile/arquitectura/acceso-a-herramientas](https://sites.google.com/mercadolibre.com/mobile/arquitectura/acceso-a-herramientas)).
-
 ### Contextos
 - [ ] Ya agregué y/o actualicé el contexto en la [context-whitelist](https://github.com/mercadolibre/mobile-dependencies_whitelist/blob/master/context-whitelist.json)
 
