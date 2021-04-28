@@ -363,7 +363,8 @@
       "name": "core",
       "version": "1\\.7\\.2|1\\.10\\.0"
     },
-    { "expires": "2021-05-17",
+    { 
+      "expires": "2021-05-17",
       "group": "com\\.google\\.android\\.libraries\\.places",
       "name": "places-compat",
       "version": "1\\.1\\.0"
