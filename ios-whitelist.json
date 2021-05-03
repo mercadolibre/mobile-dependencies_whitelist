@@ -756,6 +756,12 @@
       "version": "^~>\\s?4.[0-9]+$"
     },
     {
+      "name": "MLThreeDS",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "OperationDetail/Commons",
       "source": "private",
       "target": "production",
