@@ -2500,7 +2500,7 @@
             }
         },
         {
-            "name": "registration_login_challenges",
+            "name": "auth-challenges",
             "iOS": {
                 "key": "AuthChallenges"
             },
@@ -2509,7 +2509,7 @@
             }
         },
         {
-            "name": "registration_login_hub",
+            "name": "auth-hub",
             "iOS": {
                 "key": "Hub"
             },
@@ -2518,12 +2518,12 @@
             }
         },
         {
-            "name": "registration_login_commons",
+            "name": "auth-commons",
             "iOS": {
                 "key": "AuthCommons"
             },
             "Android": {
-                "key": ""
+                "key": "com.mercadolibre.android.authcommons"
             }
         },
         {
