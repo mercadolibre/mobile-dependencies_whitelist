@@ -2500,21 +2500,30 @@
             }
         },
         {
-            "name": "auth-challenges-android",
+            "name": "registration_login_challenges",
             "iOS": {
-                "key": ""
+                "key": "AuthChallenges"
             },
             "Android": {
                 "key": "com.mercadolibre.android.authchallenges"
             }
         },
         {
-            "name": "auth-hub-android",
+            "name": "registration_login_hub",
             "iOS": {
-                "key": ""
+                "key": "Hub"
             },
             "Android": {
                 "key": "com.mercadolibre.android.hub"
+            }
+        },
+        {
+            "name": "registration_login_commons",
+            "iOS": {
+                "key": "AuthCommons"
+            },
+            "Android": {
+                "key": ""
             }
         },
         {
