@@ -4,7 +4,7 @@
       "name": "MLCheckoutSDK",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+.?[0-9]*$"
+      "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
     },
     {
       "name": "PPMagnesWrapper",
@@ -16,7 +16,7 @@
       "name": "Adjust",
       "source": "public",
       "target": "production",
-      "version": "(4.18.([1-9][0-9]*)|4.23.([0-9]+))$"
+      "version": "(4.28.([0-9]+)|4.23.([0-9]+))$"
     },
     {
       "name": "AmountLabel",
@@ -52,7 +52,7 @@
       "name": "FBSDKCoreKit",
       "source": "public",
       "target": "production",
-      "version": "5.8.0"
+      "version": "^~>\\s?(9.0.0)$"
     },
     {
       "name": "FSQCollectionViewAlignedLayout",
@@ -70,103 +70,73 @@
       "name": "Firebase",
       "source": "public",
       "target": "production",
-      "version": "^~>\\s?(6.31.1|6.9.0|7.8.0)$"
+      "version": "^~>\\s?(7.8.0)$"
     },
     {
       "name": "FirebaseCore",
       "source": "public",
       "target": "production",
-      "version": "6.10.1|7.8.0"
+      "version": "^~>\\s?(7.8.0)$"
     },
     {
       "name": "FirebaseAnalytics",
       "source": "public",
       "target": "production",
-      "version": "6.8.0|7.8.0"
-    },
-    {
-      "name": "FirebaseMLVision",
-      "source": "public",
-      "target": "production",
-      "version": "0.21.0|7.8.0"
-    },
-    {
-      "name": "FirebaseMLCommon",
-      "source": "public",
-      "target": "production",
-      "version": "0.21.0|7.8.0"
-    },
-    {
-      "name": "FirebaseMLVisionFaceModel",
-      "source": "public",
-      "target": "production",
-      "version": "0.21.0|7.8.0"
+      "version": "^~>\\s?(7.8.0)$"
     },
     {
       "name": "FirebaseDynamicLinks",
       "source": "public",
       "target": "production",
-      "version": "4.3.1|7.8.0"
+      "version": "^~>\\s?(7.8.0)$"
     },
     {
       "name": "FirebasePerformance",
       "source": "public",
       "target": "production",
-      "version": "3.3.0|7.8.0"
+      "version": "^~>\\s?(7.8.0)$"
     },
     {
       "name": "FirebaseCoreDiagnostics",
       "source": "public",
       "target": "production",
-      "version": "1.7.0|7.8.0"
+      "version": "^~>\\s?(7.8.0)$"
     },
     {
       "name": "FirebaseRemoteConfig",
       "source": "public",
       "target": "production",
-      "version": "4.9.1|7.8.0"
+      "version": "^~>\\s?(7.8.0)$"
     },
     {
       "name": "FirebaseABTesting",
       "source": "public",
       "target": "production",
-      "version": "4.2.0|7.8.0"
+      "version": "^~>\\s?(7.8.0)$"
     },
     {
       "name": "FirebaseInstallations",
       "source": "public",
       "target": "production",
-      "version": "1.7.0|7.8.0"
+      "version": "^~>\\s?(7.8.0)$"
     },
     {
       "name": "Firebase/Core",
       "source": "public",
       "target": "production",
-      "version": "^~>\\s?(6.31.1|6.9.0|7.8.0)$"
+      "version": "^~>\\s?(7.8.0)$"
     },
     {
       "name": "Firebase/DynamicLinks",
       "source": "public",
       "target": "production",
-      "version": "^~>\\s?(6.31.1|6.9.0|7.8.0)$"
+      "version": "^~>\\s?(7.8.0)$"
     },
     {
       "name": "Firebase/Analytics",
       "source": "public",
       "target": "production",
-      "version": "^~>\\s?(6.31.1|6.9.0|7.8.0)$"
-    },
-    {
-      "name": "Firebase/MLVision",
-      "source": "public",
-      "target": "production",
-      "version": "^(6.31.1|6.9.0|7.8.0)$"
-    },
-    {
-      "name": "Firebase/MLVisionFaceModel",
-      "source": "public",
-      "target": "production",
-      "version": "^(6.31.1|6.9.0|7.8.0)$"
+      "version": "^~>\\s?(7.8.0)$"
     },
     {
       "name": "GoogleAppMeasurement",
@@ -185,18 +155,6 @@
       "source": "public",
       "target": "production",
       "version": "7.5.1"
-    },
-    {
-      "name": "GoogleToolboxForMac",
-      "source": "public",
-      "target": "production",
-      "version": "2.3.1"
-    },
-    {
-      "name": "GoogleAPIClientForREST",
-      "source": "public",
-      "target": "production",
-      "version": "1.5.1"
     },
     {
       "name": "nanopb",
@@ -278,6 +236,12 @@
     },
     {
       "name": "InsurtechFloxComponents",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "InsuProxy",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
@@ -713,6 +677,12 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "MLWebkit",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "MLUINavigationCP",
       "source": "private",
       "target": "production",
@@ -755,6 +725,7 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
+      "expires": "2021-05-27",
       "name": "MPSDK",
       "source": "private",
       "target": "production",
@@ -783,6 +754,12 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?4.[0-9]+$"
+    },
+    {
+      "name": "MLThreeDS",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "OperationDetail/Commons",
@@ -911,6 +888,7 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "expires": "2021-05-27",
       "name": "MPCommons",
       "source": "private",
       "target": "production",
@@ -929,12 +907,14 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
+      "expires": "2021-05-27",
       "name": "MPUI",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?3.[0-9]+$"
     },
     {
+      "expires": "2021-05-27",
       "name": "MPTracking",
       "source": "private",
       "target": "production",
@@ -1052,7 +1032,7 @@
       "name": "CreditsUIComponents",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?[0-1].[0-9]+$"
     },
     {
       "name": "MLCreditsCore",
@@ -1106,7 +1086,7 @@
       "name": "StartUPInitializer",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "PointUI",
@@ -1221,6 +1201,24 @@
       "source": "public",
       "target": "test",
       "version": "^~>\\s?7.[0-9]+$"
+    },
+    {
+      "name": "Auth0",
+      "source": "public",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "DeveloperMode",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "SPPSpirtech",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     }
   ]
 }
