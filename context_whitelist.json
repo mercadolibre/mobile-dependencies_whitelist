@@ -2669,6 +2669,24 @@
             "Android": {
                 "key": "com.mercadolibre.android.developer_mode"
             }
+        },
+        {
+            "name": "point_commons",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.point_smart_helpers"
+            }
+        },
+        {
+            "name": "point_recharge",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.point_recharge"
+            }  
         }
     ]
 }
