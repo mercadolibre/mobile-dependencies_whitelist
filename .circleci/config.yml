@@ -1,37 +1,45 @@
 version: 2.1
-
 parameters:
   type:
     type: enum
-    enum: ["ci", "build", "default"]
-    default: "default"
+    enum:
+    - ci
+    - build
+    - default
+    default: default
   build_context:
     type: string
-    default: ""
-
+    default: ''
 orbs:
   meli: mercadolibre/android@volatile
-
 workflows:
   ci:
     when:
-      equal: [ci, << pipeline.parameters.type >>]
+      equal:
+      - ci
+      - << pipeline.parameters.type >>
     jobs:
-      - meli/assemble:
-          machine_size: xlarge
-          build_context: << pipeline.parameters.build_context >>
-          pipeline_id: << pipeline.id >>
-          pipeline_number: << pipeline.number >>
-      - meli/check:
-          machine_size: xlarge
-          build_context: << pipeline.parameters.build_context >>
-          pipeline_id: << pipeline.id >>
-          pipeline_number: << pipeline.number >>
+    - meli/assemble:
+        machine_size: xlarge
+        build_context: << pipeline.parameters.build_context >>
+        pipeline_id: << pipeline.id >>
+        pipeline_number: << pipeline.number >>
+    - meli/check:
+        machine_size: xlarge
+        build_context: << pipeline.parameters.build_context >>
+        pipeline_id: << pipeline.id >>
+        pipeline_number: << pipeline.number >>
+    - meli/code-quality:
+        build_context: << pipeline.parameters.build_context >>
+        pipeline_id: << pipeline.id >>
+        pipeline_number: << pipeline.number >>
   build:
     when:
-      equal: [build, << pipeline.parameters.type >>]
+      equal:
+      - build
+      - << pipeline.parameters.type >>
     jobs:
-      - meli/build:
-          build_context: << pipeline.parameters.build_context >>
-          pipeline_id: << pipeline.id >>
-          pipeline_number: << pipeline.number >>
+    - meli/build:
+        build_context: << pipeline.parameters.build_context >>
+        pipeline_id: << pipeline.id >>
+        pipeline_number: << pipeline.number >>
