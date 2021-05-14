@@ -243,136 +243,59 @@
       "version": "0\\.3\\.0|1\\.1\\.1"
     },
     {
-      "expires": "2021-08-02",
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-ads",
       "version": "16\\.0\\.0"
     },
     {
-      "expires": "2021-08-02",
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-iid",
       "version": "16\\.0\\.0"
     },
     {
       "group": "com\\.google\\.android\\.gms",
-      "name": "play-services-iid",
-      "version": "17\\.0\\.0"
-    },
-    {
-      "expires": "2021-08-02",
-      "group": "com\\.google\\.android\\.gms",
       "name": "play-services-gcm",
       "version": "16\\.0\\.0"
     },
     {
-      "group": "com\\.google\\.android\\.gms",
-      "name": "play-services-gcm",
-      "version": "17\\.0\\.0"
-    },
-    {
-      "expires": "2021-08-02",
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-analytics",
       "version": "16\\.0\\.4"
     },
     {
       "group": "com\\.google\\.android\\.gms",
-      "name": "play-services-analytics",
-      "version": "17\\.0\\.0"
-    },
-    {
-      "expires": "2021-08-02",
-      "group": "com\\.google\\.android\\.gms",
       "name": "play-services-auth",
       "version": "16\\.0\\.1"
     },
     {
-      "group": "com\\.google\\.android\\.gms",
-      "name": "play-services-auth",
-      "version": "18\\.1\\.0"
-    },
-    {
-      "expires": "2021-08-02",
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-base",
       "version": "16\\.0\\.1"
     },
     {
       "group": "com\\.google\\.android\\.gms",
-      "name": "play-services-base",
-      "version": "17\\.0\\.5"
-    },
-    {
-      "expires": "2021-08-02",
-      "group": "com\\.google\\.android\\.gms",
       "name": "play-services-location",
       "version": "16\\.0\\.0"
     },
     {
-      "group": "com\\.google\\.android\\.gms",
-      "name": "play-services-location",
-      "version": "17\\.1\\.0"
-    },
-    {
-      "expires": "2021-08-02",
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-maps",
       "version": "16\\.0\\.0"
     },
     {
       "group": "com\\.google\\.android\\.gms",
-      "name": "play-services-maps",
-      "version": "17\\.0\\.0"
-    },
-    {
-      "expires": "2021-08-02",
-      "group": "com\\.google\\.android\\.gms",
-      "name": "play-services-places",
-      "version": "16\\.0\\.0"
-    },
-    {
-      "group": "com\\.google\\.android\\.gms",
-      "name": "play-services-places",
-      "version": "17\\.0\\.0"
-    },
-    {
-      "expires": "2021-08-02",
-      "group": "com\\.google\\.android\\.gms",
-      "name": "play-services-vision",
-      "version": "16\\.2\\.0"
-    },
-    {
-      "group": "com\\.google\\.android\\.gms",
-      "name": "play-services-vision",
-      "version": "21\\.1\\.2"
-    },
-    {
-      "expires": "2021-08-02",
-      "group": "com\\.google\\.android\\.gms",
       "name": "play-services-safetynet",
       "version": "16\\.0\\.0"
-    },
-    {
-      "group": "com\\.google\\.android\\.gms",
-      "name": "play-services-safetynet",
-      "version": "17\\.0\\.0"
     },
     {
       "group": "com\\.google\\.android\\.play",
       "name": "core",
-      "version": "1\\.7\\.2|1\\.10\\.0"
+      "version": "1\\.6\\.4|1\\.7\\.2"
     },
     {
-      "expires": "2021-05-17",
       "group": "com\\.google\\.android\\.libraries\\.places",
       "name": "places-compat",
       "version": "1\\.1\\.0"
-    },
-    {
-      "group": "com\\.google\\.android\\.libraries\\.places",
-      "name": "places",
-      "version": "2\\.4\\.0"
     },
     {
       "group": "com\\.google\\.code\\.gson",
@@ -380,104 +303,44 @@
       "version": "2\\.8\\.5"
     },
     {
-      "expires": "2021-08-02",
       "group": "com\\.google\\.firebase",
       "name": "firebase-appindexing",
-      "version": "16\\.0\\.2"
+      "version": "16\\.0\\.2|null"
     },
     {
-      "group": "com\\.google\\.firebase",
-      "name": "firebase-appindexing"
-    },
-    {
-      "expires": "2021-08-02",
       "group": "com\\.google\\.firebase",
       "name": "firebase-analytics",
-      "version": "16\\.0\\.6"
+      "version": "16\\.0\\.6|null"
     },
     {
-      "group": "com\\.google\\.firebase",
-      "name": "firebase-analytics"
-    },
-    {
-      "expires": "2021-08-02",
       "group": "com\\.google\\.firebase",
       "name": "firebase-ml-vision",
-      "version": "17\\.0\\.1"
+      "version": "17\\.0\\.1|null"
     },
     {
-      "group": "com\\.google\\.firebase",
-      "name": "firebase-ml-vision"
-    },
-    {
-      "expires": "2021-08-02",
-      "group": "com\\.google\\.firebase",
-      "name": "firebase-config",
-      "version": "16\\.4\\.0|16\\.1\\.0"
-    },
-    {
-      "group": "com\\.google\\.firebase",
-      "name": "firebase-config"
-    },
-    {
-      "expires": "2021-08-02",
-      "group": "com\\.google\\.firebase",
-      "name": "firebase-iid",
-      "version": "17\\.0\\.4"
-    },
-    {
-      "group": "com\\.google\\.firebase",
-      "name": "firebase-iid"
-    },
-    {
-      "expires": "2021-08-02",
       "group": "com\\.google\\.firebase",
       "name": "firebase-auth",
-      "version": "17\\.0\\.0"
+      "version": "17\\.0\\.0|null"
     },
     {
-      "group": "com\\.google\\.firebase",
-      "name": "firebase-auth"
-    },
-    {
-      "expires": "2021-08-02",
       "group": "com\\.google\\.firebase",
       "name": "firebase-common",
-      "version": "16\\.0\\.3"
+      "version": "16\\.0\\.3|null"
     },
     {
-      "group": "com\\.google\\.firebase",
-      "name": "firebase-common"
-    },
-    {
-      "expires": "2021-08-02",
       "group": "com\\.google\\.firebase",
       "name": "firebase-core",
-      "version": "16\\.0\\.4"
+      "version": "16\\.0\\.4|null"
     },
     {
-      "group": "com\\.google\\.firebase",
-      "name": "firebase-core"
-    },
-    {
-      "expires": "2021-08-02",
       "group": "com\\.google\\.firebase",
       "name": "firebase-messaging",
-      "version": "17\\.3\\.4"
+      "version": "17\\.3\\.4|null"
     },
     {
-      "group": "com\\.google\\.firebase",
-      "name": "firebase-messaging"
-    },
-    {
-      "expires": "2021-08-02",
       "group": "com\\.google\\.firebase",
       "name": "firebase-perf",
-      "version": "16\\.2\\.4"
-    },
-    {
-      "group": "com\\.google\\.firebase",
-      "name": "firebase-perf"
+      "version": "16\\.2\\.4|null"
     },
     {
       "group": "com\\.google\\.firebase",
@@ -486,7 +349,8 @@
     },
     {
       "group": "com\\.google\\.firebase",
-      "name": "firebase-ads"
+      "name": "firebase-ads",
+      "version": "null"
     },
     {
       "group": "com\\.google\\.maps\\.android",
@@ -519,15 +383,9 @@
       "version": "production-8\\.\\+|develop-8\\.\\+"
     },
     {
-      "expires": "2021-07-01",
       "group": "com\\.mercadolibre\\.android",
       "name": "authentication",
       "version": "15\\.\\+"
-    },
-    {
-      "group": "com\\.mercadolibre\\.android",
-      "name": "authentication",
-      "version": "16\\.\\+"
     },
     {
       "expires": "2020-01-01",
@@ -816,13 +674,8 @@
       "version": "1\\.\\+"
     },
     {
-      "expires": "2021-05-30",
       "group": "com\\.mercadolibre\\.android\\.commons",
       "version": "16\\.\\+"
-    },
-    {
-      "group": "com\\.mercadolibre\\.android\\.commons",
-      "version": "17\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.remote\\.configuration",
@@ -1204,11 +1057,6 @@
       "version": "1\\.\\+"
     },
     {
-      "group": "com\\.mercadolibre\\.android\\.pos_readers",
-      "name": "posreaders",
-      "version": "4\\.\\+"
-    },
-    {
       "group": "com\\.mercadopago\\.android\\.point_ui",
       "name": "components",
       "version": "1\\.\\+"
@@ -1217,11 +1065,6 @@
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
       "name": "paymentflowfcu",
       "version": "1\\.\\+"
-    },
-    {
-      "group": "com\\.mercadolibre\\.android\\.payment_flow",
-      "name": "paymentflow",
-      "version": "6\\.\\+"
     },
     {
       "expires": "2021-06-12",
@@ -1590,15 +1433,9 @@
       "version": "3\\.6\\.3"
     },
     {
-      "expires": "2021-06-01",
       "group": "com\\.google\\.android\\.material",
       "name": "material",
       "version": "1\\.0\\.0"
-    },
-    {
-      "group": "com\\.google\\.android\\.material",
-      "name": "material",
-      "version": "1\\.3\\.0"
     },
     {
       "group": "androidx\\.gridlayout",
@@ -1721,7 +1558,7 @@
     {
       "group": "androidx\\.work",
       "name": "work-runtime-ktx",
-      "version": "2\\.0\\.1|2\\.1\\.0"
+      "version": "2\\.0\\.1"
     },
     {
       "group": "androidx\\.webkit",
@@ -1902,6 +1739,11 @@
       "version": "4\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.liveness_detection",
+      "name": "facetec",
+      "version": "sdk-9\\.+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.nfcpayments",
       "name": "core",
       "version": "1\\.+"
@@ -1972,29 +1814,9 @@
       "version": "1\\.+"
     },
     {
-      "group": "com\\.mercadolibre\\.android\\.point_smart_helpers",
-      "name": "point_commons",
-      "version": "1\\.+"
-    },
-    {
-      "group": "com\\.mercadolibre\\.android\\.point_recharge",
-      "name": "cellphone",
-      "version": "1\\.+"
-    },
-    {
-      "group": "com\\.mercadolibre\\.android\\.point_recharge",
-      "name": "transport",
-      "version": "1\\.+"
-    },
-    {
-      "group": "com\\.mercadolibre\\.android\\.liveness_detection",
-      "name": "facetec",
-      "version": "sdk-9\\.+"
-    },
-    {
-      "group": "com\\.mercadolibre\\.android\\.liveness_detection",
-      "name": "facetec",
-      "version": "9\\.+"
+      "group": "com\\.mercadolibre\\.android\\.webkit_lms",
+      "name": "lms",
+      "version": "0\\.\\+"
     }
   ]
 }
