@@ -30,7 +30,7 @@
         {
             "name": "account_recovery",
             "iOS": {
-                "key": ""
+                "key": "AccountRecovery"
             },
             "Android": {
                 "key": "com.mercadolibre.android.accountrecovery"
@@ -1128,7 +1128,7 @@
         {
             "name": "insurtech",
             "iOS": {
-                "key": ""
+                "key": "InsuQpageOn"
             },
             "Android": {
                 "key": "com.mercadolibre.android.insu_qpage_on"
@@ -1965,6 +1965,15 @@
         {
             "name": "mobile_devices_security",
             "iOS": {
+                "key": "NativeReauth"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.security.native_reauth"
+            }
+        },
+        {
+            "name": "mobile_devices_security",
+            "iOS": {
                 "key": "MobileDevicesSecurity"
                       },
             "Android": {
@@ -2128,6 +2137,15 @@
             },
             "Android": {
                 "key": "com.mercadopago.android.prepaid"
+            }
+        },
+        {
+            "name": "single_player_prepaid",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.spp_spirtech"
             }
         },
         {
@@ -2491,21 +2509,30 @@
             }
         },
         {
-            "name": "auth-challenges-android",
+            "name": "auth-challenges",
             "iOS": {
-                "key": ""
+                "key": "AuthChallenges"
             },
             "Android": {
                 "key": "com.mercadolibre.android.authchallenges"
             }
         },
         {
-            "name": "auth-hub-android",
+            "name": "auth-hub",
             "iOS": {
-                "key": ""
+                "key": "Hub"
             },
             "Android": {
                 "key": "com.mercadolibre.android.hub"
+            }
+        },
+        {
+            "name": "auth-commons",
+            "iOS": {
+                "key": "AuthCommons"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.authcommons"
             }
         },
         {
@@ -2623,6 +2650,51 @@
             },
             "Android": {
                 "key": "com.mercadolibre.android.security_two_fa.totpinapp"
+            }
+        },
+        {
+            "name": "yuca_autentication",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.yuca_authentication"
+            }
+        },
+        {
+            "name": "developer_mode",
+            "iOS": {
+                "key": "DeveloperMode"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.developer_mode"
+            }
+        },
+        {
+            "name": "point_commons",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.point_smart_helpers"
+            }
+        },
+        {
+            "name": "point_recharge",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.point_recharge"
+            }  
+        },
+        {
+            "name": "merch-realestates",
+            "iOS": {
+                "key": "MerchRealestates"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.merch_realestates"
             }
         }
     ]
