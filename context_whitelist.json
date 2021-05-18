@@ -2687,6 +2687,15 @@
             "Android": {
                 "key": "com.mercadolibre.android.point_recharge"
             }  
+        },
+        {
+            "name": "webkit_lms",
+            "iOS": {
+                "key": "WebkitLms"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.webkit_lms"
+            }  
         }
     ]
 }
