@@ -1245,6 +1245,24 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "MerchRealestates",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "GoogleMLKit/TextRecognition",
+      "source": "public",
+      "target": "production",
+      "version": "1.2.0"
+    },
+    {
+      "name": "GoogleMLKit/BarcodeScanning",
+      "source": "public",
+      "target": "production",
+      "version": "1.2.0"
+    },
+    {
       "name": "WebkitLms",
       "source": "private",
       "target": "production",

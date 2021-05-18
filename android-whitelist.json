@@ -293,6 +293,7 @@
       "version": "1\\.6\\.4|1\\.7\\.2"
     },
     {
+      "expires": "2021-05-31",
       "group": "com\\.google\\.android\\.libraries\\.places",
       "name": "places-compat",
       "version": "1\\.1\\.0"
@@ -1024,6 +1025,11 @@
     {
       "group": "com\\.mercadopago\\.android\\.moneytransfer",
       "name": "contacts",
+      "version": "5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadopago\\.android\\.moneytransfer",
+      "name": "commons",
       "version": "5\\.\\+"
     },
     {
@@ -1804,6 +1810,11 @@
       "version": "16\\.0\\.0"
     },
     {
+      "group": "com\\.facebook\\.flipper",
+      "name": "flipper-network-plugin",
+      "version": "0\\.90\\.2"
+    },
+    {
       "group": "com\\.auth0\\.android",
       "name": "auth0",
       "version": "1\\.+"
@@ -1812,6 +1823,56 @@
       "group": "com\\.auth0\\.android",
       "name": "jwtdecode",
       "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_smart_helpers",
+      "name": "point_commons",
+      "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_recharge",
+      "name": "cellphone",
+      "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_recharge",
+      "name": "transport",
+      "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.liveness_detection",
+      "name": "facetec",
+      "version": "sdk-9\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.liveness_detection",
+      "name": "facetec",
+      "version": "9\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.merch_realestates",
+      "name": "merch-realestates",
+      "version": "0\\.\\+"
+    },
+    {
+      "group": "com\\.google\\.android\\.gms",
+      "name": "play-services-mlkit-text-recognition",
+      "version": "16\\.1\\.3"
+    },
+    {
+      "group": "com\\.google\\.android\\.gms",
+      "name": "play-services-mlkit-barcode-scanning",
+      "version": "16\\.1\\.4"
+    },
+    {
+      "group": "androidx\\.camera",
+      "name": "camera-camera2",
+      "version": "1\\.0\\.0"
+    },
+    {
+      "group": "androidx\\.camera",
+      "name": "camera-lifecycle",
+      "version": "1\\.0\\.0"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.webkit_lms",
