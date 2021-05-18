@@ -1249,6 +1249,18 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "GoogleMLKit/TextRecognition",
+      "source": "public",
+      "target": "production",
+      "version": "1.2.0"
+    },
+    {
+      "name": "GoogleMLKit/BarcodeScanning",
+      "source": "public",
+      "target": "production",
+      "version": "1.2.0"
     }
   ]
 }
