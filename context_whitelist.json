@@ -2686,7 +2686,7 @@
             },
             "Android": {
                 "key": "com.mercadolibre.android.point_recharge"
-            }  
+            }
         },
         {
             "name": "merch-realestates",
@@ -2695,6 +2695,15 @@
             },
             "Android": {
                 "key": "com.mercadolibre.android.merch_realestates"
+            }
+        },
+        {
+            "name": "spp_spirtech",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.spp_spirtech"
             }
         }
     ]
