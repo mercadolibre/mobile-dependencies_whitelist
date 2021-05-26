@@ -1848,8 +1848,13 @@
       "version": "1\\.5\\.2\\-native"
     },
     {
+      "expires": "2021-06-14",
       "group": "com\\.mercadolibre\\.android\\.configuration\\.provider",
-      "version": "14\\.\\+"
+      "version": "14\\.\\+|15\\.\\+|16\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.configuration\\.provider",
+      "version": "17\\.\\+"
     },
     {
       "expires": "2020-01-01",
