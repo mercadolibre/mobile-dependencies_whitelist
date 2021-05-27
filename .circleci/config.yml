@@ -31,7 +31,7 @@ jobs:
       FILE: "ios-whitelist.json"
   notify:
     docker:
-      - image: circleci/node:latest
+      - image: circleci/ruby:latest
     resource_class: small
     steps:
       - checkout
