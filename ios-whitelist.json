@@ -311,6 +311,12 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "MLAddresses",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "MLAnalytics",
       "source": "private",
       "target": "production",
