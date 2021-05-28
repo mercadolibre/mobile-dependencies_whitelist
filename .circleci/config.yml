@@ -45,7 +45,6 @@ workflows:
     jobs:
       - android
       - ios
-      - notify
   weekly:
     triggers:
       - schedule:
