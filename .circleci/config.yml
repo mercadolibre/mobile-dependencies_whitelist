@@ -46,3 +46,13 @@ workflows:
       - android
       - ios
       - notify
+  weekly:
+    triggers:
+      - schedule:
+          cron: "0 8 * * 1" # on mondays at 8:00
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - notify

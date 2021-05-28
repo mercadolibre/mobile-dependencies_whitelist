@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ruby -r "./scripts/test.rb" -e "Test::main()"
+ruby -r "./scripts/notification.rb" -e "Notification::main()"
 
 
 
