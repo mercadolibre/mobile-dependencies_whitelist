@@ -1,6 +1,7 @@
 require 'json'
 require 'date'
-require 'HTTParty'
+require 'net/http'
+require 'uri'
 
 module Test
 	ANDROID_WHITELIST_PATH_FILE = "./android-whitelist.json"
@@ -50,16 +51,19 @@ module Test
 
 	def self.sendNotification(message)
 		puts "enviando notif"
-		#slack_url = "https://hooks.slack.com/services/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"
-		slack_url = "https://hooks.slack.com/workflows/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"
+		slack_url = ENV['SLACK_NOTIFICATION_LIB_WEBHOOK']
 
-		puts HTTParty.post(
-		  slack_url,
-		  body: {
+		uri = URI.parse(slack_url)
+		header = {'Content-Type': 'application/json'}
+		# Create the HTTP objects
+        http = Net::HTTP.new(uri.host, uri.port)
+        http.use_ssl = true
+        request = Net::HTTP::Post.new(uri.request_uri, header)
+        request.body = {
 			message: message
-		  }.to_json,
-		  headers: { 'Content-Type' => 'application/json' }
-		)
+	  	}.to_json
+        response = http.request(request)
+        puts response
 	end
 
 	def self.getMessage(libs_weeklyAndroid, libs_monthlyAndroid, libs_weeklyIos, libs_monthlyIos)
@@ -113,7 +117,7 @@ module Test
 		message = getMessage(libs_weeklyAndroid, libs_monthlyAndroid, libs_weeklyIos, libs_monthlyIos)
 
 		sendNotification(message)
-		#puts message
+		puts message
 	end
 
 	main()
