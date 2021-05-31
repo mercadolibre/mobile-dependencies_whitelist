@@ -73,7 +73,7 @@ module Notification
         http.use_ssl = true
         request = Net::HTTP::Post.new(uri.request_uri, header)
         request.body = {
-            message: message
+            message: message,
         }.to_json
         response = http.request(request)
         puts response
@@ -103,13 +103,14 @@ module Notification
 
         message = ""
         if (weekly != "")
-            message = "\nLibs que expiran esta semana: \n" + weekly
+            message = "\n• Libs que expiran esta semana: \n" + weekly
         end
         if (monthly != "")
-            message += "\nLibs que expiran en los proximos 30 dias: \n" + monthly
+            message += "\n• Libs que expiran en los proximos 30 dias: \n" + monthly
         end
 
         if message.size > 0
+        	message = ":alerta: Friendly Reminder! :alerta:\n" + message
             message += "\nPodes ver las versiones que deberias usar en la "
             message += "https://github.com/mercadolibre/mobile-dependencies_whitelist)"
         end
@@ -123,15 +124,12 @@ module Notification
         libsWeekly = get_libs_expiring(dataHashAndroid, A_WEEK, false, ANDROID)
         libsMonthly = get_libs_expiring(dataHashAndroid, A_MONTH, true, ANDROID)
 
-        libsWeeklyIos = get_libs_expiring(dataHashIos, A_WEEK, false, IOS)
-        libsMonthlyIos = get_libs_expiring(dataHashIos, A_MONTH, true, IOS)
+        libsWeekly.concat(get_libs_expiring(dataHashIos, A_WEEK, false, IOS))
+        libsMonthly.concat(get_libs_expiring(dataHashIos, A_MONTH, true, IOS))
 
-        libsWeekly.concat(libsWeeklyIos)
-        libsMonthly.concat(libsMonthlyIos)
         message = get_message(libsWeekly, libsMonthly)
+        puts message
 
         send_notification(message)
-        puts message
     end
-
 end
