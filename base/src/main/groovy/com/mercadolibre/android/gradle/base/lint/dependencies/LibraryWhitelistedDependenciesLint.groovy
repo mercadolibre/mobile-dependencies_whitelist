@@ -30,8 +30,6 @@ class LibraryWhitelistedDependenciesLint implements Lint {
      * Array with whitelisted dependencies
      */
     List<Dependency> WHITELIST_DEPENDENCIES = new ArrayList<Dependency>()
-
-    List<Dependency> WHITELIST_EXPIRED = new ArrayList<Dependency>()
     List<Dependency> WHITELIST_GOING_TO_EXPIRE = new ArrayList<Dependency>()
 
     /**
