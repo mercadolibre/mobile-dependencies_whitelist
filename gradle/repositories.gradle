@@ -1,10 +1,10 @@
 repositories {
     // Meli internal release libs
     maven {
-        url 'https://mercadolibre.bintray.com/android-releases'
+        url 'https://android.artifacts.furycloud.io/repository/releases/'
         credentials {
-            username 'bintray-read-only'
-            password 'e7b8b22a0b84527c04194c31f90bc0b879d8fd9d'
+            username 'fury-user'
+            password '-^BVV4TCwLdEne@f'
         }
         content {
             // only releases

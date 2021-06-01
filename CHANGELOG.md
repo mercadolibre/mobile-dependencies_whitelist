@@ -1,5 +1,10 @@
 # 10.0.7
 ## Agregado
+- Validacion y warning de libs que estan deprecadas en la whitelist 
+- se agrega el nuevo repo nexus de ML y se elimina el obsoleto bintray
+
+# 10.0.7
+## Agregado
 - Se deshabilita Spotbugs y Findbugs dado que no funcionan correctamente. Ésta última ya estaba previamente deshabilitada
 
 # 10.0.6
