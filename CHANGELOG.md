@@ -1,4 +1,4 @@
-# 10.0.7
+# 10.0.8
 ## Agregado
 - Validacion y warning de libs que estan deprecadas en la whitelist 
 - se agrega el nuevo repo nexus de ML y se elimina el obsoleto bintray
