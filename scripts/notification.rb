@@ -112,7 +112,7 @@ module Notification
         if message.size > 0
         	message = ":alerta: Friendly Reminder! :alerta:\n" + message
             message += "\nPodes ver las versiones que deberias usar en la "
-            message += "https://github.com/mercadolibre/mobile-dependencies_whitelist)"
+            message += "https://github.com/mercadolibre/mobile-dependencies_whitelist"
         end
         return message
     end
