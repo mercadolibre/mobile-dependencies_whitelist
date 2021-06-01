@@ -96,7 +96,7 @@ class LibraryWhitelistedDependenciesLint implements Lint {
             file.getParentFile().mkdirs()
         }
 
-        String message = "WARNING: The following dependencies has been marked has deprecated: \n"
+        String message = "WARNING: The following dependencies has been marked as deprecated: \n"
         WHITELIST_GOING_TO_EXPIRE.each {
             message += "(${findDependencyInList(it, WHITELIST_DEPENDENCIES)?.rawExpiresDate}) - ${it} (Deprecated!)\n"
         }
