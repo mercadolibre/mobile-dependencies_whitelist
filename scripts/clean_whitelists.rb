@@ -73,7 +73,7 @@ module Clean_whitelists
 
         res = system('git config --global user.email "cleaningBot@mercadolibre.com"')
         puts res
-        res = system('git config --global user.email "cleaningBot@mercadolibre.com"')
+        res = system('git config --global user.name "Cleaning Bot"')
         puts res
 
         res = system("git push origin " + prBranchName) #+ " --quiet >/dev/null 2>&1")
