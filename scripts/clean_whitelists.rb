@@ -68,12 +68,13 @@ module Clean_whitelists
         puts res
         res = system("git add ppios.txt")
         puts res
-        res = system('git commit -am "remove expired libs until: ' +currentDate + '"') #+ " --quiet >/dev/null 2>&1")
+
+        res = system('git config user.email "cleaningBot@mercadolibre.com"')
+        puts res
+        res = system('git config user.name "Cleaning Bot"')
         puts res
 
-        res = system('git config --global user.email "cleaningBot@mercadolibre.com"')
-        puts res
-        res = system('git config --global user.name "Cleaning Bot"')
+        res = system('git commit -am "remove expired libs until: ' +currentDate + '"') #+ " --quiet >/dev/null 2>&1")
         puts res
 
         res = system("git push origin " + prBranchName) #+ " --quiet >/dev/null 2>&1")
