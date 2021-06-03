@@ -53,18 +53,24 @@ module Clean_whitelists
         cleanHash = removeExpired(dataHashIos)
         save_json_to_file(cleanHash, "ppios.txt")
 
-        #create_pr()
+        create_pr()
     end
 
     def self.create_pr()
     	currentDate = Date.today.to_s()
         puts "\nCreating pull request " + currentDate
-        #os.chdir(self.repo_path)
         prBranchName = "fix/cleanExpiredLibs/" + currentDate
 
         res = system("git checkout -b " + prBranchName) #+ " --quiet >/dev/null 2>&1")
+        puts res
+        res = system("git add pp.txt")
+        puts res
+        res = system("git add ppios.txt")
+        puts res
         res = system('git commit -am "remove expired libs until: ' +currentDate + '"') #+ " --quiet >/dev/null 2>&1")
+        puts res
         res = system("git push origin " + prBranchName) #+ " --quiet >/dev/null 2>&1")
+        puts res
 
         url = "https://github.com/mercadolibre/mobile-dependencies_whitelist/pulls"
         uri = URI.parse(url)
@@ -84,7 +90,7 @@ module Clean_whitelists
             body: "This Pull Request deletes expired libs"
         }.to_json
         response = http.request(request)
-
+		puts response
     end
 
     #main()
