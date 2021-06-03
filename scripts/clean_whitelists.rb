@@ -70,6 +70,12 @@ module Clean_whitelists
         puts res
         res = system('git commit -am "remove expired libs until: ' +currentDate + '"') #+ " --quiet >/dev/null 2>&1")
         puts res
+
+        res = system('git config --global user.email "cleaningBot@mercadolibre.com"')
+        puts res
+        res = system('git config --global user.email "cleaningBot@mercadolibre.com"')
+        puts res
+
         res = system("git push origin " + prBranchName) #+ " --quiet >/dev/null 2>&1")
         puts res
 
