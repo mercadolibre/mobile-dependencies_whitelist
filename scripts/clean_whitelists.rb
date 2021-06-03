@@ -1,5 +1,6 @@
 require 'json'
 require 'date'
+require 'net/http'
 
 module Clean_whitelists
     ANDROID_WHITELIST_PATH_FILE = "./android-whitelist.json"
@@ -85,7 +86,7 @@ module Clean_whitelists
         request = Net::HTTP::Post.new(uri.request_uri, header)
         request.body = {
             title: "[Trivial] Clean old expired libs",
-            head: PR_BRANCH_NAME,
+            head: prBranchName,
             base: "master",
             body: "This Pull Request deletes expired libs"
         }.to_json
