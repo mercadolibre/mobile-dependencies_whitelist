@@ -32,6 +32,7 @@ module Clean_whitelists
         Date.parse(expireDate) < Date.today
     end
 
+	# Eliminamos las libs que estan expiradas de las listas y actualizamos el repo
     def self.main()
         dataHashAndroid = get_json_from_file(ANDROID_WHITELIST_PATH_FILE)
         dataHashIos = get_json_from_file(IOS_WHITELIST_PATH_FILE)
