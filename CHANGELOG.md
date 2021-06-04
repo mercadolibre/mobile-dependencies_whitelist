@@ -1,6 +1,6 @@
 # 10.1.0
 ## Cambiado
-- Se vuelve a ser compliance con Configuration Avoidance 
+- Se vuelve a ser compliance con Configuration Avoidance en la lógica de exclusión de Findbugs y Spotbugs
 
 # 10.0.7
 ## Agregado
