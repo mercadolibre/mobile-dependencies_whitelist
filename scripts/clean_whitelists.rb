@@ -77,6 +77,9 @@ module Clean_whitelists
         res = system('git commit -am "remove expired libs until: ' +currentDate + '"') #+ " --quiet >/dev/null 2>&1")
         puts res
 
+		res = system('git remote set-url origin https://mercadolibre:$GITHUB_TOKEN@github.com/mercadolibre/mobile-dependencies_whitelist.git'
+		res = system('git push --set-upstream origin ' + prBranchName)
+
         res = system("git push origin " + prBranchName) #+ " --quiet >/dev/null 2>&1")
         puts res
 
@@ -85,7 +88,7 @@ module Clean_whitelists
 
         header = {'Content-Type': 'application/json',
 			'Accept': 'application/vnd.github.v3+json',
-			'Authorization': "token " + ENV["GITHUB_TOKEN_CLEAN_BOT"]
+			'Authorization': "token " + ENV["GITHUB_TOKEN"]
         }
         # Create the HTTP objects
         http = Net::HTTP.new(uri.host, uri.port)
