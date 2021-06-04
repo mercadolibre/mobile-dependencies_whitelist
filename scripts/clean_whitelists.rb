@@ -45,18 +45,18 @@ module Clean_whitelists
         save_json_to_file(cleanHash, IOS_WHITELIST_PATH_FILE)
         #save_json_to_file(cleanHash, "ppios.txt")
 
-		res = `git diff --stat`
-		puts res
+        res = `git diff --stat`
+        puts res
 
-		# if we have changes in the repo we create the PR
-		if res && res.size > 0
-        	#create_pr()
-		end
+        # if we have changes in the repo we create the PR
+        if res && res.size > 0
+            create_pr()
+        end
 
     end
 
     def self.create_pr()
-    	currentDate = Date.today.to_s()
+        currentDate = Date.today.to_s()
         puts "\nCreating pull request " + currentDate
         prBranchName = "fix/cleanExpiredLibs/" + currentDate
 
@@ -64,16 +64,16 @@ module Clean_whitelists
         system('git config user.email "cleaningBot@mercadolibre.com"')
         system('git config user.name "Cleaning Bot"')
         system('git commit -am "remove expired libs until: ' +currentDate + '"')
-		system('git remote set-url origin https://mercadolibre:$GITHUB_TOKEN@github.com/mercadolibre/mobile-dependencies_whitelist.git --quiet >/dev/null 2>&1"')
-		system('git push --set-upstream origin ' + prBranchName)
+        system('git remote set-url origin https://mercadolibre:$GITHUB_TOKEN@github.com/mercadolibre/mobile-dependencies_whitelist.git --quiet >/dev/null 2>&1"')
+        system('git push --set-upstream origin ' + prBranchName)
         system("git push origin " + prBranchName)
 
         url = "https://api.github.com/repos/mercadolibre/mobile-dependencies_whitelist/pulls"
         uri = URI.parse(url)
 
         header = {'Content-Type': 'application/json',
-			'Accept': 'application/vnd.github.v3+json',
-			'Authorization': "token " + ENV["GITHUB_TOKEN"]
+            'Accept': 'application/vnd.github.v3+json',
+            'Authorization': "token " + ENV["GITHUB_TOKEN"]
         }
         # Create the HTTP objects
         http = Net::HTTP.new(uri.host, uri.port)
@@ -86,7 +86,7 @@ module Clean_whitelists
             body: "This Pull Request was generated automatically to delete expired libs"
         }.to_json
         response = http.request(request)
-		puts response
+        puts response
     end
 
     #main()
