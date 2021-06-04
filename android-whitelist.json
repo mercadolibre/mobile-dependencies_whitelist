@@ -51,12 +51,6 @@
       "version": "mercadolibre-6\\.\\+"
     },
     {
-      "expires": "2020-01-01",
-      "group": "com\\.mercadolibre\\.android\\.registration",
-      "name": "core",
-      "version": "mercadolibre-6\\.0\\.\\+"
-    },
-    {
       "group": "com\\.squareup\\.picasso",
       "name": "picasso",
       "version": "2\\.5\\.2"
@@ -94,19 +88,7 @@
     {
       "expires": "2020-04-12",
       "group": "com\\.android\\.support",
-      "name": "appcompat-v7",
-      "version": "28\\.0\\.0"
-    },
-    {
-      "expires": "2020-04-12",
-      "group": "com\\.android\\.support",
       "name": "cardview-v7",
-      "version": "28\\.0\\.0"
-    },
-    {
-      "expires": "2020-04-12",
-      "group": "com\\.android\\.support",
-      "name": "customtabs",
       "version": "28\\.0\\.0"
     },
     {
@@ -118,31 +100,13 @@
     {
       "expires": "2020-04-12",
       "group": "com\\.android\\.support",
-      "name": "gridlayout-v7",
-      "version": "28\\.0\\.0"
-    },
-    {
-      "expires": "2020-04-12",
-      "group": "com\\.android\\.support",
       "name": "multidex",
       "version": "1\\.0\\.3"
     },
     {
       "expires": "2020-04-12",
       "group": "com\\.android\\.support",
-      "name": "percent",
-      "version": "28\\.0\\.0"
-    },
-    {
-      "expires": "2020-04-12",
-      "group": "com\\.android\\.support",
       "name": "preference-v7",
-      "version": "28\\.0\\.0"
-    },
-    {
-      "expires": "2020-04-12",
-      "group": "com\\.android\\.support",
-      "name": "recyclerview-v7",
       "version": "28\\.0\\.0"
     },
     {
@@ -154,31 +118,13 @@
     {
       "expires": "2020-04-12",
       "group": "com\\.android\\.support",
-      "name": "support-media-compat",
-      "version": "28\\.0\\.0"
-    },
-    {
-      "expires": "2020-04-12",
-      "group": "com\\.android\\.support",
       "name": "support-v4",
-      "version": "28\\.0\\.0"
-    },
-    {
-      "expires": "2020-04-12",
-      "group": "com\\.android\\.support",
-      "name": "transition",
       "version": "28\\.0\\.0"
     },
     {
       "expires": "2020-04-12",
       "group": "com\\.android\\.support\\.constraint",
       "name": "constraint-layout",
-      "version": "1\\.1\\.3"
-    },
-    {
-      "expires": "2020-04-12",
-      "group": "com\\.android\\.support\\.constraint",
-      "name": "constraint-layout-solver",
       "version": "1\\.1\\.3"
     },
     {
@@ -364,12 +310,6 @@
       "version": "1\\.7\\.2|1\\.10\\.0"
     },
     {
-      "expires": "2021-05-31",
-      "group": "com\\.google\\.android\\.libraries\\.places",
-      "name": "places-compat",
-      "version": "1\\.1\\.0"
-    },
-    {
       "group": "com\\.google\\.android\\.libraries\\.places",
       "name": "places",
       "version": "2\\.4\\.0"
@@ -530,12 +470,6 @@
       "version": "16\\.\\+"
     },
     {
-      "expires": "2020-01-01",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "carddrawer",
-      "version": "1\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android",
       "name": "carddrawer",
       "version": "2\\.\\+"
@@ -544,12 +478,6 @@
       "group": "com\\.mercadolibre\\.android",
       "name": "configuration-manager",
       "version": "4\\.\\+"
-    },
-    {
-      "expires": "2021-04-12",
-      "group": "com\\.mercadolibre\\.android\\.ignite",
-      "name": "core",
-      "version": "1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.ignite",
@@ -697,12 +625,6 @@
       "version": "11\\.\\+"
     },
     {
-      "expires": "2020-11-30",
-      "group": "com\\.mercadolibre\\.android\\.biometrics",
-      "name": "sdk",
-      "version": "3\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.biometrics",
       "name": "sdk",
       "version": "4\\.\\+"
@@ -738,21 +660,9 @@
       "version": "mercadolibre-8\\.\\+|mercadopago-8\\.\\+"
     },
     {
-      "expires": "2021-03-01",
-      "group": "com\\.mercadolibre\\.android\\.cart",
-      "name": "manager",
-      "version": "7\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.cart",
       "name": "cart",
       "version": "mercadolibre-9\\.\\+|mercadopago-9\\.\\+"
-    },
-    {
-      "expires": "2021-03-01",
-      "group": "com\\.mercadolibre\\.android\\.cart",
-      "name": "cart",
-      "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.purchases",
@@ -788,12 +698,6 @@
       "version": "1\\.\\+"
     },
     {
-      "expires": "2020-06-01",
-      "group": "com\\.mercadolibre\\.android\\.classifieds",
-      "name": "dynamic-flow",
-      "version": "0\\.\\+"
-    },
-    {
       "expires": "2020-07-01",
       "group": "com\\.mercadolibre\\.android\\.classifieds",
       "name": "listing",
@@ -808,12 +712,6 @@
       "group": "com\\.mercadolibre\\.android\\.classifieds",
       "name": "credits",
       "version": "2\\.\\+"
-    },
-    {
-      "expires": "2020-06-01",
-      "group": "com\\.mercadolibre\\.android\\.classifieds",
-      "name": "credits",
-      "version": "1\\.\\+"
     },
     {
       "expires": "2021-05-30",
@@ -1013,12 +911,6 @@
       "version": "4\\.\\+"
     },
     {
-      "expires": "2021-03-01",
-      "group": "com\\.mercadolibre\\.android\\.rule\\.engine",
-      "name": "rule\\-engine",
-      "version": "3\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.sdk",
       "version": "21\\.\\+"
     },
@@ -1031,12 +923,6 @@
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "input",
       "version": "9\\.\\+|10\\.\\+"
-    },
-    {
-      "expires": "2021-01-01",
-      "group": "com\\.mercadolibre\\.android\\.search",
-      "name": "input",
-      "version": "7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.search",
@@ -1072,12 +958,6 @@
       "version": "2\\.\\+"
     },
     {
-      "expires": "2021-4-21",
-      "group": "com\\.mercadolibre\\.android\\.vip",
-      "name": "vip",
-      "version": "5\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.vip",
       "name": "vip",
       "version": "6\\.\\+"
@@ -1111,12 +991,6 @@
       "group": "com\\.mercadopago\\.android\\.cards",
       "name": "cards",
       "version": "4\\.\\+"
-    },
-    {
-      "expires": "2020-12-15",
-      "group": "com\\.mercadolibre\\.android\\.cardscomponents",
-      "name": "cards-components",
-      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cardscomponents",
@@ -1554,12 +1428,6 @@
       "version": "1\\.0\\.0"
     },
     {
-      "expires": "2021-02-11",
-      "group": "androidx\\.appcompat",
-      "name": "appcompat",
-      "version": "1\\.0\\.0|1\\.0\\.2"
-    },
-    {
       "group": "androidx\\.appcompat",
       "name": "appcompat",
       "version": "1\\.2\\.0"
@@ -1647,12 +1515,6 @@
     {
       "expires": "2020-12-17",
       "group": "androidx\\.constraintlayout",
-      "name": "constraintlayout",
-      "version": "1\\.1\\.3"
-    },
-    {
-      "expires": "2020-12-17",
-      "group": "androidx\\.constraintlayout",
       "name": "constraintlayout-solver",
       "version": "1\\.1\\.3"
     },
@@ -1675,12 +1537,6 @@
       "group": "androidx\\.core",
       "name": "core-ktx",
       "version": "1\\.2\\.0"
-    },
-    {
-      "expires": "2021-02-11",
-      "group": "androidx\\.fragment",
-      "name": "fragment",
-      "version": "1\\.0\\.0|1\\.2\\.0|1\\.2\\.4"
     },
     {
       "group": "androidx\\.fragment",
@@ -1846,11 +1702,6 @@
       "group": "com\\.smartlook\\.recording",
       "name": "app",
       "version": "1\\.5\\.2\\-native"
-    },
-    {
-      "expires": "2020-01-01",
-      "group": "com\\.mercadolibre\\.android\\.cardsengagement",
-      "version": "1\\.\\+|2\\.\\+"
     },
     {
       "expires": "2020-12-15",
