@@ -19,19 +19,12 @@ module Clean_whitelists
     end
 
     def self.removeExpired(hashDataList)
-        #listCopy = {}
         listCopy = hashDataList
-        #listCopy["whitelist"]
         hashDataList["whitelist"].each_entry do |entry, v|
             if entry.key?("expires") && is_expired(entry["expires"])
                     listCopy["whitelist"].delete(entry)
             end
-            #if !entry.key?("expires") or !is_expired(entry["expires"])
-            #    puts "something"
-	        #    listCopy["whitelist"].add(entry)
-			#end
         end
-        #puts listCopy
         return listCopy
     end
 
@@ -52,8 +45,9 @@ module Clean_whitelists
 		res = `git diff --stat`
 		puts res
 
+		# if we have changes in the repo we create the PR
 		if res && res.size > 0
-        	create_pr()
+        	#create_pr()
 		end
 
     end
@@ -63,15 +57,13 @@ module Clean_whitelists
         puts "\nCreating pull request " + currentDate
         prBranchName = "fix/cleanExpiredLibs/" + currentDate
 
-        res = system("git checkout -b " + prBranchName)
-        res = system("git add pp.txt")
-        res = system("git add ppios.txt")
-        res = system('git config user.email "cleaningBot@mercadolibre.com"')
-        res = system('git config user.name "Cleaning Bot"')
-        res = system('git commit -am "remove expired libs until: ' +currentDate + '"') #+ " --quiet >/dev/null 2>&1")
-		res = system('git remote set-url origin https://mercadolibre:$GITHUB_TOKEN@github.com/mercadolibre/mobile-dependencies_whitelist.git')
-		res = system('git push --set-upstream origin ' + prBranchName)
-        res = system("git push origin " + prBranchName) #+ " --quiet >/dev/null 2>&1")
+        system("git checkout -b " + prBranchName)
+        system('git config user.email "cleaningBot@mercadolibre.com"')
+        system('git config user.name "Cleaning Bot"')
+        system('git commit -am "remove expired libs until: ' +currentDate + '"')
+		system('git remote set-url origin https://mercadolibre:$GITHUB_TOKEN@github.com/mercadolibre/mobile-dependencies_whitelist.git')
+		system('git push --set-upstream origin ' + prBranchName)
+        system("git push origin " + prBranchName)
 
         url = "https://api.github.com/repos/mercadolibre/mobile-dependencies_whitelist/pulls"
         uri = URI.parse(url)
