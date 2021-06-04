@@ -10,7 +10,6 @@ repositories {
             // only releases
             includeVersionByRegex('com\\.mercadolibre\\..*', '.*', '^((?!EXPERIMENTAL-|LOCAL-).)*$')
             includeVersionByRegex('com\\.mercadopago\\..*', '.*', '^((?!EXPERIMENTAL-|LOCAL-).)*$')
-            includeGroup 'com.bugsnag'
         }
     }
 }
