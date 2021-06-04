@@ -83,7 +83,7 @@ module Clean_whitelists
         res = system("git push origin " + prBranchName) #+ " --quiet >/dev/null 2>&1")
         puts res
 
-        url = "https://github.com/mercadolibre/mobile-dependencies_whitelist/pulls"
+        url = "https://api.github.com/repos/mercadolibre/mobile-dependencies_whitelist/pulls"
         uri = URI.parse(url)
 
         header = {'Content-Type': 'application/json',
