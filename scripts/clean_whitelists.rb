@@ -85,7 +85,7 @@ module Clean_whitelists
 
         header = {'Content-Type': 'application/json',
 			'Accept': 'application/vnd.github.v3+json',
-			'Authorization': "token " + ENV["GITHUB_TOKEN_CLEAN_BOT"]
+			'Authorization': "token " + ENV["GITHUB_TOKEN"]
         }
         # Create the HTTP objects
         http = Net::HTTP.new(uri.host, uri.port)
