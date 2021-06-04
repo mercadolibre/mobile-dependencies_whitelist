@@ -731,6 +731,13 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
+      "expires": "2021-05-27",
+      "name": "MPSDK",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?10.[0-9]+$"
+    },
+    {
       "name": "MPSignUpLibs",
       "source": "private",
       "target": "production",
@@ -887,6 +894,13 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "expires": "2021-05-27",
+      "name": "MPCommons",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
       "name": "MPContacts",
       "source": "private",
       "target": "production",
@@ -897,6 +911,13 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?[2-4].[0-9]+$"
+    },
+    {
+      "expires": "2021-05-27",
+      "name": "MPUI",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?3.[0-9]+$"
     },
     {
       "expires": "2021-05-27",
