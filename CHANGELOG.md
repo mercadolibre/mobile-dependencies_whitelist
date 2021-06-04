@@ -1,6 +1,9 @@
 # 10.1.0
 ## Cambiado
 - Se vuelve a ser compliance con Configuration Avoidance en la lógica de exclusión de Findbugs y Spotbugs
+- se agrega el nuevo repo nexus de ML y se elimina el obsoleto bintray
+## Agregado
+- Validacion y warning de libs que estan deprecadas en la whitelist 
 
 # 10.0.7
 ## Agregado

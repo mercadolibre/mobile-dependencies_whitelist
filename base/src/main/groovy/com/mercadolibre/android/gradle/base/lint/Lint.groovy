@@ -4,12 +4,11 @@ import org.gradle.api.Project
 
 /**
  * Contract that custom gradle lints should implement
- *
- * Created by saguilera on 12/21/16.
  */
 interface Lint {
 
     static final String LINT_FILENAME = "lint.ld"
+    static final String LINT_WARNING_FILENAME = "lintWarning.ld"
 
     /**
      * Return a string with the name of the lint task
