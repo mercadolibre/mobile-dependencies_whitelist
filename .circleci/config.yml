@@ -12,7 +12,7 @@ default: &defaultJob
         command: jsonlint $FILE
     - run:
         name: "Install JSON sorter"
-        command: sudo npm install json-sort-cli@1.14.1 -g
+        command: sudo npm install json-sort-cli -g
     - run:
         name: "Run JSON sorter lint"
         command: | 
@@ -38,6 +38,15 @@ jobs:
       - run:
           name: Run Notification Script
           command: ./scripts/notification.sh
+  clean:
+    docker:
+      - image: circleci/ruby:latest
+    resource_class: small
+    steps:
+      - checkout
+      - run:
+          name: Run Clean Script
+          command: ./scripts/clean_whitelists.sh
 
 workflows:
   version: 2
@@ -55,3 +64,4 @@ workflows:
                 - master
     jobs:
       - notify
+      - clean
