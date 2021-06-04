@@ -149,13 +149,10 @@ class BasePlugin implements Plugin<Object> {
             // and its not providing any real benefit that other SCA tools already do
             // Another reason is that there is a known issue with repositories that only has Kotlin
             // files where Findbugs/Spotbugs can't find files to lint
-            subproject.tasks.whenTaskAdded { task ->
-                if (task.name.toLowerCase().contains('findbugs')) {
-                    task.enabled = false
-                }
-                if (task.name.toLowerCase().contains('spotbugs')) {
-                    task.enabled = false
-                }
+            subproject.tasks.matching {
+                it.name.toLowerCase().contains('findbugs') || it.name.toLowerCase().contains('spotbugs')
+            }.configureEach {
+                it.enabled = false
             }
         }
 
