@@ -64,7 +64,7 @@ module Clean_whitelists
         system('git config user.email "cleaningBot@mercadolibre.com"')
         system('git config user.name "Cleaning Bot"')
         system('git commit -am "remove expired libs until: ' +currentDate + '"')
-        system('git remote set-url origin https://mercadolibre:$GITHUB_TOKEN@github.com/mercadolibre/mobile-dependencies_whitelist.git --quiet >/dev/null 2>&1"')
+        system('git remote set-url origin https://mercadolibre:$GITHUB_TOKEN@github.com/mercadolibre/mobile-dependencies_whitelist.git --quiet >/dev/null 2>&1')
         system('git push --set-upstream origin ' + prBranchName)
         system("git push origin " + prBranchName)
 
