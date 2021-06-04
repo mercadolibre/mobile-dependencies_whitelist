@@ -39,8 +39,10 @@ module Clean_whitelists
 
         cleanHash = removeExpired(dataHashAndroid)
         save_json_to_file(cleanHash, ANDROID_WHITELIST_PATH_FILE)
+        #save_json_to_file(cleanHash, "pp.txt")
         cleanHash = removeExpired(dataHashIos)
         save_json_to_file(cleanHash, IOS_WHITELIST_PATH_FILE)
+        #save_json_to_file(cleanHash, "ppios.txt")
 
 		res = `git diff --stat`
 		puts res
@@ -61,7 +63,7 @@ module Clean_whitelists
         system('git config user.email "cleaningBot@mercadolibre.com"')
         system('git config user.name "Cleaning Bot"')
         system('git commit -am "remove expired libs until: ' +currentDate + '"')
-		system('git remote set-url origin https://mercadolibre:$GITHUB_TOKEN@github.com/mercadolibre/mobile-dependencies_whitelist.git')
+		system('git remote set-url origin https://mercadolibre:$GITHUB_TOKEN@github.com/mercadolibre/mobile-dependencies_whitelist.git --quiet >/dev/null 2>&1"')
 		system('git push --set-upstream origin ' + prBranchName)
         system("git push origin " + prBranchName)
 
@@ -80,7 +82,7 @@ module Clean_whitelists
             title: "[Trivial] Clean old expired libs",
             head: prBranchName,
             base: "master",
-            body: "This Pull Request deletes expired libs"
+            body: "This Pull Request was generated automatically to delete expired libs"
         }.to_json
         response = http.request(request)
 		puts response

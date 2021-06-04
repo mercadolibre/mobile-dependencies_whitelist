@@ -12,7 +12,7 @@ default: &defaultJob
         command: jsonlint $FILE
     - run:
         name: "Install JSON sorter"
-        command: sudo npm install json-sort-cli@1.14.1 -g
+        command: sudo npm install json-sort-cli -g
     - run:
         name: "Run JSON sorter lint"
         command: | 
