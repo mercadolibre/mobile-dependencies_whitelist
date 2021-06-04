@@ -1,3 +1,7 @@
+# 10.1.0
+## Cambiado
+- Se vuelve a ser compliance con Configuration Avoidance en la lógica de exclusión de Findbugs y Spotbugs
+
 # 10.0.7
 ## Agregado
 - Se deshabilita Spotbugs y Findbugs dado que no funcionan correctamente. Ésta última ya estaba previamente deshabilitada
