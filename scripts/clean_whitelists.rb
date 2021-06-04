@@ -45,16 +45,17 @@ module Clean_whitelists
         dataHashIos = get_json_from_file(IOS_WHITELIST_PATH_FILE)
 
         cleanHash = removeExpired(dataHashAndroid)
-        puts "Size cleanHash: " + cleanHash["whitelist"].size.to_s
-        puts "Size dataHashAndroid: " + dataHashAndroid["whitelist"].size.to_s
-        puts cleanHash["whitelist"].to_a == dataHashAndroid["whitelist"].to_a
-
-        save_json_to_file(cleanHash, "pp.txt")
-
+        save_json_to_file(cleanHash, ANDROID_WHITELIST_PATH_FILE)
         cleanHash = removeExpired(dataHashIos)
-        save_json_to_file(cleanHash, "ppios.txt")
+        save_json_to_file(cleanHash, IOS_WHITELIST_PATH_FILE)
 
-        create_pr()
+		res = `git diff --stat`
+		puts res
+
+		if res && res.size > 0
+        	create_pr()
+		end
+
     end
 
     def self.create_pr()
@@ -62,26 +63,15 @@ module Clean_whitelists
         puts "\nCreating pull request " + currentDate
         prBranchName = "fix/cleanExpiredLibs/" + currentDate
 
-        res = system("git checkout -b " + prBranchName) #+ " --quiet >/dev/null 2>&1")
-        puts res
+        res = system("git checkout -b " + prBranchName)
         res = system("git add pp.txt")
-        puts res
         res = system("git add ppios.txt")
-        puts res
-
         res = system('git config user.email "cleaningBot@mercadolibre.com"')
-        puts res
         res = system('git config user.name "Cleaning Bot"')
-        puts res
-
         res = system('git commit -am "remove expired libs until: ' +currentDate + '"') #+ " --quiet >/dev/null 2>&1")
-        puts res
-
 		res = system('git remote set-url origin https://mercadolibre:$GITHUB_TOKEN@github.com/mercadolibre/mobile-dependencies_whitelist.git')
 		res = system('git push --set-upstream origin ' + prBranchName)
-
         res = system("git push origin " + prBranchName) #+ " --quiet >/dev/null 2>&1")
-        puts res
 
         url = "https://api.github.com/repos/mercadolibre/mobile-dependencies_whitelist/pulls"
         uri = URI.parse(url)

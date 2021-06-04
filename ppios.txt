@@ -899,6 +899,13 @@
       "version": "^~>\\s?[2-4].[0-9]+$"
     },
     {
+      "expires": "2021-05-27",
+      "name": "MPTracking",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "MLBiometricSecurity",
       "source": "private",
       "target": "production",
