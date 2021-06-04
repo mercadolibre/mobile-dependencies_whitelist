@@ -15,6 +15,7 @@ module Clean_whitelists
     def self.save_json_to_file(hashData, pathFile)
         File.open(pathFile,"w") do |f|
             f.write(JSON.pretty_generate(hashData))
+            f.write("\n") # we add this enter at the end, to avoid false JSONSORT check validation
         end
     end
 
