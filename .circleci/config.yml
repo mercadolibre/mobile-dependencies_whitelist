@@ -54,7 +54,6 @@ workflows:
     jobs:
       - android
       - ios
-      - clean
   weekly:
     triggers:
       - schedule:
@@ -66,3 +65,4 @@ workflows:
                 - master
     jobs:
       - notify
+      - clean

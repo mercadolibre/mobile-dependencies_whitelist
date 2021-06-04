@@ -5,7 +5,6 @@ require 'net/http'
 module Clean_whitelists
     ANDROID_WHITELIST_PATH_FILE = "./android-whitelist.json"
     IOS_WHITELIST_PATH_FILE = "./ios-whitelist.json"
-    puts "can execute class"
 
     def self.get_json_from_file(pathFile)
         file = File.read pathFile
@@ -23,7 +22,7 @@ module Clean_whitelists
         listCopy = hashDataList
         hashDataList["whitelist"].each_entry do |entry, v|
             if entry.key?("expires") && is_expired(entry["expires"])
-                    listCopy["whitelist"].delete(entry)
+                listCopy["whitelist"].delete(entry)
             end
         end
         return listCopy
@@ -34,16 +33,13 @@ module Clean_whitelists
     end
 
     def self.main()
-        puts "can execute main"
         dataHashAndroid = get_json_from_file(ANDROID_WHITELIST_PATH_FILE)
         dataHashIos = get_json_from_file(IOS_WHITELIST_PATH_FILE)
 
         cleanHash = removeExpired(dataHashAndroid)
         save_json_to_file(cleanHash, ANDROID_WHITELIST_PATH_FILE)
-        #save_json_to_file(cleanHash, "pp.txt")
         cleanHash = removeExpired(dataHashIos)
         save_json_to_file(cleanHash, IOS_WHITELIST_PATH_FILE)
-        #save_json_to_file(cleanHash, "ppios.txt")
 
         res = `git diff --stat`
         puts res
@@ -88,6 +84,4 @@ module Clean_whitelists
         response = http.request(request)
         puts response
     end
-
-    #main()
 end
