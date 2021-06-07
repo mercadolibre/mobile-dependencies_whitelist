@@ -888,6 +888,15 @@
                 "key": "HomeWallet"
             },
             "Android": {
+                "key": "com.mercadolibre.android.pendings"
+            }
+        },
+        {
+            "name": "front_core",
+            "iOS": {
+                "key": "HomeWallet"
+            },
+            "Android": {
                 "key": "com.mercadolibre.android.wallet.home"
             }
         },
