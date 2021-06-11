@@ -334,6 +334,15 @@
             }
         },
         {
+            "name": "dynamic_features",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.dynamic_features"
+            }
+        },
+        {
             "name": "recommendations-comparator",
             "iOS": {
                 "key": "MLRecommendationsComparator"
