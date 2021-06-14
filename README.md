@@ -20,10 +20,10 @@ JSON Schema:
 {
   "whitelist": [
     {
+      "expires": "yyyy-MM-dd",
       "group": "group_regex",
       "name": "name_regex",
-      "version": "version_regex",
-      "expires": "yyyy-MM-dd"
+      "version": "version_regex"
     },
     ...
   ]
