@@ -199,6 +199,15 @@
             }
         },
         {
+            "name": "cards_banking",
+            "iOS": {
+                "key": "CardsBanking"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.cardsbanking"
+            }
+        },
+        {
             "name": "cart",
             "iOS": {
                 "key": "MLCart"
