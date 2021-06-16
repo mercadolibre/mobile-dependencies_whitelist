@@ -139,6 +139,18 @@
       "version": "^~>\\s?(7.8.0)$"
     },
     {
+      "name": "Firebase/MLModelDownloader",
+      "source": "public",
+      "target": "production",
+      "version": "^~>\\s?(7.8.0)$"
+    },
+    {
+      "name": "TensorFlowLiteSwift",
+      "source": "public",
+      "target": "production",
+      "version": "^~>\\s?(2.5.0)$"
+    },
+    {
       "name": "GoogleAppMeasurement",
       "source": "public",
       "target": "production",
