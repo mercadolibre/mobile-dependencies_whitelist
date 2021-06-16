@@ -989,6 +989,16 @@
       "version": "1\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
+      "name": "home",
+      "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
+      "name": "sections",
+      "version": "1\\.+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.pendings",
       "name": "pendingsview",
       "version": "1\\.\\+"
@@ -1931,16 +1941,6 @@
     {
       "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
       "name": "ccmmexico",
-      "version": "1\\.+"
-    },
-    {
-      "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
-      "name": "home",
-      "version": "1\\.+"
-    },
-    {
-      "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
-      "name": "sections",
       "version": "1\\.+"
     }
   ]
