@@ -334,6 +334,15 @@
             }
         },
         {
+            "name": "dynamic_features",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.dynamic.core"
+            }
+        },
+        {
             "name": "recommendations-comparator",
             "iOS": {
                 "key": "MLRecommendationsComparator"
@@ -2704,6 +2713,15 @@
             },
             "Android": {
                 "key": "com.mercadolibre.android.merch_realestates"
+            }
+        },
+        {
+            "name": "point_virtualization",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.pointsmart.point_virtualization"
             }
         }
     ]
