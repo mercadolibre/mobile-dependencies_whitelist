@@ -20,10 +20,10 @@ module Clean_whitelists
     end
 
     def self.removeExpired(hashDataList)
-        listCopy = hashDataList
+        listCopy = {"whitelist" => []}
         hashDataList["whitelist"].each_entry do |entry, v|
-            if entry.key?("expires") && is_expired(entry["expires"])
-                listCopy["whitelist"].delete(entry)
+            if !entry.key?("expires") || !is_expired(entry["expires"])
+                listCopy["whitelist"].push(entry)
             end
         end
         return listCopy
@@ -33,7 +33,7 @@ module Clean_whitelists
         Date.parse(expireDate) < Date.today
     end
 
-	# We delete the libs that are expired from the lists and makes an PR updating the repo
+    # We delete the libs that are expired from the lists and makes an PR updating the repo
     def self.main()
         dataHashAndroid = get_json_from_file(ANDROID_WHITELIST_PATH_FILE)
         dataHashIos = get_json_from_file(IOS_WHITELIST_PATH_FILE)
@@ -81,7 +81,7 @@ module Clean_whitelists
             title: "[Trivial] Clean old expired libs",
             head: prBranchName,
             base: "master",
-            body: "This Pull Request was generated automatically to delete expired libs"
+            body: "This Pull Request was generated automatically to remove expired libs"
         }.to_json
         response = http.request(request)
         puts response
