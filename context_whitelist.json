@@ -2732,6 +2732,15 @@
             "Android": {
                 "key": "com.mercadolibre.android.pointsmart.point_virtualization"
             }
+        },
+        {
+            "name": "point_pos_sdk",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.point_smart_pos_sdk"
+            }
         }
     ]
 }

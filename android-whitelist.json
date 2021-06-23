@@ -1920,6 +1920,11 @@
       "group": "org\\.tensorflow",
       "name": "tensorflow-lite",
       "version": "2\\.4\\.0"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_smart_pos_sdk",
+      "name": "PPCompAndroidLib",
+      "version": "0\\.+"
     }
   ]
 }
