@@ -139,6 +139,18 @@
       "version": "^~>\\s?(7.8.0)$"
     },
     {
+      "name": "Firebase/MLModelDownloader",
+      "source": "public",
+      "target": "production",
+      "version": "^~>\\s?(7.8.0)$"
+    },
+    {
+      "name": "TensorFlowLiteSwift",
+      "source": "public",
+      "target": "production",
+      "version": "^~>\\s?(2.5.0)$"
+    },
+    {
       "name": "GoogleAppMeasurement",
       "source": "public",
       "target": "production",
@@ -899,13 +911,6 @@
       "version": "^~>\\s?[2-4].[0-9]+$"
     },
     {
-      "expires": "2021-05-27",
-      "name": "MPTracking",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
       "name": "MLBiometricSecurity",
       "source": "private",
       "target": "production",
@@ -1246,6 +1251,12 @@
       "source": "public",
       "target": "production",
       "version": "1.2.0"
+    },
+    {
+      "name": "ZIPFoundation",
+      "source": "public",
+      "target": "production",
+      "version": "0.9.12"
     }
   ]
 }
