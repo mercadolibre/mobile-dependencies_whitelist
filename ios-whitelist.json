@@ -1067,6 +1067,12 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "CardsBanking",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "MLTFSCommons",
       "source": "private",
       "target": "production",
