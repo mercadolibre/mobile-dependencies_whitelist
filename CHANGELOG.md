@@ -1,3 +1,7 @@
+# 10.2.0
+## Cambiado
+- Rotación de passwords de Nexus por leak
+
 # 10.1.0
 ## Cambiado
 - Se vuelve a ser compliance con Configuration Avoidance en la lógica de exclusión de Findbugs y Spotbugs
