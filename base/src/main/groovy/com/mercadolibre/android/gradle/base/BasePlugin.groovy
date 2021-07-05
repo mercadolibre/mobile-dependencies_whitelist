@@ -245,7 +245,7 @@ class BasePlugin implements Plugin<Object> {
                     url 'https://android.artifacts.furycloud.io/repository/releases/'
                     credentials {
                         username 'fury-user'
-                        password '-^BVV4TCwLdEne@f'
+                        password '2r2MJ_L*Y@zM+fa4'
                     }
                     content {
                         // only releases
@@ -293,8 +293,8 @@ class BasePlugin implements Plugin<Object> {
                 maven {
                     url 'https://android.artifacts.furycloud.io/repository/experimental/'
                     credentials {
-                        username 'fury-user'
-                        password '-^BVV4TCwLdEne@f'
+                        username 'fury-user-experimental'
+                        password 'D&v?=D&up;]d9,k3'
                     }
                     content {
                         includeVersionByRegex('com\\.mercadolibre\\.android.*', '.*', '^(.*-)?EXPERIMENTAL-.*$')
