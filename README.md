@@ -20,13 +20,20 @@ JSON Schema:
 {
   "whitelist": [
     {
+      "expires": "yyyy-MM-dd",
       "group": "group_regex",
       "name": "name_regex",
-      "version": "version_regex",
-      "expires": "yyyy-MM-dd"
+      "version": "version_regex"
     },
     ...
   ]
+}
+```
+
+**NOTE5**: If you want to try if its working correctly from your fork, just add this line to de build.gradle:
+```
+lintGradle {
+    dependencyWhitelistUrl = "https://raw.githubusercontent.com/YOUR_GITHUB_USER/mobile-dependencies_whitelist/master/android-whitelist.json"
 }
 ```
 
@@ -35,7 +42,11 @@ iOS whitelist dependencies consist of a set of dependencies that are available f
 
 This set of dependencies is parsed in the form of a JSON text. The root level property should be called `whitelist`.
 
-Each of the dependencies is an object with two properties `name` and `version` which will be matched against each of the dependencies in the podspec. The `version` string SUPPORTS regex expression.
+Each of the dependencies is an object with the following properties:
+ - `name`: Dependency Podname
+ - `source`: keyword that indicates the source where the dependency spec should be downloaded. (`public` || `private`)
+ - `target`: Indicates if it is a test or productive dependency. (`test` || `productive`)
+ - `version`: Which will be matched against each of the dependencies in the podspec. The `version` string SUPPORTS regex expression.
 
 Example:
 ```
@@ -51,5 +62,36 @@ Example:
 		"name": "MLRecommendations",
 		"version": null
 	}]
+}
+```
+
+# Contexts Whitelist
+
+This json represents the contexts for our apps, both for iOS and Android. Which will be consumed by Kelli, in the "Deploy" job, and will be pushed into the apps, in their respective branches. 
+The apps will use it to create the Initiative map, and will use, the "key" to looks for the context of the errors, to pass it on to Bugsnag.
+
+This set of context is parsed in the form of a JSON text. The root level property should be called “context”.
+
+Each context is an object with three properties:
+
+- **“name”**: which represents the context.
+- "iOS" and "Android" objects, which have two properties:
+    - **“key”**: which represents, the "package" in Android and the "Module" in iOS, and it will be used to match and set the context for each error occurs in the apps.
+
+Example:
+```
+{
+    "context": [
+        {
+            "name": "ab_user_onboarding",
+            "iOS": {
+                "key": "ABUserOnboarding"
+            },
+            "Android": {
+                "key": "com.mercadopago.android.useronboarding"
+            }
+        },
+        …
+    ]
 }
 ```
