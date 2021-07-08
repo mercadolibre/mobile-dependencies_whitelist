@@ -1,5 +1,5 @@
 # Todas las dependencias a proponer
-- - "com.somepackage.somelib:submodule:4.2.0"
+- - "com.somepackage.somelib:submodule:6.0.0"
 ...
 
 ### ¿Afecta al start-up time de alguna forma?
@@ -12,19 +12,7 @@
 - [ ] _Tiene Min API level xx_
 
 ### Impacto en el peso de descarga e instalación de la app
-- [ ] _Example module está pesando 14kb y xxLib para la versión 4.2.0 ~4 terabytes._
-
-# Libs internas (borrar todo este bloque si el PR es para una lib externa)
-
-### Contextos
-- [ ] Ya agregué y/o actualicé el contexto en la [context-whitelist](https://github.com/mercadolibre/mobile-dependencies_whitelist/blob/master/context-whitelist.json)
-
-### Configuración para el SLA de Crashes
-El proyecto en Jira en el que se van a crear los crashes que ocurran es: **_${SPYN}_**
-- [ ] Ya está la configuración hecha.
-- [ ] Necesito que me ayuden a configurarlo.
-
-[¿Qué es el SLA de Crashes?](https://sites.google.com/mercadolibre.com/mobile/release-process/seguimiento-de-errores)
+- [ ] _Example module está pesando 14kb y xxLib para la versión 6.0 ~4 terabytes._
 
 # Libs externas
 [Tienen que completar el form que esta en la wiki](https://sites.google.com/mercadolibre.com/mobile/arquitectura/libs-utilitarias/libs-externas)
