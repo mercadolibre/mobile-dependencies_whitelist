@@ -593,12 +593,6 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "name": "MLPMS",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
       "name": "MLPlace",
       "source": "private",
       "target": "production",
