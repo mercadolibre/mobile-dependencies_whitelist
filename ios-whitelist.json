@@ -596,7 +596,8 @@
       "name": "MLPMS",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+$",
+      "expires": "2021-08-15"
     },
     {
       "name": "MLPlace",
