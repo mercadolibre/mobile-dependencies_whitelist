@@ -416,9 +416,15 @@
       "version": "production-8\\.\\+|develop-8\\.\\+"
     },
     {
+      "expires": "2021-09-22",
       "group": "com\\.mercadolibre\\.android",
       "name": "authentication",
       "version": "16\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "authentication",
+      "version": "17\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -441,9 +447,15 @@
       "version": "3\\.\\+"
     },
     {
+      "expires": "2021-09-22",
       "group": "com\\.mercadolibre\\.android",
       "name": "login",
       "version": "11\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "login",
+      "version": "12\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.authchallenges",
