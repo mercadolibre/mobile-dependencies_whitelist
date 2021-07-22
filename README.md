@@ -65,7 +65,7 @@ Example:
 }
 ```
 
-# Contexts Whitelist [Deprecated]
+# Contexts Whitelist [DEPRECATED]
 
 This json represents the contexts for our apps, both for iOS and Android. Which will be consumed by Kelli, in the "Deploy" job, and will be pushed into the apps, in their respective branches. 
 The apps will use it to create the Initiative map, and will use, the "key" to looks for the context of the errors, to pass it on to Bugsnag.
