@@ -86,9 +86,15 @@
       "version": "1\\.1\\.2"
     },
     {
+      "expires": "2021-08-15",
       "group": "com\\.bugsnag",
       "name": "bugsnag-android",
-      "version": "4\\.22\\.3|5\\.10\\.1"
+      "version": "4\\.22\\.3"
+    },
+    {
+      "group": "com\\.bugsnag",
+      "name": "bugsnag-android",
+      "version": "5\\.10\\.1"
     },
     {
       "group": "com\\.datami",
@@ -1710,9 +1716,15 @@
       "version": "1\\.6\\.3|2\\.2"
     },
     {
+      "expires": "2021-08-15",
       "group": "com\\.bugsnag",
       "name": "bugsnag-android-core",
-      "version": "4\\.22\\.3|5\\.10\\.1"
+      "version": "4\\.22\\.3"
+    },
+    {
+      "group": "com\\.bugsnag",
+      "name": "bugsnag-android-core",
+      "version": "5\\.10\\.1"
     },
     {
       "group": "com\\.mercadolibre\\.android",
