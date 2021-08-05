@@ -1288,14 +1288,26 @@
       "version": "mercadopago-1\\.\\+|mercadolibre-1\\.\\+"
     },
     {
+      "expires": "2021-08-19",
       "group": "com\\.mercadolibre\\.android\\.security_two_fa",
       "name": "totp",
       "version": "1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.security_two_fa",
+      "name": "totp",
+      "version": "2\\.\\+"
+    },
+    {
+      "expires": "2021-08-19",
+      "group": "com\\.mercadolibre\\.android\\.security_two_fa",
       "name": "totpinapp",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.security_two_fa",
+      "name": "totpinapp",
+      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.security_options",
