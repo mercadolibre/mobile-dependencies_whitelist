@@ -25,15 +25,9 @@ class AndroidLibraryPublishableModule extends PublishableModule {
 
         this.project = project
 
-        applyPlugins()
-
         project.android.libraryVariants.all { def libraryVariant ->
             createTasksFor(libraryVariant)
         }
-    }
-
-    private void applyPlugins() {
-        project.apply plugin: 'com.github.dcendents.android-maven'
     }
 
     protected void createTasksFor(def libraryVariant) {
