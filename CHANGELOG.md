@@ -1,6 +1,6 @@
 # 10.3.0
 ## Eliminado
-- Se elimina plugin 'com.github.dcendents.android-maven' y repositorio de datami que nos son usados.elimina
+- Se elimina plugin 'com.github.dcendents.android-maven' y repositorio de datami que nos son usados.
 
 # 10.2.0
 ## Cambiado
