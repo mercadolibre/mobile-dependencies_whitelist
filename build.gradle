@@ -12,7 +12,6 @@ buildscript {
 
     dependencies {
         classpath "com.mercadolibre.android.gradle:base:$innerProjectVersion"
-        classpath "com.github.dcendents:android-maven-gradle-plugin:$androidMavenGradlePlugin"
         classpath "com.gradle:gradle-enterprise-gradle-plugin:$gradleBuildScanVersion"
         classpath "io.gitlab.arturbosch.detekt:detekt-gradle-plugin:$detektGradlePlugin"
     }

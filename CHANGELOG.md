@@ -1,5 +1,9 @@
+# 10.3.0
+## Eliminado
+- Se elimina plugin 'com.github.dcendents.android-maven' y repositorio de datami que nos son usados.elimina
+
 # 10.2.0
-## Cambiado
+##Cambiado
 - Rotación de passwords de Nexus por leak
 
 # 10.1.0

@@ -1,7 +1,6 @@
 package com.mercadolibre.android.gradle.base
 
 import com.mercadolibre.android.gradle.base.modules.*
-import com.mercadolibre.android.gradle.base.publish.PublishTask
 import com.mercadolibre.android.gradle.base.utils.VersionContainer
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -262,14 +261,6 @@ class BasePlugin implements Plugin<Object> {
                     content {
                         // only releases
                         includeVersionByRegex('com\\.mercadolibre\\.android.*', '.*', '^((?!EXPERIMENTAL-|LOCAL-).)*$')
-                    }
-                }
-
-                // only for datami SDK
-                maven {
-                    url 'https://s3.amazonaws.com/sdk-ga-releases.cloudmi.datami.com/android/mvn/smisdk/'
-                    content {
-                        includeGroup 'com.datami'
                     }
                 }
 
