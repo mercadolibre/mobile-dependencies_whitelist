@@ -28,7 +28,7 @@
       "name": "Bugsnag",
       "source": "public",
       "target": "production",
-      "version": "5.22.4"
+      "version": "5.22.4|6.9.6"
     },
     {
       "name": "CHTCollectionViewWaterfallLayout",
@@ -137,6 +137,18 @@
       "source": "public",
       "target": "production",
       "version": "^~>\\s?(7.8.0)$"
+    },
+    {
+      "name": "Firebase/MLModelDownloader",
+      "source": "public",
+      "target": "production",
+      "version": "^~>\\s?(7.8.0)$"
+    },
+    {
+      "name": "TensorFlowLiteSwift",
+      "source": "public",
+      "target": "production",
+      "version": "^~>\\s?(2.5.0)$"
     },
     {
       "name": "GoogleAppMeasurement",
@@ -347,6 +359,12 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "Pendings",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "PXAddon",
       "source": "private",
       "target": "production",
@@ -452,7 +470,7 @@
       "name": "MLCreditsBehaviours",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?[1-2].[0-9]+"
     },
     {
       "name": "MLDynamicModal",
@@ -575,6 +593,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "expires": "2021-08-15",
       "name": "MLPMS",
       "source": "private",
       "target": "production",
@@ -866,7 +885,7 @@
       "name": "MLHistory",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "lottie-ios",
@@ -1055,6 +1074,12 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "CardsBanking",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "MLTFSCommons",
       "source": "private",
       "target": "production",
@@ -1064,7 +1089,7 @@
       "name": "PointFlowEngine",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?[0-1].[0-9]+$"
     },
     {
       "name": "StartUPInitializer",
@@ -1076,7 +1101,7 @@
       "name": "PointUI",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?[0-1].[0-9]+$"
     },
     {
       "name": "GarexGpage",
