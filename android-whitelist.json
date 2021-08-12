@@ -207,9 +207,15 @@
       "version": "2\\.4\\.0"
     },
     {
+      "expires": "2021-10-21",
       "group": "com\\.mercadolibre\\.android\\.dynamic_features",
       "name": "core",
       "version": "mercadolibre-1\\.\\+|mercadopago-1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.dynamic_features",
+      "name": "core",
+      "version": "2\\.\\+"
     },
     {
       "group": "com\\.google\\.code\\.gson",
