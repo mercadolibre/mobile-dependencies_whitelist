@@ -1270,6 +1270,12 @@
       "source": "public",
       "target": "production",
       "version": "0.9.12"
+    },
+    {
+      "name": "Cashout",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+"
     }
   ]
 }
