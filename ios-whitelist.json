@@ -930,6 +930,12 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "BiometricSecurityUI",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "SecurityOptions",
       "source": "private",
       "target": "production",
