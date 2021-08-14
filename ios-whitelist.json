@@ -28,7 +28,7 @@
       "name": "Bugsnag",
       "source": "public",
       "target": "production",
-      "version": "5.22.4"
+      "version": "5.22.4|6.9.6"
     },
     {
       "name": "CHTCollectionViewWaterfallLayout",
@@ -359,6 +359,12 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "Pendings",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "PXAddon",
       "source": "private",
       "target": "production",
@@ -464,7 +470,7 @@
       "name": "MLCreditsBehaviours",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?[1-2].[0-9]+"
     },
     {
       "name": "MLDynamicModal",
@@ -587,6 +593,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "expires": "2021-08-15",
       "name": "MLPMS",
       "source": "private",
       "target": "production",
@@ -878,7 +885,7 @@
       "name": "MLHistory",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "lottie-ios",
@@ -918,6 +925,12 @@
     },
     {
       "name": "NativeReauth",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "BiometricSecurityUI",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
@@ -1067,6 +1080,12 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "CardsBanking",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "MLTFSCommons",
       "source": "private",
       "target": "production",
@@ -1076,7 +1095,7 @@
       "name": "PointFlowEngine",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?[1-2].[0-9]+$"
     },
     {
       "name": "StartUPInitializer",
@@ -1257,6 +1276,18 @@
       "source": "public",
       "target": "production",
       "version": "0.9.12"
+    },
+    {
+      "name": "Cashout",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MLAdjust",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     }
   ]
 }

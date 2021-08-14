@@ -2741,6 +2741,15 @@
             "Android": {
                 "key": "com.mercadolibre.android.point_smart_pos_sdk"
             }
+        },
+        {
+            "name": "point_moreoptions",
+            "iOS": {
+                "key": ""
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.point_more_options"
+            }
         }
     ]
 }
