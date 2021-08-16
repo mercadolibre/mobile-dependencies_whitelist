@@ -86,12 +86,6 @@
       "version": "1\\.1\\.2"
     },
     {
-      "expires": "2021-08-15",
-      "group": "com\\.bugsnag",
-      "name": "bugsnag-android",
-      "version": "4\\.22\\.3"
-    },
-    {
       "group": "com\\.bugsnag",
       "name": "bugsnag-android",
       "version": "5\\.11\\.0"
@@ -562,11 +556,6 @@
       "version": "2\\.\\+"
     },
     {
-      "expires": "2021-08-15",
-      "group": "com\\.mercadolibre\\.android\\.commons",
-      "version": "17\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.commons",
       "version": "18\\.\\+|19\\.\\+"
     },
@@ -983,24 +972,6 @@
       "group": "com\\.squareup",
       "name": "android-times-square",
       "version": "1\\.7\\.10"
-    },
-    {
-      "expires": "2021-08-10",
-      "group": "com\\.squareup\\.okhttp3",
-      "name": "okhttp",
-      "version": "3\\.11\\.0"
-    },
-    {
-      "expires": "2021-08-10",
-      "group": "com\\.squareup\\.okhttp3",
-      "name": "logging-interceptor",
-      "version": "3\\.11\\.0"
-    },
-    {
-      "expires": "2021-08-10",
-      "group": "com\\.squareup\\.okhttp3",
-      "name": "okhttp-urlconnection",
-      "version": "3\\.11\\.0"
     },
     {
       "group": "com\\.squareup\\.okhttp3",
@@ -1659,12 +1630,6 @@
       "group": "com\\.squareup\\.leakcanary",
       "name": "leakcanary-android",
       "version": "1\\.6\\.3|2\\.2"
-    },
-    {
-      "expires": "2021-08-15",
-      "group": "com\\.bugsnag",
-      "name": "bugsnag-android-core",
-      "version": "4\\.22\\.3"
     },
     {
       "group": "com\\.bugsnag",
