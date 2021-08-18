@@ -56,16 +56,19 @@
       "version": "2\\.5\\.2"
     },
     {
+      "expires": "2021-08-27",
       "group": "android\\.arch\\.lifecycle",
       "name": "extensions",
       "version": "1\\.1\\.1"
     },
     {
+      "expires": "2021-08-27",
       "group": "android\\.arch\\.lifecycle",
       "name": "livedata-core",
       "version": "1\\.1\\.1"
     },
     {
+      "expires": "2021-08-27",
       "group": "android\\.arch\\.lifecycle",
       "name": "viewmodel",
       "version": "1\\.1\\.1"
@@ -1233,6 +1236,12 @@
       "group": "com\\.mercadolibre\\.android\\.traceability",
       "name": "traceability",
       "version": "5\\.\\+"
+    },
+    {
+      "expires": "2021-08-15",
+      "group": "com\\.mercadolibre\\.android\\.traceability",
+      "name": "traceability",
+      "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.inappupdates",
