@@ -1151,6 +1151,12 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "SnapshotTesting",
+      "source": "public",
+      "target": "test",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "SwiftFormat",
       "source": "public",
       "target": "test",
