@@ -197,6 +197,7 @@ class BasePlugin implements Plugin<Object> {
 
     private void createExtensions() {
         LintableModule.createExtension(project)
+        BaseJacocoModule.createExtension(project)
     }
 
     /**

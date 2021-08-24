@@ -82,7 +82,8 @@ class AndroidJacocoModule extends BaseJacocoModule {
             reportTask.group = "reporting"
             reportTask.description = "Generates Jacoco coverage reports for the ${variant.name} variant."
             reportTask.executionData.from = project.files(executionDataFile(testTask.get()))
-            def exclude = [
+            def exclude = project.jacocoConfiguration.excludeList
+            def defaultExclude = [
                     '**/R.class',
                     '**/R$*.class',
                     '**/BuildConfig.class',
@@ -97,6 +98,7 @@ class AndroidJacocoModule extends BaseJacocoModule {
                     '**/*_Factory*.*',
                     '**/*$*$*.*'
             ]
+            exclude.addAll(defaultExclude)
 
             def sourceDirectories = sourceDirs
             def classDirectories = project.fileTree(dir: classesDir, excludes: exclude)
@@ -139,5 +141,4 @@ class AndroidJacocoModule extends BaseJacocoModule {
     protected def executionDataFile(Task testTask) {
         testTask.jacoco.destinationFile.path
     }
-
 }

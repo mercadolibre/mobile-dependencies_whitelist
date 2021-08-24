@@ -35,5 +35,4 @@ class JavaJacocoModule extends BaseJacocoModule {
             }
         }
     }
-
 }
