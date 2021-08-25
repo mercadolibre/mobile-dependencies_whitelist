@@ -1,3 +1,12 @@
+# 10.4.0
+## Agregado
+- Se agrega la posibilidad de excluir files para el reporte de JaCoCo a través de un DSL declarado en el `build.gradle` del módulo:
+```groovy
+jacocoConfiguration {
+    excludeList = ['**/YourClass**']
+}
+```
+
 # 10.3.0
 ## Eliminado
 - Se elimina plugin 'com.github.dcendents.android-maven' y repositorio de datami que nos son usados.

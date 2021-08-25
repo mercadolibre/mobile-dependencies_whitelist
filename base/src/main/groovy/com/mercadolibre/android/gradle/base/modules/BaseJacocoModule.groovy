@@ -39,4 +39,12 @@ abstract class BaseJacocoModule implements Module {
         }
     }
 
+    static void createExtension(Project project) {
+        String extensionName = JacocoConfigurationExtension.simpleName.replaceAll("Extension", '')
+        extensionName = (Character.toLowerCase(extensionName.charAt(0)) as String) + extensionName.substring(1)
+        project.extensions.create(extensionName, JacocoConfigurationExtension)
+        project.subprojects.each {
+            it.extensions.create(extensionName, JacocoConfigurationExtension)
+        }
+    }
 }
