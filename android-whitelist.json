@@ -781,14 +781,26 @@
       "version": "4\\.\\+"
     },
     {
+      "expires": "2021-09-14",
       "group": "com\\.mercadolibre\\.android\\.vpp",
       "name": "vip_commons",
       "version": "2\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.vpp",
+      "name": "vip_commons",
+      "version": "3\\.\\+"
+    },
+    {
+      "expires": "2021-09-14",
       "group": "com\\.mercadolibre\\.android\\.vip",
       "name": "vip",
       "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.vip",
+      "name": "vip",
+      "version": "7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
