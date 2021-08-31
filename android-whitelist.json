@@ -987,19 +987,37 @@
       "version": "1\\.7\\.10"
     },
     {
+      "expires": "2021-10-31",
       "group": "com\\.squareup\\.okhttp3",
       "name": "okhttp",
-      "version": "3\\.12\\.10|3\\.14\\.9"
+      "version": "3\\.12\\.10"
+    },
+    {
+      "group": "com\\.squareup\\.okhttp3",
+      "name": "okhttp",
+      "version": "3\\.14\\.9"
+    },
+    {
+      "expires": "2021-10-31",
+      "group": "com\\.squareup\\.okhttp3",
+      "name": "logging-interceptor",
+      "version": "3\\.12\\.10"
     },
     {
       "group": "com\\.squareup\\.okhttp3",
       "name": "logging-interceptor",
-      "version": "3\\.12\\.10|3\\.14\\.9"
+      "version": "3\\.14\\.9"
+    },
+    {
+      "expires": "2021-10-31",
+      "group": "com\\.squareup\\.okhttp3",
+      "name": "okhttp-urlconnection",
+      "version": "3\\.12\\.10"
     },
     {
       "group": "com\\.squareup\\.okhttp3",
       "name": "okhttp-urlconnection",
-      "version": "3\\.12\\.10|3\\.14\\.9"
+      "version": "3\\.14\\.9"
     },
     {
       "group": "com\\.squareup\\.retrofit2",
