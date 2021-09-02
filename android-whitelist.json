@@ -706,8 +706,13 @@
       "version": "5\\.\\+"
     },
     {
+      "expires": "2021-11-08",
       "group": "com\\.mercadolibre\\.android\\.recommendations",
-      "version": "9\\.\\+|10\\.\\+"
+      "version": "9\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.recommendations",
+      "version": "10\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.remedies",
