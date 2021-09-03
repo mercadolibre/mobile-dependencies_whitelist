@@ -1351,6 +1351,15 @@
             }
         },
         {
+            "name": "payers_growth",
+            "iOS": {
+                "key": "MerchRealestates"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.merch_realestates"
+            }
+        },
+        {
             "name": "money_transfer",
             "iOS": {
                 "key": "MPMoneyTransfer"
