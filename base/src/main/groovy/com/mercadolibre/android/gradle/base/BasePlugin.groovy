@@ -314,7 +314,7 @@ class BasePlugin implements Plugin<Object> {
      * to allow the android environment
      */
     private void removeMavenRepository(){
-        project.repositories.removeAll {
+        project.repositories {
             it instanceof MavenArtifactRepository && it.url.toString() == "https://maven.artifacts.furycloud.io"
         }
     }
