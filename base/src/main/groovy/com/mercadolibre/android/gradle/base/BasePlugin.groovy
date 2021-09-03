@@ -4,6 +4,7 @@ import com.mercadolibre.android.gradle.base.modules.*
 import com.mercadolibre.android.gradle.base.utils.VersionContainer
 import org.gradle.api.Plugin
 import org.gradle.api.Project
+import org.gradle.api.artifacts.repositories.MavenArtifactRepository
 import org.gradle.api.initialization.Settings
 import org.gradle.api.plugins.JavaPlugin
 
@@ -107,6 +108,7 @@ class BasePlugin implements Plugin<Object> {
 
         avoidCacheForDynamicVersions()
         addHasClasspathMethod()
+        removeMavenRepository()
         setupFetchingRepositories()
         createExtensions()
 
@@ -305,6 +307,15 @@ class BasePlugin implements Plugin<Object> {
                 // catch all repositories
                 jcenter()
             }
+        }
+    }
+    /**
+     * This method is added to avoid the global repository configuration of the user, this is needed
+     * to allow the android environment
+     */
+    private void removeMavenRepository(){
+        repositories.removeAll {
+            it instanceof MavenArtifactRepository && it.url.toString() == "https://maven.artifacts.furycloud.io"
         }
     }
 }
