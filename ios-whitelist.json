@@ -323,10 +323,17 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "expires": "2021-10-08",
       "name": "MLAddresses",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLAddresses",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?5.[0-9]+$"
     },
     {
       "name": "MLAnalytics",
@@ -968,7 +975,7 @@
       "name": "MPAppRater",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?[0-1].[0-9]+$"
     },
     {
       "name": "MLNavigation",
