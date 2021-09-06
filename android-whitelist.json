@@ -511,7 +511,13 @@
     {
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.flox\\.components",
       "name": "core",
-      "version": "2\\.\\+|3\\.\\+|4\\.\\+"
+      "version": "3\\.\\+|4\\.\\+"
+    },
+    {
+      "expires": "2021-09-20",
+      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.flox\\.components",
+      "name": "core",
+      "version": "2\\.9\\.0"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.checkout",
@@ -775,7 +781,6 @@
       "group": "com\\.mercadolibre\\.android\\.rule\\.engine",
       "name": "rule\\-engine",
       "version": "4\\.\\+|5\\.\\+"
-
     },
     {
       "group": "com\\.mercadolibre\\.android\\.sdk",
