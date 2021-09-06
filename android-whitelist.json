@@ -351,12 +351,24 @@
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "milestone-tracker",
-      "version": "2\\.\\+|3\\.\\+"
+      "version": "3\\.\\+|4\\.\\+"
+    },
+    {
+      "expires": "2021-09-10",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "milestone-tracker",
+      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "multiimageview",
-      "version": "2\\.\\+|3\\.\\+"
+      "version": "3\\.\\+|4\\.\\+"
+    },
+    {
+      "expires": "2021-09-10",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "multiimageview",
+      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -383,10 +395,16 @@
       "name": "pms",
       "version": "11\\.\\+"
     },
-    {
+    { 
       "group": "com\\.mercadolibre\\.android",
       "name": "progress-circle",
-      "version": "2\\.\\+|3\\.\\+"
+      "version": "3\\.\\+|4\\.\\+"
+    },
+    { 
+      "expires": "2021-09-10",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "progress-circle",
+      "version": "2\\.\\+"
     },
     {
       "expires": "2021-10-31",
