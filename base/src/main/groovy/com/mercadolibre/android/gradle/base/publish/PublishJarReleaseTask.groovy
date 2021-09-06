@@ -27,6 +27,10 @@ abstract class PublishJarReleaseTask extends PublishJarTask {
             task.configure {
                 group = TASK_GROUP
 
+                doLast {
+                    VersionContainer.logVersion("${project.group}:${project.name}:${VersionContainer.get(project.name, task.name, project.version as String)}")
+                }
+
                 dependsOn "jar", "${variant.name}SourcesJar", "${variant.name}JavadocJar"
                 finalizedBy "publish${taskName.capitalize()}PublicationTo${repositoryName}Repository"
             }
