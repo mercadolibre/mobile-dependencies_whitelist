@@ -645,7 +645,7 @@
       "name": "MLRecommendations",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?[4-5].[0-9].+$"
+      "version": "^~>\\s?[4-5].[0-9]+.?[0-9]*$"
     },
     {
       "name": "MLRecommendationsComparator",
@@ -729,7 +729,7 @@
       "name": "MLVPP",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?[4-5].[0-9]+.?[0-9]*$"
+      "version": "^~>\\s?[0-1]+.[0-9]+"
     },
     {
       "name": "MLVariations",
