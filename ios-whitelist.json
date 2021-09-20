@@ -205,12 +205,6 @@
       "version": "2.2.0"
     },
     {
-      "name": "CustomBadge",
-      "source": "public",
-      "target": "production",
-      "version": "2.0.0"
-    },
-    {
       "name": "Flox",
       "source": "private",
       "target": "production",
@@ -293,22 +287,10 @@
       "version": "1.6.1"
     },
     {
-      "name": "DZNPhotoPickerController",
-      "source": "public",
-      "target": "production",
-      "version": "1.6.1"
-    },
-    {
       "name": "UIImageEffects",
       "source": "public",
       "target": "production",
       "version": "0.0.1"
-    },
-    {
-      "name": "MTBBarcodeScanner",
-      "source": "public",
-      "target": "production",
-      "version": "4.0.0"
     },
     {
       "name": "SSPullToRefresh",
