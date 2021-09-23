@@ -1946,9 +1946,15 @@
       "name": "firebase-ml-modeldownloader"
     },
     {
+      "expires": "2021-10-07",
       "group": "org\\.tensorflow",
       "name": "tensorflow-lite",
       "version": "2\\.4\\.0"
+    },
+    {
+      "group": "org\\.tensorflow",
+      "name": "tensorflow-lite",
+      "version": "2\\.6\\.0"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point_smart_pos_sdk",
