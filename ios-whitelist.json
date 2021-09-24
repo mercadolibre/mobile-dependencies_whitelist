@@ -846,6 +846,7 @@
       "version": "4.4.2"
     },
     {
+      "expires": "2021-10-04",
       "name": "SDWebImage",
       "source": "public",
       "target": "production",
@@ -1136,7 +1137,7 @@
     {
       "name": "OHHTTPStubs",
       "source": "public",
-      "target": "production",
+      "target": "test",
       "version": "4.0.2"
     },
     {
