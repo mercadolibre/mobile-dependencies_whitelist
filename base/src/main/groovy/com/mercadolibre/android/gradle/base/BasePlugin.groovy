@@ -4,7 +4,6 @@ import com.mercadolibre.android.gradle.base.modules.*
 import com.mercadolibre.android.gradle.base.utils.VersionContainer
 import org.gradle.api.Plugin
 import org.gradle.api.Project
-import org.gradle.api.artifacts.repositories.MavenArtifactRepository
 import org.gradle.api.initialization.Settings
 import org.gradle.api.plugins.JavaPlugin
 
@@ -108,7 +107,6 @@ class BasePlugin implements Plugin<Object> {
 
         avoidCacheForDynamicVersions()
         addHasClasspathMethod()
-        removeMavenRepository()
         setupFetchingRepositories()
         createExtensions()
 
@@ -246,8 +244,8 @@ class BasePlugin implements Plugin<Object> {
                 maven {
                     url 'https://android.artifacts.furycloud.io/repository/releases/'
                     credentials {
-                        username 'fury-user'
-                        password '2r2MJ_L*Y@zM+fa4'
+                        username System.getenv("ARTIFACTS_USER")
+                        password System.getenv("ARTIFACTS_PASSWORD")
                     }
                     content {
                         // only releases
@@ -287,8 +285,8 @@ class BasePlugin implements Plugin<Object> {
                 maven {
                     url 'https://android.artifacts.furycloud.io/repository/experimental/'
                     credentials {
-                        username 'fury-user-experimental'
-                        password 'D&v?=D&up;]d9,k3'
+                        username System.getenv("ARTIFACTS_USER")
+                        password System.getenv("ARTIFACTS_PASSWORD")
                     }
                     content {
                         includeVersionByRegex('com\\.mercadolibre\\.android.*', '.*', '^(.*-)?EXPERIMENTAL-.*$')
@@ -306,17 +304,6 @@ class BasePlugin implements Plugin<Object> {
 
                 // catch all repositories
                 jcenter()
-            }
-        }
-    }
-    /**
-     * This method is added to avoid the global repository configuration of the user, this is needed
-     * to allow the android environment
-     */
-    private void removeMavenRepository(){
-        project.allprojects {
-            repositories.removeAll {
-                it instanceof MavenArtifactRepository && it.url.toString() == "https://maven.artifacts.furycloud.io"
             }
         }
     }

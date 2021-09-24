@@ -1,3 +1,7 @@
+# 11.0.0
+## Cambiado
+- Se cambia la manera de obtener las credenciales de los repositories de read. Ahora se requiere el export de las ENV `ARTIFACTS_USER` y `ARTIFACTS_PASSWORD`
+
 # 10.4.0
 ## Agregado
 - Se agrega la posibilidad de excluir files para el reporte de JaCoCo a través de un DSL declarado en el `build.gradle` del módulo:
