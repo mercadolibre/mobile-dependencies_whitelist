@@ -1135,10 +1135,9 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "expires": "2021-10-04",
       "name": "OHHTTPStubs",
       "source": "public",
-      "target": "production",
+      "target": "test",
       "version": "4.0.2"
     },
     {
