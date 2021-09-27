@@ -1301,6 +1301,12 @@
       "source": "public",
       "target": "production",
       "version": "5.0"
+    },
+    {
+      "name": "DaManagement",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+"
     }
   ]
 }
