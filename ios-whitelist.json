@@ -1307,6 +1307,12 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "Incognia",
+      "source": "public",
+      "target": "test",
+      "version": "6.1.1"
     }
   ]
 }
