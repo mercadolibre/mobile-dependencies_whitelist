@@ -18,7 +18,7 @@ class BuildScanModule implements Module, SettingsModule {
         object.with {
             gradleEnterprise {
                 buildScan {
-                    publishAlways()
+                    publishAlwaysIf(false)
                     server = 'https://gradle.adminml.com/'
                     // tags
                     tag projectName
