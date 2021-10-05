@@ -292,21 +292,9 @@
       "version": "production-8\\.\\+|develop-8\\.\\+"
     },
     {
-      "expires": "2021-09-30",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "authentication",
-      "version": "16\\.\\+|17\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android",
       "name": "authentication",
       "version": "18\\.\\+"
-    },
-    {
-      "expires": "2021-09-29",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "carddrawer",
-      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -568,11 +556,6 @@
       "version": "1\\.\\+"
     },
     {
-      "expires": "2021-09-30",
-      "group": "com\\.mercadolibre\\.android\\.credits\\.ui_components",
-      "version": "1\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.credits\\.ui_components",
       "version": "2\\.\\+"
     },
@@ -612,12 +595,6 @@
     {
       "group": "com\\.mercadolibre\\.android\\.remote\\.configuration",
       "version": "2\\.\\+"
-    },
-    {
-      "expires": "2021-09-30",
-      "group": "com\\.mercadolibre\\.android\\.cpg",
-      "name": "ui_components",
-      "version": "3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cpg",
@@ -954,12 +931,6 @@
       "version": "4\\.\\+"
     },
     {
-      "expires": "2021-09-29",
-      "group": "com\\.mercadopago\\.android\\.ml_esc_manager",
-      "name": "ml_esc_manager",
-      "version": "2\\.\\+"
-    },
-    {
       "group": "com\\.mercadopago\\.android\\.ml_esc_manager",
       "name": "ml_esc_manager",
       "version": "3\\.\\+"
@@ -1277,12 +1248,6 @@
       "version": "3\\.+|4\\.+"
     },
     {
-      "expires": "2021-09-29",
-      "group": "com\\.mercadolibre\\.android\\.mlbusinesscomponents",
-      "name": "mlbusinesscomponents",
-      "version": "1\\.+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.mlbusinesscomponents",
       "name": "mlbusinesscomponents",
       "version": "2\\.+"
@@ -1341,12 +1306,6 @@
       "group": "com\\.mercadolibre\\.android\\.modalsengine",
       "name": "modals-engine",
       "version": "mercadolibre-3\\.\\+|mercadopago-3\\.\\+"
-    },
-    {
-      "expires": "2021-09-29",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "cardform",
-      "version": "1\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -1657,12 +1616,6 @@
       "version": "1\\.\\+"
     },
     {
-      "expires": "2021-09-30",
-      "group": "com\\.mercadolibre\\.android\\.profileengine",
-      "name": "peui",
-      "version": "1\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.profileengine",
       "name": "peui",
       "version": "2\\.\\+"
@@ -1673,21 +1626,9 @@
       "version": "1\\.\\+"
     },
     {
-      "expires": "2021-09-30",
-      "group": "com\\.mercadolibre\\.android\\.fees_installments",
-      "name": "mlfees",
-      "version": "2\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.fees_installments",
       "name": "mlfees",
       "version": "3\\.\\+"
-    },
-    {
-      "expires": "2021-09-30",
-      "group": "com\\.mercadolibre\\.android\\.fees_installments",
-      "name": "mlfees-legacy",
-      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.fees_installments",
