@@ -292,6 +292,12 @@
       "version": "production-8\\.\\+|develop-8\\.\\+"
     },
     {
+      "expires": "2021-11-19",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "authentication",
+      "version": "16\\.\\+|17\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android",
       "name": "authentication",
       "version": "18\\.\\+"
