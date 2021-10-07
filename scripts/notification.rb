@@ -14,6 +14,7 @@ module Notification
     IOS = "ios"
 
     def self.is_going_to_expire_before(expireDate, maxDayToCompare, pastWeek)
+	    puts "expireDate: " + expireDate.to_s + " maxDayToCompare: " + maxDayToCompare.to_s + " pastWeek: "+pastWeek.to_s
         Date.parse(expireDate) >= Date.today + (pastWeek ? A_WEEK : 0) && Date.parse(expireDate) <= Date.today+maxDayToCompare
     end
 
