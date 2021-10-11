@@ -1235,12 +1235,6 @@
       "version": "mercadopago-3\\.\\+|mercadolibre-3\\.\\+"
     },
     {
-      "expires": "2021-10-10",
-      "group": "com\\.mercadolibre\\.android\\.security",
-      "name": "security_ui",
-      "version": "mercadopago-3\\.\\+|mercadolibre-3\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.security",
       "name": "security_ui",
       "version": "mercadopago-4\\.\\+|mercadolibre-4\\.\\+"
@@ -1537,12 +1531,6 @@
       "group": "androidx\\.installreferrer",
       "name": "installreferrer",
       "version": "1\\.0"
-    },
-    {
-      "expires": "2021-10-08",
-      "group": "androidx\\.lifecycle",
-      "name": "lifecycle-extensions",
-      "version": "2\\.2\\.0"
     },
     {
       "group": "androidx\\.lifecycle",
@@ -1924,12 +1912,6 @@
     {
       "group": "com\\.google\\.firebase",
       "name": "firebase-ml-modeldownloader"
-    },
-    {
-      "expires": "2021-10-07",
-      "group": "org\\.tensorflow",
-      "name": "tensorflow-lite",
-      "version": "2\\.4\\.0"
     },
     {
       "group": "org\\.tensorflow",
