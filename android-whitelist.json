@@ -1403,9 +1403,15 @@
       "version": "3\\.+"
     },
     {
+      "expires": "2021-10-19",
       "group": "com\\.mercadolibre\\.android\\.discounts_touchpoint",
       "name": "discounts_touchpoint",
       "version": "mercadopago-1\\.\\+|mercadolibre-1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.discounts_touchpoint",
+      "name": "discounts_touchpoint",
+      "version": "mercadopago-2\\.\\+|mercadolibre-2\\.\\+"
     },
     {
       "group": "androidx.preference",
