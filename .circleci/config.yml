@@ -9,7 +9,7 @@ default: &defaultJob
         command: sudo npm install jsonlint -g
     - run:
         name: "Install JSON sorter"
-        command: sudo npm install json-sort-cli -g
+        command: sudo npm install json-sort-cli@1.14.1 -g
     - run:
         name: "Run Checks"
         command: ./scripts/checks.sh
