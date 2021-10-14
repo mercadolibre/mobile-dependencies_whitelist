@@ -16,7 +16,7 @@
       "name": "Adjust",
       "source": "public",
       "target": "production",
-      "version": "(4.28.([0-9]+)|4.29.([0-9]+))$"
+      "version": "^~>\\s?4.29.([0-9]+$"
     },
     {
       "name": "AmountLabel",
@@ -1169,10 +1169,17 @@
       "version": "^~>\\s?4.[0-9]+$"
     },
     {
+      "expires": "2021-11-14",
       "name": "Nimble",
       "source": "public",
       "target": "test",
       "version": "^~>\\s?7.[0-9]+$"
+    },
+    {
+      "name": "Nimble",
+      "source": "public",
+      "target": "test",
+      "version": "^~>\\s?9.[0-9]+$"
     },
     {
       "name": "OCMock",
