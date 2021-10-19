@@ -29,8 +29,7 @@ class BasePlugin implements Plugin<Object> {
         return [
                 new AndroidJacocoModule(),
                 new KeystoreModule(),
-                new ApplicationLintOptionsModule(),
-                new LintErrorDisableModule()
+                new ApplicationLintOptionsModule()
         ]
     }
 
@@ -134,8 +133,6 @@ class BasePlugin implements Plugin<Object> {
 
             subproject.plugins.withId(ANDROID_APPLICATION_PLUGIN) {
                 ANDROID_APPLICATION_MODULES().each { module -> module.configure(subproject) }
-
-                fixFindbugsDuplicateDexEntryWithJSR305(subproject)
             }
 
             // Depending on added classpaths, this modules will apply plugins
@@ -143,55 +140,10 @@ class BasePlugin implements Plugin<Object> {
                 new LockableModule().configure(subproject)
                 new LintableModule().configure(subproject)
             }
-            
-            // We are disabling Findbugs/Spotbugs because it imposes a huge latency in the running builds
-            // and its not providing any real benefit that other SCA tools already do
-            // Another reason is that there is a known issue with repositories that only has Kotlin
-            // files where Findbugs/Spotbugs can't find files to lint
-            subproject.tasks.matching {
-                it.name.toLowerCase().contains('findbugs') || it.name.toLowerCase().contains('spotbugs')
-            }.configureEach {
-                it.enabled = false
-            }
         }
 
         PROJECT_MODULES().each {
             module -> module.configure(project)
-        }
-
-        fixNoClassesConfiguredForSpotBugsAnalysis(project)
-    }
-
-    /**
-     * This method, as the name suggests fixes a findbugs duplicate dex entry with JSR305.
-     * Info:
-     * - Findbugs adds in its plugin an own JSR305 annotations (This means annotations such as
-     * CheckForNull) are added not only by the JavaPlugin but also the exact same (but in a different
-     * group:artifact) by findbugs.
-     * - In .dex files, this cant happen, since it will create an exact same (or duplicate) entry in its
-     * vtable. Hence we are forced to remove one of the two from the applications
-     * - This happens because when the POM is built, findbugs dependency is added in a provided
-     * configuration, making it resolvable for all flavors (as a provided/compileOnly way ofc).
-     * Because of this, we are including it as provided in the POM file, but making it compilable for an APK,
-     * creating the issue
-     *
-     * TODO: This should be removed when SCA stops including findbugs.
-     */
-    void fixFindbugsDuplicateDexEntryWithJSR305(Project project) {
-        project.configurations {
-            all*.exclude module: "jsr305"
-            all*.exclude module: "jcip-annotations"
-        }
-    }
-    /**
-     * Workaround: No classes configured for SpotBugs analysis
-     * see : https://github.com/spotbugs/spotbugs-gradle-plugin/issues/23
-     */
-    void fixNoClassesConfiguredForSpotBugsAnalysis(Project project) {
-        project.subprojects {
-            tasks.matching { it.name =~ /^spotbugs.+/ }.configureEach {
-                it.onlyIf { !it.classes.empty }
-            }
         }
     }
 
