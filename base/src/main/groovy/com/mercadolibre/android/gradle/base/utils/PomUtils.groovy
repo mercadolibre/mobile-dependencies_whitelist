@@ -53,14 +53,6 @@ final class PomUtils {
             return false
         }
 
-        // Using the SCA plugin in java projects adds findbugs annotations as 'compile', this + javax annotations
-        // can create a duplicate entry in some classes (since findbugs annotations are a mirror of them)
-        // We remove them here to avoid duplicate entries, although if there werent java projects with SCA
-        // it shouldnt happen
-        if (dep.group == 'com.google.code.findbugs' && dep.name == 'annotations') {
-            return false
-        }
-
         return deps.find { it.group == dep.group && it.name == dep.name && it.version == dep.version } == null
     }
 
