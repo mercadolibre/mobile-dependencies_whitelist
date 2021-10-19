@@ -1,4 +1,4 @@
-package com.mercadolibre.android.gradle.base
+kpackage com.mercadolibre.android.gradle.base
 
 import com.mercadolibre.android.gradle.base.modules.*
 import com.mercadolibre.android.gradle.base.utils.VersionContainer
@@ -14,7 +14,6 @@ class BasePlugin implements Plugin<Object> {
 
     public static final String ANDROID_LIBRARY_PLUGIN = 'com.android.library'
     public static final String ANDROID_APPLICATION_PLUGIN = 'com.android.application'
-    public static final String KOTLIN_ANDROID_PLUGIN = 'kotlin-android'
 
     private static final ANDROID_LIBRARY_MODULES = { ->
         return [
@@ -50,12 +49,6 @@ class BasePlugin implements Plugin<Object> {
     private static final SETTINGS_MODULES = {
         return [
                 new BuildScanModule()
-        ]
-    }
-
-    private static final KOTLIN_MODULES = { ->
-        return [
-                new KotlinCheckModule()
         ]
     }
 
@@ -125,10 +118,6 @@ class BasePlugin implements Plugin<Object> {
 
             subproject.plugins.withId(ANDROID_LIBRARY_PLUGIN) {
                 ANDROID_LIBRARY_MODULES().each { module -> module.configure(subproject) }
-            }
-
-            subproject.plugins.withId(KOTLIN_ANDROID_PLUGIN) {
-                KOTLIN_MODULES().each { module -> module.configure(subproject) }
             }
 
             subproject.plugins.withId(ANDROID_APPLICATION_PLUGIN) {
