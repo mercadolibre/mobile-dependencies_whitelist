@@ -1,4 +1,4 @@
-kpackage com.mercadolibre.android.gradle.base
+package com.mercadolibre.android.gradle.base
 
 import com.mercadolibre.android.gradle.base.modules.*
 import com.mercadolibre.android.gradle.base.utils.VersionContainer
