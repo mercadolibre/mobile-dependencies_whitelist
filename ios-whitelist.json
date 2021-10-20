@@ -647,6 +647,12 @@
       "version": "^~>\\s?3.[0-9]+"
     },
     {
+      "name": "IvCommons",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
       "name": "MLRuleEngine",
       "source": "private",
       "target": "production",
