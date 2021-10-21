@@ -18,7 +18,7 @@ final class PomUtils {
         // Here I declare all the configurations we support to upload to the pom.
         // We also take into account flavored ones
         List<String> compileConfigurations = ['default', 'archives', 'compile', "${variantName}Compile",
-                                     'implementation', "${variantName}Implementation",
+                                     'implementation', "${variantName}Implementation".toString(),
                                      'api', "${variantName}Api"]
         if (flavor) {
             compileConfigurations << "${flavor}Api".toString()

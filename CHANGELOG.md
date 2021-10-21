@@ -1,3 +1,7 @@
+# 10.6.0
+## Cambiado
+- Fix comparacion por Gstring vs String. Esto hacia que las dependencia tipo variant no se agreguen al pom xml. Ejemplo `releaseImplementation group:artifact:version`
+
 # 10.5.0
 ## Modificado
 - Se deshabilita la publicacion de los build en gradle enterprise. 
