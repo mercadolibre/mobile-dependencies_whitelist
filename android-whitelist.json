@@ -677,14 +677,26 @@
       "version": "mercadolibre-7\\.\\+|mercadopago-7\\.\\+"
     },
     {
+      "expires": "2021-12-21",
       "group": "com\\.mercadolibre\\.android\\.local\\.storage",
       "name": "core",
       "version": "2\\.\\+"
     },
     {
+      "expires": "2021-12-21",
       "group": "com\\.mercadolibre\\.android\\.local\\.storage",
       "name": "kvs-defaults",
       "version": "2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.local\\.storage",
+      "name": "core",
+      "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.local\\.storage",
+      "name": "kvs-defaults",
+      "version": "3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.maps",
