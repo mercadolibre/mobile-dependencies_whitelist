@@ -17,9 +17,9 @@ final class PomUtils {
     private static String scope(String configuration, String variantName, String flavor) {
         // Here I declare all the configurations we support to upload to the pom.
         // We also take into account flavored ones
-        List<String> compileConfigurations = ['default', 'archives', 'compile', "${variantName}Compile",
+        List<String> compileConfigurations = ['default', 'archives', 'compile', "${variantName}Compile".toString(),
                                      'implementation', "${variantName}Implementation".toString(),
-                                     'api', "${variantName}Api"]
+                                     'api', "${variantName}Api".toString()]
         if (flavor) {
             compileConfigurations << "${flavor}Api".toString()
             compileConfigurations << "${flavor}Implementation".toString()
