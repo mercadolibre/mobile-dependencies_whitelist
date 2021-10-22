@@ -1306,6 +1306,12 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "InAppReport",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     }
   ]
 }
