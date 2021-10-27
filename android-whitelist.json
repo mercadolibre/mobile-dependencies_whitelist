@@ -535,6 +535,16 @@
       "version": "mercadolibre-8\\.\\+|mercadopago-8\\.\\+|mercadolibre-9\\.\\+|mercadopago-9\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.buyingflow_cart",
+      "name": "core",
+      "version": "mercadolibre-1\\.\\+|mercadopago-1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.buyingflow_cart",
+      "name": "ui",
+      "version": "mercadolibre-1\\.\\+|mercadopago-1\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.cart",
       "name": "cart",
       "version": "mercadolibre-9\\.\\+|mercadopago-9\\.\\+|mercadolibre-10\\.\\+|mercadopago-10\\.\\+"
