@@ -1,13 +1,12 @@
 #!/bin/bash
 
 echo "Run linter: this step checks if file ($FILE) its well formed."
-#jsonlint "$FILE"
+jsonlint "$FILE"
 
 echo "Run JSON sorter lint: this step checks if the content of the file ($FILE) its properly sorted."
-#jsonsort "$FILE"
+jsonsort "$FILE"
 
 echo "Run JSON expire validator: this step checks if date are in the proper format YYYY-MM-DD."
-pwd
 ruby "./scripts/checkdate.rb"
 EXIT_CODE=${PIPESTATUS[0]}
 # exit_code == 0 -> success; exit_code == 1 -> fail
