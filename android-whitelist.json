@@ -797,8 +797,13 @@
       "version": "10\\.\\+"
     },
     {
+      "expires": "2021-11-19",
       "group": "com\\.mercadolibre\\.android\\.uicomponents",
-      "version": "11\\.\\+|12\\.\\+"
+      "version": "11\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.uicomponents",
+      "version": "12\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.mlwebkit",
