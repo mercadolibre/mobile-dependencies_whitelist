@@ -1,3 +1,11 @@
+# 10.6.0
+## Cambiado
+- Fix comparacion por Gstring vs String. Esto hacia que las dependencia tipo variant no se agreguen al pom xml. Ejemplo `releaseImplementation group:artifact:version`
+
+# 10.5.0
+## Modificado
+- Se deshabilita la publicacion de los build en gradle enterprise. 
+
 # 10.4.0
 ## Agregado
 - Se agrega la posibilidad de excluir files para el reporte de JaCoCo a través de un DSL declarado en el `build.gradle` del módulo:
