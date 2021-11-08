@@ -650,9 +650,15 @@
       "version": "5\\.\\+"
     },
     {
+      "expires": "2022-02-15",
       "group": "com\\.mercadolibre\\.android\\.marketplace\\.map",
       "name": "marketplace\\-map",
-      "version": "7\\.\\+|8\\.\\+|9\\.\\+"
+      "version": "7\\.\\+|8\\.\\+"
+    },    
+    {    
+      "group": "com\\.mercadolibre\\.android\\.marketplace\\.map",
+      "name": "marketplace\\-map",
+      "version": "9\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.matt",
