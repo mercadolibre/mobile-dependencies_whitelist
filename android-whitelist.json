@@ -81,11 +81,6 @@
       "version": "5\\.11\\.0"
     },
     {
-      "group": "com\\.datami",
-      "name": "smisdk",
-      "version": "3\\.5\\.1"
-    },
-    {
       "group": "com\\.f2prateek\\.rx\\.preferences",
       "name": "rx-preferences",
       "version": "1\\.0\\.2"
@@ -183,7 +178,7 @@
     {
       "group": "com\\.google\\.android\\.play",
       "name": "core",
-      "version": "1\\.10\\.0|1\\.10\\.2"
+      "version": "1\\.10\\.2"
     },
     {
       "group": "com\\.google\\.android\\.libraries\\.places",
@@ -255,11 +250,13 @@
       "version": "0\\.4\\.4"
     },
     {
+      "expires": "2022-02-20",
       "group": "com\\.google\\.zxing",
       "name": "core",
-      "version": "3\\.3\\.0|3\\.3\\.2"
+      "version": "3\\.3\\.2"
     },
     {
+      "expires": "2022-02-20",
       "group": "com\\.journeyapps",
       "name": "zxing-android-embedded",
       "version": "3\\.6\\.0|4\\.0\\.2"
@@ -1125,11 +1122,6 @@
       "version": "2\\.2\\.0"
     },
     {
-      "group": "me\\.dm7\\.barcodescanner",
-      "name": "zbar",
-      "version": "1\\.9\\.1"
-    },
-    {
       "group": "org\\.apache\\.commons",
       "name": "commons-lang3",
       "version": "3\\.6"
@@ -1142,17 +1134,17 @@
     {
       "group": "org\\.jetbrains\\.kotlin",
       "name": "kotlin-reflect",
-      "version": "1\\.3\\.40"
+      "version": "1\\.3\\.40|1\\.3\\.71"
     },
     {
       "group": "org\\.jetbrains\\.kotlin",
       "name": "kotlin-stdlib",
-      "version": "1\\.3\\.40"
+      "version": "1\\.3\\.40|1\\.3\\.71"
     },
     {
       "group": "org\\.jetbrains\\.kotlin",
       "name": "kotlin-stdlib-common",
-      "version": "1\\.3\\.40"
+      "version": "1\\.3\\.40|1\\.3\\.71"
     },
     {
       "group": "org\\.jetbrains\\.kotlin",
@@ -1254,17 +1246,12 @@
     {
       "group": "org\\.jetbrains\\.kotlin",
       "name": "kotlin-reflect",
-      "version": "1\\.3\\.40"
+      "version": "1\\.3\\.40|1\\.3\\.71"
     },
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "user_configuration",
       "version": "develop-2\\.+|production-2\\.+"
-    },
-    {
-      "group": "org\\.aspectj",
-      "name": "aspectjrt",
-      "version": "1\\.9\\.2"
     },
     {
       "group": "org\\.jetbrains\\.kotlinx",
@@ -1292,7 +1279,7 @@
       "version": "2\\.\\+"
     },
     {
-      "expire": "2022-02-20",
+      "expires": "2022-02-20",
       "group": "com\\.mercadolibre\\.android\\.scanner",
       "name": "scanner",
       "version": "mercadolibre-1\\.\\+|mercadopago-1\\.\\+"
