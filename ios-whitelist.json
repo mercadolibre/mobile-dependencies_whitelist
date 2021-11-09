@@ -389,6 +389,12 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
+      "name": "BuyingflowCart",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
+    },
+    {
       "name": "MLCharts",
       "source": "private",
       "target": "production",
@@ -770,7 +776,7 @@
       "name": "MLThreeDS",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?[1-2].[0-9]+$"
+      "version": "^~>\\s?[1-2].[0-9].[0-9]+$"
     },
     {
       "name": "OperationDetail/Commons",
@@ -1082,7 +1088,7 @@
       "name": "PointFlowEngine",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?[1-3].[0-9]+$"
+      "version": "^~>\\s?[1-9].[0-9]+$"
     },
     {
       "name": "StartUPInitializer",
@@ -1094,7 +1100,7 @@
       "name": "PointUI",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?[1-4].[0-9]+$"
+      "version": "^~>\\s?[1-9].[0-9]+$"
     },
     {
       "name": "GarexGpage",
@@ -1309,6 +1315,12 @@
     },
     {
       "name": "InAppReport",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "CreditsFloxClient",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
