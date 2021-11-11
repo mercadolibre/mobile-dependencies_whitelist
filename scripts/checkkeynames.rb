@@ -9,7 +9,7 @@ begin
     end
 
     # an array with names of keys that should be present
-    valid_keys = ['group', "name", 'version', 'expires', 'whitelist', 'description']
+    valid_keys = ['group', "name", 'version', 'expires', 'whitelist', 'description', "source", "target"]
 
     # for each hash in parsed_json check if the keys are valid
     def checkKeyNames(hashDataList, valid_keys)
