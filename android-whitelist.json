@@ -1651,9 +1651,15 @@
       "version": "mercadolibre-5\\.\\+|mercadopago-5\\.\\+"
     },
     {
+      "expires": "2021-11-12",
       "group": "com\\.mercadolibre\\.android\\.devices_sdk",
       "name": "devices",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.devices_sdk",
+      "name": "devices",
+      "version": "2\\.\\+"
     },
     {
       "expires": "2021-12-06",
