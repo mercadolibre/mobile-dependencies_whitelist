@@ -20,10 +20,10 @@ JSON Schema:
 {
   "whitelist": [
     {
+      "expires": "yyyy-MM-dd",
       "group": "group_regex",
       "name": "name_regex",
-      "version": "version_regex",
-      "expires": "yyyy-MM-dd"
+      "version": "version_regex"
     },
     ...
   ]
@@ -65,33 +65,6 @@ Example:
 }
 ```
 
-# Contexts Whitelist
+# Contexts Whitelist [DEPRECATED]
 
-This json represents the contexts for our apps, both for iOS and Android. Which will be consumed by Kelli, in the "Deploy" job, and will be pushed into the apps, in their respective branches. 
-The apps will use it to create the Initiative map, and will use, the "key" to looks for the context of the errors, to pass it on to Bugsnag.
-
-This set of context is parsed in the form of a JSON text. The root level property should be called “context”.
-
-Each context is an object with three properties:
-
-- **“name”**: which represents the context.
-- "iOS" and "Android" objects, which have two properties:
-    - **“key”**: which represents, the "package" in Android and the "Module" in iOS, and it will be used to match and set the context for each error occurs in the apps.
-
-Example:
-```
-{
-    "context": [
-        {
-            "name": "ab_user_onboarding",
-            "iOS": {
-                "key": "ABUserOnboarding"
-            },
-            "Android": {
-                "key": "com.mercadopago.android.useronboarding"
-            }
-        },
-        …
-    ]
-}
-```
+For more information consult the [new context whitelist](https://furydocs.io/mobile-apps/v1.5.2/guide/#/lang-en/metrics/02_crash-rate?id=contexts)
