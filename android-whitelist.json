@@ -1968,6 +1968,60 @@
       "group": "com\\.mercadolibre\\.android\\.point_recharge",
       "name": "transport",
       "version": "1\\.+"
+    },
+    {
+      "expires": "2021-02-01",
+      "group": "io\\.opentelemetry",
+      "name": "opentelemetry-bom",
+      "version": "1\\.7\\.+"
+    },
+    {
+      "expires": "2021-02-01",
+      "group": "io\\.opentelemetry",
+      "name": "opentelemetry-api",
+      "version": "1\\.7\\.+"
+    },
+    {
+      "expires": "2021-02-01",
+      "group": "io\\.opentelemetry",
+      "name": "opentelemetry-sdk",
+      "version": "1\\.7\\.+"
+    },
+    {
+      "expires": "2021-02-01",
+      "group": "io\\.opentelemetry",
+      "name": "opentelemetry-extension-kotlin",
+      "version": "1\\.7\\.+"
+    },
+    {
+      "expires": "2021-02-01",
+      "group": "io\\.opentelemetry",
+      "name": "opentelemetry-exporter-otlp",
+      "version": "1\\.7\\.+"
+    },
+    {
+      "expires": "2021-02-01",
+      "group": "io\\.grpc",
+      "name": "opentelemetry-sdk",
+      "version": "1\\.7\\.+"
+    },
+    {
+      "expires": "2021-02-01",
+      "group": "io\\.opentelemetry",
+      "name": "grpc-okhttp",
+      "version": "1\\.41\\.+"
+    },
+    {
+      "expires": "2021-02-01",
+      "group": "com\\.mercadolibre\\.android\\.opentelemetry",
+      "name": "setup",
+      "version": "1\\.+"
+    },
+    {
+      "expires": "2021-02-01",
+      "group": "com\\.mercadolibre\\.android\\.opentelemetry",
+      "name": "core",
+      "version": "1\\.+"
     }
   ]
 }
