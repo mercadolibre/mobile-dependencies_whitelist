@@ -238,6 +238,7 @@
       "name": "firebase-messaging"
     },
     {
+      "expires": "2021-02-01",
       "group": "com\\.google\\.firebase",
       "name": "firebase-perf"
     },
@@ -1903,6 +1904,55 @@
       "group": "com\\.squareup\\.sqlbrite",
       "name": "sqlbrite",
       "version": "1\\.1\\.2"
+    },
+    {
+      "expires": "2021-02-01",
+      "group": "io\\.opentelemetry",
+      "name": "opentelemetry-bom",
+      "version": "1\\.7\\.+"
+    },
+    {
+      "expires": "2021-02-01",
+      "group": "io\\.opentelemetry",
+      "name": "opentelemetry-api"
+    },
+    {
+      "expires": "2021-02-01",
+      "group": "io\\.opentelemetry",
+      "name": "opentelemetry-sdk"
+    },
+    {
+      "expires": "2021-02-01",
+      "group": "io\\.opentelemetry",
+      "name": "opentelemetry-extension-kotlin"
+    },
+    {
+      "expires": "2021-02-01",
+      "group": "io\\.opentelemetry",
+      "name": "opentelemetry-exporter-otlp"
+    },
+    {
+      "expires": "2021-02-01",
+      "group": "io\\.opentelemetry",
+      "name": "opentelemetry-sdk"
+    },
+    {
+      "expires": "2021-02-01",
+      "group": "io\\.grpc",
+      "name": "grpc-okhttp",
+      "version": "1\\.41\\.+"
+    },
+    {
+      "expires": "2021-02-01",
+      "group": "com\\.mercadolibre\\.android\\.opentelemetry",
+      "name": "setup",
+      "version": "1\\.+"
+    },
+    {
+      "expires": "2021-02-01",
+      "group": "com\\.mercadolibre\\.android\\.opentelemetry",
+      "name": "core",
+      "version": "1\\.+"
     }
   ]
 }
