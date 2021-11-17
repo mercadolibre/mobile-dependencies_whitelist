@@ -238,6 +238,7 @@
       "name": "firebase-messaging"
     },
     {
+      "expires": "2021-02-01",
       "group": "com\\.google\\.firebase",
       "name": "firebase-perf"
     },
@@ -1913,36 +1914,31 @@
     {
       "expires": "2021-02-01",
       "group": "io\\.opentelemetry",
-      "name": "opentelemetry-api",
-      "version": "1\\.7\\.+"
+      "name": "opentelemetry-api"
     },
     {
       "expires": "2021-02-01",
       "group": "io\\.opentelemetry",
-      "name": "opentelemetry-sdk",
-      "version": "1\\.7\\.+"
+      "name": "opentelemetry-sdk"
     },
     {
       "expires": "2021-02-01",
       "group": "io\\.opentelemetry",
-      "name": "opentelemetry-extension-kotlin",
-      "version": "1\\.7\\.+"
+      "name": "opentelemetry-extension-kotlin"
     },
     {
       "expires": "2021-02-01",
       "group": "io\\.opentelemetry",
-      "name": "opentelemetry-exporter-otlp",
-      "version": "1\\.7\\.+"
+      "name": "opentelemetry-exporter-otlp"
+    },
+    {
+      "expires": "2021-02-01",
+      "group": "io\\.opentelemetry",
+      "name": "opentelemetry-sdk"
     },
     {
       "expires": "2021-02-01",
       "group": "io\\.grpc",
-      "name": "opentelemetry-sdk",
-      "version": "1\\.7\\.+"
-    },
-    {
-      "expires": "2021-02-01",
-      "group": "io\\.opentelemetry",
       "name": "grpc-okhttp",
       "version": "1\\.41\\.+"
     },
