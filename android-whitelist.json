@@ -67,9 +67,15 @@
       "version": "4\\.28\\.4"
     },
     {
+      "expires": "2021-11-26",
       "group": "com\\.airbnb\\.android",
       "name": "lottie",
-      "version": "2\\.7\\.0|3\\.3\\.1"
+      "version": "2\\.7\\.0"
+    },
+    {
+      "group": "com\\.airbnb\\.android",
+      "name": "lottie",
+      "version": "3\\.3\\.1"
     },
     {
       "expires": "2021-11-26",
@@ -189,9 +195,15 @@
       "version": "2\\.4\\.0"
     },
     {
+      "expires": "2021-12-01",
       "group": "com\\.mercadolibre\\.android\\.dynamic_features",
       "name": "core",
       "version": "2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.dynamic_features",
+      "name": "core",
+      "version": "3\\.\\+"
     },
     {
       "group": "com\\.google\\.code\\.gson",
@@ -236,6 +248,7 @@
       "name": "firebase-messaging"
     },
     {
+      "expires": "2022-02-01",
       "group": "com\\.google\\.firebase",
       "name": "firebase-perf"
     },
@@ -587,11 +600,6 @@
     {
       "group": "com\\.mercadolibre\\.android\\.discovery",
       "version": "1\\.\\+"
-    },
-    {
-      "expires": "2021-11-12",
-      "group": "com\\.mercadolibre\\.android\\.instore_ui_components",
-      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.instore_ui_components",
@@ -1170,21 +1178,9 @@
       "version": "1\\.0\\.1"
     },
     {
-      "expires": "2021-11-12",
-      "group": "com\\.mercadolibre\\.android\\.userbiometrics",
-      "name": "core",
-      "version": "3\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.userbiometrics",
       "name": "core",
       "version": "4\\.\\+"
-    },
-    {
-      "expires": "2021-11-12",
-      "group": "com\\.mercadolibre\\.android\\.security",
-      "name": "security_preferences",
-      "version": "mercadopago-3\\.\\+|mercadolibre-3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.security",
@@ -1195,12 +1191,6 @@
       "group": "com\\.mercadolibre\\.android\\.security",
       "name": "security_ui",
       "version": "mercadopago-4\\.\\+|mercadolibre-4\\.\\+"
-    },
-    {
-      "expires": "2021-11-12",
-      "group": "com\\.mercadolibre\\.android\\.security",
-      "name": "native_reauth",
-      "version": "mercadopago-1\\.\\+|mercadolibre-1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.security",
@@ -1532,6 +1522,11 @@
       "version": "2\\.2\\.5"
     },
     {
+      "group": "androidx\\.room",
+      "name": "room-rxjava2",
+      "version": "2\\.2\\.5"
+    },
+    {
       "group": "androidx\\.biometric",
       "name": "biometric",
       "version": "1\\.1\\.0"
@@ -1660,6 +1655,11 @@
       "version": "1\\.5\\.2\\-native"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.tfs_commons",
+      "name": "errorhandler",
+      "version": "1\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.cardsengagement",
       "version": "5\\.\\+"
     },
@@ -1684,9 +1684,15 @@
       "version": "mercadolibre-5\\.\\+|mercadopago-5\\.\\+"
     },
     {
+      "expires": "2021-11-12",
       "group": "com\\.mercadolibre\\.android\\.devices_sdk",
       "name": "devices",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.devices_sdk",
+      "name": "devices",
+      "version": "2\\.\\+"
     },
     {
       "expires": "2021-12-06",
@@ -1907,6 +1913,26 @@
       "version": "dev-1\\.\\+|a910-1\\.\\+|d20-1\\.\\+|1\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.point_printer",
+      "name": "core",
+      "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_printer",
+      "name": "renderer",
+      "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_printer",
+      "name": "controller_a910",
+      "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_printer",
+      "name": "controller_d20",
+      "version": "1\\.+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "scanner",
       "version": "mercadolibre-2\\.\\+|mercadopago-2\\.\\+"
@@ -1949,6 +1975,55 @@
       "group": "com\\.squareup\\.sqlbrite",
       "name": "sqlbrite",
       "version": "1\\.1\\.2"
+    },
+    {
+      "expires": "2022-02-01",
+      "group": "io\\.opentelemetry",
+      "name": "opentelemetry-bom",
+      "version": "1\\.7\\.+"
+    },
+    {
+      "expires": "2022-02-01",
+      "group": "io\\.opentelemetry",
+      "name": "opentelemetry-api"
+    },
+    {
+      "expires": "2022-02-01",
+      "group": "io\\.opentelemetry",
+      "name": "opentelemetry-sdk"
+    },
+    {
+      "expires": "2022-02-01",
+      "group": "io\\.opentelemetry",
+      "name": "opentelemetry-extension-kotlin"
+    },
+    {
+      "expires": "2022-02-01",
+      "group": "io\\.opentelemetry",
+      "name": "opentelemetry-exporter-otlp"
+    },
+    {
+      "expires": "2022-02-01",
+      "group": "io\\.opentelemetry",
+      "name": "opentelemetry-sdk"
+    },
+    {
+      "expires": "2022-02-01",
+      "group": "io\\.grpc",
+      "name": "grpc-okhttp",
+      "version": "1\\.41\\.+"
+    },
+    {
+      "expires": "2022-02-01",
+      "group": "com\\.mercadolibre\\.android\\.opentelemetry",
+      "name": "setup",
+      "version": "1\\.+"
+    },
+    {
+      "expires": "2022-02-01",
+      "group": "com\\.mercadolibre\\.android\\.opentelemetry",
+      "name": "core",
+      "version": "1\\.+"
     }
   ]
 }
