@@ -1744,12 +1744,17 @@
     {
       "group": "com\\.mercadolibre\\.android\\.point_recharge",
       "name": "cellphone",
-      "version": "1\\.+"
+      "version": "1\\.+|2\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point_recharge",
       "name": "core",
-      "version": "1\\.+"
+      "version": "1\\.+|2\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_recharge",
+      "name": "antennas",
+      "version": "2\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.liveness_detection",
