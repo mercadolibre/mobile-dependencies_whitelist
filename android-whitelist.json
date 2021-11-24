@@ -16,6 +16,7 @@
       "version": "1\\.\\+|2\\.\\+"
     },
     {
+      "expires": "2021-12-03",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "checkout_sdk",
       "version": "1\\.\\+|2\\.\\+"
@@ -77,6 +78,7 @@
       "version": "3\\.3\\.1"
     },
     {
+      "expires": "2021-12-03",
       "group": "com\\.android\\.installreferrer",
       "name": "installreferrer",
       "version": "1\\.1\\.2"
@@ -122,6 +124,7 @@
       "version": "2\\.0\\.1"
     },
     {
+      "expires": "2021-12-03",
       "group": "com\\.github\\.ksoichiro",
       "name": "android-observablescrollview",
       "version": "1\\.6\\.0"
@@ -216,6 +219,7 @@
       "name": "firebase-analytics"
     },
     {
+      "expires": "2021-12-03",
       "group": "com\\.google\\.firebase",
       "name": "firebase-ml-vision"
     },
@@ -371,6 +375,7 @@
       "version": "mercadopago-13\\.\\+"
     },
     {
+      "expires": "2021-12-03",
       "group": "com\\.mercadolibre\\.android",
       "name": "pms",
       "version": "11\\.\\+"
@@ -411,6 +416,7 @@
       "version": "14\\.\\+"
     },
     {
+      "expires": "2021-12-03",
       "group": "com\\.mercadolibre\\.android",
       "name": "shipping\\-components",
       "version": "3\\.\\+"
@@ -472,6 +478,7 @@
       "version": "4\\.\\+"
     },
     {
+      "expires": "2021-12-03",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.bridge",
       "name": "core",
       "version": "4\\.\\+"
@@ -487,6 +494,7 @@
       "version": "11\\.\\+|12\\.\\+"
     },
     {
+      "expires": "2021-12-03",
       "group": "com\\.mercadolibre\\.android\\.card\\.header",
       "name": "card\\-header",
       "version": "1\\.\\+"
@@ -497,11 +505,13 @@
       "version": "mercadolibre-8\\.\\+|mercadopago-8\\.\\+|mercadolibre-9\\.\\+|mercadopago-9\\.\\+"
     },
     {
+      "expires": "2021-12-03",
       "group": "com\\.mercadolibre\\.buyingflow_cart",
       "name": "core",
       "version": "mercadolibre-1\\.\\+|mercadopago-1\\.\\+"
     },
     {
+      "expires": "2021-12-03",
       "group": "com\\.mercadolibre\\.android\\.buyingflow_cart",
       "name": "ui",
       "version": "mercadolibre-1\\.\\+|mercadopago-1\\.\\+"
@@ -526,6 +536,7 @@
       "version": "2\\.\\+"
     },
     {
+      "expires": "2021-12-03",
       "group": "com\\.mercadolibre\\.android\\.credits\\.floxclient",
       "name": "core",
       "version": "0\\.\\+"
@@ -550,11 +561,13 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2021-12-03",
       "group": "com\\.mercadolibre\\.android\\.classifieds",
       "name": "listing",
       "version": "1\\.\\+"
     },
     {
+      "expires": "2021-12-03",
       "group": "com\\.mercadolibre\\.android\\.classifieds",
       "name": "credits",
       "version": "2\\.\\+"
@@ -591,6 +604,7 @@
       "version": "3\\.\\+"
     },
     {
+      "expires": "2021-12-03",
       "group": "com\\.mercadolibre\\.android\\.fontela",
       "version": "4\\.\\+"
     },
@@ -676,21 +690,25 @@
       "version": "4\\.\\+|5\\.\\+"
     },
     {
+      "expires": "2021-12-03",
       "group": "com\\.mercadolibre\\.android\\.mlwallet",
       "name": "header",
       "version": "5\\.\\+"
     },
     {
+      "expires": "2021-12-03",
       "group": "com\\.mercadolibre\\.android\\.mydata",
       "name": "profile-data",
       "version": "9\\.\\+"
     },
     {
+      "expires": "2021-12-03",
       "group": "com\\.mercadolibre\\.android\\.mydata",
       "name": "profile-picture",
       "version": "9\\.\\+"
     },
     {
+      "expires": "2021-12-03",
       "group": "com\\.mercadolibre\\.android\\.myml\\.commons",
       "name": "core",
       "version": "4\\.\\+"
@@ -762,6 +780,7 @@
       "version": "4\\.\\+|5\\.\\+"
     },
     {
+      "expires": "2021-12-03",
       "group": "com\\.mercadolibre\\.android\\.sdk",
       "version": "21\\.\\+"
     },
@@ -809,6 +828,7 @@
       "version": "3\\.\\+"
     },
     {
+      "expires": "2021-12-03",
       "group": "com\\.mercadolibre\\.android\\.vip",
       "name": "vip",
       "version": "7\\.\\+"
@@ -839,26 +859,31 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2021-12-03",
       "group": "com\\.mercadopago",
       "name": "sdk",
       "version": "9\\.\\+"
     },
     {
+      "expires": "2021-12-03",
       "group": "com\\.mercadopago\\.android",
       "name": "account_money_plugin",
       "version": "4\\.\\+"
     },
     {
+      "expires": "2021-12-03",
       "group": "com\\.mercadopago\\.android",
       "name": "payment_processor",
       "version": "3\\.\\+"
     },
     {
+      "expires": "2021-12-03",
       "group": "com\\.mercadopago\\.android\\.balance",
       "name": "balance",
       "version": "4\\.\\+"
     },
     {
+      "expires": "2021-12-03",
       "group": "com\\.mercadopago\\.android\\.cards",
       "name": "cards",
       "version": "4\\.\\+"
@@ -869,16 +894,19 @@
       "version": "5\\.\\+"
     },
     {
+      "expires": "2021-12-03",
       "group": "com\\.mercadolibre\\.android\\.cardscomponents",
       "name": "cards-home-section",
       "version": "3\\.\\+"
     },
     {
+      "expires": "2021-12-03",
       "group": "com\\.mercadopago\\.android\\.checkout",
       "name": "checkout",
       "version": "4\\.\\+"
     },
     {
+      "expires": "2021-12-03",
       "group": "com\\.mercadopago\\.android\\.checkoutpx",
       "name": "checkoutpx",
       "version": "4\\.\\+"
@@ -904,6 +932,7 @@
       "version": "1\\.\\+|2\\.\\+"
     },
     {
+      "expires": "2021-12-03",
       "group": "com\\.mercadopago\\.android\\.contacts",
       "name": "contacts",
       "version": "4\\.\\+"
@@ -914,6 +943,7 @@
       "version": "3\\.\\+"
     },
     {
+      "expires": "2021-12-03",
       "group": "com\\.mercadopago\\.android\\.moneytransfer",
       "name": "contacts",
       "version": "5\\.\\+"
@@ -924,6 +954,7 @@
       "version": "5\\.\\+"
     },
     {
+      "expires": "2021-12-03",
       "group": "com\\.mercadopago\\.android\\.payment",
       "name": "payment",
       "version": "4\\.\\+"
@@ -944,6 +975,7 @@
       "version": "15\\.\\+|18\\.\\+"
     },
     {
+      "expires": "2021-12-03",
       "group": "com\\.mercadopago\\.point\\.pos",
       "name": "point_pos",
       "version": "2\\.\\+"
@@ -971,11 +1003,6 @@
     {
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
       "name": "mpos",
-      "version": "1\\.+"
-    },
-    {
-      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
-      "name": "pointsmartpos_fcu",
       "version": "1\\.+"
     },
     {
@@ -1104,6 +1131,7 @@
       "version": "1\\.3\\.40|1\\.3\\.71"
     },
     {
+      "expires": "2021-12-03",
       "group": "android\\.arch\\.work",
       "name": "work-runtime",
       "version": "1\\.0\\.1"
@@ -1234,6 +1262,7 @@
       "version": "2\\.+"
     },
     {
+      "expires": "2021-12-03",
       "group": "com\\.mercadolibre\\.android\\.garex",
       "name": "core",
       "version": "4\\.+"
@@ -1404,7 +1433,7 @@
     {
       "group": "androidx\\.installreferrer",
       "name": "installreferrer",
-      "version": "1\\.0"
+      "version": "1\\.1"
     },
     {
       "group": "androidx\\.lifecycle",
@@ -1437,6 +1466,7 @@
       "version": "1\\.1\\.0"
     },
     {
+      "expires": "2021-12-03",
       "group": "androidx\\.concurrent",
       "name": "concurrent-futures-ktx",
       "version": "1\\.1\\.0"
@@ -1577,14 +1607,15 @@
       "version": "1\\.\\+"
     },
     {
-      "group": "com\\.mercadolibre\\.android\\.tfs_commons",
-      "name": "errorhandler",
-      "version": "1\\.\\+"
-    },
-    {
+      "expires": "2021-12-03",
       "group": "com\\.smartlook\\.recording",
       "name": "app",
       "version": "1\\.5\\.2\\-native"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.tfs_commons",
+      "name": "errorhandler",
+      "version": "1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cardsengagement",
@@ -1648,6 +1679,7 @@
       "version": "1\\.+"
     },
     {
+      "expires": "2021-12-03",
       "group": "com\\.mercadolibre\\.android\\.nfcpayments",
       "name": "card-widget",
       "version": "1\\.+"
@@ -1658,6 +1690,7 @@
       "version": "6\\.+"
     },
     {
+      "expires": "2021-12-03",
       "group": "com\\.madgag\\.spongycastle",
       "name": "pkix",
       "version": "1\\.54\\.0\\.0"
@@ -1678,6 +1711,7 @@
       "version": "0\\.11\\.2"
     },
     {
+      "expires": "2021-12-03",
       "group": "io\\.jsonwebtoken",
       "name": "jjwt-json",
       "version": "0\\.11\\.2"
@@ -1715,11 +1749,6 @@
     {
       "group": "com\\.mercadolibre\\.android\\.point_recharge",
       "name": "core",
-      "version": "1\\.+"
-    },
-    {
-      "group": "com\\.mercadolibre\\.android\\.point_recharge",
-      "name": "transport",
       "version": "1\\.+"
     },
     {
