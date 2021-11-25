@@ -2590,6 +2590,15 @@
             }
         },
         {
+            "name": "cashin",
+            "iOS": {
+                "key": "Cashin"
+            },
+            "Android": {
+                "key": "com.mercadopago.android.cashin"
+            }
+        },
+        {
             "name": "devices",
             "iOS": {
                 "key": ""
