@@ -1742,14 +1742,26 @@
       "version": "1\\.+"
     },
     {
+      "expires": "2021-12-31",
       "group": "com\\.mercadolibre\\.android\\.point_recharge",
       "name": "cellphone",
-      "version": "1\\.+|2\\.+"
+      "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_recharge",
+      "name": "cellphone",
+      "version": "2\\.+"
+    },
+    {
+      "expires": "2021-12-31",
+      "group": "com\\.mercadolibre\\.android\\.point_recharge",
+      "name": "core",
+      "version": "1\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point_recharge",
       "name": "core",
-      "version": "1\\.+|2\\.+"
+      "version": "2\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point_recharge",
