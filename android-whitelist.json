@@ -1760,14 +1760,31 @@
       "version": "1\\.+"
     },
     {
+      "expires": "2021-12-31",
       "group": "com\\.mercadolibre\\.android\\.point_recharge",
       "name": "cellphone",
       "version": "1\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point_recharge",
+      "name": "cellphone",
+      "version": "2\\.+"
+    },
+    {
+      "expires": "2021-12-31",
+      "group": "com\\.mercadolibre\\.android\\.point_recharge",
       "name": "core",
       "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_recharge",
+      "name": "core",
+      "version": "2\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_recharge",
+      "name": "antennas",
+      "version": "2\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.liveness_detection",
