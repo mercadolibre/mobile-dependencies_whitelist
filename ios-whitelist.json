@@ -31,6 +31,12 @@
       "version": "6.9.6|6.14.3"
     },
     {
+      "name": "BugsnagNetworkRequestPlugin",
+      "source": "public",
+      "target": "production",
+      "version": "^~>\\s?6.[0-9]+.?[0-9]*$"
+    },
+    {
       "name": "CHTCollectionViewWaterfallLayout",
       "source": "public",
       "target": "production",
