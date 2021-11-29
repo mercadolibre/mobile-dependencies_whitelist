@@ -179,6 +179,16 @@
       "version": "17\\.0\\.0"
     },
     {
+      "group": "com\\.google\\.android\\.gms",
+      "name": "play-services-appset",
+      "version": "16\\.0\\.0"
+    },
+    {
+      "group": "com\\.google\\.android\\.gms",
+      "name": "play-services-ads-identifier",
+      "version": "17\\.1\\.0"
+    },
+    {
       "group": "com\\.google\\.android\\.play",
       "name": "core",
       "version": "1\\.10\\.2"
@@ -252,6 +262,7 @@
       "version": "26\\.8\\.0"
     },
     {
+      "expires": "2022-02-01",
       "group": "com\\.google\\.firebase",
       "name": "firebase-ads"
     },
@@ -337,6 +348,11 @@
       "group": "com\\.mercadolibre\\.android",
       "name": "melidata-sdk",
       "version": "9\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "melidata-sdk",
+      "version": "10\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
