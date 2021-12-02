@@ -1274,9 +1274,15 @@
       "version": "mercadolibre-1\\.\\+|mercadopago-1\\.\\+"
     },
     {
+      "expires": "2022-12-10",
       "group": "com\\.mercadolibre\\.android\\.draftandesui",
       "name": "draft-modal",
       "version": "5\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.draftandesui",
+      "name": "draft-modal",
+      "version": "6\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.modalsengine",
