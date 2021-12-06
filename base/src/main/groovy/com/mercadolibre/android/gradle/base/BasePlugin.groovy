@@ -4,6 +4,7 @@ import com.mercadolibre.android.gradle.base.modules.*
 import com.mercadolibre.android.gradle.base.utils.VersionContainer
 import org.gradle.api.Plugin
 import org.gradle.api.Project
+import org.gradle.api.artifacts.repositories.PasswordCredentials
 import org.gradle.api.initialization.Settings
 import org.gradle.api.plugins.JavaPlugin
 
@@ -143,7 +144,7 @@ class BasePlugin implements Plugin<Object> {
                 new LockableModule().configure(subproject)
                 new LintableModule().configure(subproject)
             }
-            
+
             // We are disabling Findbugs/Spotbugs because it imposes a huge latency in the running builds
             // and its not providing any real benefit that other SCA tools already do
             // Another reason is that there is a known issue with repositories that only has Kotlin
@@ -242,11 +243,9 @@ class BasePlugin implements Plugin<Object> {
 
                 // Meli internal release libs
                 maven {
+                    name 'androidInternalReleases'
                     url 'https://android.artifacts.furycloud.io/repository/releases/'
-                    credentials {
-                        username System.getenv("ARTIFACTS_USER")
-                        password System.getenv("ARTIFACTS_PASSWORD")
-                    }
+                    credentials(PasswordCredentials)
                     content {
                         // only releases
                         includeVersionByRegex('com\\.mercadolibre\\..*', '.*', '^((?!EXPERIMENTAL-|LOCAL-).)*$')
@@ -254,8 +253,6 @@ class BasePlugin implements Plugin<Object> {
                         includeGroup 'com.bugsnag'
                     }
                 }
-
-
                 // Meli public libs - these are fewer than the private ones, so we try it later
                 maven {
                     url 'https://artifacts.mercadolibre.com/repository/android-releases/'
@@ -283,11 +280,9 @@ class BasePlugin implements Plugin<Object> {
 
                 // only used for experimental libs
                 maven {
+                    name 'androidInternalExperimental'
                     url 'https://android.artifacts.furycloud.io/repository/experimental/'
-                    credentials {
-                        username System.getenv("ARTIFACTS_USER")
-                        password System.getenv("ARTIFACTS_PASSWORD")
-                    }
+                    credentials(PasswordCredentials)
                     content {
                         includeVersionByRegex('com\\.mercadolibre\\.android.*', '.*', '^(.*-)?EXPERIMENTAL-.*$')
                         includeVersionByRegex('com\\.mercadopago\\.android.*', '.*', '^(.*-)?EXPERIMENTAL-.*$')

@@ -1,12 +1,10 @@
 repositories {
     // Meli internal release libs
     maven {
+        name 'androidInternalReleases'
         url 'https://android.artifacts.furycloud.io/repository/releases/'
         // TODO: Once plugin is published, these credentials should be retrieved from ENV
-        credentials {
-            username System.getenv("ARTIFACTS_USER")
-            password System.getenv("ARTIFACTS_PASSWORD")
-        }
+        credentials(PasswordCredentials)
         content {
             // only releases
             includeVersionByRegex('com\\.mercadolibre\\..*', '.*', '^((?!EXPERIMENTAL-|LOCAL-).)*$')

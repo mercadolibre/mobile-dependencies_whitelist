@@ -1,6 +1,6 @@
 # 11.0.0
 ## Cambiado
-- Se cambia la manera de obtener las credenciales de los repositories de read. Ahora se requiere el export de las ENV `ARTIFACTS_USER` y `ARTIFACTS_PASSWORD`
+- Se cambia la manera de obtener las credenciales de los repositories de read. Ahora se requiere de las credenciales seteadas en el gradle.properties global.
 
 # 10.6.0
 ## Cambiado
