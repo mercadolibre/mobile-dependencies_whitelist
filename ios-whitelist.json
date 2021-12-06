@@ -32,13 +32,6 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "expires": "2021-01-29",
-      "name": "Bugsnag",
-      "source": "public",
-      "target": "production",
-      "version": "6.9.6"
-    },
-    {
       "name": "Bugsnag",
       "source": "public",
       "target": "production",
