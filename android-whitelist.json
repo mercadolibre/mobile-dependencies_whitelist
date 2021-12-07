@@ -301,9 +301,15 @@
       "version": "12\\.\\+"
     },
     {
+      "expires": "2022-03-01",
       "group": "com\\.mercadolibre\\.android",
       "name": "login",
       "version": "13\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "login",
+      "version": "mercadopago-13\\.\\+|mercadolibre-13\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.authchallenges",
@@ -484,9 +490,15 @@
       "version": "3\\.\\+"
     },
     {
+      "expires": "2022-01-01",
       "group": "com\\.mercadolibre\\.android\\.cross_app_links",
       "name": "core",
       "version": "2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cross_app_links",
+      "name": "core",
+      "version": "3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.charts",
