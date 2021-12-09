@@ -984,18 +984,6 @@
       "version": "mercadopago-2\\.\\+|mercadolibre-2\\.\\+"
     },
     {
-      "expires": "2021-12-06",
-      "group": "com\\.mercadolibre\\.android\\.security_two_fa",
-      "name": "totp",
-      "version": "2\\.\\+"
-    },
-    {
-      "expires": "2021-12-06",
-      "group": "com\\.mercadolibre\\.android\\.security_two_fa",
-      "name": "totpinapp",
-      "version": "2\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.security_two_fa",
       "name": "totp",
       "version": "3\\.\\+"
@@ -1302,6 +1290,12 @@
     {
       "group": "androidx\\.work",
       "name": "work-runtime-ktx",
+      "version": "2\\.0\\.1|2\\.1\\.0"
+    },
+    {
+      "expires": "2022-03-24",
+      "group": "androidx\\.work",
+      "name": "work-rxjava2",
       "version": "2\\.0\\.1|2\\.1\\.0"
     },
     {
