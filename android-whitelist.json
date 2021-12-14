@@ -1731,6 +1731,16 @@
     },
     {
       "group": "io\\.opentelemetry",
+      "name": "opentelemetry-api",
+      "version": "1\\.7\\.+"
+    },
+    {
+      "group": "io\\.opentelemetry",
+      "name": "opentelemetry-sdk",
+      "version": "1\\.7\\.+"
+    },
+    {
+      "group": "io\\.opentelemetry",
       "name": "opentelemetry-bom",
       "version": "1\\.7\\.+"
     },
