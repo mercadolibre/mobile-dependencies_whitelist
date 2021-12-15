@@ -639,14 +639,26 @@
       "version": "6\\.\\+"
     },
     {
+      "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
       "name": "core",
-      "version": "6\\.\\+"
+      "version": "6\\.\\+|7\\.\\+"
+    },
+    {
+      "expires": "2022-06-30",
+      "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
+      "name": "renderer-fresco",
+      "version": "6\\.\\+|7\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
+      "name": "core",
+      "version": "8\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
       "name": "renderer-fresco",
-      "version": "6\\.\\+"
+      "version": "8\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.place",
