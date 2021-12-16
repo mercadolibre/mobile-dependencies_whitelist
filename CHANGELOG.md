@@ -1,3 +1,7 @@
+# 11.1.0
+## Modificado
+- Cleaning SCA and other lint configurations
+
 # 11.0.0
 ## Cambiado
 - Se cambia la manera de obtener las credenciales de los repositories de read. Ahora se requiere de las credenciales seteadas en el gradle.properties global.
