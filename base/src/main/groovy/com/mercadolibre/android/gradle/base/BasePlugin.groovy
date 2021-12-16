@@ -4,6 +4,7 @@ import com.mercadolibre.android.gradle.base.modules.*
 import com.mercadolibre.android.gradle.base.utils.VersionContainer
 import org.gradle.api.Plugin
 import org.gradle.api.Project
+import org.gradle.api.artifacts.repositories.PasswordCredentials
 import org.gradle.api.initialization.Settings
 import org.gradle.api.plugins.JavaPlugin
 
@@ -182,11 +183,9 @@ class BasePlugin implements Plugin<Object> {
 
                 // Meli internal release libs
                 maven {
+                    name 'androidInternalReleases'
                     url 'https://android.artifacts.furycloud.io/repository/releases/'
-                    credentials {
-                        username 'fury-user'
-                        password '2r2MJ_L*Y@zM+fa4'
-                    }
+                    credentials(PasswordCredentials)
                     content {
                         // only releases
                         includeVersionByRegex('com\\.mercadolibre\\..*', '.*', '^((?!EXPERIMENTAL-|LOCAL-).)*$')
@@ -194,8 +193,6 @@ class BasePlugin implements Plugin<Object> {
                         includeGroup 'com.bugsnag'
                     }
                 }
-
-
                 // Meli public libs - these are fewer than the private ones, so we try it later
                 maven {
                     url 'https://artifacts.mercadolibre.com/repository/android-releases/'
@@ -223,11 +220,9 @@ class BasePlugin implements Plugin<Object> {
 
                 // only used for experimental libs
                 maven {
+                    name 'androidInternalExperimental'
                     url 'https://android.artifacts.furycloud.io/repository/experimental/'
-                    credentials {
-                        username 'fury-user-experimental'
-                        password 'D&v?=D&up;]d9,k3'
-                    }
+                    credentials(PasswordCredentials)
                     content {
                         includeVersionByRegex('com\\.mercadolibre\\.android.*', '.*', '^(.*-)?EXPERIMENTAL-.*$')
                         includeVersionByRegex('com\\.mercadopago\\.android.*', '.*', '^(.*-)?EXPERIMENTAL-.*$')

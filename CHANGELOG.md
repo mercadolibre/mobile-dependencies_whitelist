@@ -1,10 +1,14 @@
+# 11.0.0
+## Cambiado
+- Se cambia la manera de obtener las credenciales de los repositories de read. Ahora se requiere de las credenciales seteadas en el gradle.properties global.
+
 # 10.6.0
 ## Cambiado
 - Fix comparacion por Gstring vs String. Esto hacia que las dependencia tipo variant no se agreguen al pom xml. Ejemplo `releaseImplementation group:artifact:version`
 
 # 10.5.0
 ## Modificado
-- Se deshabilita la publicacion de los build en gradle enterprise. 
+- Se deshabilita la publicacion de los build en gradle enterprise.
 
 # 10.4.0
 ## Agregado
