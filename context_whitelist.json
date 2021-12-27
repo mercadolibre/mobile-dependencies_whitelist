@@ -2768,6 +2768,15 @@
             "Android": {
                 "key": "com.mercadolibre.android.point_printer"
             }
+        },
+        {
+            "name": "braze",
+            "iOS": {
+                "key": "Braze"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.braze"
+            }
         }
     ]
 }
