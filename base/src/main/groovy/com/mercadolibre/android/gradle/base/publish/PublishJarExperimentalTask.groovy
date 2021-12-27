@@ -28,7 +28,7 @@ class PublishJarExperimentalTask extends PublishJarTask {
                 }
 
                 dependsOn "jar", "${variant.name}SourcesJar", "${variant.name}JavadocJar"
-                finalizedBy "publish${taskName.capitalize()}PublicationToAndroidExperimentalRepository"
+                finalizedBy "publish${taskName.capitalize()}PublicationToAndroidInternalExperimentalRepository"
             }
         }
         createMavenPublication()

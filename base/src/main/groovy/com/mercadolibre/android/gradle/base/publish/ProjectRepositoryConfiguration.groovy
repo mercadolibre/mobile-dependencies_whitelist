@@ -1,6 +1,7 @@
 package com.mercadolibre.android.gradle.base.publish
 
 import org.gradle.api.Project
+import org.gradle.api.credentials.PasswordCredentials
 
 class ProjectRepositoryConfiguration {
 
@@ -10,16 +11,7 @@ class ProjectRepositoryConfiguration {
             project.publishing.repositories.maven {
                 name = repository.name
                 url = repository.url
-                if (repository.credentials.username == null || repository.credentials.password == null) {
-                    println "[!] No repository credentials were found. Configuring ${repository.name} publishing without them."
-                } else {
-                    credentials {
-                        credentials {
-                            username repository.credentials.username
-                            password repository.credentials.password
-                        }
-                    }
-                }
+                credentials(PasswordCredentials)
             }
         })
     }

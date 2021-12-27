@@ -1,14 +1,29 @@
 repositories {
     // Meli internal release libs
     maven {
-        name 'androidInternalReleases'
+        name 'AndroidInternalReleases'
         url 'https://android.artifacts.furycloud.io/repository/releases/'
-        // TODO: Once plugin is published, these credentials should be retrieved from ENV
         credentials(PasswordCredentials)
         content {
             // only releases
             includeVersionByRegex('com\\.mercadolibre\\..*', '.*', '^((?!EXPERIMENTAL-|LOCAL-).)*$')
             includeVersionByRegex('com\\.mercadopago\\..*', '.*', '^((?!EXPERIMENTAL-|LOCAL-).)*$')
+        }
+    }
+    // only used for experimental libs
+    maven {
+        name 'AndroidInternalExperimental'
+        url 'https://android.artifacts.furycloud.io/repository/experimental'
+        credentials(PasswordCredentials)
+        content {
+            includeVersionByRegex('com\\.mercadolibre\\.android.*', '.*', '^(.*-)?EXPERIMENTAL-.*$')
+            includeVersionByRegex('com\\.mercadopago\\.android.*', '.*', '^(.*-)?EXPERIMENTAL-.*$')
+        }
+    }
+    mavenLocal {
+        content {
+            includeVersionByRegex('com\\.mercadolibre\\.android.*', '.*', '^(.*-)?LOCAL-.*$')
+            includeVersionByRegex('com\\.mercadopago\\.android.*', '.*', '^(.*-)?LOCAL-.*$')
         }
     }
 }
