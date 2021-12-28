@@ -28,7 +28,7 @@ class PublishAarExperimentalTask extends PublishAarTask {
                 }
 
                 dependsOn getBundleTaskName(project, variant), getSourcesJarTaskName(variant), getJavadocJarTask(variant)
-                finalizedBy "publish${taskName.capitalize()}PublicationToAndroidExperimentalRepository"
+                finalizedBy "publish${taskName.capitalize()}PublicationToAndroidInternalExperimentalRepository"
             }
         }
 

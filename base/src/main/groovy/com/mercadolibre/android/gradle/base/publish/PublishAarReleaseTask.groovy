@@ -42,12 +42,12 @@ abstract class PublishAarReleaseTask extends PublishAarTask {
 
 class PublishAarPrivateReleaseTask extends PublishAarReleaseTask {
     PublishAarPrivateReleaseTask() {
-        super("AndroidRelease")
+        super("AndroidInternalReleases")
     }
 }
 
 class PublishAarPublicReleaseTask extends PublishAarReleaseTask {
     PublishAarPublicReleaseTask() {
-        super("AndroidPublic")
+        super("AndroidPublicReleases")
     }
 }
