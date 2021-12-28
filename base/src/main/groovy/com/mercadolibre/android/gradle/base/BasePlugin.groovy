@@ -183,7 +183,7 @@ class BasePlugin implements Plugin<Object> {
 
                 // Meli internal release libs
                 maven {
-                    name 'androidInternalReleases'
+                    name 'AndroidInternalReleases'
                     url 'https://android.artifacts.furycloud.io/repository/releases/'
                     credentials(PasswordCredentials)
                     content {
@@ -220,7 +220,7 @@ class BasePlugin implements Plugin<Object> {
 
                 // only used for experimental libs
                 maven {
-                    name 'androidInternalExperimental'
+                    name 'AndroidInternalExperimental'
                     url 'https://android.artifacts.furycloud.io/repository/experimental/'
                     credentials(PasswordCredentials)
                     content {
