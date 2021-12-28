@@ -940,6 +940,31 @@
       "version": "3\\.6"
     },
     {
+      "group": "org\\.jetbrains\\.kotlin",
+      "name": "kotlin-android-extensions-runtime",
+      "version": "1\\.5\\.32"
+    },
+    {
+      "group": "org\\.jetbrains\\.kotlin",
+      "name": "kotlin-reflect",
+      "version": "1\\.5\\.32"
+    },
+    {
+      "group": "org\\.jetbrains\\.kotlin",
+      "name": "kotlin-stdlib",
+      "version": "1\\.5\\.32"
+    },
+    {
+      "group": "org\\.jetbrains\\.kotlin",
+      "name": "kotlin-stdlib-common",
+      "version": "1\\.5\\.32"
+    },
+    {
+      "group": "org\\.jetbrains\\.kotlin",
+      "name": "kotlin-stdlib-jdk7",
+      "version": "1\\.5\\.32"
+    },
+    {
       "expires": "2022-06-30",
       "group": "org\\.jetbrains\\.kotlin",
       "name": "kotlin-android-extensions-runtime",
@@ -1054,6 +1079,16 @@
       "group": "org\\.jetbrains\\.kotlinx",
       "name": "kotlinx-coroutines-android",
       "version": "1\\.2\\.2|1\\.3\\.0"
+    },
+    {
+      "group": "org\\.jetbrains\\.kotlinx",
+      "name": "kotlinx-coroutines-core",
+      "version": "1\\.5\\.2"
+    },
+    {
+      "group": "org\\.jetbrains\\.kotlinx",
+      "name": "kotlinx-coroutines-android",
+      "version": "1\\.5\\.2"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.traceability",
