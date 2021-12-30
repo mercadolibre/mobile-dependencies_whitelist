@@ -740,12 +740,22 @@
     {
       "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
       "name": "home",
-      "version": "mercadopago-1\\.+"
+      "version": "mercadopago-2\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
       "name": "sections",
-      "version": "mercadopago-1\\.+"
+      "version": "mercadopago-2\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.usersections\\",
+      "name": "sections",
+      "version": "mercadopago-2\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.usersections\\",
+      "name": "ui-sections",
+      "version": "mercadopago-2\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.pendings",
