@@ -4,7 +4,6 @@ import com.mercadolibre.android.gradle.base.modules.*
 import com.mercadolibre.android.gradle.base.utils.VersionContainer
 import org.gradle.api.Plugin
 import org.gradle.api.Project
-import org.gradle.api.artifacts.repositories.PasswordCredentials
 import org.gradle.api.initialization.Settings
 import org.gradle.api.plugins.JavaPlugin
 
@@ -169,6 +168,20 @@ class BasePlugin implements Plugin<Object> {
      * Sets up the repositories.
      */
     private void setupFetchingRepositories() {
+
+        // This is a workaround for Gradle 5 that does not support PasswordCredentials.
+        // Once all apps are on Gradle 6+, we can remove this all and leave only
+        // the "repositories" block, using the method of described here:
+        // https://docs.gradle.org/6.8.1/userguide/declaring_repositories.html#sec:handling_credentials
+        def homePath = System.properties['user.home']
+        def props = new Properties()
+        File propertiesFile = new File(homePath + '/.gradle/gradle.properties')
+        propertiesFile.withInputStream { props.load(it) }
+
+        //Releases and Experimental credentials are the same, so we choose Releases
+        def artifactsUser = props['AndroidInternalReleasesUsername']
+        def artifactsPass = props['AndroidInternalReleasesPassword']
+
         project.allprojects {
             repositories {
                 // Google libs
@@ -185,7 +198,10 @@ class BasePlugin implements Plugin<Object> {
                 maven {
                     name 'AndroidInternalReleases'
                     url 'https://android.artifacts.furycloud.io/repository/releases/'
-                    credentials(PasswordCredentials)
+                    credentials {
+                        username artifactsUser
+                        password artifactsPass
+                    }
                     content {
                         // only releases
                         includeVersionByRegex('com\\.mercadolibre\\..*', '.*', '^((?!EXPERIMENTAL-|LOCAL-).)*$')
@@ -222,7 +238,10 @@ class BasePlugin implements Plugin<Object> {
                 maven {
                     name 'AndroidInternalExperimental'
                     url 'https://android.artifacts.furycloud.io/repository/experimental/'
-                    credentials(PasswordCredentials)
+                    credentials {
+                        username artifactsUser
+                        password artifactsPass
+                    }
                     content {
                         includeVersionByRegex('com\\.mercadolibre\\.android.*', '.*', '^(.*-)?EXPERIMENTAL-.*$')
                         includeVersionByRegex('com\\.mercadopago\\.android.*', '.*', '^(.*-)?EXPERIMENTAL-.*$')

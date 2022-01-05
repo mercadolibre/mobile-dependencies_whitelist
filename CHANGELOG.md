@@ -1,3 +1,7 @@
+# 11.1.1
+## Modificado
+- Se utiliza una manera de obtener credenciales compatible con Gradle 5, que aún es utilizado por algunas aplicaciones Android
+
 # 11.1.0
 ## Modificado
 - Cleaning SCA and other lint configurations
@@ -5,7 +9,6 @@
 # 11.0.1
 ## Cambiado
 - Se utilizan correctamente las credenciales propias de Experimental. Ya no es necesario setear la variable de entorno NEXUS_DEPLOYER_USER y NEXUS_DEPLOYER_PASSWORD.
-
 
 # 11.0.0
 ## Cambiado
