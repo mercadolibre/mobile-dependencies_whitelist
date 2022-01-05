@@ -1,4 +1,8 @@
-# 11.1.1
+# 11.2.1
+## Modificado
+- Se agrega com.mercadoenvios a los regex validos para busqueda en Nexus y local.
+
+# 11.2.0
 ## Modificado
 - Se utiliza una manera de obtener credenciales compatible con Gradle 5, que aún es utilizado por algunas aplicaciones Android
 

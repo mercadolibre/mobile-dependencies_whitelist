@@ -206,6 +206,7 @@ class BasePlugin implements Plugin<Object> {
                         // only releases
                         includeVersionByRegex('com\\.mercadolibre\\..*', '.*', '^((?!EXPERIMENTAL-|LOCAL-).)*$')
                         includeVersionByRegex('com\\.mercadopago\\..*', '.*', '^((?!EXPERIMENTAL-|LOCAL-).)*$')
+                        includeVersionByRegex('com\\.mercadoenvios\\..*', '.*', '^((?!EXPERIMENTAL-|LOCAL-).)*$')
                         includeGroup 'com.bugsnag'
                     }
                 }
@@ -245,6 +246,7 @@ class BasePlugin implements Plugin<Object> {
                     content {
                         includeVersionByRegex('com\\.mercadolibre\\.android.*', '.*', '^(.*-)?EXPERIMENTAL-.*$')
                         includeVersionByRegex('com\\.mercadopago\\.android.*', '.*', '^(.*-)?EXPERIMENTAL-.*$')
+                        includeVersionByRegex('com\\.mercadoenvios\\.android.*', '.*', '^(.*-)?EXPERIMENTAL-.*$')
                     }
                 }
 
@@ -253,6 +255,7 @@ class BasePlugin implements Plugin<Object> {
                     content {
                         includeVersionByRegex('com\\.mercadolibre\\.android.*', '.*', '^(.*-)?LOCAL-.*$')
                         includeVersionByRegex('com\\.mercadopago\\.android.*', '.*', '^(.*-)?LOCAL-.*$')
+                        includeVersionByRegex('com\\.mercadoenvios\\.android.*', '.*', '^(.*-)?LOCAL-.*$')
                     }
                 }
 
