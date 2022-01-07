@@ -1802,6 +1802,16 @@
       "group": "com\\.mercadolibre\\.android\\.opentelemetry",
       "name": "core",
       "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.px\\.tokenization",
+      "name": "core",
+      "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.px\\.tokenization",
+      "name": "px-tokenization",
+      "version": "1\\.+"
     }
   ]
 }
