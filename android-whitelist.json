@@ -334,14 +334,21 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2022-03-01",
       "group": "com\\.mercadolibre\\.android",
       "name": "melidata-sdk",
       "version": "9\\.\\+"
     },
     {
+      "expires": "2022-03-01",
       "group": "com\\.mercadolibre\\.android",
       "name": "melidata-sdk",
       "version": "10\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "melidata-sdk",
+      "version": "11\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -1361,24 +1368,48 @@
       "version": "1\\.4\\.0"
     },
     {
+      "expires": "2022-01-21",
       "group": "androidx\\.room",
       "name": "room-runtime",
       "version": "2\\.2\\.5"
     },
     {
+      "expires": "2022-01-21",
       "group": "androidx\\.room",
       "name": "room-compiler",
       "version": "2\\.2\\.5"
     },
     {
+      "expires": "2022-01-21",
       "group": "androidx\\.room",
       "name": "room-ktx",
       "version": "2\\.2\\.5"
     },
     {
+      "expires": "2022-01-21",
       "group": "androidx\\.room",
       "name": "room-rxjava2",
       "version": "2\\.2\\.5"
+    },
+    {
+      "group": "androidx\\.room",
+      "name": "room-runtime",
+      "version": "2\\.3\\.0"
+    },
+    {
+      "group": "androidx\\.room",
+      "name": "room-compiler",
+      "version": "2\\.3\\.0"
+    },
+    {
+      "group": "androidx\\.room",
+      "name": "room-ktx",
+      "version": "2\\.3\\.0"
+    },
+    {
+      "group": "androidx\\.room",
+      "name": "room-rxjava2",
+      "version": "2\\.3\\.0"
     },
     {
       "group": "androidx\\.biometric",
@@ -1729,24 +1760,6 @@
       "version": "1\\.+"
     },
     {
-      "expires": "2022-01-14",
-      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
-      "name": "scanner",
-      "version": "mercadolibre-2\\.\\+|mercadopago-2\\.\\+"
-    },
-    {
-      "expires": "2022-01-14",
-      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
-      "name": "ocr",
-      "version": "mercadolibre-2\\.\\+|mercadopago-2\\.\\+"
-    },
-    {
-      "expires": "2022-01-14",
-      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
-      "name": "barcode",
-      "version": "mercadolibre-2\\.\\+|mercadopago-2\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "scanner",
       "version": "mercadolibre-3\\.\\+|mercadopago-3\\.\\+"
@@ -1804,13 +1817,23 @@
       "version": "1\\.+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.braze",
+      "name": "core",
+      "version": "1\\.0\\.0"
+    },
+    {
+      "group": "com\\.appboy",
+      "name": "android-sdk-ui",
+      "version": "15\\.0\\.0"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.px\\.tokenization",
       "name": "core",
       "version": "1\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.px\\.tokenization",
-      "name": "px-tokenization",
+      "name": "enrollment",
       "version": "1\\.+"
     }
   ]
