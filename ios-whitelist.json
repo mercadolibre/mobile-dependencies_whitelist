@@ -1338,8 +1338,9 @@
       "version": "^~>\\s?1.[0-9]+"
     },
     {
-      "group": "com\\.mercadolibre",
       "name": "Braze-ios",
+      "source": "private",
+      "target": "production",
       "version": "1\\.0\\.0"
     },
     {
