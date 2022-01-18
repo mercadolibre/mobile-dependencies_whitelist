@@ -336,10 +336,17 @@
       "version": "^~>\\s?3.[0-9]+$"
     },
     {
+      "expires": "2022-02-15",
       "name": "MLAuthentication",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+"
+    },
+    {
+      "name": "MLAuthentication",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+"
     },
     {
       "name": "MLBiometrics",
@@ -516,10 +523,17 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "expires": "2022-02-15",
       "name": "MLLogin",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLLogin",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "SecurityTwoFactor",
