@@ -149,11 +149,6 @@
     },
     {
       "group": "com\\.google\\.android\\.gms",
-      "name": "play-services-base",
-      "version": "18\\.0\\.0"
-    },
-    {
-      "group": "com\\.google\\.android\\.gms",
       "name": "play-services-location",
       "version": "17\\.1\\.0"
     },
@@ -188,7 +183,7 @@
       "version": "17\\.1\\.0"
     },
     {
-      "expires": "2022-06-06",
+      "expires": "2022-03-01",
       "group": "com\\.google\\.android\\.play",
       "name": "core",
       "version": "1\\.10\\.2"
@@ -204,15 +199,9 @@
       "version": "2\\.4\\.0"
     },
     {
-      "expires": "2022-06-06",
       "group": "com\\.mercadolibre\\.android\\.dynamic_features",
       "name": "core",
       "version": "3\\.\\+"
-    },
-    {
-      "group": "com\\.mercadolibre\\.android\\.dynamic_features",
-      "name": "core",
-      "version": "4\\.\\+"
     },
     {
       "group": "com\\.google\\.code\\.gson",
