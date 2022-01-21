@@ -1847,6 +1847,16 @@
       "group": "com\\.appboy",
       "name": "android-sdk-ui",
       "version": "15\\.0\\.0"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.px\\.tokenization",
+      "name": "core",
+      "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.px\\.tokenization",
+      "name": "enrollment",
+      "version": "1\\.+"
     }
   ]
 }
