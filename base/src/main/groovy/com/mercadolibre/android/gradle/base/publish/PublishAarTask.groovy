@@ -73,7 +73,7 @@ abstract class PublishAarTask extends PublishTask {
                     group 'Documentation'
 
                     // Yes, javaCompile is deprecated, but whats the alternative?
-                    source = variant.javaCompile.source
+                    source = variant.javaCompileProvider.get().source
 
                     destinationDir = javaDocDestDir
 
