@@ -1,5 +1,6 @@
 package com.mercadolibre.android.gradle.base.modules
 
+import com.mercadolibre.android.gradle.base.utils.VariantUtils
 import org.gradle.api.Project
 import org.gradle.api.Task
 import org.gradle.api.tasks.TaskProvider
@@ -131,7 +132,7 @@ class AndroidJacocoModule extends BaseJacocoModule {
     // Kotlin generated code output folder comes from:
     // https://github.com/JetBrains/kotlin/blob/v1.3.11/libraries/tools/kotlin-gradle-plugin/src/main/kotlin/org/jetbrains/kotlin/gradle/plugin/KotlinPlugin.kt#L726
     protected def classesDir(variant) {
-        javaCompile(variant).destinationDir
+        VariantUtils.javaCompile(variant).destinationDir
     }
 
     protected TaskProvider<Test> testTask(variant) {
@@ -140,13 +141,5 @@ class AndroidJacocoModule extends BaseJacocoModule {
 
     protected def executionDataFile(Task testTask) {
         testTask.jacoco.destinationFile.path
-    }
-
-    protected static def javaCompile(variant) {
-        if (variant.hasProperty('javaCompileProvider')) {
-            variant.javaCompileProvider.get()
-        } else {
-            variant.javaCompile
-        }
     }
 }

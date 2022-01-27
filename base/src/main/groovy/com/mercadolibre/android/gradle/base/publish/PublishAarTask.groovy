@@ -1,6 +1,7 @@
 package com.mercadolibre.android.gradle.base.publish
 
 import com.mercadolibre.android.gradle.base.utils.PomUtils
+import com.mercadolibre.android.gradle.base.utils.VariantUtils
 import com.mercadolibre.android.gradle.base.utils.VersionContainer
 import org.gradle.api.*
 import org.gradle.api.artifacts.Configuration
@@ -73,7 +74,7 @@ abstract class PublishAarTask extends PublishTask {
                     group 'Documentation'
 
                     // Yes, javaCompile is deprecated, but whats the alternative?
-                    source = variant.javaCompileProvider.get().source
+                    source = VariantUtils.javaCompile(variant).source
 
                     destinationDir = javaDocDestDir
 
@@ -132,7 +133,7 @@ abstract class PublishAarTask extends PublishTask {
                 version = VersionContainer.get(project.name, taskName, project.version as String)
 
                 artifacts = [
-                        packageLibrary(variant),
+                        VariantUtils.packageLibrary(variant),
                         sourcesJar.get(),
                         javadocJar.get()
                 ]
@@ -198,13 +199,5 @@ abstract class PublishAarTask extends PublishTask {
      */
     protected static String getJavadocJarTask(def variant) {
         return "${variant.name}JavadocJar"
-    }
-
-    private static def packageLibrary(def variant) {
-        if (variant.hasProperty('packageLibraryProvider')) {
-            return variant.packageLibraryProvider.get()
-        } else {
-            return variant.outputs.first().packageLibrary
-        }
     }
 }
