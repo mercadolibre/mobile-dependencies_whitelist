@@ -132,7 +132,7 @@ abstract class PublishAarTask extends PublishTask {
                 version = VersionContainer.get(project.name, taskName, project.version as String)
 
                 artifacts = [
-                        variant.packageLibraryProvider.get(),
+                        packageLibrary(variant),
                         sourcesJar.get(),
                         javadocJar.get()
                 ]
@@ -198,5 +198,13 @@ abstract class PublishAarTask extends PublishTask {
      */
     protected static String getJavadocJarTask(def variant) {
         return "${variant.name}JavadocJar"
+    }
+
+    private static def packageLibrary(def variant) {
+        if (variant.hasProperty('packageLibraryProvider')) {
+            return variant.packageLibraryProvider.get()
+        } else {
+            return variant.outputs.first().packageLibrary
+        }
     }
 }
