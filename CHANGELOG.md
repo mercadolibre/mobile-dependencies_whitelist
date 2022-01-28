@@ -1,3 +1,8 @@
+# 11.3.0
+## Cambiado
+- Remove WARNING: variant.getJavaCompile ()' is obsolete....
+- Remoce WARNING: variantOutput.getPackageLibrary()' is obsolete...
+
 # 11.2.1
 ## Modificado
 - Se agrega com.mercadoenvios a los regex validos para busqueda en Nexus y local.
