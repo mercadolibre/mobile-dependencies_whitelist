@@ -6,7 +6,7 @@ package com.mercadolibre.android.gradle.base.utils
 final class VariantUtils {
 
     /**
-     * get javaCompile from variant
+     * Return java compile object from given variant
      * @param variant
      * @return javaCompile
      */
@@ -19,7 +19,7 @@ final class VariantUtils {
     }
 
     /**
-     *  get packageLibrary from variant
+     * Return package library object from given variant
      * @param variant
      * @return packageLibrary
      */
