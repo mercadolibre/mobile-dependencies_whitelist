@@ -13,6 +13,13 @@
       "version": "^~>\\s?0.[0-9]+"
     },
     {
+      "expires": "2022-03-29",
+      "name": "NewRelicAgent",
+      "source": "public",
+      "target": "production",
+      "version": "^~>\\s?7.3.[0-9]+$"
+    },
+    {
       "name": "Adjust",
       "source": "public",
       "target": "production",
