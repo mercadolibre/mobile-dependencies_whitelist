@@ -1356,6 +1356,11 @@
       "version": "1\\.1"
     },
     {
+      "group": "com\\.android\\.installreferrer",
+      "name": "installreferrer",
+      "version": "1\\.1\\.2"
+    },
+    {
       "group": "androidx\\.lifecycle",
       "name": "lifecycle-viewmodel",
       "version": "2\\.2\\.0"
@@ -1368,6 +1373,11 @@
     {
       "group": "androidx\\.lifecycle",
       "name": "lifecycle-process",
+      "version": "2\\.2\\.0"
+    },
+    {
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-runtime-ktx",
       "version": "2\\.2\\.0"
     },
     {
@@ -1688,27 +1698,27 @@
     {
       "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
       "name": "spirtechmodule",
-      "version": "1\\.+"
+      "version": "1\\.+||2\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
       "name": "decodingmanager",
-      "version": "1\\.+"
+      "version": "1\\.+||2\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
       "name": "ccmmexico_enhanceddevice",
-      "version": "1\\.+"
+      "version": "1\\.+||2\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
       "name": "ccmgeneral",
-      "version": "1\\.+"
+      "version": "1\\.+||2\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
       "name": "ccmmexico",
-      "version": "1\\.+"
+      "version": "1\\.+||2\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point_virtualization",
