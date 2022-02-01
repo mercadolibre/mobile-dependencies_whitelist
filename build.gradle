@@ -1,14 +1,7 @@
 apply plugin: 'mercadolibre.mobile'
 
 buildscript {
-    repositories {
-        // have the same repositories applied to buildscript…
-        apply from:"$rootDir/gradle/repositories.gradle", to: buildscript
-
-        maven {
-            url "https://plugins.gradle.org/m2/"
-        }
-    }
+    apply from:"$rootDir/gradle/repositories.gradle", to: buildscript
 
     dependencies {
         classpath "com.mercadolibre.android.gradle:base:$innerProjectVersion"

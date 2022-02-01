@@ -26,6 +26,7 @@ repositories {
             includeVersionByRegex('com\\.mercadoenvios\\..*', '.*', '^((?!EXPERIMENTAL-|LOCAL-).)*$')
         }
     }
+
     // only used for experimental libs
     maven {
         name 'AndroidInternalExperimental'
@@ -40,12 +41,23 @@ repositories {
             includeVersionByRegex('com\\.mercadoenvios\\.android.*', '.*', '^(.*-)?EXPERIMENTAL-.*$')
         }
     }
+
     mavenLocal {
         content {
             includeVersionByRegex('com\\.mercadolibre\\.android.*', '.*', '^(.*-)?LOCAL-.*$')
             includeVersionByRegex('com\\.mercadopago\\.android.*', '.*', '^(.*-)?LOCAL-.*$')
             includeVersionByRegex('com\\.mercadoenvios\\.android.*', '.*', '^(.*-)?LOCAL-.*$')
         }
+    }
+
+    maven {
+        name 'AndroidGradlePlugins'
+        url 'https://android.artifacts.furycloud.io/repository/gradle-plugins'
+        credentials {
+            username artifactsUser
+            password artifactsPass
+        }
+        url "https://plugins.gradle.org/m2/"
     }
 }
 

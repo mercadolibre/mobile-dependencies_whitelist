@@ -185,7 +185,13 @@ class BasePlugin implements Plugin<Object> {
         project.allprojects {
             repositories {
                 // Google libs
-                google {
+                maven {
+                    name 'AndroidGoogle'
+                    url 'https://android.artifacts.furycloud.io/repository/google/'
+                    credentials {
+                        username artifactsUser
+                        password artifactsPass
+                    }
                     content {
                         includeGroupByRegex 'android\\.arch\\..*'
                         includeGroupByRegex 'androidx\\..*'
@@ -210,8 +216,10 @@ class BasePlugin implements Plugin<Object> {
                         includeGroup 'com.bugsnag'
                     }
                 }
+
                 // Meli public libs - these are fewer than the private ones, so we try it later
                 maven {
+                    name 'AndroidExternalReleases'
                     url 'https://artifacts.mercadolibre.com/repository/android-releases/'
                     content {
                         // only releases
@@ -221,7 +229,12 @@ class BasePlugin implements Plugin<Object> {
 
                 // Smartlook/Norway
                 maven {
-                    url "https://sdk.smartlook.com/android/release"
+                    name 'AndroidSmartlook'
+                    url 'https://android.artifacts.furycloud.io/repository/smartlook/'
+                    credentials {
+                        username artifactsUser
+                        password artifactsPass
+                    }
                     content {
                         includeGroup 'com.smartlook.recording'
                     }
@@ -229,7 +242,12 @@ class BasePlugin implements Plugin<Object> {
 
                 // only used for github repositories
                 maven {
-                    url 'https://jitpack.io'
+                    name 'AndroidJitPack'
+                    url 'https://android.artifacts.furycloud.io/repository/jitpack/'
+                    credentials {
+                        username artifactsUser
+                        password artifactsPass
+                    }
                     content {
                         includeGroupByRegex 'com\\.github\\..*'
                     }
@@ -260,7 +278,14 @@ class BasePlugin implements Plugin<Object> {
                 }
 
                 // catch all repositories
-                jcenter()
+                maven {
+                    name 'AndroidExtraReleases'
+                    url 'https://android.artifacts.furycloud.io/repository/extra/'
+                    credentials {
+                        username artifactsUser
+                        password artifactsPass
+                    }
+                }
             }
         }
     }
