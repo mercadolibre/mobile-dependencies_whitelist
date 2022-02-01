@@ -57,7 +57,6 @@ repositories {
             username artifactsUser
             password artifactsPass
         }
-        url "https://plugins.gradle.org/m2/"
     }
 }
 
