@@ -279,7 +279,7 @@ class BasePlugin implements Plugin<Object> {
 
                 // catch all repositories
                 maven {
-                    name 'AndroidExtraReleases'
+                    name 'AndroidExtra'
                     url 'https://android.artifacts.furycloud.io/repository/extra/'
                     credentials {
                         username artifactsUser
