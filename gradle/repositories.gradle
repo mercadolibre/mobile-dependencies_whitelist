@@ -11,7 +11,7 @@ def artifactsUser = props['AndroidInternalReleasesUsername']
 def artifactsPass = props['AndroidInternalReleasesPassword']
 
 repositories {
-    // Meli internal release libs
+    // MELI internal release libs
     maven {
         name 'AndroidInternalReleases'
         url 'https://android.artifacts.furycloud.io/repository/releases/'
@@ -27,7 +27,7 @@ repositories {
         }
     }
 
-    // only used for experimental libs
+    // MELI internal experimental libs - only used for experimental libs
     maven {
         name 'AndroidInternalExperimental'
         url 'https://android.artifacts.furycloud.io/repository/experimental'
@@ -50,13 +50,13 @@ repositories {
         }
     }
 
+    // rest of all repositories are managed by Nexus (Google, JCenter, etc.)
     maven {
-        name 'AndroidGradlePlugins'
-        url 'https://android.artifacts.furycloud.io/repository/gradle-plugins'
+        name 'AndroidExtra'
+        url 'https://android.artifacts.furycloud.io/repository/extra/'
         credentials {
             username artifactsUser
             password artifactsPass
         }
     }
 }
-
