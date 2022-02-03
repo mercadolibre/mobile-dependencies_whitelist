@@ -168,7 +168,6 @@ class BasePlugin implements Plugin<Object> {
      * Sets up the repositories.
      */
     private void setupFetchingRepositories() {
-
         // This is a workaround for Gradle 5 that does not support PasswordCredentials.
         // Once all apps are on Gradle 6+, we can remove this all and leave only
         // the "repositories" block, using the method of described here:
@@ -178,23 +177,13 @@ class BasePlugin implements Plugin<Object> {
         File propertiesFile = new File(homePath + '/.gradle/gradle.properties')
         propertiesFile.withInputStream { props.load(it) }
 
-        //Releases and Experimental credentials are the same, so we choose Releases
+        // All Nexus credentials are the same, so we choose Internal Releases credential
         def artifactsUser = props['AndroidInternalReleasesUsername']
         def artifactsPass = props['AndroidInternalReleasesPassword']
 
         project.allprojects {
             repositories {
-                // Google libs
-                google {
-                    content {
-                        includeGroupByRegex 'android\\.arch\\..*'
-                        includeGroupByRegex 'androidx\\..*'
-                        includeGroupByRegex 'com\\.android.*'
-                        includeGroupByRegex 'com\\.google\\..*'
-                    }
-                }
-
-                // Meli internal release libs
+                // MELI internal release libs
                 maven {
                     name 'AndroidInternalReleases'
                     url 'https://android.artifacts.furycloud.io/repository/releases/'
@@ -210,8 +199,10 @@ class BasePlugin implements Plugin<Object> {
                         includeGroup 'com.bugsnag'
                     }
                 }
-                // Meli public libs - these are fewer than the private ones, so we try it later
+
+                // MELI public libs - these are fewer than the private ones, so we try it later
                 maven {
+                    name 'AndroidExternalReleases'
                     url 'https://artifacts.mercadolibre.com/repository/android-releases/'
                     content {
                         // only releases
@@ -219,23 +210,7 @@ class BasePlugin implements Plugin<Object> {
                     }
                 }
 
-                // Smartlook/Norway
-                maven {
-                    url "https://sdk.smartlook.com/android/release"
-                    content {
-                        includeGroup 'com.smartlook.recording'
-                    }
-                }
-
-                // only used for github repositories
-                maven {
-                    url 'https://jitpack.io'
-                    content {
-                        includeGroupByRegex 'com\\.github\\..*'
-                    }
-                }
-
-                // only used for experimental libs
+                // MELI internal experimental libs - only used for experimental libs
                 maven {
                     name 'AndroidInternalExperimental'
                     url 'https://android.artifacts.furycloud.io/repository/experimental/'
@@ -259,8 +234,15 @@ class BasePlugin implements Plugin<Object> {
                     }
                 }
 
-                // catch all repositories
-                jcenter()
+                // rest of all repositories are managed by Nexus (Google, JCenter, etc.)
+                maven {
+                    name 'AndroidExtra'
+                    url 'https://android.artifacts.furycloud.io/repository/extra/'
+                    credentials {
+                        username artifactsUser
+                        password artifactsPass
+                    }
+                }
             }
         }
     }

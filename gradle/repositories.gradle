@@ -11,7 +11,7 @@ def artifactsUser = props['AndroidInternalReleasesUsername']
 def artifactsPass = props['AndroidInternalReleasesPassword']
 
 repositories {
-    // Meli internal release libs
+    // MELI internal release libs
     maven {
         name 'AndroidInternalReleases'
         url 'https://android.artifacts.furycloud.io/repository/releases/'
@@ -26,7 +26,8 @@ repositories {
             includeVersionByRegex('com\\.mercadoenvios\\..*', '.*', '^((?!EXPERIMENTAL-|LOCAL-).)*$')
         }
     }
-    // only used for experimental libs
+
+    // MELI internal experimental libs - only used for experimental libs
     maven {
         name 'AndroidInternalExperimental'
         url 'https://android.artifacts.furycloud.io/repository/experimental'
@@ -40,6 +41,7 @@ repositories {
             includeVersionByRegex('com\\.mercadoenvios\\.android.*', '.*', '^(.*-)?EXPERIMENTAL-.*$')
         }
     }
+
     mavenLocal {
         content {
             includeVersionByRegex('com\\.mercadolibre\\.android.*', '.*', '^(.*-)?LOCAL-.*$')
@@ -47,5 +49,14 @@ repositories {
             includeVersionByRegex('com\\.mercadoenvios\\.android.*', '.*', '^(.*-)?LOCAL-.*$')
         }
     }
-}
 
+    // rest of all repositories are managed by Nexus (Google, JCenter, etc.)
+    maven {
+        name 'AndroidExtra'
+        url 'https://android.artifacts.furycloud.io/repository/extra/'
+        credentials {
+            username artifactsUser
+            password artifactsPass
+        }
+    }
+}

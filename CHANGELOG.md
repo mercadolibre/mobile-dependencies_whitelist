@@ -1,3 +1,7 @@
+# 11.4.0
+## Modificado
+- Se reemplazan todos los repositorios externos por proxies de Nexus. Hacemos esto JCenter presentó downtime y nos sacó tiempo de desarrollo. Por eso vamos a usar la cache del Nexus y como fallback estos repositorios.
+
 # 11.3.0
 ## Cambiado
 - Remove WARNING: variant.getJavaCompile ()' is obsolete....
