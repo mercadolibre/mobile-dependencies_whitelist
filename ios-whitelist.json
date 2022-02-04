@@ -1341,7 +1341,7 @@
       "name": "Braze-ios",
       "source": "private",
       "target": "production",
-      "version": "1\\.0\\.0"
+      "version": "^~>\\s?1.[0-9]+"
     },
     {
       "name": "Appboy-iOS-SDK/Core",
