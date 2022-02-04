@@ -1342,6 +1342,16 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "Braze-ios",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "Appboy-iOS-SDK/Core",
+      "version": "^~>4.3.[0-3]+$"
     }
   ]
 }
