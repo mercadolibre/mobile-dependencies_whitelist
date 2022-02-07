@@ -1,6 +1,5 @@
 package com.mercadolibre.android.gradle.base.publish
 
-
 import com.mercadolibre.android.gradle.base.utils.VersionContainer
 import org.gradle.api.Task
 import org.gradle.api.tasks.TaskProvider

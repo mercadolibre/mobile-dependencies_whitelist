@@ -1,6 +1,5 @@
 package com.mercadolibre.android.gradle.base.modules
 
-
 import org.gradle.api.Project
 import org.gradle.api.initialization.Settings
 import org.gradle.util.VersionNumber
@@ -18,7 +17,7 @@ class BuildScanModule implements Module, SettingsModule {
         object.with {
             gradleEnterprise {
                 buildScan {
-                    publishAlwaysIf(false)
+                    publishAlways()
                     server = 'https://gradle.adminml.com/'
                     // tags
                     tag projectName

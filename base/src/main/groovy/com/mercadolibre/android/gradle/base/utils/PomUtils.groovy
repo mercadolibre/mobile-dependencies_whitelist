@@ -18,8 +18,8 @@ final class PomUtils {
         // Here I declare all the configurations we support to upload to the pom.
         // We also take into account flavored ones
         List<String> compileConfigurations = ['default', 'archives', 'compile', "${variantName}Compile".toString(),
-                                     'implementation', "${variantName}Implementation".toString(),
-                                     'api', "${variantName}Api".toString()]
+                                              'implementation', "${variantName}Implementation".toString(),
+                                              'api', "${variantName}Api".toString()]
         if (flavor) {
             compileConfigurations << "${flavor}Api".toString()
             compileConfigurations << "${flavor}Implementation".toString()
@@ -27,7 +27,7 @@ final class PomUtils {
         }
 
         final String[] testConfigurations = ['test', "test${variantName.capitalize()}", 'testCompile',
-                                            "testCompile${variantName.capitalize()}"]
+                                             "testCompile${variantName.capitalize()}"]
         final String[] runtimeConfigurations = ['runtime', 'runtimeOnly', "${variantName}Runtime",
                                                 "${variantName}RuntimeOnly"]
         final String[] providedConfigurations = ['provided', 'compileOnly', "${variantName}CompileOnly"]

@@ -17,37 +17,37 @@ class BasePlugin implements Plugin<Object> {
 
     private static final ANDROID_LIBRARY_MODULES = { ->
         return [
-                new AndroidLibraryPublishableModule(),
-                new AndroidLibraryTestableModule(),
-                new AndroidJacocoModule()
+            new AndroidLibraryPublishableModule(),
+            new AndroidLibraryTestableModule(),
+            new AndroidJacocoModule()
         ]
     }
 
     private static final ANDROID_APPLICATION_MODULES = { ->
         return [
-                new AndroidJacocoModule(),
-                new KeystoreModule(),
-                new ApplicationLintOptionsModule()
+            new AndroidJacocoModule(),
+            new KeystoreModule(),
+            new ApplicationLintOptionsModule()
         ]
     }
 
     private static final JAVA_MODULES = { ->
         return [
-                new JavaPublishableModule(),
-                new JavaJacocoModule()
+            new JavaPublishableModule(),
+            new JavaJacocoModule()
         ]
     }
 
     private static final PROJECT_MODULES = { ->
         return [
-                new BuildScanModule(),
-                new ListProjectsModule()
+            new BuildScanModule(),
+            new ListProjectsModule()
         ]
     }
 
     private static final SETTINGS_MODULES = {
         return [
-                new BuildScanModule()
+            new BuildScanModule()
         ]
     }
 

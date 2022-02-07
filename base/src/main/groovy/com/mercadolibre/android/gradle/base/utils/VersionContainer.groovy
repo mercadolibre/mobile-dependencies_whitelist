@@ -26,7 +26,7 @@ final class VersionContainer {
     }
 
     public static void logVersion(String version) {
-        println ("${(27 as Character)}[32mPublishing version: ${version} ${(27 as Character)}[0m")
+        println("${(27 as Character)}[32mPublishing version: ${version} ${(27 as Character)}[0m")
     }
 
 }
