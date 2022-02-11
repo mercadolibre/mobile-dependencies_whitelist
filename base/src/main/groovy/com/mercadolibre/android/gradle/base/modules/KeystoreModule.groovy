@@ -2,7 +2,6 @@ package com.mercadolibre.android.gradle.base.modules
 
 import org.gradle.api.Project
 import org.gradle.api.Task
-import org.gradle.api.tasks.OutputDirectory
 import org.gradle.api.tasks.TaskProvider
 
 /**
@@ -39,7 +38,7 @@ class KeystoreModule implements Module {
             doLast {
                 // Create the directory
                 directory.mkdirs()
-                
+
                 // Write the keystore file into the build directory
                 final InputStream inputStream = KeystoreModule.class.getResourceAsStream("${File.separator}${DIRECTORY_NAME}${File.separator}${FILE_NAME}")
                 keystore.withOutputStream { outputStream ->

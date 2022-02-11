@@ -8,7 +8,5 @@ import org.gradle.api.Project
  * Created by saguilera on 7/21/17.
  */
 interface Module {
-
     void configure(Project project)
-
 }

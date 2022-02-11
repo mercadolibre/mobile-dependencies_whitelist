@@ -31,10 +31,10 @@ class AndroidLibraryTestableModule implements Module {
                 }
 
                 TASKS.forEach({ task ->
-                    String regex = ENGINE.createTemplate(TASK_REGEX).make(["flavor": flavorName]).toString()
+                    String regex = ENGINE.createTemplate(TASK_REGEX).make(["flavor":flavorName]).toString()
                     String build = (variantName =~ regex)[0][1]
-                    String flavorTaskName = ENGINE.createTemplate(task.taskName).make(["variant": variantName]).toString()
-                    String genericTaskName = ENGINE.createTemplate(task.taskName).make(["variant": build]).toString()
+                    String flavorTaskName = ENGINE.createTemplate(task.taskName).make(["variant":variantName]).toString()
+                    String genericTaskName = ENGINE.createTemplate(task.taskName).make(["variant":build]).toString()
 
                     TaskProvider<Task> flavorTask = project.tasks.named(flavorTaskName)
 
@@ -45,7 +45,7 @@ class AndroidLibraryTestableModule implements Module {
                     } else {
                         project.tasks.register(genericTaskName).configure { Task it ->
                             it.group = task.group
-                            it.description = ENGINE.createTemplate(task.description).make(["build": build]).toString()
+                            it.description = ENGINE.createTemplate(task.description).make(["build":build]).toString()
                             it.dependsOn flavorTask
                         }
                     }

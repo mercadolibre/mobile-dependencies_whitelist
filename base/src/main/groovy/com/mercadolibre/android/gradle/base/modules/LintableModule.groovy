@@ -36,8 +36,8 @@ class LintableModule implements Module {
      * Array with instances of the lints to run
      */
     protected final Lint[] linters = [
-            new LibraryWhitelistedDependenciesLint(),
-            new ReleaseDependenciesLint()
+        new LibraryWhitelistedDependenciesLint(),
+        new ReleaseDependenciesLint()
     ]
 
     /**

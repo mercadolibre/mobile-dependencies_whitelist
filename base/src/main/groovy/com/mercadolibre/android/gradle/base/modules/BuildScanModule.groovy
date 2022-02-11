@@ -49,7 +49,7 @@ class BuildScanModule implements Module, SettingsModule {
         def projectGradleVersion = VersionNumber.parse(settings.gradle.gradleVersion)
         if (projectGradleVersion.major >= GRADLE_VERSION_SIX) {
             settings.with {
-                apply plugin : "com.gradle.enterprise"
+                apply plugin:"com.gradle.enterprise"
             }
             configure(settings, settings.getRootProject().getName())
         }

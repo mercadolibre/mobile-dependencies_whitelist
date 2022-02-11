@@ -16,7 +16,7 @@ class ApplicationLintOptionsModule implements Module {
                 lintOptions {
                     checkDependencies true
                 }
-            }            
+            }
         }
     }
 }

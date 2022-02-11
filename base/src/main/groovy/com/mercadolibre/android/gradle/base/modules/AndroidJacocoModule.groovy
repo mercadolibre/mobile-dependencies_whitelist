@@ -5,7 +5,6 @@ import org.gradle.api.Project
 import org.gradle.api.Task
 import org.gradle.api.tasks.TaskProvider
 import org.gradle.api.tasks.testing.Test
-import org.gradle.platform.base.Variant
 import org.gradle.testing.jacoco.tasks.JacocoReport
 
 /**
@@ -85,29 +84,29 @@ class AndroidJacocoModule extends BaseJacocoModule {
             reportTask.executionData.from = project.files(executionDataFile(testTask.get()))
             def exclude = project.jacocoConfiguration.excludeList
             def defaultExclude = [
-                    '**/R.class',
-                    '**/R$*.class',
-                    '**/BuildConfig.class',
-                    '**/*$ViewInjector*.*',
-                    '**/*$ViewBinder*.*',
-                    '**/Manifest*.*',
-                    '**/*$Lambda$*.*',
-                    '**/*Module.*',
-                    '**/*Dagger*.*',
-                    '**/*MembersInjector*.*',
-                    '**/*_Provide*Factory*.*',
-                    '**/*_Factory*.*',
-                    '**/*$*$*.*'
+                '**/R.class',
+                '**/R$*.class',
+                '**/BuildConfig.class',
+                '**/*$ViewInjector*.*',
+                '**/*$ViewBinder*.*',
+                '**/Manifest*.*',
+                '**/*$Lambda$*.*',
+                '**/*Module.*',
+                '**/*Dagger*.*',
+                '**/*MembersInjector*.*',
+                '**/*_Provide*Factory*.*',
+                '**/*_Factory*.*',
+                '**/*$*$*.*'
             ]
             exclude.addAll(defaultExclude)
 
             def sourceDirectories = sourceDirs
-            def classDirectories = project.fileTree(dir: classesDir, excludes: exclude)
+            def classDirectories = project.fileTree(dir:classesDir, excludes:exclude)
 
             if (project.plugins.hasPlugin("kotlin-android")) {
                 classDirectories += project.fileTree(
-                        dir: "${project.buildDir}/tmp/kotlin-classes/${variant.name}",
-                        excludes: exclude
+                    dir:"${project.buildDir}/tmp/kotlin-classes/${variant.name}",
+                    excludes:exclude
                 )
                 sourceDirectories.add("src/main/kotlin")
             }

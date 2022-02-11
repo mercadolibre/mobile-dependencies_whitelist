@@ -1,6 +1,17 @@
 package com.mercadolibre.android.gradle.base
 
-import com.mercadolibre.android.gradle.base.modules.*
+import com.mercadolibre.android.gradle.base.modules.AndroidJacocoModule
+import com.mercadolibre.android.gradle.base.modules.AndroidLibraryPublishableModule
+import com.mercadolibre.android.gradle.base.modules.AndroidLibraryTestableModule
+import com.mercadolibre.android.gradle.base.modules.ApplicationLintOptionsModule
+import com.mercadolibre.android.gradle.base.modules.BaseJacocoModule
+import com.mercadolibre.android.gradle.base.modules.BuildScanModule
+import com.mercadolibre.android.gradle.base.modules.JavaJacocoModule
+import com.mercadolibre.android.gradle.base.modules.JavaPublishableModule
+import com.mercadolibre.android.gradle.base.modules.KeystoreModule
+import com.mercadolibre.android.gradle.base.modules.LintableModule
+import com.mercadolibre.android.gradle.base.modules.ListProjectsModule
+import com.mercadolibre.android.gradle.base.modules.LockableModule
 import com.mercadolibre.android.gradle.base.utils.VersionContainer
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -102,7 +113,7 @@ class BasePlugin implements Plugin<Object> {
         createExtensions()
 
         project.allprojects {
-            // TODO This is for giving retrocompatibility with mobile-cd. Remove it when everyone has updated
+            // TODO This is for giving retro compatibility with mobile-cd. Remove it when everyone has updated
             // https://github.com/mercadolibre/mobile-cd/blob/master/helpers/android_helper.rb#L39
             afterEvaluate {
                 it.ext.versionName = it.version
@@ -123,7 +134,7 @@ class BasePlugin implements Plugin<Object> {
                 ANDROID_APPLICATION_MODULES().each { module -> module.configure(subproject) }
             }
 
-            // Depending on added classpaths, this modules will apply plugins
+            // Depending on added classpath, this modules will apply plugins
             project.afterEvaluate {
                 new LockableModule().configure(subproject)
                 new LintableModule().configure(subproject)

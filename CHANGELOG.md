@@ -1,3 +1,7 @@
+# 12.0.0
+- Se migra a gradle 7.3.3
+- remove smartlook repo
+
 # 11.5.0
 ## Modificado
 - Se habilita por defecto la publicacion de los build en gradle enterprise.

@@ -3,7 +3,11 @@ package com.mercadolibre.android.gradle.base.publish
 import com.mercadolibre.android.gradle.base.utils.PomUtils
 import com.mercadolibre.android.gradle.base.utils.VariantUtils
 import com.mercadolibre.android.gradle.base.utils.VersionContainer
-import org.gradle.api.*
+import org.gradle.api.GradleException
+import org.gradle.api.JavaVersion
+import org.gradle.api.Project
+import org.gradle.api.Task
+import org.gradle.api.XmlProvider
 import org.gradle.api.artifacts.Configuration
 import org.gradle.api.publish.PublicationContainer
 import org.gradle.api.publish.maven.MavenPublication
@@ -79,7 +83,9 @@ abstract class PublishAarTask extends PublishTask {
                     destinationDir = javaDocDestDir
 
                     classpath += project.files(project.android.getBootClasspath().join(File.pathSeparator))
-                    project.configurations.findAll { it.canBeResolved && it.state != Configuration.State.UNRESOLVED }.each {
+                    project.configurations.findAll {
+                        it.canBeResolved && it.state != Configuration.State.UNRESOLVED
+                    }.each {
                         classpath += it
                     }
 
@@ -145,7 +151,7 @@ abstract class PublishAarTask extends PublishTask {
                     PomUtils.composeDynamicDependencies(project, xmlProvider)
 
                     project.file("${project.buildDir}/publications/${taskName}/pom-default.xml")
-                            .write(xmlProvider.asString().toString())
+                        .write(xmlProvider.asString().toString())
                 }
             }
 

@@ -1,6 +1,12 @@
 package com.mercadolibre.android.gradle.base.modules
 
-import com.mercadolibre.android.gradle.base.publish.*
+
+import com.mercadolibre.android.gradle.base.publish.PublishAarExperimentalTask
+import com.mercadolibre.android.gradle.base.publish.PublishAarLocalTask
+import com.mercadolibre.android.gradle.base.publish.PublishAarPrivateReleaseTask
+import com.mercadolibre.android.gradle.base.publish.PublishAarPublicReleaseTask
+import com.mercadolibre.android.gradle.base.publish.PublishAarTask
+import com.mercadolibre.android.gradle.base.publish.PublishTask
 import org.gradle.api.Project
 import org.gradle.api.Task
 import org.gradle.api.tasks.TaskProvider
@@ -34,16 +40,16 @@ class AndroidLibraryPublishableModule extends PublishableModule {
         String variantName = libraryVariant.name
 
         def experimentalTask = createTask(new PublishAarExperimentalTask(), libraryVariant,
-                getTaskName(TASK_TYPE_EXPERIMENTAL, PACKAGING, variantName))
+            getTaskName(TASK_TYPE_EXPERIMENTAL, PACKAGING, variantName))
         // 'Release' Task name maintained for retrocompatibility
         def releaseTask = createTask(new PublishAarPrivateReleaseTask(), libraryVariant,
-                getTaskName(TASK_TYPE_RELEASE, PACKAGING, variantName))
+            getTaskName(TASK_TYPE_RELEASE, PACKAGING, variantName))
         def privateReleaseTask = createTask(new PublishAarPrivateReleaseTask(), libraryVariant,
-                getTaskName(TASK_TYPE_PRIVATE_RELEASE, PACKAGING, variantName))
+            getTaskName(TASK_TYPE_PRIVATE_RELEASE, PACKAGING, variantName))
         def localTask = createTask(new PublishAarLocalTask(), libraryVariant,
-                getTaskName(TASK_TYPE_LOCAL, PACKAGING, variantName))
+            getTaskName(TASK_TYPE_LOCAL, PACKAGING, variantName))
         def publicReleaseTask = createTask(new PublishAarPublicReleaseTask(), libraryVariant,
-                getTaskName(TASK_TYPE_PUBLIC_RELEASE, PACKAGING, variantName))
+            getTaskName(TASK_TYPE_PUBLIC_RELEASE, PACKAGING, variantName))
 
         if (libraryVariant.name.toLowerCase().contains(RELEASE_VARIANT)) {
             // Create tasks without the variant suffix that default to the main sourcesets

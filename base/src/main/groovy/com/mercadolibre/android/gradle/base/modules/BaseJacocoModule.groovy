@@ -20,7 +20,7 @@ abstract class BaseJacocoModule implements Module {
         this.project = project
 
         project.with {
-            apply plugin: JacocoPlugin
+            apply plugin:JacocoPlugin
 
             jacoco {
                 toolVersion = '0.8.2'

@@ -26,7 +26,7 @@ abstract class PublishableModule implements Module {
     @Override
     void configure(Project project) {
         project.with {
-            apply plugin: MavenPublishPlugin
+            apply plugin:MavenPublishPlugin
 
             configurations {
                 archives {
