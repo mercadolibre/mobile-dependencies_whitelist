@@ -1881,6 +1881,11 @@
       "group": "com\\.mercadolibre\\.android\\.px\\.tokenization",
       "name": "enrollment",
       "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.security",
+      "name": "reauth_native_adapter",
+      "version": "mercadopago-2\\.\\+|mercadolibre-2\\.\\+"
     }
   ]
 }
