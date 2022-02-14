@@ -484,9 +484,15 @@
       "version": "4\\.\\+"
     },
     {
+      "expires": "2022-04-30",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.flox\\.components",
       "name": "core",
-      "version": "3\\.\\+|4\\.\\+"
+      "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.flox\\.components",
+      "name": "core",
+      "version": "4\\.\\+|5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.checkout",
