@@ -1,3 +1,6 @@
+# 12.0.1
+- Se genera nuevamente el release por un fallo en ci que no soportaba gradle 7.
+
 # 12.0.0
 - Se migra a gradle 7.3.3
 - remove smartlook repo
