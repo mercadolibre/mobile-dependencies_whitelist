@@ -1351,7 +1351,9 @@
     },
     {
       "name": "Appboy-iOS-SDK/Core",
-      "version": "^~>4.3.[0-3]+$"
+      "version": "^~>4.3.[0-3]+$",
+      "source": "public",
+      "target": "production"
     },
     {
       "name": "ReauthNativeAdapter",
