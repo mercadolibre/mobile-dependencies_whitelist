@@ -59,7 +59,7 @@ class LibraryWhitelistedDependenciesLint implements Lint {
             // Check the default compiling deps
             analyzeDependency(project, "api")
             analyzeDependency(project, "implementation")
-            analyzeDependency(project, "api")
+            analyzeDependency(project, "compile")
 
             if (hasFailed) {
                 report("${ERROR_ALLOWED_DEPENDENCIES_PREFIX} ${project.lintGradle.dependencyWhitelistUrl}\n" +
