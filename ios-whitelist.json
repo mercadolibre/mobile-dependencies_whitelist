@@ -13,6 +13,13 @@
       "version": "^~>\\s?0.[0-9]+"
     },
     {
+      "expires": "2022-03-29",
+      "name": "NewRelicAgent",
+      "source": "public",
+      "target": "production",
+      "version": "^~>\\s?7.3.[0-9]+$"
+    },
+    {
       "name": "Adjust",
       "source": "public",
       "target": "production",
@@ -28,7 +35,13 @@
       "name": "Bugsnag",
       "source": "public",
       "target": "production",
-      "version": "6.9.6"
+      "version": "6.14.3"
+    },
+    {
+      "name": "BugsnagNetworkRequestPlugin",
+      "source": "public",
+      "target": "production",
+      "version": "^~>\\s?6.[0-9]+.?[0-9]*$"
     },
     {
       "name": "CHTCollectionViewWaterfallLayout",
@@ -995,6 +1008,12 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "Scanner",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "Traceability",
       "source": "private",
       "target": "production",
@@ -1088,7 +1107,7 @@
       "name": "PointFlowEngine",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?[1-9].[0-9]+$"
+      "version": "^~>\\s?10|[1-9].[0-9]+$"
     },
     {
       "name": "StartUPInitializer",
@@ -1100,7 +1119,7 @@
       "name": "PointUI",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?[1-9].[0-9]+$"
+      "version": "^~>\\s?10|[1-9].[0-9]+$"
     },
     {
       "name": "GarexGpage",
@@ -1262,13 +1281,13 @@
       "name": "GoogleMLKit/TextRecognition",
       "source": "public",
       "target": "production",
-      "version": "2.2.0"
+      "version": "2.1.0"
     },
     {
       "name": "GoogleMLKit/BarcodeScanning",
       "source": "public",
       "target": "production",
-      "version": "2.2.0"
+      "version": "2.1.0"
     },
     {
       "name": "ZIPFoundation",
@@ -1314,6 +1333,30 @@
     },
     {
       "name": "CreditsFloxClient",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "HomeToolkit",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "Braze-ios",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "Appboy-iOS-SDK/Core",
+      "source": "public",
+      "target": "production",
+      "version": "^~>4.3.[0-3]+$"
+    },
+    {
+      "name": "MercadoCoin",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
