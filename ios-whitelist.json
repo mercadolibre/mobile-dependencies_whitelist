@@ -1351,6 +1351,8 @@
     },
     {
       "name": "Appboy-iOS-SDK/Core",
+      "source": "public",
+      "target": "production",
       "version": "^~>4.3.[0-3]+$"
     },
     {
