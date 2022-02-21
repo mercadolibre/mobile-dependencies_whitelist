@@ -52,27 +52,14 @@ class LibraryWhitelistedDependenciesLint implements Lint {
             // Check dependencies of each variant available first
             variants.each { variant ->
                 String variantName = variant.name
-                project.configurations."${variantName}Api".dependencies.each {
-                    analizeDependency(it)
-                }
-                project.configurations."${variantName}Implementation".dependencies.each {
-                    analizeDependency(it)
-                }
-                project.configurations."${variantName}Compile".dependencies.each {
-                    analizeDependency(it)
-                }
+                analyzeDependency(project, "${variantName}Implementation")
+                analyzeDependency(project, "${variantName}Api")
+                analyzeDependency(project, "${variantName}Compile")
             }
-
             // Check the default compiling deps
-            project.configurations.api.dependencies.each {
-                analizeDependency(it)
-            }
-            project.configurations.implementation.dependencies.each {
-                analizeDependency(it)
-            }
-            project.configurations.compile.dependencies.each {
-                analizeDependency(it)
-            }
+            analyzeDependency(project, "api")
+            analyzeDependency(project, "implementation")
+            analyzeDependency(project, "compile")
 
             if (hasFailed) {
                 report("${ERROR_ALLOWED_DEPENDENCIES_PREFIX} ${project.lintGradle.dependencyWhitelistUrl}\n" +
@@ -85,6 +72,14 @@ class LibraryWhitelistedDependenciesLint implements Lint {
         }
 
         return hasFailed
+    }
+
+    private void analyzeDependency(Project project, String variantName) {
+        if (project.configurations.hasProperty(variantName)) {
+            project.configurations."${variantName}".dependencies.each {
+                analizeDependency(it)
+            }
+        }
     }
 
     private void reportWarnings() {

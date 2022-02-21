@@ -1,3 +1,6 @@
+# 12.1.0
+- Se agregar check para "compile", "implementation" y api en variant para soportar AGP7
+
 # 12.0.1
 - Se genera nuevamente el release por un fallo en ci que no soportaba gradle 7.
 - Update gradle 7.4
