@@ -1352,6 +1352,12 @@
     {
       "name": "Appboy-iOS-SDK/Core",
       "version": "^~>4.3.[0-3]+$"
+    },
+    {
+      "name": "MercadoCoin",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     }
   ]
 }
