@@ -13,7 +13,7 @@
       "version": "^~>\\s?0.[0-9]+"
     },
     {
-      "expires": "2022-01-29",
+      "expires": "2022-03-29",
       "name": "NewRelicAgent",
       "source": "public",
       "target": "production",
@@ -1008,6 +1008,12 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "Scanner",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "Traceability",
       "source": "private",
       "target": "production",
@@ -1101,7 +1107,7 @@
       "name": "PointFlowEngine",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?[1-9].[0-9]+$"
+      "version": "^~>\\s?10|[1-9].[0-9]+$"
     },
     {
       "name": "StartUPInitializer",
@@ -1113,7 +1119,7 @@
       "name": "PointUI",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?[1-9].[0-9]+$"
+      "version": "^~>\\s?10|[1-9].[0-9]+$"
     },
     {
       "name": "GarexGpage",
@@ -1348,6 +1354,12 @@
       "source": "public",
       "target": "production",
       "version": "^~>4.3.[0-3]+$"
+    },
+    {
+      "name": "MercadoCoin",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     }
   ]
 }
