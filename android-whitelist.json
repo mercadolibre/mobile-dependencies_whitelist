@@ -920,6 +920,12 @@
       "version": "6\\.\\+"
     },
     {
+      "expires": "2022-03-30",
+      "group": "com\\.polidea\\.rxandroidble",
+      "name": "rxandroidble",
+      "version": "1\\.5\\.0"
+    },
+    {
       "group": "com\\.polidea\\.rxandroidble2",
       "name": "rxandroidble",
       "version": "1\\.11\\.1"
@@ -1191,6 +1197,12 @@
       "group": "com\\.mercadolibre\\.android\\.mlinappupdates",
       "name": "ml-in-app-updates",
       "version": "2\\.\\+"
+    },
+    {
+      "expires": "2022-03-30",
+      "group": "com\\.mercadolibre\\.android\\.scanner",
+      "name": "scanner",
+      "version": "mercadolibre-1\\.\\+|mercadopago-1\\.\\+"
     },
     {
       "expires": "2022-12-10",
