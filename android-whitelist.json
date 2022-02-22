@@ -920,7 +920,7 @@
       "version": "6\\.\\+"
     },
     {
-      "expires": "2022-02-20",
+      "expires": "2022-03-30",
       "group": "com\\.polidea\\.rxandroidble",
       "name": "rxandroidble",
       "version": "1\\.5\\.0"
@@ -1199,7 +1199,7 @@
       "version": "2\\.\\+"
     },
     {
-      "expires": "2022-02-20",
+      "expires": "2022-03-30",
       "group": "com\\.mercadolibre\\.android\\.scanner",
       "name": "scanner",
       "version": "mercadolibre-1\\.\\+|mercadopago-1\\.\\+"
@@ -1896,6 +1896,11 @@
     {
       "group": "com\\.mercadolibre\\.android\\.px\\.tokenization",
       "name": "enrollment",
+      "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.mobile_cryptography",
+      "name": "core",
       "version": "1\\.+"
     }
   ]
