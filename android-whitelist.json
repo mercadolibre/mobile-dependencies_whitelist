@@ -404,29 +404,59 @@
       "version": "4\\.\\+"
     },
     {
+      "expires": "2022-03-28",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient",
       "version": "15\\.\\+"
     },
     {
+      "expires": "2022-03-28",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-adapter-bus",
       "version": "15\\.\\+"
     },
     {
+      "expires": "2022-03-28",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-adapter-rx2",
       "version": "15\\.\\+"
     },
     {
+      "expires": "2022-03-28",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-converter-json",
       "version": "15\\.\\+"
     },
     {
+      "expires": "2022-03-28",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-extension-header",
       "version": "15\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient",
+      "version": "16\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient-adapter-bus",
+      "version": "16\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient-adapter-rx2",
+      "version": "16\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient-converter-json",
+      "version": "16\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient-extension-header",
+      "version": "16\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -920,7 +950,7 @@
       "version": "6\\.\\+"
     },
     {
-      "expires": "2022-02-20",
+      "expires": "2022-03-30",
       "group": "com\\.polidea\\.rxandroidble",
       "name": "rxandroidble",
       "version": "1\\.5\\.0"
@@ -1199,7 +1229,7 @@
       "version": "2\\.\\+"
     },
     {
-      "expires": "2022-02-20",
+      "expires": "2022-03-30",
       "group": "com\\.mercadolibre\\.android\\.scanner",
       "name": "scanner",
       "version": "mercadolibre-1\\.\\+|mercadopago-1\\.\\+"
@@ -1683,6 +1713,11 @@
       "version": "1\\.+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.point_credits",
+      "name": "credits",
+      "version": "1\\.+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.point_recharge",
       "name": "cellphone",
       "version": "2\\.+"
@@ -1817,19 +1852,37 @@
       "version": "1\\.+"
     },
     {
+      "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "scanner",
       "version": "mercadolibre-3\\.\\+|mercadopago-3\\.\\+"
     },
     {
+      "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "ocr",
       "version": "mercadolibre-3\\.\\+|mercadopago-3\\.\\+"
     },
     {
+      "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "barcode",
       "version": "mercadolibre-3\\.\\+|mercadopago-3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
+      "name": "scanner",
+      "version": "mercadolibre-4\\.\\+|mercadopago-4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
+      "name": "ocr",
+      "version": "mercadolibre-4\\.\\+|mercadopago-4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
+      "name": "barcode",
+      "version": "mercadolibre-4\\.\\+|mercadopago-4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.in_app_report",
@@ -1891,6 +1944,11 @@
     {
       "group": "com\\.mercadolibre\\.android\\.px\\.tokenization",
       "name": "enrollment",
+      "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.mobile_cryptography",
+      "name": "core",
       "version": "1\\.+"
     }
   ]
