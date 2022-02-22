@@ -1892,24 +1892,12 @@
     {
       "group": "io\\.opentelemetry",
       "name": "opentelemetry-api",
-      "version": "1\\.11\\.+"
+      "version": "1\\.+"
     },
     {
       "group": "io\\.opentelemetry",
       "name": "opentelemetry-bom",
-      "version": "1\\.11\\.+"
-    },
-    {
-      "group": "io\\.opentelemetry",
-      "name": "opentelemetry-api",
-      "version": "1\\.7\\.+",
-      "expires": "2022-03-31"
-    },
-    {
-      "group": "io\\.opentelemetry",
-      "name": "opentelemetry-bom",
-      "version": "1\\.7\\.+",
-      "expires": "2022-03-31"
+      "version": "1\\.+"
     },
     {
       "group": "io\\.opentelemetry",
