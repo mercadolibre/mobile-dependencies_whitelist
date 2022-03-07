@@ -1,6 +1,12 @@
 {
   "whitelist": [
     {
+      "name": "BfSplitPayment",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+.?[0-9]*$"
+    },
+    {
       "name": "MLCheckoutSDK",
       "source": "private",
       "target": "production",
