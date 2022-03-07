@@ -193,9 +193,15 @@
       "version": "2\\.4\\.0"
     },
     {
+      "expires": "2022-03-25",
       "group": "com\\.mercadolibre\\.android\\.dynamic_features",
       "name": "core",
       "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.dynamic_features",
+      "name": "core",
+      "version": "4\\.\\+"
     },
     {
       "group": "com\\.google\\.code\\.gson",
