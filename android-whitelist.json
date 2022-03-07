@@ -183,12 +183,6 @@
       "version": "17\\.1\\.0"
     },
     {
-      "expires": "2022-03-01",
-      "group": "com\\.google\\.android\\.play",
-      "name": "core",
-      "version": "1\\.10\\.2"
-    },
-    {
       "group": "com\\.google\\.android\\.play",
       "name": "core",
       "version": "1\\.10\\.3"
@@ -319,18 +313,6 @@
       "version": "3\\.\\+"
     },
     {
-      "expires": "2022-03-01",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "login",
-      "version": "12\\.\\+"
-    },
-    {
-      "expires": "2022-03-01",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "login",
-      "version": "13\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android",
       "name": "login",
       "version": "mercadopago-13\\.\\+|mercadolibre-13\\.\\+"
@@ -344,18 +326,6 @@
       "group": "com\\.mercadolibre\\.android\\.hub",
       "name": "hub",
       "version": "1\\.\\+"
-    },
-    {
-      "expires": "2022-03-01",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "melidata-sdk",
-      "version": "9\\.\\+"
-    },
-    {
-      "expires": "2022-03-01",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "melidata-sdk",
-      "version": "10\\.\\+"
     },
     {
       "expires": "2022-06-30",
@@ -595,8 +565,13 @@
       "version": "18\\.\\+"
     },
     {
+      "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android\\.commons",
       "version": "19\\.\\+|20\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.commons",
+      "version": "21\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.remote\\.configuration",
@@ -742,6 +717,11 @@
       "version": "5\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.recommendations",
+      "version": "12\\.\\+"
+    },
+    {
+      "expires": "2022-03-24",
       "group": "com\\.mercadolibre\\.android\\.recommendations",
       "version": "11\\.\\+"
     },
