@@ -1887,6 +1887,11 @@
       "version": "1\\.\\+"
     },
     {
+      "group": "com\\.android\\.tools",
+      "name": "desugar_jdk_libs",
+      "version": "1\\.+"
+    },
+    {
       "group": "io\\.opentelemetry",
       "name": "opentelemetry-api",
       "version": "1\\.+"
