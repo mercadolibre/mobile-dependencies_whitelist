@@ -188,6 +188,11 @@
       "version": "1\\.10\\.3"
     },
     {
+      "group": "com\\.google\\.android\\.play",
+      "name": "core-ktx",
+      "version": "1\\.8\\.1"
+    },
+    {
       "group": "com\\.google\\.android\\.libraries\\.places",
       "name": "places",
       "version": "2\\.4\\.0"
@@ -1426,17 +1431,22 @@
     },
     {
       "group": "androidx\\.lifecycle",
-      "name": "lifecycle-viewmodel-ktx",
-      "version": "2\\.2\\.0"
-    },
-    {
-      "group": "androidx\\.lifecycle",
       "name": "lifecycle-process",
       "version": "2\\.2\\.0"
     },
     {
       "group": "androidx\\.lifecycle",
       "name": "lifecycle-runtime-ktx",
+      "version": "2\\.2\\.0"
+    },
+    {
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-viewmodel-ktx",
+      "version": "2\\.2\\.0"
+    },
+    {
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-livedata-ktx",
       "version": "2\\.2\\.0"
     },
     {
