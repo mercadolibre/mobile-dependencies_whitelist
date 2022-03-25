@@ -62,6 +62,12 @@
       "version": "3.4.0"
     },
     {
+      "name": "DataPrivacyHelper",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
       "name": "DiscountTouchpoint",
       "source": "private",
       "target": "production",
@@ -1383,7 +1389,7 @@
       "name": "Valkiria",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?4.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+$"
     }
   ]
 }
