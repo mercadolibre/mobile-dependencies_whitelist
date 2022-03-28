@@ -19,7 +19,7 @@
       "version": "^~>\\s?0.[0-9]+"
     },
     {
-      "expires": "2022-03-29",
+      "expires": "2022-06-29",
       "name": "NewRelicAgent",
       "source": "public",
       "target": "production",
@@ -60,6 +60,12 @@
       "source": "public",
       "target": "production",
       "version": "3.4.0"
+    },
+    {
+      "name": "DataPrivacyHelper",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "DiscountTouchpoint",
@@ -1378,6 +1384,12 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "Valkiria",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     }
   ]
 }
