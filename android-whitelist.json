@@ -1768,14 +1768,26 @@
       "version": "5\\.\\+"
     },
     {
+      "expires": "2022-05-30",   
       "group": "com\\.mercadolibre\\.android\\.nfcpayments",
       "name": "core",
       "version": "1\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.nfcpayments",
+      "name": "core",
+      "version": "2\\.+"
+    },
+    {
+      "expires": "2022-05-30",   
+      "group": "com\\.mercadolibre\\.android\\.nfcpayments",
       "name": "flows",
       "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.nfcpayments",
+      "name": "flows",
+      "version": "2\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.nfcpayments",
