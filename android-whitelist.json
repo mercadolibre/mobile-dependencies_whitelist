@@ -1,13 +1,13 @@
 {
   "whitelist": [
     {
-      "expires": "2022-03-31",
+      "expires": "2022-04-30",
       "group": "io\\.reactivex",
       "name": "rxjava",
       "version": "1\\.3\\.6"
     },
     {
-      "expires": "2022-03-31",
+      "expires": "2022-04-30",
       "group": "io\\.reactivex",
       "name": "rxandroid",
       "version": "1\\.2\\.1"
@@ -831,14 +831,26 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2022-04-13",
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "input",
-      "version": "11\\.\\+|12\\.\\+"
+      "version": "12\\.\\+"
+    },
+    {
+      "expires": "2022-04-13",
+      "group": "com\\.mercadolibre\\.android\\.search",
+      "name": "search",
+      "version": "12\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.search",
+      "name": "input",
+      "version": "13\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "search",
-      "version": "11\\.\\+|12\\.\\+"
+      "version": "13\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.security",
@@ -1020,7 +1032,7 @@
       "version": "6\\.\\+"
     },
     {
-      "expires": "2022-03-30",
+      "expires": "2022-04-30",
       "group": "com\\.polidea\\.rxandroidble",
       "name": "rxandroidble",
       "version": "1\\.5\\.0"
@@ -1316,7 +1328,7 @@
       "version": "2\\.\\+"
     },
     {
-      "expires": "2022-03-30",
+      "expires": "2022-04-30",
       "group": "com\\.mercadolibre\\.android\\.scanner",
       "name": "scanner",
       "version": "mercadolibre-1\\.\\+|mercadopago-1\\.\\+"
