@@ -126,6 +126,12 @@
       "version": "3\\.3\\.1"
     },
     {
+      "expires": "2022-05-15",
+      "group": "com\\.bugsnag",
+      "name": "bugsnag-android",
+      "version": "5\\.11\\.0"
+    },
+    {
       "group": "com\\.bugsnag",
       "name": "bugsnag-android",
       "version": "5\\.15\\.0"
@@ -1758,6 +1764,12 @@
       "group": "com\\.squareup\\.leakcanary",
       "name": "leakcanary-android",
       "version": "1\\.6\\.3|2\\.2"
+    },
+    {
+      "expires": "2022-05-15",
+      "group": "com\\.bugsnag",
+      "name": "bugsnag-android-core",
+      "version": "5\\.11\\.0"
     },
     {
       "group": "com\\.bugsnag",
