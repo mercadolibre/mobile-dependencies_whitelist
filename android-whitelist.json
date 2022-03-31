@@ -1956,14 +1956,26 @@
       "version": "1\\.+"
     },
     {
+      "expires": "2022-05-30",
       "group": "com\\.mercadolibre\\.android\\.cardsbanking",
       "name": "cards-home-section",
       "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cardsbanking",
+      "name": "cards-home-section",
+      "version": "3\\.\\+"
+    },
+    {
+      "expires": "2022-05-30",
+      "group": "com\\.mercadolibre\\.android\\.cardsbanking",
       "name": "card-widget",
       "version": "2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cardsbanking",
+      "name": "card-widget",
+      "version": "3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point_smart_pos_sdk",
