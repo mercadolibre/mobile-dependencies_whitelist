@@ -128,7 +128,12 @@
     {
       "group": "com\\.bugsnag",
       "name": "bugsnag-android",
-      "version": "5\\.11\\.0"
+      "version": "5\\.15\\.0"
+    },
+    {
+      "group": "com\\.bugsnag",
+      "name": "bugsnag-plugin-android-okhttp",
+      "version": "5\\.13\\.0"
     },
     {
       "group": "com\\.f2prateek\\.rx\\.preferences",
@@ -1757,7 +1762,7 @@
     {
       "group": "com\\.bugsnag",
       "name": "bugsnag-android-core",
-      "version": "5\\.11\\.0"
+      "version": "5\\.15\\.0"
     },
     {
       "group": "com\\.mercadolibre\\.android",
