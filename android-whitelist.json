@@ -1318,21 +1318,26 @@
       "version": "5\\.\\+"
     },
     {
+      "expire": "2022-07-01",
       "group": "com\\.mercadolibre\\.android\\.inappupdates",
       "name": "in-app-updates",
-      "expire": "2022-07-01",
       "version": "2\\.\\+"
+    },
+    {
+      "expire": "2022-07-01",
+      "group": "com\\.mercadolibre\\.android\\.inappupdates",
+      "name": "in-app-updates",
+      "version": "3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.inappupdates",
       "name": "in-app-updates",
-      "expire": "2022-07-01",
-      "version": "3\\.\\+"
+      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.mlinappupdates",
       "name": "ml-in-app-updates",
-      "version": "4\\.\\+"
+      "version": "2\\.\\+"
     },
     {
       "expires": "2022-04-30",
