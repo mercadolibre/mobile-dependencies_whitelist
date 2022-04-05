@@ -1396,6 +1396,12 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+"
-    }
+    },
+    {
+      "name": "Regulations",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+"
+    },
   ]
 }
