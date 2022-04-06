@@ -1,6 +1,12 @@
 {
     "context": [
         {
+            "name": "checkout_on_splitPayment",
+            "iOS": {
+                "key": "BfSplitPayment"
+            }
+        },
+        {
             "name": "checkout_on_sdk",
             "iOS": {
                 "key": "MLCheckoutSDK"

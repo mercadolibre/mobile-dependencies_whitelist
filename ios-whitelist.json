@@ -1,6 +1,12 @@
 {
   "whitelist": [
     {
+      "name": "BfSplitPayment",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+.?[0-9]*$"
+    },
+    {
       "name": "MLCheckoutSDK",
       "source": "private",
       "target": "production",
@@ -13,7 +19,7 @@
       "version": "^~>\\s?0.[0-9]+"
     },
     {
-      "expires": "2022-01-29",
+      "expires": "2022-06-29",
       "name": "NewRelicAgent",
       "source": "public",
       "target": "production",
@@ -54,6 +60,12 @@
       "source": "public",
       "target": "production",
       "version": "3.4.0"
+    },
+    {
+      "name": "DataPrivacyHelper",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "DiscountTouchpoint",
@@ -1022,6 +1034,12 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "Scanner",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "Traceability",
       "source": "private",
       "target": "production",
@@ -1347,6 +1365,48 @@
     },
     {
       "name": "HomeToolkit",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "Braze-ios",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "Appboy-iOS-SDK/Core",
+      "source": "public",
+      "target": "production",
+      "version": "^~>4.3.[0-3]+$"
+    },
+    {
+      "name": "MercadoCoin",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "ReauthNativeAdapter",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MobileCryptography",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "Valkiria",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "Regulations",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+"
