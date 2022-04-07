@@ -644,7 +644,7 @@
     {
       "name": "MLRecommendationsCombo",
       "source": "private",
-      "target": "production",
+      "target": "test",
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
