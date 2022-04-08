@@ -390,12 +390,12 @@
       "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "melidata-sdk",
-      "version": "11\\.\\+"
+      "version": "11\\.\\+|12\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "melidata-sdk",
-      "version": "12\\.\\+"
+      "version": "13\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -969,19 +969,37 @@
       "version": "7\\.\\+"
     },
     {
+      "expires": "2022-04-28",
       "group": "com\\.mercadopago\\.android\\.congrats",
       "name": "congrats",
-      "version": "3\\.\\+|4\\.\\+"
+      "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadopago\\.android\\.congrats",
+      "name": "congrats",
+      "version": "5\\.\\+"
+    },
+    {
+      "expires": "2022-04-28",
+      "group": "com\\.mercadolibre\\.android\\.static_resources",
+      "name": "static_resources",
+      "version": "3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.static_resources",
       "name": "static_resources",
-      "version": "2\\.\\+|3\\.\\+"
+      "version": "4\\.\\+"
+    },
+    {
+      "expires": "2022-04-28",
+      "group": "com\\.mercadopago\\.android\\.digital_accounts_components",
+      "name": "digital_accounts_components",
+      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.digital_accounts_components",
       "name": "digital_accounts_components",
-      "version": "1\\.\\+|2\\.\\+"
+      "version": "3\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.ml_esc_manager",
@@ -1330,9 +1348,15 @@
       "version": "5\\.\\+"
     },
     {
+      "expires": "2022-07-01",
       "group": "com\\.mercadolibre\\.android\\.inappupdates",
       "name": "in-app-updates",
-      "version": "2\\.\\+"
+      "version": "2\\.\\+|3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.inappupdates",
+      "name": "in-app-updates",
+      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.mlinappupdates",
@@ -1968,14 +1992,26 @@
       "version": "1\\.+"
     },
     {
+      "expires": "2022-05-30",
       "group": "com\\.mercadolibre\\.android\\.cardsbanking",
       "name": "cards-home-section",
       "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cardsbanking",
+      "name": "cards-home-section",
+      "version": "3\\.\\+"
+    },
+    {
+      "expires": "2022-05-30",
+      "group": "com\\.mercadolibre\\.android\\.cardsbanking",
       "name": "card-widget",
       "version": "2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cardsbanking",
+      "name": "card-widget",
+      "version": "3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point_smart_pos_sdk",
@@ -2108,9 +2144,15 @@
       "version": "1\\.+"
     },
     {
+      "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android\\.valkiria",
       "name": "valkiria",
       "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.valkiria",
+      "name": "valkiria",
+      "version": "2\\.+"
     },
     {
       "expires": "2022-06-30",
