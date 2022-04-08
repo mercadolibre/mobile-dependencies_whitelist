@@ -1392,6 +1392,24 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "ADAssertLayout",
+      "source": "public",
+      "target": "test",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "ADLayoutTest",
+      "source": "public",
+      "target": "test",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "SwiftCheck",
+      "source": "public",
+      "target": "test",
+      "version": "^~>\\s?0.1[0-9]+$"
+    },
+    {
       "name": "Regulations",
       "source": "private",
       "target": "production",
