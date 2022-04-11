@@ -1,8 +1,6 @@
 require 'json'
 require './utils.rb'
 
-# read the file path from the ENV configs
-# puts "File: #{ ENV["FILE"] ? ENV["FILE"] : "Environment var 'FILE' not defined" }"
 PROPERTIES_FILE = "./gradle.properties"
 ALLOWLIST_JSON_FILE = '../android-whitelist.json'
 GROUP_PROPERTY = "libraryGroupId"
