@@ -1713,9 +1713,15 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android\\.fees_installments",
       "name": "mlfees",
       "version": "3\\.\\+|4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.fees_installments",
+      "name": "mlfees",
+      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.fees_installments",
