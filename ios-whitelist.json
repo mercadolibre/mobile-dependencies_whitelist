@@ -642,6 +642,12 @@
       "version": "^~>\\s?1.[0-9]+"
     },
     {
+      "name": "MLRecommendationsCombo",
+      "source": "private",
+      "target": "test",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
       "name": "MLRecommendationCombo",
       "source": "private",
       "target": "production",
