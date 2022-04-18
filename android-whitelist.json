@@ -419,25 +419,43 @@
       "version": "mercadolibre-16\\.\\+"
     },
     {
+      "expires": "2022-06-30",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "notifications",
+      "version": "mercadolibre-17\\.\\+"
+    },
+    {
       "expires": "2022-04-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "notifications",
       "version": "mercadopago-16\\.\\+"
     },
     {
-      "group": "com\\.mercadolibre\\.android",
-      "name": "notifications",
-      "version": "mercadolibre-17\\.\\+"
-    },
-    {
+      "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "notifications",
       "version": "mercadopago-17\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
+      "name": "notifications",
+      "version": "mercadolibre-18\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "notifications",
+      "version": "mercadopago-18\\.\\+"
+    },
+    {
+      "expires": "2022-06-30",
+      "group": "com\\.mercadolibre\\.android",
       "name": "notifications_commons",
       "version": "17\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "notifications_commons",
+      "version": "18\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -831,13 +849,13 @@
       "version": "1\\.\\+"
     },
     {
-      "expires": "2022-04-13",
+      "expires": "2022-05-05",
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "input",
       "version": "12\\.\\+"
     },
     {
-      "expires": "2022-04-13",
+      "expires": "2022-05-05",
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "search",
       "version": "12\\.\\+"
@@ -858,8 +876,13 @@
       "version": "4\\.\\+"
     },
     {
+      "expires": "2022-05-31",
       "group": "com\\.mercadolibre\\.android\\.uicomponents",
       "version": "12\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.uicomponents",
+      "version": "13\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.navigation_manager",
@@ -875,9 +898,15 @@
       "version": "5\\.\\+"
     },
     {
+      "expires": "2022-05-31",
       "group": "com\\.mercadolibre\\.android\\.variations",
       "name": "variations",
       "version": "5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.variations",
+      "name": "variations",
+      "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.vpp",
@@ -966,12 +995,12 @@
       "expires": "2022-04-28",
       "group": "com\\.mercadopago\\.android\\.congrats",
       "name": "congrats",
-      "version": "4\\.\\+"
+      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.congrats",
       "name": "congrats",
-      "version": "5\\.\\+"
+      "version": "6\\.\\+"
     },
     {
       "expires": "2022-04-28",
@@ -1383,24 +1412,6 @@
       "group": "com\\.mercadolibre\\.android",
       "name": "cardform",
       "version": "2\\.+"
-    },
-    {
-      "expires": "2022-05-21",
-      "group": "com\\.mercadolibre\\.android\\.insu_flox_components",
-      "name": "floxcomponents",
-      "version": "mercadolibre-3\\.\\+|mercadopago-3\\.\\+"
-    },
-    {
-      "expires": "2022-05-21",
-      "group": "com\\.mercadolibre\\.android\\.insu_qpage_on",
-      "name": "qpage_on",
-      "version": "4\\.+"
-    },
-    {
-      "expires": "2022-05-21",
-      "group": "com\\.mercadolibre\\.android\\.insu_proxy",
-      "name": "insu_proxy",
-      "version": "proxy-3\\.\\+|noproxy-3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.insu_flox_components",
@@ -2138,9 +2149,15 @@
       "version": "1\\.+"
     },
     {
+      "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android\\.valkiria",
       "name": "valkiria",
       "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.valkiria",
+      "name": "valkiria",
+      "version": "2\\.+"
     },
     {
       "expires": "2022-06-30",
