@@ -678,16 +678,30 @@
       "version": "^~>\\s?1.[0-9]+"
     },
     {
+      "expires": "2022-06-29",
       "name": "MLRemedies",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?3.[0-9]+"
     },
     {
+      "name": "MLRemedies",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?4.[0-9]+"
+    },
+    {
+      "expires": "2022-06-29",
       "name": "IvCommons",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "IvCommons",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "MLRuleEngine",
