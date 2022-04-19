@@ -1148,6 +1148,8 @@
       "version": "0\\.4\\.13"
     },
     {
+      "description": "Esta libs se encuentra deprecada, debemos utilizar data-dispatcher",
+      "expires": "2023-04-19",
       "group": "de\\.greenrobot",
       "name": "eventbus",
       "version": "2\\.4\\.0"
@@ -1281,9 +1283,15 @@
       "version": "mercadopago-2\\.\\+|mercadolibre-2\\.\\+"
     },
     {
+      "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android\\.reauth_native_adapter",
       "name": "reauth_adapter",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.reauth_native_adapter",
+      "name": "reauth_adapter",
+      "version": "2\\.\\+"
     },
     {
       "expires": "2022-06-30",
