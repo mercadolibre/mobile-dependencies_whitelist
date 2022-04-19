@@ -1422,14 +1422,26 @@
       "version": "2\\.+"
     },
     {
+      "expires":"2022-05-24",
       "group": "com\\.mercadolibre\\.android\\.insu_flox_components",
       "name": "floxcomponents",
       "version": "mercadolibre-4\\.\\+|mercadopago-4\\.\\+"
     },
     {
+      "expires":"2022-05-24",
       "group": "com\\.mercadolibre\\.android\\.insu_qpage_on",
       "name": "qpage_on",
       "version": "5\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.insu_flox_components",
+      "name": "floxcomponents",
+      "version": "mercadolibre-5\\.\\+|mercadopago-5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.insu_qpage_on",
+      "name": "qpage_on",
+      "version": "6\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.insu_proxy",
