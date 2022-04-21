@@ -1031,6 +1031,13 @@
       "name": "MeliCards",
       "source": "private",
       "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "expires": "2022-06-29",
+      "name": "MeliCards",
+      "source": "private",
+      "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
@@ -1112,10 +1119,17 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "expires": "2022-06-29",
       "name": "CardsEngagement/Feedback",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "CardsEngagement/Feedback",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "CardsComponents",
