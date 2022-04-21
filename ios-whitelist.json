@@ -1031,7 +1031,7 @@
       "name": "MeliCards",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "MLScanner",
@@ -1115,7 +1115,7 @@
       "name": "CardsEngagement/Feedback",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?1|2.[0-9]+$"
     },
     {
       "name": "CardsComponents",
