@@ -1174,10 +1174,17 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "expires": "2022-05-06",
       "name": "CardsAcquisition",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "CardsAcquisition",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "MLConfigurationProvider",
