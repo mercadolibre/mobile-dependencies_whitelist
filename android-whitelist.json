@@ -369,6 +369,12 @@
       "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "login",
+      "version": "12\\.\\+"
+    },
+    {
+      "expires": "2022-06-30",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "login",
       "version": "mercadopago-13\\.\\+|mercadolibre-13\\.\\+"
     },
     {
@@ -1284,9 +1290,15 @@
       "version": "mercadopago-4\\.\\+|mercadolibre-4\\.\\+"
     },
     {
+      "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android\\.security",
       "name": "native_reauth",
       "version": "mercadopago-2\\.\\+|mercadolibre-2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.security",
+      "name": "native_reauth",
+      "version": "mercadopago-3\\.\\+|mercadolibre-3\\.\\+"
     },
     {
       "expires": "2022-06-30",

@@ -1074,7 +1074,7 @@
       "name": "AndesUI",
       "source": "public",
       "target": "production",
-      "version": "^~>\\s3|4.[0-9].[0-9]+$"
+      "version": "^~>\\s?3.[0-9]+"
     },
     {
       "name": "MLLoyalDM",
@@ -1345,7 +1345,7 @@
       "name": "Cashout",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "MLAdjust",
@@ -1369,7 +1369,7 @@
       "name": "DaManagement",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "InAppReport",
