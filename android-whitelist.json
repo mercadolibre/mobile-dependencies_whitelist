@@ -2257,6 +2257,21 @@
       "group": "com\\.mercadolibre\\.android\\.data_privacy_helper",
       "name": "libdataprivacy",
       "version": "2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadopago\\.android\\.cashin",
+      "name": "seller",
+      "version": "5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadopago\\.android\\.cashin",
+      "name": "payer",
+      "version": "5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadopago\\.android\\.cashin",
+      "name": "commons",
+      "version": "5\\.\\+"
     }
   ]
 }
