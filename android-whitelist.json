@@ -1063,6 +1063,12 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2022-07-30",
+      "group": "com\\.mercadolibre\\.android\\.pos_readers",
+      "name": "posreaders",
+      "version": "4\\.+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.pos_readers",
       "name": "posreaders",
       "version": "5\\.+"
@@ -1070,6 +1076,24 @@
     {
       "group": "com\\.mercadopago\\.android\\.point_ui",
       "name": "components",
+      "version": "1\\.+"
+    },
+    {
+      "expires": "2022-07-30",
+      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
+      "name": "paymentflowfcu",
+      "version": "1\\.+"
+    },
+    {
+      "expires": "2022-07-30",
+      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
+      "name": "mpos",
+      "version": "1\\.+"
+    },
+    {
+      "expires": "2022-07-30",
+      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
+      "name": "entities_fcu",
       "version": "1\\.+"
     },
     {
@@ -1088,6 +1112,12 @@
       "version": "2\\.+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.payment_flow",
+      "name": "paymentflow",
+      "version": "6\\.\\+"
+    },
+    {
+      "expires": "2022-07-30",
       "group": "com\\.mercadolibre\\.android\\.payment_flow",
       "name": "paymentflow",
       "version": "7\\.\\+"
