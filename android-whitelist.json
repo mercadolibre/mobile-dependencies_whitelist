@@ -908,8 +908,17 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android\\.mlwebkit",
-      "version": "1\\.\\+|2\\.\\+"
+      "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.mlwebkit",
+      "version": "2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.mlwebkit",
+      "version": "3.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.uinavigationcp",
