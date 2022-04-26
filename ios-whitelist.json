@@ -65,7 +65,7 @@
       "name": "DataPrivacyHelper",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "DiscountTouchpoint",
@@ -441,7 +441,7 @@
       "name": "MLFeesAndInstallments",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s2.[0-9]+$"
+      "version": "^~>\\s2|3.[0-9]+$"
     },
     {
       "name": "MLClassifiedsDynamicFlow",
@@ -642,6 +642,12 @@
       "version": "^~>\\s?1.[0-9]+"
     },
     {
+      "name": "MLRecommendationsCombo",
+      "source": "private",
+      "target": "test",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
       "name": "MLRecommendationCombo",
       "source": "private",
       "target": "production",
@@ -672,16 +678,30 @@
       "version": "^~>\\s?1.[0-9]+"
     },
     {
+      "expires": "2022-06-29",
       "name": "MLRemedies",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?3.[0-9]+"
     },
     {
+      "name": "MLRemedies",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?4.[0-9]+"
+    },
+    {
+      "expires": "2022-06-29",
       "name": "IvCommons",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "IvCommons",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "MLRuleEngine",
@@ -1011,6 +1031,13 @@
       "name": "MeliCards",
       "source": "private",
       "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "expires": "2022-06-29",
+      "name": "MeliCards",
+      "source": "private",
+      "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
@@ -1092,10 +1119,17 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "expires": "2022-06-29",
       "name": "CardsEngagement/Feedback",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "CardsEngagement/Feedback",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "CardsComponents",
@@ -1140,10 +1174,17 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "expires": "2022-05-06",
       "name": "CardsAcquisition",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "CardsAcquisition",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "MLConfigurationProvider",
@@ -1311,7 +1352,7 @@
       "name": "Cashout",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "MLAdjust",
@@ -1335,7 +1376,7 @@
       "name": "DaManagement",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "InAppReport",
@@ -1390,6 +1431,30 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "ADAssertLayout",
+      "source": "public",
+      "target": "test",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "ADLayoutTest",
+      "source": "public",
+      "target": "test",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "SwiftCheck",
+      "source": "public",
+      "target": "test",
+      "version": "^~>\\s?0.1[0-9]+$"
+    },
+    {
+      "name": "Regulations",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+"
     }
   ]
 }
