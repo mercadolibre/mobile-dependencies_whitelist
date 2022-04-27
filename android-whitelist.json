@@ -126,9 +126,20 @@
       "version": "3\\.3\\.1"
     },
     {
+      "expires": "2022-05-15",
       "group": "com\\.bugsnag",
       "name": "bugsnag-android",
       "version": "5\\.11\\.0"
+    },
+    {
+      "group": "com\\.bugsnag",
+      "name": "bugsnag-android",
+      "version": "5\\.15\\.0"
+    },
+    {
+      "group": "com\\.bugsnag",
+      "name": "bugsnag-plugin-android-okhttp",
+      "version": "5\\.13\\.0"
     },
     {
       "group": "com\\.f2prateek\\.rx\\.preferences",
@@ -897,8 +908,17 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android\\.mlwebkit",
-      "version": "1\\.\\+|2\\.\\+"
+      "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.mlwebkit",
+      "version": "2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.mlwebkit",
+      "version": "3.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.uinavigationcp",
@@ -1063,9 +1083,15 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2022-04-30",
       "group": "com\\.mercadolibre\\.android\\.pos_readers",
       "name": "posreaders",
       "version": "4\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.pos_readers",
+      "name": "posreaders",
+      "version": "5\\.+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.point_ui",
@@ -1073,24 +1099,48 @@
       "version": "1\\.+"
     },
     {
+      "expires": "2022-04-30",
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
       "name": "paymentflowfcu",
       "version": "1\\.+"
     },
     {
+      "expires": "2022-04-30",
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
       "name": "mpos",
       "version": "1\\.+"
     },
     {
+      "expires": "2022-04-30",
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
       "name": "entities_fcu",
       "version": "1\\.+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
+      "name": "paymentflowfcu",
+      "version": "2\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
+      "name": "mpos",
+      "version": "2\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
+      "name": "entities_fcu",
+      "version": "2\\.+"
+    },
+    {
+      "expires": "2022-04-30",
       "group": "com\\.mercadolibre\\.android\\.payment_flow",
       "name": "paymentflow",
       "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.payment_flow",
+      "name": "paymentflow",
+      "version": "7\\.\\+"
     },
     {
       "expires": "2022-04-30",
@@ -1884,9 +1934,15 @@
       "version": "1\\.6\\.3|2\\.2"
     },
     {
+      "expires": "2022-05-15",
       "group": "com\\.bugsnag",
       "name": "bugsnag-android-core",
       "version": "5\\.11\\.0"
+    },
+    {
+      "group": "com\\.bugsnag",
+      "name": "bugsnag-android-core",
+      "version": "5\\.15\\.0"
     },
     {
       "group": "com\\.mercadolibre\\.android",
