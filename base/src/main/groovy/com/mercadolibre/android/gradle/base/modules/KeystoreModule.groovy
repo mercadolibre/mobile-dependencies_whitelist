@@ -40,7 +40,7 @@ class KeystoreModule implements Module {
                 directory.mkdirs()
 
                 // Write the keystore file into the build directory
-                final InputStream inputStream = KeystoreModule.class.getResourceAsStream("${File.separator}${DIRECTORY_NAME}${File.separator}${FILE_NAME}")
+                final InputStream inputStream = KeystoreModule.class.getResourceAsStream("/${DIRECTORY_NAME}/${FILE_NAME}")
                 keystore.withOutputStream { outputStream ->
                     int read = 0
                     byte[] bytes = new byte[BUFFER_LENGTH]
