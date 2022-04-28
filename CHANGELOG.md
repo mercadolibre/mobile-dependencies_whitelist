@@ -1,3 +1,6 @@
+# 12.2.0
+- Se corrige el path del resource del keystore para no romper en Windows.
+
 # 12.1.0
 - Se agregar check para "compile", "implementation" y api en variant para soportar AGP7
 
