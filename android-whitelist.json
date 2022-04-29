@@ -1004,15 +1004,9 @@
       "version": "1\\.\\+"
     },
     {
-      "expires": "2022-04-20",
       "group": "com\\.mercadolibre\\.android\\.cardscomponents",
       "name": "cards-components",
-      "version": "5\\.\\+"
-    },
-    {
-      "group": "com\\.mercadolibre\\.android\\.cardscomponents",
-      "name": "cards-components",
-      "version": "6\\.\\+"
+      "version": "7\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.commons",
@@ -2313,6 +2307,21 @@
       "group": "com\\.mercadolibre\\.android\\.data_privacy_helper",
       "name": "libdataprivacy",
       "version": "2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadopago\\.android\\.cashin",
+      "name": "seller",
+      "version": "5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadopago\\.android\\.cashin",
+      "name": "payer",
+      "version": "5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadopago\\.android\\.cashin",
+      "name": "commons",
+      "version": "5\\.\\+"
     }
   ]
 }
