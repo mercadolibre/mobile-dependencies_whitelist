@@ -272,10 +272,17 @@
       "version": "^~>\\s?1.[0-9]+"
     },
     {
+      "expires": "2022-05-12",
       "name": "InsurtechFloxComponents",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "InsurtechFloxComponents",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "InsuProxy",
