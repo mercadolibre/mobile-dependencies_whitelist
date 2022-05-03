@@ -248,6 +248,12 @@
       "version": "0.8"
     },
     {
+      "name": "InAppUpdates",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
       "name": "InStore-Discovery",
       "source": "private",
       "target": "production",
