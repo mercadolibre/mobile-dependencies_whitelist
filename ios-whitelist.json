@@ -1,6 +1,12 @@
 {
   "whitelist": [
     {
+      "name": "BfSplitPayment",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+.?[0-9]*$"
+    },
+    {
       "name": "MLCheckoutSDK",
       "source": "private",
       "target": "production",
@@ -11,6 +17,13 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+"
+    },
+    {
+      "expires": "2022-06-29",
+      "name": "NewRelicAgent",
+      "source": "public",
+      "target": "production",
+      "version": "^~>\\s?7.3.[0-9]+$"
     },
     {
       "name": "Adjust",
@@ -28,7 +41,13 @@
       "name": "Bugsnag",
       "source": "public",
       "target": "production",
-      "version": "6.9.6"
+      "version": "6.14.3"
+    },
+    {
+      "name": "BugsnagNetworkRequestPlugin",
+      "source": "public",
+      "target": "production",
+      "version": "^~>\\s?6.[0-9]+.?[0-9]*$"
     },
     {
       "name": "CHTCollectionViewWaterfallLayout",
@@ -41,6 +60,12 @@
       "source": "public",
       "target": "production",
       "version": "3.4.0"
+    },
+    {
+      "name": "DataPrivacyHelper",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "DiscountTouchpoint",
@@ -423,7 +448,7 @@
       "name": "MLFeesAndInstallments",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s2.[0-9]+$"
+      "version": "^~>\\s2|3.[0-9]+$"
     },
     {
       "name": "MLClassifiedsDynamicFlow",
@@ -624,6 +649,12 @@
       "version": "^~>\\s?1.[0-9]+"
     },
     {
+      "name": "MLRecommendationsCombo",
+      "source": "private",
+      "target": "test",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
       "name": "MLRecommendationCombo",
       "source": "private",
       "target": "production",
@@ -654,16 +685,30 @@
       "version": "^~>\\s?1.[0-9]+"
     },
     {
+      "expires": "2022-06-29",
       "name": "MLRemedies",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?3.[0-9]+"
     },
     {
+      "name": "MLRemedies",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?4.[0-9]+"
+    },
+    {
+      "expires": "2022-06-29",
       "name": "IvCommons",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "IvCommons",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "MLRuleEngine",
@@ -993,10 +1038,23 @@
       "name": "MeliCards",
       "source": "private",
       "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "expires": "2022-06-29",
+      "name": "MeliCards",
+      "source": "private",
+      "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLScanner",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "Scanner",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
@@ -1068,10 +1126,17 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "expires": "2022-06-29",
       "name": "CardsEngagement/Feedback",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "CardsEngagement/Feedback",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "CardsComponents",
@@ -1095,7 +1160,7 @@
       "name": "PointFlowEngine",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?[1-9].[0-9]+$"
+      "version": "^~>\\s?10|[1-9].[0-9]+$"
     },
     {
       "name": "StartUPInitializer",
@@ -1107,7 +1172,7 @@
       "name": "PointUI",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?[1-9].[0-9]+$"
+      "version": "^~>\\s?10|[1-9].[0-9]+$"
     },
     {
       "name": "GarexGpage",
@@ -1116,10 +1181,17 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "expires": "2022-05-06",
       "name": "CardsAcquisition",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "CardsAcquisition",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "MLConfigurationProvider",
@@ -1269,13 +1341,13 @@
       "name": "GoogleMLKit/TextRecognition",
       "source": "public",
       "target": "production",
-      "version": "2.2.0"
+      "version": "2.1.0"
     },
     {
       "name": "GoogleMLKit/BarcodeScanning",
       "source": "public",
       "target": "production",
-      "version": "2.2.0"
+      "version": "2.1.0"
     },
     {
       "name": "ZIPFoundation",
@@ -1287,7 +1359,7 @@
       "name": "Cashout",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "MLAdjust",
@@ -1311,7 +1383,7 @@
       "name": "DaManagement",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "InAppReport",
@@ -1324,6 +1396,72 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "HomeToolkit",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "Braze-ios",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "Appboy-iOS-SDK/Core",
+      "source": "public",
+      "target": "production",
+      "version": "^~>4.3.[0-3]+$"
+    },
+    {
+      "name": "MercadoCoin",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "ReauthNativeAdapter",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MobileCryptography",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "Valkiria",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "ADAssertLayout",
+      "source": "public",
+      "target": "test",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "ADLayoutTest",
+      "source": "public",
+      "target": "test",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "SwiftCheck",
+      "source": "public",
+      "target": "test",
+      "version": "^~>\\s?0.1[0-9]+$"
+    },
+    {
+      "name": "Regulations",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+"
     }
   ]
 }
