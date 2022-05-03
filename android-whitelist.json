@@ -1087,7 +1087,7 @@
       "version": "1\\.\\+"
     },
     {
-      "expires": "2022-04-30",
+      "expires": "2022-05-30",
       "group": "com\\.mercadolibre\\.android\\.pos_readers",
       "name": "posreaders",
       "version": "4\\.+"
@@ -1103,19 +1103,19 @@
       "version": "1\\.+"
     },
     {
-      "expires": "2022-04-30",
+      "expires": "2022-05-30",
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
       "name": "paymentflowfcu",
       "version": "1\\.+"
     },
     {
-      "expires": "2022-04-30",
+      "expires": "2022-05-30",
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
       "name": "mpos",
       "version": "1\\.+"
     },
     {
-      "expires": "2022-04-30",
+      "expires": "2022-05-30",
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
       "name": "entities_fcu",
       "version": "1\\.+"
@@ -1136,7 +1136,7 @@
       "version": "2\\.+"
     },
     {
-      "expires": "2022-04-30",
+      "expires": "2022-05-30",
       "group": "com\\.mercadolibre\\.android\\.payment_flow",
       "name": "paymentflow",
       "version": "6\\.\\+"
@@ -1514,9 +1514,15 @@
       "version": "mercadolibre-4\\.\\+|mercadopago-4\\.\\+"
     },
     {
+      "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android\\.insu_flox_components",
       "name": "floxcomponents",
       "version": "mercadolibre-5\\.\\+|mercadopago-5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.insu_flox_components",
+      "name": "floxcomponents",
+      "version": "mercadolibre-6\\.\\+|mercadopago-6\\.\\+"
     },
     {
       "expires": "2022-06-30",
@@ -1525,11 +1531,18 @@
       "version": "5\\.+"
     },
     {
+      "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android\\.insu_qpage_on",
       "name": "qpage_on",
       "version": "6\\.+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.insu_qpage_on",
+      "name": "qpage_on",
+      "version": "7\\.+"
+    },
+    {
+      "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android\\.insu_proxy",
       "name": "insu_proxy",
       "version": "proxy-4\\.\\+|noproxy-4\\.\\+"
