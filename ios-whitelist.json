@@ -285,12 +285,6 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
-      "name": "InsuProxy",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
       "name": "InStoreUIComponents",
       "source": "private",
       "target": "production",
