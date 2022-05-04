@@ -832,6 +832,11 @@
     },
     {
       "group": "com\\.mercadolibre\\.android\\.recommendations",
+      "version": "13\\.\\+"
+    },
+    {
+      "expires": "2022-06-27",
+      "group": "com\\.mercadolibre\\.android\\.recommendations",
       "version": "12\\.\\+"
     },
     {
@@ -1082,7 +1087,7 @@
       "version": "1\\.\\+"
     },
     {
-      "expires": "2022-04-30",
+      "expires": "2022-05-30",
       "group": "com\\.mercadolibre\\.android\\.pos_readers",
       "name": "posreaders",
       "version": "4\\.+"
@@ -1098,19 +1103,19 @@
       "version": "1\\.+"
     },
     {
-      "expires": "2022-04-30",
+      "expires": "2022-05-30",
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
       "name": "paymentflowfcu",
       "version": "1\\.+"
     },
     {
-      "expires": "2022-04-30",
+      "expires": "2022-05-30",
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
       "name": "mpos",
       "version": "1\\.+"
     },
     {
-      "expires": "2022-04-30",
+      "expires": "2022-05-30",
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
       "name": "entities_fcu",
       "version": "1\\.+"
@@ -1131,7 +1136,7 @@
       "version": "2\\.+"
     },
     {
-      "expires": "2022-04-30",
+      "expires": "2022-05-30",
       "group": "com\\.mercadolibre\\.android\\.payment_flow",
       "name": "paymentflow",
       "version": "6\\.\\+"
@@ -1370,23 +1375,23 @@
       "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android\\.security_two_fa",
       "name": "totp",
-      "version": "3\\.\\+"
+      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.security_two_fa",
       "name": "totp",
-      "version": "4\\.\\+"
+      "version": "5\\.\\+"
     },
     {
       "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android\\.security_two_fa",
       "name": "totpinapp",
-      "version": "3\\.\\+"
+      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.security_two_fa",
       "name": "totpinapp",
-      "version": "4\\.\\+"
+      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.security_options",
