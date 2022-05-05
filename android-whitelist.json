@@ -760,9 +760,15 @@
       "version": "9\\.\\+"
     },
     {
+      "expires": "2022-05-15",
       "group": "com\\.mercadolibre\\.android\\.matt",
       "name": "core",
       "version": "mercadolibre-5\\.\\+|mercadopago-5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.matt",
+      "name": "core",
+      "version": "8\\.\\+|mercadolibre-8\\.\\+|mercadopago-8\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.merchengine",
