@@ -765,10 +765,17 @@
       "version": "^~>\\s?1.[0-9]+"
     },
     {
+      "expires": "2022-05-06",
       "name": "MLVPP",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?[0-1]+.[0-9]+"
+    },
+    {
+      "name": "MLVPP",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?[0-2]+.[0-9]+"
     },
     {
       "name": "MLVariations",
@@ -1139,10 +1146,17 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
+      "expires": "2022-06-29",
       "name": "CardsComponents",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "CardsComponents",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "CardsBanking",

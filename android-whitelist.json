@@ -592,6 +592,12 @@
     {
       "group": "com\\.mercadolibre\\.android\\.bookmarks",
       "name": "bookmarks",
+      "version": "5\\.\\+"
+    },
+    {
+      "expires": "2022-06-27",
+      "group": "com\\.mercadolibre\\.android\\.bookmarks",
+      "name": "bookmarks",
       "version": "4\\.\\+"
     },
     {
@@ -711,6 +717,12 @@
     {
       "group": "com\\.mercadolibre\\.android\\.history",
       "name": "history",
+      "version": "5\\.\\+"
+    },
+    {
+      "expires": "2022-06-27",
+      "group": "com\\.mercadolibre\\.android\\.history",
+      "name": "history",
       "version": "4\\.\\+"
     },
     {
@@ -760,9 +772,15 @@
       "version": "9\\.\\+"
     },
     {
+      "expires": "2022-05-15",
       "group": "com\\.mercadolibre\\.android\\.matt",
       "name": "core",
       "version": "mercadolibre-5\\.\\+|mercadopago-5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.matt",
+      "name": "core",
+      "version": "8\\.\\+|mercadolibre-8\\.\\+|mercadopago-8\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.merchengine",
@@ -784,6 +802,12 @@
       "version": "4\\.\\+|5\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.navigationcp",
+      "name": "navigationcp",
+      "version": "8\\.\\+"
+    },
+    {
+      "expires": "2022-06-27",
       "group": "com\\.mercadolibre\\.android\\.navigationcp",
       "name": "navigationcp",
       "version": "6\\.\\+"
@@ -849,6 +873,11 @@
       "version": "mercadopago-3\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.comparator",
+      "version": "6\\.\\+"
+    },
+    {
+      "expires": "2022-06-27",
       "group": "com\\.mercadolibre\\.android\\.comparator",
       "version": "4\\.\\+"
     },
