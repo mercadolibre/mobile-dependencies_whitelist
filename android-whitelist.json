@@ -636,12 +636,24 @@
     {
       "group": "com\\.mercadolibre\\.android\\.purchases",
       "name": "purchases",
+      "expires": "2022-06-01",
       "version": "1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.purchases",
       "name": "experimentals",
+      "expires": "2022-06-01",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.purchases",
+      "name": "purchases",
+      "version": "2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.purchases",
+      "name": "experimentals",
+      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.credits\\.ui_components",
