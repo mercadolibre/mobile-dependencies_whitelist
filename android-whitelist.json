@@ -634,14 +634,26 @@
       "version": "mercadolibre-11\\.\\+|mercadopago-11\\.\\+"
     },
     {
+      "expires": "2022-06-01",
       "group": "com\\.mercadolibre\\.android\\.purchases",
       "name": "purchases",
       "version": "1\\.\\+"
     },
     {
+      "expires": "2022-06-01",
       "group": "com\\.mercadolibre\\.android\\.purchases",
       "name": "experimentals",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.purchases",
+      "name": "purchases",
+      "version": "2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.purchases",
+      "name": "experimentals",
+      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.credits\\.ui_components",
