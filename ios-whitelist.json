@@ -343,10 +343,17 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "expires": "2022-06-29",
       "name": "MLAddresses",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?5.[0-9]+$"
+    },
+    {
+      "name": "MLAddresses",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?6.[0-9]+$"
     },
     {
       "name": "MLAnalytics",
@@ -1152,10 +1159,17 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
+      "expires": "2022-06-29",
       "name": "CardsComponents",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "CardsComponents",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "CardsBanking",
