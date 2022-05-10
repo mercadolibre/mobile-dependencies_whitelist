@@ -646,14 +646,26 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2022-05-31",
       "group": "com\\.mercadolibre\\.android\\.purchases",
       "name": "purchases",
       "version": "2\\.\\+"
     },
     {
+      "expires": "2022-05-31",
       "group": "com\\.mercadolibre\\.android\\.purchases",
       "name": "experimentals",
       "version": "2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.purchases",
+      "name": "purchases",
+      "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.purchases",
+      "name": "experimentals",
+      "version": "3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.credits\\.ui_components",
@@ -912,6 +924,11 @@
       "group": "com\\.mercadolibre\\.android\\.rule\\.engine",
       "name": "rule\\-engine",
       "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.risk_management",
+      "name": "riksmanagement",
+      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.livecommerce",
