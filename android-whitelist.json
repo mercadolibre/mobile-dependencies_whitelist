@@ -592,6 +592,12 @@
     {
       "group": "com\\.mercadolibre\\.android\\.bookmarks",
       "name": "bookmarks",
+      "version": "5\\.\\+"
+    },
+    {
+      "expires": "2022-06-27",
+      "group": "com\\.mercadolibre\\.android\\.bookmarks",
+      "name": "bookmarks",
       "version": "4\\.\\+"
     },
     {
@@ -628,14 +634,38 @@
       "version": "mercadolibre-11\\.\\+|mercadopago-11\\.\\+"
     },
     {
+      "expires": "2022-06-01",
       "group": "com\\.mercadolibre\\.android\\.purchases",
       "name": "purchases",
       "version": "1\\.\\+"
     },
     {
+      "expires": "2022-06-01",
       "group": "com\\.mercadolibre\\.android\\.purchases",
       "name": "experimentals",
       "version": "1\\.\\+"
+    },
+    {
+      "expires": "2022-05-31",
+      "group": "com\\.mercadolibre\\.android\\.purchases",
+      "name": "purchases",
+      "version": "2\\.\\+"
+    },
+    {
+      "expires": "2022-05-31",
+      "group": "com\\.mercadolibre\\.android\\.purchases",
+      "name": "experimentals",
+      "version": "2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.purchases",
+      "name": "purchases",
+      "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.purchases",
+      "name": "experimentals",
+      "version": "3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.credits\\.ui_components",
@@ -709,6 +739,12 @@
       "version": "3\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.history",
+      "name": "history",
+      "version": "5\\.\\+"
+    },
+    {
+      "expires": "2022-06-27",
       "group": "com\\.mercadolibre\\.android\\.history",
       "name": "history",
       "version": "4\\.\\+"
@@ -792,6 +828,12 @@
     {
       "group": "com\\.mercadolibre\\.android\\.navigationcp",
       "name": "navigationcp",
+      "version": "8\\.\\+"
+    },
+    {
+      "expires": "2022-06-27",
+      "group": "com\\.mercadolibre\\.android\\.navigationcp",
+      "name": "navigationcp",
       "version": "6\\.\\+"
     },
     {
@@ -856,6 +898,11 @@
     },
     {
       "group": "com\\.mercadolibre\\.android\\.comparator",
+      "version": "6\\.\\+"
+    },
+    {
+      "expires": "2022-06-27",
+      "group": "com\\.mercadolibre\\.android\\.comparator",
       "version": "4\\.\\+"
     },
     {
@@ -877,6 +924,11 @@
       "group": "com\\.mercadolibre\\.android\\.rule\\.engine",
       "name": "rule\\-engine",
       "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.risk_management",
+      "name": "riksmanagement",
+      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.livecommerce",
@@ -1127,25 +1179,43 @@
       "version": "1\\.+"
     },
     {
+      "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
       "name": "paymentflowfcu",
       "version": "2\\.+"
     },
     {
+      "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
       "name": "mpos",
       "version": "2\\.+"
     },
     {
+      "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
       "name": "entities_fcu",
       "version": "2\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
+      "name": "paymentflowfcu",
+      "version": "3\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
+      "name": "entities_fcu",
+      "version": "3\\.+"
     },
     {
       "expires": "2022-05-30",
       "group": "com\\.mercadolibre\\.android\\.payment_flow",
       "name": "paymentflow",
       "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point\\.mpos",
+      "name": "mpos",
+      "version": "1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.payment_flow",
@@ -2078,6 +2148,11 @@
       "group": "com\\.mercadolibre\\.android\\.point_recharge",
       "name": "antennas",
       "version": "2\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_smartpos_scanner",
+      "name": "scanner",
+      "version": "1\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.liveness_detection",
