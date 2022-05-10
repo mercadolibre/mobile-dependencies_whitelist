@@ -584,7 +584,7 @@
       "name": "MLMap",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?2.[0-9]+",
+      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "MLMap",
@@ -749,7 +749,7 @@
       "name": "MLRuleEngine",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+",
+      "version": "^~>\\s?0.[0-9]+"
     },
     {
       "name": "MLRuleEngine",
