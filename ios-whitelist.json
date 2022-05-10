@@ -580,11 +580,11 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "expires": "2022-06-29",
       "name": "MLMap",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?2.[0-9]+",
-      "expires": "2022-06-29"
     },
     {
       "name": "MLMap",
@@ -745,11 +745,11 @@
       "version": "^~>\\s?2.[0-9]+"
     },
     {
+      "expires": "2022-06-29",
       "name": "MLRuleEngine",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+",
-      "expires": "2022-06-29"
     },
     {
       "name": "MLRuleEngine",
