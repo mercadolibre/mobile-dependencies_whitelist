@@ -580,10 +580,17 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "expires": "2022-06-29",
       "name": "MLMap",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?2.[0-9]+"
+    },
+    {
+      "name": "MLMap",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?3.[0-9]+"
     },
     {
       "name": "MLMapComponent",
@@ -738,10 +745,17 @@
       "version": "^~>\\s?2.[0-9]+"
     },
     {
+      "expires": "2022-06-29",
       "name": "MLRuleEngine",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+"
+    },
+    {
+      "name": "MLRuleEngine",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+"
     },
     {
       "name": "MLSearch/Suggestion",
@@ -1000,7 +1014,7 @@
       "name": "MLBiometricSecurity",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?[0-1].[0-9]+$"
     },
     {
       "name": "NativeReauth",
@@ -1012,7 +1026,7 @@
       "name": "BiometricSecurityUI",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?[1-2].[0-9]+$"
     },
     {
       "name": "SecurityOptions",
@@ -1109,7 +1123,7 @@
       "name": "MLBFFloxComponent",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "AndesUI",
@@ -1154,10 +1168,17 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "expires": "2022-06-09",
       "name": "MLPurchases/Integration",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLPurchases/Integration",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "expires": "2022-06-29",
