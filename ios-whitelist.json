@@ -476,21 +476,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "expires": "2022-06-09",
       "name": "MLCollaborators",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "name": "MLCollaborators",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "expires": "2022-06-09",
-      "name": "MLCollaboratorsV2",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
@@ -499,7 +485,7 @@
       "name": "MLCollaboratorsV2",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "MLCommons",
@@ -580,10 +566,17 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "expires": "2022-06-29",
       "name": "MLMap",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?2.[0-9]+"
+    },
+    {
+      "name": "MLMap",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?3.[0-9]+"
     },
     {
       "name": "MLMapComponent",
@@ -745,10 +738,17 @@
       "version": "^~>\\s?2.[0-9]+"
     },
     {
+      "expires": "2022-06-29",
       "name": "MLRuleEngine",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+"
+    },
+    {
+      "name": "MLRuleEngine",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+"
     },
     {
       "name": "MLSearch/Suggestion",
@@ -1113,10 +1113,17 @@
       "version": "^~>\\s?2.[0-9]+"
     },
     {
+      "expires": "2022-06-29",
       "name": "MLBFFloxComponent",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MLBFFloxComponent",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "AndesUI",

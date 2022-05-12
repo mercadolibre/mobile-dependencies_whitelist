@@ -147,9 +147,15 @@
       "version": "1\\.0\\.2"
     },
     {
+      "expires": "2022-06-01",
       "group": "com\\.facebook\\.android",
       "name": "facebook-applinks",
       "version": "5\\.15\\.3"
+    },
+    {
+      "group": "com\\.facebook\\.android",
+      "name": "facebook-applinks",
+      "version": "13\\.2\\.0"
     },
     {
       "group": "com\\.facebook\\.android",
@@ -473,6 +479,11 @@
       "group": "com\\.mercadolibre\\.android",
       "name": "notifications_commons",
       "version": "18\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.rich_notifications",
+      "name": "carousel",
+      "version": "1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -927,7 +938,7 @@
     },
     {
       "group": "com\\.mercadolibre\\.android\\.risk_management",
-      "name": "riksmanagement",
+      "name": "riskmanagement",
       "version": "2\\.\\+"
     },
     {
@@ -1010,9 +1021,15 @@
       "version": "4\\.\\+"
     },
     {
+      "expires": "2022-05-29",
       "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
       "name": "api",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
+      "name": "api",
+      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.home\\.toolkit",
@@ -1042,19 +1059,37 @@
       "version": "mercadopago-1\\.49\\.0"
     },
     {
+      "expires": "2022-06-01",
       "group": "com\\.mercadolibre\\.android\\.usersections\\",
       "name": "sections",
       "version": "mercadopago-2\\.+"
     },
     {
+      "expires": "2022-06-01",
       "group": "com\\.mercadolibre\\.android\\.usersections\\",
       "name": "ui-sections",
       "version": "mercadopago-2\\.+"
     },
     {
+      "expires": "2022-06-01",
       "group": "com\\.mercadolibre\\.android\\.usersections",
       "name": "ui-sections",
       "version": "mercadolibre-2\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.usersections\\",
+      "name": "sections",
+      "version": "mercadopago-3\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.usersections\\",
+      "name": "ui-sections",
+      "version": "mercadopago-3\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.usersections",
+      "name": "ui-sections",
+      "version": "mercadolibre-3\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.mercadocoin",
@@ -1215,7 +1250,7 @@
     {
       "group": "com\\.mercadolibre\\.android\\.point\\.mpos",
       "name": "mpos",
-      "version": "1\\.\\+"
+      "version": "1\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.payment_flow",
