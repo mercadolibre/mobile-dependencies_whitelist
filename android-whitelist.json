@@ -736,8 +736,13 @@
       "version": "4\\.\\+"
     },
     {
-      "group": "com\\.mercadolibre\\.android\\.instore_ui_components",
+      "expires": "2022-05-23",
+      "group": "com\\.mercadopago\\.android\\.instore_ui_components",
       "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.instore_ui_components",
+      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.flox",
@@ -761,9 +766,15 @@
       "version": "4\\.\\+"
     },
     {
+      "expires": "2022-05-23",
       "group": "com\\.mercadolibre\\.android\\.instore\\.home\\.sections",
       "name": "instore_home_sections",
       "version": "mercadopago-2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.instore\\.home\\.sections",
+      "name": "instore_home_sections",
+      "version": "mercadopago-3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.instore",
@@ -1681,9 +1692,15 @@
       "version": "4\\.\\+"
     },
     {
+      "expires": "2022-05-23",
       "group": "com\\.mercadolibre\\.android\\.discounts_touchpoint",
       "name": "discounts_touchpoint",
       "version": "mercadopago-2\\.\\+|mercadolibre-2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.discounts_touchpoint",
+      "name": "discounts_touchpoint",
+      "version": "mercadopago-3\\.\\+|mercadolibre-3\\.\\+"
     },
     {
       "group": "androidx.preference",
