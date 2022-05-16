@@ -542,6 +542,13 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "expires": "2022-06-29",
+      "name": "StaticResources",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "StaticResources",
       "source": "private",
       "target": "production",
@@ -658,6 +665,13 @@
     },
     {
       "name": "MLRxRestClient",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "expires": "2022-06-29",
+      "name": "MLCommonUIComponents",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+"
