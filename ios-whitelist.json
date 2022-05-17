@@ -1260,7 +1260,7 @@
       "version": "^~>\\s?10|[1-9].[0-9]+$"
     },
     {
-      "expires": "2022-05-31"
+      "expires": "2022-05-31",
       "name": "StartUPInitializer",
       "source": "private",
       "target": "production",
