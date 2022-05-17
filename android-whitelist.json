@@ -358,9 +358,20 @@
       "version": "production-9\\.\\+|develop-9\\.\\+"
     },
     {
+      "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "authentication",
       "version": "18\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "authentication-enrollment",
+      "version": "19\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "authentication",
+      "version": "19\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
