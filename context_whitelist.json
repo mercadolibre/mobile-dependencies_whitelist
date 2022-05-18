@@ -1654,6 +1654,15 @@
             }
         },
         {
+            "name": "rich-notifications",
+            "iOS": {
+                "key": "MLRichNotifications"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.rich_notifications"
+            }
+        },
+        {
             "name": "officialstores",
             "iOS": {
                 "key": "MLOfficialStores"
