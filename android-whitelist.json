@@ -13,87 +13,87 @@
       "version": "1\\.2\\.1"
     },
     {
-      "expires": "2022-04-29",
+      "expires": "2022-05-29",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "review",
-      "version": "1\\.\\+|2\\.\\+"
+      "version": "3\\.\\+"
     },
     {
-      "expires": "2022-04-29",
+      "expires": "2022-05-29",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "congrats",
-      "version": "1\\.\\+|2\\.\\+"
+      "version": "3\\.\\+"
     },
     {
-      "expires": "2022-04-29",
+      "expires": "2022-05-29",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "integrator_sdk",
-      "version": "1\\.\\+|2\\.\\+"
+      "version": "3\\.\\+"
     },
     {
-      "expires": "2022-04-29",
+      "expires": "2022-05-29",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "one_tap",
-      "version": "1\\.\\+|2\\.\\+"
+      "version": "3\\.\\+"
     },
     {
-      "expires": "2022-04-29",
+      "expires": "2022-05-29",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "payment",
-      "version": "1\\.\\+|2\\.\\+"
+      "version": "3\\.\\+"
     },
     {
-      "expires": "2022-04-29",
+      "expires": "2022-05-29",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "shipping",
-      "version": "1\\.\\+|2\\.\\+"
+      "version": "3\\.\\+"
     },
     {
-      "expires": "2022-04-29",
+      "expires": "2022-05-29",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "billing_info",
-      "version": "1\\.\\+|2\\.\\+"
+      "version": "3\\.\\+"
     },
     {
-      "expires": "2022-04-29",
+      "expires": "2022-05-29",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "split_payments",
-      "version": "1\\.\\+|2\\.\\+"
+      "version": "3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "review",
-      "version": "3\\.\\+"
+      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "congrats",
-      "version": "3\\.\\+"
+      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "integrator_sdk",
-      "version": "3\\.\\+"
+      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "one_tap",
-      "version": "3\\.\\+"
+      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "payment",
-      "version": "3\\.\\+"
+      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "shipping",
-      "version": "3\\.\\+"
+      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "billing_info",
-      "version": "3\\.\\+"
+      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
@@ -823,15 +823,15 @@
       "version": "6\\.\\+"
     },
     {
-      "expires": "2022-04-29",
+      "expires": "2022-05-29",
       "group": "com\\.mercadolibre\\.android\\.marketplace\\.map",
       "name": "marketplace\\-map",
-      "version": "8\\.\\+"
+      "version": "9\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.marketplace\\.map",
       "name": "marketplace\\-map",
-      "version": "9\\.\\+"
+      "version": "10\\.\\+"
     },
     {
       "expires": "2022-05-15",
@@ -953,15 +953,15 @@
       "version": "mercadolibre-1\\.\\+"
     },
     {
-      "expires": "2022-04-29",
+      "expires": "2022-05-29",
       "group": "com\\.mercadolibre\\.android\\.rule\\.engine",
       "name": "rule\\-engine",
-      "version": "4\\.\\+|5\\.\\+"
+      "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.rule\\.engine",
       "name": "rule\\-engine",
-      "version": "6\\.\\+"
+      "version": "7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.risk_management",
