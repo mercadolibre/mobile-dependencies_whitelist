@@ -542,10 +542,17 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "expires": "2022-06-29",
       "name": "StaticResources",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "StaticResources",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "MLLogin",
@@ -663,10 +670,17 @@
       "version": "^~>\\s?1.[0-9]+"
     },
     {
+      "expires": "2022-06-29",
       "name": "MLCommonUIComponents",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MLCommonUIComponents",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "MLRecommendationsCombo",
@@ -999,16 +1013,30 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "expires": "2022-06-29",
       "name": "MPContacts",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?3.[0-9]+$"
     },
     {
+      "expires": "2022-06-29",
       "name": "MPMoneyTransfer",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?[2-4].[0-9]+$"
+    },
+    {
+      "name": "MPContacts",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?4.[0-9]+$"
+    },
+    {
+      "name": "MPMoneyTransfer",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?5.[0-9]+$"
     },
     {
       "name": "MLBiometricSecurity",
@@ -1096,6 +1124,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "expires": "2022-06-30",
       "name": "MLScanner",
       "source": "private",
       "target": "production",
@@ -1232,10 +1261,17 @@
       "version": "^~>\\s?10|[1-9].[0-9]+$"
     },
     {
+      "expires": "2022-05-31",
       "name": "StartUPInitializer",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?[1-2].[0-9]+$"
+    },
+    {
+      "name": "StartUPInitializer",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?3.[0-9]+$"
     },
     {
       "name": "PointUI",
