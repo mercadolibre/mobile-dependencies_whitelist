@@ -49,7 +49,7 @@ Each of the dependencies is an object with the following properties:
  - `version`: Which will be matched against each of the dependencies in the podspec. The `version` string SUPPORTS regex expression.
  
  #### Optional
- - `expires` You can have expirable dependencies by adding the `expires` field. If no field is added, the dependency is considered as non-expirable
+ - `expires`: You can have expirable dependencies by adding the `expires` field. If no field is added, the dependency is considered as non-expirable
  
  
 Example:
