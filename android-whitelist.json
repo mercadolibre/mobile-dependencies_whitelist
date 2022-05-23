@@ -364,14 +364,26 @@
       "version": "18\\.\\+"
     },
     {
+      "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "authentication-enrollment",
       "version": "19\\.\\+"
     },
     {
+      "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "authentication",
       "version": "19\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "authentication-enrollment",
+      "version": "20\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "authentication",
+      "version": "20\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -406,9 +418,15 @@
       "version": "mercadopago-13\\.\\+|mercadolibre-13\\.\\+"
     },
     {
+      "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "login",
       "version": "mercadopago-14\\.\\+|mercadolibre-14\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "login",
+      "version": "mercadopago-15\\.\\+|mercadolibre-15\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.authchallenges",
