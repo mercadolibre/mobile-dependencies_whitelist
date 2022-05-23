@@ -2,7 +2,11 @@ require 'json'
 require 'date'
 require 'net/http'
 require 'uri'
+require_relative 'util/slack_notification'
 
+# Script that makes a list of libs that are close to be expired and sends a slack notification telling it
+# Libs that expire in the current week
+# Libs that expire in the next 30 days
 module Notification
     ANDROID_WHITELIST_PATH_FILE = "./android-whitelist.json"
     IOS_WHITELIST_PATH_FILE = "./ios-whitelist.json"
@@ -53,31 +57,6 @@ module Notification
             end
         end
         return libs
-    end
-
-    def self.send_notification(message)
-        if message == ""
-            puts "Empty message"
-            return
-        end
-        if SLACK_WEBHOOK_URL == ""
-            puts "Couldn't find the slack webhook ENV!! Not sending the notif."
-            return
-        end
-
-        puts "Enviando notif"
-
-        uri = URI.parse(SLACK_WEBHOOK_URL)
-        header = {'Content-Type': 'application/json'}
-        # Create the HTTP objects
-        http = Net::HTTP.new(uri.host, uri.port)
-        http.use_ssl = true
-        request = Net::HTTP::Post.new(uri.request_uri, header)
-        request.body = {
-            message: message,
-        }.to_json
-        response = http.request(request)
-        puts response
     end
 
     def self.get_message(libs_weekly, libs_monthly)
@@ -131,6 +110,6 @@ module Notification
         message = get_message(libsWeekly, libsMonthly)
         puts message
 
-        send_notification(message)
+        send_slack_notification(message, SLACK_WEBHOOK_URL)
     end
 end

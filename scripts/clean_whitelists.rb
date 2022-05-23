@@ -1,11 +1,14 @@
 require 'json'
 require 'date'
 require 'net/http'
+require_relative 'util/slack_notification'
 
 # We have a task that execute every week and check all libs that have expired dates and remove all that have past
 module Clean_whitelists
     ANDROID_WHITELIST_PATH_FILE = "./android-whitelist.json"
     IOS_WHITELIST_PATH_FILE = "./ios-whitelist.json"
+    SLACK_WEBHOOK_FAIL_URL = ENV['SLACK_NOTIFICATION_FAIL_WEBHOOK']
+    CIRCLE_BUILD_URL = ENV['CIRCLE_BUILD_URL']
 
     def self.get_json_from_file(pathFile)
         file = File.read pathFile
@@ -35,22 +38,38 @@ module Clean_whitelists
 
     # We delete the libs that are expired from the lists and makes an PR updating the repo
     def self.main()
-        dataHashAndroid = get_json_from_file(ANDROID_WHITELIST_PATH_FILE)
-        dataHashIos = get_json_from_file(IOS_WHITELIST_PATH_FILE)
+        begin
+            puts "Starting clean AllowList"
+            dataHashAndroid = get_json_from_file(ANDROID_WHITELIST_PATH_FILE)
+            dataHashIos = get_json_from_file(IOS_WHITELIST_PATH_FILE)
 
-        cleanHash = removeExpired(dataHashAndroid)
-        save_json_to_file(cleanHash, ANDROID_WHITELIST_PATH_FILE)
-        cleanHash = removeExpired(dataHashIos)
-        save_json_to_file(cleanHash, IOS_WHITELIST_PATH_FILE)
+            cleanHash = removeExpired(dataHashAndroid)
+            save_json_to_file(cleanHash, ANDROID_WHITELIST_PATH_FILE)
+            cleanHash = removeExpired(dataHashIos)
+            save_json_to_file(cleanHash, IOS_WHITELIST_PATH_FILE)
 
-        res = `git diff --stat`
-        puts res
+            res = `git diff --stat`
+            puts res
 
-        # if we have changes in the repo we create the PR
-        if res && res.size > 0
-            create_pr()
+            # if we have changes in the repo we create the PR
+            if res && res.size > 0
+                response = create_pr()
+
+                if !(response.kind_of? Net::HTTPSuccess)
+                    notify_error()
+                    exit(1) # we return fail.
+                end
+            end
+            exit(0)
+        rescue
+            notify_error()
+            exit(1) # we return fail.
         end
+    end
 
+    def self.notify_error()
+        send_slack_notification("CleanAllowList@Weekly: Ups, something happened and I couldn't make the weekly PR: " +
+                            " please check this link:" +CIRCLE_BUILD_URL+ " for more details", SLACK_WEBHOOK_FAIL_URL)
     end
 
     def self.create_pr()
