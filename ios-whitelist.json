@@ -83,7 +83,7 @@
       "name": "FBSDKCoreKit",
       "source": "public",
       "target": "production",
-      "version": "^~>\\s?(9.0.0)$"
+      "version": "^~>\\s?(13.2.0)$"
     },
     {
       "name": "FSQCollectionViewAlignedLayout",
@@ -1407,6 +1407,13 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "DeveloperMode",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "expires": "2022-06-09",
       "name": "DeveloperMode",
       "source": "private",
       "target": "production",
