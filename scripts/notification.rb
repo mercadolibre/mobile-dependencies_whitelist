@@ -10,7 +10,8 @@ require_relative 'util/slack_notification'
 module Notification
     ANDROID_WHITELIST_PATH_FILE = "./android-whitelist.json"
     IOS_WHITELIST_PATH_FILE = "./ios-whitelist.json"
-    SLACK_WEBHOOK_URL = ENV['SLACK_NOTIFICATION_LIB_WEBHOOK']
+    #SLACK_WEBHOOK_URL = ENV['SLACK_NOTIFICATION_LIB_WEBHOOK'] # original
+    SLACK_WEBHOOK_URL = ENV['SLACK_NOTIFICATION_FAIL_WEBHOOK'] # test
     A_WEEK = 6
     A_MONTH = 30
     PLATFORM = "platform"
