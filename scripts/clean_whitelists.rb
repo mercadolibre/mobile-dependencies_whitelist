@@ -101,7 +101,7 @@ module Clean_whitelists
             title: "[Trivial] Clean old expired libs",
             head: prBranchName,
             base: "master",
-            body: "This Pull Request was generated automatically to remove expired libs"
+            body: "This Pull Requeste was generated automatically to remove expired libs"
         }.to_json
         response = http.request(request)
         puts response
