@@ -56,6 +56,7 @@ module Clean_whitelists
                 response = create_pr()
 
                 if !((response.kind_of? Net::HTTPSuccess) || (response.kind_of? Net::HTTPCreated))
+                    puts "no deberia entrar acaaaaaaa"
                     notify_error()
                     exit(1) # we return fail.
                 end
