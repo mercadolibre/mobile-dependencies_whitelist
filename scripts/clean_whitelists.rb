@@ -7,7 +7,7 @@ require_relative 'util/slack_notification'
 module Clean_whitelists
     ANDROID_WHITELIST_PATH_FILE = "./android-whitelist.json"
     IOS_WHITELIST_PATH_FILE = "./ios-whitelist.json"
-    SLACK_WEBHOOK_FAIL_URL = ENV['SLACK_NOTIFICATION_FAIL_WEBHOOK'] # original
+    SLACK_WEBHOOK_FAIL_URL = ENV['SLACK_NOTIFICATION_FAIL_WEBHOOK']
     CIRCLE_BUILD_URL = ENV['CIRCLE_BUILD_URL']
 
     def self.get_json_from_file(pathFile)
