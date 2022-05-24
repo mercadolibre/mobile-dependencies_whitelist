@@ -1237,9 +1237,16 @@
     },
     {
       "name": "CardsBanking",
+      "expires": "2022-07-01",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "CardsBanking",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "MLTFSCommons",
