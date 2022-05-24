@@ -36,38 +36,6 @@ module Clean_whitelists
         Date.parse(expireDate) < Date.today
     end
 
-    # We delete the libs that are expired from the lists and makes an PR updating the repo
-    def self.main()
-        begin
-            puts "Starting clean AllowList"
-            dataHashAndroid = get_json_from_file(ANDROID_WHITELIST_PATH_FILE)
-            dataHashIos = get_json_from_file(IOS_WHITELIST_PATH_FILE)
-
-            cleanHash = removeExpired(dataHashAndroid)
-            save_json_to_file(cleanHash, ANDROID_WHITELIST_PATH_FILE)
-            cleanHash = removeExpired(dataHashIos)
-            save_json_to_file(cleanHash, IOS_WHITELIST_PATH_FILE)
-
-            res = `git diff --stat`
-            puts res
-
-            # if we have changes in the repo we create the PR
-            if res && res.size > 0
-                response = create_pr()
-
-                if !(response.kind_of? Net::HTTPCreated)
-                    puts "no deberia entrar acaaaaaaa"
-                    notify_error()
-                    exit(1) # we return fail.
-                end
-            end
-            exit(0)
-        rescue
-            notify_error()
-            exit(1) # we return fail.
-        end
-    end
-
     def self.notify_error()
         send_slack_notification("CleanAllowList@Weekly: Ups, something happened and I couldn't make the weekly PR: " +
                             " please check this link:" +CIRCLE_BUILD_URL+ " for more details", SLACK_WEBHOOK_FAIL_URL)
@@ -105,5 +73,36 @@ module Clean_whitelists
         }.to_json
         response = http.request(request)
         puts response
+    end
+
+    # We delete the libs that are expired from the lists and makes an PR updating the repo
+    def self.main()
+        begin
+            puts "Starting clean AllowList"
+            dataHashAndroid = get_json_from_file(ANDROID_WHITELIST_PATH_FILE)
+            dataHashIos = get_json_from_file(IOS_WHITELIST_PATH_FILE)
+
+            cleanHash = removeExpired(dataHashAndroid)
+            save_json_to_file(cleanHash, ANDROID_WHITELIST_PATH_FILE)
+            cleanHash = removeExpired(dataHashIos)
+            save_json_to_file(cleanHash, IOS_WHITELIST_PATH_FILE)
+
+            res = `git diff --stat`
+            puts res
+
+            # if we have changes in the repo we create the PR
+            if res && res.size > 0
+                response = create_pr()
+
+                if !(response.kind_of? Net::HTTPCreated)
+                    puts "post to github failed"
+                    notify_error()
+                    exit(1) # we return fail.
+                end
+            end
+        rescue
+            notify_error()
+            exit(1) # we return fail.
+        end
     end
 end
