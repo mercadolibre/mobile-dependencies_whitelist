@@ -726,9 +726,15 @@
       "version": "3\\.\\+"
     },
     {
+      "expires": "2022-07-01",
       "group": "com\\.mercadolibre\\.android\\.cross_app_links",
       "name": "core",
       "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cross_app_links",
+      "name": "core",
+      "version": "4\\.\\+"
     },
     {
       "expires": "2022-05-27",
@@ -867,9 +873,15 @@
       "version": "3\\.\\+|mercadopago-3\\.\\+|mercadolibre-3\\.\\+"
     },
     {
+      "expires": "2022-05-30",
       "group": "com\\.mercadolibre\\.android\\.merch_realestates",
       "name": "merchrealestates",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.merch_realestates",
+      "name": "merchrealestates",
+      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.metrics",
