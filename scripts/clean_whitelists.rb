@@ -73,6 +73,7 @@ module Clean_whitelists
         }.to_json
         response = http.request(request)
         puts response
+        return response
     end
 
     # We delete the libs that are expired from the lists and makes an PR updating the repo
