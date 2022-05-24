@@ -57,6 +57,8 @@ module Clean_whitelists
 
                 if !((response.kind_of? Net::HTTPSuccess) || (response.kind_of? Net::HTTPCreated))
                     puts "no deberia entrar acaaaaaaa"
+                    puts response.kind_of? Net::HTTPSuccess + "\n"
+                    puts response.kind_of? Net::HTTPCreated + "\n"
                     notify_error()
                     exit(1) # we return fail.
                 end
