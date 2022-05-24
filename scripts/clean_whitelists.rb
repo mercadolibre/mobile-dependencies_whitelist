@@ -79,8 +79,8 @@ module Clean_whitelists
         prBranchName = "fix/cleanExpiredLibs/" + currentDate
 
         system("git checkout -b " + prBranchName)
-        system('git config user.email "cleaningBot@mercadolibre.com"')
-        system('git config user.name "Cleaning Bot"')
+        #system('git config user.email "cleaningBot@mercadolibre.com"')
+        #system('git config user.name "Cleaning Bot"')
         system('git commit -am "remove expired libs until: ' +currentDate + '"')
         system('git remote set-url origin https://mercadolibre:$GITHUB_TOKEN@github.com/mercadolibre/mobile-dependencies_whitelist.git')
         system('git push --set-upstream origin ' + prBranchName)
