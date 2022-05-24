@@ -525,6 +525,11 @@
       "version": "4\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.testing",
+      "name": "core",
+      "version": "13\\.\\+"
+    },
+    {
       "expires": "2022-03-28",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient",
@@ -2474,6 +2479,11 @@
     {
       "group": "com\\.mercadolibre\\.android\\.mobile_cryptography",
       "name": "core",
+      "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.mobile_cryptography",
+      "name": "test-utils",
       "version": "1\\.+"
     },
     {
