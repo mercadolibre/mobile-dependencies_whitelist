@@ -1,4 +1,5 @@
 repos:
+  # Websec hook is MANDATORY, DO NOT comment it.
   - repo: https://github.com/mercadolibre/fury_websec-git-hooks
     rev: v1.0.0
     hooks:
