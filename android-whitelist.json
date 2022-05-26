@@ -1980,9 +1980,15 @@
       "version": "mercadolibre-5\\.\\+|mercadopago-5\\.\\+"
     },
     {
+      "expires": "2022-05-30",
       "group": "com\\.mercadolibre\\.android\\.devices_sdk",
       "name": "devices",
       "version": "2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.devices_sdk",
+      "name": "devices",
+      "version": "3\\.\\+"
     },
     {
       "expires": "2022-05-30",
