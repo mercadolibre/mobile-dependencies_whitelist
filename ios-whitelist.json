@@ -1031,17 +1031,17 @@
       "version": "^~>\\s?[0-1].[0-9]+$"
     },
     {
-      "name": "NativeReauth",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?2.[0-9]+$"
-    },
-    {
       "expires": "2022-08-18",
       "name": "NativeReauth",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "NativeReauth",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "BiometricSecurityUI",
@@ -1056,18 +1056,18 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "name": "MobileDevicesSecurity",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?2.[0-9]+$"
-    },
-    {
       "expires": "2022-07-01",
       "name": "MobileDevicesSecurity",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
     },    
+    {
+      "name": "MobileDevicesSecurity",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
+    },
     {
       "name": "MLNotificationsHelpers",
       "source": "private",
@@ -1534,17 +1534,17 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "name": "ReauthNativeAdapter",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?2.[0-9]+"
-    },
-    {
-      "expires": "2022-08-29",
+      "expires": "2022-08-18",
       "name": "ReauthNativeAdapter",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "ReauthNativeAdapter",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "MobileCryptography",
