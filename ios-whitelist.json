@@ -1049,10 +1049,17 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "expires": "2022-07-01",
       "name": "MobileDevicesSecurity",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MobileDevicesSecurity",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "MLNotificationsHelpers",
@@ -1229,10 +1236,17 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
+      "expires": "2022-07-01",
       "name": "CardsBanking",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "CardsBanking",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "MLTFSCommons",
@@ -1555,10 +1569,52 @@
       "version": "^~>\\s?1.[0-9]+"
     },
     {
+      "name": "DevicesSdk",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+"
+    },
+    {
       "name": "RiskManagement",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?2.[0-9]+.?[0-9]*$"
+    },
+    {
+      "name": "OpenTelemetryApi",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
+    },
+    {
+      "name": "OpenTelemetryProtocolExporter",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
+    },
+    {
+      "name": "OpenTelemetrySdk",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
+    },
+    {
+      "name": "SwiftAtomics",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
+    },
+    {
+      "name": "SwiftAtomicsShims",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
+    },
+    {
+      "name": "gRPC-Swift",
+      "source": "public",
+      "target": "production",
+      "version": "1.7.3"
     }
   ]
 }
