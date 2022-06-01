@@ -599,9 +599,15 @@
       "version": "5\\.\\+"
     },
     {
+      "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android\\.cart",
       "name": "manager",
       "version": "mercadolibre-10\\.\\+|mercadopago-10\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cart",
+      "name": "manager",
+      "version": "mercadolibre-11\\.\\+|mercadopago-11\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cart",
@@ -955,13 +961,13 @@
       "version": "4\\.\\+"
     },
     {
-      "expires": "2022-05-31",
+      "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android\\.uicomponents",
-      "version": "12\\.\\+"
+      "version": "13\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.uicomponents",
-      "version": "13\\.\\+"
+      "version": "14\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.navigation_manager",
