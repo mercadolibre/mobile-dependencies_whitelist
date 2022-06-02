@@ -500,10 +500,17 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "expires": "2022-06-16",
       "name": "MLCreditsBehaviours",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?[1-2].[0-9]+"
+      "version": "^~>\\s?2.[0-9]+"
+    },
+    {
+      "name": "MLCreditsBehaviours",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?3.[0-9]+"
     },
     {
       "name": "MLDynamicModal",
@@ -1186,10 +1193,17 @@
       "version": "^~>\\s?[0-1].[0-9]+$"
     },
     {
+      "expires": "2022-06-16",
       "name": "MLCreditsCore",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MLCreditsCore",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "MPSPPrepaid",
