@@ -1528,10 +1528,17 @@
       "version": "^~>4.3.[0-3]+$"
     },
     {
+      "expires": "2022-06-30",
       "name": "MercadoCoin",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MercadoCoin",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "ReauthNativeAdapter",
