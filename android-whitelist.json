@@ -748,9 +748,15 @@
       "version": "6\\.\\+"
     },
     {
+      "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android\\.fluxclient",
       "name": "flux-client",
       "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.fluxclient",
+      "name": "flux-client",
+      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.history",
