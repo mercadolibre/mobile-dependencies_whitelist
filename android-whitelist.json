@@ -2295,7 +2295,12 @@
     },
     {
       "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
-      "name": "recommendations_combo",
+      "name": "combo",
+      "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
+      "name": "core",
       "version": "1\\.+"
     }
   ]
