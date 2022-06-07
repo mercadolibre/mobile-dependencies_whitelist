@@ -30,7 +30,7 @@ JSON Schema:
 }
 ```
 
-**NOTE5**: If you want to try if its working correctly from your fork, just add this line to de build.gradle:
+**NOTE5**: If you want to try if its working correctly from your fork, just add this line to the build.gradle:
 ```
 lintGradle {
     dependencyWhitelistUrl = "https://raw.githubusercontent.com/YOUR_GITHUB_USER/mobile-dependencies_whitelist/master/android-whitelist.json"
@@ -47,7 +47,11 @@ Each of the dependencies is an object with the following properties:
  - `source`: keyword that indicates the source where the dependency spec should be downloaded. (`public` || `private`)
  - `target`: Indicates if it is a test or productive dependency. (`test` || `productive`)
  - `version`: Which will be matched against each of the dependencies in the podspec. The `version` string SUPPORTS regex expression.
-
+ 
+ #### Optional
+ - `expires`: You can have expirable dependencies by adding the `expires` field. If no field is added, the dependency is considered as non-expirable
+ 
+ 
 Example:
 ```
 {

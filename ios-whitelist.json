@@ -7,10 +7,16 @@
       "version": "^~>\\s?2.[0-9]+.?[0-9]*$"
     },
     {
+      "name": "MLCheckout",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?9.[0-9]+.?[0-9]*$"
+    },
+    {
       "name": "MLCheckoutSDK",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?2.[0-9]+.?[0-9]*$"
+      "version": "^~>\\s?3.[0-9]+.?[0-9]*$"
     },
     {
       "name": "PPMagnesWrapper",
@@ -77,7 +83,7 @@
       "name": "FBSDKCoreKit",
       "source": "public",
       "target": "production",
-      "version": "^~>\\s?(9.0.0)$"
+      "version": "^~>\\s?(13.2.0)$"
     },
     {
       "name": "FSQCollectionViewAlignedLayout",
@@ -248,6 +254,12 @@
       "version": "0.8"
     },
     {
+      "name": "InAppUpdates",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
       "name": "InStore-Discovery",
       "source": "private",
       "target": "production",
@@ -269,13 +281,7 @@
       "name": "InsurtechFloxComponents",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "name": "InsuProxy",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "InStoreUIComponents",
@@ -330,10 +336,17 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "expires": "2022-06-29",
       "name": "MLAddresses",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?5.[0-9]+$"
+    },
+    {
+      "name": "MLAddresses",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?6.[0-9]+$"
     },
     {
       "name": "MLAnalytics",
@@ -408,10 +421,17 @@
       "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
     },
     {
+      "expires": "2022-06-29",
       "name": "MLCart",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "name": "MLCart",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?3.[0-9]+$"
     },
     {
       "name": "BuyingflowCart",
@@ -480,10 +500,17 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "expires": "2022-06-16",
       "name": "MLCreditsBehaviours",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?[1-2].[0-9]+"
+      "version": "^~>\\s?2.[0-9]+"
+    },
+    {
+      "name": "MLCreditsBehaviours",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?3.[0-9]+"
     },
     {
       "name": "MLDynamicModal",
@@ -522,10 +549,17 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "expires": "2022-06-29",
       "name": "StaticResources",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "StaticResources",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "MLLogin",
@@ -546,10 +580,17 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "expires": "2022-06-29",
       "name": "MLMap",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?2.[0-9]+"
+    },
+    {
+      "name": "MLMap",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?3.[0-9]+"
     },
     {
       "name": "MLMapComponent",
@@ -636,10 +677,17 @@
       "version": "^~>\\s?1.[0-9]+"
     },
     {
+      "expires": "2022-06-29",
       "name": "MLCommonUIComponents",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MLCommonUIComponents",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "MLRecommendationsCombo",
@@ -669,9 +717,23 @@
       "name": "MLRemedy",
       "source": "private",
       "target": "production",
+      "version": "^~>\\s?5.[0-9]+"
+    },
+    {
+      "expires": "2022-08-01",
+      "name": "MLRemedy",
+      "source": "private",
+      "target": "production",
       "version": "^~>\\s?4.[0-9]+"
     },
     {
+      "name": "MLUserBlocker",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+"
+    },
+    {
+      "expires": "2022-08-01",
       "name": "MLUserBlocker",
       "source": "private",
       "target": "production",
@@ -704,10 +766,17 @@
       "version": "^~>\\s?2.[0-9]+"
     },
     {
+      "expires": "2022-06-29",
       "name": "MLRuleEngine",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+"
+    },
+    {
+      "name": "MLRuleEngine",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+"
     },
     {
       "name": "MLSearch/Suggestion",
@@ -761,7 +830,7 @@
       "name": "MLVPP",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?[0-1]+.[0-9]+"
+      "version": "^~>\\s?[0-2]+.[0-9]+"
     },
     {
       "name": "MLVariations",
@@ -944,22 +1013,36 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "expires": "2022-06-29",
       "name": "MPContacts",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?3.[0-9]+$"
     },
     {
+      "expires": "2022-06-29",
       "name": "MPMoneyTransfer",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?[2-4].[0-9]+$"
     },
     {
+      "name": "MPContacts",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?4.[0-9]+$"
+    },
+    {
+      "name": "MPMoneyTransfer",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?5.[0-9]+$"
+    },
+    {
       "name": "MLBiometricSecurity",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?[0-1].[0-9]+$"
     },
     {
       "name": "NativeReauth",
@@ -971,7 +1054,7 @@
       "name": "BiometricSecurityUI",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?[1-2].[0-9]+$"
     },
     {
       "name": "SecurityOptions",
@@ -980,10 +1063,17 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "expires": "2022-07-01",
       "name": "MobileDevicesSecurity",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MobileDevicesSecurity",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "MLNotificationsHelpers",
@@ -1041,6 +1131,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "expires": "2022-06-30",
       "name": "MLScanner",
       "source": "private",
       "target": "production",
@@ -1065,10 +1156,17 @@
       "version": "^~>\\s?2.[0-9]+"
     },
     {
+      "expires": "2022-06-29",
       "name": "MLBFFloxComponent",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MLBFFloxComponent",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "AndesUI",
@@ -1095,10 +1193,17 @@
       "version": "^~>\\s?[0-1].[0-9]+$"
     },
     {
+      "expires": "2022-06-16",
       "name": "MLCreditsCore",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MLCreditsCore",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "MPSPPrepaid",
@@ -1113,10 +1218,17 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "expires": "2022-06-09",
       "name": "MLPurchases/Integration",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLPurchases/Integration",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "expires": "2022-06-29",
@@ -1132,7 +1244,21 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
+      "expires": "2022-06-29",
       "name": "CardsComponents",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "CardsComponents",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "expires": "2022-07-01",
+      "name": "CardsBanking",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
@@ -1141,7 +1267,7 @@
       "name": "CardsBanking",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "MLTFSCommons",
@@ -1159,7 +1285,7 @@
       "name": "StartUPInitializer",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?[1-2].[0-9]+$"
+      "version": "^~>\\s?3.[0-9]+$"
     },
     {
       "name": "PointUI",
@@ -1172,13 +1298,6 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "expires": "2022-05-06",
-      "name": "CardsAcquisition",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "CardsAcquisition",
@@ -1298,6 +1417,13 @@
       "name": "DeveloperMode",
       "source": "private",
       "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "expires": "2022-06-09",
+      "name": "DeveloperMode",
+      "source": "private",
+      "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
@@ -1409,10 +1535,17 @@
       "version": "^~>4.3.[0-3]+$"
     },
     {
+      "expires": "2022-06-30",
       "name": "MercadoCoin",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MercadoCoin",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "ReauthNativeAdapter",
@@ -1455,6 +1588,66 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "DevicesSdk",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+"
+    },
+    {
+      "name": "RiskManagement",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+.?[0-9]*$"
+    },
+    {
+      "name": "OpenTelemetryApi",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
+    },
+    {
+      "name": "OpenTelemetryProtocolExporter",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
+    },
+    {
+      "name": "OpenTelemetrySdk",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
+    },
+    {
+      "name": "SwiftAtomics",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
+    },
+    {
+      "name": "SwiftAtomicsShims",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
+    },
+    {
+      "name": "gRPC-Swift",
+      "source": "public",
+      "target": "production",
+      "version": "1.7.3"
+    },
+    {
+      "name": "SwiftNIO",
+      "source": "public",
+      "target": "production",
+      "version": "2.40.0"
+    },
+    {
+      "name": "Opentelemetry",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     }
   ]
 }
