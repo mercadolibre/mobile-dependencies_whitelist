@@ -1636,6 +1636,18 @@
       "source": "public",
       "target": "production",
       "version": "1.7.3"
+    },
+    {
+      "name": "SwiftNIO",
+      "source": "public",
+      "target": "production",
+      "version": "2.40.0"
+    },
+    {
+      "name": "Opentelemetry",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     }
   ]
 }
