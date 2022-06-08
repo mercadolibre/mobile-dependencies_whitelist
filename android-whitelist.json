@@ -2050,29 +2050,59 @@
       "version": "1\\.0\\.0"
     },
     {
+      "expires": "2022-06-09",
       "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
       "name": "spirtechmodule",
       "version": "1\\.+||2\\.+"
     },
     {
+      "expires": "2022-06-09",
       "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
       "name": "decodingmanager",
       "version": "1\\.+||2\\.+"
     },
     {
+      "expires": "2022-06-09",
       "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
       "name": "ccmmexico_enhanceddevice",
       "version": "1\\.+||2\\.+"
     },
     {
+      "expires": "2022-06-09",
       "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
       "name": "ccmgeneral",
       "version": "1\\.+||2\\.+"
     },
     {
+      "expires": "2022-06-09",
       "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
       "name": "ccmmexico",
       "version": "1\\.+||2\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
+      "name": "spirtechmodule",
+      "version": "3\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
+      "name": "decodingmanager",
+      "version": "3\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
+      "name": "ccmmexico_enhanceddevice",
+      "version": "3\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
+      "name": "ccmgeneral",
+      "version": "3\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
+      "name": "ccmmexico",
+      "version": "3\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point_virtualization",
@@ -2300,7 +2330,12 @@
     },
     {
       "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
-      "name": "recommendations_combo",
+      "name": "combo",
+      "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
+      "name": "core",
       "version": "1\\.+"
     }
   ]
