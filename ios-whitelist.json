@@ -491,7 +491,7 @@
       "name": "MLCommons",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
     },
     {
       "name": "MLRemoteConfigurations",
@@ -546,7 +546,7 @@
       "name": "MLLocalStorage",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?0.[0-9]+.?[0-9]*$"
     },
     {
       "expires": "2022-06-29",
@@ -638,7 +638,7 @@
       "name": "MLNetworking",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?0.[0-9]+.?[0-9]*$"
     },
     {
       "name": "MLNotifications",
@@ -1282,13 +1282,6 @@
       "version": "^~>\\s?10|[1-9].[0-9]+$"
     },
     {
-      "expires": "2022-05-31",
-      "name": "StartUPInitializer",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?[1-2].[0-9]+$"
-    },
-    {
       "name": "StartUPInitializer",
       "source": "private",
       "target": "production",
@@ -1643,6 +1636,18 @@
       "source": "public",
       "target": "production",
       "version": "1.7.3"
+    },
+    {
+      "name": "SwiftNIO",
+      "source": "public",
+      "target": "production",
+      "version": "2.40.0"
+    },
+    {
+      "name": "Opentelemetry",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     }
   ]
 }
