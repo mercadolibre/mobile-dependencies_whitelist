@@ -789,6 +789,12 @@
       "version": "3\\.\\+"
     },
     {
+      "expires": "2022-06-30",
+      "group": "com\\.mercadolibre\\.android\\.maps",
+      "name": "core",
+      "version": "6\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.maps",
       "name": "core",
       "version": "7\\.\\+"
@@ -1977,6 +1983,12 @@
     {
       "group": "com\\.mercadolibre\\.android\\.cardsengagement",
       "version": "5\\.\\+"
+    },
+    {
+      "expires": "2022-06-30",
+      "group": "com\\.mercadolibre\\.android\\.navigation",
+      "name": "menu",
+      "version": "mercadolibre-6\\.\\+|mercadopago-6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.navigation",
