@@ -2,6 +2,8 @@
 
 **NOTE**: _This repo isnt versioned. `master` branch is consumed by default, so every time `master` branch changes, all repositories will immediatly start consuming the new changes_
 
+**If you need to add or update a library**,visit [Wiki.](https://sites.google.com/mercadolibre.com/mobile/arquitectura/allowlist)
+
 ### Android
 
 Android whitelist dependencies consist of a set of dependencies that are available for front-ends and high-level repositories to consume from the Mercadolibre-mobile group.
