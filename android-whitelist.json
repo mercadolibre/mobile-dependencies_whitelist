@@ -1488,9 +1488,15 @@
       "version": "6\\.+"
     },
     {
+      "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android\\.modalsengine",
       "name": "modals-engine",
       "version": "mercadolibre-3\\.\\+|mercadopago-3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.modalsengine",
+      "name": "modals-engine",
+      "version": "mercadolibre-5\\.\\+|mercadopago-5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
