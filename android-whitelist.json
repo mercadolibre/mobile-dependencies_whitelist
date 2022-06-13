@@ -1189,9 +1189,15 @@
       "version": "2\\.6\\.4"
     },
     {
+      "expires": "2022-06-30",
       "group": "com\\.theartofdev\\.edmodo",
       "name": "android-image-cropper",
-      "version": "2\\.7\\.0|2\\.8\\.0"
+      "version": "2\\.7\\.0"
+    },
+    {
+      "group": "com\\.theartofdev\\.edmodo",
+      "name": "android-image-cropper",
+      "version": "2\\.8\\.0"
     },
     {
       "group": "com\\.tonicartos",
@@ -1410,8 +1416,13 @@
       "version": "4\\.\\+"
     },
     {
+      "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android\\.loyalty_ui_components",
-      "version": "3\\.+|4\\.+"
+      "version": "3\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.loyalty_ui_components",
+      "version": "4\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.loyalty\\.common",
@@ -1684,14 +1695,26 @@
       "version": "2\\.2\\.0"
     },
     {
+      "expires": "2022-06-30",
       "group": "androidx\\.work",
       "name": "work-runtime",
-      "version": "2\\.0\\.1|2\\.1\\.0"
+      "version": "2\\.0\\.1"
+    },
+    {
+      "group": "androidx\\.work",
+      "name": "work-runtime",
+      "version": "2\\.1\\.0"
+    },
+    {
+      "expires": "2022-06-30",
+      "group": "androidx\\.work",
+      "name": "work-runtime-ktx",
+      "version": "2\\.0\\.1"
     },
     {
       "group": "androidx\\.work",
       "name": "work-runtime-ktx",
-      "version": "2\\.0\\.1|2\\.1\\.0"
+      "version": "2\\.1\\.0"
     },
     {
       "group": "androidx\\.concurrent",
@@ -1895,9 +1918,15 @@
       "version": "mercadolibre-7\\.\\+|mercadopago-7\\.\\+"
     },
     {
+      "expires": "2022-06-30",
       "group": "com\\.squareup\\.leakcanary",
       "name": "leakcanary-android",
-      "version": "1\\.6\\.3|2\\.2"
+      "version": "1\\.6\\.3"
+    },
+    {
+      "group": "com\\.squareup\\.leakcanary",
+      "name": "leakcanary-android",
+      "version": "2\\.2"
     },
     {
       "group": "com\\.bugsnag",
@@ -1946,9 +1975,15 @@
       "version": "6\\.+"
     },
     {
+      "expires": "2022-06-30",
       "group": "net\\.java\\.dev\\.jna",
       "name": "jna",
-      "version": "5\\.1\\.0|5\\.5\\.0"
+      "version": "5\\.1\\.0"
+    },
+    {
+      "group": "net\\.java\\.dev\\.jna",
+      "name": "jna",
+      "version": "5\\.5\\.0"
     },
     {
       "group": "io\\.jsonwebtoken",
