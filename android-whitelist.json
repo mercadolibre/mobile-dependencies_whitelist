@@ -1471,8 +1471,23 @@
       "version": "4\\.\\+|5\\.\\+|6\\.\\+|7\\.\\+"
     },
     {
+      "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android\\.loyalty_ui_components",
-      "version": "3\\.|4\\.\\+|5\\.\\+|6\\.\\+|7\\.\\+"
+      "version": "3\\.+"
+    },
+    {
+      "expires": "2022-09-30",
+      "group": "com\\.mercadolibre\\.android\\.loyalty_ui_components",
+      "version": "4\\.+"
+    },
+    {
+      "expires": "2023-01-30",
+      "group": "com\\.mercadolibre\\.android\\.loyalty_ui_components",
+      "version": "5\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.loyalty_ui_components",
+      "version": "6\\.\\+|7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.loyalty\\.common",
