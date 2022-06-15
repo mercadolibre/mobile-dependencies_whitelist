@@ -336,7 +336,6 @@
       "version": "4\\.\\+"
     },
     {
-      "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "configuration-manager",
       "version": "5\\.\\+"
@@ -762,8 +761,25 @@
     },
     {
       "group": "com\\.mercadolibre\\.android\\.local\\.storage",
+      "name": "core",
+      "version": "5\\.\\+"
+    },
+    {
+      "expires": "2022-06-30",
+      "group": "com\\.mercadolibre\\.android\\.local\\.storage",
       "name": "kvs-defaults",
       "version": "3\\.\\+"
+    },
+    {
+      "expires": "2022-06-30",
+      "group": "com\\.mercadolibre\\.android\\.local\\.storage",
+      "name": "kvs-defaults",
+      "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.local\\.storage",
+      "name": "kvs-defaults",
+      "version": "5\\.\\+"
     },
     {
       "expires": "2022-07-15",
