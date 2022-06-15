@@ -421,10 +421,17 @@
       "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
     },
     {
+      "expires": "2022-06-29",
       "name": "MLCart",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "name": "MLCart",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?3.[0-9]+$"
     },
     {
       "name": "BuyingflowCart",
@@ -484,7 +491,7 @@
       "name": "MLCommons",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
     },
     {
       "name": "MLRemoteConfigurations",
@@ -493,10 +500,17 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "expires": "2022-06-16",
       "name": "MLCreditsBehaviours",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?[1-2].[0-9]+"
+      "version": "^~>\\s?2.[0-9]+"
+    },
+    {
+      "name": "MLCreditsBehaviours",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?3.[0-9]+"
     },
     {
       "name": "MLDynamicModal",
@@ -532,7 +546,7 @@
       "name": "MLLocalStorage",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?0.[0-9]+.?[0-9]*$"
     },
     {
       "expires": "2022-06-29",
@@ -624,7 +638,7 @@
       "name": "MLNetworking",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?0.[0-9]+.?[0-9]*$"
     },
     {
       "name": "MLNotifications",
@@ -1043,10 +1057,17 @@
       "version": "^~>\\s?[1-2].[0-9]+$"
     },
     {
+      "expires": "2022-12-01",
       "name": "SecurityOptions",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "SecurityOptions",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "expires": "2022-07-01",
@@ -1179,10 +1200,17 @@
       "version": "^~>\\s?[0-1].[0-9]+$"
     },
     {
+      "expires": "2022-06-30",
       "name": "MLCreditsCore",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MLCreditsCore",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "MPSPPrepaid",
@@ -1192,13 +1220,6 @@
     },
     {
       "name": "MLCrossAppLinks",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "expires": "2022-06-09",
-      "name": "MLPurchases/Integration",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
@@ -1261,17 +1282,10 @@
       "version": "^~>\\s?10|[1-9].[0-9]+$"
     },
     {
-      "expires": "2022-05-31",
       "name": "StartUPInitializer",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?[1-2].[0-9]+$"
-    },
-    {
-      "name": "StartUPInitializer",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?3.[0-9]+$"
+      "version": "^~>\\s?3.[0-9]+.?[0-9]*$"
     },
     {
       "name": "PointUI",
@@ -1403,13 +1417,6 @@
       "name": "DeveloperMode",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "expires": "2022-06-09",
-      "name": "DeveloperMode",
-      "source": "private",
-      "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
@@ -1521,10 +1528,17 @@
       "version": "^~>4.3.[0-3]+$"
     },
     {
+      "expires": "2022-06-30",
       "name": "MercadoCoin",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MercadoCoin",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "ReauthNativeAdapter",
@@ -1615,6 +1629,18 @@
       "source": "public",
       "target": "production",
       "version": "1.7.3"
+    },
+    {
+      "name": "SwiftNIO",
+      "source": "public",
+      "target": "production",
+      "version": "2.40.0"
+    },
+    {
+      "name": "Opentelemetry",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     }
   ]
 }
