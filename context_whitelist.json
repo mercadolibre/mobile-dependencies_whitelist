@@ -1,6 +1,15 @@
 {
     "context": [
         {
+            "name": "front_core",
+            "iOS": {
+                "key": "com.mercadolibre.Onboarding"
+            },
+            "Android": {
+                "key": "com.mercadolibre.android.onboarding"
+            }
+        },
+        {
             "name": "checkout_on_splitPayment",
             "iOS": {
                 "key": "BfSplitPayment"
