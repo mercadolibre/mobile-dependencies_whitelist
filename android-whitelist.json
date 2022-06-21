@@ -116,12 +116,6 @@
       "version": "2\\.0\\.1"
     },
     {
-      "expires": "2020-06-30",
-      "group": "com\\.google\\.android",
-      "name": "flexbox",
-      "version": "0\\.3\\.0"
-    },
-    {
       "group": "com\\.google\\.android",
       "name": "flexbox",
       "version": "1\\.1\\.1"
@@ -1055,12 +1049,6 @@
     {
       "group": "com\\.mercadopago\\.android\\.digital_accounts_components",
       "name": "digital_accounts_components",
-      "version": "3\\.\\+"
-    },
-    {
-      "expires": "2022-06-14",
-      "group": "com\\.mercadopago\\.android\\.ml_esc_manager",
-      "name": "ml_esc_manager",
       "version": "3\\.\\+"
     },
     {
@@ -2090,36 +2078,6 @@
       "group": "androidx\\.camera",
       "name": "camera-lifecycle",
       "version": "1\\.0\\.0"
-    },
-    {
-      "expires": "2022-06-16",
-      "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
-      "name": "spirtechmodule",
-      "version": "1\\.+|2\\.+"
-    },
-    {
-      "expires": "2022-06-16",
-      "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
-      "name": "decodingmanager",
-      "version": "1\\.+|2\\.+"
-    },
-    {
-      "expires": "2022-06-16",
-      "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
-      "name": "ccmmexico_enhanceddevice",
-      "version": "1\\.+|2\\.+"
-    },
-    {
-      "expires": "2022-06-16",
-      "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
-      "name": "ccmgeneral",
-      "version": "1\\.+|2\\.+"
-    },
-    {
-      "expires": "2022-06-16",
-      "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
-      "name": "ccmmexico",
-      "version": "1\\.+|2\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
