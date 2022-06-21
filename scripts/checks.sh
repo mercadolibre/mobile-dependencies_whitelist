@@ -23,7 +23,7 @@ if [ $EXIT_CODE != 0 ]; then
   exit 1;
 fi
 
-echo "Run Checkkeynames"
+echo "Run Check keynames"
 ruby "./scripts/checkkeynames.rb"
 EXIT_CODE=${PIPESTATUS[0]}
 # exit_code == 0 -> success; exit_code == 1 -> fail

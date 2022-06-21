@@ -41,7 +41,7 @@ jobs:
       - checkout
       - run:
           name: Run Clean Script
-          command: ./scripts/clean_whitelists.sh
+          command: ./scripts/clean_allowlists.sh
 
 workflows:
   version: 2
