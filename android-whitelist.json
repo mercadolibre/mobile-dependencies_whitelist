@@ -116,12 +116,6 @@
       "version": "2\\.0\\.1"
     },
     {
-      "expires": "2020-06-30",
-      "group": "com\\.google\\.android",
-      "name": "flexbox",
-      "version": "0\\.3\\.0"
-    },
-    {
       "group": "com\\.google\\.android",
       "name": "flexbox",
       "version": "1\\.1\\.1"
@@ -205,12 +199,12 @@
       "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android\\.dynamic_features",
       "name": "core",
-      "version": "4\\.\\+"
+      "version": "4\\.\\+|5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.dynamic_features",
       "name": "core",
-      "version": "5\\.\\+"
+      "version": "6\\.\\+"
     },
     {
       "group": "com\\.google\\.code\\.gson",
@@ -270,13 +264,13 @@
       "version": "0\\.4\\.4"
     },
     {
-      "expires": "2022-06-20",
+      "expires": "2022-09-20",
       "group": "com\\.google\\.zxing",
       "name": "core",
       "version": "3\\.3\\.2"
     },
     {
-      "expires": "2022-06-20",
+      "expires": "2022-09-20",
       "group": "com\\.journeyapps",
       "name": "zxing-android-embedded",
       "version": "3\\.6\\.0|4\\.0\\.2"
@@ -485,56 +479,56 @@
       "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient",
-      "version": "16\\.\\+"
+      "version": "16\\.\\+|17\\.\\+"
     },
     {
       "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-adapter-bus",
-      "version": "16\\.\\+"
+      "version": "16\\.\\+|17\\.\\+"
     },
     {
       "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-adapter-rx2",
-      "version": "16\\.\\+"
+      "version": "16\\.\\+|17\\.\\+"
     },
     {
       "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-converter-json",
-      "version": "16\\.\\+"
+      "version": "16\\.\\+|17\\.\\+"
     },
     {
       "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-extension-header",
-      "version": "16\\.\\+"
+      "version": "16\\.\\+|17\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient",
-      "version": "17\\.\\+"
+      "version": "18\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-adapter-bus",
-      "version": "17\\.\\+"
+      "version": "18\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-adapter-rx2",
-      "version": "17\\.\\+"
+      "version": "18\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-converter-json",
-      "version": "17\\.\\+"
+      "version": "18\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-extension-header",
-      "version": "17\\.\\+"
+      "version": "18\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -676,11 +670,11 @@
     {
       "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android\\.commons",
-      "version": "20\\.\\+|21\\.\\+"
+      "version": "21\\.\\+|22\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.commons",
-      "version": "22\\.\\+"
+      "version": "23\\.\\+"
     },
     {
       "expires": "2022-06-30",
@@ -751,13 +745,7 @@
       "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android\\.local\\.storage",
       "name": "core",
-      "version": "3\\.\\+"
-    },
-    {
-      "expires": "2022-06-30",
-      "group": "com\\.mercadolibre\\.android\\.local\\.storage",
-      "name": "core",
-      "version": "4\\.\\+"
+      "version": "3\\.\\+|4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.local\\.storage",
@@ -768,13 +756,7 @@
       "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android\\.local\\.storage",
       "name": "kvs-defaults",
-      "version": "3\\.\\+"
-    },
-    {
-      "expires": "2022-06-30",
-      "group": "com\\.mercadolibre\\.android\\.local\\.storage",
-      "name": "kvs-defaults",
-      "version": "4\\.\\+"
+      "version": "3\\.\\+|4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.local\\.storage",
@@ -863,34 +845,34 @@
       "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android\\.place",
       "name": "annotation",
-      "version": "5\\.\\+"
+      "version": "5\\.\\+|6\\.\\+"
     },
     {
       "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android\\.place",
       "name": "core",
-      "version": "5\\.\\+"
+      "version": "5\\.\\+|6\\.\\+"
     },
     {
       "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android\\.place",
       "name": "processor",
-      "version": "5\\.\\+"
+      "version": "5\\.\\+|6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.place",
       "name": "annotation",
-      "version": "6\\.\\+"
+      "version": "7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.place",
       "name": "core",
-      "version": "6\\.\\+"
+      "version": "7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.place",
       "name": "processor",
-      "version": "6\\.\\+"
+      "version": "7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.recommendations",
@@ -1067,12 +1049,6 @@
     {
       "group": "com\\.mercadopago\\.android\\.digital_accounts_components",
       "name": "digital_accounts_components",
-      "version": "3\\.\\+"
-    },
-    {
-      "expires": "2022-06-14",
-      "group": "com\\.mercadopago\\.android\\.ml_esc_manager",
-      "name": "ml_esc_manager",
       "version": "3\\.\\+"
     },
     {
@@ -2102,36 +2078,6 @@
       "group": "androidx\\.camera",
       "name": "camera-lifecycle",
       "version": "1\\.0\\.0"
-    },
-    {
-      "expires": "2022-06-16",
-      "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
-      "name": "spirtechmodule",
-      "version": "1\\.+|2\\.+"
-    },
-    {
-      "expires": "2022-06-16",
-      "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
-      "name": "decodingmanager",
-      "version": "1\\.+|2\\.+"
-    },
-    {
-      "expires": "2022-06-16",
-      "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
-      "name": "ccmmexico_enhanceddevice",
-      "version": "1\\.+|2\\.+"
-    },
-    {
-      "expires": "2022-06-16",
-      "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
-      "name": "ccmgeneral",
-      "version": "1\\.+|2\\.+"
-    },
-    {
-      "expires": "2022-06-16",
-      "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
-      "name": "ccmmexico",
-      "version": "1\\.+|2\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
