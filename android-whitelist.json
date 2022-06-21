@@ -205,12 +205,12 @@
       "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android\\.dynamic_features",
       "name": "core",
-      "version": "4\\.\\+"
+      "version": "4\\.\\+|5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.dynamic_features",
       "name": "core",
-      "version": "5\\.\\+"
+      "version": "6\\.\\+"
     },
     {
       "group": "com\\.google\\.code\\.gson",
@@ -485,56 +485,56 @@
       "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient",
-      "version": "16\\.\\+"
+      "version": "16\\.\\+|17\\.\\+"
     },
     {
       "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-adapter-bus",
-      "version": "16\\.\\+"
+      "version": "16\\.\\+|17\\.\\+"
     },
     {
       "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-adapter-rx2",
-      "version": "16\\.\\+"
+      "version": "16\\.\\+|17\\.\\+"
     },
     {
       "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-converter-json",
-      "version": "16\\.\\+"
+      "version": "16\\.\\+|17\\.\\+"
     },
     {
       "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-extension-header",
-      "version": "16\\.\\+"
+      "version": "16\\.\\+|17\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient",
-      "version": "17\\.\\+"
+      "version": "18\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-adapter-bus",
-      "version": "17\\.\\+"
+      "version": "18\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-adapter-rx2",
-      "version": "17\\.\\+"
+      "version": "18\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-converter-json",
-      "version": "17\\.\\+"
+      "version": "18\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-extension-header",
-      "version": "17\\.\\+"
+      "version": "18\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -676,11 +676,11 @@
     {
       "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android\\.commons",
-      "version": "20\\.\\+|21\\.\\+"
+      "version": "21\\.\\+|22\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.commons",
-      "version": "22\\.\\+"
+      "version": "23\\.\\+"
     },
     {
       "expires": "2022-06-30",
@@ -751,13 +751,7 @@
       "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android\\.local\\.storage",
       "name": "core",
-      "version": "3\\.\\+"
-    },
-    {
-      "expires": "2022-06-30",
-      "group": "com\\.mercadolibre\\.android\\.local\\.storage",
-      "name": "core",
-      "version": "4\\.\\+"
+      "version": "3\\.\\+|4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.local\\.storage",
@@ -768,13 +762,7 @@
       "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android\\.local\\.storage",
       "name": "kvs-defaults",
-      "version": "3\\.\\+"
-    },
-    {
-      "expires": "2022-06-30",
-      "group": "com\\.mercadolibre\\.android\\.local\\.storage",
-      "name": "kvs-defaults",
-      "version": "4\\.\\+"
+      "version": "3\\.\\+|4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.local\\.storage",
@@ -863,34 +851,34 @@
       "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android\\.place",
       "name": "annotation",
-      "version": "5\\.\\+"
+      "version": "5\\.\\+|6\\.\\+"
     },
     {
       "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android\\.place",
       "name": "core",
-      "version": "5\\.\\+"
+      "version": "5\\.\\+|6\\.\\+"
     },
     {
       "expires": "2022-06-30",
       "group": "com\\.mercadolibre\\.android\\.place",
       "name": "processor",
-      "version": "5\\.\\+"
+      "version": "5\\.\\+|6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.place",
       "name": "annotation",
-      "version": "6\\.\\+"
+      "version": "7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.place",
       "name": "core",
-      "version": "6\\.\\+"
+      "version": "7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.place",
       "name": "processor",
-      "version": "6\\.\\+"
+      "version": "7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.recommendations",
