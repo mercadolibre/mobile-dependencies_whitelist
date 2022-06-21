@@ -1,6 +1,11 @@
 {
   "whitelist": [
     {
+      "group": "com\\.mercadolibre\\.android\\.onboarding",
+      "name": "onboarding",
+      "version": "1\\.+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.gamification",
       "name": "gamification",
       "version": "1\\.+"
