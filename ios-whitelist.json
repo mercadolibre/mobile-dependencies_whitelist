@@ -500,7 +500,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "expires": "2022-06-16",
+      "expires": "2022-06-30",
       "name": "MLCreditsBehaviours",
       "source": "private",
       "target": "production",
@@ -1057,10 +1057,17 @@
       "version": "^~>\\s?[1-2].[0-9]+$"
     },
     {
+      "expires": "2022-12-01",
       "name": "SecurityOptions",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "SecurityOptions",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "expires": "2022-07-01",
@@ -1193,7 +1200,7 @@
       "version": "^~>\\s?[0-1].[0-9]+$"
     },
     {
-      "expires": "2022-06-16",
+      "expires": "2022-06-30",
       "name": "MLCreditsCore",
       "source": "private",
       "target": "production",
@@ -1213,13 +1220,6 @@
     },
     {
       "name": "MLCrossAppLinks",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "expires": "2022-06-09",
-      "name": "MLPurchases/Integration",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
@@ -1285,7 +1285,7 @@
       "name": "StartUPInitializer",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?3.[0-9]+$"
+      "version": "^~>\\s?3.[0-9]+.?[0-9]*$"
     },
     {
       "name": "PointUI",
@@ -1638,6 +1638,12 @@
     },
     {
       "name": "Opentelemetry",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "Onboarding",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
