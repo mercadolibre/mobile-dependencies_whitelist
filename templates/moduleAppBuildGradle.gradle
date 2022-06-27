@@ -24,7 +24,7 @@ sourceSets {
     }
 }
 
-meliGradleConfig {
+meliPlugin {
     appDetection {
         isProductiveApp true
     }
