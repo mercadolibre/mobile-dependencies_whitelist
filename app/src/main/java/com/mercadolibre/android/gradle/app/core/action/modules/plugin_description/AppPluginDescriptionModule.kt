@@ -4,8 +4,8 @@ import com.mercadolibre.android.gradle.app.core.action.configurers.AppModuleConf
 import com.mercadolibre.android.gradle.app.module.ModuleProvider
 import com.mercadolibre.android.gradle.baseplugin.core.components.ANSI_YELLOW
 import com.mercadolibre.android.gradle.baseplugin.core.components.APP_PLUGIN_DESCRIPTION_TASK
+import com.mercadolibre.android.gradle.baseplugin.core.components.MELI_GROUP
 import com.mercadolibre.android.gradle.baseplugin.core.components.PLUGIN_DESCRIPTION_DESCRIPTION
-import com.mercadolibre.android.gradle.baseplugin.core.components.PLUGIN_GROUP
 import com.mercadolibre.android.gradle.baseplugin.core.components.PLUGIN_MODULES_DESCRIPTION_TASK
 import com.mercadolibre.android.gradle.baseplugin.core.components.ansi
 import com.mercadolibre.android.gradle.baseplugin.core.domain.interfaces.Module
@@ -15,7 +15,7 @@ class AppPluginDescriptionModule: Module {
     override fun configure(project: Project) {
 
         project.tasks.register(APP_PLUGIN_DESCRIPTION_TASK) {
-            group = PLUGIN_GROUP
+            group = MELI_GROUP
             description = PLUGIN_DESCRIPTION_DESCRIPTION
 
             print("""

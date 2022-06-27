@@ -3,8 +3,8 @@ package com.mercadolibre.android.gradle.library.core.action.modules.plugin_descr
 import com.mercadolibre.android.gradle.baseplugin.core.components.ANSI_YELLOW
 import com.mercadolibre.android.gradle.baseplugin.core.components.APP_PLUGIN_DESCRIPTION_TASK
 import com.mercadolibre.android.gradle.baseplugin.core.components.LIBRARY_PLUGIN_DESCRIPTION_TASK
+import com.mercadolibre.android.gradle.baseplugin.core.components.MELI_GROUP
 import com.mercadolibre.android.gradle.baseplugin.core.components.PLUGIN_DESCRIPTION_DESCRIPTION
-import com.mercadolibre.android.gradle.baseplugin.core.components.PLUGIN_GROUP
 import com.mercadolibre.android.gradle.baseplugin.core.components.PLUGIN_MODULES_DESCRIPTION_TASK
 import com.mercadolibre.android.gradle.baseplugin.core.components.ansi
 import com.mercadolibre.android.gradle.baseplugin.core.domain.interfaces.Module
@@ -16,7 +16,7 @@ class LibraryPluginDescriptionModule: Module {
     override fun configure(project: Project) {
 
         project.tasks.register(LIBRARY_PLUGIN_DESCRIPTION_TASK) {
-            group = PLUGIN_GROUP
+            group = MELI_GROUP
             description = PLUGIN_DESCRIPTION_DESCRIPTION
 
             print("""
