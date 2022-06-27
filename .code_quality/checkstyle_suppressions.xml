@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE suppressions PUBLIC
+    "-//Puppy Crawl//DTD Suppressions 1.1//EN"
+    "http://www.puppycrawl.com/dtds/suppressions_1_1.dtd">
+
+<suppressions>
+    <suppress files="[\\/]target[\\/]" checks=".*"/>
+    <suppress files="[\\/]gradle[\\/]" checks=".*"/>
+    <suppress files="[\\/].gradle[\\/]" checks=".*"/>
+    <suppress files="[\\/]build[\\/]" checks=".*"/>
+    <suppress files="\S*.properties" checks=".*"/>
+    <suppress files="\S*BuildConfig.java" checks=".*"/>
+    <!--Supress MagicNumber for every file below a test folder-->
+    <suppress files=".*[\\/]src[\\/](test)([^\\/]*)?[\\/]" checks="MagicNumber"/>
+    <!--Supress MultipleStringLiterals for every file below a test folder-->
+    <suppress files=".*[\\/]src[\\/](test)([^\\/]*)?[\\/]" checks="MultipleStringLiterals"/>
+    <!--Supress MissingJavadocMethod for every file below a test folder-->
+    <suppress files=".*[\\/]src[\\/](test)([^\\/]*)?[\\/]" checks="MissingJavadocMethod"/>
+    <!--Supress MissingJavadocType for every file below a test folder-->
+    <suppress files=".*[\\/]src[\\/](test)([^\\/]*)?[\\/]" checks="MissingJavadocType"/>
+</suppressions>

@@ -1,0 +1,11 @@
+# All KTLint rules are configured here
+
+# In which files it applies
+[*.{kt, kts}]
+
+indent_size = 4
+
+max_line_length = 140
+
+# Disabled rules for KTLint
+disabled_rules=no-wildcard-imports,no-empty-class-body,no-unused-imports
