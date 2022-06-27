@@ -1,8 +1,0 @@
-apply plugin: 'groovy'
-apply plugin: 'maven-publish'
-dependencies {
-    implementation gradleApi()
-    implementation localGroovy()
-
-    testImplementation "junit:junit:$junitVersion"
-}

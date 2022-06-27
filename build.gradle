@@ -1,15 +1,18 @@
-apply plugin: 'mercadolibre.mobile'
+apply plugin: 'mercadolibre.gradle.config.settings'
 
 buildscript {
     apply from:"$rootDir/gradle/repositories.gradle", to: buildscript
 
+
     dependencies {
-        classpath "com.mercadolibre.android.gradle:base:$innerProjectVersion"
-        classpath "com.gradle:gradle-enterprise-gradle-plugin:$gradleBuildScanVersion"
+        classpath libs.meli.gradle.plugin.baseplugin
+        classpath libs.gradle.scan.enterprise
+        classpath libs.gradle.plugin.kotlin
     }
 }
 
 allprojects {
     group = projectGroup
     version = libraryVersion
+
 }

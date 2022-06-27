@@ -1,13 +1,17 @@
 buildscript {
-    // have the same repositories applied to buildscript…
-    apply from:"$rootDir/gradle/repositories.gradle", to: buildscript
+    repositories {
+        apply from:"$rootDir/gradle/repositories.gradle", to: buildscript
+    }
 
     dependencies {
-        classpath "com.mercadolibre.android.gradle:base:$innerProjectVersion"
-        classpath "com.gradle:gradle-enterprise-gradle-plugin:$gradleBuildScanVersion"
+        classpath "com.mercadolibre.android.gradle:baseplugin:$innerProjectVersion"
     }
 }
 
+plugins {
+    id 'com.gradle.enterprise' version "${gradleEnterprise}"
+}
+
 rootProject.name='MercadoLibre Mobile Gradle Plugin'
-include ':base'
-apply plugin: 'mercadolibre.mobile'
+include ':baseplugin', ':library', ':app'
+apply plugin: 'mercadolibre.gradle.config.settings'

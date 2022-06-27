@@ -3,32 +3,39 @@ MercadoLibre Mobile Gradle Plugin
 
 [![Build Status](https://travis-ci.com/mercadolibre/mobile-android_gradle.svg?token=cqMzpxLsVioEuXgqEi7v&branch=develop)](https://travis-ci.com/mercadolibre/mobile-android_gradle) 
 
-Plugin de gradle que configura y agregar tasks para hacerle la vida mas facil al developer mobile.
+Los Plugins de gradle son los encargados de realizar las configuraciones que deberia tener todo repositorio asi consigueindo centralizar funcionalidades como tambien facilitar la vida de los desarrolladores.
 
 ## Getting started
 
-Agregamos al classpath de android el plugin con la ultima version (ver los releases de GH)
+Para podes utilizar alguno de los Plugin de gradle deberemos agregar sus classpath al build.gradle (En el caso del BasePlugin tambien en el Settings.gradle)
+El BasePlugin se encarga de configurar el Root siempre es necesario, luego dependendiendo de los modulos que contengan agregaremos el BaseAppPlugin y el BaseLibraryPlugin, el primero siendo para TestApps y el segundo para Librarias Android.
 
 ```java
 buildscript {
   dependencies {
-    classpath "com.mercadolibre.android.gradle:base:<latest_version>"
+    classpath "com.mercadolibre.android.gradle:BasePlugin:<latest_version>"
+    classpath "com.mercadolibre.android.gradle:baseAppPlugin:<latest_version>"
+    classpath "com.mercadolibre.android.gradle:baseLibraryPlugin:<latest_version>"
   }
 }
 ```
 
-Y lo aplicamos en el root `build.gradle` del proyecto
+### BasePlugin
+El BasePlugin debera ser aplicado en el Settings.gradle y el Build.gradle del proyecto root
 ```gradle
-apply plugin: 'mercadolibre-mobile'
+apply plugin: 'mercadolibre.gradle.config.settings'
 ```
 
-El plugin se debe aplicar en build.gradle del root del proyecto.
+### BaseAppPlugin
+Siendo el caso de que exista un modulo de App o Test App se debera aplicar en su respectivo Build.gradle
+```gradle
+apply plugin: 'mercadolibre.gradle.config.app'
+```
 
-En caso de estar en gradle 6, también debemos aplicarlo en settings.gradle
-#### Only Gradle 6.x
-
-```groovy
-apply plugin: 'mercadolibre-mobile'
+### BaseLibraryPlugin
+Siendo el caso de que exista un modulo de Libreria se debera aplicar en su respectivo Build.gradle
+```gradle
+apply plugin: 'mercadolibre.gradle.config.library'
 ```
 
 Listo. Con eso el plugin ya va a hacer lo suyo.
@@ -89,9 +96,3 @@ Este modulo genera la task `lintGradle`, la cual aplica todos los lints. La mism
 ### Jacoco
 
 Se agrega plugin de jacoco, el mismo permite tener reportes para cada task de test del proyecto. El mismo creara una task `jacocoFullReport` la cual corre todos los tests posibles (para cada buildType/flavor/sourceSet) y genera los reportes en formatos detectables por las aplicaciones de coverage.
-
-### Locks
-
-Se agrega una task `lockVersions` para poder lockear versiones dinamicas a estaticas correctamente.
-
-Ademas, el mismo generara ciertas tasks para manipular los locks de manera mas facil, por ejemplo `updateLock`/`deleteLock`/etc. Para mas informacion de las mismas se puede ver el plugin de Nebula.

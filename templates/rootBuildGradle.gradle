@@ -1,0 +1,16 @@
+apply plugin: 'mercadolibre.gradle.config.settings'
+
+buildscript {
+    repositories {
+        google()
+        apply from:"tmpFolder/repositories.gradle", to: buildscript
+    }
+        
+    dependencies {
+        classpath "com.mercadolibre.android.gradle:baseplugin:$innerProjectVersion"
+        classpath "com.mercadolibre.android.gradle:app:$innerProjectVersion"
+        classpath "com.mercadolibre.android.gradle:library:$innerProjectVersion"
+        classpath "com.android.tools.build:gradle:$buildTools"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$pluginKotlin"
+    }
+}

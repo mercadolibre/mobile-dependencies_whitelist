@@ -1,6 +1,15 @@
+# 13.0.0
+- Requiere Gradle 7.+
+- Se agrega kotlin DSL a todos los modulos
+- Se agregan los skeletons de los modulos para App y Library, con sus correspondientes android apply 
+- Migro build.gradle del modulo Base a .kts
+- Muevo afuera logica relacionada al alta de los repositorios del BasePlugin 
+- Agrego el file lib.versions.toml para declaracion de variables en el repo, y cambio todas las referencias para usarlo.
+- Agrego el extension de configuracion para la app
+
 # 12.2.0
 - Se corrige el path del resource del keystore para no romper en Windows.
-
+- 
 # 12.1.0
 - Se agregar check para "compile", "implementation" y api en variant para soportar AGP7
 

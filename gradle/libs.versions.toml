@@ -1,0 +1,19 @@
+[versions]
+innerProjectVersion = "EXPERIMENTAL-13.0.0-20220623182849"
+
+[libraries]
+gradle-plugin-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version = "1.5.31" }
+gradle-buildTools-plugin = { module = "com.android.tools.build:gradle", version = "4.2.2" }
+gradle-scan-enterprise = { module = "com.gradle:gradle-enterprise-gradle-plugin", version = "3.6.4" }
+meli-gradle-plugin-baseplugin = { group = "com.mercadolibre.android.gradle", name = "baseplugin", version.ref = "innerProjectVersion" }
+meli-gradle-plugin-app = { group = "com.mercadolibre.android.gradle", name = "app", version.ref = "innerProjectVersion" }
+meli-gradle-plugin-library = { group = "com.mercadolibre.android.gradle", name = "library", version.ref = "innerProjectVersion" }
+
+test-mockito = { group = "com.nhaarman.mockitokotlin2", name = "mockito-kotlin", version = "2.2.0" }
+test-roboelectric = { group = "org.robolectric", name = "robolectric", version = "4.0.2" }
+test-mock = { group = "io.mockk", name = "mockk", version = "1.11.0" }
+jUnitLib = { module = "junit:junit", version = "4.12" }
+assertj = { module = "org.assertj:assertj-core", version = "3.11.1" }
+
+[bundles]
+test = ["test-mockito", "test-roboelectric", "test-mock", "jUnitLib", "gradle-scan-enterprise", "gradle-buildTools-plugin", "gradle-plugin-kotlin", "assertj"]

@@ -1,0 +1,25 @@
+android {
+    buildTypes {
+        debug {
+            debuggable true
+        }
+        mds {
+            debuggable true
+        }
+        release {
+            debuggable true
+        }
+    }
+}
+
+sourceSets {
+    jarDebug {
+
+    }
+    jarMds {
+
+    }
+    jarRelease {
+
+    }
+}
