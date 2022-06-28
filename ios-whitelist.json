@@ -1654,6 +1654,12 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "GoogleAds-IMA-iOS-SDK",
+      "source": "public",
+      "target": "production",
+      "version": "3.15.1"
     }
   ]
 }
