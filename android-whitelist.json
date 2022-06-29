@@ -1101,7 +1101,12 @@
       "expires": "2022-10-03",
       "group": "com\\.mercadopago\\.android\\.point_ui",
       "name": "components",
-      "version": "1\\.+|2\\.+"
+      "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadopago\\.android\\.point_ui",
+      "name": "components",
+      "version": "2\\.+"
     },
     {
       "expires": "2022-06-30",
