@@ -47,6 +47,11 @@
     },
     {
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
+      "name": "flow",
+      "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "split_payments",
       "version": "3\\.\\+"
     },
