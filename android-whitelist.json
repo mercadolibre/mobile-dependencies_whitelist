@@ -47,6 +47,11 @@
     },
     {
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
+      "name": "flow",
+      "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "split_payments",
       "version": "3\\.\\+"
     },
@@ -755,6 +760,11 @@
       "group": "com\\.mercadolibre\\.android\\.history",
       "name": "history",
       "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.history",
+      "name": "history_manager",
+      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.instore\\.home\\.sections",
