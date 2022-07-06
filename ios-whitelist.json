@@ -44,10 +44,17 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "expires": "2022-08-15",
       "name": "Bugsnag",
       "source": "public",
       "target": "production",
       "version": "6.14.3"
+    },
+    {
+      "name": "Bugsnag",
+      "source": "public",
+      "target": "production",
+      "version": "6.19.0"
     },
     {
       "name": "BugsnagNetworkRequestPlugin",
@@ -409,7 +416,7 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "name": "MLCard",
+      "name": "MlCards",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
@@ -1138,7 +1145,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "expires": "2022-06-30",
+      "expires": "2022-07-21",
       "name": "MLScanner",
       "source": "private",
       "target": "production",
