@@ -29,6 +29,7 @@ import org.gradle.api.Project
 import org.gradle.configurationcache.extensions.capitalized
 import java.net.URL
 import java.text.SimpleDateFormat
+import java.util.regex.Pattern
 
 class LibraryAllowListDependenciesLint : Lint() {
 
@@ -83,7 +84,7 @@ class LibraryAllowListDependenciesLint : Lint() {
     private fun analyzeDependency(project: Project, variantName: String) {
         project.configurations.findByName(variantName)?.apply {
             for (dependency in dependencies) {
-                analizeDependency(Dependency(dependency.group!!, dependency.name, dependency.version!!, 0, ""), project)
+                analyzeDependency(Dependency(dependency.group!!, dependency.name, dependency.version!!, 0, ""), project)
             }
         }
     }
@@ -107,30 +108,14 @@ class LibraryAllowListDependenciesLint : Lint() {
     }
 
     private fun findDependencyInList(dependency: Dependency, list: ArrayList<Dependency>): Dependency? {
+        val dependencyFullName = "${dependency.group}:${dependency.name}:${dependency.version}"
         for (allowListDep in list) {
-            val dependencyImplementation = "${dependency.group}:${dependency.name}:${dependency.version}"
-            if (allowListDep.group == dependency.group) {
-                if (allowListDep.version != null) {
-                    if (allowListDep.version.contains("|")) {
-                        for (allowListVersion in allowListDep.version.split("|")) {
-                            if ("${allowListDep.group}:${allowListDep.name}:$allowListVersion" == dependencyImplementation) {
-                                return allowListDep
-                            }
-                        }
-                    } else if (allowListDep.name != null) {
-                        if ("${allowListDep.group}:${allowListDep.name}:${allowListDep.version}" == dependencyImplementation) {
-                            return allowListDep
-                        }
-                    } else {
-                        if ("${allowListDep.group}:${allowListDep.version}" == "${dependency.group}:${dependency.version}") {
-                            return allowListDep
-                        }
-                    }
-                } else if (allowListDep.name != null) {
-                    if (allowListDep.name == dependency.name) {
-                        return allowListDep
-                    }
-                }
+            val pattern = Pattern.compile(
+                "${allowListDep.group}:${allowListDep.name}:(${allowListDep.version})",
+                Pattern.CASE_INSENSITIVE
+            )
+            if (pattern.matcher(dependencyFullName).matches()) {
+                return allowListDep
             }
         }
         return null
@@ -151,7 +136,7 @@ class LibraryAllowListDependenciesLint : Lint() {
         println(message)
     }
 
-    fun analizeDependency(dependency: Dependency, project: Project) {
+    fun analyzeDependency(dependency: Dependency, project: Project) {
         val dependencyFullName = "${dependency.group}:${dependency.name}:${dependency.version}"
         val isLocalModule = project.rootProject.allprojects.find {
             dependencyFullName.contains("${it.group}:${it.name}")
@@ -189,11 +174,11 @@ class LibraryAllowListDependenciesLint : Lint() {
         return Status().invalid()
     }
 
-    fun getVariableFromJson(name: String, json: JsonElement): String? {
+    fun getVariableFromJson(name: String, json: JsonElement, defaultValue: String?): String? {
         return if (json.asJsonObject[name] != null) {
             json.asJsonObject[name].asString.replace("\\", "")
         } else {
-            null
+            defaultValue
         }
     }
 
@@ -224,10 +209,10 @@ class LibraryAllowListDependenciesLint : Lint() {
 
         return Dependency(
             it.asJsonObject[GROUP_CONSTANT].asString.replace("\\", ""),
-            getVariableFromJson(NAME_CONSTANT, it),
-            getVariableFromJson(VERSION_CONSTANT, it),
+            getVariableFromJson(NAME_CONSTANT, it, ".*"),
+            getVariableFromJson(VERSION_CONSTANT, it, ".*"),
             expires,
-            getVariableFromJson(EXPIRES_CONSTANT, it),
+            getVariableFromJson(EXPIRES_CONSTANT, it, null),
         )
     }
 }
