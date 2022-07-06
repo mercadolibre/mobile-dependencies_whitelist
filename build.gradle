@@ -13,5 +13,5 @@ buildscript {
 
 allprojects {
     group = projectGroup
-    version = libraryName
+    version = versionName
 }
