@@ -52,7 +52,7 @@ Una forma para hacerlo de una en todos, si todos tienen la misma version es en e
 ```
 allprojects {
   group = libraryGroup
-  version = libraryVersion
+  version = libraryName
   // Si queremos cambiar los names tambien, por default agarra el nombre de cada modulo:
   name = mapOfModuleToArtifact[name]
 }
