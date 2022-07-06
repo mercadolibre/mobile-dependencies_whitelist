@@ -18,7 +18,6 @@ internal val JAVA_MODULES =
 
 internal val PROJECT_MODULES =
     listOf<Module>(
-        BuildScanModule(),
         ListProjectsModule(),
         ListVariantsModule(),
         PluginDescriptionModule(),

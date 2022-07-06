@@ -1,5 +1,6 @@
 package com.mercadolibre.android.gradle.baseplugin.core.action.modules.buildscan
 
+import com.android.tools.build.bundletool.model.utils.files.BufferedIo.inputStream
 import com.gradle.enterprise.gradleplugin.GradleEnterpriseExtension
 import com.gradle.scan.plugin.BuildScanExtension
 import com.mercadolibre.android.gradle.baseplugin.core.basics.ExtensionGetter
@@ -12,11 +13,16 @@ import org.gradle.api.plugins.ExtensionAware
 import org.gradle.api.plugins.PluginAware
 import org.gradle.kotlin.dsl.apply
 import org.gradle.kotlin.dsl.execution.text
+import java.io.BufferedReader
+import java.io.InputStream
+import java.io.InputStreamReader
+import java.nio.charset.StandardCharsets
+import java.util.stream.Collectors
 
-class BuildScanModule: Module, SettingsModule, ExtensionGetter() {
+class BuildScanModule : Module, SettingsModule, ExtensionGetter() {
 
     fun configure(obj: PluginAware, projectName: String) {
-        if (obj is Project || obj is Settings){
+        if (obj is Project || obj is Settings) {
             if (obj is Settings) {
                 obj.apply(plugin = GRADLE_ENTERPRISE)
             }
@@ -52,16 +58,24 @@ class BuildScanModule: Module, SettingsModule, ExtensionGetter() {
 
     fun configBackground(buildScanExtension: BuildScanExtension) {
         with(buildScanExtension) {
-            text("git config --get remote.origin.url").text.trim()
-
-            val commitId = text("git rev-parse --verify HEAD").text.trim()
-            value("Git Commit ID", commitId)
-            val branchName = text("git rev-parse --abbrev-ref HEAD").text.trim()
-            value("Git branch", branchName)
-            value("user_name", text("git config user.name").text.trim())
-            value("user_email", text("git config user.email").text.trim().trim())
-            value("remote_url", text("git config --get remote.origin.url").text.trim().trim())
+            value("Git Commit ID", getCommandText("git rev-parse --verify HEAD"))
+            value("Git branch", getCommandText("git rev-parse --abbrev-ref HEAD"))
+            value("user_name", getCommandText("git config user.name"))
+            value("user_email", getCommandText("git config user.email"))
+            value("remote_url", getCommandText("git config --get remote.origin.url"))
         }
+    }
+
+    private fun getCommandText(command: String): String {
+        return getText(executeCommand(command))
+    }
+
+    private fun executeCommand(command: String): InputStream {
+        return Runtime.getRuntime().exec(command).inputStream
+    }
+
+    private fun getText(inputStreamReader: InputStream): String {
+        return BufferedReader(InputStreamReader(inputStreamReader, StandardCharsets.UTF_8)).lines().collect(Collectors.joining("\n"))
     }
 
     override fun configure(settings: Settings) {
@@ -71,5 +85,4 @@ class BuildScanModule: Module, SettingsModule, ExtensionGetter() {
     override fun configure(project: Project) {
         configure(project, project.name)
     }
-
 }

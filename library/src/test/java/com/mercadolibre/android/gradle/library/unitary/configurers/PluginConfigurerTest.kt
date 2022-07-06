@@ -8,8 +8,8 @@ import com.mercadolibre.android.gradle.library.managers.FileManager
 import com.mercadolibre.android.gradle.library.managers.LIBRARY_PROJECT
 import com.mercadolibre.android.gradle.library.managers.ROOT_PROJECT
 import org.gradle.api.Project
-import org.gradle.internal.impldep.org.junit.runner.RunWith
-import org.gradle.internal.impldep.org.junit.runners.JUnit4
+import org.junit.runner.RunWith
+import org.junit.runners.JUnit4
 
 @RunWith(JUnit4::class)
 class PluginConfigurerTest: AbstractPluginManager() {

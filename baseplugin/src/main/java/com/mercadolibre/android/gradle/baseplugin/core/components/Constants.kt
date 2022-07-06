@@ -53,51 +53,49 @@ infix fun Int.ansi(ansiColor: String): String {
  *                CONFIGURERS             *
  *******************************************/
 
-
-
 val ANDROID_CONFIGURER_DESCRIPTION = """
-    ${AndroidConfigurer::class.java.simpleName.ansi(ANSI_BOLD)}
-    Responsible for sending the minimum configurations for an Android module, sending the variables:
-        - ${"Compile SDK".ansi(ANSI_YELLOW)}            $ARROW ${VersionProvider.provideApiSdkLevel().ansi(ANSI_GREEN)}
-        - ${"Build Tools Version".ansi(ANSI_YELLOW)}    $ARROW ${VersionProvider.provideBuildToolsVersion().ansi(ANSI_GREEN)}
-        - ${"Min Sdk Version".ansi(ANSI_YELLOW)}        $ARROW ${VersionProvider.provideMinSdk().ansi(ANSI_GREEN)}
-        - ${"Target Sdk Version".ansi(ANSI_YELLOW)}     $ARROW ${VersionProvider.provideApiSdkLevel().ansi(ANSI_GREEN)}
-        - ${"Source Compatibility".ansi(ANSI_YELLOW)}   $ARROW ${VersionProvider.provideJavaVersion().toString().ansi(ANSI_GREEN)}
-        - ${"Target Compatibility".ansi(ANSI_YELLOW)}   $ARROW ${VersionProvider.provideJavaVersion().toString().ansi(ANSI_GREEN)}
+${AndroidConfigurer::class.java.simpleName.ansi(ANSI_BOLD)}
+Responsible for sending the minimum configurations for an Android module, sending the variables:
+- ${"Compile SDK".ansi(ANSI_YELLOW)}            $ARROW ${VersionProvider.provideApiSdkLevel().ansi(ANSI_GREEN)}
+- ${"Build Tools Version".ansi(ANSI_YELLOW)}    $ARROW ${VersionProvider.provideBuildToolsVersion().ansi(ANSI_GREEN)}
+- ${"Min Sdk Version".ansi(ANSI_YELLOW)}        $ARROW ${VersionProvider.provideMinSdk().ansi(ANSI_GREEN)}
+- ${"Target Sdk Version".ansi(ANSI_YELLOW)}     $ARROW ${VersionProvider.provideApiSdkLevel().ansi(ANSI_GREEN)}
+- ${"Source Compatibility".ansi(ANSI_YELLOW)}   $ARROW ${VersionProvider.provideJavaVersion().toString().ansi(ANSI_GREEN)}
+- ${"Target Compatibility".ansi(ANSI_YELLOW)}   $ARROW ${VersionProvider.provideJavaVersion().toString().ansi(ANSI_GREEN)}
 """.trimIndent()
 
 val BASICS_CONFIGURER_DESCRIPTION = """
-    $SEPARATOR
-    ${BasicsConfigurer::class.java.simpleName.ansi(ANSI_BOLD)} 
-    Responsible for configuring the meli proxy as well as managing cached versions.
-        - ${"Resolution Strategy by Hours".ansi(ANSI_YELLOW)} $ARROW ${RESOLUTION_STRATEGY_HOURS.ansi(ANSI_GREEN)}
-        - ${"Repositories".ansi(ANSI_YELLOW)}${"\n"}${RepositoryProvider().getRepositoriesDescription()}
+$SEPARATOR
+${BasicsConfigurer::class.java.simpleName.ansi(ANSI_BOLD)} 
+Responsible for configuring the meli proxy as well as managing cached versions.
+- ${"Resolution Strategy by Hours".ansi(ANSI_YELLOW)} $ARROW ${RESOLUTION_STRATEGY_HOURS.ansi(ANSI_GREEN)}
+- ${"Repositories".ansi(ANSI_YELLOW)}${"\n"}${RepositoryProvider().getRepositoriesDescription()}
 """.trimIndent()
 
 val EXTENSIONS_CONFIGURER_DESCRIPTION = """
-    $SEPARATOR
-    ${ExtensionsConfigurer::class.java.simpleName.ansi(ANSI_BOLD)}
-    Responsible for generating the necessary extensions to configure the modules.${"\n"}${ExtensionsConfigurer().getExtensions()}
+$SEPARATOR
+${ExtensionsConfigurer::class.java.simpleName.ansi(ANSI_BOLD)}
+Responsible for generating the necessary extensions to configure the modules.${"\n"}${ExtensionsConfigurer().getExtensions()}
 """.trimIndent()
 
 val MODULE_CONFIGURER_DESCRIPTION = """
-    $SEPARATOR
-    ${ModuleConfigurer::class.java.simpleName}
-    Responsible for requesting the modules to configure their tasks within the projects.
-        - ${BasePlugin::class.java.simpleName.ansi(ANSI_YELLOW)}
-            ${ModuleConfigurer().getModules("Java Modules", ModuleProvider.provideJavaModules())}
-            ${ModuleConfigurer().getModules("Project Modules", ModuleProvider.provideProjectModules())}
-            ${ModuleConfigurer().getModules("Settings Modules", ModuleProvider.provideSettingsModules())}
+$SEPARATOR
+${ModuleConfigurer::class.java.simpleName}
+Responsible for requesting the modules to configure their tasks within the projects.
+- ${BasePlugin::class.java.simpleName.ansi(ANSI_YELLOW)}
+${ModuleConfigurer().getModules("Java Modules", ModuleProvider.provideJavaModules())}
+${ModuleConfigurer().getModules("Project Modules", ModuleProvider.provideProjectModules())}
+${ModuleConfigurer().getModules("Settings Modules", ModuleProvider.provideSettingsModules())}
             
 """.trimIndent()
 
 val PLUGIN_CONFIGURER_DESCRITION = """
-    $SEPARATOR
-    ${PluginConfigurer::class.java.simpleName.ansi(ANSI_BOLD)}
-    Responsible for providing the functionality to implement plugins in the project, also the basic plugins.
-        - ${PluginConfigurer::class.java.simpleName.ansi(ANSI_YELLOW)}        $ARROW ${ANSI_GREEN}apply function${ANSI_RESET}
-        - ${"LibraryPluginConfigurer".ansi(ANSI_YELLOW)} $ARROW ${LIBRARY_PLUGINS.toString().replace("[", "").replace("]", "").ansi(ANSI_GREEN)}
-        - ${"AppPluginConfigurer".ansi(ANSI_YELLOW)}     $ARROW ${APP_PLUGINS.toString().replace("[", "").replace("]", "").ansi(ANSI_GREEN)}
+$SEPARATOR
+${PluginConfigurer::class.java.simpleName.ansi(ANSI_BOLD)}
+Responsible for providing the functionality to implement plugins in the project, also the basic plugins.
+- ${PluginConfigurer::class.java.simpleName.ansi(ANSI_YELLOW)}        $ARROW ${ANSI_GREEN}apply function$ANSI_RESET
+- ${"LibraryPluginConfigurer".ansi(ANSI_YELLOW)} $ARROW ${LIBRARY_PLUGINS.toString().replace("[", "").replace("]", "").ansi(ANSI_GREEN)}
+- ${"AppPluginConfigurer".ansi(ANSI_YELLOW)}     $ARROW ${APP_PLUGINS.toString().replace("[", "").replace("]", "").ansi(ANSI_GREEN)}
 """.trimIndent()
 
 val ALL_PLUGIN_DESCRIPTION = """            
@@ -108,9 +106,9 @@ Meli Plugin of Gradle - Configs
 $SEPARATOR
                 
 $ANDROID_CONFIGURER_DESCRIPTION
-    $BASICS_CONFIGURER_DESCRIPTION
-    $EXTENSIONS_CONFIGURER_DESCRIPTION
-    $PLUGIN_CONFIGURER_DESCRITION
+$BASICS_CONFIGURER_DESCRIPTION
+$EXTENSIONS_CONFIGURER_DESCRIPTION
+$PLUGIN_CONFIGURER_DESCRITION
 """.trimIndent()
 
 /*****************************************
@@ -149,16 +147,23 @@ const val UNIT_TEST_TASK_DESCRIPTION = "Run unit tests for the build."
 
 const val LINTABLE_TASK = "lintGradle"
 const val LINTABLE_EXTENSION = "lintGradle"
-const val LINTABLE_DESCRIPTION = "Lints the project dependencies to check they are in the allowed whitelist"
+const val LINTABLE_DESCRIPTION = "Lints the project dependencies to check they are in the allowed allowlist"
 const val LINT_DEPENDENCIES_TASK = "lintDependencies"
 const val LINT_RELEASE_DEPENDENCIES_TASK = "lintReleaseDependencies"
 const val LINT_ERROR_TITLE = "ERROR: The following dependencies are not allowed:"
+const val LINT_WARNIGN_TITLE = "WARNING: The following dependencies has been marked as deprecated:"
 const val LINT_TASK_FAIL_MESSAGE = "Errors found while running lints, please check the console output for more information"
+const val LINT_WARNIGN_DESCRIPTION = "You should consider upgrading the lib OR contact the team owner to know how to proceed."
 const val LINT_ERROR_ALLOWED_DEPENDENCIES_PREFIX = "\nYour project can only contain the dependencies listed in:"
 const val LINT_ERROR_ALLOWED_DEPENDENCIES_SUFFIX = "If you think one of them should be in" +
-        " the whitelist, please start here https://sites.google.com/mercadolibre.com/mobile/arquitectura/libs-utilitarias/libs-externas\n"
+    " the allowlist, please start here https://sites.google.com/mercadolibre.com/mobile/arquitectura/libs-utilitarias/libs-externas\n"
 const val LINT_FILENAME = "lint.ld"
 const val LINT_WARNING_FILENAME = "lintWarning.ld"
+const val LINT_AVAILABLE = "available"
+const val LINT_INVALID = "invalid"
+const val LINT_EXPIRED = "expired"
+const val LINT_GOING_TO_EXPIRE = "going to expire"
+const val LINT_REPORT_ERROR = "Cant report this type of dependency"
 
 const val LIST_VARIANTS_TASK = "listVariants"
 const val LIST_VARIANTS_DESCRIPTION = "List all variant in this project"

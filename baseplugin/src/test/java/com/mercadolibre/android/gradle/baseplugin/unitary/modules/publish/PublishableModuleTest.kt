@@ -20,8 +20,8 @@ import io.mockk.mockk
 import io.mockk.unmockkAll
 import java.io.File
 import org.gradle.api.tasks.SourceSet
-import org.gradle.internal.impldep.org.junit.runner.RunWith
-import org.gradle.internal.impldep.org.junit.runners.JUnit4
+import org.junit.runner.RunWith
+import org.junit.runners.JUnit4
 
 @RunWith(JUnit4::class)
 class PublishableModuleTest: AbstractPluginManager() {

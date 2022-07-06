@@ -19,8 +19,8 @@ import io.mockk.mockk
 import io.mockk.mockkObject
 import java.io.File
 import org.gradle.api.tasks.testing.Test
-import org.gradle.internal.impldep.org.junit.runner.RunWith
-import org.gradle.internal.impldep.org.junit.runners.JUnit4
+import org.junit.runner.RunWith
+import org.junit.runners.JUnit4
 import org.gradle.testing.jacoco.tasks.JacocoReport
 
 @RunWith(JUnit4::class)

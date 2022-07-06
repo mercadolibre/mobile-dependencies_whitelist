@@ -3,8 +3,8 @@ package com.mercadolibre.android.gradle.app.integration.projects_cases
 import com.mercadolibre.android.gradle.app.integration.utils.UtilsTest
 import com.mercadolibre.android.gradle.app.integration.utils.domain.ModuleType
 import com.mercadolibre.android.gradle.app.managers.APP_PROJECT
-import org.gradle.internal.impldep.org.junit.runner.RunWith
-import org.gradle.internal.impldep.org.junit.runners.JUnit4
+import org.junit.runner.RunWith
+import org.junit.runners.JUnit4
 
 @RunWith(JUnit4::class)
 class ProjectWithApp: UtilsTest() {

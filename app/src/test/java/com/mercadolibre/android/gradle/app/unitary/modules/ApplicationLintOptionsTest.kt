@@ -10,8 +10,8 @@ import com.mercadolibre.android.gradle.app.managers.FileManager
 import com.mercadolibre.android.gradle.app.managers.ROOT_PROJECT
 import com.mercadolibre.android.gradle.baseplugin.BasePlugin
 import java.io.File
-import org.gradle.internal.impldep.org.junit.runner.RunWith
-import org.gradle.internal.impldep.org.junit.runners.JUnit4
+import org.junit.runner.RunWith
+import org.junit.runners.JUnit4
 
 @RunWith(JUnit4::class)
 class ApplicationLintOptionsTest: AbstractPluginManager() {

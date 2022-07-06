@@ -1,6 +1,7 @@
 package com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies
 
 import com.android.build.gradle.api.BaseVariant
+import com.google.gson.JsonElement
 import com.google.gson.JsonParser
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.Dependency
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.Lint
@@ -19,26 +20,27 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_ERROR_ALL
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_ERROR_ALLOWED_DEPENDENCIES_SUFFIX
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_ERROR_TITLE
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_FILENAME
+import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_WARNIGN_DESCRIPTION
+import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_WARNIGN_TITLE
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_WARNING_FILENAME
 import com.mercadolibre.android.gradle.baseplugin.core.components.NAME_CONSTANT
-import com.mercadolibre.android.gradle.baseplugin.core.components.RAW_EXPIRES_DATE_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.VERSION_CONSTANT
-import java.net.URL
-import java.text.SimpleDateFormat
 import org.gradle.api.Project
 import org.gradle.configurationcache.extensions.capitalized
+import java.net.URL
+import java.text.SimpleDateFormat
 
-class LibraryWhitelistedDependenciesLint: Lint() {
+class LibraryAllowListDependenciesLint : Lint() {
 
-    private val FILE_BLOCKER = "build/reports/${LibraryWhitelistedDependenciesLint::class.java.simpleName}/${LINT_FILENAME}"
-    private val FILE_WARNING = "build/reports/${LibraryWhitelistedDependenciesLint::class.java.simpleName}/${LINT_WARNING_FILENAME}"
+    private val FILE_BLOCKER = "build/reports/${LibraryAllowListDependenciesLint::class.java.simpleName}/$LINT_FILENAME"
+    private val FILE_WARNING = "build/reports/${LibraryAllowListDependenciesLint::class.java.simpleName}/$LINT_WARNING_FILENAME"
 
     private val DEFAULT_GRADLE_VERSION_VALUE = "unspecified"
 
-    private var hasFailed = false
+    var hasFailed = false
 
-    val WHITELIST_DEPENDENCIES = arrayListOf<Dependency>()
-    val WHITELIST_GOING_TO_EXPIRE = arrayListOf<Dependency>()
+    val ALLOWLIST_DEPENDENCIES = arrayListOf<Dependency>()
+    val ALLOWLIST_GOING_TO_EXPIRE = arrayListOf<Dependency>()
 
     override fun name(): String {
         return LINT_DEPENDENCIES_TASK
@@ -46,11 +48,11 @@ class LibraryWhitelistedDependenciesLint: Lint() {
 
     override fun lint(project: Project, variants: ArrayList<BaseVariant>): Boolean {
         findExtension<LintGradleExtension>(project)?.apply {
-            if (!dependenciesLintEnabled){
+            if (!dependenciesLintEnabled) {
                 return false
             }
             if (project.plugins.hasPlugin(ANDROID_LIBRARY_PLUGIN)) {
-                setUpAllowlist(dependencyWhitelistUrl)
+                setUpAllowlist(dependencyAllowListUrl)
 
                 for (variant in variants) {
                     val variantName = variant.name
@@ -65,12 +67,12 @@ class LibraryWhitelistedDependenciesLint: Lint() {
 
                 if (hasFailed) {
                     report(
-                        "$LINT_ERROR_ALLOWED_DEPENDENCIES_PREFIX ${dependencyWhitelistUrl}\n${LINT_ERROR_ALLOWED_DEPENDENCIES_SUFFIX}",
+                        "$LINT_ERROR_ALLOWED_DEPENDENCIES_PREFIX ${dependencyAllowListUrl}\n$LINT_ERROR_ALLOWED_DEPENDENCIES_SUFFIX",
                         project
                     )
                 }
 
-                if (WHITELIST_GOING_TO_EXPIRE.size > 0) {
+                if (ALLOWLIST_GOING_TO_EXPIRE.size > 0) {
                     reportWarnings(project)
                 }
             }
@@ -80,7 +82,7 @@ class LibraryWhitelistedDependenciesLint: Lint() {
 
     private fun analyzeDependency(project: Project, variantName: String) {
         project.configurations.findByName(variantName)?.apply {
-            for (dependency in allDependencies) {
+            for (dependency in dependencies) {
                 analizeDependency(Dependency(dependency.group!!, dependency.name, dependency.version!!, 0, ""), project)
             }
         }
@@ -94,28 +96,39 @@ class LibraryWhitelistedDependenciesLint: Lint() {
             file.parentFile.mkdirs()
         }
 
-        var message = "WARNING: The following dependencies has been marked as deprecated: \n"
-        for (dependency in WHITELIST_GOING_TO_EXPIRE) {
-            message += "(${findDependencyInList(dependency, WHITELIST_DEPENDENCIES)?.rawExpiresDate}) - $dependency (Deprecated!)\n"
+        var message = "$LINT_WARNIGN_TITLE \n"
+        for (dependency in ALLOWLIST_GOING_TO_EXPIRE) {
+            message += "(${findDependencyInList(dependency, ALLOWLIST_DEPENDENCIES)?.rawExpiresDate})" +
+                " - ${dependency.group}:${dependency.name}:${dependency.version} (Deprecated!)\n"
         }
-        message += "\nYou should consider upgrading the lib OR contact the team owner to know how to proceed.\n"
+        message += "\n$LINT_WARNIGN_DESCRIPTION\n"
         println(message)
         file.appendText(message)
     }
 
     private fun findDependencyInList(dependency: Dependency, list: ArrayList<Dependency>): Dependency? {
-        for (whitelistDep in list) {
-            if (dependency.name != null) {
-                println(whitelistDep)
-                if (dependency.group.contains(whitelistDep.group)) {
-                    return if (whitelistDep.name != null) {
-                        if (dependency.name.contains(whitelistDep.name)){
-                            whitelistDep
-                        } else {
-                            null
+        for (allowListDep in list) {
+            val dependencyImplementation = "${dependency.group}:${dependency.name}:${dependency.version}"
+            if (allowListDep.group == dependency.group) {
+                if (allowListDep.version != null) {
+                    if (allowListDep.version.contains("|")) {
+                        for (allowListVersion in allowListDep.version.split("|")) {
+                            if ("${allowListDep.group}:${allowListDep.name}:$allowListVersion" == dependencyImplementation) {
+                                return allowListDep
+                            }
+                        }
+                    } else if (allowListDep.name != null) {
+                        if ("${allowListDep.group}:${allowListDep.name}:${allowListDep.version}" == dependencyImplementation) {
+                            return allowListDep
                         }
                     } else {
-                        whitelistDep
+                        if ("${allowListDep.group}:${allowListDep.version}" == "${dependency.group}:${dependency.version}") {
+                            return allowListDep
+                        }
+                    }
+                } else if (allowListDep.name != null) {
+                    if (allowListDep.name == dependency.name) {
+                        return allowListDep
                     }
                 }
             }
@@ -132,9 +145,9 @@ class LibraryWhitelistedDependenciesLint: Lint() {
             hasFailed = true
             println("\n" + LINT_ERROR_TITLE)
             file.writeText(LINT_ERROR_TITLE)
+            file.appendText("${System.getProperty("line.separator")}$message")
         }
 
-        file.appendText("${System.getProperty("line.separator")}${message}")
         println(message)
     }
 
@@ -145,74 +158,76 @@ class LibraryWhitelistedDependenciesLint: Lint() {
         } != null
 
         if (!dependencyFullName.contains(DEFAULT_GRADLE_VERSION_VALUE) && !isLocalModule) {
-            val result = getStatusDependencyInWhitelist(dependency)
+            val result = getStatusDependencyInAllowList(dependency)
             if (result.isBlocker) {
-                report(result.message(dependencyFullName, name()), project)
+                report(result.message(dependencyFullName), project)
             } else if (result.shouldReport) {
-                WHITELIST_GOING_TO_EXPIRE.add(dependency)
+                ALLOWLIST_GOING_TO_EXPIRE.add(dependency)
             }
         }
     }
 
-    private fun getStatusDependencyInWhitelist(dependency: Dependency): StatusBase {
-        val dep = findDependencyInList(dependency, WHITELIST_DEPENDENCIES)
+    private fun getStatusDependencyInAllowList(dependency: Dependency): StatusBase {
+        val dep = findDependencyInList(dependency, ALLOWLIST_DEPENDENCIES)
         if (dep != null) {
             return if (dep.expires == null) {
                 Status().available()
             } else {
                 when {
-                    dep.expires == Long.MAX_VALUE -> { Status().available() }
-                    System.currentTimeMillis() < dep.expires -> { Status().goign_to_expire() }
-                    else -> { Status().expired() }
+                    dep.expires == Long.MAX_VALUE -> {
+                        Status().available()
+                    }
+                    System.currentTimeMillis() < dep.expires -> {
+                        Status().goign_to_expire()
+                    }
+                    else -> {
+                        Status().expired()
+                    }
                 }
             }
-
         }
         return Status().invalid()
     }
 
-    private fun setUpAllowlist(whitelistUrl: String) {
-        with(URL(whitelistUrl).openConnection()){
+    fun getVariableFromJson(name: String, json: JsonElement): String? {
+        return if (json.asJsonObject[name] != null) {
+            json.asJsonObject[name].asString.replace("\\", "")
+        } else {
+            null
+        }
+    }
+
+    fun castStringToDate(date: String): Long {
+        return SimpleDateFormat("yyyy-MM-dd").parse(date.replace("\\", "")).time
+    }
+
+    fun castJsonElementToDate(it: JsonElement): Long? {
+        val element = it.asJsonObject[EXPIRES_CONSTANT]
+        if (element == null || element.asString == "null") {
+            return null
+        }
+        return castStringToDate(element.asString)
+    }
+
+    private fun setUpAllowlist(allowListUrl: String) {
+        with(URL(allowListUrl).openConnection()) {
             val json = JsonParser.parseReader(getInputStream().reader())
 
             json.asJsonObject[ALLOWLIST_CONSTANT].asJsonArray.all {
-                val version: String? =
-                    if (it.asJsonObject[VERSION_CONSTANT] != null) {
-                        it.asJsonObject[VERSION_CONSTANT].asString
-                    } else {
-                        null
-                    }
-
-                val expiresRaw: String? =
-                    if (it.asJsonObject[RAW_EXPIRES_DATE_CONSTANT] != null) {
-                        it.asJsonObject[RAW_EXPIRES_DATE_CONSTANT].asString
-                    } else {
-                        null
-                    }
-
-                val expires: Long? =
-                    if (it.asJsonObject[EXPIRES_CONSTANT] != null) {
-                        SimpleDateFormat("yyyy-MM-dd").parse(it.asJsonObject[EXPIRES_CONSTANT].asString).time
-                    } else {
-                        null
-                    }
-
-                val name: String? =
-                    if (it.asJsonObject[NAME_CONSTANT] != null) {
-                        it.asJsonObject[NAME_CONSTANT].asString
-                    } else {
-                        null
-                    }
-
-                WHITELIST_DEPENDENCIES.add(Dependency(
-                    it.asJsonObject[GROUP_CONSTANT].asString,
-                    name,
-                    version,
-                    expires,
-                    expiresRaw,
-                ))
+                ALLOWLIST_DEPENDENCIES.add(jsonNodeToDependency(it))
             }
         }
     }
 
+    fun jsonNodeToDependency(it: JsonElement): Dependency {
+        val expires: Long? = castJsonElementToDate(it.asJsonObject)
+
+        return Dependency(
+            it.asJsonObject[GROUP_CONSTANT].asString.replace("\\", ""),
+            getVariableFromJson(NAME_CONSTANT, it),
+            getVariableFromJson(VERSION_CONSTANT, it),
+            expires,
+            getVariableFromJson(EXPIRES_CONSTANT, it),
+        )
+    }
 }

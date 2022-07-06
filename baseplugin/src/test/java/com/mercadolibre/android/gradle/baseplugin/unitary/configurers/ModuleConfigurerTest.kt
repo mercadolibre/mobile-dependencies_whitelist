@@ -14,7 +14,7 @@ import io.mockk.mockk
 import io.mockk.mockkObject
 import io.mockk.verify
 
-class ModuleConfigurerTest: AbstractPluginManager() {
+class ModuleConfigurerTest : AbstractPluginManager() {
 
     val basePlugin = BasePlugin()
 
@@ -22,7 +22,6 @@ class ModuleConfigurerTest: AbstractPluginManager() {
 
     val buildScanModule = mockk<BuildScanModule>(relaxed = true)
     val listProjectsModule = mockk<ListProjectsModule>(relaxed = true)
-    val pluginDescriptionModule = mockk<PluginDescriptionModule>(relaxed = true)
     val projectModule = mockk<ProjectVersion>(relaxed = true)
 
     @org.junit.Before
@@ -33,7 +32,7 @@ class ModuleConfigurerTest: AbstractPluginManager() {
 
         mockkObject(ModuleProvider)
 
-        every { ModuleProvider.provideProjectModules() } returns listOf(buildScanModule, listProjectsModule, pluginDescriptionModule, projectModule)
+        every { ModuleProvider.provideProjectModules() } returns listOf(buildScanModule, listProjectsModule, projectModule)
 
         moduleConfigurer.configureProject(root)
     }
@@ -46,11 +45,6 @@ class ModuleConfigurerTest: AbstractPluginManager() {
     @org.junit.Test
     fun `When the ModuleConfigurer configures a execute the ListProjectsModule Module`() {
         verify { listProjectsModule.configure(root) }
-    }
-
-    @org.junit.Test
-    fun `When the ModuleConfigurer configures a execute the PluginDescriptionModule Module`() {
-        verify { pluginDescriptionModule.configure(root) }
     }
 
     @org.junit.Test

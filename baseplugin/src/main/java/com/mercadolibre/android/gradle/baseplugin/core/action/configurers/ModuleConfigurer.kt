@@ -2,6 +2,7 @@ package com.mercadolibre.android.gradle.baseplugin.core.action.configurers
 
 import com.mercadolibre.android.gradle.baseplugin.core.components.ANSI_GREEN
 import com.mercadolibre.android.gradle.baseplugin.core.components.ANSI_YELLOW
+import com.mercadolibre.android.gradle.baseplugin.core.components.ARROW
 import com.mercadolibre.android.gradle.baseplugin.core.components.MODULE_CONFIGURER_DESCRIPTION
 import com.mercadolibre.android.gradle.baseplugin.core.components.ansi
 import com.mercadolibre.android.gradle.baseplugin.core.domain.interfaces.Configurer
@@ -17,12 +18,11 @@ open class ModuleConfigurer: Configurer {
     }
 
     open fun getModules(name: String, modules: List<Any>): String {
-        var listOfModules = ""
-        listOfModules += "${name.ansi(ANSI_YELLOW)}\n"
+        var listOfModules = "${name.ansi(ANSI_YELLOW)} $ARROW "
         for (module in modules){
-            listOfModules += "\t\t- ${module::class.java.simpleName.ansi(ANSI_GREEN)}\n"
+            listOfModules += "${module::class.java.simpleName.ansi(ANSI_GREEN)}, "
         }
-        return listOfModules
+        return listOfModules.substring(0, listOfModules.length-2)
     }
 
     override fun configureProject(project: Project){

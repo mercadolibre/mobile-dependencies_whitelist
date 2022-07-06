@@ -18,7 +18,7 @@ import io.mockk.mockk
 import io.mockk.mockkObject
 import io.mockk.verify
 
-class ModuleConfigurerTest: AbstractPluginManager() {
+class ModuleConfigurerTest : AbstractPluginManager() {
 
     val basePlugin = BasePlugin()
 
@@ -28,7 +28,6 @@ class ModuleConfigurerTest: AbstractPluginManager() {
     val jacocoModule = mockk<LibraryJacocoModule>(relaxed = true)
     val testableModule = mockk<LibraryTestableModule>(relaxed = true)
     val publishModule = mockk<LibraryPublishableModule>(relaxed = true)
-    val pluginDescription = mockk<LibraryPluginDescriptionModule>(relaxed = true)
 
     @org.junit.Before
     fun setUp() {
@@ -41,7 +40,7 @@ class ModuleConfigurerTest: AbstractPluginManager() {
 
         mockkObject(ModuleProvider)
 
-        every { ModuleProvider.provideLibraryAndroidModules() } returns listOf(lintableModule, jacocoModule, testableModule, publishModule, pluginDescription)
+        every { ModuleProvider.provideLibraryAndroidModules() } returns listOf(lintableModule, jacocoModule, testableModule, publishModule)
 
         moduleConfigurer.configureProject(projects[LIBRARY_PROJECT]!!)
     }
@@ -64,10 +63,5 @@ class ModuleConfigurerTest: AbstractPluginManager() {
     @org.junit.Test
     fun `When the ModuleConfigurer configures a execute the LibraryPublishableModule Module`() {
         verify { publishModule.configure(projects[LIBRARY_PROJECT]!!) }
-    }
-
-    @org.junit.Test
-    fun `When the ModuleConfigurer configures a execute the LibraryPluginDescriptionModule Module`() {
-        verify { pluginDescription.configure(projects[LIBRARY_PROJECT]!!) }
     }
 }

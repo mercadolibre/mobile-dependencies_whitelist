@@ -11,8 +11,8 @@ import com.mercadolibre.android.gradle.library.managers.LIBRARY_PROJECT
 import com.mercadolibre.android.gradle.library.managers.ROOT_PROJECT
 import com.nhaarman.mockitokotlin2.mock
 import com.nhaarman.mockitokotlin2.verify
-import org.gradle.internal.impldep.org.junit.runner.RunWith
-import org.gradle.internal.impldep.org.junit.runners.JUnit4
+import org.junit.runner.RunWith
+import org.junit.runners.JUnit4
 
 @RunWith(JUnit4::class)
 class BaseLibraryPluginTest: AbstractPluginManager() {

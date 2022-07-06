@@ -17,7 +17,7 @@ import io.mockk.mockk
 import io.mockk.mockkObject
 import io.mockk.verify
 
-class ModuleConfigurerTest: AbstractPluginManager() {
+class ModuleConfigurerTest : AbstractPluginManager() {
 
     val basePlugin = BasePlugin()
 
@@ -26,7 +26,6 @@ class ModuleConfigurerTest: AbstractPluginManager() {
     val lintableModule = mockk<LintableModule>(relaxed = true)
     val jacocoModule = mockk<AppJacocoModule>(relaxed = true)
     val lintModule = mockk<ApplicationLintOptionsModule>(relaxed = true)
-    val pluginDescription = mockk<AppPluginDescriptionModule>(relaxed = true)
 
     @org.junit.Before
     fun setUp() {
@@ -38,7 +37,7 @@ class ModuleConfigurerTest: AbstractPluginManager() {
 
         mockkObject(ModuleProvider)
 
-        every { ModuleProvider.provideAppAndroidModules() } returns listOf(lintableModule, jacocoModule, lintModule, pluginDescription)
+        every { ModuleProvider.provideAppAndroidModules() } returns listOf(lintableModule, jacocoModule, lintModule)
 
         moduleConfigurer.configureProject(projects[LIBRARY_PROJECT]!!)
     }
@@ -57,10 +56,4 @@ class ModuleConfigurerTest: AbstractPluginManager() {
     fun `When the ModuleConfigurer configures a execute the ApplicationLintOptionsModule Module`() {
         verify { lintModule.configure(any()) }
     }
-
-    @org.junit.Test
-    fun `When the ModuleConfigurer configures a execute the AppPluginDescriptionModule Module`() {
-        verify { pluginDescription.configure(any()) }
-    }
-
 }

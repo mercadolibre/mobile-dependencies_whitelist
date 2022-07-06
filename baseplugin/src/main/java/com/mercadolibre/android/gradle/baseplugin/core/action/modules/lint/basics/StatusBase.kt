@@ -1,9 +1,12 @@
 package com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics
 
-internal class StatusBase(val shouldReport: Boolean, val isBlocker: Boolean){
-    fun message(dependency: String, name: String): String {
+import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_REPORT_ERROR
+
+class StatusBase(val shouldReport: Boolean, val isBlocker: Boolean, val name: String) {
+    fun message(dependency: String): String {
         if (!shouldReport) {
-            throw IllegalAccessException("Cant report this type of dependency")
+            throw IllegalAccessException(LINT_REPORT_ERROR)
         }
         return "- $dependency (${name.toLowerCase().capitalize()})"
-    }}
+    }
+}

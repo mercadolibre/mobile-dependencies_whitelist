@@ -1,6 +1,19 @@
+# 13.0.4
+- Se agrega un fix al Linteo del Plugin
+- Se evita que la task pluginDescription se ejecute sola
+- Se eliman las variables duplicadas de Gradle
+- Se evita que el settings gradle tenga dependencias
+- Se cambia el termino WhiteList a AllowList
+
 # 13.0.3 (unpublished)
 - se elimina las experimentales en 13.0.1 y 13.0.2
 - se agrega webhook code quality
+
+# 13.0.2
+- Se genera la version que depende 13.0.1 elimanando los implementation que tienen experimental transitivos
+
+# 13.0.1
+- Se genera la version que depende 13.0.0 eliminando los implementation que tienen experimental explicitos
 
 # 13.0.0
 - Requiere Gradle 7.+

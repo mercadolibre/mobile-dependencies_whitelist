@@ -8,13 +8,14 @@ import com.mercadolibre.android.gradle.app.managers.FileManager
 import com.mercadolibre.android.gradle.app.managers.ROOT_PROJECT
 import com.mercadolibre.android.gradle.baseplugin.core.components.JACOCO_FULL_REPORT_TASK
 import com.mercadolibre.android.gradle.baseplugin.core.components.JACOCO_TEST_REPORT_TASK
-import java.io.File
+import io.mockk.mockk
 import org.gradle.api.tasks.testing.Test
-import org.gradle.internal.impldep.org.junit.runner.RunWith
-import org.gradle.internal.impldep.org.junit.runners.JUnit4
+import org.junit.runner.RunWith
+import org.junit.runners.JUnit4
+import java.io.File
 
 @RunWith(JUnit4::class)
-class AppJacocoModuleTest: AbstractPluginManager() {
+class AppJacocoModuleTest : AbstractPluginManager() {
 
     val jacocoModule = AppJacocoModule()
 
@@ -44,5 +45,4 @@ class AppJacocoModuleTest: AbstractPluginManager() {
     fun `When the AppJacocoModule configures the project create JacocoTestReport Task`() {
         assert(projects[APP_PROJECT]!!.tasks.findByName(JACOCO_TEST_REPORT_TASK) != null)
     }
-
 }

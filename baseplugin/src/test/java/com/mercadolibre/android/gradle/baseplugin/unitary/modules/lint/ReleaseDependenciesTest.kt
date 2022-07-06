@@ -17,8 +17,8 @@ import io.mockk.every
 import io.mockk.mockk
 import java.io.File
 import org.gradle.api.artifacts.Dependency
-import org.gradle.internal.impldep.org.junit.runner.RunWith
-import org.gradle.internal.impldep.org.junit.runners.JUnit4
+import org.junit.runner.RunWith
+import org.junit.runners.JUnit4
 
 @RunWith(JUnit4::class)
 class ReleaseDependenciesTest: AbstractPluginManager() {

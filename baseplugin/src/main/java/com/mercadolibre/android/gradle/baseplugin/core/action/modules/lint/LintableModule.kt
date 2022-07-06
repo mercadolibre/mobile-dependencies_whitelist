@@ -4,7 +4,7 @@ import com.android.build.gradle.AppExtension
 import com.android.build.gradle.LibraryExtension
 import com.android.build.gradle.api.BaseVariant
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.LintGradleExtension
-import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.LibraryWhitelistedDependenciesLint
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.LibraryAllowListDependenciesLint
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.ReleaseDependenciesLint
 import com.mercadolibre.android.gradle.baseplugin.core.basics.ExtensionGetter
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINTABLE_DESCRIPTION
@@ -17,14 +17,14 @@ import org.gradle.api.GradleException
 import org.gradle.api.Project
 import org.gradle.language.base.plugins.LifecycleBasePlugin
 
-class LintableModule: Module, ExtensionProvider, ExtensionGetter() {
+class LintableModule : Module, ExtensionProvider, ExtensionGetter() {
 
     override fun getName(): String {
         return LINTABLE_EXTENSION
     }
 
     private val linters = listOf(
-        LibraryWhitelistedDependenciesLint(),
+        LibraryAllowListDependenciesLint(),
         ReleaseDependenciesLint()
     )
 
@@ -58,7 +58,6 @@ class LintableModule: Module, ExtensionProvider, ExtensionGetter() {
                     if (enabled) {
                         var buildErrored = false
                         for (linter in linters) {
-                            println(":${project.name}:${name}")
                             val lintErrored = linter.lint(project, variants)
                             if (lintErrored) {
                                 buildErrored = true
@@ -83,6 +82,5 @@ class LintableModule: Module, ExtensionProvider, ExtensionGetter() {
                 }
             }
         }
-
     }
 }

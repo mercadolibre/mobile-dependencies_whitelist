@@ -11,8 +11,8 @@ import com.mercadolibre.android.gradle.baseplugin.managers.ROOT_PROJECT
 import com.mercadolibre.android.gradle.baseplugin.module.VersionProvider
 import org.gradle.api.Project
 import org.gradle.internal.impldep.org.junit.rules.TemporaryFolder
-import org.gradle.internal.impldep.org.junit.runner.RunWith
-import org.gradle.internal.impldep.org.junit.runners.JUnit4
+import org.junit.runner.RunWith
+import org.junit.runners.JUnit4
 import org.gradle.kotlin.dsl.apply
 
 @RunWith(JUnit4::class)

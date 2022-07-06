@@ -12,13 +12,14 @@ import com.mercadolibre.android.gradle.baseplugin.managers.LIBRARY_PROJECT
 import com.mercadolibre.android.gradle.baseplugin.managers.ROOT_PROJECT
 import io.mockk.every
 import io.mockk.mockk
-import java.io.File
+import org.gradle.api.Project
 import org.gradle.api.initialization.Settings
-import org.gradle.internal.impldep.org.junit.runner.RunWith
-import org.gradle.internal.impldep.org.junit.runners.JUnit4
+import org.junit.runner.RunWith
+import org.junit.runners.JUnit4
+import java.io.File
 
 @RunWith(JUnit4::class)
-class BuildScanTest: AbstractPluginManager() {
+class BuildScanTest : AbstractPluginManager() {
 
     val basePlugin = BasePlugin()
     val buildScan = BuildScanModule()
@@ -37,7 +38,7 @@ class BuildScanTest: AbstractPluginManager() {
     }
 
     @org.junit.Test
-    fun `When the BuildScanModule is called configure the project`() {
+    fun `When the BuildScanModule is called configure build scan extension the project`() {
         val extension = mockk<BuildScanExtension>(relaxed = true)
         buildScan.configBuildScanExtension(extension, ANY_NAME)
     }
@@ -46,6 +47,15 @@ class BuildScanTest: AbstractPluginManager() {
     fun `When the BuildScanModule is called configure her background tasks`() {
         val extension = mockk<BuildScanExtension>(relaxed = true)
         buildScan.configBackground(extension)
+    }
+
+    @org.junit.Test
+    fun `When the BuildScanModule is called configure the project`() {
+        val project = mockk<Project>(relaxed = true)
+
+        every { project.extensions.findByType(GradleEnterpriseExtension::class.java) } returns mockk(relaxed = true)
+
+        buildScan.configure(project)
     }
 
     @org.junit.Test
