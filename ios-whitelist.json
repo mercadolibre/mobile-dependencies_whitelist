@@ -416,7 +416,7 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "name": "MLCard",
+      "name": "MLCards",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
@@ -1145,7 +1145,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "expires": "2022-06-30",
+      "expires": "2022-07-21",
       "name": "MLScanner",
       "source": "private",
       "target": "production",
