@@ -1,5 +1,6 @@
 # 13.0.5
 - Soporte para evaluación de Regrex de la allowlist
+- Usamos libraryName en lugar de versionName
 
 # 13.0.4
 - Se agrega un fix al Linteo del Plugin
