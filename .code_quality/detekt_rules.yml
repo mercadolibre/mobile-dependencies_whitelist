@@ -558,7 +558,7 @@ potential-bugs:
   LateinitUsage:
     active: true
     excludes: "**/test/**,**/androidTest/**,**/*.Test.kt,**/*.Spec.kt,**/*.Spek.kt"
-    excludeAnnotatedProperties: [ ]
+    ignoreAnnotated: [ ]
     ignoreOnClassesPattern: ''
   MapGetWithNotNullAssertionOperator:
     active: true
@@ -646,7 +646,7 @@ style:
     ignoreOverridableFunction: true
     ignoreActualFunction: true
     excludedFunctions: ''
-    excludeAnnotatedFunction:
+    ignoreAnnotated:
       - 'dagger.Provides'
   LibraryCodeMustSpecifyReturnType:
     active: true
@@ -736,10 +736,10 @@ style:
     active: false
   UnderscoresInNumericLiterals:
     active: true
-    acceptableDecimalLength: 5
+    ignoreAnnotated: 5
   UnnecessaryAbstractClass:
     active: true
-    excludeAnnotatedClasses:
+    ignoreAnnotated:
       - 'dagger.Module'
   UnnecessaryAnnotationUseSiteTarget:
     active: true
@@ -770,7 +770,7 @@ style:
     active: true
   UseDataClass:
     active: true
-    excludeAnnotatedClasses: [ ]
+    ignoreAnnotated: [ ]
     allowVars: false
   UseEmptyCounterpart:
     active: true
