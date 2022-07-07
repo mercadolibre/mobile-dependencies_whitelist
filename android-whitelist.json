@@ -1062,9 +1062,15 @@
       "version": "mercadolibre-3\\.+"
     },
     {
+      "expires": "2022-08-07",
       "group": "com\\.mercadolibre\\.android\\.mercadocoin",
       "name": "cryptodata",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.mercadocoin",
+      "name": "cryptodata",
+      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.pendings",
