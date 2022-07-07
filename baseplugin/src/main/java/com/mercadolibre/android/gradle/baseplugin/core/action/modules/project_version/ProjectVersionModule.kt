@@ -5,10 +5,13 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.FILE_NAME_PROJ
 import com.mercadolibre.android.gradle.baseplugin.core.components.TASK_GET_PROJECT_DESCRIPTION
 import com.mercadolibre.android.gradle.baseplugin.core.components.TASK_GET_PROJECT_TASK
 import com.mercadolibre.android.gradle.baseplugin.core.domain.interfaces.Module
-import java.io.File
 import org.gradle.api.Project
+import java.io.File
 
-class ProjectVersion: Module {
+/**
+ * ProjectVersion Module is in charge of storing the version of the project so that it can be collected.
+ */
+class ProjectVersionModule : Module {
     override fun configure(project: Project) {
         val task = project.tasks.register(TASK_GET_PROJECT_TASK)
         task.configure {
@@ -26,8 +29,8 @@ class ProjectVersion: Module {
             folder.mkdirs()
         }
 
-        val inputFile = File("${folder}/${FILE_NAME_PROJECT_VERSION}")
+        val inputFile = File("$folder/$FILE_NAME_PROJECT_VERSION")
         inputFile.writeText("version: ${project.version}")
-        println("See ${folder}/${FILE_NAME_PROJECT_VERSION} file")
+        println("See $folder/$FILE_NAME_PROJECT_VERSION file")
     }
 }

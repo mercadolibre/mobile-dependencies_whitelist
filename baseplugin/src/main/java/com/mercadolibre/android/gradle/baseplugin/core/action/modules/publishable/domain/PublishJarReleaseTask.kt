@@ -6,7 +6,10 @@ import org.gradle.api.Task
 import org.gradle.api.tasks.SourceSet
 import org.gradle.api.tasks.TaskProvider
 
-abstract class PublishJarReleaseTask(private val repositoryName: String): PublishJarTask() {
+/**
+ * This class generates the Jar Release posts with help of TaskGenerator and PublishManager
+ */
+abstract class PublishJarReleaseTask(private val repositoryName: String) : PublishJarTask() {
 
     override fun register(project: Project, variant: SourceSet, taskName: String): TaskProvider<Task> {
         this.project = project

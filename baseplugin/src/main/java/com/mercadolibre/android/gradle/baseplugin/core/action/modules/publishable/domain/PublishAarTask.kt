@@ -14,7 +14,6 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_JAV
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_LINKS_ARR
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_OPTIONS
 import com.mercadolibre.android.gradle.baseplugin.core.components.SOURCES_CONSTANT
-import java.io.File
 import org.gradle.api.JavaVersion
 import org.gradle.api.Project
 import org.gradle.api.Task
@@ -22,8 +21,12 @@ import org.gradle.api.tasks.TaskProvider
 import org.gradle.configurationcache.extensions.capitalized
 import org.gradle.external.javadoc.JavadocMemberLevel
 import org.gradle.external.javadoc.StandardJavadocDocletOptions
+import java.io.File
 
-abstract class PublishAarTask: PublishTask() {
+/**
+ * This class generates the Aar Release posts with help of TaskGenerator
+ */
+abstract class PublishAarTask : PublishTask() {
 
     lateinit var variant: BaseVariant
 
@@ -54,24 +57,24 @@ abstract class PublishAarTask: PublishTask() {
                             classpath += project.files(listOf(findExtension<BaseExtension>(project)?.bootClasspath, File.pathSeparator))
 
                             project.configurations.all {
-                                if (isCanBeResolved && state != org.gradle.api.artifacts.Configuration.State.UNRESOLVED){
+                                if (isCanBeResolved && state != org.gradle.api.artifacts.Configuration.State.UNRESOLVED) {
                                     classpath += this
                                 }
                             }
 
                             if (JavaVersion.current().isJava8Compatible) {
-                                for (publishOption in PUBLISHING_OPTIONS){
+                                for (publishOption in PUBLISHING_OPTIONS) {
                                     (options as StandardJavadocDocletOptions).addStringOption(publishOption.key, publishOption.value)
                                 }
                             }
 
                             options.memberLevel = JavadocMemberLevel.PROTECTED
 
-                            for (publishLink in PUBLISHING_LINKS_ARR){
+                            for (publishLink in PUBLISHING_LINKS_ARR) {
                                 (options as StandardJavadocDocletOptions).links(publishLink)
                             }
 
-                            for (publishExclude in PUBLISHING_EXCLUDES_ARR){
+                            for (publishExclude in PUBLISHING_EXCLUDES_ARR) {
                                 exclude(publishExclude)
                             }
 
@@ -82,13 +85,18 @@ abstract class PublishAarTask: PublishTask() {
 
             configJavaDocJar()
 
-            registerPublish(project, listOf(sourcesJar, javadocJar.get(), VariantUtils.packageLibrary(variant)), variant.name, variant.flavorName)
+            registerPublish(
+                project,
+                listOf(sourcesJar, javadocJar.get(), VariantUtils.packageLibrary(variant)),
+                variant.name,
+                variant.flavorName
+            )
         }
     }
-    
+
     fun flavorVersion(version: String, variant: BaseVariant): String {
         if (!variant.flavorName.isNullOrEmpty()) {
-            return "${variant.flavorName}-${version}"
+            return "${variant.flavorName}-$version"
         }
         return version
     }
@@ -103,13 +111,10 @@ abstract class PublishAarTask: PublishTask() {
     }
 
     fun getSourcesJarTaskName(variant: BaseVariant): String {
-        return "${variant.name}${SOURCES_CONSTANT.capitalized()}${PACKAGING_JAR_CONSTANT}"
+        return "${variant.name}${SOURCES_CONSTANT.capitalized()}$PACKAGING_JAR_CONSTANT"
     }
 
     fun getJavadocJarTask(variant: BaseVariant): String {
-        return "${variant.name}$PUBLISHING_JAVADOC_TASK${PACKAGING_JAR_CONSTANT}"
+        return "${variant.name}$PUBLISHING_JAVADOC_TASK$PACKAGING_JAR_CONSTANT"
     }
-
-
-
 }

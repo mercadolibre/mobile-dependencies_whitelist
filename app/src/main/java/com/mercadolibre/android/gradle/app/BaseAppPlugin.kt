@@ -9,7 +9,10 @@ import com.mercadolibre.android.gradle.baseplugin.core.basics.AbstractPlugin
 import com.mercadolibre.android.gradle.baseplugin.core.components.APP_PLUGINS
 import org.gradle.api.Project
 
-class BaseAppPlugin: AbstractPlugin() {
+/**
+ * BaseAppPlugin is in charge of configuring the app module of the repository where it is being applied.
+ */
+class BaseAppPlugin : AbstractPlugin() {
 
     override fun apply(target: Any) = (target as Project).run {
         val appDetection = project.appDetection()

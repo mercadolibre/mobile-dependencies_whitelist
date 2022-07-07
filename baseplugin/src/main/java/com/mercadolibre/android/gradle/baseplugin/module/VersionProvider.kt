@@ -7,6 +7,9 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.JAVA_VERSION
 import com.mercadolibre.android.gradle.baseplugin.core.components.MIN_SDK_LEVEL
 import org.gradle.api.JavaVersion
 
+/**
+ * VersionProvider is in charge of providing the versions that the AndroidConfigurer will use to configure the android modules.
+ */
 object VersionProvider {
 
     fun provideMinSdk(): Int {

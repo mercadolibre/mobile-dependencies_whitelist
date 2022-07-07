@@ -11,7 +11,10 @@ import com.mercadolibre.android.gradle.baseplugin.module.ModuleProvider
 import org.gradle.api.Project
 import org.gradle.api.plugins.JavaPlugin
 
-open class ModuleConfigurer: Configurer {
+/**
+ * The Module Configurer is in charge of requesting all modules to add their functionality to the module they are pointing to.
+ */
+open class ModuleConfigurer : Configurer {
 
     override fun getDescription(): String {
         return MODULE_CONFIGURER_DESCRIPTION
@@ -19,14 +22,14 @@ open class ModuleConfigurer: Configurer {
 
     open fun getModules(name: String, modules: List<Any>): String {
         var listOfModules = "${name.ansi(ANSI_YELLOW)} $ARROW "
-        for (module in modules){
+        for (module in modules) {
             listOfModules += "${module::class.java.simpleName.ansi(ANSI_GREEN)}, "
         }
-        return listOfModules.substring(0, listOfModules.length-2)
+        return listOfModules.substring(0, listOfModules.length - 2)
     }
 
-    override fun configureProject(project: Project){
-        with(ModuleProvider){
+    override fun configureProject(project: Project) {
+        with(ModuleProvider) {
             project.plugins.withType(JavaPlugin::class.java) {
                 executeModuleConfig(provideJavaModules(), project)
             }
@@ -40,7 +43,7 @@ open class ModuleConfigurer: Configurer {
         }
     }
 
-    fun executeModuleConfig(modules: List<Module>, project: Project){
+    fun executeModuleConfig(modules: List<Module>, project: Project) {
         for (module in modules) {
             module.configure(project)
         }

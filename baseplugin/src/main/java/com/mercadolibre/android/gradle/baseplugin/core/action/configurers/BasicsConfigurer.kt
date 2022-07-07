@@ -7,7 +7,11 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.RESOLUTION_STR
 import com.mercadolibre.android.gradle.baseplugin.core.domain.interfaces.Configurer
 import org.gradle.api.Project
 
-open class BasicsConfigurer: Configurer {
+/**
+ * The Basics Configurer is in charge of providing the configurations so that the repository is capable of bringing dependencies
+ * and managing them
+ */
+open class BasicsConfigurer : Configurer {
 
     private val repositoryProvider by lazy { RepositoryProvider() }
 

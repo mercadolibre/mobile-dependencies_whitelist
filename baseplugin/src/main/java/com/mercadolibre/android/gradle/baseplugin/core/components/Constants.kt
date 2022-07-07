@@ -21,6 +21,7 @@ const val MELI_GROUP = "meliPlugin"
 const val RESOLUTION_STRATEGY_HOURS = 2
 
 const val GRADLE_ENTERPRISE = "com.gradle.enterprise"
+const val MAVEN_PUBLISH = "org.gradle.maven-publish"
 
 val LIBRARY_PLUGINS = listOf(
     "kotlin-android",

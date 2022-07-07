@@ -7,6 +7,9 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.ANSI_YELLOW
 import com.mercadolibre.android.gradle.baseplugin.core.components.APP_PLUGIN_DESCRIPTION_TASK
 import com.mercadolibre.android.gradle.baseplugin.core.components.ansi
 
+/**
+ * This module is responsible for showing the modules that are executed when implementing this plugin.
+ */
 class AppPluginDescriptionModule : AbstractModulePluginDescription(
     APP_PLUGIN_DESCRIPTION_TASK,
     AppModuleConfigurer::class.java.simpleName.ansi(ANSI_YELLOW),

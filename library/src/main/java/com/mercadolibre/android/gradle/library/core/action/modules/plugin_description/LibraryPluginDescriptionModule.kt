@@ -7,6 +7,9 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.ansi
 import com.mercadolibre.android.gradle.library.core.action.configurers.LibraryModuleConfigurer
 import com.mercadolibre.android.gradle.library.module.ModuleProvider
 
+/**
+ * This module is responsible for showing the modules that are executed when implementing this plugin.
+ */
 internal class LibraryPluginDescriptionModule : AbstractModulePluginDescription(
     LIBRARY_PLUGIN_DESCRIPTION_TASK,
     LibraryModuleConfigurer::class.java.simpleName.ansi(ANSI_YELLOW),

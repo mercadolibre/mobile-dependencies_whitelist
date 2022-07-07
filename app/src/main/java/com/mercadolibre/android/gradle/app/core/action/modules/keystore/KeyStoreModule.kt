@@ -13,17 +13,20 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.UNPACK_DEBUG_K
 import com.mercadolibre.android.gradle.baseplugin.core.components.UNPACK_DEBUG_KEY_STORE_GROUP
 import com.mercadolibre.android.gradle.baseplugin.core.components.UNPACK_DEBUG_KEY_STORE_TASK
 import com.mercadolibre.android.gradle.baseplugin.core.domain.interfaces.Module
-import java.io.File
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.get
+import java.io.File
 
-class KeyStoreModule(private val isApp: Boolean): Module, ExtensionGetter() {
+/**
+ * KeyStoreModule is in charge of providing the key when generating a release.
+ */
+class KeyStoreModule(private val isApp: Boolean) : Module, ExtensionGetter() {
     override fun configure(project: Project) {
-        if(isApp) {
+        if (isApp) {
             // Create info we will rely on
-            val directory = project.file("${project.buildDir}${File.separator}${DIRECTORY_NAME}")
-            val keystore = project.file("${directory.absolutePath}${File.separator}${FILE_NAME_DEBUG_KEY}")
-            val fileDir = "${project.projectDir}${File.separator}${FILE_NAME_DEBUG_KEY}"
+            val directory = project.file("${project.buildDir}${File.separator}$DIRECTORY_NAME")
+            val keystore = project.file("${directory.absolutePath}${File.separator}$FILE_NAME_DEBUG_KEY")
+            val fileDir = "${project.projectDir}${File.separator}$FILE_NAME_DEBUG_KEY"
 
             // Define a task to unpack the keystore were we will place it
             val unpackKeystoreTask = project.tasks.register(UNPACK_DEBUG_KEY_STORE_TASK)
@@ -37,7 +40,6 @@ class KeyStoreModule(private val isApp: Boolean): Module, ExtensionGetter() {
                 doLast {
                     writeFile(project, fileDir, keystore)
                 }
-
             }
 
             findExtension<AppExtension>(project)?.apply {

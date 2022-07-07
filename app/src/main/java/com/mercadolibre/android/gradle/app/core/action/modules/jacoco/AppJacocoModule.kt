@@ -6,7 +6,10 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.JACOCO_FULL_RE
 import org.gradle.api.Project
 import org.gradle.testing.jacoco.plugins.JacocoTaskExtension
 
-class AppJacocoModule: AndroidJacocoModule() {
+/**
+ * This module is in charge of configuring the Jacoco tasks for their correct operation.
+ */
+class AppJacocoModule : AndroidJacocoModule() {
     override fun configure(project: Project) {
         super.configure(project)
 

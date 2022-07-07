@@ -18,7 +18,10 @@ import org.gradle.api.Project
 import org.gradle.api.tasks.SourceSet
 import org.gradle.api.tasks.SourceSetContainer
 
-class JavaPublishableModule: PublishableModule() {
+/**
+ * JavaPublishableModule is in charge of generating all the tasks of a project to publish the modules.
+ */
+class JavaPublishableModule : PublishableModule() {
 
     override fun configure(project: Project) {
         super.configure(project)
@@ -36,29 +39,45 @@ class JavaPublishableModule: PublishableModule() {
     fun addTask(project: Project, variant: SourceSet) {
         val variantName = variant.name
         if (variantName != SOURCE_SETS_TEST) {
-            createTask(PublishJarPrivateReleaseTask(), variant, getTaskName(TASK_TYPE_RELEASE, PACKAGING_JAR_CONSTANT, variantName), project)
-            createTask(PublishJarExperimentalTask(), variant, getTaskName(TASK_TYPE_EXPERIMENTAL, PACKAGING_JAR_CONSTANT, variantName), project)
-            createTask(PublishJarLocalTask(), variant, getTaskName(TASK_TYPE_LOCAL, PACKAGING_JAR_CONSTANT, variantName), project)
-            createTask(PublishJarPrivateReleaseTask(), variant, getTaskName(TASK_TYPE_PRIVATE_RELEASE, PACKAGING_JAR_CONSTANT, variantName), project)
-            createTask(PublishJarPublicReleaseTask(), variant, getTaskName(TASK_TYPE_PUBLIC_RELEASE, PACKAGING_JAR_CONSTANT, variantName), project)
+            val taskTypes = mutableMapOf(
+                PublishJarPrivateReleaseTask() to TASK_TYPE_RELEASE,
+                PublishJarExperimentalTask() to TASK_TYPE_EXPERIMENTAL,
+                PublishJarLocalTask() to TASK_TYPE_LOCAL,
+                PublishJarPrivateReleaseTask() to TASK_TYPE_PRIVATE_RELEASE,
+                PublishJarPublicReleaseTask() to TASK_TYPE_PUBLIC_RELEASE
+
+            )
+
+            for (task in taskTypes) {
+                createTask(task.key, variant, getTaskName(task.value, PACKAGING_JAR_CONSTANT, variantName), project)
+            }
         }
 
         if (variantName == SOURCE_SETS_DEFAULT) {
-            // If release, create mirror tasks without the flavor name
-            // "Release" Task name maintained for retrocompatibility
-            createTask(PublishJarPrivateReleaseTask(), variant, getTaskName(TASK_TYPE_RELEASE, PACKAGING_JAR_CONSTANT), project)
-            createTask(PublishJarExperimentalTask(), variant, getTaskName(TASK_TYPE_EXPERIMENTAL, PACKAGING_JAR_CONSTANT), project)
-            createTask(PublishJarLocalTask(), variant, getTaskName(TASK_TYPE_LOCAL, PACKAGING_JAR_CONSTANT), project)
-            createTask(PublishJarPrivateReleaseTask(), variant, getTaskName(TASK_TYPE_PRIVATE_RELEASE, PACKAGING_JAR_CONSTANT), project)
-            createTask(PublishJarPublicReleaseTask(), variant, getTaskName(TASK_TYPE_PUBLIC_RELEASE, PACKAGING_JAR_CONSTANT), project)
 
-            // And also mirror them without the Jar suffix too
-            // "Release" Task name maintained for retrocompatibility
-            createTask(PublishJarPrivateReleaseTask(), variant, getTaskName(TASK_TYPE_RELEASE), project)
-            createTask(PublishJarExperimentalTask(), variant, getTaskName(TASK_TYPE_EXPERIMENTAL), project)
-            createTask(PublishJarLocalTask(), variant, getTaskName(TASK_TYPE_LOCAL), project)
-            createTask(PublishJarPrivateReleaseTask(), variant, getTaskName(TASK_TYPE_PRIVATE_RELEASE), project)
-            createTask(PublishJarPublicReleaseTask(), variant, getTaskName(TASK_TYPE_PUBLIC_RELEASE), project)
+            val taskTypes = mutableMapOf(
+                PublishJarPrivateReleaseTask() to TASK_TYPE_RELEASE,
+                PublishJarExperimentalTask() to TASK_TYPE_EXPERIMENTAL,
+                PublishJarLocalTask() to TASK_TYPE_LOCAL,
+                PublishJarPrivateReleaseTask() to TASK_TYPE_PRIVATE_RELEASE,
+                PublishJarPublicReleaseTask() to TASK_TYPE_PUBLIC_RELEASE,
+            )
+
+            for (task in taskTypes) {
+                createTask(task.key, variant, getTaskName(task.value, PACKAGING_JAR_CONSTANT), project)
+            }
+
+            val taskTypesMirror = mutableMapOf(
+                PublishJarPrivateReleaseTask() to TASK_TYPE_RELEASE,
+                PublishJarExperimentalTask() to TASK_TYPE_EXPERIMENTAL,
+                PublishJarLocalTask() to TASK_TYPE_LOCAL,
+                PublishJarPrivateReleaseTask() to TASK_TYPE_PRIVATE_RELEASE,
+                PublishJarPublicReleaseTask() to TASK_TYPE_PUBLIC_RELEASE,
+            )
+
+            for (task in taskTypesMirror) {
+                createTask(task.key, variant, getTaskName(task.value), project)
+            }
         }
     }
 }

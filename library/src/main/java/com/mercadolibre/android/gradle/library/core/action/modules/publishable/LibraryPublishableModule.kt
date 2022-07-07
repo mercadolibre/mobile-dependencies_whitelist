@@ -21,11 +21,14 @@ import org.gradle.api.Project
 import org.gradle.api.Task
 import org.gradle.api.tasks.TaskProvider
 
-class LibraryPublishableModule: PublishableModule() {
-    
+/**
+ * LibraryPublishableModule is in charge of generating all the tasks of a project to publish the modules.
+ */
+class LibraryPublishableModule : PublishableModule() {
+
     override fun configure(project: Project) {
         super.configure(project)
-        findExtension<LibraryExtension>(project)?.apply{
+        findExtension<LibraryExtension>(project)?.apply {
             libraryVariants.all {
                 createTasksFor(this, project)
             }
@@ -35,17 +38,27 @@ class LibraryPublishableModule: PublishableModule() {
     fun createTasksFor(libraryVariant: LibraryVariant, project: Project) {
         val variantName = libraryVariant.name
 
-        val experimentalTask = createTask(PublishAarExperimentalTask(), libraryVariant,
-        getTaskName(TASK_TYPE_EXPERIMENTAL, PACKAGING_AAR_CONSTANT, variantName), project)
+        val experimentalTask = createTask(
+            PublishAarExperimentalTask(), libraryVariant,
+            getTaskName(TASK_TYPE_EXPERIMENTAL, PACKAGING_AAR_CONSTANT, variantName), project
+        )
         // "Release" Task name maintained for retrocompatibility
-        val releaseTask = createTask(PublishAarPrivateReleaseTask(), libraryVariant,
-        getTaskName(TASK_TYPE_RELEASE, PACKAGING_AAR_CONSTANT, variantName), project)
-        val privateReleaseTask = createTask(PublishAarPrivateReleaseTask(), libraryVariant,
-        getTaskName(TASK_TYPE_PRIVATE_RELEASE, PACKAGING_AAR_CONSTANT, variantName), project)
-        val localTask = createTask(PublishAarLocalTask(), libraryVariant,
-        getTaskName(TASK_TYPE_LOCAL, PACKAGING_AAR_CONSTANT, variantName), project)
-        val publicReleaseTask = createTask(PublishAarPublicReleaseTask(), libraryVariant,
-        getTaskName(TASK_TYPE_PUBLIC_RELEASE, PACKAGING_AAR_CONSTANT, variantName), project)
+        val releaseTask = createTask(
+            PublishAarPrivateReleaseTask(), libraryVariant,
+            getTaskName(TASK_TYPE_RELEASE, PACKAGING_AAR_CONSTANT, variantName), project
+        )
+        val privateReleaseTask = createTask(
+            PublishAarPrivateReleaseTask(), libraryVariant,
+            getTaskName(TASK_TYPE_PRIVATE_RELEASE, PACKAGING_AAR_CONSTANT, variantName), project
+        )
+        val localTask = createTask(
+            PublishAarLocalTask(), libraryVariant,
+            getTaskName(TASK_TYPE_LOCAL, PACKAGING_AAR_CONSTANT, variantName), project
+        )
+        val publicReleaseTask = createTask(
+            PublishAarPublicReleaseTask(), libraryVariant,
+            getTaskName(TASK_TYPE_PUBLIC_RELEASE, PACKAGING_AAR_CONSTANT, variantName), project
+        )
 
         if (libraryVariant.name.toLowerCase().contains(RELEASE_CONSTANT)) {
             // Create tasks without the variant suffix that default to the main sourcesets
@@ -82,5 +95,4 @@ class LibraryPublishableModule: PublishableModule() {
             }
         }
     }
-    
 }

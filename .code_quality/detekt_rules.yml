@@ -42,9 +42,9 @@ console-reports:
 output-reports:
   active: true
   exclude:
-    # - 'TxtOutputReport'
-    # - 'XmlOutputReport'
-    # - 'HtmlOutputReport'
+  # - 'TxtOutputReport'
+  # - 'XmlOutputReport'
+  # - 'HtmlOutputReport'
 
 comments:
   active: true
@@ -558,7 +558,7 @@ potential-bugs:
   LateinitUsage:
     active: true
     excludes: "**/test/**,**/androidTest/**,**/*.Test.kt,**/*.Spec.kt,**/*.Spek.kt"
-    ignoreAnnotated: [ ]
+    excludeAnnotatedProperties: [ ]
     ignoreOnClassesPattern: ''
   MapGetWithNotNullAssertionOperator:
     active: true
@@ -646,7 +646,7 @@ style:
     ignoreOverridableFunction: true
     ignoreActualFunction: true
     excludedFunctions: ''
-    ignoreAnnotated:
+    excludeAnnotatedFunction:
       - 'dagger.Provides'
   LibraryCodeMustSpecifyReturnType:
     active: true
@@ -736,10 +736,10 @@ style:
     active: false
   UnderscoresInNumericLiterals:
     active: true
-    ignoreAnnotated: 5
+    acceptableDecimalLength: 5
   UnnecessaryAbstractClass:
     active: true
-    ignoreAnnotated:
+    excludeAnnotatedClasses:
       - 'dagger.Module'
   UnnecessaryAnnotationUseSiteTarget:
     active: true
@@ -770,7 +770,7 @@ style:
     active: true
   UseDataClass:
     active: true
-    ignoreAnnotated: [ ]
+    excludeAnnotatedClasses: [ ]
     allowVars: false
   UseEmptyCounterpart:
     active: true

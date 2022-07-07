@@ -8,7 +8,11 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.TEST_TASK
 import org.gradle.api.Project
 import org.gradle.testing.jacoco.tasks.JacocoReport
 
-class JavaJacocoModule: BaseJacocoModule() {
+/**
+ * Java Jacoco Module is in charge of providing the functionality for java modules of the jacoco reports for the coverage
+ * and the files that CI needs.
+ */
+class JavaJacocoModule : BaseJacocoModule() {
 
     override fun configure(project: Project) {
         super.configure(project)

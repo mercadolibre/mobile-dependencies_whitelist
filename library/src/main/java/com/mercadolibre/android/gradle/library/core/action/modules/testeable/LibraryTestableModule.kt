@@ -14,7 +14,10 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.VARIANT_CONSTA
 import com.mercadolibre.android.gradle.baseplugin.core.domain.interfaces.Module
 import org.gradle.api.Project
 
-class LibraryTestableModule: Module, ExtensionGetter() {
+/**
+ * LibraryTestableModule This is the module in charge of configuring all the tests within the library module.
+ */
+class LibraryTestableModule : Module, ExtensionGetter() {
     override fun configure(project: Project) {
         findExtension<BaseExtension>(project)?.apply {
             findExtension<LibraryExtension>(project)?.apply {

@@ -12,7 +12,10 @@ import org.gradle.api.Project
 import org.gradle.api.Task
 import org.gradle.api.tasks.TaskProvider
 
-class PublishAarLocalTask: PublishAarTask() {
+/**
+ * PublishAarLocalTask is in charge of generating the Local Aar publications.
+ */
+class PublishAarLocalTask : PublishAarTask() {
 
     override fun register(project: Project, variant: BaseVariant, taskName: String): TaskProvider<Task> {
         this.project = project
@@ -32,8 +35,7 @@ class PublishAarLocalTask: PublishAarTask() {
 
         return taskGenerator.task
     }
-    
 }
 
-class PublishAarPublicReleaseTask: PublishAarReleaseTask(PUBLIC_RELEASES)
-class PublishAarPrivateReleaseTask: PublishAarReleaseTask(INTERNAL_RELEASES)
+class PublishAarPublicReleaseTask : PublishAarReleaseTask(PUBLIC_RELEASES)
+class PublishAarPrivateReleaseTask : PublishAarReleaseTask(INTERNAL_RELEASES)

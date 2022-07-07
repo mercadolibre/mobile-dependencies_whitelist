@@ -6,6 +6,9 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.SETTINGS_MODUL
 import com.mercadolibre.android.gradle.baseplugin.core.domain.interfaces.Module
 import com.mercadolibre.android.gradle.baseplugin.core.domain.interfaces.SettingsModule
 
+/**
+ * ModuleProvider is in charge of providing the modules that the plugin will add to the projects, modules and settings.
+ */
 internal object ModuleProvider {
 
     fun provideJavaModules(): List<Module> {
@@ -19,5 +22,4 @@ internal object ModuleProvider {
     fun provideSettingsModules(): List<SettingsModule> {
         return SETTINGS_MODULES
     }
-    
 }

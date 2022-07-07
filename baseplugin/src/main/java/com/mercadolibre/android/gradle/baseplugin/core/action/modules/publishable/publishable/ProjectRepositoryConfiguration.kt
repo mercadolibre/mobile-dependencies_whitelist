@@ -2,15 +2,18 @@ package com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishab
 
 import com.mercadolibre.android.gradle.baseplugin.core.basics.ExtensionGetter
 import com.mercadolibre.android.gradle.baseplugin.core.domain.interfaces.Repository
-import java.io.File
-import java.net.URI
-import java.util.Properties
 import org.gradle.api.Project
 import org.gradle.api.publish.PublishingExtension
 import org.gradle.api.publish.maven.MavenPublication
 import org.gradle.kotlin.dsl.maven
+import java.io.File
+import java.net.URI
+import java.util.Properties
 
-internal class ProjectRepositoryConfiguration: ExtensionGetter() {
+/**
+ * The Project Repository Configuration class is responsible for providing the credentials to access the Meli repositories.
+ */
+internal class ProjectRepositoryConfiguration : ExtensionGetter() {
     fun setupPublishingRepositories(project: Project, repositoriesList: List<Repository>) {
         val homePath = System.getProperties()["user.home"]
         val props = Properties()
@@ -24,11 +27,11 @@ internal class ProjectRepositoryConfiguration: ExtensionGetter() {
             publications {
                 repositories {
                     repositoriesList.all {
-                        maven(MavenPublication::class.java){
+                        maven(MavenPublication::class.java) {
                             name = it.name
                             url = URI.create(it.url)
 
-                            credentials{
+                            credentials {
                                 username = artifactsUser
                                 password = artifactsPass
                             }

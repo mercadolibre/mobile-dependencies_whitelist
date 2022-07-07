@@ -18,7 +18,10 @@ import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 import org.gradle.api.tasks.testing.logging.TestLogEvent
 import org.gradle.kotlin.dsl.apply
 
-open class BaseJacocoModule: Module, ExtensionProvider, ExtensionGetter() {
+/**
+ * Base Jacoco Module is in charge of adding the Jacoco Plugin and generating the basic tasks for its operation.
+ */
+open class BaseJacocoModule : Module, ExtensionProvider, ExtensionGetter() {
 
     override fun getName(): String {
         return JACOCO_EXTENSION
@@ -63,5 +66,4 @@ open class BaseJacocoModule: Module, ExtensionProvider, ExtensionGetter() {
             subProjects.extensions.create(getName(), JacocoConfigurationExtension::class.java)
         }
     }
-
 }

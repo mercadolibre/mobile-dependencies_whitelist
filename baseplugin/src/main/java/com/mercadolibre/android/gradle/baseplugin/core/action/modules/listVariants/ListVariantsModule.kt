@@ -15,7 +15,10 @@ import com.mercadolibre.android.gradle.baseplugin.core.domain.interfaces.Module
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.extra
 
-class ListVariantsModule: Module, ExtensionGetter() {
+/**
+ * The ListVariantsModule is responsible for providing the functionality to display the variants of all projects.
+ */
+class ListVariantsModule : Module, ExtensionGetter() {
 
     override fun configure(project: Project) {
         project.tasks.register(LIST_VARIANTS_TASK) {
@@ -47,5 +50,4 @@ class ListVariantsModule: Module, ExtensionGetter() {
             }
         }
     }
-
 }

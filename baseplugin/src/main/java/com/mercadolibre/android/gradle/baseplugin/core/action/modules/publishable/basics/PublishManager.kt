@@ -6,11 +6,17 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.PACKAGING_JAR_
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_JAVADOC_TASK
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_SOURCES_TASK
 import com.mercadolibre.android.gradle.baseplugin.core.components.SOURCES_CONSTANT
-import java.io.File
 import org.gradle.api.Project
 import org.gradle.api.tasks.TaskProvider
 import org.gradle.api.tasks.bundling.Jar
+import java.io.File
 
+/**
+ * The PublishManager class is in charge of providing the variables and basic tasks so that a publication can be carried out.
+ *
+ * - SourceTask
+ * - JavaDocTask
+ */
 class PublishManager(private val variantName: String, variantFlavor: String?, val project: Project, val sourceDirs: Any) {
 
     var javaDocDestDir: File
@@ -27,7 +33,7 @@ class PublishManager(private val variantName: String, variantFlavor: String?, va
 
         val baseVariantArtifactId = (if (!variantFlavor.isNullOrEmpty()) variantFlavor else variantName).replace("_", "-")
 
-        javaDocDestDir = project.file("${project.buildDir}/docs/javadoc/${project.name}-${baseVariantArtifactId}")
+        javaDocDestDir = project.file("${project.buildDir}/docs/javadoc/${project.name}-$baseVariantArtifactId")
 
         taskNameJavaDoc = "${variantName}$PUBLISHING_JAVADOC_TASK"
         javadocJarTaskName = "${variantName}$PUBLISHING_JAVADOC_TASK$PACKAGING_JAR_CONSTANT"
@@ -62,5 +68,4 @@ class PublishManager(private val variantName: String, variantFlavor: String?, va
             }
         }
     }
-
 }

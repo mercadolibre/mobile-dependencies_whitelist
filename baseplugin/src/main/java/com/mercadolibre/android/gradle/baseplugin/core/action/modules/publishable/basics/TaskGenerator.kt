@@ -8,6 +8,14 @@ import org.gradle.api.Task
 import org.gradle.api.tasks.TaskProvider
 import org.gradle.configurationcache.extensions.capitalized
 
+/**
+ * The TaskGenerator class is responsible for generating the publication tasks for each of the options that exist.
+ *
+ * - Publish Jar or Aar
+ * - Release
+ * - Local
+ * - Experimental
+ */
 class TaskGenerator(
     taskName: String,
     version: String,
@@ -15,7 +23,7 @@ class TaskGenerator(
     list: List<String>,
     repositoryName: String,
     private val project: Project
-    ) {
+) {
 
     var task: TaskProvider<Task>
 
@@ -35,9 +43,9 @@ class TaskGenerator(
 
                         dependsOn(list)
 
-                        var finalizedTask = "$PUBLISH_CONSTANT${taskName.capitalized()}PublicationTo${repositoryName}"
+                        var finalizedTask = "$PUBLISH_CONSTANT${taskName.capitalized()}PublicationTo$repositoryName"
 
-                        if (!repositoryName.contains(PUBLISHING_MAVEN_LOCAL)){
+                        if (!repositoryName.contains(PUBLISHING_MAVEN_LOCAL)) {
                             finalizedTask += "Repository"
                         }
 
@@ -48,7 +56,8 @@ class TaskGenerator(
     }
 
     fun logVersion(taskName: String) {
-        versionContainer.logVersion("${project.group}:${project.name}:" +
+        versionContainer.logVersion(
+            "${project.group}:${project.name}:" +
                 versionContainer.get(
                     project.name,
                     taskName,
@@ -56,5 +65,4 @@ class TaskGenerator(
                 )
         )
     }
-
 }

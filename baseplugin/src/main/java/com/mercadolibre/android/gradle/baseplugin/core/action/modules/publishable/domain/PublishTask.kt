@@ -10,15 +10,18 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLICATION_CO
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_POM_FILE
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_TIME_GENERATOR
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_TIME_ZONE
-import java.text.SimpleDateFormat
-import java.util.Date
-import java.util.TimeZone
 import org.gradle.api.Project
 import org.gradle.api.publish.PublishingExtension
 import org.gradle.api.publish.maven.MavenPublication
 import org.gradle.configurationcache.extensions.capitalized
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.TimeZone
 
-abstract class PublishTask: ExtensionGetter() {
+/**
+ * This class generates the All posts with help of PomUtils
+ */
+abstract class PublishTask : ExtensionGetter() {
 
     val versionContainer = VersionContainer()
     lateinit var nameManager: PublishManager
@@ -46,7 +49,8 @@ abstract class PublishTask: ExtensionGetter() {
 
                         pomUtils.injectDependencies(project, this, variantName, variantFlavor)
 
-                        project.file("${project.buildDir}/$PUBLICATIONS_CONSTANT/${taskName}/$PUBLISHING_POM_FILE").writeText(this.asString().toString())
+                        project.file("${project.buildDir}/$PUBLICATIONS_CONSTANT/$taskName/$PUBLISHING_POM_FILE")
+                            .writeText(this.asString().toString())
                     }
 
                     val pomTaskName = "$POM_FILE_TASK${taskName.capitalize()}${PUBLICATION_CONSTANT.capitalized()}"

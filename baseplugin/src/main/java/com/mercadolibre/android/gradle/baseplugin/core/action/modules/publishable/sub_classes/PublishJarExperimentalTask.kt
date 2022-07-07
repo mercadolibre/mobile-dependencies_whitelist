@@ -9,7 +9,10 @@ import org.gradle.api.Task
 import org.gradle.api.tasks.SourceSet
 import org.gradle.api.tasks.TaskProvider
 
-class PublishJarExperimentalTask: PublishJarTask() {
+/**
+ * PublishJarExperimentalTask is in charge of generating the Experimental Jar publications.
+ */
+class PublishJarExperimentalTask : PublishJarTask() {
 
     override fun register(project: Project, variant: SourceSet, taskName: String): TaskProvider<Task> {
         this.project = project

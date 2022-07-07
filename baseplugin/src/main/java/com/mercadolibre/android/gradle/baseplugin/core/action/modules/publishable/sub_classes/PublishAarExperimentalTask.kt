@@ -9,7 +9,10 @@ import org.gradle.api.Project
 import org.gradle.api.Task
 import org.gradle.api.tasks.TaskProvider
 
-class PublishAarExperimentalTask: PublishAarTask() {
+/**
+ * PublishAarExperimentalTask is in charge of generating the Experimental Aar publications.
+ */
+class PublishAarExperimentalTask : PublishAarTask() {
 
     override fun register(project: Project, variant: BaseVariant, taskName: String): TaskProvider<Task> {
         this.project = project

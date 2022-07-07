@@ -7,7 +7,10 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.MELI_GROUP
 import com.mercadolibre.android.gradle.baseplugin.core.domain.interfaces.Module
 import org.gradle.api.Project
 
-class ListProjectsModule: Module {
+/**
+ * The List Projects Module is responsible for providing the functionality of showing the projects within the root.
+ */
+class ListProjectsModule : Module {
 
     override fun configure(project: Project) {
         project.tasks.register(LIST_PROJECTS_TASK) {
@@ -25,5 +28,4 @@ class ListProjectsModule: Module {
             println(subProject.name)
         }
     }
-
 }

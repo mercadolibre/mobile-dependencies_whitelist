@@ -9,7 +9,10 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.PLUGIN_MODULES
 import com.mercadolibre.android.gradle.baseplugin.core.domain.interfaces.Module
 import org.gradle.api.Project
 
-internal class PluginDescriptionModule: Module {
+/**
+ * PluginDescriptionModule is in charge of providing the functionality of showing the description of what the plugin does.
+ */
+internal class PluginDescriptionModule : Module {
 
     override fun configure(project: Project) {
 
@@ -34,6 +37,5 @@ internal class PluginDescriptionModule: Module {
 
             finalizedBy(PLUGIN_MODULES_DESCRIPTION_TASK)
         }
-
     }
 }

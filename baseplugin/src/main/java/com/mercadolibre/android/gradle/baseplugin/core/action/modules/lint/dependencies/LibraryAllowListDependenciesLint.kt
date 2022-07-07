@@ -31,6 +31,10 @@ import java.net.URL
 import java.text.SimpleDateFormat
 import java.util.regex.Pattern
 
+/**
+ * The LibraryAllowListDependenciesLint class is in charge of reviewing all the dependencies of the project through the AllowList to
+ * report if there is any deprecated in a Library.
+ */
 class LibraryAllowListDependenciesLint : Lint() {
 
     private val FILE_BLOCKER = "build/reports/${LibraryAllowListDependenciesLint::class.java.simpleName}/$LINT_FILENAME"

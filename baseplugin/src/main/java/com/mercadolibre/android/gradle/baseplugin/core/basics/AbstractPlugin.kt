@@ -6,7 +6,10 @@ import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.initialization.Settings
 
-abstract class AbstractPlugin: Plugin<Any>, PluginWithConfigurers {
+/**
+ * AbstractPlugin is in charge of providing the functionality to a plugin that can be applied in a Project or in a Settings.
+ */
+abstract class AbstractPlugin : Plugin<Any>, PluginWithConfigurers {
 
     override fun apply(target: Any) {
         when (target) {
@@ -21,7 +24,7 @@ abstract class AbstractPlugin: Plugin<Any>, PluginWithConfigurers {
         }
     }
 
-    fun applyBasePlugin(project: Project){
+    fun applyBasePlugin(project: Project) {
         for (configurer in configurers) {
             configurer.configureProject(project)
         }

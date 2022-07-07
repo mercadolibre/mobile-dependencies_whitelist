@@ -7,10 +7,13 @@ import groovy.lang.MetaProperty
 import org.codehaus.groovy.runtime.InvokerHelper
 import org.gradle.api.tasks.compile.JavaCompile
 
+/**
+ * VariantUtils is in charge of providing functionalities to explore the particularities of a variant.
+ */
 object VariantUtils {
 
     fun javaCompile(variant: BaseVariant): JavaCompile {
-        return if (hasProperty(variant,JAVA_COMPILE_PROVIDER) != null) {
+        return if (hasProperty(variant, JAVA_COMPILE_PROVIDER) != null) {
             variant.javaCompileProvider.get()
         } else {
             variant.javaCompile

@@ -6,11 +6,14 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.ANSI_GREEN
 import com.mercadolibre.android.gradle.baseplugin.core.components.ANSI_YELLOW
 import com.mercadolibre.android.gradle.baseplugin.core.components.ansi
 import com.mercadolibre.android.gradle.baseplugin.core.domain.interfaces.Repository
-import java.io.File
-import java.util.Properties
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.repositories
+import java.io.File
+import java.util.Properties
 
+/**
+ * RepositoryProvider is in charge of providing all the Meli repositories where to bring and publish the dependencies.
+ */
 internal class RepositoryProvider {
 
     companion object {
@@ -69,7 +72,6 @@ internal class RepositoryProvider {
     }
 
     private fun configRepo(project: Project, artifactsUser: String, artifactsPass: String) {
-
 
         with(project) {
             repositories {

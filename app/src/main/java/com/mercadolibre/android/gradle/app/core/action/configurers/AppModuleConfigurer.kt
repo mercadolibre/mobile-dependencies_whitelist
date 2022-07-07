@@ -4,7 +4,10 @@ import com.mercadolibre.android.gradle.app.module.ModuleProvider.provideAppAndro
 import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.ModuleConfigurer
 import org.gradle.api.Project
 
-open class AppModuleConfigurer: ModuleConfigurer() {
+/**
+ * The App Module Configurer is in charge of requesting all modules to add their functionality to the module they are pointing to.
+ */
+open class AppModuleConfigurer : ModuleConfigurer() {
 
     override fun configureProject(project: Project) {
         executeModuleConfig(provideAppAndroidModules(), project)

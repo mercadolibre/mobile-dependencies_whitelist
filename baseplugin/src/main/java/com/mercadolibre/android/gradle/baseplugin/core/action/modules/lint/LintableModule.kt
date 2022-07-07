@@ -17,6 +17,9 @@ import org.gradle.api.GradleException
 import org.gradle.api.Project
 import org.gradle.language.base.plugins.LifecycleBasePlugin
 
+/**
+ * The LintableModule module is in charge of configuring the Linteo in each of the variants of the project modules.
+ */
 class LintableModule : Module, ExtensionProvider, ExtensionGetter() {
 
     override fun getName(): String {

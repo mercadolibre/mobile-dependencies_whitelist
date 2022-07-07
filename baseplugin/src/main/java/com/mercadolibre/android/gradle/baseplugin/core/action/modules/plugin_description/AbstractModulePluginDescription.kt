@@ -8,6 +8,10 @@ import com.mercadolibre.android.gradle.baseplugin.core.domain.interfaces.Module
 import org.gradle.api.Project
 import org.gradle.api.Task
 
+/**
+ * The AbstractModule Plugin Description class is in charge of providing the basic functionalities that the modules that describe a
+ * Module Configurer must have.
+ */
 abstract class AbstractModulePluginDescription(val taskName: String, private val moduleName: String, val content: () -> String) : Module {
 
     override fun configure(project: Project) {

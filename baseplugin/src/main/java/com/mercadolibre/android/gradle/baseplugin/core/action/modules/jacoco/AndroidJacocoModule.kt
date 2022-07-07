@@ -10,15 +10,19 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.JACOCO_ANDROID
 import com.mercadolibre.android.gradle.baseplugin.core.components.JACOCO_GROUP
 import com.mercadolibre.android.gradle.baseplugin.core.components.JACOCO_TEST_REPORT_DESCRIPTION
 import com.mercadolibre.android.gradle.baseplugin.core.components.JACOCO_TEST_REPORT_TASK
-import java.io.File
 import org.gradle.api.Project
 import org.gradle.api.Task
 import org.gradle.api.tasks.TaskProvider
 import org.gradle.api.tasks.testing.Test
 import org.gradle.testing.jacoco.plugins.JacocoTaskExtension
 import org.gradle.testing.jacoco.tasks.JacocoReport
+import java.io.File
 
-abstract class AndroidJacocoModule: BaseJacocoModule() {
+/**
+ * Android Jacoco Module is in charge of providing the functionality for android modules of the jacoco reports for the coverage
+ * and the files that CI needs.
+ */
+abstract class AndroidJacocoModule : BaseJacocoModule() {
 
     fun findOrCreateJacocoTestReportTask(project: Project): TaskProvider<Task> {
         if (project.tasks.names.contains(JACOCO_TEST_REPORT_TASK)) {
@@ -113,5 +117,4 @@ abstract class AndroidJacocoModule: BaseJacocoModule() {
         }
         return path
     }
-
 }

@@ -25,10 +25,14 @@ import org.gradle.api.artifacts.Dependency
 import org.gradle.api.artifacts.ModuleDependency
 import org.gradle.configurationcache.extensions.capitalized
 
-class PomUtils: ExtensionGetter() {
+/**
+ * PomUtils is in charge of generating the Nodes that contain the dependencies of the project so that they
+ * can later be read in the publication.
+ */
+class PomUtils : ExtensionGetter() {
 
     private fun scope(configuration: String, variantName: String, flavor: String?): String? {
-        val compileConfigurations = 
+        val compileConfigurations =
             arrayListOf(
                 DEFAULT_CONSTANT,
                 ARCHIVES_CONSTANT,
@@ -40,7 +44,7 @@ class PomUtils: ExtensionGetter() {
                 "${variantName}${API_CONSTANT.capitalized()}"
             )
 
-        if (flavor != null){
+        if (flavor != null) {
             compileConfigurations.addAll(
                 listOf(
                     "${flavor}${API_CONSTANT.capitalized()}",
@@ -69,13 +73,12 @@ class PomUtils: ExtensionGetter() {
                 "${variantName}${COMPILE_CONSTANT.capitalized()}Only"
             )
 
-        return when(configuration) {
+        return when (configuration) {
             in providedConfigurations -> PROVIDED_CONSTANT
             in runtimeConfigurations -> RUNTIME_CONSTANT
             in testConfigurations -> TEST_CONSTANT
             in compileConfigurations -> COMPILE_CONSTANT
             else -> null
-
         }
     }
 

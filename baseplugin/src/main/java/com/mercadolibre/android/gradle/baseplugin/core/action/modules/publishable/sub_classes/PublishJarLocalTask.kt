@@ -12,7 +12,10 @@ import org.gradle.api.Task
 import org.gradle.api.tasks.SourceSet
 import org.gradle.api.tasks.TaskProvider
 
-class PublishJarLocalTask: PublishJarTask() {
+/**
+ * PublishJarLocalTask is in charge of generating the Local Jar publications.
+ */
+class PublishJarLocalTask : PublishJarTask() {
 
     override fun register(project: Project, variant: SourceSet, taskName: String): TaskProvider<Task> {
         this.project = project
@@ -34,5 +37,5 @@ class PublishJarLocalTask: PublishJarTask() {
     }
 }
 
-class PublishJarPrivateReleaseTask: PublishJarReleaseTask(INTERNAL_RELEASES)
-class PublishJarPublicReleaseTask: PublishJarReleaseTask(PUBLIC_RELEASES)
+class PublishJarPrivateReleaseTask : PublishJarReleaseTask(INTERNAL_RELEASES)
+class PublishJarPublicReleaseTask : PublishJarReleaseTask(PUBLIC_RELEASES)

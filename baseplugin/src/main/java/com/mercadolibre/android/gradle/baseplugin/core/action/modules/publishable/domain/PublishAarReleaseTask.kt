@@ -6,7 +6,10 @@ import org.gradle.api.Project
 import org.gradle.api.Task
 import org.gradle.api.tasks.TaskProvider
 
-abstract class PublishAarReleaseTask(private val repositoryName: String): PublishAarTask() {
+/**
+ * This class generates the Aar Release posts with help of TaskGenerator
+ */
+abstract class PublishAarReleaseTask(private val repositoryName: String) : PublishAarTask() {
 
     override fun register(project: Project, variant: BaseVariant, taskName: String): TaskProvider<Task> {
         this.project = project

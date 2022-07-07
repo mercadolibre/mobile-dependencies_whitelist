@@ -7,15 +7,19 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_FILENAME
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_RELEASE_DEPENDENCIES_TASK
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_EXPERIMENTAL
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_LOCAL
+import org.gradle.api.Project
 import java.io.File
 import java.util.stream.Stream
-import org.gradle.api.Project
 
-class ReleaseDependenciesLint: Lint() {
+/**
+ * The ReleaseDependenciesLint class is in charge of reviewing all the dependencies of the project to report if there is any deprecated
+ * in a Release App.
+ */
+class ReleaseDependenciesLint : Lint() {
 
     private val ERROR_TITLE = "Error. Found non-release dependencies in the module release version:"
 
-    private val FILE = "build/reports/${ReleaseDependenciesLint::class.java.simpleName}/${LINT_FILENAME}"
+    private val FILE = "build/reports/${ReleaseDependenciesLint::class.java.simpleName}/$LINT_FILENAME"
 
     override fun name(): String {
         return LINT_RELEASE_DEPENDENCIES_TASK
@@ -23,7 +27,7 @@ class ReleaseDependenciesLint: Lint() {
 
     override fun lint(project: Project, variants: ArrayList<BaseVariant>): Boolean {
         findExtension<LintGradleExtension>(project)?.apply {
-            if (!releaseDependenciesLintEnabled){
+            if (!releaseDependenciesLintEnabled) {
                 return false
             }
         }
@@ -58,11 +62,10 @@ class ReleaseDependenciesLint: Lint() {
                 lintResultsFile.writeText(ERROR_TITLE)
             }
 
-            lintResultsFile.appendText("${System.getProperty("line.separator")}${dependency}")
+            lintResultsFile.appendText("${System.getProperty("line.separator")}$dependency")
             println(dependency)
             return true
         }
         return false
     }
-
 }
