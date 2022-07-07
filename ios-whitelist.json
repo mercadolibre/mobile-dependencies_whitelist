@@ -44,10 +44,17 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "expires": "2022-08-15",
       "name": "Bugsnag",
       "source": "public",
       "target": "production",
       "version": "6.14.3"
+    },
+    {
+      "name": "Bugsnag",
+      "source": "public",
+      "target": "production",
+      "version": "6.19.0"
     },
     {
       "name": "BugsnagNetworkRequestPlugin",
@@ -409,7 +416,7 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "name": "MLCard",
+      "name": "MlCards",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
@@ -1013,7 +1020,7 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "expires": "2022-06-29",
+      "expires": "2022-07-29",
       "name": "MPContacts",
       "source": "private",
       "target": "production",
@@ -1138,7 +1145,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "expires": "2022-06-30",
+      "expires": "2022-07-21",
       "name": "MLScanner",
       "source": "private",
       "target": "production",
@@ -1282,7 +1289,7 @@
       "version": "^~>\\s?10|[1-9].[0-9]+$"
     },
     {
-      "expires": "2022-06-29",
+      "expires": "2022-08-29",
       "name": "StartUPInitializer",
       "source": "private",
       "target": "production",
@@ -1654,6 +1661,12 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "GoogleAds-IMA-iOS-SDK",
+      "source": "public",
+      "target": "production",
+      "version": "3.16.1"
     }
   ]
 }
