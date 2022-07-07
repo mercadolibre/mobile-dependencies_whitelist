@@ -1,4 +1,7 @@
-# 13.0.5
+# 13.0.6
+- Por problemas al publicar la version debemos agregar la variable "libraryVersion"
+
+# 13.0.5 (unpublished)
 - Soporte para evaluación de Regrex de la allowlist
 
 # 13.0.4
