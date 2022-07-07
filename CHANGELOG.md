@@ -1,3 +1,6 @@
+# 13.0.5
+- Soporte para evaluación de Regrex de la allowlist
+
 # 13.0.4
 - Se agrega un fix al Linteo del Plugin
 - Se evita que la task pluginDescription se ejecute sola

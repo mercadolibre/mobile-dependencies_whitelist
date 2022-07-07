@@ -236,7 +236,6 @@ val PUBLISHING_OPTIONS = mutableMapOf(
  *                MISC                    *
  *******************************************/
 
-const val VERSION_NAME_CONSTANT = "versionName"
 const val RELEASE_CONSTANT = "release"
 const val MDS_CONSTANT = "mds"
 const val DEBUG_CONSTANT = "debug"

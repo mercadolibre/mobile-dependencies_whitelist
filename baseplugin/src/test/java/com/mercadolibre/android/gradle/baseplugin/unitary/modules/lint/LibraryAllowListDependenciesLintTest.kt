@@ -121,10 +121,10 @@ class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
 
         lintableModule.ALLOWLIST_DEPENDENCIES.addAll(listOf(dependencyExpired, dependencyExpired2, dependencyExpired3, dependencyExpired4))
 
-        lintableModule.analizeDependency(dependency, projects[LIBRARY_PROJECT]!!)
-        lintableModule.analizeDependency(dependency2, projects[LIBRARY_PROJECT]!!)
-        lintableModule.analizeDependency(dependency3, projects[LIBRARY_PROJECT]!!)
-        lintableModule.analizeDependency(dependency4, projects[LIBRARY_PROJECT]!!)
+        lintableModule.analyzeDependency(dependency, projects[LIBRARY_PROJECT]!!)
+        lintableModule.analyzeDependency(dependency2, projects[LIBRARY_PROJECT]!!)
+        lintableModule.analyzeDependency(dependency3, projects[LIBRARY_PROJECT]!!)
+        lintableModule.analyzeDependency(dependency4, projects[LIBRARY_PROJECT]!!)
 
         val lintErrorFile = projects[LIBRARY_PROJECT]!!.file(
             "build/reports/${LibraryAllowListDependenciesLint::class.java.simpleName}/$LINT_FILENAME"
@@ -156,7 +156,7 @@ class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
     fun `When the LibraryAllowListDependenciesLintTest is called analize any Dependency Invalid`() {
         val dependency = Dependency("group", "name", "version", null, "")
 
-        lintableModule.analizeDependency(dependency, projects[LIBRARY_PROJECT]!!)
+        lintableModule.analyzeDependency(dependency, projects[LIBRARY_PROJECT]!!)
 
         val lintWarningFile = projects[LIBRARY_PROJECT]!!.file(
             "build/reports/${LibraryAllowListDependenciesLint::class.java.simpleName}/$LINT_FILENAME"
@@ -173,7 +173,7 @@ class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
 
         lintableModule.ALLOWLIST_DEPENDENCIES.add(dependency)
 
-        lintableModule.analizeDependency(dependency, projects[LIBRARY_PROJECT]!!)
+        lintableModule.analyzeDependency(dependency, projects[LIBRARY_PROJECT]!!)
 
         val lintErrorFile = projects[LIBRARY_PROJECT]!!.file(
             "build/reports/${LibraryAllowListDependenciesLint::class.java.simpleName}/$LINT_FILENAME"
@@ -220,18 +220,18 @@ class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
         item.addProperty("name", "name")
         item.addProperty("version", "1.0.0")
 
-        Assert.assertEquals(expected.name, lintableModule.getVariableFromJson("name", item))
-        Assert.assertEquals(expected.group, lintableModule.getVariableFromJson("group", item))
-        Assert.assertEquals(expected.version, lintableModule.getVariableFromJson("version", item))
+        Assert.assertEquals(expected.name, lintableModule.getVariableFromJson("name", item, ".*"))
+        Assert.assertEquals(expected.group, lintableModule.getVariableFromJson("group", item, ""))
+        Assert.assertEquals(expected.version, lintableModule.getVariableFromJson("version", item, ".*"))
     }
 
     @org.junit.Test
-    fun `When parsing a non valid field in JsonElement get null value`() {
+    fun `When parsing a non valid field in JsonElement get default value`() {
         val expected: String? = null
 
         val item = JsonObject()
         item.addProperty("group", "group")
-        val actual = lintableModule.getVariableFromJson("no_exist", item)
+        val actual = lintableModule.getVariableFromJson("no_exist", item, null)
 
         Assert.assertEquals(expected, actual)
     }
