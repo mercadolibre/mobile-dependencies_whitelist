@@ -24,17 +24,20 @@ const val ALLOW_LIST_URL = "https://raw.githubusercontent.com/mercadolibre/mobil
 const val GRADLE_ENTERPRISE = "com.gradle.enterprise" /** This variable contains a plugin. */
 const val MAVEN_PUBLISH = "org.gradle.maven-publish" /** This variable contains a plugin. */
 const val JACOCO_PLUGIN = "org.gradle.jacoco" /** This variable contains a plugin. */
+const val KOTLIN_ANDROID = "kotlin-android" /** This variable contains a plugin. */
+const val LIBRARY_PLUGIN = "com.android.library" /** This variable contains a plugin. */
+const val APP_PLUGIN = "com.android.application" /** This variable contains a plugin. */
 
 /** This list contains the plugins that an library needs. */
 val LIBRARY_PLUGINS = listOf(
-    "kotlin-android",
-    "com.android.library"
+    KOTLIN_ANDROID,
+    LIBRARY_PLUGIN
 )
 
 /** This list contains the plugins that an app needs. */
 val APP_PLUGINS = listOf(
-    "kotlin-android",
-    "com.android.application"
+    KOTLIN_ANDROID,
+    APP_PLUGIN
 )
 
 const val ANSI_RESET = "\u001B[0m" /** This variable contains an ANSI style. */

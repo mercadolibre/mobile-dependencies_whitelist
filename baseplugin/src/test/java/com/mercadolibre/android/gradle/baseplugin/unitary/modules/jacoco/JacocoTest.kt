@@ -37,13 +37,30 @@ class JacocoTest : AbstractPluginManager() {
 
         pathsAffectingAllModules.forEach { File(tmpFolder.root, it).mkdirs() }
 
-        root = moduleManager.createRootProject(ROOT_PROJECT, mutableMapOf(LIBRARY_PROJECT to ModuleType.LIBRARY), projects, fileManager)
+        root = moduleManager.createRootProject(
+            ROOT_PROJECT,
+            mutableMapOf(LIBRARY_PROJECT to ModuleType.LIBRARY, ANY_NAME to ModuleType.LIBRARY),
+            projects,
+            fileManager
+        )
 
         JacocoConfigurationExtension().excludeList = listOf()
 
         jacocoModule.createNeededTasks(projects[LIBRARY_PROJECT]!!)
 
+        libraryJacocoModule.findOrCreateJacocoTestReportTask(projects[ANY_NAME]!!)
+
         projects[LIBRARY_PROJECT]!!.tasks.create("testAnyNameUnitTest", Test::class.java)
+    }
+
+    @org.junit.Test
+    fun `When the AndroidJacocoModule is called find or create Test Report Task and not exist`() {
+        libraryJacocoModule.findOrCreateJacocoTestReportTask(projects[LIBRARY_PROJECT]!!)
+    }
+
+    @org.junit.Test
+    fun `When the AndroidJacocoModule is called find or create Test Report Task`() {
+        libraryJacocoModule.findOrCreateJacocoTestReportTask(projects[LIBRARY_PROJECT]!!)
     }
 
     @org.junit.Test
