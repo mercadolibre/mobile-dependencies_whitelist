@@ -54,7 +54,7 @@ class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
     @org.junit.Test
     fun `When one Status Base is created works`() {
         val status = StatusBase(shouldReport = false, isBlocker = true, name = ANY_NAME)
-        Status().goign_to_expire()
+        Status().goignToExpire()
         try {
             Assert.fail(status.message(ANY_NAME))
         } catch (e: IllegalAccessException) {

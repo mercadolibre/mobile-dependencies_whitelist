@@ -26,6 +26,9 @@ import org.gradle.api.tasks.TaskProvider
  */
 class LibraryPublishableModule : PublishableModule() {
 
+    /**
+     * This method is in charge of requesting that all publication tasks be added.
+     */
     override fun configure(project: Project) {
         super.configure(project)
         findExtension<LibraryExtension>(project)?.apply {
@@ -35,6 +38,9 @@ class LibraryPublishableModule : PublishableModule() {
         }
     }
 
+    /**
+     * This method is in charge of generating all the publishing tasks for the different types of Build Variants.
+     */
     fun createTasksFor(libraryVariant: LibraryVariant, project: Project) {
         val variantName = libraryVariant.name
 

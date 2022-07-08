@@ -20,6 +20,9 @@ import org.gradle.kotlin.dsl.extra
  */
 class ListVariantsModule : Module, ExtensionGetter() {
 
+    /**
+     * This is the method in charge of adding the task that shows the variants within the repository.
+     */
     override fun configure(project: Project) {
         project.tasks.register(LIST_VARIANTS_TASK) {
             group = MELI_GROUP

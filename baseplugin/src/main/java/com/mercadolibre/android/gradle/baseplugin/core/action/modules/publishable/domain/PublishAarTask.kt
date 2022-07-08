@@ -30,8 +30,14 @@ abstract class PublishAarTask : PublishTask() {
 
     lateinit var variant: BaseVariant
 
+    /**
+     * This function seeks to provide the functionality of registering the tasks necessary to publish a module.
+     */
     abstract fun register(project: Project, variant: BaseVariant, taskName: String): TaskProvider<Task>
 
+    /**
+     * This method is in charge of generating the task that publishes a module with all its configurations.
+     */
     internal fun createMavenPublication() {
         val sourceDirs: MutableCollection<File> = mutableListOf()
         variant.sourceSets.all {
@@ -94,6 +100,9 @@ abstract class PublishAarTask : PublishTask() {
         }
     }
 
+    /**
+     * This method is in charge of adding the flavor of the module in case it has one.
+     */
     fun flavorVersion(version: String, variant: BaseVariant): String {
         if (!variant.flavorName.isNullOrEmpty()) {
             return "${variant.flavorName}-$version"
@@ -101,6 +110,9 @@ abstract class PublishAarTask : PublishTask() {
         return version
     }
 
+    /**
+     * This method is in charge of looking for the task that contains the bundle.
+     */
     fun getBundleTaskName(project: Project, variant: BaseVariant): String {
         val bundleTask = "$BUNDLE_CONSTANT${variant.name.capitalize()}"
         return if (project.tasks.names.contains("${bundleTask}$PACKAGING_AAR_CONSTANT")) {
@@ -110,10 +122,16 @@ abstract class PublishAarTask : PublishTask() {
         }
     }
 
+    /**
+     * This method is in charge of looking for the Source Jar task
+     */
     fun getSourcesJarTaskName(variant: BaseVariant): String {
         return "${variant.name}${SOURCES_CONSTANT.capitalized()}$PACKAGING_JAR_CONSTANT"
     }
 
+    /**
+     * This method is in charge of looking for the Java Doc Jar task
+     */
     fun getJavadocJarTask(variant: BaseVariant): String {
         return "${variant.name}$PUBLISHING_JAVADOC_TASK$PACKAGING_JAR_CONSTANT"
     }

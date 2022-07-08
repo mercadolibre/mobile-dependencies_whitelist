@@ -12,10 +12,16 @@ import org.gradle.api.Project
  */
 open class AndroidConfigurer : Configurer, ExtensionGetter() {
 
+    /**
+     * This method allows us to get a description of what this Configurer does.
+     */
     override fun getDescription(): String {
         return ANDROID_CONFIGURER_DESCRIPTION
     }
 
+    /**
+     * This is the method that sets all the variables needed to build an android project.
+     */
     override fun configureProject(project: Project) {
         findExtension<BaseExtension>(project)?.apply {
             with(VersionProvider) {

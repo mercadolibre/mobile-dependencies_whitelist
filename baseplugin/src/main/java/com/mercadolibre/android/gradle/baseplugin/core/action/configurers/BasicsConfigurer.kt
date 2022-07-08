@@ -15,10 +15,16 @@ open class BasicsConfigurer : Configurer {
 
     private val repositoryProvider by lazy { RepositoryProvider() }
 
+    /**
+     * This method allows us to get a description of what this Configurer does.
+     */
     override fun getDescription(): String {
         return BASICS_CONFIGURER_DESCRIPTION
     }
 
+    /**
+     * This method is responsible for configuring the repositories that a project needs for its dependencies and configures its cache.
+     */
     override fun configureProject(project: Project) {
         repositoryProvider.setupFetchingRepositories(project)
         for (subProject in project.subprojects) {

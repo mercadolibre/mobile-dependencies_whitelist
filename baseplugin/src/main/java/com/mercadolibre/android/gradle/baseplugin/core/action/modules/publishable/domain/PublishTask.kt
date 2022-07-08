@@ -29,10 +29,16 @@ abstract class PublishTask : ExtensionGetter() {
     lateinit var project: Project
     lateinit var taskName: String
 
+    /**
+     * This method is responsible for generating the timestamp so that the version does not have duplicates.
+     */
     fun getTimestamp(): String {
         return SimpleDateFormat(PUBLISHING_TIME_GENERATOR).apply { timeZone = TimeZone.getTimeZone(PUBLISHING_TIME_ZONE) }.format(Date())
     }
 
+    /**
+     * This method is in charge of registering the publication so that it is accessible from other repositories.
+     */
     fun registerPublish(project: Project, artifacts: List<Any?>, variantName: String, variantFlavor: String?) {
         val pomUtils = PomUtils()
 

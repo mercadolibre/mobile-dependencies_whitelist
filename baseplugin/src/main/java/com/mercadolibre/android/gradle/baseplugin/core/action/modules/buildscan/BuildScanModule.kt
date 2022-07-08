@@ -24,6 +24,9 @@ import java.util.stream.Collectors
  */
 class BuildScanModule : Module, SettingsModule, ExtensionGetter() {
 
+    /**
+     * This method is responsible for applying the Gradle Enterprise plugin and requesting that its extension be configured.
+     */
     fun configure(obj: PluginAware, projectName: String) {
         if (obj is Project || obj is Settings) {
             if (obj is Settings) {
@@ -36,6 +39,9 @@ class BuildScanModule : Module, SettingsModule, ExtensionGetter() {
         }
     }
 
+    /**
+     * This method is responsible for configuring the Gradle Enterprise extension to publish the Builds.
+     */
     fun configBuildScanExtension(gradleExtension: BuildScanExtension, projectName: String) {
         with(gradleExtension) {
             publishAlways()
@@ -59,6 +65,9 @@ class BuildScanModule : Module, SettingsModule, ExtensionGetter() {
         }
     }
 
+    /**
+     * This method is in charge of setting the context variables where the build is executed in order to be seen in Gradle Enterprise.
+     */
     fun configBackground(buildScanExtension: BuildScanExtension) {
         with(buildScanExtension) {
             value("Git Commit ID", getCommandText("git rev-parse --verify HEAD"))

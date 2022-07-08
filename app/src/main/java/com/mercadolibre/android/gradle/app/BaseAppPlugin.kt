@@ -14,16 +14,23 @@ import org.gradle.api.Project
  */
 class BaseAppPlugin : AbstractPlugin() {
 
-    override fun apply(target: Any) = (target as Project).run {
-        val appDetection = project.appDetection()
+    /**
+     * This method is responsible for applying all the plugin settings in a root or in a settings.
+     */
+    override fun apply(target: Any) {
+        if (target is Project) {
+            val appDetection = target.appDetection()
 
-        afterEvaluate {
-            KeyStoreModule(appDetection.appDetection.isProductiveApp).configure(project)
+            target.afterEvaluate {
+                KeyStoreModule(appDetection.appDetection.isProductiveApp).configure(this)
+            }
         }
-
-        applyBasePlugin(this)
+        super.apply(target)
     }
 
+    /**
+     * This variable contains the configurers that will be executed when applying the plugin.
+     */
     override val configurers = arrayListOf(
         PluginConfigurer(APP_PLUGINS),
         AndroidConfigurer(),

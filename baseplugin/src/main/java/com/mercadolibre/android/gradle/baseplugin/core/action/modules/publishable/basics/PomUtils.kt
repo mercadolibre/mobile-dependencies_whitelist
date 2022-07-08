@@ -106,6 +106,9 @@ class PomUtils : ExtensionGetter() {
         node.appendNode(SCOPE_CONSTANT, scope)
     }
 
+    /**
+     * This method is in charge of adding the exclusions of the dependencies to the Node.
+     */
     fun addExclusions(node: Node, dependency: ModuleDependency?) {
         if (dependency != null) {
             if (dependency.excludeRules.isNotEmpty()) {
@@ -120,6 +123,9 @@ class PomUtils : ExtensionGetter() {
         }
     }
 
+    /**
+     * This method is in charge of adding the content of a dependency so that it contains all its information.
+     */
     fun configDependency(dependenciesNode: Node, scope: String, addedDeps: ArrayList<Dependency>, dependency: Dependency) {
         if (shouldAddDependency(addedDeps, dependency)) {
             val dependencyNode = dependenciesNode.appendNode(DEPENDENCY_CONSTANT)
@@ -134,6 +140,9 @@ class PomUtils : ExtensionGetter() {
         }
     }
 
+    /**
+     * This method is in charge of finding all the dependencies of the project and to add them to the publication.
+     */
     fun injectDependencies(project: Project, xmlProvider: XmlProvider, variantName: String, flavor: String?) {
         val dependenciesNode = xmlProvider.asNode().appendNode(DEPENDENCIES_CONSTANT)
 

@@ -6,6 +6,8 @@ import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.Basics
 import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.ExtensionsConfigurer
 import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.ModuleConfigurer
 import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.PluginConfigurer
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.LibraryAllowListDependenciesLint
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.ReleaseDependenciesLint
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.listProjects.AndroidProjectTypes
 import com.mercadolibre.android.gradle.baseplugin.core.action.providers.RepositoryProvider
 import com.mercadolibre.android.gradle.baseplugin.module.ModuleProvider
@@ -155,9 +157,9 @@ const val LINT_ERROR_TITLE = "ERROR: The following dependencies are not allowed:
 const val LINT_WARNIGN_TITLE = "WARNING: The following dependencies has been marked as deprecated:"
 const val LINT_TASK_FAIL_MESSAGE = "Errors found while running lints, please check the console output for more information"
 const val LINT_WARNIGN_DESCRIPTION = "You should consider upgrading the lib OR contact the team owner to know how to proceed."
-const val LINT_ERROR_ALLOWED_DEPENDENCIES_PREFIX = "\nYour project can only contain the dependencies listed in:"
-const val LINT_ERROR_ALLOWED_DEPENDENCIES_SUFFIX = "If you think one of them should be in" +
-    " the allowlist, please start here https://sites.google.com/mercadolibre.com/mobile/arquitectura/libs-utilitarias/libs-externas\n"
+const val LINT_ERROR_ALLOWED_DEPENDENCIES_PREFIX = "\nYour project can only contain the dependencies listed in: URL \n" +
+    "If you think one of them should be in the allowlist, please start here " +
+    "https://sites.google.com/mercadolibre.com/mobile/arquitectura/libs-utilitarias/libs-externas\n"
 const val LINT_FILENAME = "lint.ld"
 const val LINT_WARNING_FILENAME = "lintWarning.ld"
 const val LINT_AVAILABLE = "available"
@@ -165,6 +167,10 @@ const val LINT_INVALID = "invalid"
 const val LINT_EXPIRED = "expired"
 const val LINT_GOING_TO_EXPIRE = "going to expire"
 const val LINT_REPORT_ERROR = "Cant report this type of dependency"
+const val LINT_RELEASE_ERROR_TITLE = "Error. Found non-release dependencies in the module release version:"
+val LINT_LIBRARY_FILE_BLOCKER = "build/reports/${LibraryAllowListDependenciesLint::class.java.simpleName}/$LINT_FILENAME"
+val LINT_LIBRARY_FILE_WARNING = "build/reports/${LibraryAllowListDependenciesLint::class.java.simpleName}/$LINT_WARNING_FILENAME"
+val LINT_RELEASE_FILE = "build/reports/${ReleaseDependenciesLint::class.java.simpleName}/$LINT_FILENAME"
 
 const val LIST_VARIANTS_TASK = "listVariants"
 const val LIST_VARIANTS_DESCRIPTION = "List all variant in this project"

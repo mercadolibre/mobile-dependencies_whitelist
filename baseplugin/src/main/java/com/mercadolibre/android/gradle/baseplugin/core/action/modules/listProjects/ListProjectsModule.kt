@@ -12,6 +12,9 @@ import org.gradle.api.Project
  */
 class ListProjectsModule : Module {
 
+    /**
+     * This is the method in charge of adding the task that shows the projects within the repository.
+     */
     override fun configure(project: Project) {
         project.tasks.register(LIST_PROJECTS_TASK) {
             group = MELI_GROUP
@@ -23,6 +26,9 @@ class ListProjectsModule : Module {
         }
     }
 
+    /**
+     * This is the method responsible for generating the report of all projects.
+     */
     fun printProjects(project: Project) {
         for (subProject in project.subprojects) {
             println(subProject.name)

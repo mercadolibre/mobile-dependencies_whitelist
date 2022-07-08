@@ -10,10 +10,16 @@ import org.gradle.api.Project
  */
 open class PluginConfigurer(private val plugins: List<String>) : Configurer {
 
+    /**
+     * This method allows us to get a description of what this Configurer does.
+     */
     override fun getDescription(): String {
         return PLUGIN_DESCRIPTION_DESCRIPTION
     }
 
+    /**
+     * This method is responsible for applying all the necessary plugins to the project.
+     */
     override fun configureProject(project: Project) {
         for (plugin in plugins) {
             addPlugin(project, plugin)

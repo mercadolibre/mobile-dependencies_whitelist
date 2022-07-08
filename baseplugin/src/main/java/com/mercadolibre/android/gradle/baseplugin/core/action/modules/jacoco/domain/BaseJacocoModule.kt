@@ -23,10 +23,16 @@ import org.gradle.kotlin.dsl.apply
  */
 open class BaseJacocoModule : Module, ExtensionProvider, ExtensionGetter() {
 
+    /**
+     * This method is responsible for providing the name of the Jacoco extension
+     */
     override fun getName(): String {
         return JACOCO_EXTENSION
     }
 
+    /**
+     * This method is responsible for applying the Jacoco plugin and configuring its main tasks.
+     */
     override fun configure(project: Project) {
         project.apply(plugin = JACOCO_PLUGIN)
 
@@ -46,6 +52,9 @@ open class BaseJacocoModule : Module, ExtensionProvider, ExtensionGetter() {
         }
     }
 
+    /**
+     * If they do not exist, this method is responsible for generating the basic Jacoco tasks.
+     */
     fun createNeededTasks(project: Project) {
         if (project.tasks.findByName(JACOCO_TEST_REPORT_TASK) == null) {
             project.tasks.register(JACOCO_TEST_REPORT_TASK).configure {
@@ -60,6 +69,9 @@ open class BaseJacocoModule : Module, ExtensionProvider, ExtensionGetter() {
         }
     }
 
+    /**
+     * This method is responsible for providing the extension that Jacoco needs to work properly.
+     */
     override fun createExtension(project: Project) {
         project.extensions.create(getName(), JacocoConfigurationExtension::class.java)
         for (subProjects in project.subprojects) {

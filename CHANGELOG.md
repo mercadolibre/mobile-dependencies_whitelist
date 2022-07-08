@@ -1,3 +1,6 @@
+# 13.0.7
+- Se agrega documentacion al codigo para cumplir con el DeteKt
+
 # 13.0.5
 - Soporte para evaluación de Regrex de la allowlist
 

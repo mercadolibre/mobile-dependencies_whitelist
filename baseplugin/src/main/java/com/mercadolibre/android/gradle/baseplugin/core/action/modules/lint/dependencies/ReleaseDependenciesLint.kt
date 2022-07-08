@@ -5,6 +5,8 @@ import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basic
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.LintGradleExtension
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_FILENAME
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_RELEASE_DEPENDENCIES_TASK
+import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_RELEASE_ERROR_TITLE
+import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_RELEASE_FILE
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_EXPERIMENTAL
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_LOCAL
 import org.gradle.api.Project
@@ -17,14 +19,17 @@ import java.util.stream.Stream
  */
 class ReleaseDependenciesLint : Lint() {
 
-    private val ERROR_TITLE = "Error. Found non-release dependencies in the module release version:"
-
-    private val FILE = "build/reports/${ReleaseDependenciesLint::class.java.simpleName}/$LINT_FILENAME"
-
+    /**
+     * This method is responsible for providing a name to the linteo class.
+     */
     override fun name(): String {
         return LINT_RELEASE_DEPENDENCIES_TASK
     }
 
+    /**
+     * This method is responsible for verifying that the dependencies of all the variants are valid or
+     * if they are about to expire, perform the warnign.
+     */
     override fun lint(project: Project, variants: ArrayList<BaseVariant>): Boolean {
         findExtension<LintGradleExtension>(project)?.apply {
             if (!releaseDependenciesLintEnabled) {
@@ -32,7 +37,7 @@ class ReleaseDependenciesLint : Lint() {
             }
         }
 
-        val lintResultsFile = project.file(FILE)
+        val lintResultsFile = project.file(LINT_RELEASE_FILE)
 
         if (lintResultsFile.exists()) {
             lintResultsFile.delete()
@@ -52,14 +57,17 @@ class ReleaseDependenciesLint : Lint() {
         return checkIsFailed(dependencies, lintResultsFile)
     }
 
+    /**
+     * This method is in charge of verifying if the Lint failed.
+     */
     fun checkIsFailed(dependencies: Stream<String>, lintResultsFile: File): Boolean {
         for (dependency in dependencies) {
             println(dependency)
 
             if (!lintResultsFile.exists()) {
                 lintResultsFile.parentFile.mkdirs()
-                println(ERROR_TITLE)
-                lintResultsFile.writeText(ERROR_TITLE)
+                println(LINT_RELEASE_ERROR_TITLE)
+                lintResultsFile.writeText(LINT_RELEASE_ERROR_TITLE)
             }
 
             lintResultsFile.appendText("${System.getProperty("line.separator")}$dependency")

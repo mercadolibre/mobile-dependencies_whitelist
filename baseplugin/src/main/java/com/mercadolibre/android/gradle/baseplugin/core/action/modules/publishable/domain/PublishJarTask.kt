@@ -26,6 +26,9 @@ abstract class PublishJarTask : PublishTask() {
 
     lateinit var variant: SourceSet
 
+    /**
+     * This function seeks to provide the functionality of registering the tasks necessary to publish a module.
+     */
     abstract fun register(project: Project, variant: SourceSet, taskName: String): TaskProvider<Task>
 
     fun getListOfDependsOn(): List<String> {
@@ -36,6 +39,9 @@ abstract class PublishJarTask : PublishTask() {
         )
     }
 
+    /**
+     * This method is in charge of generating the task that publishes a module with all its configurations.
+     */
     fun createMavenPublication() {
         nameManager = PublishManager(variant.name, null, project, variant.allSource)
 

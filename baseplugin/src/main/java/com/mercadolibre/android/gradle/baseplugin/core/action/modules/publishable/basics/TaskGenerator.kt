@@ -55,6 +55,9 @@ class TaskGenerator(
             }
     }
 
+    /**
+     * This method is in charge of showing the version in the console.
+     */
     fun logVersion(taskName: String) {
         versionContainer.logVersion(
             "${project.group}:${project.name}:" +

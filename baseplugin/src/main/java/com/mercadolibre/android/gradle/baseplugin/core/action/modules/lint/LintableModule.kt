@@ -22,6 +22,9 @@ import org.gradle.language.base.plugins.LifecycleBasePlugin
  */
 class LintableModule : Module, ExtensionProvider, ExtensionGetter() {
 
+    /**
+     * This method is responsible for providing a name to the linteo class.
+     */
     override fun getName(): String {
         return LINTABLE_EXTENSION
     }
@@ -33,12 +36,18 @@ class LintableModule : Module, ExtensionProvider, ExtensionGetter() {
 
     private val variants = arrayListOf<BaseVariant>()
 
+    /**
+     * This is the method in charge of executing the lint within a project.
+     */
     override fun configure(project: Project) {
         project.afterEvaluate {
             setUpLint(this)
         }
     }
 
+    /**
+     * This is the method in charge of generating the extension that the Lint module needs to work correctly.
+     */
     override fun createExtension(project: Project) {
         project.extensions.create(getName(), LintGradleExtension::class.java)
         for (subProject in project.subprojects) {
@@ -46,6 +55,10 @@ class LintableModule : Module, ExtensionProvider, ExtensionGetter() {
         }
     }
 
+    /**
+     * This is the method in charge of configuring the linteo, whether it is an app or a library,
+     * and verifying that all the dependencies are correct.
+     */
     fun setUpLint(project: Project) {
         findExtension<LibraryExtension>(project)?.apply {
             libraryVariants.all { variants.add(this) }

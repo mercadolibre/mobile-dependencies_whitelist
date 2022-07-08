@@ -11,6 +11,9 @@ import com.mercadolibre.android.gradle.library.core.action.configurers.LibraryMo
  */
 open class BaseLibraryPlugin : AbstractPlugin() {
 
+    /**
+     * This variable contains the configurers that will be executed when applying the plugin.
+     */
     override val configurers = arrayListOf(
         PluginConfigurer(LIBRARY_PLUGINS),
         AndroidConfigurer(),

@@ -11,6 +11,9 @@ import org.gradle.api.initialization.Settings
  */
 abstract class AbstractPlugin : Plugin<Any>, PluginWithConfigurers {
 
+    /**
+     * This method is responsible for applying the plugin either in a Settings or in Project.
+     */
     override fun apply(target: Any) {
         when (target) {
             is Settings -> applySettings(target)
@@ -18,12 +21,18 @@ abstract class AbstractPlugin : Plugin<Any>, PluginWithConfigurers {
         }
     }
 
+    /**
+     * This method is responsible for requesting that a Settings be configured.
+     */
     fun applySettings(settings: Settings) {
         for (settingsModule in ModuleProvider.provideSettingsModules()) {
             settingsModule.configure(settings)
         }
     }
 
+    /**
+     * This method is in charge of requesting that a Project be configured.
+     */
     fun applyBasePlugin(project: Project) {
         for (configurer in configurers) {
             configurer.configureProject(project)

@@ -1,4 +1,4 @@
-package com.mercadolibre.android.gradle.baseplugin.core.action.modules.project_version
+package com.mercadolibre.android.gradle.baseplugin.core.action.modules.projectVersion
 
 import com.mercadolibre.android.gradle.baseplugin.core.components.BUILD_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.FILE_NAME_PROJECT_VERSION
@@ -12,6 +12,10 @@ import java.io.File
  * ProjectVersion Module is in charge of storing the version of the project so that it can be collected.
  */
 class ProjectVersionModule : Module {
+
+    /**
+     * This method is in charge of generating the task that will show the version report.
+     */
     override fun configure(project: Project) {
         val task = project.tasks.register(TASK_GET_PROJECT_TASK)
         task.configure {
@@ -23,6 +27,9 @@ class ProjectVersionModule : Module {
         }
     }
 
+    /**
+     * This method is in charge of creating the file and generating the version report.
+     */
     fun printProjectVersion(project: Project) {
         val folder = File(BUILD_CONSTANT)
         if (!folder.exists()) {

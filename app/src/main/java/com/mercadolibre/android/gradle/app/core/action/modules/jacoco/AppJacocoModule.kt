@@ -10,6 +10,9 @@ import org.gradle.testing.jacoco.plugins.JacocoTaskExtension
  * This module is in charge of configuring the Jacoco tasks for their correct operation.
  */
 class AppJacocoModule : AndroidJacocoModule() {
+    /**
+     * This method configures the Jacoco Task extension and configures all the tasks that jacoco depends on to check coverage.
+     */
     override fun configure(project: Project) {
         super.configure(project)
 

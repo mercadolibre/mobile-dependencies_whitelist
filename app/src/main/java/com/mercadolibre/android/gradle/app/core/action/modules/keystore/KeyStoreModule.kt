@@ -21,6 +21,10 @@ import java.io.File
  * KeyStoreModule is in charge of providing the key when generating a release.
  */
 class KeyStoreModule(private val isApp: Boolean) : Module, ExtensionGetter() {
+    /**
+     * In case it is a productive app, this method searches for the key and generates the necessary file for sign in
+     * and generates a task that validates it.
+     */
     override fun configure(project: Project) {
         if (isApp) {
             // Create info we will rely on

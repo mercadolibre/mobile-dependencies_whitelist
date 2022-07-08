@@ -53,6 +53,9 @@ class PublishManager(private val variantName: String, variantFlavor: String?, va
         }
     }
 
+    /**
+     * This method is in charge of generating the JavaDoc task and configuring it.
+     */
     fun configJavaDocJar() {
         javadocJar = if (project.tasks.names.contains(javadocJarTaskName)) {
             project.tasks.named(javadocJarTaskName)

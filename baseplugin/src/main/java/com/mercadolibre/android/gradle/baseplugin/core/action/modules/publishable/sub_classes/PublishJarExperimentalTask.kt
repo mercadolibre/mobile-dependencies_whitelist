@@ -14,6 +14,9 @@ import org.gradle.api.tasks.TaskProvider
  */
 class PublishJarExperimentalTask : PublishJarTask() {
 
+    /**
+     * This method is in charge of generating the necessary tasks to publish a module and the task that publishes the module.
+     */
     override fun register(project: Project, variant: SourceSet, taskName: String): TaskProvider<Task> {
         this.project = project
         this.variant = variant

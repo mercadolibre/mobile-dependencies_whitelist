@@ -4,7 +4,7 @@ import com.mercadolibre.android.gradle.baseplugin.BasePlugin
 import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.ModuleConfigurer
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.buildscan.BuildScanModule
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.listProjects.ListProjectsModule
-import com.mercadolibre.android.gradle.baseplugin.core.action.modules.project_version.ProjectVersionModule
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.projectVersion.ProjectVersionModule
 import com.mercadolibre.android.gradle.baseplugin.managers.AbstractPluginManager
 import com.mercadolibre.android.gradle.baseplugin.managers.ROOT_PROJECT
 import com.mercadolibre.android.gradle.baseplugin.module.ModuleProvider

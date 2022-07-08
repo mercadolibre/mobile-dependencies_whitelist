@@ -23,6 +23,9 @@ import org.gradle.api.tasks.SourceSetContainer
  */
 class JavaPublishableModule : PublishableModule() {
 
+    /**
+     * This method is in charge of requesting that all publication tasks be added.
+     */
     override fun configure(project: Project) {
         super.configure(project)
         findExtension<SourceSetContainer>(project)?.apply {
@@ -32,10 +35,16 @@ class JavaPublishableModule : PublishableModule() {
         }
     }
 
+    /**
+     * This method is in charge of registering the publication task
+     */
     private fun createTask(task: PublishJarTask, libraryVariant: SourceSet, theTaskName: String, project: Project) {
         task.register(project, libraryVariant, theTaskName)
     }
 
+    /**
+     * This method is in charge of generating all the publishing tasks for the different types of Build Variants.
+     */
     fun addTask(project: Project, variant: SourceSet) {
         val variantName = variant.name
         if (variantName != SOURCE_SETS_TEST) {

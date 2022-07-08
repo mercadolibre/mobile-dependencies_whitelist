@@ -24,6 +24,9 @@ import java.io.File
  */
 abstract class AndroidJacocoModule : BaseJacocoModule() {
 
+    /**
+     * This method is responsible for searching or generating the Jacoco Test Report Task
+     */
     fun findOrCreateJacocoTestReportTask(project: Project): TaskProvider<Task> {
         if (project.tasks.names.contains(JACOCO_TEST_REPORT_TASK)) {
             return project.tasks.named(JACOCO_TEST_REPORT_TASK)
@@ -36,6 +39,9 @@ abstract class AndroidJacocoModule : BaseJacocoModule() {
         return jacocoTestReportTask
     }
 
+    /**
+     * This method is responsible for searching or generating the Jacoco Variant Test Report Task
+     */
     fun createReportTask(variant: BaseVariant, project: Project): TaskProvider<JacocoReport> {
         val testTask = testTask(variant, project)
 
@@ -49,6 +55,9 @@ abstract class AndroidJacocoModule : BaseJacocoModule() {
         return task
     }
 
+    /**
+     * This is the method in charge of configuring the way in which the reports will be executed. The excludes and types of reports.
+     */
     fun configureReport(report: JacocoReport, testTask: Test, variant: BaseVariant, project: Project) {
         val sourceDirs = sourceDirs(variant)
         val classesDir = classesDir(variant)
@@ -110,6 +119,9 @@ abstract class AndroidJacocoModule : BaseJacocoModule() {
         return project.tasks.named("test${variant.name.capitalize()}UnitTest", Test::class.java).get()
     }
 
+    /**
+     * This method is responsible for obtaining the path of the execution file.
+     */
     fun executionDataFile(testTask: Task): String {
         var path = ""
         findExtension<JacocoTaskExtension>(testTask)?.apply {

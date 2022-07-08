@@ -7,6 +7,9 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_REPORT_ER
  * and if it is necessary to report that it has a problem.
  */
 class StatusBase(val shouldReport: Boolean, val isBlocker: Boolean, val name: String) {
+    /**
+     * This method is responsible for providing the error message when the dependency is not valid.
+     */
     fun message(dependency: String): String {
         if (!shouldReport) {
             throw IllegalAccessException(LINT_REPORT_ERROR)

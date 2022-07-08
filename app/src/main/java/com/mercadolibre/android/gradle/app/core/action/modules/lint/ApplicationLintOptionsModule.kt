@@ -9,6 +9,9 @@ import org.gradle.api.Project
  * Application intOption Module is in charge of telling the Lint extension to check dependencies.
  */
 class ApplicationLintOptionsModule : Module, ExtensionGetter() {
+    /**
+     * This metod tell the Lint extension to check dependencies.
+     */
     override fun configure(project: Project) {
         findExtension<BaseExtension>(project)?.apply {
             lintOptions {

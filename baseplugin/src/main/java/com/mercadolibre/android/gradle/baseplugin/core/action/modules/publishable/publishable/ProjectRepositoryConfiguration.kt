@@ -14,6 +14,9 @@ import java.util.Properties
  * The Project Repository Configuration class is responsible for providing the credentials to access the Meli repositories.
  */
 internal class ProjectRepositoryConfiguration : ExtensionGetter() {
+    /**
+     * This method is responsible for configuring the credentials of the repositories so that we have access to publish
+     */
     fun setupPublishingRepositories(project: Project, repositoriesList: List<Repository>) {
         val homePath = System.getProperties()["user.home"]
         val props = Properties()

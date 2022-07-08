@@ -14,10 +14,16 @@ import org.gradle.api.Project
  */
 open class ExtensionsConfigurer : Configurer {
 
+    /**
+     * This method allows us to get a description of what this Configurer does.
+     */
     override fun getDescription(): String {
         return EXTENSIONS_CONFIGURER_DESCRIPTION
     }
 
+    /**
+     * This method allows us to get a description of any Extension.
+     */
     fun getExtensions(): String {
         var listOfExtensions = ""
 
@@ -31,6 +37,9 @@ open class ExtensionsConfigurer : Configurer {
         return listOfExtensions
     }
 
+    /**
+     * This method is responsible for requesting each module to generate the Extension it needs to function correctly.
+     */
     override fun configureProject(project: Project) {
         for (extensionProvider in EXTENSIONS_PROVIDERS) {
             extensionProvider.createExtension(project)

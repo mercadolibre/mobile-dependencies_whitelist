@@ -8,6 +8,9 @@ import com.mercadolibre.android.gradle.library.core.action.components.ANDROID_LI
  */
 internal object ModuleProvider {
 
+    /**
+     * This method is responsible for providing the list of library modules.
+     */
     fun provideLibraryAndroidModules(): List<Module> {
         return ANDROID_LIBRARY_MODULES
     }

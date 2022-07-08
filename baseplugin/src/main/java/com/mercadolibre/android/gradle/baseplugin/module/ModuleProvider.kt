@@ -11,14 +11,23 @@ import com.mercadolibre.android.gradle.baseplugin.core.domain.interfaces.Setting
  */
 internal object ModuleProvider {
 
+    /**
+     * This method is responsible for providing the list of java modules
+     */
     fun provideJavaModules(): List<Module> {
         return JAVA_MODULES
     }
 
+    /**
+     * This method is responsible for providing the list of project modules
+     */
     fun provideProjectModules(): List<Module> {
         return PROJECT_MODULES
     }
 
+    /**
+     * This method is responsible for providing the list of settings modules
+     */
     fun provideSettingsModules(): List<SettingsModule> {
         return SETTINGS_MODULES
     }

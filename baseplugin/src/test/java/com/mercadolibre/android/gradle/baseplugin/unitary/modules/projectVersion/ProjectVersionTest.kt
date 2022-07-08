@@ -1,6 +1,6 @@
 package com.mercadolibre.android.gradle.baseplugin.unitary.modules.projectVersion
 
-import com.mercadolibre.android.gradle.baseplugin.core.action.modules.project_version.ProjectVersionModule
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.projectVersion.ProjectVersionModule
 import com.mercadolibre.android.gradle.baseplugin.integration.utils.domain.ModuleType
 import com.mercadolibre.android.gradle.baseplugin.managers.AbstractPluginManager
 import com.mercadolibre.android.gradle.baseplugin.managers.FileManager

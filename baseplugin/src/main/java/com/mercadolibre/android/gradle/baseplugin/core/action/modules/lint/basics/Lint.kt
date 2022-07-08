@@ -10,7 +10,13 @@ import org.gradle.api.Project
  */
 abstract class Lint : ExtensionGetter() {
 
+    /**
+     * This method is responsible for providing a name to the linteo class.
+     */
     abstract fun name(): String
 
+    /**
+     * This method is responsible for providing the functionality of checking dependencies.
+     */
     abstract fun lint(project: Project, variants: ArrayList<BaseVariant>): Boolean
 }

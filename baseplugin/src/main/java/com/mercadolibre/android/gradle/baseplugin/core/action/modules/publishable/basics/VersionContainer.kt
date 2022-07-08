@@ -15,10 +15,16 @@ class VersionContainer {
         return "$projectName:$publicationName"
     }
 
+    /**
+     * This method is in charge of storing a release version.
+     */
     fun put(projectName: String, publicationName: String, version: String) {
         map[key(projectName, publicationName)] = version
     }
 
+    /**
+     * This method is in charge of provide a release version safely.
+     */
     fun get(projectName: String, publicationName: String, defaultValue: String): String {
         return if (map[key(projectName, publicationName)] != null) {
             map[key(projectName, publicationName)]!!
@@ -27,6 +33,9 @@ class VersionContainer {
         }
     }
 
+    /**
+     * This method is in charge of showing in the console the version ready to implement.
+     */
     fun logVersion(version: String) {
         println("\n$PUBLISHING_PRINT_MESSAGE$version\n".ansi(ANSI_GREEN))
     }

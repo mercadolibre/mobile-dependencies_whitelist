@@ -13,6 +13,10 @@ import org.gradle.kotlin.dsl.apply
  */
 open class PublishableModule : Module, ExtensionGetter() {
 
+    /**
+     * This method is responsible for configuring the credentials of the repositories so that we have access to publish
+     * and apply the Maven publication plugin
+     */
     override fun configure(project: Project) {
         project.apply(plugin = MAVEN_PUBLISH)
 
@@ -24,6 +28,9 @@ open class PublishableModule : Module, ExtensionGetter() {
         ProjectRepositoryConfiguration().setupPublishingRepositories(project, repositories)
     }
 
+    /**
+     * This method is in charge of looking up the name of the publication task.
+     */
     fun getTaskName(type: String, packaging: String = "", variantName: String = ""): String {
         return "publish${packaging.capitalize()}${type}${variantName.capitalize()}"
     }
