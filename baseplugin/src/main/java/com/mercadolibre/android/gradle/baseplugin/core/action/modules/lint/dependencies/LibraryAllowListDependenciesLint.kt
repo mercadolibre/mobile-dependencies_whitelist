@@ -84,7 +84,7 @@ class LibraryAllowListDependenciesLint : Lint() {
     private fun analyzeDependency(project: Project, variantName: String) {
         project.configurations.findByName(variantName)?.apply {
             for (dependency in dependencies) {
-                analyzeDependency(Dependency(dependency.group!!, dependency.name, dependency.version!!, 0, ""), project)
+                analyzeDependency(Dependency(dependency.group!!, dependency.name, dependency.version, 0, ""), project)
             }
         }
     }

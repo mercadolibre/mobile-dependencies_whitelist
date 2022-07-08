@@ -1,3 +1,6 @@
+# 13.0.7
+- Se elimina el operador !! de la version al almacenar una dependencia ya que los bundles no tienen version
+
 # 13.0.6
 - Por problemas al publicar la version debemos agregar la variable "libraryVersion"
 
