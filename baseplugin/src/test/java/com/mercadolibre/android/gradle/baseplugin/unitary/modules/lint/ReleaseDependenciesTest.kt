@@ -5,12 +5,13 @@ import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.depen
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINTABLE_EXTENSION
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_EXPERIMENTAL
 import com.mercadolibre.android.gradle.baseplugin.integration.utils.domain.ModuleType
+import com.mercadolibre.android.gradle.baseplugin.managers.ANY_GROUP
 import com.mercadolibre.android.gradle.baseplugin.managers.ANY_NAME
 import com.mercadolibre.android.gradle.baseplugin.managers.AbstractPluginManager
 import com.mercadolibre.android.gradle.baseplugin.managers.FileManager
 import com.mercadolibre.android.gradle.baseplugin.managers.LIBRARY_PROJECT
 import com.mercadolibre.android.gradle.baseplugin.managers.ROOT_PROJECT
-import com.mercadolibre.android.gradle.library.BaseLibraryPlugin
+import com.mercadolibre.android.gradle.baseplugin.managers.VERSION_1
 import io.mockk.every
 import io.mockk.mockk
 import org.gradle.api.artifacts.Dependency
@@ -21,7 +22,6 @@ import java.io.File
 @RunWith(JUnit4::class)
 class ReleaseDependenciesTest : AbstractPluginManager() {
 
-    val libraryConfigurer = BaseLibraryPlugin()
     val releaseDependencies = ReleaseDependenciesLint()
 
     @org.junit.Before
@@ -34,7 +34,6 @@ class ReleaseDependenciesTest : AbstractPluginManager() {
 
         root = moduleManager.createRootProject(ROOT_PROJECT, mutableMapOf(LIBRARY_PROJECT to ModuleType.LIBRARY), projects, fileManager)
 
-        libraryConfigurer.apply(projects[LIBRARY_PROJECT]!!)
         projects[LIBRARY_PROJECT]!!.extensions.create(LINTABLE_EXTENSION, LintGradleExtension::class.java)
 
         releaseDependencies.name()
@@ -43,11 +42,11 @@ class ReleaseDependenciesTest : AbstractPluginManager() {
 
         val dependency = mockk<Dependency>()
 
-        every { dependency.name } returns "name"
-        every { dependency.group } returns "group"
+        every { dependency.name } returns ANY_NAME
+        every { dependency.group } returns ANY_GROUP
         every { dependency.version } returns PUBLISHING_EXPERIMENTAL
 
-        every { dependency.version } returns "version"
+        every { dependency.version } returns VERSION_1
 
         configuration.dependencies.add(dependency)
 
@@ -74,5 +73,6 @@ class ReleaseDependenciesTest : AbstractPluginManager() {
         every { file.path } returns "./asd.txt"
 
         releaseDependencies.checkIsFailed(listOf(ANY_NAME).stream(), file)
+        File("./asd.txt").delete()
     }
 }

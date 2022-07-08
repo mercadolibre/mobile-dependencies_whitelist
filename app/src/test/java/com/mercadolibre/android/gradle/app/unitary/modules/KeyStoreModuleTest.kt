@@ -42,6 +42,7 @@ class KeyStoreModuleTest: AbstractPluginManager() {
         every { project.file("./") } returns file
 
         keyStoreModule.writeFile(project, "./", file)
+        file.delete()
     }
 
     @org.junit.Test

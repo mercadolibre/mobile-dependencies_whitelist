@@ -18,6 +18,9 @@ import com.mercadolibre.android.gradle.baseplugin.module.VersionProvider
  */
 const val RESOLUTION_STRATEGY_HOURS = 2 /** This variable contains a keyword used to set the resolution strategy time. */
 
+/** This variable contains the Allow List URL. */
+const val ALLOW_LIST_URL = "https://raw.githubusercontent.com/mercadolibre/mobile-dependencies_whitelist/master/android-whitelist.json"
+
 const val GRADLE_ENTERPRISE = "com.gradle.enterprise" /** This variable contains a plugin. */
 const val MAVEN_PUBLISH = "org.gradle.maven-publish" /** This variable contains a plugin. */
 const val JACOCO_PLUGIN = "org.gradle.jacoco" /** This variable contains a plugin. */

@@ -28,7 +28,7 @@ class AndroidConfigurerTest : AbstractPluginManager() {
     fun setUp() {
         initTmpFolder()
         root = moduleManager.createSampleRoot(ROOT_PROJECT, tmpFolder)
-        subProject = moduleManager.createSampleSubProject("p", tmpFolder, root)
+        subProject = moduleManager.createSampleSubProject(LIBRARY_PROJECT, tmpFolder, root)
         basePlugin.apply(root)
         androidConfigurer.configureProject(subProject)
     }
@@ -54,10 +54,7 @@ class AndroidConfigurerTest : AbstractPluginManager() {
 
         val fileManager = FileManager(newTempFolder)
         val projects = mutableMapOf<String, Project>()
-        val root = moduleManager.createRootProject("rootSample", mutableMapOf(LIBRARY_PROJECT to ModuleType.LIBRARY), projects, fileManager)
-
-        root.apply(plugin = "mercadolibre.gradle.config.settings")
-        projects[LIBRARY_PROJECT]!!.apply(plugin = "mercadolibre.gradle.config.library")
+        moduleManager.createRootProject(ROOT_PROJECT, mutableMapOf(LIBRARY_PROJECT to ModuleType.LIBRARY), projects, fileManager)
 
         findExtension<BaseExtension>(projects[LIBRARY_PROJECT]!!)?.apply {
             assert(defaultConfig.minSdkVersion!!.apiString == VersionProvider.provideMinSdk().toString())
@@ -71,13 +68,9 @@ class AndroidConfigurerTest : AbstractPluginManager() {
 
         val fileManager = FileManager(newTempFolder)
         val projects = mutableMapOf<String, Project>()
-        val root = moduleManager.createRootProject("rootSample", mutableMapOf(LIBRARY_PROJECT to ModuleType.LIBRARY), projects, fileManager)
-
-        root.apply(plugin = "mercadolibre.gradle.config.settings")
-        projects[LIBRARY_PROJECT]!!.apply(plugin = "mercadolibre.gradle.config.library")
+         moduleManager.createRootProject("rootSample", mutableMapOf(LIBRARY_PROJECT to ModuleType.LIBRARY), projects, fileManager)
 
         findExtension<BaseExtension>(projects[LIBRARY_PROJECT]!!)?.apply {
-
             assert(defaultConfig.targetSdkVersion!!.apiString == VersionProvider.provideApiSdkLevel().toString())
         }
     }
