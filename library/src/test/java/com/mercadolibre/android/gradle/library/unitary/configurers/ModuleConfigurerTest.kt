@@ -4,7 +4,6 @@ import com.mercadolibre.android.gradle.baseplugin.BasePlugin
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.LintableModule
 import com.mercadolibre.android.gradle.library.core.action.configurers.LibraryModuleConfigurer
 import com.mercadolibre.android.gradle.library.core.action.modules.jacoco.LibraryJacocoModule
-import com.mercadolibre.android.gradle.library.core.action.modules.plugin_description.LibraryPluginDescriptionModule
 import com.mercadolibre.android.gradle.library.core.action.modules.publishable.LibraryPublishableModule
 import com.mercadolibre.android.gradle.library.core.action.modules.testeable.LibraryTestableModule
 import com.mercadolibre.android.gradle.library.integration.utils.domain.ModuleType

@@ -8,7 +8,6 @@ import com.mercadolibre.android.gradle.app.managers.FileManager
 import com.mercadolibre.android.gradle.app.managers.ROOT_PROJECT
 import com.mercadolibre.android.gradle.baseplugin.core.components.JACOCO_FULL_REPORT_TASK
 import com.mercadolibre.android.gradle.baseplugin.core.components.JACOCO_TEST_REPORT_TASK
-import io.mockk.mockk
 import org.gradle.api.tasks.testing.Test
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4

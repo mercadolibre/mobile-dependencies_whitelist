@@ -17,14 +17,14 @@ import com.mercadolibre.android.gradle.library.core.action.modules.jacoco.Librar
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.mockkObject
-import java.io.File
 import org.gradle.api.tasks.testing.Test
+import org.gradle.testing.jacoco.tasks.JacocoReport
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
-import org.gradle.testing.jacoco.tasks.JacocoReport
+import java.io.File
 
 @RunWith(JUnit4::class)
-class JacocoTest: AbstractPluginManager() {
+class JacocoTest : AbstractPluginManager() {
 
     val jacocoModule = JavaJacocoModule()
     val libraryJacocoModule = LibraryJacocoModule()
@@ -44,7 +44,6 @@ class JacocoTest: AbstractPluginManager() {
         jacocoModule.createNeededTasks(projects[LIBRARY_PROJECT]!!)
 
         projects[LIBRARY_PROJECT]!!.tasks.create("testAnyNameUnitTest", Test::class.java)
-
     }
 
     @org.junit.Test

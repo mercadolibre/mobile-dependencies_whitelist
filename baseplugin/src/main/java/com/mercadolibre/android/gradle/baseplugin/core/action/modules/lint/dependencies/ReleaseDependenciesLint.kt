@@ -3,7 +3,6 @@ package com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.depe
 import com.android.build.gradle.api.BaseVariant
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.Lint
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.LintGradleExtension
-import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_FILENAME
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_RELEASE_DEPENDENCIES_TASK
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_RELEASE_ERROR_TITLE
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_RELEASE_FILE

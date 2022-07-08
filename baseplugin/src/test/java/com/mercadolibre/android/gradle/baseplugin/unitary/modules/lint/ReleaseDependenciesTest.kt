@@ -1,6 +1,5 @@
 package com.mercadolibre.android.gradle.baseplugin.unitary.modules.lint
 
-import com.android.build.gradle.api.BaseVariant
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.LintGradleExtension
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.ReleaseDependenciesLint
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINTABLE_EXTENSION
@@ -12,16 +11,15 @@ import com.mercadolibre.android.gradle.baseplugin.managers.FileManager
 import com.mercadolibre.android.gradle.baseplugin.managers.LIBRARY_PROJECT
 import com.mercadolibre.android.gradle.baseplugin.managers.ROOT_PROJECT
 import com.mercadolibre.android.gradle.library.BaseLibraryPlugin
-import groovy.util.Node
 import io.mockk.every
 import io.mockk.mockk
-import java.io.File
 import org.gradle.api.artifacts.Dependency
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
+import java.io.File
 
 @RunWith(JUnit4::class)
-class ReleaseDependenciesTest: AbstractPluginManager() {
+class ReleaseDependenciesTest : AbstractPluginManager() {
 
     val libraryConfigurer = BaseLibraryPlugin()
     val releaseDependencies = ReleaseDependenciesLint()
@@ -77,5 +75,4 @@ class ReleaseDependenciesTest: AbstractPluginManager() {
 
         releaseDependencies.checkIsFailed(listOf(ANY_NAME).stream(), file)
     }
-
 }

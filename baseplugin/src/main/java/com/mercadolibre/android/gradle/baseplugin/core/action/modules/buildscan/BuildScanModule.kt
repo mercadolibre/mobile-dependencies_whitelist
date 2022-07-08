@@ -1,6 +1,5 @@
 package com.mercadolibre.android.gradle.baseplugin.core.action.modules.buildscan
 
-import com.android.tools.build.bundletool.model.utils.files.BufferedIo.inputStream
 import com.gradle.enterprise.gradleplugin.GradleEnterpriseExtension
 import com.gradle.scan.plugin.BuildScanExtension
 import com.mercadolibre.android.gradle.baseplugin.core.basics.ExtensionGetter
@@ -12,7 +11,6 @@ import org.gradle.api.initialization.Settings
 import org.gradle.api.plugins.ExtensionAware
 import org.gradle.api.plugins.PluginAware
 import org.gradle.kotlin.dsl.apply
-import org.gradle.kotlin.dsl.execution.text
 import java.io.BufferedReader
 import java.io.InputStream
 import java.io.InputStreamReader

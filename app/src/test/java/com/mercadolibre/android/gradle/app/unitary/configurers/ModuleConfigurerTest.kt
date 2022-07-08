@@ -3,7 +3,6 @@ package com.mercadolibre.android.gradle.app.unitary.configurers
 import com.mercadolibre.android.gradle.app.core.action.configurers.AppModuleConfigurer
 import com.mercadolibre.android.gradle.app.core.action.modules.jacoco.AppJacocoModule
 import com.mercadolibre.android.gradle.app.core.action.modules.lint.ApplicationLintOptionsModule
-import com.mercadolibre.android.gradle.app.core.action.modules.plugin_description.AppPluginDescriptionModule
 import com.mercadolibre.android.gradle.app.integration.utils.domain.ModuleType
 import com.mercadolibre.android.gradle.app.managers.AbstractPluginManager
 import com.mercadolibre.android.gradle.app.managers.FileManager

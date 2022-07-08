@@ -18,12 +18,10 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.IMPLEMENTATION
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_DEPENDENCIES_TASK
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_ERROR_ALLOWED_DEPENDENCIES_PREFIX
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_ERROR_TITLE
-import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_FILENAME
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_LIBRARY_FILE_BLOCKER
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_LIBRARY_FILE_WARNING
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_WARNIGN_DESCRIPTION
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_WARNIGN_TITLE
-import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_WARNING_FILENAME
 import com.mercadolibre.android.gradle.baseplugin.core.components.NAME_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.VERSION_CONSTANT
 import org.gradle.api.Project
@@ -40,9 +38,11 @@ class LibraryAllowListDependenciesLint : Lint() {
 
     private val DEFAULT_GRADLE_VERSION_VALUE = "unspecified"
 
-    var hasFailed = false
+    var hasFailed = false /** This variable contains the output of the lint report */
 
+    /** This list contains the dependencies in the allow list. */
     val ALLOWLIST_DEPENDENCIES = arrayListOf<Dependency>()
+    /** This list contains the dependencies that are about to expire. */
     val ALLOWLIST_GOING_TO_EXPIRE = arrayListOf<Dependency>()
 
     /**
