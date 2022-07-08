@@ -2,6 +2,7 @@ package com.mercadolibre.android.gradle.baseplugin.unitary.modules.lint
 
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.LintableModule
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.LintGradleExtension
+import com.mercadolibre.android.gradle.baseplugin.core.components.LINTABLE_EXTENSION
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINTABLE_TASK
 import com.mercadolibre.android.gradle.baseplugin.integration.utils.domain.ModuleType
 import com.mercadolibre.android.gradle.baseplugin.managers.APP_PROJECT
@@ -28,6 +29,8 @@ class LintableModuleTest: AbstractPluginManager() {
 
         root = moduleManager.createRootProject(ROOT_PROJECT, mutableMapOf(LIBRARY_PROJECT to ModuleType.LIBRARY, APP_PROJECT to ModuleType.APP), projects, fileManager)
 
+        projects[LIBRARY_PROJECT]!!.extensions.create(LINTABLE_EXTENSION, LintGradleExtension::class.java)
+
         addMockVariant(projects[LIBRARY_PROJECT]!!, ModuleType.LIBRARY)
         addMockVariant(projects[APP_PROJECT]!!, ModuleType.APP)
 
@@ -37,6 +40,11 @@ class LintableModuleTest: AbstractPluginManager() {
             }
             lintableModule.setUpLint(projects[projectName]!!)
         }
+    }
+
+    @org.junit.Test
+    fun `When the LintableModule configure check the dependencies`() {
+        lintableModule.checkStatusLint(projects[LIBRARY_PROJECT]!!)
     }
 
     @org.junit.Test

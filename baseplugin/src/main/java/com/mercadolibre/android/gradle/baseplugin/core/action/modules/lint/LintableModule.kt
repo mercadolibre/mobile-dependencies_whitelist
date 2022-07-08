@@ -70,20 +70,7 @@ class LintableModule : Module, ExtensionProvider, ExtensionGetter() {
         project.tasks.register(LINTABLE_TASK).configure {
             description = LINTABLE_DESCRIPTION
             doLast {
-                findExtension<LintGradleExtension>(project)?.apply {
-                    if (enabled) {
-                        var buildErrored = false
-                        for (linter in linters) {
-                            val lintErrored = linter.lint(project, variants)
-                            if (lintErrored) {
-                                buildErrored = true
-                            }
-                        }
-                        if (buildErrored) {
-                            throw GradleException(LINT_TASK_FAIL_MESSAGE)
-                        }
-                    }
-                }
+                checkStatusLint(project)
             }
         }
 
@@ -95,6 +82,26 @@ class LintableModule : Module, ExtensionProvider, ExtensionGetter() {
             project.tasks.configureEach {
                 if (name == LifecycleBasePlugin.CHECK_TASK_NAME) {
                     dependsOn(LINTABLE_TASK)
+                }
+            }
+        }
+    }
+
+    /**
+     * This is the method in charge of verifying that all the dependencies are correct.
+     */
+    fun checkStatusLint(project: Project) {
+        findExtension<LintGradleExtension>(project)?.apply {
+            if (enabled) {
+                var buildErrored = false
+                for (linter in linters) {
+                    val lintErrored = linter.lint(project, variants)
+                    if (lintErrored) {
+                        buildErrored = true
+                    }
+                }
+                if (buildErrored) {
+                    throw GradleException(LINT_TASK_FAIL_MESSAGE)
                 }
             }
         }

@@ -148,13 +148,13 @@ class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
     fun `When the LibraryAllowListDependenciesLintTest is called analize any Dependency Deprecated`() {
         val dependency = Dependency(ANY_GROUP, ANY_NAME, VERSION_1, null, "")
 
+        projects[LIBRARY_PROJECT]!!.file("./$LINT_LIBRARY_FILE_WARNING").mkdirs()
+
         lintableModule.ALLOWLIST_GOING_TO_EXPIRE.add(dependency)
 
         lintableModule.reportWarnings(projects[LIBRARY_PROJECT]!!)
 
-        val lintWarningFile = projects[LIBRARY_PROJECT]!!.file(
-            "build/reports/${LibraryAllowListDependenciesLint::class.java.simpleName}/$LINT_WARNING_FILENAME"
-        )
+        val lintWarningFile = projects[LIBRARY_PROJECT]!!.file(LINT_LIBRARY_FILE_WARNING)
         val lintOutPut = lintWarningFile.inputStream().bufferedReader().use { it.readText() }
 
         assert(lintOutPut.contains("WARNING: The following dependencies has been marked as deprecated:"))
@@ -167,9 +167,7 @@ class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
 
         lintableModule.analyzeDependency(dependency, projects[LIBRARY_PROJECT]!!)
 
-        val lintWarningFile = projects[LIBRARY_PROJECT]!!.file(
-            "build/reports/${LibraryAllowListDependenciesLint::class.java.simpleName}/$LINT_FILENAME"
-        )
+        val lintWarningFile = projects[LIBRARY_PROJECT]!!.file(LINT_LIBRARY_FILE_BLOCKER)
         val lintOutPut = lintWarningFile.inputStream().bufferedReader().use { it.readText() }
 
         assert(lintOutPut.contains("ERROR: The following dependencies are not allowed:"))
