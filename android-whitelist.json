@@ -849,9 +849,15 @@
       "version": "3\\.\\+"
     },
     {
+      "expires": "2022-08-07",
       "group": "com\\.mercadolibre\\.android\\.metrics",
       "name": "metrics",
       "version": "4\\.\\+|5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.metrics",
+      "name": "metrics",
+      "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.navigationcp",
