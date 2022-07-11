@@ -48,6 +48,7 @@ class LibraryAllowListDependenciesLint : Lint() {
     }
 
     override fun lint(project: Project, variants: ArrayList<BaseVariant>): Boolean {
+        hasFailed = false
         findExtension<LintGradleExtension>(project)?.apply {
             if (!dependenciesLintEnabled) {
                 return false
@@ -84,7 +85,7 @@ class LibraryAllowListDependenciesLint : Lint() {
     private fun analyzeDependency(project: Project, variantName: String) {
         project.configurations.findByName(variantName)?.apply {
             for (dependency in dependencies) {
-                analyzeDependency(Dependency(dependency.group!!, dependency.name, dependency.version, 0, ""), project)
+                analyzeDependency(Dependency(dependency.group, dependency.name, dependency.version, 0, ""), project)
             }
         }
     }

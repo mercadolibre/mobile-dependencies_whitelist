@@ -1,3 +1,7 @@
+# 13.0.8
+- Se elimina el operador !! del group al almacenar una dependencia 
+- Se reinicia la flag de Lint cada vez que se llama la task
+
 # 13.0.7
 - Se elimina el operador !! de la version al almacenar una dependencia ya que los bundles no tienen version
 
