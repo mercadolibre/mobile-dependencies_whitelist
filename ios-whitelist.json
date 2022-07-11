@@ -792,6 +792,12 @@
       "version": "^~>\\s?4.[0-9]+$"
     },
     {
+      "name": "MLSearch/Compats",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?4.[0-9]+$"
+    },
+    {
       "name": "MLSecurity",
       "source": "private",
       "target": "production",
@@ -864,10 +870,17 @@
       "version": "^~>\\s?3.[0-9]+$"
     },
     {
+      "expires": "2022-08-29",
       "name": "MerchRealestates",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MerchRealestates",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "MPSignUpLibs",
@@ -1515,7 +1528,7 @@
       "name": "InAppReport",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "CreditsFloxClient",
