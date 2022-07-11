@@ -792,6 +792,12 @@
       "version": "^~>\\s?4.[0-9]+$"
     },
     {
+      "name": "MLSearch/Compats",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?4.[0-9]+$"
+    },
+    {
       "name": "MLSecurity",
       "source": "private",
       "target": "production",
