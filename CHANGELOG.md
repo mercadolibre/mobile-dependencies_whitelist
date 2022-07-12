@@ -1,3 +1,6 @@
+# 13.0.9
+- Se mejora el rendimiento de los tests
+
 # 13.0.8
 - Se elimina el operador !! del group al almacenar una dependencia 
 - Se reinicia la flag de Lint cada vez que se llama la task

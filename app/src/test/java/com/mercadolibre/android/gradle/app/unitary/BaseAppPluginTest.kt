@@ -2,9 +2,8 @@ package com.mercadolibre.android.gradle.app.unitary
 
 import com.mercadolibre.android.gradle.app.BaseAppPlugin
 import com.mercadolibre.android.gradle.app.core.action.configurers.AppModuleConfigurer
-import com.mercadolibre.android.gradle.app.integration.utils.domain.ModuleType
+import com.mercadolibre.android.gradle.app.managers.APP_PROJECT
 import com.mercadolibre.android.gradle.app.managers.AbstractPluginManager
-import com.mercadolibre.android.gradle.app.managers.FileManager
 import com.mercadolibre.android.gradle.app.managers.LIBRARY_PROJECT
 import com.mercadolibre.android.gradle.app.managers.ROOT_PROJECT
 import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.AndroidConfigurer
@@ -17,38 +16,37 @@ import org.junit.runners.JUnit4
 @RunWith(JUnit4::class)
 class BaseAppPluginTest: AbstractPluginManager() {
 
-    val appPlugin = BaseAppPlugin()
+    private val appPlugin = BaseAppPlugin()
 
-    val pluginConfigurer: PluginConfigurer = mock {}
-    val androidConfigurer: AndroidConfigurer = mock {}
-    val moduleConfigurer: AppModuleConfigurer = mock {}
+    private val pluginConfigurer: PluginConfigurer = mock {}
+    private val androidConfigurer: AndroidConfigurer = mock {}
+    private val moduleConfigurer: AppModuleConfigurer = mock {}
 
     @org.junit.Before
     fun setUp() {
         initTmpFolder()
 
-        val fileManager = FileManager(tmpFolder)
-
-        root = moduleManager.createRootProject(ROOT_PROJECT, mutableMapOf(LIBRARY_PROJECT to ModuleType.LIBRARY), projects, fileManager)
+        root = moduleManager.createSampleRoot(ROOT_PROJECT, tmpFolder)
+        projects[APP_PROJECT] = moduleManager.createSampleSubProject(APP_PROJECT, tmpFolder, root)
 
         appPlugin.configurers.clear()
         appPlugin.configurers.addAll(listOf(pluginConfigurer, androidConfigurer, moduleConfigurer))
 
-        appPlugin.apply(projects[LIBRARY_PROJECT]!!)
+        appPlugin.apply(projects[APP_PROJECT]!!)
     }
 
     @org.junit.Test
-    fun `When the Library is applied the PluginConfigurer configures the project`() {
-        verify(pluginConfigurer).configureProject(projects[LIBRARY_PROJECT]!!)
+    fun `When the App is applied the PluginConfigurer configures the project`() {
+        verify(pluginConfigurer).configureProject(projects[APP_PROJECT]!!)
     }
 
     @org.junit.Test
-    fun `When the Library is applied the AndroidConfigurer configures the project`() {
-        verify(androidConfigurer).configureProject(projects[LIBRARY_PROJECT]!!)
+    fun `When the App is applied the AndroidConfigurer configures the project`() {
+        verify(androidConfigurer).configureProject(projects[APP_PROJECT]!!)
     }
 
     @org.junit.Test
-    fun `When the Library is applied the ModuleConfigurer configures the project`() {
-        verify(moduleConfigurer).configureProject(projects[LIBRARY_PROJECT]!!)
+    fun `When the App is applied the ModuleConfigurer configures the project`() {
+        verify(moduleConfigurer).configureProject(projects[APP_PROJECT]!!)
     }
  }

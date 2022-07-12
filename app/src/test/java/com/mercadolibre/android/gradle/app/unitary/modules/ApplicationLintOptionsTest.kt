@@ -3,10 +3,10 @@ package com.mercadolibre.android.gradle.app.unitary.modules
 import com.android.build.gradle.BaseExtension
 import com.mercadolibre.android.gradle.app.BaseAppPlugin
 import com.mercadolibre.android.gradle.app.core.action.modules.lint.ApplicationLintOptionsModule
-import com.mercadolibre.android.gradle.app.integration.utils.domain.ModuleType
+import com.mercadolibre.android.gradle.app.utils.domain.ModuleType
 import com.mercadolibre.android.gradle.app.managers.APP_PROJECT
 import com.mercadolibre.android.gradle.app.managers.AbstractPluginManager
-import com.mercadolibre.android.gradle.app.managers.FileManager
+
 import com.mercadolibre.android.gradle.app.managers.ROOT_PROJECT
 import com.mercadolibre.android.gradle.baseplugin.BasePlugin
 import java.io.File
@@ -16,19 +16,18 @@ import org.junit.runners.JUnit4
 @RunWith(JUnit4::class)
 class ApplicationLintOptionsTest: AbstractPluginManager() {
 
-    val basePlugin = BasePlugin()
-    val appPlugin = BaseAppPlugin()
-    val appLintOptions = ApplicationLintOptionsModule()
+    private val basePlugin = BasePlugin()
+    private val appPlugin = BaseAppPlugin()
+    private val appLintOptions = ApplicationLintOptionsModule()
 
     @org.junit.Before
     fun setUp() {
         initTmpFolder()
 
-        val fileManager = FileManager(tmpFolder)
-
         pathsAffectingAllModules.forEach { File(tmpFolder.root, it).mkdirs() }
 
-        root = moduleManager.createRootProject(ROOT_PROJECT, mutableMapOf(APP_PROJECT to ModuleType.APP), projects, fileManager)
+        root = moduleManager.createSampleRoot(ROOT_PROJECT, tmpFolder)
+        projects[APP_PROJECT] = moduleManager.createSampleSubProject(APP_PROJECT, tmpFolder, root)
 
         basePlugin.apply(root)
         appPlugin.apply(projects[APP_PROJECT]!!)
