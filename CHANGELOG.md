@@ -1,7 +1,16 @@
-# 13.0.7
+
+# 13.0.8
+- Se elimina el operador !! del group al almacenar una dependencia 
+- Se reinicia la flag de Lint cada vez que se llama la task
 - Se agrega documentacion al codigo para cumplir con el DeteKt
 
-# 13.0.5
+# 13.0.7
+- Se elimina el operador !! de la version al almacenar una dependencia ya que los bundles no tienen version
+
+# 13.0.6
+- Por problemas al publicar la version debemos agregar la variable "libraryVersion"
+
+# 13.0.5 (unpublished)
 - Soporte para evaluación de Regrex de la allowlist
 
 # 13.0.4

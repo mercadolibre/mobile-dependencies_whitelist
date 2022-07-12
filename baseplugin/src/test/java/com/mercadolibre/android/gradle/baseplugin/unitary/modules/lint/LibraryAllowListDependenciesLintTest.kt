@@ -112,6 +112,20 @@ class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
         val variant = mockVariant()
         lintableModule.hasFailed = true
         lintableModule.name()
+
+        val dependencyForApi1 = mockk<org.gradle.api.artifacts.Dependency>() {
+            every { name } returns ANY_NAME
+            every { group } returns "group"
+            every { version } returns null
+        }
+        val dependencyForApi2 = mockk<org.gradle.api.artifacts.Dependency>() {
+            every { name } returns ANY_NAME
+            every { group } returns "group"
+            every { version } returns "1.0.0"
+        }
+
+        projects[LIBRARY_PROJECT]!!.configurations.findByName(API_CONSTANT)?.dependencies?.addAll(listOf(dependencyForApi1, dependencyForApi2))
+
         lintableModule.lint(projects[LIBRARY_PROJECT]!!, arrayListOf(variant))
     }
 
