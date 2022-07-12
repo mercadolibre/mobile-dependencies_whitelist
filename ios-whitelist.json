@@ -1383,10 +1383,10 @@
     },
     {
       "expires": "2022-08-29",
-       "name": "NewRelicAgent",
-       "source": "public",
-       "target": "production",
-       "version": "^~>\\s?7.3.[0-9]+$"
+      "name": "NewRelicAgent",
+      "source": "public",
+      "target": "production",
+      "version": "^~>\\s?7.3.[0-9]+$"
     },
     {
       "name": "MLAdjust",
