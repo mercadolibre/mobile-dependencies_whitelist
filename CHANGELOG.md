@@ -1,3 +1,7 @@
+# 13.0.10
+- Se solucionan los problemas al linetar multiples modulos al mismo tiempo
+- Se divide la responsabilida del Lintable module de lintear Apps y Librerias llevandola a su modulo correspondiente
+
 # 13.0.9
 - Se mejora el rendimiento de los tests
 

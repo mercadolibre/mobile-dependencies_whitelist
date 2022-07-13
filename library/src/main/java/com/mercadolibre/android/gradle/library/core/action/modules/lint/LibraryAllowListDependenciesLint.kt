@@ -1,15 +1,11 @@
-package com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies
+package com.mercadolibre.android.gradle.library.core.action.modules.lint
 
 import com.android.build.gradle.api.BaseVariant
 import com.google.gson.JsonElement
 import com.google.gson.JsonParser
-import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.Dependency
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.Lint
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.LintGradleExtension
-import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.Status
-import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.StatusBase
 import com.mercadolibre.android.gradle.baseplugin.core.components.ALLOWLIST_CONSTANT
-import com.mercadolibre.android.gradle.baseplugin.core.components.ANDROID_LIBRARY_PLUGIN
 import com.mercadolibre.android.gradle.baseplugin.core.components.API_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.COMPILE_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.EXPIRES_CONSTANT
@@ -25,6 +21,9 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_WARNIGN_T
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_WARNING_FILENAME
 import com.mercadolibre.android.gradle.baseplugin.core.components.NAME_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.VERSION_CONSTANT
+import com.mercadolibre.android.gradle.library.core.action.modules.lint.dependencies.Dependency
+import com.mercadolibre.android.gradle.library.core.action.modules.lint.dependencies.Status
+import com.mercadolibre.android.gradle.library.core.action.modules.lint.dependencies.StatusBase
 import org.gradle.api.Project
 import org.gradle.configurationcache.extensions.capitalized
 import java.net.URL
@@ -47,13 +46,13 @@ class LibraryAllowListDependenciesLint : Lint() {
         return LINT_DEPENDENCIES_TASK
     }
 
-    override fun lint(project: Project, variants: ArrayList<BaseVariant>): Boolean {
+    override fun lint(project: Project, variants: List<BaseVariant>): Boolean {
         hasFailed = false
         findExtension<LintGradleExtension>(project)?.apply {
             if (!dependenciesLintEnabled) {
                 return false
             }
-            if (project.plugins.hasPlugin(ANDROID_LIBRARY_PLUGIN)) {
+            if (project.plugins.hasPlugin("com.android.library")) {
                 setUpAllowlist(dependencyAllowListUrl)
 
                 for (variant in variants) {
@@ -157,22 +156,22 @@ class LibraryAllowListDependenciesLint : Lint() {
         val dep = findDependencyInList(dependency, ALLOWLIST_DEPENDENCIES)
         if (dep != null) {
             return if (dep.expires == null) {
-                Status().available()
+                Status.available()
             } else {
                 when {
                     dep.expires == Long.MAX_VALUE -> {
-                        Status().available()
+                        Status.available()
                     }
                     System.currentTimeMillis() < dep.expires -> {
-                        Status().goign_to_expire()
+                        Status.goign_to_expire()
                     }
                     else -> {
-                        Status().expired()
+                        Status.expired()
                     }
                 }
             }
         }
-        return Status().invalid()
+        return Status.invalid()
     }
 
     fun getVariableFromJson(name: String, json: JsonElement, defaultValue: String?): String? {

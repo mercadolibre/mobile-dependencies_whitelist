@@ -8,6 +8,6 @@ abstract class Lint: ExtensionGetter() {
 
     abstract fun name(): String
 
-    abstract fun lint(project: Project, variants: ArrayList<BaseVariant>): Boolean
+    abstract fun lint(project: Project, variants: List<BaseVariant>): Boolean
 
 }
