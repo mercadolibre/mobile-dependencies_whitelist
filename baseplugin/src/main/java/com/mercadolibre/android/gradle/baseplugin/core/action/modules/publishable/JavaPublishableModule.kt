@@ -30,7 +30,14 @@ class JavaPublishableModule: PublishableModule() {
     }
 
     private fun createTask(task: PublishJarTask, libraryVariant: SourceSet, theTaskName: String, project: Project) {
-        task.register(project, libraryVariant, theTaskName)
+        task.register(project, libraryVariant, theTaskName).configure {
+            doLast {
+                val file = project.rootProject.file("build/publications/timestamp.txt")
+                if (file.exists()) {
+                    file.delete()
+                }
+            }
+        }
     }
 
     fun addTask(project: Project, variant: SourceSet) {

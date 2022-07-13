@@ -31,9 +31,8 @@ abstract class PublishAarTask: PublishTask() {
 
     internal fun createMavenPublication() {
         val sourceDirs: MutableCollection<File> = mutableListOf()
-        variant.sourceSets.all {
-            sourceDirs += it.javaDirectories
-            true
+        for (sourceSet in variant.sourceSets) {
+            sourceDirs += sourceSet.javaDirectories
         }
 
         nameManager = PublishManager(variant.name, variant.flavorName, project, sourceDirs)

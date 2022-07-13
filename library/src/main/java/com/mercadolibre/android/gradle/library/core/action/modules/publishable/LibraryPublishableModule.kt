@@ -67,7 +67,16 @@ class LibraryPublishableModule: PublishableModule() {
     }
 
     private fun createTask(task: PublishAarTask, libraryVariant: BaseVariant, theTaskName: String, project: Project): TaskProvider<Task> {
-        return task.register(project, libraryVariant, theTaskName)
+        val task = task.register(project, libraryVariant, theTaskName)
+        task.configure {
+            doLast {
+                val file = project.rootProject.file("build/publications/timestamp.txt")
+                if (file.exists()) {
+                    file.delete()
+                }
+            }
+        }
+        return task
     }
 
     private fun createStubTask(name: String, realTask: TaskProvider<Task>?, project: Project) {

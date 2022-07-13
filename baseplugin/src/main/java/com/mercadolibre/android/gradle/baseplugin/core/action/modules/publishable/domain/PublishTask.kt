@@ -8,11 +8,16 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.POM_FILE_TASK
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLICATIONS_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLICATION_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_POM_FILE
+import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_TIME_FILE
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_TIME_GENERATOR
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_TIME_ZONE
+import java.io.BufferedReader
+import java.io.InputStreamReader
+import java.nio.charset.StandardCharsets
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.TimeZone
+import java.util.stream.Collectors
 import org.gradle.api.Project
 import org.gradle.api.publish.PublishingExtension
 import org.gradle.api.publish.maven.MavenPublication
@@ -27,7 +32,16 @@ abstract class PublishTask: ExtensionGetter() {
     lateinit var taskName: String
 
     fun getTimestamp(): String {
-        return SimpleDateFormat(PUBLISHING_TIME_GENERATOR).apply { timeZone = TimeZone.getTimeZone(PUBLISHING_TIME_ZONE) }.format(Date())
+        val file = project.rootProject.file(PUBLISHING_TIME_FILE)
+
+        return if (file.exists()) {
+            BufferedReader(InputStreamReader(file.inputStream(), StandardCharsets.UTF_8)).readLine()
+        } else {
+            file.parentFile.mkdirs()
+            val time = SimpleDateFormat(PUBLISHING_TIME_GENERATOR).apply { timeZone = TimeZone.getTimeZone(PUBLISHING_TIME_ZONE) }.format(Date())
+            file.appendText(time)
+            time
+        }
     }
 
     fun registerPublish(project: Project, artifacts: List<Any?>, variantName: String, variantFlavor: String?) {
