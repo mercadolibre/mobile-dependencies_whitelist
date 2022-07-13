@@ -80,7 +80,7 @@ class LibraryPublishableModule: PublishableModule() {
         return publishTask
     }
 
-    private fun createStubTask(name: String, realTask: TaskProvider<Task>?, project: Project) {
+    fun createStubTask(name: String, realTask: TaskProvider<Task>?, project: Project) {
         if (project.tasks.names.contains(name) && realTask != null) {
             project.tasks.named(name).configure {
                 dependsOn(realTask)

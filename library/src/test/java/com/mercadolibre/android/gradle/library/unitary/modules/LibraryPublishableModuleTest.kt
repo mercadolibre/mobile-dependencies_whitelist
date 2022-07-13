@@ -4,10 +4,13 @@ import com.android.build.gradle.api.LibraryVariant
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISH_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.RELEASE_CONSTANT
 import com.mercadolibre.android.gradle.library.core.action.modules.publishable.LibraryPublishableModule
+import com.mercadolibre.android.gradle.library.managers.ANY_NAME
 import com.mercadolibre.android.gradle.library.managers.AbstractPluginManager
 import com.mercadolibre.android.gradle.library.managers.LIBRARY_PROJECT
 import com.mercadolibre.android.gradle.library.managers.ROOT_PROJECT
+import com.mercadolibre.android.gradle.library.utils.domain.ModuleType
 import io.mockk.every
+import io.mockk.mockk
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
 
@@ -25,6 +28,8 @@ class LibraryPublishableModuleTest: AbstractPluginManager() {
         root = moduleManager.createSampleRoot(ROOT_PROJECT, tmpFolder)
         projects[LIBRARY_PROJECT] = moduleManager.createSampleSubProject(LIBRARY_PROJECT, tmpFolder, root)
 
+        addMockVariant(projects[LIBRARY_PROJECT]!!, ModuleType.LIBRARY)
+
         publishableModule.configure(projects[LIBRARY_PROJECT]!!)
 
         variant = mockLibVariant()
@@ -36,6 +41,14 @@ class LibraryPublishableModuleTest: AbstractPluginManager() {
         every { variant.name } returns RELEASE_CONSTANT
 
         publishableModule.createTasksFor(variant, projects[LIBRARY_PROJECT]!!)
+    }
+
+    @org.junit.Test
+    fun `When the LibraryPublishableModule is called create a sub task`() {
+
+        every { variant.name } returns RELEASE_CONSTANT
+        projects[LIBRARY_PROJECT]!!.tasks.create(ANY_NAME)
+        publishableModule.createStubTask(ANY_NAME, mockk(relaxed = true), projects[LIBRARY_PROJECT]!!)
     }
 
     @org.junit.Test
