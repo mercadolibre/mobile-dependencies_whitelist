@@ -1,10 +1,9 @@
 package com.mercadolibre.android.gradle.baseplugin.core.components
 
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.jacoco.domain.BaseJacocoModule
-import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.LintableModule
-import com.mercadolibre.android.gradle.baseplugin.core.domain.interfaces.ExtensionProvider
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.LintExtension
 
-val EXTENSIONS_PROVIDERS = listOf<ExtensionProvider>(
-    LintableModule(),
+val EXTENSIONS_PROVIDERS = listOf(
+    LintExtension(),
     BaseJacocoModule()
 )
