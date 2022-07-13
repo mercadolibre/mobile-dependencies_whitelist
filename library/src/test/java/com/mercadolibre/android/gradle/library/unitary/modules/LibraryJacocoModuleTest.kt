@@ -7,6 +7,7 @@ import com.mercadolibre.android.gradle.library.utils.domain.ModuleType
 import com.mercadolibre.android.gradle.library.managers.AbstractPluginManager
 import com.mercadolibre.android.gradle.library.managers.LIBRARY_PROJECT
 import com.mercadolibre.android.gradle.library.managers.ROOT_PROJECT
+import io.mockk.mockk
 import org.gradle.api.tasks.testing.Test
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4

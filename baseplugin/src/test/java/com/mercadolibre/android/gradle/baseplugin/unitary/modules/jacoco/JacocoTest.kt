@@ -39,7 +39,7 @@ class JacocoTest : AbstractPluginManager() {
 
         jacocoModule.createNeededTasks(projects[LIBRARY_PROJECT]!!)
 
-        libraryJacocoModule.findOrCreateJacocoTestReportTask(projects[ANY_NAME]!!)
+        libraryJacocoModule.findOrCreateJacocoTestReportTask(projects[LIBRARY_PROJECT]!!)
 
         projects[LIBRARY_PROJECT]!!.tasks.create("testAnyNameUnitTest", Test::class.java)
     }

@@ -21,7 +21,7 @@ class ModuleConfigurerTest : AbstractPluginManager() {
 
     private val buildScanModule = mockk<BuildScanModule>(relaxed = true)
     private val listProjectsModule = mockk<ListProjectsModule>(relaxed = true)
-    private val projectModule = mockk<ProjectVersion>(relaxed = true)
+    private val projectModule = mockk<ProjectVersionModule>(relaxed = true)
 
     @org.junit.Before
     fun setUp() {

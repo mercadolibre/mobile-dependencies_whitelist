@@ -1,6 +1,5 @@
 package com.mercadolibre.android.gradle.library.managers
 
-import com.mercadolibre.android.gradle.library.integration.utils.domain.ModuleType
 import java.lang.reflect.Field
 import java.util.concurrent.atomic.AtomicReference
 import org.gradle.api.Project
@@ -13,8 +12,6 @@ import org.gradle.internal.service.DefaultServiceRegistry
 import org.gradle.internal.service.scopes.ProjectScopeServices
 import org.gradle.testfixtures.ProjectBuilder
 import org.gradle.tooling.events.OperationCompletionListener
-import java.lang.reflect.Field
-import java.util.concurrent.atomic.AtomicReference
 
 class ModuleManager {
 

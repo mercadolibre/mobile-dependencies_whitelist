@@ -4,14 +4,13 @@ import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basic
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.ReleaseDependenciesLint
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINTABLE_EXTENSION
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_EXPERIMENTAL
-import com.mercadolibre.android.gradle.baseplugin.integration.utils.domain.ModuleType
 import com.mercadolibre.android.gradle.baseplugin.managers.ANY_GROUP
 import com.mercadolibre.android.gradle.baseplugin.managers.ANY_NAME
 import com.mercadolibre.android.gradle.baseplugin.managers.AbstractPluginManager
-import com.mercadolibre.android.gradle.baseplugin.managers.FileManager
 import com.mercadolibre.android.gradle.baseplugin.managers.LIBRARY_PROJECT
 import com.mercadolibre.android.gradle.baseplugin.managers.ROOT_PROJECT
 import com.mercadolibre.android.gradle.baseplugin.managers.VERSION_1
+import com.mercadolibre.android.gradle.library.BaseLibraryPlugin
 import io.mockk.every
 import io.mockk.mockk
 import org.gradle.api.artifacts.Dependency

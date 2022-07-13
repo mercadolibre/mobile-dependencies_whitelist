@@ -13,7 +13,7 @@ import java.io.File
 @RunWith(JUnit4::class)
 class ProjectVersionTest: AbstractPluginManager() {
 
-    private val projectVersion = ProjectVersion()
+    private val projectVersion = ProjectVersionModule()
 
     @org.junit.Before
     fun setUp() {
