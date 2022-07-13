@@ -1,3 +1,6 @@
+# 13.0.10
+- Usamos libraryName en lugar de versionName
+
 # 13.0.9
 - Se mejora el rendimiento de los tests
 
@@ -13,7 +16,6 @@
 
 # 13.0.5 (unpublished)
 - Soporte para evaluación de Regrex de la allowlist
-- Usamos libraryName en lugar de versionName
 
 # 13.0.4
 - Se agrega un fix al Linteo del Plugin
