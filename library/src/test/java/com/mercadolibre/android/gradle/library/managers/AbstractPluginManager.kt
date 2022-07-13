@@ -10,7 +10,7 @@ import com.mercadolibre.android.gradle.baseplugin.core.action.providers.VariantU
 import com.mercadolibre.android.gradle.baseplugin.core.basics.ExtensionGetter
 import com.mercadolibre.android.gradle.baseplugin.core.components.APP_PLUGINS
 import com.mercadolibre.android.gradle.baseplugin.core.components.LIBRARY_PLUGINS
-import com.mercadolibre.android.gradle.library.integration.utils.domain.ModuleType
+import com.mercadolibre.android.gradle.library.utils.domain.ModuleType
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.mockkObject

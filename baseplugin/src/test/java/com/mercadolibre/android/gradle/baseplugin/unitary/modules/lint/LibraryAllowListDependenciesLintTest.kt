@@ -6,6 +6,7 @@ import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basic
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.Status
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.StatusBase
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.LibraryAllowListDependenciesLint
+import com.mercadolibre.android.gradle.baseplugin.core.components.API_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.EXPIRES_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINTABLE_EXTENSION
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_FILENAME
@@ -18,6 +19,8 @@ import com.mercadolibre.android.gradle.baseplugin.managers.FileManager
 import com.mercadolibre.android.gradle.baseplugin.managers.LIBRARY_PROJECT
 import com.mercadolibre.android.gradle.baseplugin.managers.ROOT_PROJECT
 import com.mercadolibre.android.gradle.library.BaseLibraryPlugin
+import io.mockk.every
+import io.mockk.mockk
 import org.junit.Assert
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
@@ -35,11 +38,8 @@ class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
     fun setUp() {
         initTmpFolder()
 
-        val fileManager = FileManager(tmpFolder)
-
-        pathsAffectingAllModules.forEach { File(tmpFolder.root, it).mkdirs() }
-
-        root = moduleManager.createRootProject(ROOT_PROJECT, mutableMapOf(LIBRARY_PROJECT to ModuleType.LIBRARY), projects, fileManager)
+        root = moduleManager.createSampleRoot(ROOT_PROJECT, tmpFolder)
+        projects[LIBRARY_PROJECT] = moduleManager.createSampleSubProject(LIBRARY_PROJECT, tmpFolder, root)
 
         libraryConfigurer.apply(projects[LIBRARY_PROJECT]!!)
 
@@ -102,6 +102,20 @@ class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
         val variant = mockVariant()
         lintableModule.hasFailed = true
         lintableModule.name()
+
+        val dependencyForApi1 = mockk<org.gradle.api.artifacts.Dependency>() {
+            every { name } returns ANY_NAME
+            every { group } returns "group"
+            every { version } returns null
+        }
+        val dependencyForApi2 = mockk<org.gradle.api.artifacts.Dependency>() {
+            every { name } returns ANY_NAME
+            every { group } returns "group"
+            every { version } returns "1.0.0"
+        }
+
+        projects[LIBRARY_PROJECT]!!.configurations.findByName(API_CONSTANT)?.dependencies?.addAll(listOf(dependencyForApi1, dependencyForApi2))
+
         lintableModule.lint(projects[LIBRARY_PROJECT]!!, arrayListOf(variant))
     }
 

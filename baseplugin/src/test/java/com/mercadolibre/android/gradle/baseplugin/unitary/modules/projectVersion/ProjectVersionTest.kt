@@ -13,18 +13,14 @@ import org.junit.runners.JUnit4
 @RunWith(JUnit4::class)
 class ProjectVersionTest: AbstractPluginManager() {
 
-    val projectVersion = ProjectVersion()
-
+    private val projectVersion = ProjectVersion()
 
     @org.junit.Before
     fun setUp() {
         initTmpFolder()
 
-        val fileManager = FileManager(tmpFolder)
-
-        pathsAffectingAllModules.forEach { File(tmpFolder.root, it).mkdirs() }
-
-        root = moduleManager.createRootProject(ROOT_PROJECT, mutableMapOf(LIBRARY_PROJECT to ModuleType.LIBRARY), projects, fileManager)
+        root = moduleManager.createSampleRoot(ROOT_PROJECT, tmpFolder)
+        projects[LIBRARY_PROJECT] = moduleManager.createSampleSubProject(LIBRARY_PROJECT, tmpFolder, root)
     }
 
     @org.junit.Test

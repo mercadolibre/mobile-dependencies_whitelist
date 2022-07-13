@@ -4,20 +4,17 @@ import com.android.build.gradle.api.LibraryVariant
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISH_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.RELEASE_CONSTANT
 import com.mercadolibre.android.gradle.library.core.action.modules.publishable.LibraryPublishableModule
-import com.mercadolibre.android.gradle.library.integration.utils.domain.ModuleType
 import com.mercadolibre.android.gradle.library.managers.AbstractPluginManager
-import com.mercadolibre.android.gradle.library.managers.FileManager
 import com.mercadolibre.android.gradle.library.managers.LIBRARY_PROJECT
 import com.mercadolibre.android.gradle.library.managers.ROOT_PROJECT
 import io.mockk.every
-import java.io.File
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
 
 @RunWith(JUnit4::class)
 class LibraryPublishableModuleTest: AbstractPluginManager() {
 
-    val publishableModule = LibraryPublishableModule()
+    private val publishableModule = LibraryPublishableModule()
 
     lateinit var variant: LibraryVariant
 
@@ -25,11 +22,8 @@ class LibraryPublishableModuleTest: AbstractPluginManager() {
     fun setUp() {
         initTmpFolder()
 
-        val fileManager = FileManager(tmpFolder)
-
-        pathsAffectingAllModules.forEach { File(tmpFolder.root, it).mkdirs() }
-
-        root = moduleManager.createRootProject(ROOT_PROJECT, mutableMapOf(LIBRARY_PROJECT to ModuleType.LIBRARY), projects, fileManager)
+        root = moduleManager.createSampleRoot(ROOT_PROJECT, tmpFolder)
+        projects[LIBRARY_PROJECT] = moduleManager.createSampleSubProject(LIBRARY_PROJECT, tmpFolder, root)
 
         publishableModule.configure(projects[LIBRARY_PROJECT]!!)
 

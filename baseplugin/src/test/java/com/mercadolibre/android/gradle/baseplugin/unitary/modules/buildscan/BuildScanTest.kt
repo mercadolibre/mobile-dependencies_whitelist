@@ -28,11 +28,9 @@ class BuildScanTest : AbstractPluginManager() {
     fun setUp() {
         initTmpFolder()
 
-        val fileManager = FileManager(tmpFolder)
+        root = moduleManager.createSampleRoot(ROOT_PROJECT, tmpFolder)
+        projects[LIBRARY_PROJECT] = moduleManager.createSampleSubProject(LIBRARY_PROJECT, tmpFolder, root)
 
-        pathsAffectingAllModules.forEach { File(tmpFolder.root, it).mkdirs() }
-
-        root = moduleManager.createRootProject(ROOT_PROJECT, mutableMapOf(LIBRARY_PROJECT to ModuleType.LIBRARY), projects, fileManager)
         basePlugin.apply(root)
         runGradle(tmpFolder.root)
     }

@@ -4,9 +4,7 @@ import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.Androi
 import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.PluginConfigurer
 import com.mercadolibre.android.gradle.library.BaseLibraryPlugin
 import com.mercadolibre.android.gradle.library.core.action.configurers.LibraryModuleConfigurer
-import com.mercadolibre.android.gradle.library.integration.utils.domain.ModuleType
 import com.mercadolibre.android.gradle.library.managers.AbstractPluginManager
-import com.mercadolibre.android.gradle.library.managers.FileManager
 import com.mercadolibre.android.gradle.library.managers.LIBRARY_PROJECT
 import com.mercadolibre.android.gradle.library.managers.ROOT_PROJECT
 import com.nhaarman.mockitokotlin2.mock
@@ -17,19 +15,18 @@ import org.junit.runners.JUnit4
 @RunWith(JUnit4::class)
 class BaseLibraryPluginTest: AbstractPluginManager() {
 
-    val libraryPlugin = BaseLibraryPlugin()
+    private val libraryPlugin = BaseLibraryPlugin()
 
-    val pluginConfigurer: PluginConfigurer = mock {}
-    val androidConfigurer: AndroidConfigurer = mock {}
-    val moduleConfigurer: LibraryModuleConfigurer = mock {}
+    private val pluginConfigurer: PluginConfigurer = mock {}
+    private val androidConfigurer: AndroidConfigurer = mock {}
+    private val moduleConfigurer: LibraryModuleConfigurer = mock {}
 
     @org.junit.Before
     fun setUp() {
         initTmpFolder()
 
-        val fileManager = FileManager(tmpFolder)
-
-        root = moduleManager.createRootProject(ROOT_PROJECT, mutableMapOf(LIBRARY_PROJECT to ModuleType.LIBRARY), projects, fileManager)
+        root = moduleManager.createSampleRoot(ROOT_PROJECT, tmpFolder)
+        projects[LIBRARY_PROJECT] = moduleManager.createSampleSubProject(LIBRARY_PROJECT, tmpFolder, root)
 
         libraryPlugin.configurers.clear()
         libraryPlugin.configurers.addAll(listOf(pluginConfigurer, androidConfigurer, moduleConfigurer))
