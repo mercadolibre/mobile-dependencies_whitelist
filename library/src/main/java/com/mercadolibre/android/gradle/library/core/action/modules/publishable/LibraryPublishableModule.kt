@@ -11,6 +11,7 @@ import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishabl
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.sub_classes.PublishAarPublicReleaseTask
 import com.mercadolibre.android.gradle.baseplugin.core.components.PACKAGING_AAR_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_GROUP
+import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_TIME_FILE
 import com.mercadolibre.android.gradle.baseplugin.core.components.RELEASE_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.TASK_TYPE_EXPERIMENTAL
 import com.mercadolibre.android.gradle.baseplugin.core.components.TASK_TYPE_LOCAL
@@ -67,16 +68,16 @@ class LibraryPublishableModule: PublishableModule() {
     }
 
     private fun createTask(task: PublishAarTask, libraryVariant: BaseVariant, theTaskName: String, project: Project): TaskProvider<Task> {
-        val task = task.register(project, libraryVariant, theTaskName)
-        task.configure {
+        val publishTask = task.register(project, libraryVariant, theTaskName)
+        publishTask.configure {
             doLast {
-                val file = project.rootProject.file("build/publications/timestamp.txt")
+                val file = project.rootProject.file(PUBLISHING_TIME_FILE)
                 if (file.exists()) {
                     file.delete()
                 }
             }
         }
-        return task
+        return publishTask
     }
 
     private fun createStubTask(name: String, realTask: TaskProvider<Task>?, project: Project) {

@@ -1,4 +1,7 @@
-# 13.0.9
+# 13.0.10
+- Al momento de generar los Publish se hace cacheable el timestamp que se utiliza para las versiones
+
+# 13.0.9 (unpublished)
 - Se mejora el rendimiento de los tests
 
 # 13.0.8

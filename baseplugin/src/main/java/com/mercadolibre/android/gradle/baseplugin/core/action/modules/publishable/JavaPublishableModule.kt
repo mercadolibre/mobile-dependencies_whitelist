@@ -7,6 +7,7 @@ import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishabl
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.sub_classes.PublishJarPrivateReleaseTask
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.sub_classes.PublishJarPublicReleaseTask
 import com.mercadolibre.android.gradle.baseplugin.core.components.PACKAGING_JAR_CONSTANT
+import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_TIME_FILE
 import com.mercadolibre.android.gradle.baseplugin.core.components.SOURCE_SETS_DEFAULT
 import com.mercadolibre.android.gradle.baseplugin.core.components.SOURCE_SETS_TEST
 import com.mercadolibre.android.gradle.baseplugin.core.components.TASK_TYPE_EXPERIMENTAL
@@ -32,7 +33,7 @@ class JavaPublishableModule: PublishableModule() {
     private fun createTask(task: PublishJarTask, libraryVariant: SourceSet, theTaskName: String, project: Project) {
         task.register(project, libraryVariant, theTaskName).configure {
             doLast {
-                val file = project.rootProject.file("build/publications/timestamp.txt")
+                val file = project.rootProject.file(PUBLISHING_TIME_FILE)
                 if (file.exists()) {
                     file.delete()
                 }
