@@ -7,6 +7,7 @@ import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basic
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.StatusBase
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.LibraryAllowListDependenciesLint
 import com.mercadolibre.android.gradle.baseplugin.core.components.ALLOW_LIST_URL
+import com.mercadolibre.android.gradle.baseplugin.core.components.API_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.EXPIRES_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.GROUP_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.LIBRARY_PLUGIN
@@ -30,6 +31,8 @@ import com.mercadolibre.android.gradle.baseplugin.managers.ROOT_PROJECT
 import com.mercadolibre.android.gradle.baseplugin.managers.VERSION_1
 import com.mercadolibre.android.gradle.baseplugin.managers.VERSION_2
 import com.mercadolibre.android.gradle.baseplugin.managers.VERSION_3
+import io.mockk.every
+import io.mockk.mockk
 import org.gradle.kotlin.dsl.apply
 import org.junit.Assert
 import org.junit.runner.RunWith
