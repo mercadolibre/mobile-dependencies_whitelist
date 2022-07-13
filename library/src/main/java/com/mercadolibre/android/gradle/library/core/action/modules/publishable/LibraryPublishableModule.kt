@@ -3,6 +3,7 @@ package com.mercadolibre.android.gradle.library.core.action.modules.publishable
 import com.android.build.gradle.LibraryExtension
 import com.android.build.gradle.api.BaseVariant
 import com.android.build.gradle.api.LibraryVariant
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.basics.TimeStampManager
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.domain.PublishAarTask
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.publishable.PublishableModule
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.sub_classes.PublishAarExperimentalTask
@@ -71,10 +72,7 @@ class LibraryPublishableModule: PublishableModule() {
         val publishTask = task.register(project, libraryVariant, theTaskName)
         publishTask.configure {
             doLast {
-                val file = project.rootProject.file(PUBLISHING_TIME_FILE)
-                if (file.exists()) {
-                    file.delete()
-                }
+                TimeStampManager.deleteTimeStampFile(project)
             }
         }
         return publishTask

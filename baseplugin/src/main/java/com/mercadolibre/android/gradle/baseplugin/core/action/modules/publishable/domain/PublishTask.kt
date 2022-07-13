@@ -31,19 +31,6 @@ abstract class PublishTask: ExtensionGetter() {
     lateinit var project: Project
     lateinit var taskName: String
 
-    fun getTimestamp(): String {
-        val file = project.rootProject.file(PUBLISHING_TIME_FILE)
-
-        return if (file.exists()) {
-            BufferedReader(InputStreamReader(file.inputStream(), StandardCharsets.UTF_8)).readLine()
-        } else {
-            file.parentFile.mkdirs()
-            val time = SimpleDateFormat(PUBLISHING_TIME_GENERATOR).apply { timeZone = TimeZone.getTimeZone(PUBLISHING_TIME_ZONE) }.format(Date())
-            file.appendText(time)
-            time
-        }
-    }
-
     fun registerPublish(project: Project, artifacts: List<Any?>, variantName: String, variantFlavor: String?) {
         val pomUtils = PomUtils()
 

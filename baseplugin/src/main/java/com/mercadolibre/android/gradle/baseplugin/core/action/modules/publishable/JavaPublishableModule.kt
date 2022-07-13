@@ -1,5 +1,6 @@
 package com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable
 
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.basics.TimeStampManager
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.domain.PublishJarTask
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.publishable.PublishableModule
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.sub_classes.PublishJarExperimentalTask
@@ -33,10 +34,7 @@ class JavaPublishableModule: PublishableModule() {
     private fun createTask(task: PublishJarTask, libraryVariant: SourceSet, theTaskName: String, project: Project) {
         task.register(project, libraryVariant, theTaskName).configure {
             doLast {
-                val file = project.rootProject.file(PUBLISHING_TIME_FILE)
-                if (file.exists()) {
-                    file.delete()
-                }
+                TimeStampManager.deleteTimeStampFile(project)
             }
         }
     }
