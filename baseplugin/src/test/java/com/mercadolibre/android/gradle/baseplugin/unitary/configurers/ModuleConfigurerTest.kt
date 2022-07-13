@@ -17,11 +17,11 @@ class ModuleConfigurerTest : AbstractPluginManager() {
 
     val basePlugin = BasePlugin()
 
-    val moduleConfigurer = ModuleConfigurer()
+    private val moduleConfigurer = ModuleConfigurer()
 
-    val buildScanModule = mockk<BuildScanModule>(relaxed = true)
-    val listProjectsModule = mockk<ListProjectsModule>(relaxed = true)
-    val projectModule = mockk<ProjectVersionModule>(relaxed = true)
+    private val buildScanModule = mockk<BuildScanModule>(relaxed = true)
+    private val listProjectsModule = mockk<ListProjectsModule>(relaxed = true)
+    private val projectModule = mockk<ProjectVersion>(relaxed = true)
 
     @org.junit.Before
     fun setUp() {

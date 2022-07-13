@@ -4,9 +4,8 @@ import com.mercadolibre.android.gradle.app.core.action.configurers.AppModuleConf
 import com.mercadolibre.android.gradle.app.core.action.modules.jacoco.AppJacocoModule
 import com.mercadolibre.android.gradle.app.core.action.modules.lint.ApplicationLintOptionsModule
 import com.mercadolibre.android.gradle.app.integration.utils.domain.ModuleType
+import com.mercadolibre.android.gradle.app.managers.APP_PROJECT
 import com.mercadolibre.android.gradle.app.managers.AbstractPluginManager
-import com.mercadolibre.android.gradle.app.managers.FileManager
-import com.mercadolibre.android.gradle.app.managers.LIBRARY_PROJECT
 import com.mercadolibre.android.gradle.app.managers.ROOT_PROJECT
 import com.mercadolibre.android.gradle.app.module.ModuleProvider
 import com.mercadolibre.android.gradle.baseplugin.BasePlugin
@@ -18,27 +17,28 @@ import io.mockk.verify
 
 class ModuleConfigurerTest : AbstractPluginManager() {
 
-    val basePlugin = BasePlugin()
+    private val basePlugin = BasePlugin()
 
-    val moduleConfigurer = AppModuleConfigurer()
+    private val moduleConfigurer = AppModuleConfigurer()
 
-    val lintableModule = mockk<LintableModule>(relaxed = true)
-    val jacocoModule = mockk<AppJacocoModule>(relaxed = true)
-    val lintModule = mockk<ApplicationLintOptionsModule>(relaxed = true)
+    private val lintableModule = mockk<LintableModule>(relaxed = true)
+    private val jacocoModule = mockk<AppJacocoModule>(relaxed = true)
+    private val lintModule = mockk<ApplicationLintOptionsModule>(relaxed = true)
 
     @org.junit.Before
     fun setUp() {
         initTmpFolder()
-        val fileManager = FileManager(tmpFolder)
 
-        root = moduleManager.createRootProject(ROOT_PROJECT, mutableMapOf(LIBRARY_PROJECT to ModuleType.APP), projects, fileManager)
+        root = moduleManager.createSampleRoot(ROOT_PROJECT, tmpFolder)
+        projects[APP_PROJECT] = moduleManager.createSampleSubProject(APP_PROJECT, tmpFolder, root)
+
         basePlugin.apply(root)
 
         mockkObject(ModuleProvider)
 
         every { ModuleProvider.provideAppAndroidModules() } returns listOf(lintableModule, jacocoModule, lintModule)
 
-        moduleConfigurer.configureProject(projects[LIBRARY_PROJECT]!!)
+        moduleConfigurer.configureProject(projects[APP_PROJECT]!!)
     }
 
     @org.junit.Test

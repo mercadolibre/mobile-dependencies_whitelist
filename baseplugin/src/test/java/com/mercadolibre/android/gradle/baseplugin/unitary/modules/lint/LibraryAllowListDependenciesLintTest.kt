@@ -50,11 +50,8 @@ class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
     fun setUp() {
         initTmpFolder()
 
-        val fileManager = FileManager(tmpFolder)
-
-        pathsAffectingAllModules.forEach { File(tmpFolder.root, it).mkdirs() }
-
-        root = moduleManager.createRootProject(ROOT_PROJECT, mutableMapOf(LIBRARY_PROJECT to ModuleType.LIBRARY), projects, fileManager)
+        root = moduleManager.createSampleRoot(ROOT_PROJECT, tmpFolder)
+        projects[LIBRARY_PROJECT] = moduleManager.createSampleSubProject(LIBRARY_PROJECT, tmpFolder, root)
 
         findExtension<LintGradleExtension>(projects[LIBRARY_PROJECT]!!)?.apply {
             this.enabled = true

@@ -22,17 +22,15 @@ import java.io.File
 @RunWith(JUnit4::class)
 class ReleaseDependenciesTest : AbstractPluginManager() {
 
-    val releaseDependencies = ReleaseDependenciesLint()
+    private val libraryConfigurer = BaseLibraryPlugin()
+    private val releaseDependencies = ReleaseDependenciesLint()
 
     @org.junit.Before
     fun setUp() {
         initTmpFolder()
 
-        val fileManager = FileManager(tmpFolder)
-
-        pathsAffectingAllModules.forEach { File(tmpFolder.root, it).mkdirs() }
-
-        root = moduleManager.createRootProject(ROOT_PROJECT, mutableMapOf(LIBRARY_PROJECT to ModuleType.LIBRARY), projects, fileManager)
+        root = moduleManager.createSampleRoot(ROOT_PROJECT, tmpFolder)
+        projects[LIBRARY_PROJECT] = moduleManager.createSampleSubProject(LIBRARY_PROJECT, tmpFolder, root)
 
         projects[LIBRARY_PROJECT]!!.extensions.create(LINTABLE_EXTENSION, LintGradleExtension::class.java)
 
@@ -70,7 +68,7 @@ class ReleaseDependenciesTest : AbstractPluginManager() {
 
         every { file.parentFile.mkdirs() } returns mockk(relaxed = true)
         every { file.exists() } returns mockk(relaxed = true)
-        every { file.path } returns "./asd.txt"
+        every { file.path } returns "./build/tmp/asd.txt"
 
         releaseDependencies.checkIsFailed(listOf(ANY_NAME).stream(), file)
         File("./asd.txt").delete()

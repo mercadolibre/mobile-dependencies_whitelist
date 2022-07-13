@@ -1,3 +1,8 @@
+# 13.0.10
+- Se agrega la documentacion para eliminar los issues de DeteKt
+
+# 13.0.9
+- Se mejora el rendimiento de los tests
 
 # 13.0.8
 - Se elimina el operador !! del group al almacenar una dependencia 

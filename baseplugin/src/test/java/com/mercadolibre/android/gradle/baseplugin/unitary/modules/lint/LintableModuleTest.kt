@@ -17,17 +17,17 @@ import org.junit.runners.JUnit4
 @RunWith(JUnit4::class)
 class LintableModuleTest: AbstractPluginManager() {
 
-    val lintableModule = LintableModule()
+    private val lintableModule = LintableModule()
 
     @org.junit.Before
     fun setUp() {
         initTmpFolder()
 
-        val fileManager = FileManager(tmpFolder)
-
         pathsAffectingAllModules.forEach { File(tmpFolder.root, it).mkdirs() }
 
-        root = moduleManager.createRootProject(ROOT_PROJECT, mutableMapOf(LIBRARY_PROJECT to ModuleType.LIBRARY, APP_PROJECT to ModuleType.APP), projects, fileManager)
+        root = moduleManager.createSampleRoot(ROOT_PROJECT, tmpFolder)
+        projects[LIBRARY_PROJECT] = moduleManager.createSampleSubProject(LIBRARY_PROJECT, tmpFolder, root)
+        projects[APP_PROJECT] = moduleManager.createSampleSubProject(APP_PROJECT, tmpFolder, root)
 
         projects[LIBRARY_PROJECT]!!.extensions.create(LINTABLE_EXTENSION, LintGradleExtension::class.java)
 

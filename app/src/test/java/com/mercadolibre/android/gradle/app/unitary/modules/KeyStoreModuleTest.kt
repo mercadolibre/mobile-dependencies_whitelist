@@ -1,10 +1,10 @@
 package com.mercadolibre.android.gradle.app.unitary.modules
 
 import com.mercadolibre.android.gradle.app.core.action.modules.keystore.KeyStoreModule
-import com.mercadolibre.android.gradle.app.integration.utils.domain.ModuleType
+import com.mercadolibre.android.gradle.app.utils.domain.ModuleType
 import com.mercadolibre.android.gradle.app.managers.APP_PROJECT
 import com.mercadolibre.android.gradle.app.managers.AbstractPluginManager
-import com.mercadolibre.android.gradle.app.managers.FileManager
+
 import com.mercadolibre.android.gradle.app.managers.ROOT_PROJECT
 import com.mercadolibre.android.gradle.baseplugin.core.components.UNPACK_DEBUG_KEY_STORE_TASK
 import io.mockk.every
@@ -17,18 +17,15 @@ import org.junit.runners.JUnit4
 @RunWith(JUnit4::class)
 class KeyStoreModuleTest: AbstractPluginManager() {
 
-    val keyStoreModule = KeyStoreModule(false)
-    val keyStoreProductiveModule = KeyStoreModule(true)
+    private val keyStoreModule = KeyStoreModule(false)
+    private val keyStoreProductiveModule = KeyStoreModule(true)
 
     @org.junit.Before
     fun setUp() {
         initTmpFolder()
 
-        val fileManager = FileManager(tmpFolder)
-
-        pathsAffectingAllModules.forEach { File(tmpFolder.root, it).mkdirs() }
-
-        root = moduleManager.createRootProject(ROOT_PROJECT, mutableMapOf(APP_PROJECT to ModuleType.APP), projects, fileManager)
+        root = moduleManager.createSampleRoot(ROOT_PROJECT, tmpFolder)
+        projects[APP_PROJECT] = moduleManager.createSampleSubProject(APP_PROJECT, tmpFolder, root)
 
         addMockVariant(projects[APP_PROJECT]!!, ModuleType.APP)
     }
@@ -36,13 +33,12 @@ class KeyStoreModuleTest: AbstractPluginManager() {
     @org.junit.Test
     fun `When the KeyStoreModule configures the project write the keystore file`() {
         val project = mockk<Project>()
-        val file = File("./asd.txt")
+        val file = File("./build/tmp/asd.txt")
         file.createNewFile()
 
-        every { project.file("./") } returns file
+        every { project.file("./build/tmp") } returns file
 
-        keyStoreModule.writeFile(project, "./", file)
-        file.delete()
+        keyStoreModule.writeFile(project, "./build/tmp", file)
     }
 
     @org.junit.Test

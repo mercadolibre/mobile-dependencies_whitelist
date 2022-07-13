@@ -3,16 +3,13 @@ package com.mercadolibre.android.gradle.library.unitary.modules
 import com.mercadolibre.android.gradle.baseplugin.core.components.JACOCO_FULL_REPORT_TASK
 import com.mercadolibre.android.gradle.baseplugin.core.components.JACOCO_TEST_REPORT_TASK
 import com.mercadolibre.android.gradle.library.core.action.modules.jacoco.LibraryJacocoModule
-import com.mercadolibre.android.gradle.library.integration.utils.domain.ModuleType
+import com.mercadolibre.android.gradle.library.utils.domain.ModuleType
 import com.mercadolibre.android.gradle.library.managers.AbstractPluginManager
-import com.mercadolibre.android.gradle.library.managers.FileManager
 import com.mercadolibre.android.gradle.library.managers.LIBRARY_PROJECT
 import com.mercadolibre.android.gradle.library.managers.ROOT_PROJECT
-import io.mockk.mockk
 import org.gradle.api.tasks.testing.Test
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
-import java.io.File
 
 @RunWith(JUnit4::class)
 class LibraryJacocoModuleTest : AbstractPluginManager() {
@@ -23,11 +20,8 @@ class LibraryJacocoModuleTest : AbstractPluginManager() {
     fun setUp() {
         initTmpFolder()
 
-        val fileManager = FileManager(tmpFolder)
-
-        pathsAffectingAllModules.forEach { File(tmpFolder.root, it).mkdirs() }
-
-        root = moduleManager.createRootProject(ROOT_PROJECT, mutableMapOf(LIBRARY_PROJECT to ModuleType.LIBRARY), projects, fileManager)
+        root = moduleManager.createSampleRoot(ROOT_PROJECT, tmpFolder)
+        projects[LIBRARY_PROJECT] = moduleManager.createSampleSubProject(LIBRARY_PROJECT, tmpFolder, root)
 
         addMockVariant(projects[LIBRARY_PROJECT]!!, ModuleType.LIBRARY)
 

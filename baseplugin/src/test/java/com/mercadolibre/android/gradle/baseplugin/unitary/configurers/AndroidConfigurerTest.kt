@@ -19,43 +19,35 @@ import org.junit.runners.JUnit4
 class AndroidConfigurerTest : AbstractPluginManager() {
 
     val basePlugin = BasePlugin()
-
-    val androidConfigurer = AndroidConfigurer()
-
-    lateinit var subProject: Project
+    private val androidConfigurer = AndroidConfigurer()
 
     @org.junit.Before
     fun setUp() {
         initTmpFolder()
+
         root = moduleManager.createSampleRoot(ROOT_PROJECT, tmpFolder)
-        subProject = moduleManager.createSampleSubProject(LIBRARY_PROJECT, tmpFolder, root)
+        projects[LIBRARY_PROJECT] = moduleManager.createSampleSubProject(LIBRARY_PROJECT, tmpFolder, root)
+        
         basePlugin.apply(root)
-        androidConfigurer.configureProject(subProject)
+        androidConfigurer.configureProject(projects[LIBRARY_PROJECT]!!)
     }
 
     @org.junit.Test
     fun `When the AndroidConfigurer configures a project set the Compile Sdk Version`() {
-        findExtension<BaseExtension>(subProject)?.apply {
+        findExtension<BaseExtension>(projects[LIBRARY_PROJECT]!!)?.apply {
             assert(compileSdkVersion == VersionProvider.provideApiSdkLevel().toString())
         }
     }
 
     @org.junit.Test
     fun `When the AndroidConfigurer configures a project set the Build Tools Version`() {
-        findExtension<BaseExtension>(subProject)?.apply {
+        findExtension<BaseExtension>(projects[LIBRARY_PROJECT]!!)?.apply {
             assert(buildToolsVersion == VersionProvider.provideBuildToolsVersion())
         }
     }
 
     @org.junit.Test
     fun `When the AndroidConfigurer configures a project set the Min Sdk Version`() {
-        val newTempFolder = TemporaryFolder()
-        newTempFolder.create()
-
-        val fileManager = FileManager(newTempFolder)
-        val projects = mutableMapOf<String, Project>()
-        moduleManager.createRootProject(ROOT_PROJECT, mutableMapOf(LIBRARY_PROJECT to ModuleType.LIBRARY), projects, fileManager)
-
         findExtension<BaseExtension>(projects[LIBRARY_PROJECT]!!)?.apply {
             assert(defaultConfig.minSdkVersion!!.apiString == VersionProvider.provideMinSdk().toString())
         }
@@ -63,13 +55,6 @@ class AndroidConfigurerTest : AbstractPluginManager() {
 
     @org.junit.Test
     fun `When the AndroidConfigurer configures a project set the Target Sdk Version`() {
-        val newTempFolder = TemporaryFolder()
-        newTempFolder.create()
-
-        val fileManager = FileManager(newTempFolder)
-        val projects = mutableMapOf<String, Project>()
-         moduleManager.createRootProject("rootSample", mutableMapOf(LIBRARY_PROJECT to ModuleType.LIBRARY), projects, fileManager)
-
         findExtension<BaseExtension>(projects[LIBRARY_PROJECT]!!)?.apply {
             assert(defaultConfig.targetSdkVersion!!.apiString == VersionProvider.provideApiSdkLevel().toString())
         }
@@ -77,14 +62,14 @@ class AndroidConfigurerTest : AbstractPluginManager() {
 
     @org.junit.Test
     fun `When the AndroidConfigurer configures a project set the Source Compatibility`() {
-        findExtension<BaseExtension>(subProject)?.apply {
+        findExtension<BaseExtension>(projects[LIBRARY_PROJECT]!!)?.apply {
             assert(compileOptions.sourceCompatibility == VersionProvider.provideJavaVersion())
         }
     }
 
     @org.junit.Test
     fun `When the AndroidConfigurer configures a project set the Target Compatibility`() {
-        findExtension<BaseExtension>(subProject)?.apply {
+        findExtension<BaseExtension>(projects[LIBRARY_PROJECT]!!)?.apply {
             assert(compileOptions.targetCompatibility == VersionProvider.provideJavaVersion())
         }
     }
