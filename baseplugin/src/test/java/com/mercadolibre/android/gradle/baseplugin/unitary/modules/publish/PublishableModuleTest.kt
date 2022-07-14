@@ -1,6 +1,7 @@
 package com.mercadolibre.android.gradle.baseplugin.unitary.modules.publish
 
 import com.android.build.gradle.api.BaseVariant
+import com.android.builder.model.SourceProvider
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.JavaPublishableModule
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.basics.TaskGenerator
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.sub_classes.PublishAarExperimentalTask
@@ -15,6 +16,7 @@ import com.mercadolibre.android.gradle.baseplugin.managers.AbstractPluginManager
 import com.mercadolibre.android.gradle.baseplugin.managers.FileManager
 import com.mercadolibre.android.gradle.baseplugin.managers.LIBRARY_PROJECT
 import com.mercadolibre.android.gradle.baseplugin.managers.ROOT_PROJECT
+import com.nhaarman.mockitokotlin2.mock
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.unmockkAll
@@ -42,10 +44,18 @@ class PublishableModuleTest: AbstractPluginManager() {
         variant = mockVariant()
     }
 
-    @org.junit.After
-    fun after() {
-        unmockkAll()
+    @org.junit.Test
+    fun `When the PublishAartask is created works fine`() {
+        val variant = mockLibVariant()
+        val sourceSet = mockk<SourceProvider>() {
+            every { javaDirectories } returns listOf(mockk(relaxed = true))
+        }
+
+        every { variant.sourceSets } returns listOf(sourceSet)
+
+        PublishAarExperimentalTask().register(projects[LIBRARY_PROJECT]!!, variant, ANY_NAME)
     }
+
 
     @org.junit.Test
     fun `When the TaskGenerator is created works fine`() {
