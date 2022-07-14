@@ -1,4 +1,6 @@
 # 13.0.10
+- Se solucionan los problemas al linetar multiples modulos al mismo tiempo
+- Se divide la responsabilida del Lintable module de lintear Apps y Librerias llevandola a su modulo correspondiente
 - Al momento de generar los Publish se hace cacheable el timestamp que se utiliza para las versiones
 
 # 13.0.9 (unpublished)

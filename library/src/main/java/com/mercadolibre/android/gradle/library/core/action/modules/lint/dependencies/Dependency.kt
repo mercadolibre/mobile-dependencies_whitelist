@@ -1,4 +1,4 @@
-package com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics
+package com.mercadolibre.android.gradle.library.core.action.modules.lint.dependencies
 
 data class Dependency(
     val group: String?,

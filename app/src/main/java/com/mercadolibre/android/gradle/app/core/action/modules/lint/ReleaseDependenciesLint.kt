@@ -1,4 +1,4 @@
-package com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies
+package com.mercadolibre.android.gradle.app.core.action.modules.lint
 
 import com.android.build.gradle.api.BaseVariant
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.Lint
@@ -21,7 +21,7 @@ class ReleaseDependenciesLint: Lint() {
         return LINT_RELEASE_DEPENDENCIES_TASK
     }
 
-    override fun lint(project: Project, variants: ArrayList<BaseVariant>): Boolean {
+    override fun lint(project: Project, variants: List<BaseVariant>): Boolean {
         findExtension<LintGradleExtension>(project)?.apply {
             if (!releaseDependenciesLintEnabled){
                 return false
