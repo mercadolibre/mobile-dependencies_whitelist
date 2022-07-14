@@ -1,26 +1,33 @@
 package com.mercadolibre.android.gradle.baseplugin.unitary.modules.publish
 
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.basics.TimeStampManager
-import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_TIME_FILE
-import io.mockk.every
-import io.mockk.mockk
-import java.io.File
-import org.gradle.api.Project
+import com.mercadolibre.android.gradle.baseplugin.managers.AbstractPluginManager
+import com.mercadolibre.android.gradle.baseplugin.managers.LIBRARY_PROJECT
+import com.mercadolibre.android.gradle.baseplugin.managers.ROOT_PROJECT
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
 
 @RunWith(JUnit4::class)
-class TimeStampManagerTest {
+class TimeStampManagerTest: AbstractPluginManager() {
+
+    @org.junit.Before
+    fun setUp() {
+        initTmpFolder()
+
+        root = moduleManager.createSampleRoot(ROOT_PROJECT, tmpFolder)
+        projects[LIBRARY_PROJECT] = moduleManager.createSampleSubProject(LIBRARY_PROJECT, tmpFolder, root)
+    }
 
     @org.junit.Test
     fun `Get a time stamp`() {
-        val project = mockk<Project>(relaxed = true)
-        val file = mockk<File>(relaxed = true)
+        TimeStampManager.getOrCreateTimeStamp(projects[LIBRARY_PROJECT]!!) // Create
+        TimeStampManager.getOrCreateTimeStamp(projects[LIBRARY_PROJECT]!!) // Get
+    }
 
-
-        every { project.rootProject.file(PUBLISHING_TIME_FILE) } returns file
-
-        TimeStampManager.getOrCreateTimeStamp(project)
+    @org.junit.Test
+    fun `Delete a time stamp`() {
+        TimeStampManager.getOrCreateTimeStamp(projects[LIBRARY_PROJECT]!!) // Create
+        TimeStampManager.deleteTimeStampFile(projects[LIBRARY_PROJECT]!!) // Delete
     }
 
 }

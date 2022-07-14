@@ -12,7 +12,6 @@ import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishabl
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.sub_classes.PublishAarPublicReleaseTask
 import com.mercadolibre.android.gradle.baseplugin.core.components.PACKAGING_AAR_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_GROUP
-import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_TIME_FILE
 import com.mercadolibre.android.gradle.baseplugin.core.components.RELEASE_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.TASK_TYPE_EXPERIMENTAL
 import com.mercadolibre.android.gradle.baseplugin.core.components.TASK_TYPE_LOCAL
