@@ -86,6 +86,12 @@
       "version": "^~>\\s?(13.2.0)$"
     },
     {
+      "name": "FBSDKCoreKit_basics",
+      "source": "public",
+      "target": "production",
+      "version": "^~>\\s?(13.2.0)$"
+    },
+    {
       "name": "FSQCollectionViewAlignedLayout",
       "source": "public",
       "target": "production",
