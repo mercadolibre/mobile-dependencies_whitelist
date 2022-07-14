@@ -1,16 +1,22 @@
 package com.mercadolibre.android.gradle.baseplugin.unitary.modules.publish
 
+import com.android.build.gradle.LibraryExtension
 import com.android.build.gradle.api.BaseVariant
+import com.android.build.gradle.api.LibraryVariant
 import com.android.builder.model.SourceProvider
+import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.PluginConfigurer
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.JavaPublishableModule
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.basics.TaskGenerator
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.sub_classes.PublishAarExperimentalTask
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.sub_classes.PublishAarLocalTask
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.sub_classes.PublishAarPrivateReleaseTask
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.sub_classes.PublishAarPublicReleaseTask
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.sub_classes.PublishJarExperimentalTask
+import com.mercadolibre.android.gradle.baseplugin.core.components.LIBRARY_PLUGINS
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISH_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.SOURCE_SETS_DEFAULT
 import com.mercadolibre.android.gradle.baseplugin.integration.utils.domain.ModuleType
+import com.mercadolibre.android.gradle.baseplugin.managers.ANY_CONFIGURATION
 import com.mercadolibre.android.gradle.baseplugin.managers.ANY_NAME
 import com.mercadolibre.android.gradle.baseplugin.managers.AbstractPluginManager
 import com.mercadolibre.android.gradle.baseplugin.managers.FileManager
@@ -22,6 +28,8 @@ import io.mockk.mockk
 import io.mockk.unmockkAll
 import java.io.File
 import org.gradle.api.tasks.SourceSet
+import org.gradle.api.tasks.SourceSetContainer
+import org.gradle.api.tasks.SourceSetOutput
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
 
@@ -30,7 +38,7 @@ class PublishableModuleTest: AbstractPluginManager() {
 
     private val javaPublishableModule = JavaPublishableModule()
 
-    lateinit var variant: BaseVariant
+    private lateinit var variant: BaseVariant
 
     @org.junit.Before
     fun setUp() {
@@ -39,9 +47,15 @@ class PublishableModuleTest: AbstractPluginManager() {
         root = moduleManager.createSampleRoot(ROOT_PROJECT, tmpFolder)
         projects[LIBRARY_PROJECT] = moduleManager.createSampleSubProject(LIBRARY_PROJECT, tmpFolder, root)
 
-        javaPublishableModule.configure(projects[LIBRARY_PROJECT]!!)
-
         variant = mockVariant()
+
+        javaPublishableModule.configure(projects[LIBRARY_PROJECT]!!)
+    }
+
+    @org.junit.Test
+    fun `When the PublishJartask is created works fine`() {
+        PluginConfigurer(LIBRARY_PLUGINS).configureProject(projects[LIBRARY_PROJECT]!!)
+        javaPublishableModule.configure(projects[LIBRARY_PROJECT]!!)
     }
 
     @org.junit.Test

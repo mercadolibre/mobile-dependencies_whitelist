@@ -30,4 +30,8 @@ class TimeStampManagerTest: AbstractPluginManager() {
         TimeStampManager.deleteTimeStampFile(projects[LIBRARY_PROJECT]!!) // Delete
     }
 
+    @org.junit.Test
+    fun `Delete a time stamp if not exist`() {
+        TimeStampManager.deleteTimeStampFile(projects[LIBRARY_PROJECT]!!) // Delete
+    }
 }
