@@ -1,4 +1,5 @@
 # 13.0.10
+- Usamos libraryName en lugar de versionName
 - Se solucionan los problemas al linetar multiples modulos al mismo tiempo
 - Se divide la responsabilida del Lintable module de lintear Apps y Librerias llevandola a su modulo correspondiente
 
