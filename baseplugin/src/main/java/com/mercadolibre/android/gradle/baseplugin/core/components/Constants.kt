@@ -21,12 +21,18 @@ const val RESOLUTION_STRATEGY_HOURS = 2 /** This variable contains a keyword use
 /** This variable contains the Allow List URL. */
 const val ALLOW_LIST_URL = "https://raw.githubusercontent.com/mercadolibre/mobile-dependencies_whitelist/master/android-whitelist.json"
 
-const val GRADLE_ENTERPRISE = "com.gradle.enterprise" /** This variable contains a plugin. */
-const val MAVEN_PUBLISH = "org.gradle.maven-publish" /** This variable contains a plugin. */
-const val JACOCO_PLUGIN = "org.gradle.jacoco" /** This variable contains a plugin. */
-const val KOTLIN_ANDROID = "kotlin-android" /** This variable contains a plugin. */
-const val LIBRARY_PLUGIN = "com.android.library" /** This variable contains a plugin. */
-const val APP_PLUGIN = "com.android.application" /** This variable contains a plugin. */
+/** This variable contains a plugin. */
+const val GRADLE_ENTERPRISE = "com.gradle.enterprise"
+/** This variable contains a plugin. */
+const val MAVEN_PUBLISH = "org.gradle.maven-publish"
+/** This variable contains a plugin. */
+const val JACOCO_PLUGIN = "org.gradle.jacoco"
+/** This variable contains a plugin. */
+const val KOTLIN_ANDROID = "kotlin-android"
+/** This variable contains a plugin. */
+const val LIBRARY_PLUGIN = "com.android.library"
+/** This variable contains a plugin. */
+const val APP_PLUGIN = "com.android.application"
 
 /** This list contains the plugins that an library needs. */
 val LIBRARY_PLUGINS = listOf(
@@ -39,12 +45,16 @@ val APP_PLUGINS = listOf(
     KOTLIN_ANDROID,
     APP_PLUGIN
 )
-
-const val ANSI_RESET = "\u001B[0m" /** This variable contains an ANSI style. */
-const val ANSI_GREEN = "\u001B[32m" /** This variable contains an ANSI style. */
-const val ANSI_YELLOW = "\u001B[33m" /** This variable contains an ANSI style. */
-const val ANSI_BLACK = "\u001B[30m" /** This variable contains an ANSI style. */
-const val ANSI_BOLD = "\u001B[0;1m" /** This variable contains an ANSI style. */
+/** This variable contains an ANSI style. */
+const val ANSI_RESET = "\u001B[0m"
+/** This variable contains an ANSI style. */
+const val ANSI_GREEN = "\u001B[32m"
+/** This variable contains an ANSI style. */
+const val ANSI_YELLOW = "\u001B[33m"
+/** This variable contains an ANSI style. */
+const val ANSI_BLACK = "\u001B[30m"
+/** This variable contains an ANSI style. */
+const val ANSI_BOLD = "\u001B[0;1m"
 
 /** This variable contains a string that styles the console reports. */
 val SEPARATOR = "------------------------------------------------------------------------".ansi(ANSI_BLACK)
@@ -52,14 +62,10 @@ val SEPARATOR = "---------------------------------------------------------------
 const val ARROW = "-->"
 
 /** This method is responsible for providing an ANSI style. */
-infix fun String.ansi(ansiColor: String): String {
-    return ansiColor + this + ANSI_RESET
-}
+infix fun String.ansi(ansiColor: String): String = ansiColor + this + ANSI_RESET
 
 /** This method is responsible for providing an ANSI style. */
-infix fun Int.ansi(ansiColor: String): String {
-    return ansiColor + this.toString() + ANSI_RESET
-}
+infix fun Int.ansi(ansiColor: String): String = ansiColor + this.toString() + ANSI_RESET
 
 /**
  * These variables describe the behavior of the configurators.
@@ -133,8 +139,8 @@ $PLUGIN_CONFIGURER_DESCRITION
  * These variables help modules express what they need.
  */
 
-const val JACOCO_EXTENSION = "jacocoConfiguration" /** This variable contains the name of an extension */
-const val LINTABLE_EXTENSION = "lintGradle" /** This variable contains the name of an extension */
+const val JACOCO_EXTENSION = "jacocoConfiguration" /** This variable contains the name of an extension. */
+const val LINTABLE_EXTENSION = "lintGradle" /** This variable contains the name of an extension. */
 
 const val MELI_GROUP = "meliPlugin" /** This variable contains a keyword used to set the group of a task. */
 const val JACOCO_GROUP = "reporting" /** This variable contains a keyword used to set the group of a task. */
