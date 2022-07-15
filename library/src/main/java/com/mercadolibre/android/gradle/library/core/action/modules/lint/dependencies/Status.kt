@@ -1,4 +1,4 @@
-package com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics
+package com.mercadolibre.android.gradle.library.core.action.modules.lint.dependencies
 
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_AVAILABLE
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_EXPIRED
@@ -8,7 +8,7 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_INVALID
 /**
  * The Status class is responsible for providing all the possibilities of dependencies within the allowlist.
  */
-class Status {
+object Status {
 
     /**
      * This method is responsible for generating an available dependency state.

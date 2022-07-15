@@ -1,17 +1,17 @@
 package com.mercadolibre.android.gradle.baseplugin.core.components
 
+import com.mercadolibre.android.gradle.app.core.action.modules.lint.ReleaseDependenciesLint
 import com.mercadolibre.android.gradle.baseplugin.BasePlugin
 import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.AndroidConfigurer
 import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.BasicsConfigurer
 import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.ExtensionsConfigurer
 import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.ModuleConfigurer
 import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.PluginConfigurer
-import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.LibraryAllowListDependenciesLint
-import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.ReleaseDependenciesLint
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.listProjects.AndroidProjectTypes
 import com.mercadolibre.android.gradle.baseplugin.core.action.providers.RepositoryProvider
 import com.mercadolibre.android.gradle.baseplugin.module.ModuleProvider
 import com.mercadolibre.android.gradle.baseplugin.module.VersionProvider
+import com.mercadolibre.android.gradle.library.core.action.modules.lint.LibraryAllowListDependenciesLint
 
 /**
  * BASE.

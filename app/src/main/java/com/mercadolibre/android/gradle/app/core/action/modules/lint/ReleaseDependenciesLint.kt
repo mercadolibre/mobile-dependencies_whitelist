@@ -1,11 +1,10 @@
-package com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies
+package com.mercadolibre.android.gradle.app.core.action.modules.lint
 
 import com.android.build.gradle.api.BaseVariant
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.Lint
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.LintGradleExtension
+import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_FILENAME
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_RELEASE_DEPENDENCIES_TASK
-import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_RELEASE_ERROR_TITLE
-import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_RELEASE_FILE
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_EXPERIMENTAL
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_LOCAL
 import org.gradle.api.Project
@@ -18,6 +17,9 @@ import java.util.stream.Stream
  */
 class ReleaseDependenciesLint : Lint() {
 
+    private val FILE = "build/reports/${ReleaseDependenciesLint::class.java.simpleName}/$LINT_FILENAME"
+    val LINT_RELEASE_FILE = "build/reports/${ReleaseDependenciesLint::class.java.simpleName}/$LINT_FILENAME"
+
     /**
      * This method is responsible for providing a name to the linteo class.
      */
@@ -27,7 +29,7 @@ class ReleaseDependenciesLint : Lint() {
      * This method is responsible for verifying that the dependencies of all the variants are valid or
      * if they are about to expire, perform the warnign.
      */
-    override fun lint(project: Project, variants: ArrayList<BaseVariant>): Boolean {
+    override fun lint(project: Project, variants: List<BaseVariant>): Boolean {
         findExtension<LintGradleExtension>(project)?.apply {
             if (!releaseDependenciesLintEnabled) {
                 return false
@@ -61,8 +63,8 @@ class ReleaseDependenciesLint : Lint() {
         for (dependency in dependencies) {
             if (!lintResultsFile.exists()) {
                 lintResultsFile.parentFile.mkdirs()
-                println(LINT_RELEASE_ERROR_TITLE)
-                lintResultsFile.writeText(LINT_RELEASE_ERROR_TITLE)
+                println(FILE)
+                lintResultsFile.writeText(FILE)
             }
 
             lintResultsFile.appendText("${System.getProperty("line.separator")}$dependency")

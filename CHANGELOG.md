@@ -1,4 +1,7 @@
 # 13.0.10
+- Usamos libraryName en lugar de versionName
+- Se solucionan los problemas al linetar multiples modulos al mismo tiempo
+- Se divide la responsabilida del Lintable module de lintear Apps y Librerias llevandola a su modulo correspondiente
 - Se agrega la documentacion para eliminar los issues de DeteKt
 - Se modifica el pre-commit-config.yaml segun nos comenta el equipo de Code Quality por un issue de que DeteKt no genera reporte
 
