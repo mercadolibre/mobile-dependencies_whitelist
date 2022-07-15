@@ -1,5 +1,6 @@
 # 13.0.10
 - Se agrega la documentacion para eliminar los issues de DeteKt
+- Se modifica el pre-commit-config.yaml segun nos comenta el equipo de Code Quality por un issue de que DeteKt no genera reporte
 
 # 13.0.9
 - Se mejora el rendimiento de los tests
