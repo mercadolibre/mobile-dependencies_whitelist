@@ -13,7 +13,7 @@ import org.gradle.api.Task
 import org.gradle.api.tasks.SourceSet
 import org.gradle.api.tasks.TaskProvider
 
-class PublishJarLocalTask: PublishJarTask() {
+class PublishJarLocalTask : PublishJarTask() {
 
     override fun register(project: Project, variant: SourceSet, taskName: String): TaskProvider<Task> {
         this.project = project
@@ -22,7 +22,7 @@ class PublishJarLocalTask: PublishJarTask() {
 
         val taskGenerator = TaskGenerator(
             taskName,
-            "${PUBLISHING_LOCAL_SUBFIX_TASK}${project.version}-${TimeStampManager.getOrCreateTimeStamp(project)}",
+            "${PUBLISHING_LOCAL_SUBFIX_TASK}${project.version}-${TimeStampManager.getOrCreateTimeStamp()}",
             versionContainer,
             getListOfDependsOn(),
             PUBLISHING_MAVEN_LOCAL,
@@ -35,5 +35,5 @@ class PublishJarLocalTask: PublishJarTask() {
     }
 }
 
-class PublishJarPrivateReleaseTask: PublishJarReleaseTask(INTERNAL_RELEASES)
-class PublishJarPublicReleaseTask: PublishJarReleaseTask(PUBLIC_RELEASES)
+class PublishJarPrivateReleaseTask : PublishJarReleaseTask(INTERNAL_RELEASES)
+class PublishJarPublicReleaseTask : PublishJarReleaseTask(PUBLIC_RELEASES)

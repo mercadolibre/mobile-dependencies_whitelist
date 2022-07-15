@@ -8,7 +8,7 @@ import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
 
 @RunWith(JUnit4::class)
-class TimeStampManagerTest: AbstractPluginManager() {
+class TimeStampManagerTest : AbstractPluginManager() {
 
     @org.junit.Before
     fun setUp() {
@@ -20,18 +20,18 @@ class TimeStampManagerTest: AbstractPluginManager() {
 
     @org.junit.Test
     fun `Get a time stamp`() {
-        TimeStampManager.getOrCreateTimeStamp(projects[LIBRARY_PROJECT]!!) // Create
-        TimeStampManager.getOrCreateTimeStamp(projects[LIBRARY_PROJECT]!!) // Get
+        TimeStampManager.getOrCreateTimeStamp() // Create
+        TimeStampManager.getOrCreateTimeStamp() // Get
     }
 
     @org.junit.Test
     fun `Delete a time stamp`() {
-        TimeStampManager.getOrCreateTimeStamp(projects[LIBRARY_PROJECT]!!) // Create
-        TimeStampManager.deleteTimeStampFile(projects[LIBRARY_PROJECT]!!) // Delete
+        TimeStampManager.getOrCreateTimeStamp() // Create
+        TimeStampManager.deleteTimeStamp() // Delete
     }
 
     @org.junit.Test
     fun `Delete a time stamp if not exist`() {
-        TimeStampManager.deleteTimeStampFile(projects[LIBRARY_PROJECT]!!) // Delete
+        TimeStampManager.deleteTimeStamp() // Delete
     }
 }

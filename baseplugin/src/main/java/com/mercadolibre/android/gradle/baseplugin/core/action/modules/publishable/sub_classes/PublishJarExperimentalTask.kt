@@ -10,7 +10,7 @@ import org.gradle.api.Task
 import org.gradle.api.tasks.SourceSet
 import org.gradle.api.tasks.TaskProvider
 
-class PublishJarExperimentalTask: PublishJarTask() {
+class PublishJarExperimentalTask : PublishJarTask() {
 
     override fun register(project: Project, variant: SourceSet, taskName: String): TaskProvider<Task> {
         this.project = project
@@ -19,7 +19,7 @@ class PublishJarExperimentalTask: PublishJarTask() {
 
         val taskGenerator = TaskGenerator(
             taskName,
-            "${PUBLISHING_EXPERIMENTAL_SUBFIX_TASK}${project.version}-${TimeStampManager.getOrCreateTimeStamp(project)}",
+            "${PUBLISHING_EXPERIMENTAL_SUBFIX_TASK}${project.version}-${TimeStampManager.getOrCreateTimeStamp()}",
             versionContainer,
             getListOfDependsOn(),
             INTERNAL_EXPERIMENTAL,

@@ -13,7 +13,7 @@ import org.gradle.api.Project
 import org.gradle.api.Task
 import org.gradle.api.tasks.TaskProvider
 
-class PublishAarLocalTask: PublishAarTask() {
+class PublishAarLocalTask : PublishAarTask() {
 
     override fun register(project: Project, variant: BaseVariant, taskName: String): TaskProvider<Task> {
         this.project = project
@@ -22,7 +22,7 @@ class PublishAarLocalTask: PublishAarTask() {
 
         val taskGenerator = TaskGenerator(
             taskName,
-            flavorVersion("${PUBLISHING_LOCAL_SUBFIX_TASK}${project.version}-${TimeStampManager.getOrCreateTimeStamp(project)}", variant),
+            flavorVersion("${PUBLISHING_LOCAL_SUBFIX_TASK}${project.version}-${TimeStampManager.getOrCreateTimeStamp()}", variant),
             versionContainer,
             listOf(getBundleTaskName(project, variant), getSourcesJarTaskName(variant), getJavadocJarTask(variant)),
             PUBLISHING_MAVEN_LOCAL,
@@ -33,8 +33,7 @@ class PublishAarLocalTask: PublishAarTask() {
 
         return taskGenerator.task
     }
-    
 }
 
-class PublishAarPublicReleaseTask: PublishAarReleaseTask(PUBLIC_RELEASES)
-class PublishAarPrivateReleaseTask: PublishAarReleaseTask(INTERNAL_RELEASES)
+class PublishAarPublicReleaseTask : PublishAarReleaseTask(PUBLIC_RELEASES)
+class PublishAarPrivateReleaseTask : PublishAarReleaseTask(INTERNAL_RELEASES)
