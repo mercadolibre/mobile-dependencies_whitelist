@@ -1,7 +1,7 @@
 package com.mercadolibre.android.gradle.library.unitary.modules
 
 import com.mercadolibre.android.gradle.library.core.action.configurers.LibraryModuleConfigurer
-import com.mercadolibre.android.gradle.library.core.action.modules.plugin_description.LibraryPluginDescriptionModule
+import com.mercadolibre.android.gradle.library.core.action.modules.pluginDescription.LibraryPluginDescriptionModule
 import com.mercadolibre.android.gradle.library.managers.ANY_NAME
 import com.mercadolibre.android.gradle.library.module.ModuleProvider
 import io.mockk.mockk

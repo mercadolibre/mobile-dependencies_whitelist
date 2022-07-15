@@ -1,8 +1,8 @@
-package com.mercadolibre.android.gradle.app.core.action.modules.plugin_description
+package com.mercadolibre.android.gradle.app.core.action.modules.pluginDescription
 
 import com.mercadolibre.android.gradle.app.core.action.configurers.AppModuleConfigurer
 import com.mercadolibre.android.gradle.app.module.ModuleProvider
-import com.mercadolibre.android.gradle.baseplugin.core.action.modules.plugin_description.AbstractModulePluginDescription
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.pluginDescription.AbstractModulePluginDescription
 import com.mercadolibre.android.gradle.baseplugin.core.components.ANSI_YELLOW
 import com.mercadolibre.android.gradle.baseplugin.core.components.APP_PLUGIN_DESCRIPTION_TASK
 import com.mercadolibre.android.gradle.baseplugin.core.components.ansi

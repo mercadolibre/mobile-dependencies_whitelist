@@ -50,7 +50,10 @@ open class ModuleConfigurer : Configurer {
         }
     }
 
-    private fun executeModuleConfig(modules: List<Module>, project: Project) {
+    /**
+     * This method is responsible for requesting the corresponding modules to add their functionality to the project.
+     */
+    fun executeModuleConfig(modules: List<Module>, project: Project) {
         for (module in modules) {
             module.configure(project)
         }

@@ -3,8 +3,8 @@ package com.mercadolibre.android.gradle.app.core.action.modules.lint
 import com.android.build.gradle.api.BaseVariant
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.Lint
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.LintGradleExtension
-import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_FILENAME
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_RELEASE_DEPENDENCIES_TASK
+import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_RELEASE_FILE
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_EXPERIMENTAL
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_LOCAL
 import org.gradle.api.Project
@@ -16,9 +16,6 @@ import java.util.stream.Stream
  * in a Release App.
  */
 class ReleaseDependenciesLint : Lint() {
-
-    private val FILE = "build/reports/${ReleaseDependenciesLint::class.java.simpleName}/$LINT_FILENAME"
-    val LINT_RELEASE_FILE = "build/reports/${ReleaseDependenciesLint::class.java.simpleName}/$LINT_FILENAME"
 
     /**
      * This method is responsible for providing a name to the linteo class.
@@ -63,8 +60,8 @@ class ReleaseDependenciesLint : Lint() {
         for (dependency in dependencies) {
             if (!lintResultsFile.exists()) {
                 lintResultsFile.parentFile.mkdirs()
-                println(FILE)
-                lintResultsFile.writeText(FILE)
+                println(LINT_RELEASE_FILE)
+                lintResultsFile.writeText(LINT_RELEASE_FILE)
             }
 
             lintResultsFile.appendText("${System.getProperty("line.separator")}$dependency")

@@ -3,12 +3,15 @@ package com.mercadolibre.android.gradle.library.unitary.modules.lint
 import com.google.gson.JsonObject
 import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.PluginConfigurer
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.LintGradleExtension
+import com.mercadolibre.android.gradle.baseplugin.core.components.ALLOW_LIST_URL
 import com.mercadolibre.android.gradle.baseplugin.core.components.API_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.EXPIRES_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.GROUP_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.LIBRARY_PLUGINS
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINTABLE_EXTENSION
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_FILENAME
+import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_LIBRARY_FILE_BLOCKER
+import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_LIBRARY_FILE_WARNING
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_REPORT_ERROR
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_WARNING_FILENAME
 import com.mercadolibre.android.gradle.baseplugin.core.components.NAME_CONSTANT
@@ -40,9 +43,6 @@ import java.util.Date
 class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
 
     private val lintableModule = LibraryAllowListDependenciesLint()
-
-    private val FILE_BLOCKER = "build/reports/${LibraryAllowListDependenciesLint::class.java.simpleName}/$LINT_FILENAME"
-    private val FILE_WARNING = "build/reports/${LibraryAllowListDependenciesLint::class.java.simpleName}/$LINT_WARNING_FILENAME"
 
     @org.junit.Before
     fun setUp() {
@@ -77,8 +77,7 @@ class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
         findExtension<LintGradleExtension>(projects[LIBRARY_PROJECT]!!)?.apply {
             enabled = false
             dependenciesLintEnabled = false
-            dependencyAllowListUrl =
-                "https://raw.githubusercontent.com/mercadolibre/mobile-dependencies_whitelist/master/android-whitelist.json"
+            dependencyAllowListUrl = ALLOW_LIST_URL
         }
 
         val variant = mockVariant()
@@ -96,7 +95,7 @@ class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
     fun `When the LibraryAllowListDependenciesLintTest is enabled and lint is called whit a expire depedency`() {
         val dependency = Dependency(ANY_GROUP, ANY_NAME, VERSION_1, null, "")
 
-        lintableModule.ALLOWLIST_GOING_TO_EXPIRE.add(dependency)
+        lintableModule.allowListGoingToExpire.add(dependency)
 
         val variant = mockVariant()
         lintableModule.lint(projects[LIBRARY_PROJECT]!!, arrayListOf(variant))
@@ -106,7 +105,7 @@ class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
     fun `When the LibraryAllowListDependenciesLintTest is enabled and lint is called whit a error`() {
         val dependency = Dependency(ANY_GROUP, ANY_NAME, VERSION_1, null, "")
 
-        lintableModule.ALLOWLIST_GOING_TO_EXPIRE.add(dependency)
+        lintableModule.allowListGoingToExpire.add(dependency)
 
         val variant = mockVariant()
         lintableModule.hasFailed = true
@@ -123,7 +122,8 @@ class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
             every { version } returns "1.0.0"
         }
 
-        projects[LIBRARY_PROJECT]!!.configurations.findByName(API_CONSTANT)?.dependencies?.addAll(listOf(dependencyForApi1, dependencyForApi2))
+        projects[LIBRARY_PROJECT]!!.configurations.findByName(API_CONSTANT)
+            ?.dependencies?.addAll(listOf(dependencyForApi1, dependencyForApi2))
 
         lintableModule.lint(projects[LIBRARY_PROJECT]!!, arrayListOf(variant))
     }
@@ -149,7 +149,8 @@ class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
         val dependencyExpired5 =
             Dependency(ANY_GROUP4, ANY_NAME, null, System.currentTimeMillis() + 100000, currentDate)
 
-        lintableModule.ALLOWLIST_DEPENDENCIES.addAll(listOf(dependencyExpired, dependencyExpired2, dependencyExpired3, dependencyExpired4, dependency5))
+        lintableModule.allowListDependencies
+            .addAll(listOf(dependencyExpired, dependencyExpired2, dependencyExpired3, dependencyExpired4, dependencyExpired5))
 
         lintableModule.analyzeDependency(dependency, projects[LIBRARY_PROJECT]!!)
         lintableModule.analyzeDependency(dependency2, projects[LIBRARY_PROJECT]!!)
@@ -169,13 +170,13 @@ class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
     fun `When the LibraryAllowListDependenciesLintTest is called analize any Dependency Deprecated`() {
         val dependency = Dependency(ANY_GROUP, ANY_NAME, VERSION_1, null, "")
 
-        projects[LIBRARY_PROJECT]!!.file("./$FILE_WARNING").mkdirs()
+        projects[LIBRARY_PROJECT]!!.file("./$LINT_LIBRARY_FILE_WARNING").mkdirs()
 
-        lintableModule.ALLOWLIST_GOING_TO_EXPIRE.add(dependency)
+        lintableModule.allowListGoingToExpire.add(dependency)
 
         lintableModule.reportWarnings(projects[LIBRARY_PROJECT]!!)
 
-        val lintWarningFile = projects[LIBRARY_PROJECT]!!.file(FILE_WARNING)
+        val lintWarningFile = projects[LIBRARY_PROJECT]!!.file(LINT_LIBRARY_FILE_WARNING)
         val lintOutPut = lintWarningFile.inputStream().bufferedReader().use { it.readText() }
 
         assert(lintOutPut.contains("WARNING: The following dependencies has been marked as deprecated:"))
@@ -188,7 +189,7 @@ class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
 
         lintableModule.analyzeDependency(dependency, projects[LIBRARY_PROJECT]!!)
 
-        val lintWarningFile = projects[LIBRARY_PROJECT]!!.file(FILE_BLOCKER)
+        val lintWarningFile = projects[LIBRARY_PROJECT]!!.file(LINT_LIBRARY_FILE_BLOCKER)
         val lintOutPut = lintWarningFile.inputStream().bufferedReader().use { it.readText() }
 
         assert(lintOutPut.contains("ERROR: The following dependencies are not allowed:"))
@@ -199,7 +200,7 @@ class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
     fun `When the LibraryAllowListDependenciesLintTest is called analize any Dependency Warning`() {
         val dependency = Dependency(ANY_GROUP, ANY_NAME, VERSION_1, System.currentTimeMillis() + 100000, null)
 
-        lintableModule.ALLOWLIST_DEPENDENCIES.add(dependency)
+        lintableModule.allowListDependencies.add(dependency)
 
         lintableModule.analyzeDependency(dependency, projects[LIBRARY_PROJECT]!!)
 
@@ -218,12 +219,12 @@ class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
     fun `When the LibraryAllowListDependenciesLintTest is called analize any Dependency not Expired`() {
         val dependency = Dependency(ANY_GROUP, ANY_NAME, VERSION_1, null, null)
 
-        lintableModule.ALLOWLIST_DEPENDENCIES.add(dependency)
+        lintableModule.allowListDependencies.add(dependency)
 
         lintableModule.analyzeDependency(dependency, projects[LIBRARY_PROJECT]!!)
 
-        val lintErrorFile = projects[LIBRARY_PROJECT]!!.file(FILE_BLOCKER)
-        val lintWarningFile = projects[LIBRARY_PROJECT]!!.file(FILE_WARNING)
+        val lintErrorFile = projects[LIBRARY_PROJECT]!!.file(LINT_LIBRARY_FILE_BLOCKER)
+        val lintWarningFile = projects[LIBRARY_PROJECT]!!.file(LINT_LIBRARY_FILE_WARNING)
 
         assert(!lintErrorFile.exists())
         assert(!lintWarningFile.exists())

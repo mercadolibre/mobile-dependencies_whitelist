@@ -1,6 +1,5 @@
 package com.mercadolibre.android.gradle.baseplugin.core.components
 
-import com.mercadolibre.android.gradle.app.core.action.modules.lint.ReleaseDependenciesLint
 import com.mercadolibre.android.gradle.baseplugin.BasePlugin
 import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.AndroidConfigurer
 import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.BasicsConfigurer
@@ -11,7 +10,6 @@ import com.mercadolibre.android.gradle.baseplugin.core.action.modules.listProjec
 import com.mercadolibre.android.gradle.baseplugin.core.action.providers.RepositoryProvider
 import com.mercadolibre.android.gradle.baseplugin.module.ModuleProvider
 import com.mercadolibre.android.gradle.baseplugin.module.VersionProvider
-import com.mercadolibre.android.gradle.library.core.action.modules.lint.LibraryAllowListDependenciesLint
 
 /**
  * BASE.
@@ -272,13 +270,13 @@ const val LINT_REPORT_ERROR = "Cant report this type of dependency"
 const val LINT_RELEASE_ERROR_TITLE = "Error. Found non-release dependencies in the module release version:"
 
 /** This variable contains values necessary for the operation of a module. */
-val LINT_LIBRARY_FILE_BLOCKER = "build/reports/${LibraryAllowListDependenciesLint::class.java.simpleName}/$LINT_FILENAME"
+val LINT_LIBRARY_FILE_BLOCKER = "build/reports/LibraryAllowListDependenciesLint/$LINT_FILENAME"
 
 /** This variable contains values necessary for the operation of a module. */
-val LINT_LIBRARY_FILE_WARNING = "build/reports/${LibraryAllowListDependenciesLint::class.java.simpleName}/$LINT_WARNING_FILENAME"
+val LINT_LIBRARY_FILE_WARNING = "build/reports/LibraryAllowListDependenciesLint/$LINT_WARNING_FILENAME"
 
 /** This variable contains values necessary for the operation of a module. */
-val LINT_RELEASE_FILE = "build/reports/${ReleaseDependenciesLint::class.java.simpleName}/$LINT_FILENAME"
+val LINT_RELEASE_FILE = "build/reports/ReleaseDependenciesLint/$LINT_FILENAME"
 
 /**
  * LIST PROJECTS.

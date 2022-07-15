@@ -5,10 +5,10 @@ import com.android.build.gradle.api.BaseVariant
 import com.android.build.gradle.api.LibraryVariant
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.domain.PublishAarTask
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.publishable.PublishableModule
-import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.sub_classes.PublishAarExperimentalTask
-import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.sub_classes.PublishAarLocalTask
-import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.sub_classes.PublishAarPrivateReleaseTask
-import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.sub_classes.PublishAarPublicReleaseTask
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.subClasses.PublishAarExperimentalTask
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.subClasses.PublishAarLocalTask
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.subClasses.PublishAarPrivateReleaseTask
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.subClasses.PublishAarPublicReleaseTask
 import com.mercadolibre.android.gradle.baseplugin.core.components.PACKAGING_AAR_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_GROUP
 import com.mercadolibre.android.gradle.baseplugin.core.components.RELEASE_CONSTANT

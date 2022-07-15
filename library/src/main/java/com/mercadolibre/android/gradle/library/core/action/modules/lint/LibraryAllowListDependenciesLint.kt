@@ -14,10 +14,10 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.IMPLEMENTATION
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_DEPENDENCIES_TASK
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_ERROR_ALLOWED_DEPENDENCIES_PREFIX
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_ERROR_TITLE
-import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_FILENAME
+import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_LIBRARY_FILE_BLOCKER
+import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_LIBRARY_FILE_WARNING
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_WARNIGN_DESCRIPTION
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_WARNIGN_TITLE
-import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_WARNING_FILENAME
 import com.mercadolibre.android.gradle.baseplugin.core.components.NAME_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.VERSION_CONSTANT
 import com.mercadolibre.android.gradle.library.core.action.modules.lint.dependencies.Dependency
@@ -35,18 +35,15 @@ import java.util.regex.Pattern
  */
 class LibraryAllowListDependenciesLint : Lint() {
 
-    private val FILE_BLOCKER = "build/reports/${LibraryAllowListDependenciesLint::class.java.simpleName}/$LINT_FILENAME"
-    private val FILE_WARNING = "build/reports/${LibraryAllowListDependenciesLint::class.java.simpleName}/$LINT_WARNING_FILENAME"
-
     private val defaultGradleVersion = "unspecified"
 
     /** This variable contains the output of the lint report. */
     var hasFailed = false
 
     /** This list contains the dependencies in the allow list. */
-    val ALLOWLIST_DEPENDENCIES = arrayListOf<Dependency>()
+    val allowListDependencies = arrayListOf<Dependency>()
     /** This list contains the dependencies that are about to expire. */
-    val ALLOWLIST_GOING_TO_EXPIRE = arrayListOf<Dependency>()
+    val allowListGoingToExpire = arrayListOf<Dependency>()
 
     /**
      * This method is responsible for providing a name to the linteo class.
@@ -84,7 +81,7 @@ class LibraryAllowListDependenciesLint : Lint() {
                     )
                 }
 
-                if (ALLOWLIST_GOING_TO_EXPIRE.size > 0) {
+                if (allowListGoingToExpire.size > 0) {
                     reportWarnings(project)
                 }
             }
@@ -104,16 +101,16 @@ class LibraryAllowListDependenciesLint : Lint() {
      * This method is responsible for generating reports in case there are dependencies that have warnings.
      */
     fun reportWarnings(project: Project) {
-        val file = project.file(FILE_WARNING)
-        if (project.file(FILE_WARNING).exists()) {
-            project.file(FILE_WARNING).delete()
+        val file = project.file(LINT_LIBRARY_FILE_WARNING)
+        if (project.file(LINT_LIBRARY_FILE_WARNING).exists()) {
+            project.file(LINT_LIBRARY_FILE_WARNING).delete()
         } else {
             file.parentFile.mkdirs()
         }
 
         var message = "$LINT_WARNIGN_TITLE \n"
-        for (dependency in ALLOWLIST_GOING_TO_EXPIRE) {
-            message += "(${findDependencyInList(dependency, ALLOWLIST_DEPENDENCIES)?.rawExpiresDate})" +
+        for (dependency in allowListGoingToExpire) {
+            message += "(${findDependencyInList(dependency, allowListDependencies)?.rawExpiresDate})" +
                 " - ${dependency.group}:${dependency.name}:${dependency.version} (Deprecated!)\n"
         }
         message += "\n$LINT_WARNIGN_DESCRIPTION\n"
@@ -136,7 +133,7 @@ class LibraryAllowListDependenciesLint : Lint() {
     }
 
     private fun report(message: String, project: Project) {
-        val file = project.file(FILE_BLOCKER)
+        val file = project.file(LINT_LIBRARY_FILE_BLOCKER)
         if (!hasFailed) {
             if (!file.exists()) {
                 file.parentFile.mkdirs()
@@ -164,13 +161,13 @@ class LibraryAllowListDependenciesLint : Lint() {
             if (result.isBlocker) {
                 report(result.message(dependencyFullName), project)
             } else if (result.shouldReport) {
-                ALLOWLIST_GOING_TO_EXPIRE.add(dependency)
+                allowListGoingToExpire.add(dependency)
             }
         }
     }
 
     private fun getStatusDependencyInAllowList(dependency: Dependency): StatusBase {
-        val dep = findDependencyInList(dependency, ALLOWLIST_DEPENDENCIES)
+        val dep = findDependencyInList(dependency, allowListDependencies)
         if (dep != null) {
             return if (dep.expires == null) {
                 Status.available()
@@ -218,7 +215,7 @@ class LibraryAllowListDependenciesLint : Lint() {
             val json = JsonParser.parseReader(getInputStream().reader())
 
             json.asJsonObject[ALLOWLIST_CONSTANT].asJsonArray.all {
-                ALLOWLIST_DEPENDENCIES.add(jsonNodeToDependency(it))
+                allowListDependencies.add(jsonNodeToDependency(it))
             }
         }
     }
