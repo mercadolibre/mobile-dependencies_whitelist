@@ -10,6 +10,10 @@ import org.gradle.api.Task
 /**
  * The AbstractModule Plugin Description class is in charge of providing the basic functionalities that the modules that describe a
  * Module Configurer must have.
+ *
+ * @param taskName This variable contains the name of the description task.
+ * @param moduleName This variable contains the name of the module to be described.
+ * @param content This lambda contains the content that will be displayed as a description.
  */
 abstract class AbstractModulePluginDescription(val taskName: String, private val moduleName: String, val content: () -> String) : Module {
 
@@ -47,7 +51,5 @@ abstract class AbstractModulePluginDescription(val taskName: String, private val
     /**
      * This method is responsible for generating the message that will be displayed by the console.
      */
-    fun makeMessage(name: String, contentMessage: String): String {
-        return "- $name\n$contentMessage"
-    }
+    fun makeMessage(name: String, contentMessage: String): String = "- $name\n$contentMessage"
 }

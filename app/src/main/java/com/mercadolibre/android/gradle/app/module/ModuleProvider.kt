@@ -10,7 +10,5 @@ internal object ModuleProvider {
     /**
      * This method is responsible for providing the list of android modules.
      */
-    fun provideAppAndroidModules(): List<Module> {
-        return ANDROID_APPLICATION_MODULES
-    }
+    fun provideAppAndroidModules(): List<Module> = ANDROID_APPLICATION_MODULES
 }

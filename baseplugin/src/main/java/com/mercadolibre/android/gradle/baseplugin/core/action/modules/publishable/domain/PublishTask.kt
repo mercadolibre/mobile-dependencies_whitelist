@@ -19,22 +19,26 @@ import java.util.Date
 import java.util.TimeZone
 
 /**
- * This class generates the All posts with help of PomUtils
+ * This class generates the All posts with help of PomUtils.
  */
 abstract class PublishTask : ExtensionGetter() {
 
+    /** This variable contains the object that will manage the release versions. */
     val versionContainer = VersionContainer()
+
+    /** This variable contains the object that will manage the names of the tasks and generates some of them. */
     lateinit var nameManager: PublishManager
 
+    /** This variable contains the project where the publication task is generated. */
     lateinit var project: Project
+    /** This variable contains the name of the task that is being generated. */
     lateinit var taskName: String
 
     /**
      * This method is responsible for generating the timestamp so that the version does not have duplicates.
      */
-    fun getTimestamp(): String {
-        return SimpleDateFormat(PUBLISHING_TIME_GENERATOR).apply { timeZone = TimeZone.getTimeZone(PUBLISHING_TIME_ZONE) }.format(Date())
-    }
+    fun getTimestamp(): String =
+        SimpleDateFormat(PUBLISHING_TIME_GENERATOR).apply { timeZone = TimeZone.getTimeZone(PUBLISHING_TIME_ZONE) }.format(Date())
 
     /**
      * This method is in charge of registering the publication so that it is accessible from other repositories.

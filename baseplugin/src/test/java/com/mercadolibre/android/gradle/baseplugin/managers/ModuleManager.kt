@@ -1,8 +1,6 @@
 package com.mercadolibre.android.gradle.baseplugin.managers
 
 import com.mercadolibre.android.gradle.baseplugin.integration.utils.domain.ModuleType
-import java.lang.reflect.Field
-import java.util.concurrent.atomic.AtomicReference
 import org.gradle.api.Project
 import org.gradle.api.internal.project.DefaultProject
 import org.gradle.api.plugins.ExtraPropertiesExtension
@@ -13,6 +11,8 @@ import org.gradle.internal.service.DefaultServiceRegistry
 import org.gradle.internal.service.scopes.ProjectScopeServices
 import org.gradle.testfixtures.ProjectBuilder
 import org.gradle.tooling.events.OperationCompletionListener
+import java.lang.reflect.Field
+import java.util.concurrent.atomic.AtomicReference
 
 class ModuleManager {
 
@@ -22,7 +22,12 @@ class ModuleManager {
         return root
     }
 
-    fun createRootProject(name: String, projectNames: MutableMap<String, ModuleType>, projects: MutableMap<String, Project>, fileManager: FileManager): Project {
+    fun createRootProject(
+        name: String,
+        projectNames: MutableMap<String, ModuleType>,
+        projects: MutableMap<String, Project>,
+        fileManager: FileManager
+    ): Project {
         val root = createSampleRoot(name, fileManager.tmpFolder)
 
         val include = getSubProjects(root, projectNames, projects, fileManager)
@@ -30,21 +35,33 @@ class ModuleManager {
         fileManager.createFile("repositories.gradle", fileManager.readFile("gradle/repositories.gradle"))
         fileManager.createFile("gradle.properties", fileManager.readFile("gradle.properties"))
         fileManager.createFile("local.properties", fileManager.readFile("templates/localproperties"))
-        fileManager.createFile("build.gradle", fileManager.readFile("templates/rootBuildGradle.gradle").replace("tmpFolder", "${fileManager.tmpFolder.root}"))
-        fileManager.createFile("settings.gradle", fileManager.readFile("templates/rootSettingsGradle.gradle").replace("tmpFolder", "${fileManager.tmpFolder.root}") + "\ninclude $include")
+        fileManager.createFile(
+            "build.gradle",
+            fileManager.readFile("templates/rootBuildGradle.gradle")
+                .replace("tmpFolder", "${fileManager.tmpFolder.root}")
+        )
+        fileManager.createFile(
+            "settings.gradle",
+            fileManager.readFile("templates/rootSettingsGradle.gradle")
+                .replace("tmpFolder", "${fileManager.tmpFolder.root}") + "\ninclude $include"
+        )
 
         return root
     }
 
-    private fun getSubProjects(root: Project, projectNames: MutableMap<String, ModuleType>, projects: MutableMap<String, Project>, fileManager: FileManager): String {
+    private fun getSubProjects(
+        root: Project,
+        projectNames: MutableMap<String, ModuleType>,
+        projects: MutableMap<String, Project>,
+        fileManager: FileManager
+    ): String {
         var include = ""
         for (project in projectNames) {
-            projects[project.key] = createSubProject(project.key, project.value, fileManager.tmpFolder, root, fileManager, project.value == ModuleType.APP)
+            projects[project.key] = createSubProject(project.key, project.value, root, fileManager, project.value == ModuleType.APP)
             include += "':${project.key}', "
         }
         return include.substring(IntRange(0, include.length - 3))
     }
-
 
     fun createSampleSubProject(name: String, tmpFolder: TemporaryFolder, root: Project): Project {
         val tmpProjectFolder = tmpFolder.newFolder(name)
@@ -53,10 +70,10 @@ class ModuleManager {
         return project
     }
 
-    fun createSubProject(name: String, type: ModuleType, tmpFolder: TemporaryFolder, root: Project, fileManager: FileManager, productive: Boolean): Project {
-        val project = createSampleSubProject(name, tmpFolder, root)
+    fun createSubProject(name: String, type: ModuleType, root: Project, fileManager: FileManager, productive: Boolean): Project {
+        val project = createSampleSubProject(name, fileManager.tmpFolder, root)
 
-        makeBuildGradle(name, type, tmpFolder, fileManager, productive)
+        makeBuildGradle(name, type, fileManager.tmpFolder, fileManager, productive)
 
         return project
     }
@@ -76,7 +93,11 @@ class ModuleManager {
                 "templates/moduleBuildGradle.gradle"
             }
 
-        fileManager.createFile("$name/build.gradle", "apply plugin: $plugin\n" + fileManager.readFile(gradlePath).replace("tmpFolder", "${tmpFolder.root}"))
+        fileManager.createFile(
+            "$name/build.gradle",
+            "apply plugin: $plugin\n" + fileManager.readFile(gradlePath)
+                .replace("tmpFolder", "${tmpFolder.root}")
+        )
     }
 
     private fun configModule(project: Project) {

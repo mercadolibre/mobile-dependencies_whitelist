@@ -25,9 +25,7 @@ class LintableModule : Module, ExtensionProvider, ExtensionGetter() {
     /**
      * This method is responsible for providing a name to the linteo class.
      */
-    override fun getName(): String {
-        return LINTABLE_EXTENSION
-    }
+    override fun getName(): String = LINTABLE_EXTENSION
 
     private val linters = listOf(
         LibraryAllowListDependenciesLint(),

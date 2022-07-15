@@ -294,6 +294,45 @@ val TYPE_NOT_RECOGNISED_MESSAGE = "Specified project type not recognised. Projec
 const val FILE_NAME_PROJECT_VERSION = "project.version"
 
 /**
+ * Repositories
+ */
+
+/** This variable contains the name of a repository. */
+const val INTERNAL_EXPERIMENTAL = "AndroidInternalExperimental"
+/** This variable contains the name of a repository. */
+const val INTERNAL_RELEASES = "AndroidInternalReleases"
+/** This variable contains the name of a repository. */
+const val EXTERNAL_RELEASES = "AndroidExternalReleases"
+/** This variable contains the name of a repository. */
+const val PUBLIC_RELEASES = "AndroidPublicReleases"
+/** This variable contains the name of a repository. */
+const val ANDROID_EXTRA = "AndroidExtra"
+/** This variable contains the url of a repository. */
+const val INTERNAL_EXPERIMENTAL_URL = "https://android.artifacts.furycloud.io/repository/experimental/"
+/** This variable contains the url of a repository. */
+const val INTERNAL_RELEASES_URL = "https://android.artifacts.furycloud.io/repository/releases/"
+/** This variable contains the url of a repository. */
+const val PUBLIC_AND_EXTERNAL_RELEASES_URL = "https://artifacts.mercadolibre.com/repository/android-releases/"
+/** This variable contains the url of a repository. */
+const val ANDROID_EXTRA_URL = "https://android.artifacts.furycloud.io/repository/extra/"
+
+/** This variable contains the package of a repository. */
+const val MERCADOLIBRE_PACKAGE = "com\\.mercadolibre\\..*"
+/** This variable contains the package of a repository. */
+const val MERCADOPAGO_PACKAGE = "com\\.mercadopago\\..*"
+/** This variable contains the package of a repository. */
+const val MERCADOENVIOS_PACKAGE = "com\\.mercadoenvios\\..*"
+
+/** This variable contains a regex. */
+const val REGEX = ".*"
+/** This variable contains a regex. */
+const val PUBLISH_REGEX = "^((?!EXPERIMENTAL-|LOCAL-).)*$"
+/** This variable contains a regex. */
+const val PUBLISH_LOCAL_REGEX = "^(.*-)?LOCAL-.*$"
+/** This variable contains a regex. */
+const val PUBLISH_EXPERIMENTAL_REGEX = "^(.*-)?EXPERIMENTAL-.*$"
+
+/**
  * KEY STORE.
  */
 const val DIRECTORY_NAME = "keystores" /** This variable contains values necessary for the operation of a module. */

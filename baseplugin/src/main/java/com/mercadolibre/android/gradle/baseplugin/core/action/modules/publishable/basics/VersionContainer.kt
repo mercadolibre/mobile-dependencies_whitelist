@@ -11,9 +11,7 @@ class VersionContainer {
 
     private val map = mutableMapOf<String, String>()
 
-    private fun key(projectName: String, publicationName: String): String {
-        return "$projectName:$publicationName"
-    }
+    private fun key(projectName: String, publicationName: String): String = "$projectName:$publicationName"
 
     /**
      * This method is in charge of storing a release version.
@@ -25,13 +23,12 @@ class VersionContainer {
     /**
      * This method is in charge of provide a release version safely.
      */
-    fun get(projectName: String, publicationName: String, defaultValue: String): String {
-        return if (map[key(projectName, publicationName)] != null) {
+    fun get(projectName: String, publicationName: String, defaultValue: String): String =
+        if (map[key(projectName, publicationName)] != null) {
             map[key(projectName, publicationName)]!!
         } else {
             defaultValue
         }
-    }
 
     /**
      * This method is in charge of showing in the console the version ready to implement.

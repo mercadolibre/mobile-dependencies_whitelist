@@ -24,11 +24,9 @@ import org.gradle.kotlin.dsl.apply
 open class BaseJacocoModule : Module, ExtensionProvider, ExtensionGetter() {
 
     /**
-     * This method is responsible for providing the name of the Jacoco extension
+     * This method is responsible for providing the name of the Jacoco extension.
      */
-    override fun getName(): String {
-        return JACOCO_EXTENSION
-    }
+    override fun getName(): String = JACOCO_EXTENSION
 
     /**
      * This method is responsible for applying the Jacoco plugin and configuring its main tasks.

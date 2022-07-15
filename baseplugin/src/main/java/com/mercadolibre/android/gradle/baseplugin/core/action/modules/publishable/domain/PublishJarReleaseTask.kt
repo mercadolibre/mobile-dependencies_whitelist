@@ -7,7 +7,7 @@ import org.gradle.api.tasks.SourceSet
 import org.gradle.api.tasks.TaskProvider
 
 /**
- * This class generates the Jar Release posts with help of TaskGenerator and PublishManager
+ * This class generates the Jar Release posts with help of TaskGenerator and PublishManager.
  */
 abstract class PublishJarReleaseTask(private val repositoryName: String) : PublishJarTask() {
 

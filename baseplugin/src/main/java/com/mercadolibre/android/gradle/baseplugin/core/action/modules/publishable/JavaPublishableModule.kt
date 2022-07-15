@@ -2,10 +2,10 @@ package com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishab
 
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.domain.PublishJarTask
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.publishable.PublishableModule
-import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.sub_classes.PublishJarExperimentalTask
-import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.sub_classes.PublishJarLocalTask
-import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.sub_classes.PublishJarPrivateReleaseTask
-import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.sub_classes.PublishJarPublicReleaseTask
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.subClasses.PublishJarExperimentalTask
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.subClasses.PublishJarLocalTask
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.subClasses.PublishJarPrivateReleaseTask
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.subClasses.PublishJarPublicReleaseTask
 import com.mercadolibre.android.gradle.baseplugin.core.components.PACKAGING_JAR_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.SOURCE_SETS_DEFAULT
 import com.mercadolibre.android.gradle.baseplugin.core.components.SOURCE_SETS_TEST
@@ -36,7 +36,7 @@ class JavaPublishableModule : PublishableModule() {
     }
 
     /**
-     * This method is in charge of registering the publication task
+     * This method is in charge of registering the publication task.
      */
     private fun createTask(task: PublishJarTask, libraryVariant: SourceSet, theTaskName: String, project: Project) {
         task.register(project, libraryVariant, theTaskName)

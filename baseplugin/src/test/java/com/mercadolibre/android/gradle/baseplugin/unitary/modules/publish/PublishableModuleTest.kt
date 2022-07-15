@@ -3,28 +3,26 @@ package com.mercadolibre.android.gradle.baseplugin.unitary.modules.publish
 import com.android.build.gradle.api.BaseVariant
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.JavaPublishableModule
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.basics.TaskGenerator
-import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.sub_classes.PublishAarExperimentalTask
-import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.sub_classes.PublishAarLocalTask
-import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.sub_classes.PublishAarPrivateReleaseTask
-import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.sub_classes.PublishAarPublicReleaseTask
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.subClasses.PublishAarExperimentalTask
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.subClasses.PublishAarLocalTask
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.subClasses.PublishAarPrivateReleaseTask
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.subClasses.PublishAarPublicReleaseTask
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISH_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.SOURCE_SETS_DEFAULT
-import com.mercadolibre.android.gradle.baseplugin.integration.utils.domain.ModuleType
 import com.mercadolibre.android.gradle.baseplugin.managers.ANY_NAME
 import com.mercadolibre.android.gradle.baseplugin.managers.AbstractPluginManager
-import com.mercadolibre.android.gradle.baseplugin.managers.FileManager
 import com.mercadolibre.android.gradle.baseplugin.managers.LIBRARY_PROJECT
 import com.mercadolibre.android.gradle.baseplugin.managers.ROOT_PROJECT
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.unmockkAll
-import java.io.File
 import org.gradle.api.tasks.SourceSet
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
+import java.io.File
 
 @RunWith(JUnit4::class)
-class PublishableModuleTest: AbstractPluginManager() {
+class PublishableModuleTest : AbstractPluginManager() {
 
     private val javaPublishableModule = JavaPublishableModule()
 
@@ -101,7 +99,6 @@ class PublishableModuleTest: AbstractPluginManager() {
 
         assert(projects[LIBRARY_PROJECT]!!.tasks.findByName("publishRelease") != null)
     }
-
 
     @org.junit.Test
     fun `When the JavaPublishableModule configures the project create publish Task`() {

@@ -20,10 +20,13 @@ import org.gradle.external.javadoc.JavadocMemberLevel
 import org.gradle.external.javadoc.StandardJavadocDocletOptions
 
 /**
- * This class generates the Jar posts with help of TaskGenerator
+ * This class generates the Jar posts with help of TaskGenerator.
  */
 abstract class PublishJarTask : PublishTask() {
 
+    /**
+     * This variable contains the variant where the publication tasks are being generated.
+     */
     lateinit var variant: SourceSet
 
     /**
@@ -31,13 +34,15 @@ abstract class PublishJarTask : PublishTask() {
      */
     abstract fun register(project: Project, variant: SourceSet, taskName: String): TaskProvider<Task>
 
-    fun getListOfDependsOn(): List<String> {
-        return listOf(
+    /**
+     * This method is responsible for returning the list of tasks that depend on the one being generated.
+     */
+    fun getListOfDependsOn(): List<String> =
+        listOf(
             "${variant.name}$PUBLISHING_JAVADOC_TASK$PACKAGING_JAR_CONSTANT",
             PACKAGING_JAR_CONSTANT.toLowerCase(),
             "${variant.name}${SOURCES_CONSTANT.capitalized()}$PACKAGING_JAR_CONSTANT"
         )
-    }
 
     /**
      * This method is in charge of generating the task that publishes a module with all its configurations.

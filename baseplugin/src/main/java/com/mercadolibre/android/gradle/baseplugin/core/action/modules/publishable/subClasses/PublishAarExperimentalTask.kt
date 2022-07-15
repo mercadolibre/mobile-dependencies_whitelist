@@ -1,9 +1,9 @@
-package com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.sub_classes
+package com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.subClasses
 
 import com.android.build.gradle.api.BaseVariant
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.basics.TaskGenerator
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.domain.PublishAarTask
-import com.mercadolibre.android.gradle.baseplugin.core.action.providers.RepositoryProvider.Companion.INTERNAL_EXPERIMENTAL
+import com.mercadolibre.android.gradle.baseplugin.core.components.INTERNAL_EXPERIMENTAL
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_EXPERIMENTAL_SUBFIX_TASK
 import org.gradle.api.Project
 import org.gradle.api.Task

@@ -2,17 +2,17 @@ package com.mercadolibre.android.gradle.baseplugin.unitary.configurers
 
 import com.mercadolibre.android.gradle.baseplugin.BasePlugin
 import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.BasicsConfigurer
-import com.mercadolibre.android.gradle.baseplugin.core.action.providers.RepositoryProvider.Companion.ANDROID_EXTRA
-import com.mercadolibre.android.gradle.baseplugin.core.action.providers.RepositoryProvider.Companion.EXTERNAL_RELEASES
-import com.mercadolibre.android.gradle.baseplugin.core.action.providers.RepositoryProvider.Companion.INTERNAL_EXPERIMENTAL
-import com.mercadolibre.android.gradle.baseplugin.core.action.providers.RepositoryProvider.Companion.INTERNAL_RELEASES
+import com.mercadolibre.android.gradle.baseplugin.core.components.ANDROID_EXTRA
+import com.mercadolibre.android.gradle.baseplugin.core.components.EXTERNAL_RELEASES
+import com.mercadolibre.android.gradle.baseplugin.core.components.INTERNAL_EXPERIMENTAL
+import com.mercadolibre.android.gradle.baseplugin.core.components.INTERNAL_RELEASES
 import com.mercadolibre.android.gradle.baseplugin.managers.AbstractPluginManager
 import com.mercadolibre.android.gradle.baseplugin.managers.ROOT_PROJECT
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
 
 @RunWith(JUnit4::class)
-class BasicsConfigurerTest: AbstractPluginManager() {
+class BasicsConfigurerTest : AbstractPluginManager() {
 
     val basePlugin = BasePlugin()
 

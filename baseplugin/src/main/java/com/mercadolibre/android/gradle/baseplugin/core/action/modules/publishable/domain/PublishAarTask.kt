@@ -125,14 +125,10 @@ abstract class PublishAarTask : PublishTask() {
     /**
      * This method is in charge of looking for the Source Jar task
      */
-    fun getSourcesJarTaskName(variant: BaseVariant): String {
-        return "${variant.name}${SOURCES_CONSTANT.capitalized()}$PACKAGING_JAR_CONSTANT"
-    }
+    fun getSourcesJarTaskName(variant: BaseVariant): String = "${variant.name}${SOURCES_CONSTANT.capitalized()}$PACKAGING_JAR_CONSTANT"
 
     /**
      * This method is in charge of looking for the Java Doc Jar task
      */
-    fun getJavadocJarTask(variant: BaseVariant): String {
-        return "${variant.name}$PUBLISHING_JAVADOC_TASK$PACKAGING_JAR_CONSTANT"
-    }
+    fun getJavadocJarTask(variant: BaseVariant): String = "${variant.name}$PUBLISHING_JAVADOC_TASK$PACKAGING_JAR_CONSTANT"
 }

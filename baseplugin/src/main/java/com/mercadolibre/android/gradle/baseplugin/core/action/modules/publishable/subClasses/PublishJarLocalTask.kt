@@ -1,10 +1,10 @@
-package com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.sub_classes
+package com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.subClasses
 
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.basics.TaskGenerator
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.domain.PublishJarReleaseTask
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.domain.PublishJarTask
-import com.mercadolibre.android.gradle.baseplugin.core.action.providers.RepositoryProvider.Companion.INTERNAL_RELEASES
-import com.mercadolibre.android.gradle.baseplugin.core.action.providers.RepositoryProvider.Companion.PUBLIC_RELEASES
+import com.mercadolibre.android.gradle.baseplugin.core.components.INTERNAL_RELEASES
+import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLIC_RELEASES
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_LOCAL_SUBFIX_TASK
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_MAVEN_LOCAL
 import org.gradle.api.Project
@@ -40,5 +40,12 @@ class PublishJarLocalTask : PublishJarTask() {
     }
 }
 
+/**
+ * PublishJarLocalTask is in charge of generating the Private Releases Jar publications.
+ */
 class PublishJarPrivateReleaseTask : PublishJarReleaseTask(INTERNAL_RELEASES)
+
+/**
+ * PublishJarLocalTask is in charge of generating the Public Releases Jar publications.
+ */
 class PublishJarPublicReleaseTask : PublishJarReleaseTask(PUBLIC_RELEASES)

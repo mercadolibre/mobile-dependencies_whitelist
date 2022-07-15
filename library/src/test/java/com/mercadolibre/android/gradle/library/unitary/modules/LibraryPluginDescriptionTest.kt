@@ -13,7 +13,7 @@ import org.junit.runners.JUnit4
 class LibraryPluginDescriptionTest {
 
     @org.junit.Test
-    fun `When the LibraryPluginDescriptionModule is created workd`() {
+    fun `When the LibraryPluginDescriptionModule is created works`() {
         val pluginDescription = LibraryPluginDescriptionModule()
 
         val task = mockk<Task>(relaxed = true)
@@ -21,6 +21,9 @@ class LibraryPluginDescriptionTest {
         pluginDescription.printMessage(ANY_NAME)
         pluginDescription.configureTask(task)
         assert(pluginDescription.makeMessage(ANY_NAME, ANY_NAME) == "- $ANY_NAME\n$ANY_NAME")
-        assert(pluginDescription.content() == LibraryModuleConfigurer().getModules("Library Module", ModuleProvider.provideLibraryAndroidModules()))
+        assert(
+            pluginDescription.content() ==
+                LibraryModuleConfigurer().getModules("Library Module", ModuleProvider.provideLibraryAndroidModules())
+        )
     }
 }

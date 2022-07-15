@@ -36,9 +36,10 @@ import java.util.regex.Pattern
  */
 class LibraryAllowListDependenciesLint : Lint() {
 
-    private val DEFAULT_GRADLE_VERSION_VALUE = "unspecified"
+    private val defaultGradleVersion = "unspecified"
 
-    var hasFailed = false /** This variable contains the output of the lint report */
+    /** This variable contains the output of the lint report. */
+    var hasFailed = false
 
     /** This list contains the dependencies in the allow list. */
     val ALLOWLIST_DEPENDENCIES = arrayListOf<Dependency>()
@@ -48,13 +49,11 @@ class LibraryAllowListDependenciesLint : Lint() {
     /**
      * This method is responsible for providing a name to the linteo class.
      */
-    override fun name(): String {
-        return LINT_DEPENDENCIES_TASK
-    }
+    override fun name(): String = LINT_DEPENDENCIES_TASK
 
     /**
      * This method is responsible for verifying that the dependencies of all the variants are valid or
-     * if they are about to expire, perform the warnign.
+     * if they are about to expire, perform the warning.
      */
     override fun lint(project: Project, variants: ArrayList<BaseVariant>): Boolean {
         hasFailed = false
@@ -158,7 +157,7 @@ class LibraryAllowListDependenciesLint : Lint() {
             dependencyFullName.contains("${it.group}:${it.name}")
         } != null
 
-        if (!dependencyFullName.contains(DEFAULT_GRADLE_VERSION_VALUE) && !isLocalModule) {
+        if (!dependencyFullName.contains(defaultGradleVersion) && !isLocalModule) {
             val result = getStatusDependencyInAllowList(dependency)
             if (result.isBlocker) {
                 report(result.message(dependencyFullName), project)
@@ -193,17 +192,13 @@ class LibraryAllowListDependenciesLint : Lint() {
     /**
      * This method is responsible for obtaining data from a Json safely.
      */
-    fun getVariableFromJson(name: String, json: JsonElement, defaultValue: String?): String? {
-        return if (json.asJsonObject[name] != null) {
-            json.asJsonObject[name].asString.replace("\\", "")
-        } else {
-            defaultValue
-        }
+    fun getVariableFromJson(name: String, json: JsonElement, defaultValue: String?): String? = if (json.asJsonObject[name] != null) {
+        json.asJsonObject[name].asString.replace("\\", "")
+    } else {
+        defaultValue
     }
 
-    private fun castStringToDate(date: String): Long {
-        return SimpleDateFormat("yyyy-MM-dd").parse(date.replace("\\", "")).time
-    }
+    private fun castStringToDate(date: String): Long = SimpleDateFormat("yyyy-MM-dd").parse(date.replace("\\", "")).time
 
     /**
      * This method is in charge of casting a Json element to a Date in a safe way.

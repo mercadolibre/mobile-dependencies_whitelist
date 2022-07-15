@@ -17,9 +17,7 @@ open class ExtensionsConfigurer : Configurer {
     /**
      * This method allows us to get a description of what this Configurer does.
      */
-    override fun getDescription(): String {
-        return EXTENSIONS_CONFIGURER_DESCRIPTION
-    }
+    override fun getDescription(): String = EXTENSIONS_CONFIGURER_DESCRIPTION
 
     /**
      * This method allows us to get a description of any Extension.

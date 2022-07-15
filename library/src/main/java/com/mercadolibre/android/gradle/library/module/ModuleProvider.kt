@@ -11,7 +11,5 @@ internal object ModuleProvider {
     /**
      * This method is responsible for providing the list of library modules.
      */
-    fun provideLibraryAndroidModules(): List<Module> {
-        return ANDROID_LIBRARY_MODULES
-    }
+    fun provideLibraryAndroidModules(): List<Module> = ANDROID_LIBRARY_MODULES
 }

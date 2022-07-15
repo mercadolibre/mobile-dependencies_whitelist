@@ -76,17 +76,12 @@ class BuildScanModule : Module, SettingsModule, ExtensionGetter() {
         }
     }
 
-    private fun getCommandText(command: String): String {
-        return getText(executeCommand(command))
-    }
+    private fun getCommandText(command: String): String = getText(executeCommand(command))
 
-    private fun executeCommand(command: String): InputStream {
-        return Runtime.getRuntime().exec(command).inputStream
-    }
+    private fun executeCommand(command: String): InputStream = Runtime.getRuntime().exec(command).inputStream
 
-    private fun getText(inputStreamReader: InputStream): String {
-        return BufferedReader(InputStreamReader(inputStreamReader, StandardCharsets.UTF_8)).lines().collect(Collectors.joining("\n"))
-    }
+    private fun getText(inputStreamReader: InputStream): String =
+        BufferedReader(InputStreamReader(inputStreamReader, StandardCharsets.UTF_8)).lines().collect(Collectors.joining("\n"))
 
     override fun configure(settings: Settings) {
         configure(settings, settings.rootProject.name)

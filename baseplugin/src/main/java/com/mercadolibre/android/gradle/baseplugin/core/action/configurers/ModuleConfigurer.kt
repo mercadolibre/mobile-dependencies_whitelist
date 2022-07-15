@@ -19,9 +19,7 @@ open class ModuleConfigurer : Configurer {
     /**
      * This method allows us to get a description of what this Configurer does.
      */
-    override fun getDescription(): String {
-        return MODULE_CONFIGURER_DESCRIPTION
-    }
+    override fun getDescription(): String = MODULE_CONFIGURER_DESCRIPTION
 
     /**
      * This method is in charge of listing the modules that are applied to the project to which it is being configured.

@@ -85,9 +85,8 @@ class LibraryPublishableModule : PublishableModule() {
         }
     }
 
-    private fun createTask(task: PublishAarTask, libraryVariant: BaseVariant, theTaskName: String, project: Project): TaskProvider<Task> {
-        return task.register(project, libraryVariant, theTaskName)
-    }
+    private fun createTask(task: PublishAarTask, libraryVariant: BaseVariant, theTaskName: String, project: Project): TaskProvider<Task> =
+        task.register(project, libraryVariant, theTaskName)
 
     private fun createStubTask(name: String, realTask: TaskProvider<Task>?, project: Project) {
         if (project.tasks.names.contains(name) && realTask != null) {

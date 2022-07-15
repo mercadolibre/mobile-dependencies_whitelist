@@ -13,9 +13,7 @@ open class PluginConfigurer(private val plugins: List<String>) : Configurer {
     /**
      * This method allows us to get a description of what this Configurer does.
      */
-    override fun getDescription(): String {
-        return PLUGIN_DESCRIPTION_DESCRIPTION
-    }
+    override fun getDescription(): String = PLUGIN_DESCRIPTION_DESCRIPTION
 
     /**
      * This method is responsible for applying all the necessary plugins to the project.

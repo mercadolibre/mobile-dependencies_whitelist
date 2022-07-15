@@ -15,9 +15,7 @@ open class AndroidConfigurer : Configurer, ExtensionGetter() {
     /**
      * This method allows us to get a description of what this Configurer does.
      */
-    override fun getDescription(): String {
-        return ANDROID_CONFIGURER_DESCRIPTION
-    }
+    override fun getDescription(): String = ANDROID_CONFIGURER_DESCRIPTION
 
     /**
      * This is the method that sets all the variables needed to build an android project.

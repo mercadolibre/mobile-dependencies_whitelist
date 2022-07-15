@@ -9,7 +9,7 @@ import org.gradle.api.Project
 
 /**
  * The Basics Configurer is in charge of providing the configurations so that the repository is capable of bringing dependencies
- * and managing them
+ * and managing them.
  */
 open class BasicsConfigurer : Configurer {
 
@@ -18,9 +18,7 @@ open class BasicsConfigurer : Configurer {
     /**
      * This method allows us to get a description of what this Configurer does.
      */
-    override fun getDescription(): String {
-        return BASICS_CONFIGURER_DESCRIPTION
-    }
+    override fun getDescription(): String = BASICS_CONFIGURER_DESCRIPTION
 
     /**
      * This method is responsible for configuring the repositories that a project needs for its dependencies and configures its cache.

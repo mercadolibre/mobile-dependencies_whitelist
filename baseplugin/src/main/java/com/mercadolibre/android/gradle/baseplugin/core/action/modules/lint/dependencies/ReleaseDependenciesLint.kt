@@ -21,9 +21,7 @@ class ReleaseDependenciesLint : Lint() {
     /**
      * This method is responsible for providing a name to the linteo class.
      */
-    override fun name(): String {
-        return LINT_RELEASE_DEPENDENCIES_TASK
-    }
+    override fun name(): String = LINT_RELEASE_DEPENDENCIES_TASK
 
     /**
      * This method is responsible for verifying that the dependencies of all the variants are valid or
@@ -61,8 +59,6 @@ class ReleaseDependenciesLint : Lint() {
      */
     fun checkIsFailed(dependencies: Stream<String>, lintResultsFile: File): Boolean {
         for (dependency in dependencies) {
-            println(dependency)
-
             if (!lintResultsFile.exists()) {
                 lintResultsFile.parentFile.mkdirs()
                 println(LINT_RELEASE_ERROR_TITLE)

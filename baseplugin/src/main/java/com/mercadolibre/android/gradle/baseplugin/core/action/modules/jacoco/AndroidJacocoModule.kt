@@ -25,7 +25,7 @@ import java.io.File
 abstract class AndroidJacocoModule : BaseJacocoModule() {
 
     /**
-     * This method is responsible for searching or generating the Jacoco Test Report Task
+     * This method is responsible for searching or generating the Jacoco Test Report Task.
      */
     fun findOrCreateJacocoTestReportTask(project: Project): TaskProvider<Task> {
         if (project.tasks.names.contains(JACOCO_TEST_REPORT_TASK)) {
@@ -40,7 +40,7 @@ abstract class AndroidJacocoModule : BaseJacocoModule() {
     }
 
     /**
-     * This method is responsible for searching or generating the Jacoco Variant Test Report Task
+     * This method is responsible for searching or generating the Jacoco Variant Test Report Task.
      */
     fun createReportTask(variant: BaseVariant, project: Project): TaskProvider<JacocoReport> {
         val testTask = testTask(variant, project)
@@ -101,23 +101,18 @@ abstract class AndroidJacocoModule : BaseJacocoModule() {
         }
     }
 
-    private fun sourceDirs(variant: BaseVariant): ArrayList<String> {
-        return arrayListOf<String>().apply {
-            for (sourceSet in variant.sourceSets) {
-                for (file in sourceSet.javaDirectories) {
-                    add(file.path)
-                }
+    private fun sourceDirs(variant: BaseVariant): ArrayList<String> = arrayListOf<String>().apply {
+        for (sourceSet in variant.sourceSets) {
+            for (file in sourceSet.javaDirectories) {
+                add(file.path)
             }
         }
     }
 
-    private fun classesDir(variant: BaseVariant): File? {
-        return VariantUtils.javaCompile(variant).destinationDirectory.asFile.orNull
-    }
+    private fun classesDir(variant: BaseVariant): File? = VariantUtils.javaCompile(variant).destinationDirectory.asFile.orNull
 
-    private fun testTask(variant: BaseVariant, project: Project): Test {
-        return project.tasks.named("test${variant.name.capitalize()}UnitTest", Test::class.java).get()
-    }
+    private fun testTask(variant: BaseVariant, project: Project): Test =
+        project.tasks.named("test${variant.name.capitalize()}UnitTest", Test::class.java).get()
 
     /**
      * This method is responsible for obtaining the path of the execution file.
