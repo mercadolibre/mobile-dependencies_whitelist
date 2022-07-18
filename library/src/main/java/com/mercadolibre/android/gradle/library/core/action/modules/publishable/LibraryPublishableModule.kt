@@ -45,44 +45,34 @@ class LibraryPublishableModule : PublishableModule() {
     fun createTasksFor(libraryVariant: LibraryVariant, project: Project) {
         val variantName = libraryVariant.name
 
-        val experimentalTask = createTask(
-            PublishAarExperimentalTask(), libraryVariant,
-            getTaskName(TASK_TYPE_EXPERIMENTAL, PACKAGING_AAR_CONSTANT, variantName), project
-        )
-        // "Release" Task name maintained for retrocompatibility
-        val releaseTask = createTask(
-            PublishAarPrivateReleaseTask(), libraryVariant,
-            getTaskName(TASK_TYPE_RELEASE, PACKAGING_AAR_CONSTANT, variantName), project
-        )
-        val privateReleaseTask = createTask(
-            PublishAarPrivateReleaseTask(), libraryVariant,
-            getTaskName(TASK_TYPE_PRIVATE_RELEASE, PACKAGING_AAR_CONSTANT, variantName), project
-        )
-        val localTask = createTask(
-            PublishAarLocalTask(), libraryVariant,
-            getTaskName(TASK_TYPE_LOCAL, PACKAGING_AAR_CONSTANT, variantName), project
-        )
-        val publicReleaseTask = createTask(
-            PublishAarPublicReleaseTask(), libraryVariant,
-            getTaskName(TASK_TYPE_PUBLIC_RELEASE, PACKAGING_AAR_CONSTANT, variantName), project
+        val tasks = mutableListOf(
+            TASK_TYPE_EXPERIMENTAL to createTask(
+                PublishAarExperimentalTask(), libraryVariant,
+                getTaskName(TASK_TYPE_EXPERIMENTAL, PACKAGING_AAR_CONSTANT, variantName), project
+            ),
+            TASK_TYPE_RELEASE to createTask(
+                PublishAarPrivateReleaseTask(), libraryVariant,
+                getTaskName(TASK_TYPE_RELEASE, PACKAGING_AAR_CONSTANT, variantName), project
+            ),
+            TASK_TYPE_LOCAL to createTask(
+                PublishAarLocalTask(), libraryVariant,
+                getTaskName(TASK_TYPE_LOCAL, PACKAGING_AAR_CONSTANT, variantName), project
+            ),
+            TASK_TYPE_PRIVATE_RELEASE to createTask(
+                PublishAarPrivateReleaseTask(), libraryVariant,
+                getTaskName(TASK_TYPE_PRIVATE_RELEASE, PACKAGING_AAR_CONSTANT, variantName), project
+            ),
+            TASK_TYPE_PUBLIC_RELEASE to createTask(
+                PublishAarPublicReleaseTask(), libraryVariant,
+                getTaskName(TASK_TYPE_PUBLIC_RELEASE, PACKAGING_AAR_CONSTANT, variantName), project
+            )
         )
 
         if (libraryVariant.name.toLowerCase().contains(RELEASE_CONSTANT)) {
-            // Create tasks without the variant suffix that default to the main sourcesets
-            createStubTask(getTaskName(TASK_TYPE_EXPERIMENTAL, PACKAGING_AAR_CONSTANT), experimentalTask, project)
-            // "Release" Task name maintained for retrocompatibility
-            createStubTask(getTaskName(TASK_TYPE_RELEASE, PACKAGING_AAR_CONSTANT), releaseTask, project)
-            createStubTask(getTaskName(TASK_TYPE_LOCAL, PACKAGING_AAR_CONSTANT), localTask, project)
-            createStubTask(getTaskName(TASK_TYPE_PRIVATE_RELEASE, PACKAGING_AAR_CONSTANT), privateReleaseTask, project)
-            createStubTask(getTaskName(TASK_TYPE_PUBLIC_RELEASE, PACKAGING_AAR_CONSTANT), publicReleaseTask, project)
-
-            // Create tasks without the variant and package type suffix, defaulting to release
-            createStubTask(getTaskName(TASK_TYPE_EXPERIMENTAL), experimentalTask, project)
-            // "Release" Task name maintained for retrocompatibility
-            createStubTask(getTaskName(TASK_TYPE_RELEASE), releaseTask, project)
-            createStubTask(getTaskName(TASK_TYPE_LOCAL), localTask, project)
-            createStubTask(getTaskName(TASK_TYPE_PRIVATE_RELEASE), privateReleaseTask, project)
-            createStubTask(getTaskName(TASK_TYPE_PUBLIC_RELEASE), publicReleaseTask, project)
+            for (task in tasks) {
+                createStubTask(getTaskName(task.first, PACKAGING_AAR_CONSTANT), task.second, project)
+                createStubTask(getTaskName(task.first), task.second, project)
+            }
         }
     }
 
