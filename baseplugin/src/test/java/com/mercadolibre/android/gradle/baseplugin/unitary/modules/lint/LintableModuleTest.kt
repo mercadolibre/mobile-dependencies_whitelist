@@ -3,6 +3,7 @@ package com.mercadolibre.android.gradle.baseplugin.unitary.modules.lint
 import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.ExtensionsConfigurer
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.LintableModule
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.LintGradleExtension
+import com.mercadolibre.android.gradle.baseplugin.core.components.LINTABLE_EXTENSION
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINTABLE_TASK
 import com.mercadolibre.android.gradle.baseplugin.integration.utils.domain.ModuleType
 import com.mercadolibre.android.gradle.baseplugin.managers.APP_PROJECT
@@ -14,11 +15,11 @@ import com.mercadolibre.android.gradle.library.core.action.modules.lint.LibraryL
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.verify
+import org.gradle.language.base.plugins.LifecycleBasePlugin
+import org.junit.Assert
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
 import java.io.File
-import org.gradle.language.base.plugins.LifecycleBasePlugin
-import org.junit.Assert
 
 @RunWith(JUnit4::class)
 class LintableModuleTest : AbstractPluginManager() {
@@ -36,12 +37,13 @@ class LintableModuleTest : AbstractPluginManager() {
         lintableModule.configureVariants(projects[LIBRARY_PROJECT]!!)
         lintableModule.configure(projects[LIBRARY_PROJECT]!!)
 
+        projects[LIBRARY_PROJECT]!!.extensions.create(LINTABLE_EXTENSION, LintGradleExtension::class.java)
+
         addMockVariant(projects[LIBRARY_PROJECT]!!, ModuleType.LIBRARY)
     }
 
     @org.junit.Test
     fun `When the LintableModule configure the module variants`() {
-        ExtensionsConfigurer().configureProject(projects[LIBRARY_PROJECT]!!)
         findExtension<LintGradleExtension>(projects[LIBRARY_PROJECT]!!)?.apply {
             this.enabled = true
         }

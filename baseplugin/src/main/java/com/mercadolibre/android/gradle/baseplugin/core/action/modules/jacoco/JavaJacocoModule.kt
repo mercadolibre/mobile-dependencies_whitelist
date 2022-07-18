@@ -8,8 +8,15 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.TEST_TASK
 import org.gradle.api.Project
 import org.gradle.testing.jacoco.tasks.JacocoReport
 
-class JavaJacocoModule: BaseJacocoModule() {
+/**
+ * Java Jacoco Module is in charge of providing the functionality for java modules of the jacoco reports for the coverage
+ * and the files that CI needs.
+ */
+class JavaJacocoModule : BaseJacocoModule() {
 
+    /**
+     * This method takes care of before evaluating configuring the jacoco for a java module.
+     */
     override fun configure(project: Project) {
         super.configure(project)
 
@@ -18,6 +25,9 @@ class JavaJacocoModule: BaseJacocoModule() {
         }
     }
 
+    /**
+     * This method is responsible for generating the main tasks that Jacoco uses to calculate the coverage.
+     */
     fun configureProejct(project: Project) {
         with(project) {
             val jacocoTestReport = project.tasks.named(JACOCO_TEST_REPORT_TASK)
@@ -41,6 +51,9 @@ class JavaJacocoModule: BaseJacocoModule() {
         }
     }
 
+    /**
+     * This method is responsible for adding a group and the types of report that the tasks of jacoco will have.
+     */
     fun configureTestReport(task: JacocoReport) {
         with(task) {
 

@@ -7,14 +7,22 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.RESOLUTION_STR
 import com.mercadolibre.android.gradle.baseplugin.core.domain.interfaces.Configurer
 import org.gradle.api.Project
 
-open class BasicsConfigurer: Configurer {
+/**
+ * The Basics Configurer is in charge of providing the configurations so that the repository is capable of bringing dependencies
+ * and managing them.
+ */
+open class BasicsConfigurer : Configurer {
 
     private val repositoryProvider by lazy { RepositoryProvider() }
 
-    override fun getDescription(): String {
-        return BASICS_CONFIGURER_DESCRIPTION
-    }
+    /**
+     * This method allows us to get a description of what this Configurer does.
+     */
+    override fun getDescription(): String = BASICS_CONFIGURER_DESCRIPTION
 
+    /**
+     * This method is responsible for configuring the repositories that a project needs for its dependencies and configures its cache.
+     */
     override fun configureProject(project: Project) {
         repositoryProvider.setupFetchingRepositories(project)
         for (subProject in project.subprojects) {

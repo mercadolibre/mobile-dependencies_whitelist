@@ -14,14 +14,14 @@ import com.mercadolibre.android.gradle.baseplugin.integration.utils.domain.Modul
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.mockkObject
-import java.io.File
 import org.gradle.api.Project
 import org.gradle.api.artifacts.Configuration
 import org.gradle.internal.impldep.org.junit.rules.TemporaryFolder
 import org.gradle.testkit.runner.BuildResult
 import org.gradle.testkit.runner.GradleRunner
+import java.io.File
 
-abstract class AbstractPluginManager: ExtensionGetter() {
+abstract class AbstractPluginManager : ExtensionGetter() {
 
     lateinit var root: Project
 
@@ -56,17 +56,11 @@ abstract class AbstractPluginManager: ExtensionGetter() {
         }
     }
 
-    fun mockLibVariant(): LibraryVariant {
-        return mockk<LibraryVariant>().apply { configVariant(this) }
-    }
+    fun mockLibVariant(): LibraryVariant = mockk<LibraryVariant>().apply { configVariant(this) }
 
-    fun mockVariant(): BaseVariant {
-        return mockk<BaseVariant>().apply { configVariant(this) }
-    }
+    fun mockVariant(): BaseVariant = mockk<BaseVariant>().apply { configVariant(this) }
 
-    fun mockAppVariant(): ApplicationVariant {
-        return mockk<ApplicationVariant>().apply { configVariant(this) }
-    }
+    fun mockAppVariant(): ApplicationVariant = mockk<ApplicationVariant>().apply { configVariant(this) }
 
     private fun configVariant(variant: BaseVariant) {
         val configuration = mockk<Configuration>()
@@ -87,10 +81,9 @@ abstract class AbstractPluginManager: ExtensionGetter() {
         every { VariantUtils.javaCompile(variant).destinationDirectory.asFile.orNull } returns mockk()
     }
 
-    fun runGradle(folder: File): BuildResult {
-        return GradleRunner.create()
+    fun runGradle(folder: File): BuildResult =
+        GradleRunner.create()
             .withProjectDir(folder)
             .withPluginClasspath()
             .build()
-    }
 }

@@ -13,12 +13,11 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.GROUP_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.IMPLEMENTATION_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_DEPENDENCIES_TASK
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_ERROR_ALLOWED_DEPENDENCIES_PREFIX
-import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_ERROR_ALLOWED_DEPENDENCIES_SUFFIX
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_ERROR_TITLE
-import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_FILENAME
+import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_LIBRARY_FILE_BLOCKER
+import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_LIBRARY_FILE_WARNING
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_WARNIGN_DESCRIPTION
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_WARNIGN_TITLE
-import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_WARNING_FILENAME
 import com.mercadolibre.android.gradle.baseplugin.core.components.NAME_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.VERSION_CONSTANT
 import com.mercadolibre.android.gradle.library.core.action.modules.lint.dependencies.Dependency
@@ -30,22 +29,31 @@ import java.net.URL
 import java.text.SimpleDateFormat
 import java.util.regex.Pattern
 
+/**
+ * The LibraryAllowListDependenciesLint class is in charge of reviewing all the dependencies of the project through the AllowList to
+ * report if there is any deprecated in a Library.
+ */
 class LibraryAllowListDependenciesLint : Lint() {
 
-    private val FILE_BLOCKER = "build/reports/${LibraryAllowListDependenciesLint::class.java.simpleName}/$LINT_FILENAME"
-    private val FILE_WARNING = "build/reports/${LibraryAllowListDependenciesLint::class.java.simpleName}/$LINT_WARNING_FILENAME"
+    private val defaultGradleVersion = "unspecified"
 
-    private val DEFAULT_GRADLE_VERSION_VALUE = "unspecified"
-
+    /** This variable contains the output of the lint report. */
     var hasFailed = false
 
-    val ALLOWLIST_DEPENDENCIES = arrayListOf<Dependency>()
-    val ALLOWLIST_GOING_TO_EXPIRE = arrayListOf<Dependency>()
+    /** This list contains the dependencies in the allow list. */
+    val allowListDependencies = arrayListOf<Dependency>()
+    /** This list contains the dependencies that are about to expire. */
+    val allowListGoingToExpire = arrayListOf<Dependency>()
 
-    override fun name(): String {
-        return LINT_DEPENDENCIES_TASK
-    }
+    /**
+     * This method is responsible for providing a name to the linteo class.
+     */
+    override fun name(): String = LINT_DEPENDENCIES_TASK
 
+    /**
+     * This method is responsible for verifying that the dependencies of all the variants are valid or
+     * if they are about to expire, perform the warning.
+     */
     override fun lint(project: Project, variants: List<BaseVariant>): Boolean {
         hasFailed = false
         findExtension<LintGradleExtension>(project)?.apply {
@@ -68,12 +76,12 @@ class LibraryAllowListDependenciesLint : Lint() {
 
                 if (hasFailed) {
                     report(
-                        "$LINT_ERROR_ALLOWED_DEPENDENCIES_PREFIX ${dependencyAllowListUrl}\n$LINT_ERROR_ALLOWED_DEPENDENCIES_SUFFIX",
+                        LINT_ERROR_ALLOWED_DEPENDENCIES_PREFIX.replace("URL", dependencyAllowListUrl),
                         project
                     )
                 }
 
-                if (ALLOWLIST_GOING_TO_EXPIRE.size > 0) {
+                if (allowListGoingToExpire.size > 0) {
                     reportWarnings(project)
                 }
             }
@@ -89,17 +97,20 @@ class LibraryAllowListDependenciesLint : Lint() {
         }
     }
 
+    /**
+     * This method is responsible for generating reports in case there are dependencies that have warnings.
+     */
     fun reportWarnings(project: Project) {
-        val file = project.file(FILE_WARNING)
-        if (project.file(FILE_WARNING).exists()) {
-            project.file(FILE_WARNING).delete()
+        val file = project.file(LINT_LIBRARY_FILE_WARNING)
+        if (project.file(LINT_LIBRARY_FILE_WARNING).exists()) {
+            project.file(LINT_LIBRARY_FILE_WARNING).delete()
         } else {
             file.parentFile.mkdirs()
         }
 
         var message = "$LINT_WARNIGN_TITLE \n"
-        for (dependency in ALLOWLIST_GOING_TO_EXPIRE) {
-            message += "(${findDependencyInList(dependency, ALLOWLIST_DEPENDENCIES)?.rawExpiresDate})" +
+        for (dependency in allowListGoingToExpire) {
+            message += "(${findDependencyInList(dependency, allowListDependencies)?.rawExpiresDate})" +
                 " - ${dependency.group}:${dependency.name}:${dependency.version} (Deprecated!)\n"
         }
         message += "\n$LINT_WARNIGN_DESCRIPTION\n"
@@ -122,7 +133,7 @@ class LibraryAllowListDependenciesLint : Lint() {
     }
 
     private fun report(message: String, project: Project) {
-        val file = project.file(FILE_BLOCKER)
+        val file = project.file(LINT_LIBRARY_FILE_BLOCKER)
         if (!hasFailed) {
             if (!file.exists()) {
                 file.parentFile.mkdirs()
@@ -136,24 +147,27 @@ class LibraryAllowListDependenciesLint : Lint() {
         println(message)
     }
 
+    /**
+     * This method is responsible for verifying if the dependency has to be reported, or has any warning.
+     */
     fun analyzeDependency(dependency: Dependency, project: Project) {
         val dependencyFullName = "${dependency.group}:${dependency.name}:${dependency.version}"
         val isLocalModule = project.rootProject.allprojects.find {
             dependencyFullName.contains("${it.group}:${it.name}")
         } != null
 
-        if (!dependencyFullName.contains(DEFAULT_GRADLE_VERSION_VALUE) && !isLocalModule) {
+        if (!dependencyFullName.contains(defaultGradleVersion) && !isLocalModule) {
             val result = getStatusDependencyInAllowList(dependency)
             if (result.isBlocker) {
                 report(result.message(dependencyFullName), project)
             } else if (result.shouldReport) {
-                ALLOWLIST_GOING_TO_EXPIRE.add(dependency)
+                allowListGoingToExpire.add(dependency)
             }
         }
     }
 
     private fun getStatusDependencyInAllowList(dependency: Dependency): StatusBase {
-        val dep = findDependencyInList(dependency, ALLOWLIST_DEPENDENCIES)
+        val dep = findDependencyInList(dependency, allowListDependencies)
         if (dep != null) {
             return if (dep.expires == null) {
                 Status.available()
@@ -163,7 +177,7 @@ class LibraryAllowListDependenciesLint : Lint() {
                         Status.available()
                     }
                     System.currentTimeMillis() < dep.expires -> {
-                        Status.goign_to_expire()
+                        Status.goignToExpire()
                     }
                     else -> {
                         Status.expired()
@@ -174,18 +188,20 @@ class LibraryAllowListDependenciesLint : Lint() {
         return Status.invalid()
     }
 
-    fun getVariableFromJson(name: String, json: JsonElement, defaultValue: String?): String? {
-        return if (json.asJsonObject[name] != null) {
-            json.asJsonObject[name].asString.replace("\\", "")
-        } else {
-            defaultValue
-        }
+    /**
+     * This method is responsible for obtaining data from a Json safely.
+     */
+    fun getVariableFromJson(name: String, json: JsonElement, defaultValue: String?): String? = if (json.asJsonObject[name] != null) {
+        json.asJsonObject[name].asString.replace("\\", "")
+    } else {
+        defaultValue
     }
 
-    fun castStringToDate(date: String): Long {
-        return SimpleDateFormat("yyyy-MM-dd").parse(date.replace("\\", "")).time
-    }
+    private fun castStringToDate(date: String): Long = SimpleDateFormat("yyyy-MM-dd").parse(date.replace("\\", "")).time
 
+    /**
+     * This method is in charge of casting a Json element to a Date in a safe way.
+     */
     fun castJsonElementToDate(it: JsonElement): Long? {
         val element = it.asJsonObject[EXPIRES_CONSTANT]
         if (element == null || element.asString == "null") {
@@ -199,11 +215,14 @@ class LibraryAllowListDependenciesLint : Lint() {
             val json = JsonParser.parseReader(getInputStream().reader())
 
             json.asJsonObject[ALLOWLIST_CONSTANT].asJsonArray.all {
-                ALLOWLIST_DEPENDENCIES.add(jsonNodeToDependency(it))
+                allowListDependencies.add(jsonNodeToDependency(it))
             }
         }
     }
 
+    /**
+     * This method is responsible for obtaining the nodes of the dependencies and storing them through the Data Class Dependency.
+     */
     fun jsonNodeToDependency(it: JsonElement): Dependency {
         val expires: Long? = castJsonElementToDate(it.asJsonObject)
 

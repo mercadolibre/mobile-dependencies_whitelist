@@ -2,14 +2,23 @@ package com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishab
 
 import com.mercadolibre.android.gradle.baseplugin.core.action.providers.RepositoryProvider
 import com.mercadolibre.android.gradle.baseplugin.core.basics.ExtensionGetter
+import com.mercadolibre.android.gradle.baseplugin.core.components.MAVEN_PUBLISH
 import com.mercadolibre.android.gradle.baseplugin.core.domain.interfaces.Module
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.apply
 
-open class PublishableModule: Module, ExtensionGetter() {
+/**
+ * PublishableModule is in charge of adding the Maven Publication plugin and adding the repositories
+ * with the help of ProjectRepositoryConfiguration.
+ */
+open class PublishableModule : Module, ExtensionGetter() {
 
+    /**
+     * This method is responsible for configuring the credentials of the repositories so that we have access to publish
+     * and apply the Maven publication plugin.
+     */
     override fun configure(project: Project) {
-        project.apply(plugin = "org.gradle.maven-publish")
+        project.apply(plugin = MAVEN_PUBLISH)
 
         project.configurations.findByName("archives")?.apply {
             extendsFrom(project.configurations.findByName("default"))
@@ -19,8 +28,9 @@ open class PublishableModule: Module, ExtensionGetter() {
         ProjectRepositoryConfiguration().setupPublishingRepositories(project, repositories)
     }
 
-    fun getTaskName(type: String, packaging: String = "", variantName: String = ""): String {
-        return "publish${packaging.capitalize()}${type}${variantName.capitalize()}"
-    }
-
+    /**
+     * This method is in charge of looking up the name of the publication task.
+     */
+    fun getTaskName(type: String, packaging: String = "", variantName: String = ""): String =
+        "publish${packaging.capitalize()}${type}${variantName.capitalize()}"
 }

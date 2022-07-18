@@ -1,7 +1,7 @@
 package com.mercadolibre.android.gradle.library.unitary.modules
 
 import com.mercadolibre.android.gradle.library.core.action.configurers.LibraryModuleConfigurer
-import com.mercadolibre.android.gradle.library.core.action.modules.plugin_description.LibraryPluginDescriptionModule
+import com.mercadolibre.android.gradle.library.core.action.modules.pluginDescription.LibraryPluginDescriptionModule
 import com.mercadolibre.android.gradle.library.managers.ANY_NAME
 import com.mercadolibre.android.gradle.library.module.ModuleProvider
 import io.mockk.mockk
@@ -13,7 +13,7 @@ import org.junit.runners.JUnit4
 class LibraryPluginDescriptionTest {
 
     @org.junit.Test
-    fun `When the LibraryPluginDescriptionModule is created workd`() {
+    fun `When the LibraryPluginDescriptionModule is created works`() {
         val pluginDescription = LibraryPluginDescriptionModule()
 
         val task = mockk<Task>(relaxed = true)
@@ -21,6 +21,9 @@ class LibraryPluginDescriptionTest {
         pluginDescription.printMessage(ANY_NAME)
         pluginDescription.configureTask(task)
         assert(pluginDescription.makeMessage(ANY_NAME, ANY_NAME) == "- $ANY_NAME\n$ANY_NAME")
-        assert(pluginDescription.content() == LibraryModuleConfigurer().getModules("Library Module", ModuleProvider.provideLibraryAndroidModules()))
+        assert(
+            pluginDescription.content() ==
+                LibraryModuleConfigurer().getModules("Library Module", ModuleProvider.provideLibraryAndroidModules())
+        )
     }
 }

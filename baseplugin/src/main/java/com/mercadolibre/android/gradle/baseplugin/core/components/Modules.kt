@@ -4,8 +4,8 @@ import com.mercadolibre.android.gradle.baseplugin.core.action.modules.buildscan.
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.jacoco.JavaJacocoModule
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.listProjects.ListProjectsModule
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.listVariants.ListVariantsModule
-import com.mercadolibre.android.gradle.baseplugin.core.action.modules.plugin_description.PluginDescriptionModule
-import com.mercadolibre.android.gradle.baseplugin.core.action.modules.project_version.ProjectVersion
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.pluginDescription.PluginDescriptionModule
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.projectVersion.ProjectVersionModule
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.JavaPublishableModule
 import com.mercadolibre.android.gradle.baseplugin.core.domain.interfaces.Module
 import com.mercadolibre.android.gradle.baseplugin.core.domain.interfaces.SettingsModule
@@ -21,7 +21,7 @@ internal val PROJECT_MODULES =
         ListProjectsModule(),
         ListVariantsModule(),
         PluginDescriptionModule(),
-        ProjectVersion()
+        ProjectVersionModule()
     )
 
 internal val SETTINGS_MODULES =

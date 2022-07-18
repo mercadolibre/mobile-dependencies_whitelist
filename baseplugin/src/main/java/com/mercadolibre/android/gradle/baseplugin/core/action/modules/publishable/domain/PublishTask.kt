@@ -10,26 +10,39 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLICATION_CO
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_POM_FILE
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_TIME_GENERATOR
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_TIME_ZONE
-import java.text.SimpleDateFormat
-import java.util.Date
-import java.util.TimeZone
 import org.gradle.api.Project
 import org.gradle.api.publish.PublishingExtension
 import org.gradle.api.publish.maven.MavenPublication
 import org.gradle.configurationcache.extensions.capitalized
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.TimeZone
 
-abstract class PublishTask: ExtensionGetter() {
+/**
+ * This class generates the All posts with help of PomUtils.
+ */
+abstract class PublishTask : ExtensionGetter() {
 
+    /** This variable contains the object that will manage the release versions. */
     val versionContainer = VersionContainer()
+
+    /** This variable contains the object that will manage the names of the tasks and generates some of them. */
     lateinit var nameManager: PublishManager
 
+    /** This variable contains the project where the publication task is generated. */
     lateinit var project: Project
+    /** This variable contains the name of the task that is being generated. */
     lateinit var taskName: String
 
-    fun getTimestamp(): String {
-        return SimpleDateFormat(PUBLISHING_TIME_GENERATOR).apply { timeZone = TimeZone.getTimeZone(PUBLISHING_TIME_ZONE) }.format(Date())
-    }
+    /**
+     * This method is responsible for generating the timestamp so that the version does not have duplicates.
+     */
+    fun getTimestamp(): String =
+        SimpleDateFormat(PUBLISHING_TIME_GENERATOR).apply { timeZone = TimeZone.getTimeZone(PUBLISHING_TIME_ZONE) }.format(Date())
 
+    /**
+     * This method is in charge of registering the publication so that it is accessible from other repositories.
+     */
     fun registerPublish(project: Project, artifacts: List<Any?>, variantName: String, variantFlavor: String?) {
         val pomUtils = PomUtils()
 
@@ -46,7 +59,8 @@ abstract class PublishTask: ExtensionGetter() {
 
                         pomUtils.injectDependencies(project, this, variantName, variantFlavor)
 
-                        project.file("${project.buildDir}/$PUBLICATIONS_CONSTANT/${taskName}/$PUBLISHING_POM_FILE").writeText(this.asString().toString())
+                        project.file("${project.buildDir}/$PUBLICATIONS_CONSTANT/$taskName/$PUBLISHING_POM_FILE")
+                            .writeText(this.asString().toString())
                     }
 
                     val pomTaskName = "$POM_FILE_TASK${taskName.capitalize()}${PUBLICATION_CONSTANT.capitalized()}"

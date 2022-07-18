@@ -1,6 +1,5 @@
 package com.mercadolibre.android.gradle.baseplugin.core.action.modules.buildscan
 
-import com.android.tools.build.bundletool.model.utils.files.BufferedIo.inputStream
 import com.gradle.enterprise.gradleplugin.GradleEnterpriseExtension
 import com.gradle.scan.plugin.BuildScanExtension
 import com.mercadolibre.android.gradle.baseplugin.core.basics.ExtensionGetter
@@ -12,15 +11,20 @@ import org.gradle.api.initialization.Settings
 import org.gradle.api.plugins.ExtensionAware
 import org.gradle.api.plugins.PluginAware
 import org.gradle.kotlin.dsl.apply
-import org.gradle.kotlin.dsl.execution.text
 import java.io.BufferedReader
 import java.io.InputStream
 import java.io.InputStreamReader
 import java.nio.charset.StandardCharsets
 import java.util.stream.Collectors
 
+/**
+ * The BuildScan module is responsible for providing the functionality of publishing the build to Gradle Enterprise.
+ */
 class BuildScanModule : Module, SettingsModule, ExtensionGetter() {
 
+    /**
+     * This method is responsible for applying the Gradle Enterprise plugin and requesting that its extension be configured.
+     */
     fun configure(obj: PluginAware, projectName: String) {
         if (obj is Project || obj is Settings) {
             if (obj is Settings) {
@@ -33,6 +37,9 @@ class BuildScanModule : Module, SettingsModule, ExtensionGetter() {
         }
     }
 
+    /**
+     * This method is responsible for configuring the Gradle Enterprise extension to publish the Builds.
+     */
     fun configBuildScanExtension(gradleExtension: BuildScanExtension, projectName: String) {
         with(gradleExtension) {
             publishAlways()
@@ -56,6 +63,9 @@ class BuildScanModule : Module, SettingsModule, ExtensionGetter() {
         }
     }
 
+    /**
+     * This method is in charge of setting the context variables where the build is executed in order to be seen in Gradle Enterprise.
+     */
     fun configBackground(buildScanExtension: BuildScanExtension) {
         with(buildScanExtension) {
             value("Git Commit ID", getCommandText("git rev-parse --verify HEAD"))
@@ -66,17 +76,12 @@ class BuildScanModule : Module, SettingsModule, ExtensionGetter() {
         }
     }
 
-    private fun getCommandText(command: String): String {
-        return getText(executeCommand(command))
-    }
+    private fun getCommandText(command: String): String = getText(executeCommand(command))
 
-    private fun executeCommand(command: String): InputStream {
-        return Runtime.getRuntime().exec(command).inputStream
-    }
+    private fun executeCommand(command: String): InputStream = Runtime.getRuntime().exec(command).inputStream
 
-    private fun getText(inputStreamReader: InputStream): String {
-        return BufferedReader(InputStreamReader(inputStreamReader, StandardCharsets.UTF_8)).lines().collect(Collectors.joining("\n"))
-    }
+    private fun getText(inputStreamReader: InputStream): String =
+        BufferedReader(InputStreamReader(inputStreamReader, StandardCharsets.UTF_8)).lines().collect(Collectors.joining("\n"))
 
     override fun configure(settings: Settings) {
         configure(settings, settings.rootProject.name)
