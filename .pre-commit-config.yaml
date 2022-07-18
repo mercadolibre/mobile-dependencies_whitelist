@@ -28,7 +28,7 @@ repos:
           - .code_quality/detekt_rules.yml
           - -ac
           - -r
-          - txt:detekt.txt
+          - txt:build/detekt.txt
   # Websec hook is MANDATORY, DO NOT comment it.
   - repo: https://github.com/mercadolibre/fury_websec-git-hooks
     rev: v1.0.1
