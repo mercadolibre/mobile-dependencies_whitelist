@@ -1,6 +1,7 @@
 package com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.subClasses
 
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.basics.TaskGenerator
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.basics.TimeStampManager
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.domain.PublishJarReleaseTask
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.domain.PublishJarTask
 import com.mercadolibre.android.gradle.baseplugin.core.components.INTERNAL_RELEASES
@@ -27,7 +28,7 @@ class PublishJarLocalTask : PublishJarTask() {
 
         val taskGenerator = TaskGenerator(
             taskName,
-            "${PUBLISHING_LOCAL_SUBFIX_TASK}${project.version}-${getTimestamp()}",
+            "${PUBLISHING_LOCAL_SUBFIX_TASK}${project.version}-${TimeStampManager.getOrCreateTimeStamp()}",
             versionContainer,
             getListOfDependsOn(),
             PUBLISHING_MAVEN_LOCAL,

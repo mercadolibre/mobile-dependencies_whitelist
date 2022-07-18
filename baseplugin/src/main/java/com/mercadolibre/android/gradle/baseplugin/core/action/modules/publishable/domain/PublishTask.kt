@@ -8,15 +8,10 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.POM_FILE_TASK
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLICATIONS_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLICATION_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_POM_FILE
-import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_TIME_GENERATOR
-import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_TIME_ZONE
 import org.gradle.api.Project
 import org.gradle.api.publish.PublishingExtension
 import org.gradle.api.publish.maven.MavenPublication
 import org.gradle.configurationcache.extensions.capitalized
-import java.text.SimpleDateFormat
-import java.util.Date
-import java.util.TimeZone
 
 /**
  * This class generates the All posts with help of PomUtils.
@@ -33,12 +28,6 @@ abstract class PublishTask : ExtensionGetter() {
     lateinit var project: Project
     /** This variable contains the name of the task that is being generated. */
     lateinit var taskName: String
-
-    /**
-     * This method is responsible for generating the timestamp so that the version does not have duplicates.
-     */
-    fun getTimestamp(): String =
-        SimpleDateFormat(PUBLISHING_TIME_GENERATOR).apply { timeZone = TimeZone.getTimeZone(PUBLISHING_TIME_ZONE) }.format(Date())
 
     /**
      * This method is in charge of registering the publication so that it is accessible from other repositories.

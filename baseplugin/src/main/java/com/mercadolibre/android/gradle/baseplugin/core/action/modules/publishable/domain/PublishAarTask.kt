@@ -24,10 +24,13 @@ import org.gradle.external.javadoc.StandardJavadocDocletOptions
 import java.io.File
 
 /**
- * This class generates the Aar Release posts with help of TaskGenerator
+ * This class generates the Aar Release posts with help of TaskGenerator.
  */
 abstract class PublishAarTask : PublishTask() {
 
+    /**
+     * This variable contains the variant where the publication tasks are being applied.
+     */
     lateinit var variant: BaseVariant
 
     /**
@@ -40,9 +43,8 @@ abstract class PublishAarTask : PublishTask() {
      */
     internal fun createMavenPublication() {
         val sourceDirs: MutableCollection<File> = mutableListOf()
-        variant.sourceSets.all {
-            sourceDirs += it.javaDirectories
-            true
+        for (sourceSet in variant.sourceSets) {
+            sourceDirs += sourceSet.javaDirectories
         }
 
         nameManager = PublishManager(variant.name, variant.flavorName, project, sourceDirs)
@@ -123,12 +125,12 @@ abstract class PublishAarTask : PublishTask() {
     }
 
     /**
-     * This method is in charge of looking for the Source Jar task
+     * This method is in charge of looking for the Source Jar task.
      */
     fun getSourcesJarTaskName(variant: BaseVariant): String = "${variant.name}${SOURCES_CONSTANT.capitalized()}$PACKAGING_JAR_CONSTANT"
 
     /**
-     * This method is in charge of looking for the Java Doc Jar task
+     * This method is in charge of looking for the Java Doc Jar task.
      */
     fun getJavadocJarTask(variant: BaseVariant): String = "${variant.name}$PUBLISHING_JAVADOC_TASK$PACKAGING_JAR_CONSTANT"
 }

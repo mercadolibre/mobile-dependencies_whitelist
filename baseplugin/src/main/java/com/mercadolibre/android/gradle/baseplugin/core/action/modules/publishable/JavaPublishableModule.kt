@@ -1,5 +1,6 @@
 package com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable
 
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.basics.TimeStampManager
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.domain.PublishJarTask
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.publishable.PublishableModule
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.subClasses.PublishJarExperimentalTask
@@ -35,11 +36,12 @@ class JavaPublishableModule : PublishableModule() {
         }
     }
 
-    /**
-     * This method is in charge of registering the publication task.
-     */
     private fun createTask(task: PublishJarTask, libraryVariant: SourceSet, theTaskName: String, project: Project) {
-        task.register(project, libraryVariant, theTaskName)
+        task.register(project, libraryVariant, theTaskName).configure {
+            doLast {
+                TimeStampManager.deleteTimeStamp()
+            }
+        }
     }
 
     /**
