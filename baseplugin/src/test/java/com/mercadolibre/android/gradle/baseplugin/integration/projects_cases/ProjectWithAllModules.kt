@@ -9,7 +9,7 @@ import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
 
 @RunWith(JUnit4::class)
-class ProjectWithAllModules: UtilsTest() {
+class ProjectWithAllModules : UtilsTest() {
 
     /*
         En este test de integracion se generara un proyecto root con un modulo de tipo App y otro de tipo Test App
@@ -23,8 +23,6 @@ class ProjectWithAllModules: UtilsTest() {
           p3 --> Test App
      */
 
-    override fun getProjectsName(): MutableMap<String, ModuleType> {
-        return mutableMapOf(LIBRARY_PROJECT to ModuleType.LIBRARY, TEST_APP_PROJECT to ModuleType.TESTAPP, APP_PROJECT to ModuleType.APP)
-    }
-
+    override fun getProjectsName(): MutableMap<String, ModuleType> =
+        mutableMapOf(LIBRARY_PROJECT to ModuleType.LIBRARY, TEST_APP_PROJECT to ModuleType.TESTAPP, APP_PROJECT to ModuleType.APP)
 }

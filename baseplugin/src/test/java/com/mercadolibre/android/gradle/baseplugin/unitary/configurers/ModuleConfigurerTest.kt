@@ -4,8 +4,7 @@ import com.mercadolibre.android.gradle.baseplugin.BasePlugin
 import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.ModuleConfigurer
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.buildscan.BuildScanModule
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.listProjects.ListProjectsModule
-import com.mercadolibre.android.gradle.baseplugin.core.action.modules.plugin_description.PluginDescriptionModule
-import com.mercadolibre.android.gradle.baseplugin.core.action.modules.project_version.ProjectVersion
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.projectVersion.ProjectVersionModule
 import com.mercadolibre.android.gradle.baseplugin.managers.AbstractPluginManager
 import com.mercadolibre.android.gradle.baseplugin.managers.ROOT_PROJECT
 import com.mercadolibre.android.gradle.baseplugin.module.ModuleProvider
@@ -22,7 +21,7 @@ class ModuleConfigurerTest : AbstractPluginManager() {
 
     private val buildScanModule = mockk<BuildScanModule>(relaxed = true)
     private val listProjectsModule = mockk<ListProjectsModule>(relaxed = true)
-    private val projectModule = mockk<ProjectVersion>(relaxed = true)
+    private val projectModule = mockk<ProjectVersionModule>(relaxed = true)
 
     @org.junit.Before
     fun setUp() {

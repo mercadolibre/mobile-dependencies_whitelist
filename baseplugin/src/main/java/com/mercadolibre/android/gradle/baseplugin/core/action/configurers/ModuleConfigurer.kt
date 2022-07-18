@@ -11,22 +11,32 @@ import com.mercadolibre.android.gradle.baseplugin.module.ModuleProvider
 import org.gradle.api.Project
 import org.gradle.api.plugins.JavaPlugin
 
-open class ModuleConfigurer: Configurer {
+/**
+ * The Module Configurer is in charge of requesting all modules to add their functionality to the module they are pointing to.
+ */
+open class ModuleConfigurer : Configurer {
 
-    override fun getDescription(): String {
-        return MODULE_CONFIGURER_DESCRIPTION
-    }
+    /**
+     * This method allows us to get a description of what this Configurer does.
+     */
+    override fun getDescription(): String = MODULE_CONFIGURER_DESCRIPTION
 
-    open fun getModules(name: String, modules: List<Any>): String {
+    /**
+     * This method is in charge of listing the modules that are applied to the project to which it is being configured.
+     */
+    fun getModules(name: String, modules: List<Any>): String {
         var listOfModules = "${name.ansi(ANSI_YELLOW)} $ARROW "
-        for (module in modules){
+        for (module in modules) {
             listOfModules += "${module::class.java.simpleName.ansi(ANSI_GREEN)}, "
         }
-        return listOfModules.substring(0, listOfModules.length-2)
+        return listOfModules.substring(0, listOfModules.length - 2)
     }
 
-    override fun configureProject(project: Project){
-        with(ModuleProvider){
+    /**
+     * This method is responsible for requesting the corresponding modules to add their functionality to the project.
+     */
+    override fun configureProject(project: Project) {
+        with(ModuleProvider) {
             project.plugins.withType(JavaPlugin::class.java) {
                 executeModuleConfig(provideJavaModules(), project)
             }
@@ -40,7 +50,10 @@ open class ModuleConfigurer: Configurer {
         }
     }
 
-    fun executeModuleConfig(modules: List<Module>, project: Project){
+    /**
+     * This method is responsible for requesting the corresponding modules to add their functionality to the project.
+     */
+    fun executeModuleConfig(modules: List<Module>, project: Project) {
         for (module in modules) {
             module.configure(project)
         }

@@ -6,10 +6,10 @@ import com.android.build.gradle.api.LibraryVariant
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.basics.TimeStampManager
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.domain.PublishAarTask
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.publishable.PublishableModule
-import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.sub_classes.PublishAarExperimentalTask
-import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.sub_classes.PublishAarLocalTask
-import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.sub_classes.PublishAarPrivateReleaseTask
-import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.sub_classes.PublishAarPublicReleaseTask
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.subClasses.PublishAarExperimentalTask
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.subClasses.PublishAarLocalTask
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.subClasses.PublishAarPrivateReleaseTask
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.subClasses.PublishAarPublicReleaseTask
 import com.mercadolibre.android.gradle.baseplugin.core.components.PACKAGING_AAR_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_GROUP
 import com.mercadolibre.android.gradle.baseplugin.core.components.RELEASE_CONSTANT
@@ -22,8 +22,14 @@ import org.gradle.api.Project
 import org.gradle.api.Task
 import org.gradle.api.tasks.TaskProvider
 
+/**
+ * LibraryPublishableModule is in charge of generating all the tasks of a project to publish the modules.
+ */
 class LibraryPublishableModule : PublishableModule() {
 
+    /**
+     * This method is in charge of requesting that all publication tasks be added.
+     */
     override fun configure(project: Project) {
         super.configure(project)
         findExtension<LibraryExtension>(project)?.apply {
@@ -33,6 +39,9 @@ class LibraryPublishableModule : PublishableModule() {
         }
     }
 
+    /**
+     * This method is in charge of generating all the publishing tasks for the different types of Build Variants.
+     */
     fun createTasksFor(libraryVariant: LibraryVariant, project: Project) {
         val variantName = libraryVariant.name
 
@@ -87,6 +96,9 @@ class LibraryPublishableModule : PublishableModule() {
         return publishTask
     }
 
+    /**
+     * This method is in charge of generating all subtasks for the different types of Build Variants.
+     */
     fun createStubTask(name: String, realTask: TaskProvider<Task>?, project: Project) {
         if (project.tasks.names.contains(name) && realTask != null) {
             project.tasks.named(name).configure {

@@ -1,25 +1,27 @@
+
 package com.mercadolibre.android.gradle.app.unitary.modules.lint
 
 import com.mercadolibre.android.gradle.app.core.action.modules.lint.ReleaseDependenciesLint
+import com.mercadolibre.android.gradle.app.managers.ANY_GROUP
 import com.mercadolibre.android.gradle.app.managers.ANY_NAME
 import com.mercadolibre.android.gradle.app.managers.APP_PROJECT
 import com.mercadolibre.android.gradle.app.managers.AbstractPluginManager
 import com.mercadolibre.android.gradle.app.managers.ROOT_PROJECT
+import com.mercadolibre.android.gradle.app.managers.VERSION_1
 import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.PluginConfigurer
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.LintGradleExtension
 import com.mercadolibre.android.gradle.baseplugin.core.components.APP_PLUGINS
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINTABLE_EXTENSION
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_EXPERIMENTAL
-import com.mercadolibre.android.gradle.library.BaseLibraryPlugin
 import io.mockk.every
 import io.mockk.mockk
-import java.io.File
 import org.gradle.api.artifacts.Dependency
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
+import java.io.File
 
 @RunWith(JUnit4::class)
-class ReleaseDependenciesTest: AbstractPluginManager() {
+class ReleaseDependenciesTest : AbstractPluginManager() {
 
     val releaseDependencies = ReleaseDependenciesLint()
 
@@ -39,11 +41,11 @@ class ReleaseDependenciesTest: AbstractPluginManager() {
 
         val dependency = mockk<Dependency>()
 
-        every { dependency.name } returns "name"
-        every { dependency.group } returns "group"
+        every { dependency.name } returns ANY_NAME
+        every { dependency.group } returns ANY_GROUP
         every { dependency.version } returns PUBLISHING_EXPERIMENTAL
 
-        every { dependency.version } returns "version"
+        every { dependency.version } returns VERSION_1
 
         configuration.dependencies.add(dependency)
 
@@ -70,6 +72,6 @@ class ReleaseDependenciesTest: AbstractPluginManager() {
         every { file.path } returns "./asd.txt"
 
         releaseDependencies.checkIsFailed(listOf(ANY_NAME).stream(), file)
+        File("./asd.txt").delete()
     }
-
 }

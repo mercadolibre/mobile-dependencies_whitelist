@@ -1,7 +1,10 @@
 # 13.0.10
+- Usamos libraryName en lugar de versionName
 - Se solucionan los problemas al linetar multiples modulos al mismo tiempo
 - Se divide la responsabilida del Lintable module de lintear Apps y Librerias llevandola a su modulo correspondiente
 - Al momento de generar los Publish se almaceda el timestamp para que todas las versiones tengan el mismo
+- Se agrega la documentacion para eliminar los issues de DeteKt
+- Se modifica el pre-commit-config.yaml segun nos comenta el equipo de Code Quality por un issue de que DeteKt no genera reporte
 
 # 13.0.9 (unpublished)
 - Se mejora el rendimiento de los tests
@@ -9,6 +12,7 @@
 # 13.0.8
 - Se elimina el operador !! del group al almacenar una dependencia 
 - Se reinicia la flag de Lint cada vez que se llama la task
+- Se agrega documentacion al codigo para cumplir con el DeteKt
 
 # 13.0.7
 - Se elimina el operador !! de la version al almacenar una dependencia ya que los bundles no tienen version

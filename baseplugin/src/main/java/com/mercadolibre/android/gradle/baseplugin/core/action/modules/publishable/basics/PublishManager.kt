@@ -6,28 +6,47 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.PACKAGING_JAR_
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_JAVADOC_TASK
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_SOURCES_TASK
 import com.mercadolibre.android.gradle.baseplugin.core.components.SOURCES_CONSTANT
-import java.io.File
 import org.gradle.api.Project
 import org.gradle.api.tasks.TaskProvider
 import org.gradle.api.tasks.bundling.Jar
+import java.io.File
 
+/**
+ * The PublishManager class is in charge of providing the variables and basic tasks so that a publication can be carried out.
+ *
+ * - Source
+ * - JavaDoc
+ *
+ * @param project This variable contains the project where the tasks are being applied.
+ * @param sourceDirs This variable contains the directories to be published.
+ */
 class PublishManager(private val variantName: String, variantFlavor: String?, val project: Project, val sourceDirs: Any) {
 
+    /** This variable contains the output path of the javadoc task. */
     var javaDocDestDir: File
 
+    /** This variable contains the name of the Javadoc task. */
     var taskNameJavaDoc: String = ""
+
+    /** This variable contains the name of the Jar task. */
     var javadocJarTaskName: String = ""
+
+    /** This variable contains the name of Sources task. */
     var sourcesTaskName: String = ""
 
+    /** This variable contains the javadoc task. */
     lateinit var javadoc: TaskProvider<*>
+
+    /** This variable contains the javadoc jar task. */
     lateinit var javadocJar: TaskProvider<*>
+
+    /** This variable contains the sources task. */
     var sourcesJar: TaskProvider<*>
 
     init {
-
         val baseVariantArtifactId = (if (!variantFlavor.isNullOrEmpty()) variantFlavor else variantName).replace("_", "-")
 
-        javaDocDestDir = project.file("${project.buildDir}/docs/javadoc/${project.name}-${baseVariantArtifactId}")
+        javaDocDestDir = project.file("${project.buildDir}/docs/javadoc/${project.name}-$baseVariantArtifactId")
 
         taskNameJavaDoc = "${variantName}$PUBLISHING_JAVADOC_TASK"
         javadocJarTaskName = "${variantName}$PUBLISHING_JAVADOC_TASK$PACKAGING_JAR_CONSTANT"
@@ -47,6 +66,9 @@ class PublishManager(private val variantName: String, variantFlavor: String?, va
         }
     }
 
+    /**
+     * This method is in charge of generating the JavaDoc task and configuring it.
+     */
     fun configJavaDocJar() {
         javadocJar = if (project.tasks.names.contains(javadocJarTaskName)) {
             project.tasks.named(javadocJarTaskName)
@@ -62,5 +84,4 @@ class PublishManager(private val variantName: String, variantFlavor: String?, va
             }
         }
     }
-
 }

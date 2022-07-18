@@ -1,17 +1,23 @@
-package com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.sub_classes
+package com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.subClasses
 
 import com.android.build.gradle.api.BaseVariant
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.basics.TaskGenerator
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.basics.TimeStampManager
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.domain.PublishAarTask
-import com.mercadolibre.android.gradle.baseplugin.core.action.providers.RepositoryProvider.Companion.INTERNAL_EXPERIMENTAL
+import com.mercadolibre.android.gradle.baseplugin.core.components.INTERNAL_EXPERIMENTAL
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_EXPERIMENTAL_SUBFIX_TASK
 import org.gradle.api.Project
 import org.gradle.api.Task
 import org.gradle.api.tasks.TaskProvider
 
+/**
+ * PublishAarExperimentalTask is in charge of generating the Experimental Aar publications.
+ */
 class PublishAarExperimentalTask : PublishAarTask() {
 
+    /**
+     * This method is in charge of generating the necessary tasks to publish a module and the task that publishes the module.
+     */
     override fun register(project: Project, variant: BaseVariant, taskName: String): TaskProvider<Task> {
         this.project = project
         this.variant = variant

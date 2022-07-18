@@ -11,12 +11,12 @@ import com.mercadolibre.android.gradle.baseplugin.managers.ROOT_PROJECT
 import com.mercadolibre.android.gradle.baseplugin.module.VersionProvider
 import org.gradle.api.Project
 import org.gradle.internal.impldep.org.junit.rules.TemporaryFolder
+import org.gradle.kotlin.dsl.apply
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
-import org.gradle.kotlin.dsl.apply
 
 @RunWith(JUnit4::class)
-class AndroidConfigurerTest: AbstractPluginManager() {
+class AndroidConfigurerTest : AbstractPluginManager() {
 
     val basePlugin = BasePlugin()
     private val androidConfigurer = AndroidConfigurer()
@@ -27,7 +27,7 @@ class AndroidConfigurerTest: AbstractPluginManager() {
 
         root = moduleManager.createSampleRoot(ROOT_PROJECT, tmpFolder)
         projects[LIBRARY_PROJECT] = moduleManager.createSampleSubProject(LIBRARY_PROJECT, tmpFolder, root)
-
+        
         basePlugin.apply(root)
         androidConfigurer.configureProject(projects[LIBRARY_PROJECT]!!)
     }
@@ -73,5 +73,4 @@ class AndroidConfigurerTest: AbstractPluginManager() {
             assert(compileOptions.targetCompatibility == VersionProvider.provideJavaVersion())
         }
     }
-
 }

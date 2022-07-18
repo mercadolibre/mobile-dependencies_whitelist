@@ -7,15 +7,22 @@ import com.mercadolibre.android.gradle.baseplugin.core.domain.interfaces.Configu
 import com.mercadolibre.android.gradle.baseplugin.module.VersionProvider
 import org.gradle.api.Project
 
-open class AndroidConfigurer: Configurer, ExtensionGetter() {
+/**
+ * The Android Configurer is in charge of setting the variables necessary to compile an Android module.
+ */
+open class AndroidConfigurer : Configurer, ExtensionGetter() {
 
-    override fun getDescription(): String {
-        return ANDROID_CONFIGURER_DESCRIPTION
-    }
+    /**
+     * This method allows us to get a description of what this Configurer does.
+     */
+    override fun getDescription(): String = ANDROID_CONFIGURER_DESCRIPTION
 
+    /**
+     * This is the method that sets all the variables needed to build an android project.
+     */
     override fun configureProject(project: Project) {
         findExtension<BaseExtension>(project)?.apply {
-            with(VersionProvider){
+            with(VersionProvider) {
                 compileSdkVersion(provideApiSdkLevel())
                 buildToolsVersion(provideBuildToolsVersion())
 
@@ -24,7 +31,7 @@ open class AndroidConfigurer: Configurer, ExtensionGetter() {
                     setTargetSdkVersion(provideApiSdkLevel())
                 }
 
-                project.allprojects{
+                project.allprojects {
                     compileOptions {
                         sourceCompatibility = provideJavaVersion()
                         targetCompatibility = provideJavaVersion()
@@ -32,6 +39,5 @@ open class AndroidConfigurer: Configurer, ExtensionGetter() {
                 }
             }
         }
-
     }
 }

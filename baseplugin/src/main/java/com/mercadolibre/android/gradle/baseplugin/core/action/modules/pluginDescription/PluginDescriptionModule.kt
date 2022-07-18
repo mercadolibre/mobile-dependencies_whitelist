@@ -1,4 +1,4 @@
-package com.mercadolibre.android.gradle.baseplugin.core.action.modules.plugin_description
+package com.mercadolibre.android.gradle.baseplugin.core.action.modules.pluginDescription
 
 import com.mercadolibre.android.gradle.baseplugin.core.components.ALL_PLUGIN_DESCRIPTION
 import com.mercadolibre.android.gradle.baseplugin.core.components.MELI_GROUP
@@ -9,10 +9,15 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.PLUGIN_MODULES
 import com.mercadolibre.android.gradle.baseplugin.core.domain.interfaces.Module
 import org.gradle.api.Project
 
-internal class PluginDescriptionModule: Module {
+/**
+ * PluginDescriptionModule is in charge of providing the functionality of showing the description of what the plugin does.
+ */
+internal class PluginDescriptionModule : Module {
 
+    /**
+     * This method is in charge of generating the tasks that will describe the plugins.
+     */
     override fun configure(project: Project) {
-
         project.tasks.register(PLUGIN_MODULES_DESCRIPTION_TASK) {
             group = MELI_GROUP
             description = PLUGIN_DESCRIPTION_DESCRIPTION
@@ -34,6 +39,5 @@ internal class PluginDescriptionModule: Module {
 
             finalizedBy(PLUGIN_MODULES_DESCRIPTION_TASK)
         }
-
     }
 }

@@ -12,17 +12,27 @@ import org.gradle.api.GradleException
 import org.gradle.api.Project
 import org.gradle.language.base.plugins.LifecycleBasePlugin
 
-abstract class LintableModule: Module, ExtensionGetter() {
+/**
+ * The LintableModule module is in charge of configuring the Linteo in each of the variants of the project modules.
+ */
+abstract class LintableModule : Module, ExtensionGetter() {
 
     abstract fun getVariants(project: Project): List<BaseVariant>
     abstract fun getLinter(): Lint
 
+    /**
+     * This is the method in charge of executing the lint within a project.
+     */
     override fun configure(project: Project) {
         project.afterEvaluate {
             setUpLint(this)
         }
     }
 
+    /**
+     * This is the method in charge of configuring the linteo, whether it is an app or a library,
+     * and verifying that all the dependencies are correct.
+     */
     fun setUpLint(project: Project) {
         project.tasks.register(LINTABLE_TASK).configure {
             description = LINTABLE_DESCRIPTION
@@ -36,6 +46,9 @@ abstract class LintableModule: Module, ExtensionGetter() {
         }
     }
 
+    /**
+     * This is the method in charge of verifying that all the dependencies are correct.
+     */
     open fun configureVariants(project: Project) {
         findExtension<LintGradleExtension>(project)?.apply {
             if (enabled) {

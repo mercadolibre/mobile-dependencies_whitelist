@@ -3,9 +3,12 @@ package com.mercadolibre.android.gradle.app.module
 import com.mercadolibre.android.gradle.app.core.action.modules.jacoco.AppJacocoModule
 import com.mercadolibre.android.gradle.app.core.action.modules.lint.AppLintModule
 import com.mercadolibre.android.gradle.app.core.action.modules.lint.ApplicationLintOptionsModule
-import com.mercadolibre.android.gradle.app.core.action.modules.plugin_description.AppPluginDescriptionModule
+import com.mercadolibre.android.gradle.app.core.action.modules.pluginDescription.AppPluginDescriptionModule
 import com.mercadolibre.android.gradle.baseplugin.core.domain.interfaces.Module
 
+/**
+ * ModuleProvider is in charge of providing the modules that the plugin will add to apps modules.
+ */
 internal object ModuleProvider {
 
     private val androidAppModules =
@@ -16,7 +19,8 @@ internal object ModuleProvider {
             AppPluginDescriptionModule()
         )
 
-    fun provideAppAndroidModules(): List<Module> {
-        return androidAppModules
-    }
+    /**
+     * This method is responsible for providing the list of android modules.
+     */
+    fun provideAppAndroidModules(): List<Module> = androidAppModules
 }

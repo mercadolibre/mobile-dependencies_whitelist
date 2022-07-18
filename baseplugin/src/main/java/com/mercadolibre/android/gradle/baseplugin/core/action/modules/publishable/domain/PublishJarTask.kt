@@ -19,20 +19,34 @@ import org.gradle.configurationcache.extensions.capitalized
 import org.gradle.external.javadoc.JavadocMemberLevel
 import org.gradle.external.javadoc.StandardJavadocDocletOptions
 
-abstract class PublishJarTask: PublishTask() {
+/**
+ * This class generates the Jar posts with help of TaskGenerator.
+ */
+abstract class PublishJarTask : PublishTask() {
 
+    /**
+     * This variable contains the variant where the publication tasks are being generated.
+     */
     lateinit var variant: SourceSet
 
+    /**
+     * This function seeks to provide the functionality of registering the tasks necessary to publish a module.
+     */
     abstract fun register(project: Project, variant: SourceSet, taskName: String): TaskProvider<Task>
 
-    fun getListOfDependsOn(): List<String> {
-        return listOf(
-            "${variant.name}$PUBLISHING_JAVADOC_TASK${PACKAGING_JAR_CONSTANT}",
+    /**
+     * This method is responsible for returning the list of tasks that depend on the one being generated.
+     */
+    fun getListOfDependsOn(): List<String> =
+        listOf(
+            "${variant.name}$PUBLISHING_JAVADOC_TASK$PACKAGING_JAR_CONSTANT",
             PACKAGING_JAR_CONSTANT.toLowerCase(),
-            "${variant.name}${SOURCES_CONSTANT.capitalized()}${PACKAGING_JAR_CONSTANT}"
+            "${variant.name}${SOURCES_CONSTANT.capitalized()}$PACKAGING_JAR_CONSTANT"
         )
-    }
 
+    /**
+     * This method is in charge of generating the task that publishes a module with all its configurations.
+     */
     fun createMavenPublication() {
         nameManager = PublishManager(variant.name, null, project, variant.allSource)
 
@@ -50,14 +64,15 @@ abstract class PublishJarTask: PublishTask() {
                             setDestinationDir(nameManager.javaDocDestDir)
 
                             if (JavaVersion.current().isJava8Compatible) {
-                                for (commandLineOption in PUBLISHING_OPTIONS){
-                                    (options as StandardJavadocDocletOptions).addStringOption(commandLineOption.key, commandLineOption.value)
+                                for (commandLineOption in PUBLISHING_OPTIONS) {
+                                    (options as StandardJavadocDocletOptions)
+                                        .addStringOption(commandLineOption.key, commandLineOption.value)
                                 }
                             }
 
                             options.memberLevel = JavadocMemberLevel.PROTECTED
 
-                            for (jarLink in PUBLISHING_LINKS_JAR){
+                            for (jarLink in PUBLISHING_LINKS_JAR) {
                                 (options as StandardJavadocDocletOptions).links(jarLink)
                             }
                             isFailOnError = false
@@ -78,6 +93,5 @@ abstract class PublishJarTask: PublishTask() {
 
             registerPublish(project, artifacts, variant.name, null)
         }
-
     }
 }
