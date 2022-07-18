@@ -1090,7 +1090,7 @@
       "name": "MLScanner",
       "source": "private",
       "target": "production",
-      "version": "~>\\s?[1-3]+.[0-9]+"
+      "version": "^~>\\s?3.[0-9]+$"
     },
     {
       "name": "Scanner",
