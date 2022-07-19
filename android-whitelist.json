@@ -208,12 +208,14 @@
       "version": "17\\.1\\.0"
     },
     {
+      "description": "This library is obsolete, please add the corresponding library. To know which one to add, here: https://developer.android.com/guide/playcore#playcore-migration",
       "expires": "2022-07-22",
       "group": "com\\.google\\.android\\.play",
       "name": "core",
       "version": "1\\.10\\.3"
     },
     {
+      "description": "This library is obsolete, please add the corresponding library. To know which one to add, here: https://developer.android.com/guide/playcore#playcore-migration",
       "expires": "2022-07-22",
       "group": "com\\.google\\.android\\.play",
       "name": "core-ktx",
@@ -648,9 +650,15 @@
       "version": "4\\.\\+"
     },
     {
+      "expires": "2022-08-15",
       "group": "com\\.mercadolibre\\.android\\.flox",
       "name": "engine",
       "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.flox",
+      "name": "engine",
+      "version": "7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.fluxclient",
@@ -696,12 +704,6 @@
       "group": "com\\.mercadolibre\\.android\\.local\\.storage",
       "name": "kvs-defaults",
       "version": "5\\.\\+"
-    },
-    {
-      "expires": "2022-07-15",
-      "group": "com\\.mercadolibre\\.android\\.maps",
-      "name": "core",
-      "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.maps",
