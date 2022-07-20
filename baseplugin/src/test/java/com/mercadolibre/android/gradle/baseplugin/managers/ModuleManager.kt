@@ -34,7 +34,13 @@ class ModuleManager {
 
         fileManager.createFile("repositories.gradle", fileManager.readFile("gradle/repositories.gradle"))
         fileManager.createFile("gradle.properties", fileManager.readFile("gradle.properties"))
-        fileManager.createFile("local.properties", fileManager.readFile("templates/localproperties"))
+
+        if (fileManager.getFile("local.properties").exists()) {
+            fileManager.createFile("local.properties", fileManager.readFile("local.properties"))
+        } else {
+            fileManager.createFile("local.properties", fileManager.readFile("templates/localproperties"))
+        }
+
         fileManager.createFile(
             "build.gradle",
             fileManager.readFile("templates/rootBuildGradle.gradle")

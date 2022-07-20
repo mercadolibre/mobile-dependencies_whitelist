@@ -5,6 +5,8 @@
 - Al momento de generar los Publish se almaceda el timestamp para que todas las versiones tengan el mismo
 - Se agrega la documentacion para eliminar los issues de DeteKt
 - Se modifica el pre-commit-config.yaml segun nos comenta el equipo de Code Quality por un issue de que DeteKt no genera reporte
+- Se hace que el archivo de detekt se genere dentro del build
+- Se detecta automaticamente si los test estan en CI o en Local
 
 # 13.0.9 (unpublished)
 - Se mejora el rendimiento de los tests
