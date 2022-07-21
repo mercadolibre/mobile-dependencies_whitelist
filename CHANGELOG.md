@@ -1,3 +1,6 @@
+# 13.1.0
+- Se agrega el Badge de InnerSourceReady
+
 # 13.0.10
 - Se agregan las bases para apuntar a InnerSource Ready
 - Usamos libraryName en lugar de versionName
