@@ -1,4 +1,5 @@
 # 13.0.10
+- Se agregan las bases para apuntar a InnerSource Ready
 - Usamos libraryName en lugar de versionName
 - Se solucionan los problemas al linetar multiples modulos al mismo tiempo
 - Se divide la responsabilida del Lintable module de lintear Apps y Librerias llevandola a su modulo correspondiente
@@ -50,6 +51,9 @@
 - Muevo afuera logica relacionada al alta de los repositorios del BasePlugin 
 - Agrego el file lib.versions.toml para declaracion de variables en el repo, y cambio todas las referencias para usarlo.
 - Agrego el extension de configuracion para la app
+- Migracion Groovy a Kotlin
+- Se generan 3 mudulos que contienen plugins, baseplugin, app y library
+- Se agregan test unitarios y de integracion
 
 # 12.2.0
 - Se corrige el path del resource del keystore para no romper en Windows.

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+</head>
+<body>
+  <div id="app">Cargando...</div>
+  <script>
+    window.$docsify = {
+      loadSidebar: true,
+      name: 'Plugins de Gradle',
+      repo: 'https://github.com/mercadolibre/fury_mobile-gradle-android',
+      logo: "assets/images/logo.png",
+      homepage: "home.md",
+      coverpage: {
+          '/': 'coverpage.md',
+      },
+      search: {
+            maxAge: 86400000, // Expiration time, the default one day
+            paths: 'auto',
+            placeholder: {
+                '/': 'Buscar'
+            },
+            noData: {
+                '/': 'Sin resultados'
+            },
+            depth: 4,
+            hideOtherSidebarContent: false,
+            namespace: 'Plugins de Gradle',
+        }
+    }
+  </script>
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+</body>
+</html>
