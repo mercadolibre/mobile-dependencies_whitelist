@@ -1,4 +1,5 @@
 # MercadoLibre Mobile Gradle Plugin
+[![InnerSource - Ready](https://img.shields.io/static/v1?label=InnerSource&message=Ready&color=green)](https://furydocs.io/innersource-doc/latest/guide/#/)
 
 **Porque:** Este repositorio busca eliminar las configuraciones duplicadas en los repositorios como así proveer funcionalidades
 para el entorno de desarrollo de un developer.
