@@ -1486,6 +1486,12 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "CongratsSdk",
+      "source": "private",
+      "target": "test",
+      "version": "0\\.+"
+    },
+    {
       "name": "ADAssertLayout",
       "source": "public",
       "target": "test",
