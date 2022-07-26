@@ -266,10 +266,17 @@
       "version": "0.8"
     },
     {
+      "expires": "2022-08-30"
       "name": "InAppUpdates",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "InAppUpdateFlow",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "InStore-Discovery",
