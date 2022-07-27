@@ -1,4 +1,5 @@
 # 13.1.0
+- Se configura el Bugsnag para que el proyecto Root no tenga que hacerlo
 - Se agrega el Badge de InnerSourceReady
 
 # 13.0.10

@@ -3,6 +3,8 @@ package com.mercadolibre.android.gradle.baseplugin.unitary.configurers
 import com.android.build.gradle.BaseExtension
 import com.mercadolibre.android.gradle.baseplugin.BasePlugin
 import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.AndroidConfigurer
+import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.PluginConfigurer
+import com.mercadolibre.android.gradle.baseplugin.core.components.LIBRARY_PLUGINS
 import com.mercadolibre.android.gradle.baseplugin.integration.utils.domain.ModuleType
 import com.mercadolibre.android.gradle.baseplugin.managers.AbstractPluginManager
 import com.mercadolibre.android.gradle.baseplugin.managers.FileManager
@@ -27,15 +29,17 @@ class AndroidConfigurerTest : AbstractPluginManager() {
 
         root = moduleManager.createSampleRoot(ROOT_PROJECT, tmpFolder)
         projects[LIBRARY_PROJECT] = moduleManager.createSampleSubProject(LIBRARY_PROJECT, tmpFolder, root)
-        
-        basePlugin.apply(root)
+
+        androidConfigurer.getDescription()
+
+        PluginConfigurer(LIBRARY_PLUGINS).configureProject(projects[LIBRARY_PROJECT]!!)
         androidConfigurer.configureProject(projects[LIBRARY_PROJECT]!!)
     }
 
     @org.junit.Test
     fun `When the AndroidConfigurer configures a project set the Compile Sdk Version`() {
         findExtension<BaseExtension>(projects[LIBRARY_PROJECT]!!)?.apply {
-            assert(compileSdkVersion == VersionProvider.provideApiSdkLevel().toString())
+            assert(compileSdkVersion == "android-${VersionProvider.provideApiSdkLevel()}")
         }
     }
 

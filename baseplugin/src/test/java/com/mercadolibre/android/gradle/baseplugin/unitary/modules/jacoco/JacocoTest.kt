@@ -17,14 +17,15 @@ import com.mercadolibre.android.gradle.library.core.action.modules.jacoco.Librar
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.mockkObject
+import java.io.File
+import org.gradle.api.Project
 import org.gradle.api.tasks.testing.Test
-import org.gradle.testing.jacoco.tasks.JacocoReport
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
-import java.io.File
+import org.gradle.testing.jacoco.tasks.JacocoReport
 
 @RunWith(JUnit4::class)
-class JacocoTest : AbstractPluginManager() {
+class JacocoTest: AbstractPluginManager() {
 
     val jacocoModule = JavaJacocoModule()
     val libraryJacocoModule = LibraryJacocoModule()
@@ -35,23 +36,20 @@ class JacocoTest : AbstractPluginManager() {
 
         root = moduleManager.createSampleRoot(ROOT_PROJECT, tmpFolder)
         projects[LIBRARY_PROJECT] = moduleManager.createSampleSubProject(LIBRARY_PROJECT, tmpFolder, root)
+
         JacocoConfigurationExtension().excludeList = listOf()
 
         jacocoModule.createNeededTasks(projects[LIBRARY_PROJECT]!!)
-
-        libraryJacocoModule.findOrCreateJacocoTestReportTask(projects[LIBRARY_PROJECT]!!)
 
         projects[LIBRARY_PROJECT]!!.tasks.create("testAnyNameUnitTest", Test::class.java)
     }
 
     @org.junit.Test
-    fun `When the AndroidJacocoModule is called find or create Test Report Task and not exist`() {
-        libraryJacocoModule.findOrCreateJacocoTestReportTask(projects[LIBRARY_PROJECT]!!)
-    }
+    fun `When the AndroidJacocoModule is called findOrCreate test report task`() {
+        val project = mockk<Project>(relaxed = true)
 
-    @org.junit.Test
-    fun `When the AndroidJacocoModule is called find or create Test Report Task`() {
-        libraryJacocoModule.findOrCreateJacocoTestReportTask(projects[LIBRARY_PROJECT]!!)
+        val task = libraryJacocoModule.findOrCreateJacocoTestReportTask(project)
+        assert(task === libraryJacocoModule.findOrCreateJacocoTestReportTask(project))
     }
 
     @org.junit.Test

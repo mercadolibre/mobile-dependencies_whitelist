@@ -12,5 +12,6 @@ buildscript {
     dependencies {
         classpath "com.mercadolibre.android.gradle:baseplugin:$innerProjectVersion"
         classpath "com.gradle:gradle-enterprise-gradle-plugin:$gradleEnterprise"
+        classpath "com.bugsnag:bugsnag-android-gradle-plugin:$bugsang"
     }
 }

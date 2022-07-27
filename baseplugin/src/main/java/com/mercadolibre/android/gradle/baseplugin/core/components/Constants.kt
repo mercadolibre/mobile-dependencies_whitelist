@@ -22,6 +22,8 @@ const val ALLOW_LIST_URL = "https://raw.githubusercontent.com/mercadolibre/mobil
 /** This variable contains a plugin. */
 const val GRADLE_ENTERPRISE = "com.gradle.enterprise"
 /** This variable contains a plugin. */
+const val BUGSNAG_PLUGIN = "com.bugsnag.android.gradle"
+/** This variable contains a plugin. */
 const val MAVEN_PUBLISH = "org.gradle.maven-publish"
 /** This variable contains a plugin. */
 const val JACOCO_PLUGIN = "org.gradle.jacoco"
@@ -137,6 +139,7 @@ $PLUGIN_CONFIGURER_DESCRITION
  * These variables help modules express what they need.
  */
 
+const val BUGSNAG_EXTENSION = "bugsnagGradle" /** This variable contains the name of an extension. */
 const val JACOCO_EXTENSION = "jacocoConfiguration" /** This variable contains the name of an extension. */
 const val LINTABLE_EXTENSION = "lintGradle" /** This variable contains the name of an extension. */
 
@@ -205,6 +208,9 @@ const val UNPACK_DEBUG_KEY_STORE_DESCRIPTION = "Unpack the debug keystore into t
 
 /** This variable participates in the description of a Task. */
 const val PUBLISHING_JAVADOC_DESCRIPTION = "Generates Javadoc for"
+
+/** This variable configure the retry convention of build cache. */
+const val BUGSNAG_RETRY_CONVENTION = 5
 
 /**
  * JACOCO.

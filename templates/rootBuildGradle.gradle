@@ -10,6 +10,7 @@ buildscript {
         classpath "com.mercadolibre.android.gradle:baseplugin:$innerProjectVersion"
         classpath "com.mercadolibre.android.gradle:app:$innerProjectVersion"
         classpath "com.mercadolibre.android.gradle:library:$innerProjectVersion"
+        classpath "com.bugsnag:bugsnag-android-gradle-plugin:$bugsang"
         classpath "com.android.tools.build:gradle:$buildTools"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$pluginKotlin"
     }

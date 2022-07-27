@@ -8,6 +8,7 @@ buildscript {
         classpath libs.meli.gradle.plugin.baseplugin
         classpath libs.gradle.scan.enterprise
         classpath libs.gradle.plugin.kotlin
+        classpath libs.bugsnag.plugin
     }
 }
 
