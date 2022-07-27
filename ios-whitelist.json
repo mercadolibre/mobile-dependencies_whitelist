@@ -25,13 +25,6 @@
       "version": "^~>\\s?0.[0-9]+"
     },
     {
-      "expires": "2022-06-29",
-      "name": "NewRelicAgent",
-      "source": "public",
-      "target": "production",
-      "version": "^~>\\s?7.3.[0-9]+$"
-    },
-    {
       "name": "Adjust",
       "source": "public",
       "target": "production",
@@ -44,10 +37,17 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "expires": "2022-08-15",
       "name": "Bugsnag",
       "source": "public",
       "target": "production",
       "version": "6.14.3"
+    },
+    {
+      "name": "Bugsnag",
+      "source": "public",
+      "target": "production",
+      "version": "6.19.0"
     },
     {
       "name": "BugsnagNetworkRequestPlugin",
@@ -81,6 +81,18 @@
     },
     {
       "name": "FBSDKCoreKit",
+      "source": "public",
+      "target": "production",
+      "version": "^~>\\s?(13.2.0)$"
+    },
+    {
+      "name": "FBSDKCoreKit_Basics",
+      "source": "public",
+      "target": "production",
+      "version": "^~>\\s?(13.2.0)$"
+    },
+    {
+      "name": "FBAEMKit",
       "source": "public",
       "target": "production",
       "version": "^~>\\s?(13.2.0)$"
@@ -254,10 +266,17 @@
       "version": "0.8"
     },
     {
+      "expires": "2022-08-30",
       "name": "InAppUpdates",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "InAppUpdateFlow",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "InStore-Discovery",
@@ -336,13 +355,6 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "expires": "2022-06-29",
-      "name": "MLAddresses",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?5.[0-9]+$"
-    },
-    {
       "name": "MLAddresses",
       "source": "private",
       "target": "production",
@@ -385,10 +397,17 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "expires": "2022-08-30",
       "name": "PXAddon",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "PXAddon",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "MLCardForm",
@@ -409,7 +428,7 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "name": "MLCard",
+      "name": "MlCards",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
@@ -419,13 +438,6 @@
       "source": "public",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
-    },
-    {
-      "expires": "2022-06-29",
-      "name": "MLCart",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "MLCart",
@@ -491,20 +503,13 @@
       "name": "MLCommons",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
     },
     {
       "name": "MLRemoteConfigurations",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "expires": "2022-06-16",
-      "name": "MLCreditsBehaviours",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "MLCreditsBehaviours",
@@ -546,14 +551,7 @@
       "name": "MLLocalStorage",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "expires": "2022-06-29",
-      "name": "StaticResources",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?0.[0-9]+.?[0-9]*$"
     },
     {
       "name": "StaticResources",
@@ -578,13 +576,6 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "expires": "2022-06-29",
-      "name": "MLMap",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "MLMap",
@@ -638,7 +629,7 @@
       "name": "MLNetworking",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?0.[0-9]+.?[0-9]*$"
     },
     {
       "name": "MLNotifications",
@@ -672,13 +663,6 @@
     },
     {
       "name": "MLRxRestClient",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
-    },
-    {
-      "expires": "2022-06-29",
-      "name": "MLCommonUIComponents",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+"
@@ -740,37 +724,16 @@
       "version": "^~>\\s?1.[0-9]+"
     },
     {
-      "expires": "2022-06-29",
-      "name": "MLRemedies",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?3.[0-9]+"
-    },
-    {
       "name": "MLRemedies",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?4.[0-9]+"
     },
     {
-      "expires": "2022-06-29",
-      "name": "IvCommons",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
-    },
-    {
       "name": "IvCommons",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?2.[0-9]+"
-    },
-    {
-      "expires": "2022-06-29",
-      "name": "MLRuleEngine",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?0.[0-9]+"
     },
     {
       "name": "MLRuleEngine",
@@ -780,6 +743,12 @@
     },
     {
       "name": "MLSearch/Suggestion",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?4.[0-9]+$"
+    },
+    {
+      "name": "MLSearch/Compats",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?4.[0-9]+$"
@@ -852,6 +821,13 @@
     },
     {
       "name": "MPMerchEngine",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?3.[0-9]+$"
+    },
+    {
+      "expires": "2022-08-29",
+      "name": "MerchRealestates",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?2.[0-9]+$"
@@ -1013,18 +989,11 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "expires": "2022-06-29",
+      "expires": "2022-07-29",
       "name": "MPContacts",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?3.[0-9]+$"
-    },
-    {
-      "expires": "2022-06-29",
-      "name": "MPMoneyTransfer",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?[2-4].[0-9]+$"
     },
     {
       "name": "MPContacts",
@@ -1057,17 +1026,17 @@
       "version": "^~>\\s?[1-2].[0-9]+$"
     },
     {
+      "expires": "2022-12-01",
       "name": "SecurityOptions",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "expires": "2022-07-01",
-      "name": "MobileDevicesSecurity",
+      "name": "SecurityOptions",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "MobileDevicesSecurity",
@@ -1124,18 +1093,11 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
-      "expires": "2022-06-29",
-      "name": "MeliCards",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "expires": "2022-06-30",
+      "expires": "2022-08-25",
       "name": "MLScanner",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "~>\\s?[1-3]+.[0-9]+"
     },
     {
       "name": "Scanner",
@@ -1154,13 +1116,6 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?2.[0-9]+"
-    },
-    {
-      "expires": "2022-06-29",
-      "name": "MLBFFloxComponent",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
     },
     {
       "name": "MLBFFloxComponent",
@@ -1193,13 +1148,6 @@
       "version": "^~>\\s?[0-1].[0-9]+$"
     },
     {
-      "expires": "2022-06-16",
-      "name": "MLCreditsCore",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
-    },
-    {
       "name": "MLCreditsCore",
       "source": "private",
       "target": "production",
@@ -1218,24 +1166,10 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "expires": "2022-06-09",
-      "name": "MLPurchases/Integration",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
       "name": "MLPurchases/Integration",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?2.[0-9]+$"
-    },
-    {
-      "expires": "2022-06-29",
-      "name": "CardsEngagement/Feedback",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "CardsEngagement/Feedback",
@@ -1244,24 +1178,10 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
-      "expires": "2022-06-29",
-      "name": "CardsComponents",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
       "name": "CardsComponents",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?2.[0-9]+$"
-    },
-    {
-      "expires": "2022-07-01",
-      "name": "CardsBanking",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "CardsBanking",
@@ -1282,10 +1202,24 @@
       "version": "^~>\\s?10|[1-9].[0-9]+$"
     },
     {
+      "expires": "2022-08-29",
       "name": "StartUPInitializer",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?3.[0-9]+$"
+      "version": "^~>\\s?3.[0-9]+.?[0-9]*$"
+    },
+    {
+      "expires": "2022-08-29",
+      "name": "StartUPInitializer",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?4.[0-9]+.?[0-9]*$"
+    },
+    {
+      "name": "StartUPInitializer",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?5.[0-9]+.?[0-9]*$"
     },
     {
       "name": "PointUI",
@@ -1417,13 +1351,6 @@
       "name": "DeveloperMode",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "expires": "2022-06-09",
-      "name": "DeveloperMode",
-      "source": "private",
-      "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
@@ -1481,6 +1408,13 @@
       "version": "^~>\\s?2.[0-9]+"
     },
     {
+      "expires": "2022-08-29",
+      "name": "NewRelicAgent",
+      "source": "public",
+      "target": "production",
+      "version": "^~>\\s?7.3.[0-9]+$"
+    },
+    {
       "name": "MLAdjust",
       "source": "private",
       "target": "production",
@@ -1508,7 +1442,7 @@
       "name": "InAppReport",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "CreditsFloxClient",
@@ -1533,13 +1467,6 @@
       "source": "public",
       "target": "production",
       "version": "^~>4.3.[0-3]+$"
-    },
-    {
-      "expires": "2022-06-30",
-      "name": "MercadoCoin",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MercadoCoin",
@@ -1648,6 +1575,18 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "Onboarding",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "GoogleAds-IMA-iOS-SDK",
+      "source": "public",
+      "target": "production",
+      "version": "3.16.1"
     }
   ]
 }

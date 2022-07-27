@@ -3,10 +3,10 @@ require 'date'
 require 'net/http'
 require_relative 'util/slack_notification'
 
-# We have a task that execute every week and check all libs that have expired dates and remove all that have past
-module Clean_whitelists
-    ANDROID_WHITELIST_PATH_FILE = "./android-whitelist.json"
-    IOS_WHITELIST_PATH_FILE = "./ios-whitelist.json"
+# Script that checks and remove all libs that has expired dates and Makes a PR with the modifications
+module Clean_allowlists
+    ANDROID_ALLOWLIST_PATH_FILE = "./android-whitelist.json"
+    IOS_ALLOWLIST_PATH_FILE = "./ios-whitelist.json"
     SLACK_WEBHOOK_FAIL_URL = ENV['SLACK_NOTIFICATION_FAIL_WEBHOOK']
     CIRCLE_BUILD_URL = ENV['CIRCLE_BUILD_URL']
 
@@ -80,13 +80,13 @@ module Clean_whitelists
     def self.main()
         begin
             puts "Starting clean AllowList"
-            dataHashAndroid = get_json_from_file(ANDROID_WHITELIST_PATH_FILE)
-            dataHashIos = get_json_from_file(IOS_WHITELIST_PATH_FILE)
+            dataHashAndroid = get_json_from_file(ANDROID_ALLOWLIST_PATH_FILE)
+            dataHashIos = get_json_from_file(IOS_ALLOWLIST_PATH_FILE)
 
             cleanHash = removeExpired(dataHashAndroid)
-            save_json_to_file(cleanHash, ANDROID_WHITELIST_PATH_FILE)
+            save_json_to_file(cleanHash, ANDROID_ALLOWLIST_PATH_FILE)
             cleanHash = removeExpired(dataHashIos)
-            save_json_to_file(cleanHash, IOS_WHITELIST_PATH_FILE)
+            save_json_to_file(cleanHash, IOS_ALLOWLIST_PATH_FILE)
 
             res = `git diff --stat`
             puts res
