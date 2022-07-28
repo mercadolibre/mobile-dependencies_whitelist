@@ -22,6 +22,8 @@ const val ALLOW_LIST_URL = "https://raw.githubusercontent.com/mercadolibre/mobil
 /** This variable contains a plugin. */
 const val GRADLE_ENTERPRISE = "com.gradle.enterprise"
 /** This variable contains a plugin. */
+const val DEXCOUNT_PLUGIN = "com.getkeepsafe.dexcount"
+/** This variable contains a plugin. */
 const val BUGSNAG_PLUGIN = "com.bugsnag.android.gradle"
 /** This variable contains a plugin. */
 const val MAVEN_PUBLISH = "org.gradle.maven-publish"
@@ -139,6 +141,7 @@ $PLUGIN_CONFIGURER_DESCRITION
  * These variables help modules express what they need.
  */
 
+const val DEXCOUNT_PROPERTY = "enableDexcount" /** This variable contains the name of an property. */
 const val BUGSNAG_EXTENSION = "bugsnagGradle" /** This variable contains the name of an extension. */
 const val JACOCO_EXTENSION = "jacocoConfiguration" /** This variable contains the name of an extension. */
 const val LINTABLE_EXTENSION = "lintGradle" /** This variable contains the name of an extension. */
@@ -431,3 +434,4 @@ const val PUBLICATION_CONSTANT = "publication" /** This variable contains a keyw
 const val ALLOWLIST_CONSTANT = "whitelist" /** This variable contains a keyword used to generate text statements. */
 const val HOURS_CONSTANT = "hours" /** This variable contains a keyword used to generate text statements. */
 const val CONFIGURE_CONSTANT = "configure" /** This variable contains a keyword used to generate text statements. */
+const val JSON_CONSTANT = "json" /** This variable contains a keyword used to generate text statements. */

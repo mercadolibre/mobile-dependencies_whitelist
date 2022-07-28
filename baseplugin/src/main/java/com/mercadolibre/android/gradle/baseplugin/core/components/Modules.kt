@@ -1,6 +1,7 @@
 package com.mercadolibre.android.gradle.baseplugin.core.components
 
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.buildscan.BuildScanModule
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.dexcount.DexCountModule
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.jacoco.JavaJacocoModule
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.listProjects.ListProjectsModule
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.listVariants.ListVariantsModule
@@ -21,7 +22,8 @@ internal val PROJECT_MODULES =
         ListProjectsModule(),
         ListVariantsModule(),
         PluginDescriptionModule(),
-        ProjectVersionModule()
+        ProjectVersionModule(),
+        DexCountModule()
     )
 
 internal val SETTINGS_MODULES =

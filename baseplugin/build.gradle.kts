@@ -16,6 +16,7 @@ dependencies {
     testImplementation(libs.bundles.test)
 
     compileOnly(libs.gradle.scan.enterprise)
+    compileOnly(libs.misc.dexcount)
     implementation(libs.gradle.buildTools.plugin)
 }
 

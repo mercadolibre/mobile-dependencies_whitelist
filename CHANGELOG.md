@@ -1,6 +1,7 @@
 # 13.1.0
 - Se configura el Bugsnag para que el proyecto Root no tenga que hacerlo
 - Se agrega el Badge de InnerSourceReady
+- Se agrega el modulo DexCount para eliminarlo de los repositorios y configurarlo en los plugins
 
 # 13.0.10
 - Se agregan las bases para apuntar a InnerSource Ready

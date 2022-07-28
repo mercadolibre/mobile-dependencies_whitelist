@@ -4,6 +4,7 @@ innerProjectVersion = "EXPERIMENTAL-13.1.0-20220722205728"
 gradle-plugin-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version = "1.5.31" }
 gradle-buildTools-plugin = { module = "com.android.tools.build:gradle", version = "4.2.2" }
 gradle-scan-enterprise = { module = "com.gradle:gradle-enterprise-gradle-plugin", version = "3.6.4" }
+misc-dexcount = { module = "com.getkeepsafe.dexcount:dexcount-gradle-plugin", version = "1.0.3" }
 bugsnag-plugin = { module = "com.bugsnag:bugsnag-android-gradle-plugin", version = "5.+" }
 bugsnag-lib = { module = "com.bugsnag:bugsnag-android", version = "5.+" }
 meli-gradle-plugin-baseplugin = { group = "com.mercadolibre.android.gradle", name = "baseplugin", version.ref = "innerProjectVersion" }
@@ -12,8 +13,8 @@ meli-gradle-plugin-library = { group = "com.mercadolibre.android.gradle", name =
 
 test-mockito = { group = "com.nhaarman.mockitokotlin2", name = "mockito-kotlin", version = "2.2.0" }
 test-mock = { group = "io.mockk", name = "mockk", version = "1.11.0" }
-jUnitLib = { module = "junit:junit", version = "4.12" }
-assertj = { module = "org.assertj:assertj-core", version = "3.11.1" }
+test-jUnitLib = { module = "junit:junit", version = "4.12" }
+test-assertj = { module = "org.assertj:assertj-core", version = "3.11.1" }
 
 [bundles]
-test = ["test-mockito", "test-mock", "jUnitLib", "gradle-scan-enterprise", "gradle-buildTools-plugin", "gradle-plugin-kotlin", "assertj"]
+test = ["test-mockito", "test-mock", "test-jUnitLib", "gradle-scan-enterprise", "gradle-buildTools-plugin", "gradle-plugin-kotlin", "test-assertj", "misc-dexcount"]
