@@ -1496,7 +1496,7 @@
       "name": "CongratsSdk",
       "source": "private",
       "target": "production",
-      "version": "0\\.+"
+      "version": "^~>\s?0.[0-9]+"
     },
     {
       "name": "ADAssertLayout",
