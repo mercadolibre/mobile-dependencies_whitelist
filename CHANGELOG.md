@@ -1,4 +1,5 @@
 # 13.1.0
+- Se configura el Build cache para que el proyecto Root no tenga que hacerlo
 - Se configura el Bugsnag para que el proyecto Root no tenga que hacerlo
 - Se agrega el Badge de InnerSourceReady
 - Se agrega el modulo DexCount para eliminarlo de los repositorios y configurarlo en los plugins

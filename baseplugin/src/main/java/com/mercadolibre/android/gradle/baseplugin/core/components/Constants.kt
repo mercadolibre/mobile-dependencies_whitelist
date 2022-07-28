@@ -14,7 +14,17 @@ import com.mercadolibre.android.gradle.baseplugin.module.VersionProvider
 /**
  * BASE.
  */
-const val RESOLUTION_STRATEGY_HOURS = 2 /** This variable contains a keyword used to set the resolution strategy time. */
+/** This variable contains a keyword used to set the resolution strategy time. */
+const val RESOLUTION_STRATEGY_HOURS = 2
+
+/** This variable contains a URL to config the build cache. */
+const val BUILD_CACHE_URL = "https://gradle-ext.adminml.com/cache/"
+/** This variable contains a keyword to config the build cache. */
+const val BUILD_CACHE_CI = "CI"
+/** This variable contains a keyword to config the build cache. */
+const val BUILD_CACHE_CI_GRADLE_USER = "CI_GRADLE_USER"
+/** This variable contains a keyword to config the build cache. */
+const val BUILD_CACHE_CI_GRADLE_PASSWORD = "CI_GRADLE_USER_PASSWORD"
 
 /** This variable contains the Allow List URL. */
 const val ALLOW_LIST_URL = "https://raw.githubusercontent.com/mercadolibre/mobile-dependencies_whitelist/master/android-whitelist.json"

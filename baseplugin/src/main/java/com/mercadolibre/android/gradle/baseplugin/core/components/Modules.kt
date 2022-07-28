@@ -1,5 +1,6 @@
 package com.mercadolibre.android.gradle.baseplugin.core.components
 
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.buildCache.BuildCacheModule
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.buildscan.BuildScanModule
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.dexcount.DexCountModule
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.jacoco.JavaJacocoModule
@@ -28,5 +29,6 @@ internal val PROJECT_MODULES =
 
 internal val SETTINGS_MODULES =
     listOf<SettingsModule>(
+        BuildCacheModule(),
         BuildScanModule()
     )
