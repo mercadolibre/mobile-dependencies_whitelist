@@ -2,10 +2,12 @@ package com.mercadolibre.android.gradle.baseplugin.core.action.modules.projectVe
 
 import com.mercadolibre.android.gradle.baseplugin.core.components.BUILD_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.FILE_NAME_PROJECT_VERSION
+import com.mercadolibre.android.gradle.baseplugin.core.components.MELI_GROUP
 import com.mercadolibre.android.gradle.baseplugin.core.components.TASK_GET_PROJECT_DESCRIPTION
 import com.mercadolibre.android.gradle.baseplugin.core.components.TASK_GET_PROJECT_TASK
 import com.mercadolibre.android.gradle.baseplugin.core.domain.interfaces.Module
 import org.gradle.api.Project
+import org.gradle.api.Task
 import java.io.File
 
 /**
@@ -17,12 +19,15 @@ class ProjectVersionModule : Module {
      * This method is in charge of generating the task that will show the version report.
      */
     override fun configure(project: Project) {
-        val task = project.tasks.register(TASK_GET_PROJECT_TASK)
-        task.configure {
-            description = TASK_GET_PROJECT_DESCRIPTION
+        configureTask(project.tasks.register(TASK_GET_PROJECT_TASK).get(), project)
+    }
 
+    private fun configureTask(task: Task, project: Project) {
+        with(task) {
+            group = MELI_GROUP
+            description = TASK_GET_PROJECT_DESCRIPTION
             doLast {
-                printProjectVersion(project)
+                printProjectVersion(File(BUILD_CONSTANT), File("$BUILD_CONSTANT/$FILE_NAME_PROJECT_VERSION"), project)
             }
         }
     }
@@ -30,14 +35,12 @@ class ProjectVersionModule : Module {
     /**
      * This method is in charge of creating the file and generating the version report.
      */
-    fun printProjectVersion(project: Project) {
-        val folder = File(BUILD_CONSTANT)
-        if (!folder.exists()) {
-            folder.mkdirs()
+    fun printProjectVersion(buildFile: File, inputFile: File, project: Project) {
+        if (!buildFile.exists()) {
+            buildFile.mkdirs()
         }
 
-        val inputFile = File("$folder/$FILE_NAME_PROJECT_VERSION")
         inputFile.writeText("version: ${project.version}")
-        println("See $folder/$FILE_NAME_PROJECT_VERSION file")
+        println("See $buildFile/$FILE_NAME_PROJECT_VERSION file")
     }
 }

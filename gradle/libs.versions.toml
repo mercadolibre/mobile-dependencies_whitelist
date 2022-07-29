@@ -1,5 +1,7 @@
 [versions]
 innerProjectVersion = "EXPERIMENTAL-13.1.0-20220722205728"
+basePluginVersion = "EXPERIMENTAL-13.1.0-20220728182610"
+
 [libraries]
 gradle-plugin-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version = "1.5.31" }
 gradle-buildTools-plugin = { module = "com.android.tools.build:gradle", version = "4.2.2" }
@@ -7,7 +9,7 @@ gradle-scan-enterprise = { module = "com.gradle:gradle-enterprise-gradle-plugin"
 misc-dexcount = { module = "com.getkeepsafe.dexcount:dexcount-gradle-plugin", version = "1.0.3" }
 bugsnag-plugin = { module = "com.bugsnag:bugsnag-android-gradle-plugin", version = "5.+" }
 bugsnag-lib = { module = "com.bugsnag:bugsnag-android", version = "5.+" }
-meli-gradle-plugin-baseplugin = { group = "com.mercadolibre.android.gradle", name = "baseplugin", version.ref = "innerProjectVersion" }
+meli-gradle-plugin-baseplugin = { group = "com.mercadolibre.android.gradle", name = "baseplugin", version.ref = "basePluginVersion" }
 meli-gradle-plugin-app = { group = "com.mercadolibre.android.gradle", name = "app", version.ref = "innerProjectVersion" }
 meli-gradle-plugin-library = { group = "com.mercadolibre.android.gradle", name = "library", version.ref = "innerProjectVersion" }
 

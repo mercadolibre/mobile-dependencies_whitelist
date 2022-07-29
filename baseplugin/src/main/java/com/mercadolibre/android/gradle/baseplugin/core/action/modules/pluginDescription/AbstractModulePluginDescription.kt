@@ -22,7 +22,7 @@ abstract class AbstractModulePluginDescription(val taskName: String, private val
      */
     override fun configure(project: Project) {
         if (!project.rootProject.tasks.names.contains(taskName)) {
-            project.rootProject.tasks.register(taskName) { configureTask(this) }
+            configureTask(project.rootProject.tasks.register(taskName).get())
             project.rootProject.tasks.findByName(PLUGIN_MODULES_DESCRIPTION_TASK)?.finalizedBy(taskName)
         }
     }

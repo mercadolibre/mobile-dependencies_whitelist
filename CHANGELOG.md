@@ -1,4 +1,7 @@
 # 13.1.0
+- Se agrega la task projectInfo para saber las versiones de Android que utiliza un proyecto
+- Se agrega la funcionalidad a los test de mockear proyectos completos con sus subprojectos, y extensiones
+- Se mejora la calidad de los test para que verifiquen el funcionamiento correctamente 
 - Se configura el Build cache para que el proyecto Root no tenga que hacerlo
 - Se configura el Bugsnag para que el proyecto Root no tenga que hacerlo
 - Se agrega el Badge de InnerSourceReady

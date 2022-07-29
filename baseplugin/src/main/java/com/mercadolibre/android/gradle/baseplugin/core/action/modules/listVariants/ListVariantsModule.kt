@@ -12,6 +12,7 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.SEPARATOR
 import com.mercadolibre.android.gradle.baseplugin.core.components.ansi
 import com.mercadolibre.android.gradle.baseplugin.core.domain.interfaces.Module
 import org.gradle.api.Project
+import org.gradle.api.Task
 
 /**
  * The ListVariantsModule is responsible for providing the functionality to display the variants of all projects.
@@ -22,7 +23,11 @@ class ListVariantsModule : Module, ExtensionGetter() {
      * This is the method in charge of adding the task that shows the variants within the repository.
      */
     override fun configure(project: Project) {
-        project.tasks.register(LIST_VARIANTS_TASK) {
+        configureTask(project.tasks.register(LIST_VARIANTS_TASK).get(), project)
+    }
+
+    private fun configureTask(task: Task, project: Project) {
+        with(task) {
             group = MELI_GROUP
             description = LIST_VARIANTS_DESCRIPTION
             doLast {
@@ -31,6 +36,9 @@ class ListVariantsModule : Module, ExtensionGetter() {
         }
     }
 
+    /**
+     * This is the method in charge shows the variants within the repository.
+     */
     fun printVariants(project: Project) {
         println("Root Project: ${project.name}".ansi(ANSI_GREEN))
         for (subProject in project.subprojects) {

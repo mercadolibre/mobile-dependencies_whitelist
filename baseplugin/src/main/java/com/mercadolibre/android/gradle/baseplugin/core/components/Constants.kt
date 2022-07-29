@@ -173,6 +173,7 @@ const val LINTABLE_TASK = "lintGradle" /** This variable participates in the nam
 const val LINT_DEPENDENCIES_TASK = "lintDependencies" /** This variable participates in the name of a Task. */
 const val LINT_RELEASE_DEPENDENCIES_TASK = "lintReleaseDependencies" /** This variable participates in the name of a Task. */
 const val LIST_VARIANTS_TASK = "listVariants" /** This variable participates in the name of a Task. */
+const val PROJECT_INFO_TASK = "projectInfo" /** This variable participates in the name of a Task. */
 const val LIST_PROJECTS_TASK = "listProjects" /** This variable participates in the name of a Task. */
 const val PLUGIN_DESCRIPTION_TASK = "pluginDescription" /** This variable participates in the name of a Task. */
 const val APP_PLUGIN_DESCRIPTION_TASK = "appPluginDescription" /** This variable participates in the name of a Task. */
@@ -206,6 +207,9 @@ const val LINT_WARNIGN_DESCRIPTION = "You should consider upgrading the lib OR c
 
 /** This variable participates in the description of a Task. */
 const val LIST_VARIANTS_DESCRIPTION = "List all variant in this project"
+
+/** This variable participates in the description of a Task. */
+const val PROJECT_INFO_DESCRIPTION = "List project configurations"
 
 /** This variable participates in the description of a Task. */
 const val LIST_PROJECTS_DESCRIPTION = "List all subprojects in this project"

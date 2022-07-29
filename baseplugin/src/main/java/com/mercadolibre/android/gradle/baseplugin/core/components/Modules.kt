@@ -7,6 +7,7 @@ import com.mercadolibre.android.gradle.baseplugin.core.action.modules.jacoco.Jav
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.listProjects.ListProjectsModule
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.listVariants.ListVariantsModule
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.pluginDescription.PluginDescriptionModule
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.projectInfo.ProjectInfoModule
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.projectVersion.ProjectVersionModule
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.JavaPublishableModule
 import com.mercadolibre.android.gradle.baseplugin.core.domain.interfaces.Module
@@ -22,6 +23,7 @@ internal val PROJECT_MODULES =
     listOf<Module>(
         ListProjectsModule(),
         ListVariantsModule(),
+        ProjectInfoModule(),
         PluginDescriptionModule(),
         ProjectVersionModule(),
         DexCountModule()

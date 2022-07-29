@@ -1,6 +1,7 @@
 package com.mercadolibre.android.gradle.app.managers
 
 import com.android.build.gradle.AppExtension
+import com.android.build.gradle.BaseExtension
 import com.android.build.gradle.LibraryExtension
 import com.android.build.gradle.api.ApplicationVariant
 import com.android.build.gradle.api.BaseVariant
@@ -11,11 +12,18 @@ import com.mercadolibre.android.gradle.baseplugin.core.action.providers.VariantU
 import com.mercadolibre.android.gradle.baseplugin.core.basics.ExtensionGetter
 import com.mercadolibre.android.gradle.baseplugin.core.components.APP_PLUGINS
 import com.mercadolibre.android.gradle.baseplugin.core.components.LIBRARY_PLUGINS
+import com.mercadolibre.android.gradle.baseplugin.core.components.LIST_PROJECTS_TASK
+import com.mercadolibre.android.gradle.baseplugin.core.components.PLUGIN_DESCRIPTION_TASK
+import com.mercadolibre.android.gradle.baseplugin.core.components.PROJECT_INFO_TASK
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.mockkObject
 import org.gradle.api.Project
+import org.gradle.api.Task
 import org.gradle.api.artifacts.Configuration
+import org.gradle.api.plugins.ExtensionContainer
+import org.gradle.api.tasks.TaskContainer
+import org.gradle.api.tasks.TaskProvider
 import org.gradle.internal.impldep.org.junit.rules.TemporaryFolder
 import org.gradle.testkit.runner.BuildResult
 import org.gradle.testkit.runner.GradleRunner
@@ -81,6 +89,83 @@ abstract class AbstractPluginManager : ExtensionGetter() {
         every { VariantUtils.javaCompile(variant).source } returns mockk()
         every { VariantUtils.packageLibrary(variant) } returns ANY_PATH
         every { VariantUtils.javaCompile(variant).destinationDirectory.asFile.orNull } returns mockk()
+    }
+
+    private fun createMockProject(name: String): MockedProjectContent {
+        val project = mockk<Project>()
+        val extensions = mockk<ExtensionContainer>()
+        val tasks = mockk<TaskContainer>()
+        val configuration = mockk<Configuration>()
+
+        val mapOfExtensions = mutableMapOf<String, Any>().apply {
+
+            val baseExtensionMocked = mockk<BaseExtension>(relaxed = true)
+
+            val libraryExtensionMocked = mockk<LibraryExtension>(relaxed = true) {
+                every { buildTypes.iterator().next() } returns mockk(relaxed = true)
+            }
+            val appExtensionMocked = mockk<AppExtension>(relaxed = true) {
+                every { buildTypes.iterator().next() } returns mockk(relaxed = true)
+            }
+
+            put(BaseExtension::class.java.simpleName, baseExtensionMocked)
+            put(LibraryExtension::class.java.simpleName, libraryExtensionMocked)
+            put(AppExtension::class.java.simpleName, appExtensionMocked)
+
+            every { extensions.findByType(LibraryExtension::class.java) } returns libraryExtensionMocked
+            every { extensions.findByType(BaseExtension::class.java) } returns baseExtensionMocked
+            every { extensions.findByType(AppExtension::class.java) } returns appExtensionMocked
+        }
+
+        val mockedProject = MockedProjectContent(project, extensions, mapOfExtensions, arrayListOf(), tasks, arrayListOf())
+
+        mockedProject.variants.add(mockVariant())
+        mockedProject.configurations.add(configuration)
+
+        every { project.name } returns name
+        every { project.tasks } returns tasks
+        every { project.version } returns VERSION_1
+        every { tasks.names } returns mockk(relaxed = true)
+        every { project.extensions } returns extensions
+
+        val sampleTaskProvider = mockk<TaskProvider<Task>>()
+
+        every { sampleTaskProvider.get() } returns mockk<Task>(relaxed = true)
+
+        every { tasks.names.contains(PLUGIN_DESCRIPTION_TASK) } returns true
+        every { tasks.names.contains(ANY_NAME) } returns true
+        every { tasks.register(ANY_NAME) } returns sampleTaskProvider
+        every { tasks.register(LIST_PROJECTS_TASK) } returns sampleTaskProvider
+        every { tasks.register(PROJECT_INFO_TASK) } returns sampleTaskProvider
+
+        return mockedProject
+    }
+
+    inline fun <reified T> getMockedExtension(mockedProject: MockedProjectContent) =
+        mockedProject.extensions[T::class.java.simpleName]!! as T
+
+    private fun mockSubProject(name: String, root: Project): MockedProjectContent {
+        val subProject = createMockProject(name)
+
+        every { subProject.project.rootProject } returns root
+
+        return subProject
+    }
+
+    fun mockRootProject(subProjectsList: List<String>): MockedRootProject {
+        val project = createMockProject(ROOT_PROJECT)
+        val mockedRootProject = MockedRootProject(project, mutableMapOf())
+
+        val subProjects = mutableSetOf<Project>()
+
+        for (subProject in subProjectsList) {
+            val mockedSubProject = mockSubProject(subProject, project.project)
+            mockedRootProject.subProjects[subProject] = mockedSubProject
+            subProjects.add(mockedSubProject.project)
+        }
+
+        every { project.project.subprojects } returns subProjects
+        return mockedRootProject
     }
 
     fun runGradle(folder: File): BuildResult =

@@ -1,18 +1,16 @@
 package com.mercadolibre.android.gradle.baseplugin.unitary.modules.publish
 
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.basics.PomUtils
-import com.mercadolibre.android.gradle.baseplugin.integration.utils.domain.ModuleType
 import com.mercadolibre.android.gradle.baseplugin.managers.ANY_FLAVOR
 import com.mercadolibre.android.gradle.baseplugin.managers.ANY_NAME
 import com.mercadolibre.android.gradle.baseplugin.managers.AbstractPluginManager
-import com.mercadolibre.android.gradle.baseplugin.managers.FileManager
 import com.mercadolibre.android.gradle.baseplugin.managers.LIBRARY_PROJECT
 import com.mercadolibre.android.gradle.baseplugin.managers.ROOT_PROJECT
 import groovy.util.Node
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.unmockkAll
-import java.io.File
+import io.mockk.verify
 import org.gradle.api.XmlProvider
 import org.gradle.api.artifacts.Configuration
 import org.gradle.api.artifacts.Dependency
@@ -21,7 +19,7 @@ import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
 
 @RunWith(JUnit4::class)
-class PomUtilsTest: AbstractPluginManager() {
+class PomUtilsTest : AbstractPluginManager() {
 
     val pomUtils = PomUtils()
 
@@ -50,8 +48,9 @@ class PomUtilsTest: AbstractPluginManager() {
         every { dependency.version } returns "version"
 
         pomUtils.addExclusions(node, dependency)
-    }
 
+        verify { dependency.excludeRules }
+    }
 
     @org.junit.Test
     fun `Config with PomUtils`() {
@@ -65,6 +64,8 @@ class PomUtilsTest: AbstractPluginManager() {
         every { dependency.version } returns "version"
 
         pomUtils.configDependency(node, "scope", arrayListOf(), dependency)
+
+        verify { node.appendNode(any()) }
     }
 
     @org.junit.Test
@@ -124,5 +125,4 @@ class PomUtilsTest: AbstractPluginManager() {
 
         pomUtils.injectDependencies(projects[LIBRARY_PROJECT]!!, xmlProvider, ANY_NAME, null)
     }
-
 }

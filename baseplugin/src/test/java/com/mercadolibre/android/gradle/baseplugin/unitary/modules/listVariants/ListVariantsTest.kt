@@ -1,44 +1,57 @@
 package com.mercadolibre.android.gradle.baseplugin.unitary.modules.listVariants
 
-import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.PluginConfigurer
+import com.android.build.gradle.AppExtension
+import com.android.build.gradle.LibraryExtension
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.listVariants.ListVariantsModule
-import com.mercadolibre.android.gradle.baseplugin.core.components.APP_PLUGINS
-import com.mercadolibre.android.gradle.baseplugin.core.components.LIBRARY_PLUGINS
-import com.mercadolibre.android.gradle.baseplugin.integration.utils.domain.ModuleType
-import com.mercadolibre.android.gradle.baseplugin.managers.ANY_NAME
+import com.mercadolibre.android.gradle.baseplugin.core.components.LIST_VARIANTS_DESCRIPTION
+import com.mercadolibre.android.gradle.baseplugin.core.components.LIST_VARIANTS_TASK
+import com.mercadolibre.android.gradle.baseplugin.core.components.MELI_GROUP
 import com.mercadolibre.android.gradle.baseplugin.managers.APP_PROJECT
 import com.mercadolibre.android.gradle.baseplugin.managers.AbstractPluginManager
-import com.mercadolibre.android.gradle.baseplugin.managers.FileManager
 import com.mercadolibre.android.gradle.baseplugin.managers.LIBRARY_PROJECT
-import com.mercadolibre.android.gradle.baseplugin.managers.ROOT_PROJECT
-import java.io.File
+import io.mockk.every
+import io.mockk.mockk
+import io.mockk.verify
+import org.gradle.api.Task
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
 
 @RunWith(JUnit4::class)
-class ListVariantsTest: AbstractPluginManager() {
+class ListVariantsTest : AbstractPluginManager() {
 
     private val listVariants = ListVariantsModule()
 
     @org.junit.Before
     fun setUp() {
-        initTmpFolder()
+        mockedRoot = mockRootProject(listOf(LIBRARY_PROJECT, APP_PROJECT))
+    }
 
-        root = moduleManager.createSampleRoot(ROOT_PROJECT, tmpFolder)
-        projects[LIBRARY_PROJECT] = moduleManager.createSampleSubProject(LIBRARY_PROJECT, tmpFolder, root)
-        projects[APP_PROJECT] = moduleManager.createSampleSubProject(APP_PROJECT, tmpFolder, root)
+    @org.junit.Test
+    fun `When the ProjectVersion is called configure the task`() {
+        val mockedProjectRoot = mockedRoot.projectContent.project
+        val task = mockk<Task>(relaxed = true)
 
-        PluginConfigurer(APP_PLUGINS).configureProject(projects[APP_PROJECT]!!)
-        PluginConfigurer(LIBRARY_PLUGINS).configureProject(projects[LIBRARY_PROJECT]!!)
+        every { mockedProjectRoot.tasks.register(LIST_VARIANTS_TASK).get() } returns task
 
-        listVariants.findExtension(projects[LIBRARY_PROJECT]!!, ANY_NAME)
+        listVariants.configure(mockedProjectRoot)
 
-        runGradle(tmpFolder.root)
+        verify { task.group = MELI_GROUP }
+        verify { task.description = LIST_VARIANTS_DESCRIPTION }
     }
 
     @org.junit.Test
     fun `When the ListVariantsModule is called configure the project`() {
-        listVariants.printVariants(root)
-    }
+        val mockedRootProject = mockedRoot.projectContent
+        val mockedSubProject = mockedRoot.subProjects[LIBRARY_PROJECT]!!
 
+        val libraryExtension = getMockedExtension<LibraryExtension>(mockedSubProject)
+        val appExtension = getMockedExtension<AppExtension>(mockedSubProject)
+
+        listVariants.printVariants(mockedRootProject.project)
+
+        verify { mockedRootProject.project.name }
+        verify { mockedSubProject.project.name }
+        verify { libraryExtension.buildTypes }
+        verify { appExtension.buildTypes }
+    }
 }
