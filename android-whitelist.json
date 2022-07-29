@@ -963,9 +963,15 @@
       "version": "6\\.\\+"
     },
     {
+      "expires": "2022-08-01",
       "group": "com\\.mercadolibre\\.android\\.static_resources",
       "name": "static_resources",
       "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.static_resources",
+      "name": "static_resources",
+      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.digital_accounts_components",
