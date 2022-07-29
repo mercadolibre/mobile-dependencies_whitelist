@@ -45,6 +45,19 @@ const val KOTLIN_ANDROID = "kotlin-android"
 const val LIBRARY_PLUGIN = "com.android.library"
 /** This variable contains a plugin. */
 const val APP_PLUGIN = "com.android.application"
+/** This variable contains a plugin. */
+const val DYNAMIC_FEATURE = "com.android.dynamic-feature"
+
+/** This variable contains a dependency group. */
+const val FRESCO_SOLOADER = "com.facebook.soloader"
+/** This variable contains a dependency group. */
+const val FRESCO_FACEBOOK = "com.facebook.fresco"
+
+/** This list contains the plugins that an dynamic feature needs. */
+val DYNAMIC_FEATURE_PLUGINS = listOf(
+    KOTLIN_ANDROID,
+    DYNAMIC_FEATURE
+)
 
 /** This list contains the plugins that an library needs. */
 val LIBRARY_PLUGINS = listOf(

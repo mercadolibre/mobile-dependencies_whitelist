@@ -8,12 +8,12 @@ dependencies {
     implementation(localGroovy())
 
     implementation(libs.gradle.buildTools.plugin)
-
-    testImplementation(libs.meli.gradle.plugin.library)
-    testImplementation(libs.meli.gradle.plugin.baseplugin)
+    implementation(libs.meli.gradle.plugin.baseplugin)
 
     testImplementation(libs.bundles.test)
-
+    
+    testImplementation(libs.meli.gradle.plugin.baseplugin)
+    
     compileOnly(libs.bugsnag.plugin)
     testImplementation(libs.bugsnag.plugin)
 

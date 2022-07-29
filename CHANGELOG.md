@@ -1,4 +1,7 @@
 # 13.1.0
+- Se genera el Plugin de Dynamic Feature para configurar los modulos de este estilo
+- Se genera el DynamicFeatureAndroidConfigurer que configurara los modulos para que sean capaces de compilar
+- Se agregaron los test del nuevo plugin Dynamic Feature
 - Se agrega la task projectInfo para saber las versiones de Android que utiliza un proyecto
 - Se agrega la funcionalidad a los test de mockear proyectos completos con sus subprojectos, y extensiones
 - Se mejora la calidad de los test para que verifiquen el funcionamiento correctamente 

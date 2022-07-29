@@ -6,15 +6,12 @@ plugins {
 dependencies {
     implementation(gradleApi())
     implementation(localGroovy())
-    
+
     implementation(libs.gradle.buildTools.plugin)
-
-    testImplementation(libs.meli.gradle.plugin.app)
-    testImplementation(libs.meli.gradle.plugin.baseplugin)
-
-    testImplementation(libs.bundles.test)
-
     implementation(libs.meli.gradle.plugin.baseplugin)
+
+    testImplementation(libs.meli.gradle.plugin.baseplugin)
+    testImplementation(libs.bundles.test)
 }
 
 gradlePlugin {

@@ -13,5 +13,5 @@ plugins {
 }
 
 rootProject.name='MercadoLibre Mobile Gradle Plugin'
-include ':baseplugin', ':library', ':app'
+include ':baseplugin', ':library', ':app', ':dynamicfeatures'
 apply plugin: 'mercadolibre.gradle.config.settings'
