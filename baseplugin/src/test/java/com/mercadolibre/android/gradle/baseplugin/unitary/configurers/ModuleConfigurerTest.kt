@@ -2,7 +2,6 @@ package com.mercadolibre.android.gradle.baseplugin.unitary.configurers
 
 import com.mercadolibre.android.gradle.baseplugin.BasePlugin
 import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.ModuleConfigurer
-import com.mercadolibre.android.gradle.baseplugin.core.action.modules.buildscan.BuildScanModule
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.listProjects.ListProjectsModule
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.projectVersion.ProjectVersionModule
 import com.mercadolibre.android.gradle.baseplugin.managers.AbstractPluginManager
@@ -19,7 +18,6 @@ class ModuleConfigurerTest : AbstractPluginManager() {
 
     private val moduleConfigurer = ModuleConfigurer()
 
-    private val buildScanModule = mockk<BuildScanModule>(relaxed = true)
     private val listProjectsModule = mockk<ListProjectsModule>(relaxed = true)
     private val projectModule = mockk<ProjectVersionModule>(relaxed = true)
 
@@ -31,14 +29,9 @@ class ModuleConfigurerTest : AbstractPluginManager() {
 
         mockkObject(ModuleProvider)
 
-        every { ModuleProvider.provideProjectModules() } returns listOf(buildScanModule, listProjectsModule, projectModule)
+        every { ModuleProvider.provideProjectModules() } returns listOf(listProjectsModule, projectModule)
 
         moduleConfigurer.configureProject(root)
-    }
-
-    @org.junit.Test
-    fun `When the ModuleConfigurer configures a execute the Build Scan Module`() {
-        verify { buildScanModule.configure(root) }
     }
 
     @org.junit.Test

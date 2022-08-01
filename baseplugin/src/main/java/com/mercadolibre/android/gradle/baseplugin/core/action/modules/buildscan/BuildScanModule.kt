@@ -1,16 +1,26 @@
 package com.mercadolibre.android.gradle.baseplugin.core.action.modules.buildscan
 
 import com.gradle.enterprise.gradleplugin.GradleEnterpriseExtension
+import com.gradle.enterprise.gradleplugin.GradleEnterprisePlugin
 import com.gradle.scan.plugin.BuildScanExtension
 import com.mercadolibre.android.gradle.baseplugin.core.basics.ExtensionGetter
-import com.mercadolibre.android.gradle.baseplugin.core.components.GRADLE_ENTERPRISE
-import com.mercadolibre.android.gradle.baseplugin.core.domain.interfaces.Module
+import com.mercadolibre.android.gradle.baseplugin.core.components.CI_CONSTANT
+import com.mercadolibre.android.gradle.baseplugin.core.components.COMMAND_BRANCH
+import com.mercadolibre.android.gradle.baseplugin.core.components.COMMAND_COMMIT
+import com.mercadolibre.android.gradle.baseplugin.core.components.COMMAND_EMAIL
+import com.mercadolibre.android.gradle.baseplugin.core.components.COMMAND_REMOTE_URL
+import com.mercadolibre.android.gradle.baseplugin.core.components.COMMAND_USER_NAME
+import com.mercadolibre.android.gradle.baseplugin.core.components.GIT_BRANCH
+import com.mercadolibre.android.gradle.baseplugin.core.components.GIT_COMMIT
+import com.mercadolibre.android.gradle.baseplugin.core.components.GIT_EMAIL
+import com.mercadolibre.android.gradle.baseplugin.core.components.GIT_REMOTE_URL
+import com.mercadolibre.android.gradle.baseplugin.core.components.GIT_USER_NAME
+import com.mercadolibre.android.gradle.baseplugin.core.components.GRADLE_ENTERPRISE_SERVER_URL
+import com.mercadolibre.android.gradle.baseplugin.core.components.GRADLE_ENTERPRISE_SERVICES_AGREE
+import com.mercadolibre.android.gradle.baseplugin.core.components.GRADLE_ENTERPRISE_SERVICES_URL
+import com.mercadolibre.android.gradle.baseplugin.core.components.LOCAL_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.domain.interfaces.SettingsModule
-import org.gradle.api.Project
 import org.gradle.api.initialization.Settings
-import org.gradle.api.plugins.ExtensionAware
-import org.gradle.api.plugins.PluginAware
-import org.gradle.kotlin.dsl.apply
 import java.io.BufferedReader
 import java.io.InputStream
 import java.io.InputStreamReader
@@ -20,41 +30,39 @@ import java.util.stream.Collectors
 /**
  * The BuildScan module is responsible for providing the functionality of publishing the build to Gradle Enterprise.
  */
-class BuildScanModule : Module, SettingsModule, ExtensionGetter() {
+class BuildScanModule : SettingsModule, ExtensionGetter() {
 
     /**
      * This method is responsible for applying the Gradle Enterprise plugin and requesting that its extension be configured.
      */
-    fun configure(obj: PluginAware, projectName: String) {
-        if (obj is Project || obj is Settings) {
-            if (obj is Settings) {
-                obj.apply(plugin = GRADLE_ENTERPRISE)
-            }
 
-            findExtension<GradleEnterpriseExtension>(obj as ExtensionAware)?.apply {
-                configBuildScanExtension(buildScan, projectName)
-            }
+    override fun configure(settings: Settings) {
+
+        settings.plugins.apply(GradleEnterprisePlugin::class.java)
+
+        findExtension<GradleEnterpriseExtension>(settings)?.apply {
+            configBuildScanExtension(buildScan, settings.rootProject.name, System.getenv().containsKey(CI_CONSTANT))
         }
     }
 
     /**
      * This method is responsible for configuring the Gradle Enterprise extension to publish the Builds.
      */
-    fun configBuildScanExtension(gradleExtension: BuildScanExtension, projectName: String) {
+    fun configBuildScanExtension(gradleExtension: BuildScanExtension, projectName: String, isBuildFromCI: Boolean) {
         with(gradleExtension) {
             publishAlways()
 
-            termsOfServiceUrl = "https://gradle.com/terms-of-service"
-            termsOfServiceAgree = "yes"
+            termsOfServiceUrl = GRADLE_ENTERPRISE_SERVICES_URL
+            termsOfServiceAgree = GRADLE_ENTERPRISE_SERVICES_AGREE
 
-            server = "https://gradle.adminml.com/"
+            server = GRADLE_ENTERPRISE_SERVER_URL
             tag(projectName)
-            isUploadInBackground = !System.getenv().containsKey("CI")
+            isUploadInBackground = !System.getenv().containsKey(CI_CONSTANT)
 
-            if (System.getenv().containsKey("CI")) {
-                tag("CI")
+            if (isBuildFromCI) {
+                tag(CI_CONSTANT)
             } else {
-                tag("Local")
+                tag(LOCAL_CONSTANT)
             }
 
             background {
@@ -68,11 +76,11 @@ class BuildScanModule : Module, SettingsModule, ExtensionGetter() {
      */
     fun configBackground(buildScanExtension: BuildScanExtension) {
         with(buildScanExtension) {
-            value("Git Commit ID", getCommandText("git rev-parse --verify HEAD"))
-            value("Git branch", getCommandText("git rev-parse --abbrev-ref HEAD"))
-            value("user_name", getCommandText("git config user.name"))
-            value("user_email", getCommandText("git config user.email"))
-            value("remote_url", getCommandText("git config --get remote.origin.url"))
+            value(GIT_COMMIT, getCommandText(COMMAND_COMMIT))
+            value(GIT_BRANCH, getCommandText(COMMAND_BRANCH))
+            value(GIT_USER_NAME, getCommandText(COMMAND_USER_NAME))
+            value(GIT_EMAIL, getCommandText(COMMAND_EMAIL))
+            value(GIT_REMOTE_URL, getCommandText(COMMAND_REMOTE_URL))
         }
     }
 
@@ -82,12 +90,4 @@ class BuildScanModule : Module, SettingsModule, ExtensionGetter() {
 
     private fun getText(inputStreamReader: InputStream): String =
         BufferedReader(InputStreamReader(inputStreamReader, StandardCharsets.UTF_8)).lines().collect(Collectors.joining("\n"))
-
-    override fun configure(settings: Settings) {
-        configure(settings, settings.rootProject.name)
-    }
-
-    override fun configure(project: Project) {
-        configure(project, project.name)
-    }
 }

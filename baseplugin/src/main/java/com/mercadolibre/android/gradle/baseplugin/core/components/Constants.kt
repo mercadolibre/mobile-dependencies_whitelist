@@ -30,8 +30,6 @@ const val BUILD_CACHE_CI_GRADLE_PASSWORD = "CI_GRADLE_USER_PASSWORD"
 const val ALLOW_LIST_URL = "https://raw.githubusercontent.com/mercadolibre/mobile-dependencies_whitelist/master/android-whitelist.json"
 
 /** This variable contains a plugin. */
-const val GRADLE_ENTERPRISE = "com.gradle.enterprise"
-/** This variable contains a plugin. */
 const val DEXCOUNT_PLUGIN = "com.getkeepsafe.dexcount"
 /** This variable contains a plugin. */
 const val BUGSNAG_PLUGIN = "com.bugsnag.android.gradle"
@@ -393,6 +391,24 @@ const val TASK_TYPE_LOCAL = "Local" /** This variable contains values necessary 
 const val TASK_TYPE_PUBLIC_RELEASE = "PublicRelease" /** This variable contains values necessary for the operation of a module. */
 const val TASK_TYPE_PRIVATE_RELEASE = "PrivateRelease" /** This variable contains values necessary for the operation of a module. */
 
+/**
+ * GRADLE ENTERPRISE.
+ */
+
+const val GRADLE_ENTERPRISE_SERVICES_URL = "https://gradle.com/terms-of-service" /** This variable contains values necessary for the operation of a module. */
+const val GRADLE_ENTERPRISE_SERVER_URL = "https://gradle.adminml.com/" /** This variable contains values necessary for the operation of a module. */
+const val GRADLE_ENTERPRISE_SERVICES_AGREE = "yes" /** This variable contains values necessary for the operation of a module. */
+const val GIT_BRANCH = "Git branch" /** This variable contains values necessary for the operation of a module. */
+const val GIT_COMMIT = "Git Commit ID" /** This variable contains values necessary for the operation of a module. */
+const val GIT_USER_NAME = "user_name" /** This variable contains values necessary for the operation of a module. */
+const val GIT_EMAIL = "user_email" /** This variable contains values necessary for the operation of a module. */
+const val GIT_REMOTE_URL = "remote_url" /** This variable contains values necessary for the operation of a module. */
+const val COMMAND_COMMIT = "git rev-parse --verify HEAD" /** This variable contains values necessary for the operation of a module. */
+const val COMMAND_BRANCH = "git rev-parse --abbrev-ref HEAD" /** This variable contains values necessary for the operation of a module. */
+const val COMMAND_USER_NAME = "git config user.name" /** This variable contains values necessary for the operation of a module. */
+const val COMMAND_EMAIL = "git config user.email" /** This variable contains values necessary for the operation of a module. */
+const val COMMAND_REMOTE_URL = "git config --get remote.origin.url" /** This variable contains values necessary for the operation of a module. */
+
 /** This variable contains values necessary for the operation of a module. */
 val PUBLISHING_EXCLUDES_ARR = mutableListOf(
     "**/BuildConfig.java",
@@ -421,6 +437,8 @@ val PUBLISHING_OPTIONS = mutableMapOf(
 
 const val ANDROID_USER_NAME = "AndroidInternalReleasesUsername" /** This variable contains a keyword used to get credentials. */
 const val ANDROID_USER_PASSWORD = "AndroidInternalReleasesPassword" /** This variable contains a keyword used to get credentials. */
+const val CI_CONSTANT = "CI" /** This variable contains a keyword used to get credentials. */
+const val LOCAL_CONSTANT = "Local" /** This variable contains a keyword used to get credentials. */
 const val RELEASE_CONSTANT = "release" /** This variable contains a keyword used to generate text statements. */
 const val MDS_CONSTANT = "mds" /** This variable contains a keyword used to generate text statements. */
 const val DEBUG_CONSTANT = "debug" /** This variable contains a keyword used to generate text statements. */
@@ -436,6 +454,7 @@ const val DEFAULT_CONSTANT = "default" /** This variable contains a keyword used
 const val ARCHIVES_CONSTANT = "archives" /** This variable contains a keyword used to generate text statements. */
 const val COMPILE_CONSTANT = "compile" /** This variable contains a keyword used to generate text statements. */
 const val IMPLEMENTATION_CONSTANT = "implementation" /** This variable contains a keyword used to generate text statements. */
+const val CLASSPATH_CONSTANT = "classpath" /** This variable contains a keyword used to generate text statements. */
 const val API_CONSTANT = "api" /** This variable contains a keyword used to generate text statements. */
 const val TEST_CONSTANT = "test" /** This variable contains a keyword used to generate text statements. */
 const val RUNTIME_CONSTANT = "runtime" /** This variable contains a keyword used to generate text statements. */
