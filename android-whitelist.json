@@ -208,29 +208,9 @@
       "version": "17\\.1\\.0"
     },
     {
-      "description": "This library is obsolete, please add the corresponding library. To know which one to add, here: https://developer.android.com/guide/playcore#playcore-migration",
-      "expires": "2022-07-29",
-      "group": "com\\.google\\.android\\.play",
-      "name": "core",
-      "version": "1\\.10\\.3"
-    },
-    {
-      "description": "This library is obsolete, please add the corresponding library. To know which one to add, here: https://developer.android.com/guide/playcore#playcore-migration",
-      "expires": "2022-07-29",
-      "group": "com\\.google\\.android\\.play",
-      "name": "core-ktx",
-      "version": "1\\.8\\.1"
-    },
-    {
       "group": "com\\.google\\.android\\.libraries\\.places",
       "name": "places",
       "version": "2\\.4\\.0"
-    },
-    {
-      "expires": "2022-07-29",
-      "group": "com\\.mercadolibre\\.android\\.dynamic_features",
-      "name": "core",
-      "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.dynamic_features",
@@ -548,24 +528,6 @@
       "group": "com\\.mercadolibre\\.android\\.adjust",
       "name": "core",
       "version": "6\\.\\+"
-    },
-    {
-      "expires": "2022-07-29",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "apprater",
-      "version": "11\\.\\+"
-    },
-    {
-      "expires": "2022-07-29",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "apprater-ml",
-      "version": "11\\.\\+"
-    },
-    {
-      "expires": "2022-07-29",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "apprater-mp",
-      "version": "11\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -1345,21 +1307,9 @@
       "version": "5\\.\\+"
     },
     {
-      "expires": "2022-07-29",
-      "group": "com\\.mercadolibre\\.android\\.inappupdates",
-      "name": "in-app-updates",
-      "version": "5\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.inappupdates",
       "name": "in-app-updates",
       "version": "6\\.\\+"
-    },
-    {
-      "expires": "2022-07-29",
-      "group": "com\\.mercadolibre\\.android\\.mlinappupdates",
-      "name": "ml-in-app-updates",
-      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.mlinappupdates",
