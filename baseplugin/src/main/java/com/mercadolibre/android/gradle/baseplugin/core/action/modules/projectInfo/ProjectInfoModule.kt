@@ -1,7 +1,6 @@
 package com.mercadolibre.android.gradle.baseplugin.core.action.modules.projectInfo
 
 import com.android.build.gradle.BaseExtension
-import com.mercadolibre.android.gradle.baseplugin.core.basics.ExtensionGetter
 import com.mercadolibre.android.gradle.baseplugin.core.components.ANSI_GREEN
 import com.mercadolibre.android.gradle.baseplugin.core.components.ANSI_YELLOW
 import com.mercadolibre.android.gradle.baseplugin.core.components.ARROW
@@ -17,7 +16,7 @@ import org.gradle.api.Task
 /**
  * The ProjectInfoModule is responsible for shows the configurations of all subprojects.
  */
-class ProjectInfoModule : Module, ExtensionGetter() {
+class ProjectInfoModule : Module() {
 
     /**
      * This is the method in charge of adding the task that shows the configurations of all subprojects.

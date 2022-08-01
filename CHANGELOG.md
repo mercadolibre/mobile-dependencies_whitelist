@@ -8,6 +8,7 @@
 - Se configura el Build cache para que el proyecto Root no tenga que hacerlo
 - Se configura el Bugsnag para que el proyecto Root no tenga que hacerlo
 - Se agrega el Badge de InnerSourceReady
+- Se cambia la interface Module a la clase Module que automaticamente genera y verifica una extension de prendido y apagado de todos los modulos
 - Se le da la funcionalidad al BuildScanModule de aplicar el Plugin de Gradle Enterprise
 - Se agrega el modulo DexCount para eliminarlo de los repositorios y configurarlo en los plugins
 

@@ -2,7 +2,7 @@ package com.mercadolibre.android.gradle.dynamicfeature.unitary.configurers
 
 import com.android.build.gradle.BaseExtension
 import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.PluginConfigurer
-import com.mercadolibre.android.gradle.baseplugin.core.components.DYNAMIC_FEATURE_PLUGINS
+import com.mercadolibre.android.gradle.baseplugin.core.components.KOTLIN_ANDROID
 import com.mercadolibre.android.gradle.baseplugin.module.VersionProvider
 import com.mercadolibre.android.gradle.dynamicfeature.core.action.configurers.DynamicFeatureAndroidConfigurer
 import com.mercadolibre.android.gradle.dynamicfeature.managers.AbstractPluginManager
@@ -23,7 +23,7 @@ class DynamicFeaturesAndroidConfigurerTest : AbstractPluginManager() {
         root = moduleManager.createSampleRoot(ROOT_PROJECT, tmpFolder)
         projects[LIBRARY_PROJECT] = moduleManager.createSampleSubProject(LIBRARY_PROJECT, tmpFolder, root)
 
-        PluginConfigurer(DYNAMIC_FEATURE_PLUGINS).configureProject(projects[LIBRARY_PROJECT]!!)
+        PluginConfigurer(listOf(KOTLIN_ANDROID, "com.android.dynamic-feature")).configureProject(projects[LIBRARY_PROJECT]!!)
         androidConfigurer.configureProject(projects[LIBRARY_PROJECT]!!)
     }
 

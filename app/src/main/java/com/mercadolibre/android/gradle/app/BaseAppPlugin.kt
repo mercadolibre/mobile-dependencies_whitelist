@@ -1,5 +1,6 @@
 package com.mercadolibre.android.gradle.app
 
+import com.mercadolibre.android.gradle.app.core.action.configurers.AppExtensionConfigurer
 import com.mercadolibre.android.gradle.app.core.action.configurers.AppModuleConfigurer
 import com.mercadolibre.android.gradle.app.core.action.modules.keystore.KeyStoreModule
 import com.mercadolibre.android.gradle.app.module.TypeAppDetection.Companion.appDetection
@@ -34,6 +35,7 @@ class BaseAppPlugin : AbstractPlugin() {
     override val configurers = arrayListOf(
         PluginConfigurer(APP_PLUGINS),
         AndroidConfigurer(),
+        AppExtensionConfigurer(),
         AppModuleConfigurer()
     )
 }

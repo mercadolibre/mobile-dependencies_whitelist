@@ -1,7 +1,7 @@
 package com.mercadolibre.android.gradle.baseplugin.unitary.modules.pluginDescription
 
-import com.mercadolibre.android.gradle.baseplugin.core.action.modules.pluginDescription.AbstractModulePluginDescription
-import com.mercadolibre.android.gradle.baseplugin.core.components.MELI_GROUP
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.pluginDescription.AbstractPluginDescription
+import com.mercadolibre.android.gradle.baseplugin.core.components.MELI_SUB_GROUP
 import com.mercadolibre.android.gradle.baseplugin.core.components.PLUGIN_DESCRIPTION_DESCRIPTION
 import com.mercadolibre.android.gradle.baseplugin.core.components.PLUGIN_MODULES_DESCRIPTION_TASK
 import com.mercadolibre.android.gradle.baseplugin.managers.ANY_NAME
@@ -18,7 +18,7 @@ import org.junit.runners.JUnit4
 @RunWith(JUnit4::class)
 class AbstractModulePluginDescriptionTest : AbstractPluginManager() {
 
-    val pluginDescription = PluginDescriptionClassTest()
+    private val pluginDescription = PluginDescriptionClassTest()
 
     @org.junit.Before
     fun setUp() {
@@ -90,14 +90,14 @@ class AbstractModulePluginDescriptionTest : AbstractPluginManager() {
     fun `When the any AbstractModulePluginDescriptionTest task is called describe the functionality`() {
         val task = mockk<Task>(relaxed = true)
 
-        pluginDescription.printMessage(ANY_NAME)
+        pluginDescription.printMessage(ANY_NAME, ANY_NAME)
         pluginDescription.makeMessage(ANY_NAME, ANY_NAME)
 
         pluginDescription.configureTask(task)
 
-        verify { task.group = MELI_GROUP }
+        verify { task.group = MELI_SUB_GROUP }
         verify { task.description = PLUGIN_DESCRIPTION_DESCRIPTION }
     }
 
-    class PluginDescriptionClassTest : AbstractModulePluginDescription(ANY_NAME, ANY_NAME, { ANY_NAME })
+    class PluginDescriptionClassTest : AbstractPluginDescription(ANY_NAME, ANY_NAME, ANY_NAME, { ANY_NAME })
 }

@@ -3,8 +3,6 @@ package com.mercadolibre.android.gradle.dynamicfeature.core.action.configurers
 import com.android.build.gradle.BaseExtension
 import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.AndroidConfigurer
 import com.mercadolibre.android.gradle.baseplugin.core.components.DEBUG_CONSTANT
-import com.mercadolibre.android.gradle.baseplugin.core.components.FRESCO_FACEBOOK
-import com.mercadolibre.android.gradle.baseplugin.core.components.FRESCO_SOLOADER
 import com.mercadolibre.android.gradle.baseplugin.core.components.IMPLEMENTATION_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.MDS_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.RELEASE_CONSTANT
@@ -16,6 +14,9 @@ import org.gradle.kotlin.dsl.exclude
  * The DynamicFeatureAndroid Configurer is in charge of setting the variables necessary to compile an Dynamic Feature Android module.
  */
 open class DynamicFeatureAndroidConfigurer : AndroidConfigurer() {
+
+    private val frescoSoloader = "com.facebook.soloader"
+    private val frescoFacebook = "com.facebook.fresco"
 
     /**
      * This method asks all modules to configure the project where the plugin was applied.
@@ -45,13 +46,13 @@ open class DynamicFeatureAndroidConfigurer : AndroidConfigurer() {
         }
 
         with(project.configurations.findByName(IMPLEMENTATION_CONSTANT)!!) {
-            exclude(group = FRESCO_FACEBOOK, module = "webpsupport")
-            exclude(group = FRESCO_SOLOADER, module = "soloader")
-            exclude(group = FRESCO_FACEBOOK, module = "soloader")
-            exclude(group = FRESCO_FACEBOOK, module = "nativeimagefilters")
-            exclude(group = FRESCO_FACEBOOK, module = "nativeimagetranscoder")
-            exclude(group = FRESCO_FACEBOOK, module = "memory-type-native")
-            exclude(group = FRESCO_FACEBOOK, module = "imagepipeline-native")
+            exclude(group = frescoFacebook, module = "webpsupport")
+            exclude(group = frescoSoloader, module = "soloader")
+            exclude(group = frescoFacebook, module = "soloader")
+            exclude(group = frescoFacebook, module = "nativeimagefilters")
+            exclude(group = frescoFacebook, module = "nativeimagetranscoder")
+            exclude(group = frescoFacebook, module = "memory-type-native")
+            exclude(group = frescoFacebook, module = "imagepipeline-native")
         }
     }
 }

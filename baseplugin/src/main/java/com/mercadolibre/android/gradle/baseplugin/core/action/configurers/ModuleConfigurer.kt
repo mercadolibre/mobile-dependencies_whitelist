@@ -24,8 +24,11 @@ open class ModuleConfigurer : Configurer {
     /**
      * This method is in charge of listing the modules that are applied to the project to which it is being configured.
      */
-    fun getModules(name: String, modules: List<Any>): String {
-        var listOfModules = "${name.ansi(ANSI_YELLOW)} $ARROW "
+    fun getModules(name: String?, modules: List<Any>): String {
+        var listOfModules = ""
+        if (name != null) {
+            listOfModules = "${name.ansi(ANSI_YELLOW)} $ARROW "
+        }
         for (module in modules) {
             listOfModules += "${module::class.java.simpleName.ansi(ANSI_GREEN)}, "
         }
@@ -55,7 +58,7 @@ open class ModuleConfigurer : Configurer {
      */
     fun executeModuleConfig(modules: List<Module>, project: Project) {
         for (module in modules) {
-            module.configure(project)
+            module.moduleConfiguration(project)
         }
     }
 }

@@ -13,7 +13,7 @@ import java.io.File
 /**
  * ProjectVersion Module is in charge of storing the version of the project so that it can be collected.
  */
-class ProjectVersionModule : Module {
+class ProjectVersionModule : Module() {
 
     /**
      * This method is in charge of generating the task that will show the version report.

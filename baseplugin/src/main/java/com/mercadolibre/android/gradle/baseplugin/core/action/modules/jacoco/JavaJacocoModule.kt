@@ -19,16 +19,15 @@ class JavaJacocoModule : BaseJacocoModule() {
      */
     override fun configure(project: Project) {
         super.configure(project)
-
         project.afterEvaluate {
-            configureProejct(project)
+            configureProject(project)
         }
     }
 
     /**
      * This method is responsible for generating the main tasks that Jacoco uses to calculate the coverage.
      */
-    fun configureProejct(project: Project) {
+    fun configureProject(project: Project) {
         with(project) {
             val jacocoTestReport = project.tasks.named(JACOCO_TEST_REPORT_TASK)
 

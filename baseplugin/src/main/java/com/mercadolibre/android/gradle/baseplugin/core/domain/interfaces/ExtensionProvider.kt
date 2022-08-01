@@ -13,5 +13,5 @@ interface ExtensionProvider {
     /**
      * This method is in charge of asking the classes that want to provide an extension to have a name for it.
      */
-    fun getName(): String
+    fun getExtensionName(): String
 }

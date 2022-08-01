@@ -25,4 +25,12 @@ internal object ModuleProvider {
      * This method is responsible for providing the list of settings modules.
      */
     fun provideSettingsModules(): List<SettingsModule> = SETTINGS_MODULES
+
+    /**
+     * This method is responsible for providing all modules.
+     */
+    fun provideAllModules(): List<Module> = arrayListOf<Module>().apply {
+        addAll(JAVA_MODULES)
+        addAll(PROJECT_MODULES)
+    }.toList()
 }

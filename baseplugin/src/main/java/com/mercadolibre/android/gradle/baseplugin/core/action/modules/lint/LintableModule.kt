@@ -3,8 +3,8 @@ package com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint
 import com.android.build.gradle.api.BaseVariant
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.Lint
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.LintGradleExtension
-import com.mercadolibre.android.gradle.baseplugin.core.basics.ExtensionGetter
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINTABLE_DESCRIPTION
+import com.mercadolibre.android.gradle.baseplugin.core.components.LINTABLE_EXTENSION
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINTABLE_TASK
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_TASK_FAIL_MESSAGE
 import com.mercadolibre.android.gradle.baseplugin.core.domain.interfaces.Module
@@ -15,9 +15,28 @@ import org.gradle.language.base.plugins.LifecycleBasePlugin
 /**
  * The LintableModule module is in charge of configuring the Linteo in each of the variants of the project modules.
  */
-abstract class LintableModule : Module, ExtensionGetter() {
+abstract class LintableModule : Module() {
 
+    /**
+     * This method is responsible for providing the extension name that Lintable needs to work.
+     */
+    override fun createExtension(project: Project) {
+        project.extensions.create(LINTABLE_EXTENSION, LintGradleExtension::class.java)
+    }
+
+    /**
+     * This method is responsible for providing the extension name that Lintable needs.
+     */
+    override fun getExtensionName(): String = LINTABLE_EXTENSION
+
+    /**
+     * This method is responsible for collecting the variants of the module.
+     */
     abstract fun getVariants(project: Project): List<BaseVariant>
+
+    /**
+     * This method is in charge of providing the object that the Lint will do.
+     */
     abstract fun getLinter(): Lint
 
     /**
@@ -50,13 +69,9 @@ abstract class LintableModule : Module, ExtensionGetter() {
      * This is the method in charge of verifying that all the dependencies are correct.
      */
     open fun configureVariants(project: Project) {
-        findExtension<LintGradleExtension>(project)?.apply {
-            if (enabled) {
-                val lintErrored = getLinter().lint(project, getVariants(project))
-                if (lintErrored) {
-                    throw GradleException(LINT_TASK_FAIL_MESSAGE)
-                }
-            }
+        val lintErrored = getLinter().lint(project, getVariants(project))
+        if (lintErrored) {
+            throw GradleException(LINT_TASK_FAIL_MESSAGE)
         }
     }
 }

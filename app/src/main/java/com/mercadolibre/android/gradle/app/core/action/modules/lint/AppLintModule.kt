@@ -6,8 +6,14 @@ import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.Linta
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.Lint
 import org.gradle.api.Project
 
-class AppLintModule: LintableModule() {
+/**
+ * This class takes care of the Lint of the App type modules.
+ */
+class AppLintModule : LintableModule() {
 
+    /**
+     * This method is responsible for collecting the variants of the module.
+     */
     override fun getVariants(project: Project): List<BaseVariant> {
         val variants = arrayListOf<BaseVariant>()
         findExtension<AppExtension>(project)?.apply {
@@ -16,7 +22,8 @@ class AppLintModule: LintableModule() {
         return variants
     }
 
-    override fun getLinter(): Lint {
-        return ReleaseDependenciesLint()
-    }
+    /**
+     * This method is in charge of providing the object that the Lint will do.
+     */
+    override fun getLinter(): Lint = ReleaseDependenciesLint()
 }

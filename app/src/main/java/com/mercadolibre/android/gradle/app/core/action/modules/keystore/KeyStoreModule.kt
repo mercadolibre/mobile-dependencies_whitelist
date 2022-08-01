@@ -2,7 +2,6 @@ package com.mercadolibre.android.gradle.app.core.action.modules.keystore
 
 import com.android.build.gradle.AppExtension
 import com.android.build.gradle.BaseExtension
-import com.mercadolibre.android.gradle.baseplugin.core.basics.ExtensionGetter
 import com.mercadolibre.android.gradle.baseplugin.core.components.DEBUG_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.DIRECTORY_NAME
 import com.mercadolibre.android.gradle.baseplugin.core.components.FILE_NAME_DEBUG_KEY
@@ -20,7 +19,7 @@ import java.io.File
 /**
  * KeyStoreModule is in charge of providing the key when generating a release.
  */
-class KeyStoreModule(private val isApp: Boolean) : Module, ExtensionGetter() {
+class KeyStoreModule(private val isApp: Boolean) : Module() {
     /**
      * In case it is a productive app, this method searches for the key and generates the necessary file for sign in
      * and generates a task that validates it.
@@ -70,6 +69,9 @@ class KeyStoreModule(private val isApp: Boolean) : Module, ExtensionGetter() {
         }
     }
 
+    /**
+     * This method is responsible for writing the file that contains the key.
+     */
     fun writeFile(project: Project, fileDir: String, keystore: File) {
         val inputStream = project.file(fileDir).inputStream()
         inputStream.copyTo(keystore.outputStream())

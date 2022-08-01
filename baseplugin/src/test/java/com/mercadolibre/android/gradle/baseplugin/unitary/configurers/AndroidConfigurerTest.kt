@@ -5,15 +5,10 @@ import com.mercadolibre.android.gradle.baseplugin.BasePlugin
 import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.AndroidConfigurer
 import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.PluginConfigurer
 import com.mercadolibre.android.gradle.baseplugin.core.components.LIBRARY_PLUGINS
-import com.mercadolibre.android.gradle.baseplugin.integration.utils.domain.ModuleType
 import com.mercadolibre.android.gradle.baseplugin.managers.AbstractPluginManager
-import com.mercadolibre.android.gradle.baseplugin.managers.FileManager
 import com.mercadolibre.android.gradle.baseplugin.managers.LIBRARY_PROJECT
 import com.mercadolibre.android.gradle.baseplugin.managers.ROOT_PROJECT
 import com.mercadolibre.android.gradle.baseplugin.module.VersionProvider
-import org.gradle.api.Project
-import org.gradle.internal.impldep.org.junit.rules.TemporaryFolder
-import org.gradle.kotlin.dsl.apply
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
 
@@ -31,7 +26,6 @@ class AndroidConfigurerTest : AbstractPluginManager() {
         projects[LIBRARY_PROJECT] = moduleManager.createSampleSubProject(LIBRARY_PROJECT, tmpFolder, root)
 
         androidConfigurer.getDescription()
-
         PluginConfigurer(LIBRARY_PLUGINS).configureProject(projects[LIBRARY_PROJECT]!!)
         androidConfigurer.configureProject(projects[LIBRARY_PROJECT]!!)
     }

@@ -42,16 +42,16 @@ class ModuleConfigurerTest : AbstractPluginManager() {
 
     @org.junit.Test
     fun `When the ModuleConfigurer configures a execute the LintableModule Module`() {
-        verify { lintableModule.configure(any()) }
+        verify { lintableModule.moduleConfiguration(any()) }
     }
 
     @org.junit.Test
     fun `When the ModuleConfigurer configures a execute the AppJacocoModule Module`() {
-        verify { jacocoModule.configure(any()) }
+        verify { jacocoModule.moduleConfiguration(any()) }
     }
 
     @org.junit.Test
     fun `When the ModuleConfigurer configures a execute the ApplicationLintOptionsModule Module`() {
-        verify { lintModule.configure(any()) }
+        verify { lintModule.moduleConfiguration(any()) }
     }
 }

@@ -11,7 +11,7 @@ import org.gradle.api.Task
 /**
  * The List Projects Module is responsible for providing the functionality of showing the projects within the root.
  */
-class ListProjectsModule : Module {
+class ListProjectsModule : Module() {
 
     /**
      * This is the method in charge of adding the task that shows the projects within the repository.

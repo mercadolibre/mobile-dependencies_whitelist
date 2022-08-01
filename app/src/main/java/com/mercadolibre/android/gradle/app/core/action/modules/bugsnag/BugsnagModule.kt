@@ -1,7 +1,6 @@
 package com.mercadolibre.android.gradle.app.core.action.modules.bugsnag
 
 import com.bugsnag.android.gradle.BugsnagPluginExtension
-import com.mercadolibre.android.gradle.baseplugin.core.basics.ExtensionGetter
 import com.mercadolibre.android.gradle.baseplugin.core.components.BUGSNAG_EXTENSION
 import com.mercadolibre.android.gradle.baseplugin.core.components.BUGSNAG_PLUGIN
 import com.mercadolibre.android.gradle.baseplugin.core.components.BUGSNAG_RETRY_CONVENTION
@@ -14,18 +13,16 @@ import org.gradle.kotlin.dsl.apply
 /**
  * This class is responsible for adding bugsnag functionality to a repository.
  */
-class BugsnagModule : Module, ExtensionGetter(), ExtensionProvider {
+class BugsnagModule : Module(), ExtensionProvider {
 
-    /**
-     * This method is responsible for providing the name of the extension.
-     */
-    override fun getName(): String = BUGSNAG_EXTENSION
+    override fun getExtensionName(): String = BUGSNAG_EXTENSION
 
     /**
      * This method is responsible for generating the extension that this module needs.
      */
     override fun createExtension(project: Project) {
-        project.extensions.create(getName(), BugsnagExtension::class.java)
+        super.createExtension(project)
+        project.extensions.create(BUGSNAG_EXTENSION, BugsnagExtension::class.java)
     }
 
     /**

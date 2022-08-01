@@ -1,16 +1,16 @@
-package com.mercadolibre.android.gradle.baseplugin.unitary.configurers
+package com.mercadolibre.android.gradle.library.unitary.configurers
 
-import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.ExtensionsConfigurer
-import com.mercadolibre.android.gradle.baseplugin.managers.AbstractPluginManager
-import com.mercadolibre.android.gradle.baseplugin.managers.ROOT_PROJECT
-import com.mercadolibre.android.gradle.baseplugin.module.ModuleProvider
+import com.mercadolibre.android.gradle.library.core.action.configurers.LibraryExtensionConfigurer
+import com.mercadolibre.android.gradle.library.managers.AbstractPluginManager
+import com.mercadolibre.android.gradle.library.managers.ROOT_PROJECT
+import com.mercadolibre.android.gradle.library.module.ModuleProvider
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
 
 @RunWith(JUnit4::class)
 class ExtensionsConfigurerTest : AbstractPluginManager() {
 
-    private val extensionsConfigurer = ExtensionsConfigurer()
+    private val extensionsConfigurer = LibraryExtensionConfigurer()
 
     @org.junit.Before
     fun setUp() {
@@ -24,7 +24,7 @@ class ExtensionsConfigurerTest : AbstractPluginManager() {
 
         val extensionsNames = arrayListOf<String>()
 
-        for (module in ModuleProvider.provideAllModules()) {
+        for (module in ModuleProvider.provideLibraryAndroidModules()) {
             extensionsNames.add(module.getExtensionName())
         }
 

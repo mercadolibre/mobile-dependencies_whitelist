@@ -5,10 +5,10 @@ import com.mercadolibre.android.gradle.baseplugin.integration.utils.domain.Modul
 import com.mercadolibre.android.gradle.baseplugin.managers.AbstractPluginManager
 import com.mercadolibre.android.gradle.baseplugin.managers.FileManager
 import com.mercadolibre.android.gradle.baseplugin.managers.ROOT_PROJECT
-import java.io.File
 import org.gradle.testkit.runner.BuildResult
+import java.io.File
 
-abstract class UtilsTest: AbstractPluginManager() {
+abstract class UtilsTest : AbstractPluginManager() {
 
     val basePlugin = BasePlugin()
 

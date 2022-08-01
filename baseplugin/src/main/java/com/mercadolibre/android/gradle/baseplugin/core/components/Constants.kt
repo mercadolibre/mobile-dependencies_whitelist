@@ -43,19 +43,6 @@ const val KOTLIN_ANDROID = "kotlin-android"
 const val LIBRARY_PLUGIN = "com.android.library"
 /** This variable contains a plugin. */
 const val APP_PLUGIN = "com.android.application"
-/** This variable contains a plugin. */
-const val DYNAMIC_FEATURE = "com.android.dynamic-feature"
-
-/** This variable contains a dependency group. */
-const val FRESCO_SOLOADER = "com.facebook.soloader"
-/** This variable contains a dependency group. */
-const val FRESCO_FACEBOOK = "com.facebook.fresco"
-
-/** This list contains the plugins that an dynamic feature needs. */
-val DYNAMIC_FEATURE_PLUGINS = listOf(
-    KOTLIN_ANDROID,
-    DYNAMIC_FEATURE
-)
 
 /** This list contains the plugins that an library needs. */
 val LIBRARY_PLUGINS = listOf(
@@ -68,6 +55,11 @@ val APP_PLUGINS = listOf(
     KOTLIN_ANDROID,
     APP_PLUGIN
 )
+/** This variable contains an CONSOLE style. */
+const val WARNIGN_MESSAGE = "WARNING:"
+/** This variable contains an CONSOLE style. */
+const val ERROR_MESSAGE = "ERROR:"
+
 /** This variable contains an ANSI style. */
 const val ANSI_RESET = "\u001B[0m"
 /** This variable contains an ANSI style. */
@@ -168,6 +160,7 @@ const val JACOCO_EXTENSION = "jacocoConfiguration" /** This variable contains th
 const val LINTABLE_EXTENSION = "lintGradle" /** This variable contains the name of an extension. */
 
 const val MELI_GROUP = "meliPlugin" /** This variable contains a keyword used to set the group of a task. */
+const val MELI_SUB_GROUP = "meliPluginSubTasks" /** This variable contains a keyword used to set the group of a task. */
 const val JACOCO_GROUP = "reporting" /** This variable contains a keyword used to set the group of a task. */
 const val JACOCO_VERIFICATION_GROUP = "verification" /** This variable contains a keyword used to set the group of a task. */
 const val UNIT_TEST_GROUP = "verification" /** This variable contains a keyword used to set the group of a task. */
@@ -187,8 +180,10 @@ const val LIST_VARIANTS_TASK = "listVariants" /** This variable participates in 
 const val PROJECT_INFO_TASK = "projectInfo" /** This variable participates in the name of a Task. */
 const val LIST_PROJECTS_TASK = "listProjects" /** This variable participates in the name of a Task. */
 const val PLUGIN_DESCRIPTION_TASK = "pluginDescription" /** This variable participates in the name of a Task. */
-const val APP_PLUGIN_DESCRIPTION_TASK = "appPluginDescription" /** This variable participates in the name of a Task. */
-const val LIBRARY_PLUGIN_DESCRIPTION_TASK = "libraryPluginDescription" /** This variable participates in the name of a Task. */
+const val APP_MODULE_PLUGIN_DESCRIPTION_TASK = "appPluginModuleDescription" /** This variable participates in the name of a Task. */
+const val LIBRARY_MODULE_PLUGIN_DESCRIPTION_TASK = "libraryPluginModuleDescription" /** This variable participates in the name of a Task. */
+const val LIBRARY_EXTENSION_PLUGIN_DESCRIPTION_TASK = "libraryPluginExtensionDescription" /** This variable participates in the name of a Task. */
+const val APP_EXTENSION_PLUGIN_DESCRIPTION_TASK = "appPluginExtensionDescription" /** This variable participates in the name of a Task. */
 const val PLUGIN_MODULES_DESCRIPTION_TASK = "pluginsModulesDescription" /** This variable participates in the name of a Task. */
 const val TASK_GET_PROJECT_TASK = "getProjectVersion" /** This variable participates in the name of a Task. */
 const val UNPACK_DEBUG_KEY_STORE_TASK = "unpackDebugKeystore" /** This variable participates in the name of a Task. */

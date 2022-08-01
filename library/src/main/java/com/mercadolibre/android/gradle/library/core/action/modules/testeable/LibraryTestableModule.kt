@@ -2,7 +2,6 @@ package com.mercadolibre.android.gradle.library.core.action.modules.testeable
 
 import com.android.build.gradle.BaseExtension
 import com.android.build.gradle.LibraryExtension
-import com.mercadolibre.android.gradle.baseplugin.core.basics.ExtensionGetter
 import com.mercadolibre.android.gradle.baseplugin.core.components.BUILD_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.JACOCO_GROUP
 import com.mercadolibre.android.gradle.baseplugin.core.components.JACOCO_REPORT_FLAVOR_TEST_TASK_NAME
@@ -17,9 +16,9 @@ import org.gradle.api.Project
 /**
  * LibraryTestableModule This is the module in charge of configuring all the tests within the library module.
  */
-class LibraryTestableModule : Module, ExtensionGetter() {
+class LibraryTestableModule : Module() {
     /**
-     * This method is in charge of configuring the tests within the library module
+     * This method is in charge of configuring the tests within the library module.
      */
     override fun configure(project: Project) {
         findExtension<BaseExtension>(project)?.apply {

@@ -4,6 +4,7 @@ import com.mercadolibre.android.gradle.app.core.action.modules.bugsnag.BugsnagMo
 import com.mercadolibre.android.gradle.app.core.action.modules.jacoco.AppJacocoModule
 import com.mercadolibre.android.gradle.app.core.action.modules.lint.AppLintModule
 import com.mercadolibre.android.gradle.app.core.action.modules.lint.ApplicationLintOptionsModule
+import com.mercadolibre.android.gradle.app.core.action.modules.pluginDescription.AppPluginDescriptionExtensionsModule
 import com.mercadolibre.android.gradle.app.core.action.modules.pluginDescription.AppPluginDescriptionModule
 import com.mercadolibre.android.gradle.baseplugin.core.domain.interfaces.Module
 
@@ -18,7 +19,8 @@ internal object ModuleProvider {
             AppJacocoModule(),
             ApplicationLintOptionsModule(),
             AppPluginDescriptionModule(),
-            BugsnagModule()
+            BugsnagModule(),
+            AppPluginDescriptionExtensionsModule()
         )
 
     /**

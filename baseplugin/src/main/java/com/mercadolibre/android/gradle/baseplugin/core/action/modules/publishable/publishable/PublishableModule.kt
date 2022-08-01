@@ -1,7 +1,6 @@
 package com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.publishable
 
 import com.mercadolibre.android.gradle.baseplugin.core.action.providers.RepositoryProvider
-import com.mercadolibre.android.gradle.baseplugin.core.basics.ExtensionGetter
 import com.mercadolibre.android.gradle.baseplugin.core.components.MAVEN_PUBLISH
 import com.mercadolibre.android.gradle.baseplugin.core.domain.interfaces.Module
 import org.gradle.api.Project
@@ -11,7 +10,7 @@ import org.gradle.kotlin.dsl.apply
  * PublishableModule is in charge of adding the Maven Publication plugin and adding the repositories
  * with the help of ProjectRepositoryConfiguration.
  */
-open class PublishableModule : Module, ExtensionGetter() {
+open class PublishableModule : Module() {
 
     /**
      * This method is responsible for configuring the credentials of the repositories so that we have access to publish

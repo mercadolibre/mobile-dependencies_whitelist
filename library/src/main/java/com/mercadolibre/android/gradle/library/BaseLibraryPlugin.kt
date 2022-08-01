@@ -4,6 +4,7 @@ import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.Androi
 import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.PluginConfigurer
 import com.mercadolibre.android.gradle.baseplugin.core.basics.AbstractPlugin
 import com.mercadolibre.android.gradle.baseplugin.core.components.LIBRARY_PLUGINS
+import com.mercadolibre.android.gradle.library.core.action.configurers.LibraryExtensionConfigurer
 import com.mercadolibre.android.gradle.library.core.action.configurers.LibraryModuleConfigurer
 
 /**
@@ -17,6 +18,7 @@ open class BaseLibraryPlugin : AbstractPlugin() {
     override val configurers = arrayListOf(
         PluginConfigurer(LIBRARY_PLUGINS),
         AndroidConfigurer(),
+        LibraryExtensionConfigurer(),
         LibraryModuleConfigurer()
     )
 }

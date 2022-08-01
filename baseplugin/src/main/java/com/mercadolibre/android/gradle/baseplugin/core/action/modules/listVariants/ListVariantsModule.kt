@@ -2,7 +2,6 @@ package com.mercadolibre.android.gradle.baseplugin.core.action.modules.listVaria
 
 import com.android.build.gradle.AppExtension
 import com.android.build.gradle.LibraryExtension
-import com.mercadolibre.android.gradle.baseplugin.core.basics.ExtensionGetter
 import com.mercadolibre.android.gradle.baseplugin.core.components.ANSI_GREEN
 import com.mercadolibre.android.gradle.baseplugin.core.components.ANSI_YELLOW
 import com.mercadolibre.android.gradle.baseplugin.core.components.LIST_VARIANTS_DESCRIPTION
@@ -17,7 +16,7 @@ import org.gradle.api.Task
 /**
  * The ListVariantsModule is responsible for providing the functionality to display the variants of all projects.
  */
-class ListVariantsModule : Module, ExtensionGetter() {
+class ListVariantsModule : Module() {
 
     /**
      * This is the method in charge of adding the task that shows the variants within the repository.
@@ -37,7 +36,7 @@ class ListVariantsModule : Module, ExtensionGetter() {
     }
 
     /**
-     * This is the method in charge shows the variants within the repository.
+     * This is the method in charge of shows the variants within the repository.
      */
     fun printVariants(project: Project) {
         println("Root Project: ${project.name}".ansi(ANSI_GREEN))

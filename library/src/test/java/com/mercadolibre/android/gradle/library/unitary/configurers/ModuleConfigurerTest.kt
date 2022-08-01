@@ -44,21 +44,21 @@ class ModuleConfigurerTest : AbstractPluginManager() {
 
     @org.junit.Test
     fun `When the ModuleConfigurer configures a execute the LintableModule Module`() {
-        verify { lintableModule.configure(projects[LIBRARY_PROJECT]!!) }
+        verify { lintableModule.moduleConfiguration(projects[LIBRARY_PROJECT]!!) }
     }
 
     @org.junit.Test
     fun `When the ModuleConfigurer configures a execute the LibraryJacocoModule Module`() {
-        verify { jacocoModule.configure(projects[LIBRARY_PROJECT]!!) }
+        verify { jacocoModule.moduleConfiguration(projects[LIBRARY_PROJECT]!!) }
     }
 
     @org.junit.Test
     fun `When the ModuleConfigurer configures a execute the LibraryTestableModule Module`() {
-        verify { testableModule.configure(projects[LIBRARY_PROJECT]!!) }
+        verify { testableModule.moduleConfiguration(projects[LIBRARY_PROJECT]!!) }
     }
 
     @org.junit.Test
     fun `When the ModuleConfigurer configures a execute the LibraryPublishableModule Module`() {
-        verify { publishModule.configure(projects[LIBRARY_PROJECT]!!) }
+        verify { publishModule.moduleConfiguration(projects[LIBRARY_PROJECT]!!) }
     }
 }

@@ -9,6 +9,8 @@ import com.mercadolibre.android.gradle.app.managers.AbstractPluginManager
 
 import com.mercadolibre.android.gradle.app.managers.ROOT_PROJECT
 import com.mercadolibre.android.gradle.baseplugin.BasePlugin
+import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.PluginConfigurer
+import com.mercadolibre.android.gradle.baseplugin.core.components.APP_PLUGINS
 import java.io.File
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
@@ -16,12 +18,11 @@ import org.junit.runners.JUnit4
 @RunWith(JUnit4::class)
 class ApplicationLintOptionsTest: AbstractPluginManager() {
 
-    private val basePlugin = BasePlugin()
     private val appPlugin = BaseAppPlugin()
     private val appLintOptions = ApplicationLintOptionsModule()
 
-    @org.junit.Before
-    fun setUp() {
+    @org.junit.Test
+    fun `When the ApplicationLintOptionsModule configures the project set IsCheckDependencies True`() {
         initTmpFolder()
 
         pathsAffectingAllModules.forEach { File(tmpFolder.root, it).mkdirs() }
@@ -29,17 +30,10 @@ class ApplicationLintOptionsTest: AbstractPluginManager() {
         root = moduleManager.createSampleRoot(ROOT_PROJECT, tmpFolder)
         projects[APP_PROJECT] = moduleManager.createSampleSubProject(APP_PROJECT, tmpFolder, root)
 
-        basePlugin.apply(root)
-        appPlugin.apply(projects[APP_PROJECT]!!)
-
+        appLintOptions.configureLintOptions(projects[APP_PROJECT]!!)
+        PluginConfigurer(APP_PLUGINS).configureProject(projects[APP_PROJECT]!!)
         appLintOptions.configure(projects[APP_PROJECT]!!)
-    }
-
-    @org.junit.Test
-    fun `When the ApplicationLintOptionsModule configures the project set IsCheckDependencies True`() {
-        findExtension<BaseExtension>(projects[APP_PROJECT]!!)?.apply {
-            assert(lintOptions.isCheckDependencies)
-        }
+        appLintOptions.configureLintOptions(projects[APP_PROJECT]!!)
     }
 
 }

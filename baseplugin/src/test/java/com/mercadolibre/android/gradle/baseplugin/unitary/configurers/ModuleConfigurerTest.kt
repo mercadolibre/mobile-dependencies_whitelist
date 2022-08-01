@@ -36,11 +36,11 @@ class ModuleConfigurerTest : AbstractPluginManager() {
 
     @org.junit.Test
     fun `When the ModuleConfigurer configures a execute the ListProjectsModule Module`() {
-        verify { listProjectsModule.configure(root) }
+        verify { listProjectsModule.moduleConfiguration(root) }
     }
 
     @org.junit.Test
     fun `When the ModuleConfigurer configures a execute the ProjectVersion Module`() {
-        verify { projectModule.configure(root) }
+        verify { projectModule.moduleConfiguration(root) }
     }
 }

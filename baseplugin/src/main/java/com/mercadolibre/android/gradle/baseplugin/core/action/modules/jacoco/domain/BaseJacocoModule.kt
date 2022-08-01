@@ -2,7 +2,6 @@ package com.mercadolibre.android.gradle.baseplugin.core.action.modules.jacoco.do
 
 import com.android.build.gradle.internal.crash.afterEvaluate
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.jacoco.basics.JacocoConfigurationExtension
-import com.mercadolibre.android.gradle.baseplugin.core.basics.ExtensionGetter
 import com.mercadolibre.android.gradle.baseplugin.core.components.JACOCO_EXTENSION
 import com.mercadolibre.android.gradle.baseplugin.core.components.JACOCO_FULL_REPORT_TASK
 import com.mercadolibre.android.gradle.baseplugin.core.components.JACOCO_GROUP
@@ -21,12 +20,7 @@ import org.gradle.kotlin.dsl.apply
 /**
  * Base Jacoco Module is in charge of adding the Jacoco Plugin and generating the basic tasks for its operation.
  */
-open class BaseJacocoModule : Module, ExtensionProvider, ExtensionGetter() {
-
-    /**
-     * This method is responsible for providing the name of the Jacoco extension.
-     */
-    override fun getName(): String = JACOCO_EXTENSION
+open class BaseJacocoModule : Module(), ExtensionProvider {
 
     /**
      * This method is responsible for applying the Jacoco plugin and configuring its main tasks.
@@ -68,12 +62,14 @@ open class BaseJacocoModule : Module, ExtensionProvider, ExtensionGetter() {
     }
 
     /**
+     * This method is responsible for providing the extension name that Jacoco needs.
+     */
+    override fun getExtensionName(): String = JACOCO_EXTENSION
+
+    /**
      * This method is responsible for providing the extension that Jacoco needs to work properly.
      */
     override fun createExtension(project: Project) {
-        project.extensions.create(getName(), JacocoConfigurationExtension::class.java)
-        for (subProjects in project.subprojects) {
-            subProjects.extensions.create(getName(), JacocoConfigurationExtension::class.java)
-        }
+        project.extensions.create(JACOCO_EXTENSION, JacocoConfigurationExtension::class.java)
     }
 }
