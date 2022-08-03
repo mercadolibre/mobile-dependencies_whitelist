@@ -332,9 +332,15 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "analytics",
       "version": "production-9\\.\\+|develop-9\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "analytics",
+      "version": "production-12\\.\\+|develop-12\\.\\+"
     },
     {
       "expires": "2022-08-30",
