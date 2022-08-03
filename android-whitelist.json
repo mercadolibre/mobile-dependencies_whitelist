@@ -327,9 +327,15 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "analytics",
       "version": "production-9\\.\\+|develop-9\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "analytics",
+      "version": "production-12\\.\\+|develop-12\\.\\+"
     },
     {
       "expires": "2022-08-30",
@@ -935,9 +941,15 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2022-08-05",
       "group": "com\\.mercadolibre\\.android\\.static_resources",
       "name": "static_resources",
       "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.static_resources",
+      "name": "static_resources",
+      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.digital_accounts_components",
@@ -1037,7 +1049,7 @@
     {
       "group": "com\\.polidea\\.rxandroidble2",
       "name": "rxandroidble",
-      "version": "1\\.11\\.1"
+      "version": "1\\.12\\.0"
     },
     {
       "group": "com\\.squareup",
@@ -2071,17 +2083,17 @@
     {
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "seller",
-      "version": "5\\.\\+"
+      "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "payer",
-      "version": "5\\.\\+"
+      "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "commons",
-      "version": "5\\.\\+"
+      "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
