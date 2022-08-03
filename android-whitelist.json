@@ -930,9 +930,15 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2022-08-05",
       "group": "com\\.mercadolibre\\.android\\.static_resources",
       "name": "static_resources",
       "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.static_resources",
+      "name": "static_resources",
+      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.digital_accounts_components",
@@ -2066,17 +2072,17 @@
     {
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "seller",
-      "version": "5\\.\\+"
+      "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "payer",
-      "version": "5\\.\\+"
+      "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "commons",
-      "version": "5\\.\\+"
+      "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
