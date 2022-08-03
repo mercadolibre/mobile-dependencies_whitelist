@@ -204,6 +204,11 @@
     },
     {
       "group": "com\\.google\\.android\\.gms",
+      "name": "play-services-ads",
+      "version": "17\\.1\\.0"
+    },
+    {
+      "group": "com\\.google\\.android\\.gms",
       "name": "play-services-ads-identifier",
       "version": "17\\.1\\.0"
     },
@@ -1095,7 +1100,7 @@
       "expires": "2023-04-19",
       "group": "de\\.greenrobot",
       "name": "eventbus",
-      "version": "2\\.4\\.0"
+      "version": "2\\.4\\.0|3\\.1\\.1"
     },
     {
       "group": "com\\.otaliastudios",
