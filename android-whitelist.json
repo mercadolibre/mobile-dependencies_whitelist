@@ -6,8 +6,8 @@
       "version": "1\\.+"
     },
     {
-      "group": "com\\.mercadolibre\\.android\\.advertising_adn_lib",
-      "name": "component",
+      "group": "com\\.mercadolibre\\.android\\.advertising",
+      "name": "adn",
       "version": "1\\.+"
     },
     {
@@ -208,18 +208,6 @@
       "version": "17\\.1\\.0"
     },
     {
-      "expires": "2022-07-22",
-      "group": "com\\.google\\.android\\.play",
-      "name": "core",
-      "version": "1\\.10\\.3"
-    },
-    {
-      "expires": "2022-07-22",
-      "group": "com\\.google\\.android\\.play",
-      "name": "core-ktx",
-      "version": "1\\.8\\.1"
-    },
-    {
       "group": "com\\.google\\.android\\.libraries\\.places",
       "name": "places",
       "version": "2\\.4\\.0"
@@ -227,7 +215,7 @@
     {
       "group": "com\\.mercadolibre\\.android\\.dynamic_features",
       "name": "core",
-      "version": "6\\.\\+"
+      "version": "7\\.\\+"
     },
     {
       "group": "com\\.google\\.android\\.play",
@@ -544,17 +532,17 @@
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "apprater",
-      "version": "11\\.\\+"
+      "version": "14\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "apprater-ml",
-      "version": "11\\.\\+"
+      "version": "14\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "apprater-mp",
-      "version": "11\\.\\+"
+      "version": "14\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.biometrics",
@@ -648,9 +636,15 @@
       "version": "4\\.\\+"
     },
     {
+      "expires": "2022-08-15",
       "group": "com\\.mercadolibre\\.android\\.flox",
       "name": "engine",
       "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.flox",
+      "name": "engine",
+      "version": "7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.fluxclient",
@@ -696,12 +690,6 @@
       "group": "com\\.mercadolibre\\.android\\.local\\.storage",
       "name": "kvs-defaults",
       "version": "5\\.\\+"
-    },
-    {
-      "expires": "2022-07-15",
-      "group": "com\\.mercadolibre\\.android\\.maps",
-      "name": "core",
-      "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.maps",
@@ -937,9 +925,20 @@
       "version": "6\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.dami_ui_components",
+      "name": "ui_components",
+      "version": "1\\.\\+"
+    },
+    {
+      "expires": "2022-08-05",
       "group": "com\\.mercadolibre\\.android\\.static_resources",
       "name": "static_resources",
       "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.static_resources",
+      "name": "static_resources",
+      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.digital_accounts_components",
@@ -1039,7 +1038,7 @@
     {
       "group": "com\\.polidea\\.rxandroidble2",
       "name": "rxandroidble",
-      "version": "1\\.11\\.1"
+      "version": "1\\.12\\.0"
     },
     {
       "group": "com\\.squareup",
@@ -1310,12 +1309,12 @@
     {
       "group": "com\\.mercadolibre\\.android\\.inappupdates",
       "name": "in-app-updates",
-      "version": "5\\.\\+"
+      "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.mlinappupdates",
       "name": "ml-in-app-updates",
-      "version": "2\\.\\+"
+      "version": "5\\.\\+"
     },
     {
       "expires": "2022-12-10",
@@ -2013,14 +2012,27 @@
       "version": "3\\.+"
     },
     {
+      "expires": "2022-09-01",
       "group": "com\\.mercadolibre\\.android\\.braze",
       "name": "core",
       "version": "1\\.0\\.0"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.braze",
+      "name": "core",
+      "version": "3.\\+"
+    },
+    {
+      "description": "SDK version updated with fixes required for our apps.",
+      "expires": "2022-09-01",
       "group": "com\\.appboy",
       "name": "android-sdk-ui",
       "version": "15\\.0\\.0"
+    },
+    {
+      "group": "com\\.appboy",
+      "name": "android-sdk-ui",
+      "version": "18\\.0\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.px\\.tokenization",
@@ -2048,6 +2060,11 @@
       "version": "2\\.+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.ccap",
+      "name": "congrats-sdk",
+      "version": "0\\.+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.data_privacy_helper",
       "name": "libdataprivacy",
       "version": "2\\.\\+"
@@ -2055,17 +2072,17 @@
     {
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "seller",
-      "version": "5\\.\\+"
+      "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "payer",
-      "version": "5\\.\\+"
+      "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "commons",
-      "version": "5\\.\\+"
+      "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
@@ -2078,19 +2095,19 @@
       "version": "1\\.+"
     },
     {
-      "expires": "2022-07-31",
+      "expires": "2022-08-31",
       "group": "io\\.reactivex",
       "name": "rxjava",
       "version": "1\\.3\\.6"
     },
     {
-      "expires": "2022-07-31",
+      "expires": "2022-08-31",
       "group": "io\\.reactivex",
       "name": "rxandroid",
       "version": "1\\.2\\.1"
     },
     {
-      "expires": "2022-07-31",
+      "expires": "2022-08-31",
       "group": "com\\.polidea\\.rxandroidble",
       "name": "rxandroidble",
       "version": "1\\.5\\.0"
