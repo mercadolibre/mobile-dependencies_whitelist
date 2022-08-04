@@ -1,3 +1,6 @@
+# 13.1.1
+- Se modifica el nombre que imprimen los modulos al ser desactivados, se cambio el nombre de su clase por el nombre de su extension 
+
 # 13.1.0
 - Se genera el Plugin de Dynamic Feature para configurar los modulos de este estilo
 - Se genera el DynamicFeatureAndroidConfigurer que configurara los modulos para que sean capaces de compilar

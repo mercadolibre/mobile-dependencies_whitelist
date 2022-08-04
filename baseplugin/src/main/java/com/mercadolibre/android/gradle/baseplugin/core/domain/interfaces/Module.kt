@@ -18,7 +18,7 @@ abstract class Module : ExtensionProvider, ExtensionGetter() {
      * This method is responsible for create the extensions needed for a module.
      */
     override fun createExtension(project: Project) {
-        createOnOffExtension(project)
+        project.extensions.create(getLowerCaseName(), ModuleOnOffExtension::class.java)
     }
 
     /**
@@ -26,26 +26,31 @@ abstract class Module : ExtensionProvider, ExtensionGetter() {
      */
     fun moduleConfiguration(project: Project) {
         project.afterEvaluate {
-            val extension = findOnOffExtension(project, this@Module.getExtensionName())
-            if (extension != null) {
-                if (extension.enabled) {
-                    configure(project)
-                } else {
-                    println("$WARNIGN_MESSAGE The ${this@Module::class.java.simpleName} is manually disabled in ${project.name} module.")
-                }
-            } else {
+            executeModule(project)
+        }
+    }
+
+    /**
+     * This method is responsible for execute the configuration of the module.
+     */
+    fun executeModule(project: Project) {
+        val extension = findOnOffExtension(project, this@Module.getExtensionName())
+        if (extension != null) {
+            if (extension.enabled) {
                 configure(project)
+            } else {
+                println("$WARNIGN_MESSAGE The ${this@Module.getExtensionName()} is manually disabled in ${project.name} module.")
             }
+        } else {
+            configure(project)
         }
     }
 
     override fun getExtensionName(): String = getLowerCaseName()
 
-    private fun getLowerCaseName(): String =
-        this::class.java.simpleName[0].toLowerCase() + this::class.java.simpleName.substring(1, this::class.java.simpleName.length)
-
-    private fun createOnOffExtension(project: Project) {
-        project.extensions.create(getLowerCaseName(), ModuleOnOffExtension::class.java)
+    private fun getLowerCaseName(): String {
+        val className = this::class.java.simpleName
+        return className[0].toLowerCase() + className.substring(1, className.length)
     }
 
     private fun findOnOffExtension(project: Project, name: String): ModuleOnOffExtension? =
