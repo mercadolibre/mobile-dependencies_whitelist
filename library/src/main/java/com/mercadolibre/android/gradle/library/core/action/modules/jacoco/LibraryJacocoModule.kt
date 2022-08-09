@@ -6,7 +6,6 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.JACOCO_FULL_RE
 import org.gradle.api.Project
 import org.gradle.api.Task
 import org.gradle.api.tasks.TaskProvider
-import org.gradle.testing.jacoco.plugins.JacocoTaskExtension
 
 /**
  * This module is in charge of configuring the Jacoco tasks for their correct operation.
@@ -17,10 +16,6 @@ class LibraryJacocoModule : AndroidJacocoModule() {
      */
     override fun configure(project: Project) {
         super.configure(project)
-
-        findExtension<JacocoTaskExtension>(project)?.apply {
-            isIncludeNoLocationClasses = true
-        }
 
         val jacocoTestReportTask = findOrCreateJacocoTestReportTask(project)
 

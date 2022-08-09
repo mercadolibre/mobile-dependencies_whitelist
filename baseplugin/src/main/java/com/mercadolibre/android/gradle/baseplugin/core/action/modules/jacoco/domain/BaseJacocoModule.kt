@@ -16,6 +16,9 @@ import org.gradle.api.tasks.testing.Test
 import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 import org.gradle.api.tasks.testing.logging.TestLogEvent
 import org.gradle.kotlin.dsl.apply
+import org.gradle.kotlin.dsl.configure
+import org.gradle.kotlin.dsl.withType
+import org.gradle.testing.jacoco.plugins.JacocoTaskExtension
 
 /**
  * Base Jacoco Module is in charge of adding the Jacoco Plugin and generating the basic tasks for its operation.
@@ -28,7 +31,10 @@ open class BaseJacocoModule : Module(), ExtensionProvider {
     override fun configure(project: Project) {
         project.apply(plugin = JACOCO_PLUGIN)
 
-        project.tasks.withType(Test::class.java).configureEach {
+        project.tasks.withType<Test> {
+            configure<JacocoTaskExtension> {
+                isIncludeNoLocationClasses = true
+            }
             testLogging {
                 events = setOf(TestLogEvent.FAILED)
                 exceptionFormat = TestExceptionFormat.FULL
@@ -36,7 +42,7 @@ open class BaseJacocoModule : Module(), ExtensionProvider {
         }
 
         project.tasks.register(JACOCO_FULL_REPORT_TASK).configure {
-            this.group = JACOCO_GROUP
+            group = JACOCO_GROUP
         }
 
         afterEvaluate {

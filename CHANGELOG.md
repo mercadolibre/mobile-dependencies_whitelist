@@ -1,3 +1,6 @@
+# 13.1.2
+- Se agrega las configuraciones necesarias para que Jacoco encuentre todas las clases a testear
+
 # 13.1.1
 - Se modifica el nombre que imprimen los modulos al ser desactivados, se cambio el nombre de su clase por el nombre de su extension 
 
