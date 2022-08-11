@@ -303,9 +303,15 @@
       "version": "3\\.\\+"
     },
     {
+      "expires": "2022-08-31",
       "group": "com\\.mercadolibre\\.android",
       "name": "configuration-manager",
-      "version": "4\\.\\+"
+      "version": "4\\.\\+|5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "configuration-manager",
+      "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.ignite",
