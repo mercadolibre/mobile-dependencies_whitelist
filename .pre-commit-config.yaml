@@ -1,5 +1,5 @@
 repos:
-  - repo: https://github.com/mercadolibre/fury_websec-git-hooks
+  - repo: git@github.com:mercadolibre/fury_websec-git-hooks.git
     rev: v1.0.1
     hooks:
       - id: pre_commit_hook
