@@ -1,11 +1,14 @@
 require 'json'
 require 'date'
 require 'net/http'
+require_relative 'util/slack_notification'
 
-# We have a task that execute every week and check all libs that have expired dates and remove all that have past
-module Clean_whitelists
-    ANDROID_WHITELIST_PATH_FILE = "./android-whitelist.json"
-    IOS_WHITELIST_PATH_FILE = "./ios-whitelist.json"
+# Script that checks and remove all libs that has expired dates and Makes a PR with the modifications
+module Clean_allowlists
+    ANDROID_ALLOWLIST_PATH_FILE = "./android-whitelist.json"
+    IOS_ALLOWLIST_PATH_FILE = "./ios-whitelist.json"
+    SLACK_WEBHOOK_FAIL_URL = ENV['SLACK_NOTIFICATION_FAIL_WEBHOOK']
+    CIRCLE_BUILD_URL = ENV['CIRCLE_BUILD_URL']
 
     def self.get_json_from_file(pathFile)
         file = File.read pathFile
@@ -33,24 +36,9 @@ module Clean_whitelists
         Date.parse(expireDate) < Date.today
     end
 
-    # We delete the libs that are expired from the lists and makes an PR updating the repo
-    def self.main()
-        dataHashAndroid = get_json_from_file(ANDROID_WHITELIST_PATH_FILE)
-        dataHashIos = get_json_from_file(IOS_WHITELIST_PATH_FILE)
-
-        cleanHash = removeExpired(dataHashAndroid)
-        save_json_to_file(cleanHash, ANDROID_WHITELIST_PATH_FILE)
-        cleanHash = removeExpired(dataHashIos)
-        save_json_to_file(cleanHash, IOS_WHITELIST_PATH_FILE)
-
-        res = `git diff --stat`
-        puts res
-
-        # if we have changes in the repo we create the PR
-        if res && res.size > 0
-            create_pr()
-        end
-
+    def self.notify_error()
+        send_slack_notification("CleanAllowList@Weekly: Ups, something happened and I couldn't make the weekly PR: " +
+                            " please check this link:" +CIRCLE_BUILD_URL+ " for more details", SLACK_WEBHOOK_FAIL_URL)
     end
 
     def self.create_pr()
@@ -85,5 +73,37 @@ module Clean_whitelists
         }.to_json
         response = http.request(request)
         puts response
+        return response
+    end
+
+    # We delete the libs that are expired from the lists and makes an PR updating the repo
+    def self.main()
+        begin
+            puts "Starting clean AllowList"
+            dataHashAndroid = get_json_from_file(ANDROID_ALLOWLIST_PATH_FILE)
+            dataHashIos = get_json_from_file(IOS_ALLOWLIST_PATH_FILE)
+
+            cleanHash = removeExpired(dataHashAndroid)
+            save_json_to_file(cleanHash, ANDROID_ALLOWLIST_PATH_FILE)
+            cleanHash = removeExpired(dataHashIos)
+            save_json_to_file(cleanHash, IOS_ALLOWLIST_PATH_FILE)
+
+            res = `git diff --stat`
+            puts res
+
+            # if we have changes in the repo we create the PR
+            if res && res.size > 0
+                response = create_pr()
+
+                if !(response.kind_of? Net::HTTPCreated)
+                    puts "post to github failed"
+                    notify_error()
+                    exit(1) # we return fail.
+                end
+            end
+        rescue
+            notify_error()
+            exit(1) # we return fail.
+        end
     end
 end

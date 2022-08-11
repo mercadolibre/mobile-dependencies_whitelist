@@ -2,11 +2,16 @@ require 'json'
 require 'date'
 require 'net/http'
 require 'uri'
+require_relative 'util/slack_notification'
 
+# Script that makes a list of libs that are close to be expired and sends a slack notification telling it
+# Libs that expire in the current week
+# Libs that expire in the next 30 days
 module Notification
-    ANDROID_WHITELIST_PATH_FILE = "./android-whitelist.json"
-    IOS_WHITELIST_PATH_FILE = "./ios-whitelist.json"
-    SLACK_WEBHOOK_URL = ENV['SLACK_NOTIFICATION_LIB_WEBHOOK']
+    ANDROID_ALLOWLIST_PATH_FILE = "./android-whitelist.json"
+    IOS_ALLOWLIST_PATH_FILE = "./ios-whitelist.json"
+    SLACK_WEBHOOK_URL_ANDROID = ENV['SLACK_NOTIFICATION_LIB_WEBHOOK']
+    SLACK_WEBHOOK_URL_IOS = ENV['SLACK_NOTIFICATION_LIB_WEBHOOK_IOS']
     A_WEEK = 6
     A_MONTH = 30
     PLATFORM = "platform"
@@ -55,31 +60,6 @@ module Notification
         return libs
     end
 
-    def self.send_notification(message)
-        if message == ""
-            puts "Empty message"
-            return
-        end
-        if SLACK_WEBHOOK_URL == ""
-            puts "Couldn't find the slack webhook ENV!! Not sending the notif."
-            return
-        end
-
-        puts "Enviando notif"
-
-        uri = URI.parse(SLACK_WEBHOOK_URL)
-        header = {'Content-Type': 'application/json'}
-        # Create the HTTP objects
-        http = Net::HTTP.new(uri.host, uri.port)
-        http.use_ssl = true
-        request = Net::HTTP::Post.new(uri.request_uri, header)
-        request.body = {
-            message: message,
-        }.to_json
-        response = http.request(request)
-        puts response
-    end
-
     def self.get_message(libs_weekly, libs_monthly)
         libs_weekly = sort_by_date(libs_weekly)
         libs_monthly = sort_by_date(libs_monthly)
@@ -118,19 +98,20 @@ module Notification
         return message
     end
 
-    def self.main()
-        dataHashAndroid = get_json_from_file(ANDROID_WHITELIST_PATH_FILE)
-        dataHashIos = get_json_from_file(IOS_WHITELIST_PATH_FILE)
+    def self.notify_platform(platform, pathFile, webhook)
+        dataHash = get_json_from_file(pathFile)
 
-        libsWeekly = get_libs_expiring(dataHashAndroid, A_WEEK, false, ANDROID)
-        libsMonthly = get_libs_expiring(dataHashAndroid, A_MONTH, true, ANDROID)
-
-        libsWeekly.concat(get_libs_expiring(dataHashIos, A_WEEK, false, IOS))
-        libsMonthly.concat(get_libs_expiring(dataHashIos, A_MONTH, true, IOS))
+        libsWeekly = get_libs_expiring(dataHash, A_WEEK, false, platform)
+        libsMonthly = get_libs_expiring(dataHash, A_MONTH, true, platform)
 
         message = get_message(libsWeekly, libsMonthly)
         puts message
 
-        send_notification(message)
+        send_slack_notification(message, webhook)
+    end
+
+    def self.main()
+        notify_platform(ANDROID, ANDROID_ALLOWLIST_PATH_FILE, SLACK_WEBHOOK_URL_ANDROID)
+        notify_platform(IOS, IOS_ALLOWLIST_PATH_FILE, SLACK_WEBHOOK_URL_IOS)
     end
 end
