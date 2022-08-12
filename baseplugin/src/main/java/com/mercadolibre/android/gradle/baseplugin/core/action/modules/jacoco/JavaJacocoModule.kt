@@ -15,6 +15,11 @@ import org.gradle.testing.jacoco.tasks.JacocoReport
 class JavaJacocoModule : BaseJacocoModule() {
 
     /**
+     * This method configures the execution time of the module.
+     */
+    override fun executeInAfterEvaluate(): Boolean = false
+
+    /**
      * This method takes care of before evaluating configuring the jacoco for a java module.
      */
     override fun configure(project: Project) {

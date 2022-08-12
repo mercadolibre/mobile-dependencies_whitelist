@@ -1,3 +1,7 @@
+# 13.1.3
+- Se agrega la configuracion para agregar el versionName Automaticamente
+- Se modifica el tiempo de ejecucion de los modulos jacoco para que puedan leer los productFlavor
+
 # 13.1.2
 - Se agrega las configuraciones necesarias para que Jacoco encuentre todas las clases a testear
 

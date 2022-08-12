@@ -18,8 +18,18 @@ class ModuleTest : AbstractPluginManager() {
     private val project = mockRootProject(listOf())
 
     @org.junit.Test
+    fun `When any Module is instatiate, execute her configurate before evaluate`() {
+        val action = mockk<Task>(relaxed = true)
+        val module = ModuleBeforeEvaluateExample(action)
+        val mockeRoot = mockk<Project>(relaxed = true)
+
+        module.moduleConfiguration(mockeRoot)
+
+        verify { action.group = ANY_NAME }
+    }
+    @org.junit.Test
     fun `When any Module is instatiate, create her extension`() {
-        val action = mockk<Task>()
+        val action = mockk<Task>(relaxed = true)
         val module = ModuleExample(action)
         val mockeProjectRoot = project.projectContent.project
         val mockeRoot = mockk<Project>(relaxed = true)
@@ -77,6 +87,21 @@ class ModuleTest : AbstractPluginManager() {
         module.executeModule(mockedProjectRoot)
 
         verify { action.group = ANY_NAME }
+    }
+
+    class ModuleBeforeEvaluateExample(private val action: Task) : Module() {
+
+        override fun executeInAfterEvaluate(): Boolean = false
+
+        override fun createExtension(project: Project) {
+            project.extensions.create(ANY_NAME, ModuleOnOffExtension::class.java)
+        }
+
+        override fun getExtensionName(): String = ANY_NAME
+
+        override fun configure(project: Project) {
+            action.group = ANY_NAME
+        }
     }
 
     class ModuleExample(private val action: Task) : Module() {

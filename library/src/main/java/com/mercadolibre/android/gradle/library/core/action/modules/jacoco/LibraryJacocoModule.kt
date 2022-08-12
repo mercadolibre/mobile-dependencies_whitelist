@@ -11,6 +11,12 @@ import org.gradle.api.tasks.TaskProvider
  * This module is in charge of configuring the Jacoco tasks for their correct operation.
  */
 class LibraryJacocoModule : AndroidJacocoModule() {
+
+    /**
+     * This method configures the execution time of the module.
+     */
+    override fun executeInAfterEvaluate(): Boolean = false
+
     /**
      * This method configures the Jacoco Task extension and configures all the tasks that jacoco depends on to check coverage.
      */

@@ -9,6 +9,12 @@ import org.gradle.api.Project
  * This interface is responsible for standardizing the modules so that they configure the project correctly.
  */
 abstract class Module : ExtensionProvider, ExtensionGetter() {
+
+    /**
+     * This method configures the execution time of the module.
+     */
+    open fun executeInAfterEvaluate(): Boolean = true
+
     /**
      * This method is responsible for requesting all the modules that can configure a project.
      */
@@ -25,8 +31,10 @@ abstract class Module : ExtensionProvider, ExtensionGetter() {
      * This method is responsible for check the flag of On Off module.
      */
     fun moduleConfiguration(project: Project) {
-        project.afterEvaluate {
+        if (executeInAfterEvaluate()) {
             executeModule(project)
+        } else {
+            configure(project)
         }
     }
 

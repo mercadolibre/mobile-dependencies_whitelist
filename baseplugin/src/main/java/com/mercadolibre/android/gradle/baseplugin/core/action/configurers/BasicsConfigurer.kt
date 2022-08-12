@@ -6,6 +6,7 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.HOURS_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.RESOLUTION_STRATEGY_HOURS
 import com.mercadolibre.android.gradle.baseplugin.core.domain.interfaces.Configurer
 import org.gradle.api.Project
+import org.gradle.kotlin.dsl.extra
 
 /**
  * The Basics Configurer is in charge of providing the configurations so that the repository is capable of bringing dependencies
@@ -29,6 +30,12 @@ open class BasicsConfigurer : Configurer {
             repositoryProvider.setupFetchingRepositories(subProject)
         }
         setMaxTimeForCachedDynamicVersions(project)
+
+        project.allprojects {
+            afterEvaluate {
+                extra.set("versionName", this.version)
+            }
+        }
     }
 
     private fun setMaxTimeForCachedDynamicVersions(project: Project) {

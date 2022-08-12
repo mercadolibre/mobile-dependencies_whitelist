@@ -254,7 +254,9 @@ val JACOCO_ANDROID_EXCLUDE = listOf(
     "**/*_Provide*Factory*.*",
     "**/*_Factory*.*",
     "**/*$*$*.*",
-    "jdk.internal.*"
+    "jdk.internal.*",
+    "**/jdk.internal.*",
+    "**/*jdk.internal.*"
 )
 
 /**

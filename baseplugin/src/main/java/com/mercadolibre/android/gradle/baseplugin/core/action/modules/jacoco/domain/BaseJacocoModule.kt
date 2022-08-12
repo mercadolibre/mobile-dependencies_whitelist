@@ -9,7 +9,6 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.JACOCO_PLUGIN
 import com.mercadolibre.android.gradle.baseplugin.core.components.JACOCO_TEST_REPORT_TASK
 import com.mercadolibre.android.gradle.baseplugin.core.components.JACOCO_VERIFICATION_GROUP
 import com.mercadolibre.android.gradle.baseplugin.core.components.TEST_TASK
-import com.mercadolibre.android.gradle.baseplugin.core.domain.interfaces.ExtensionProvider
 import com.mercadolibre.android.gradle.baseplugin.core.domain.interfaces.Module
 import org.gradle.api.Project
 import org.gradle.api.tasks.testing.Test
@@ -23,7 +22,7 @@ import org.gradle.testing.jacoco.plugins.JacocoTaskExtension
 /**
  * Base Jacoco Module is in charge of adding the Jacoco Plugin and generating the basic tasks for its operation.
  */
-open class BaseJacocoModule : Module(), ExtensionProvider {
+open class BaseJacocoModule : Module() {
 
     /**
      * This method is responsible for applying the Jacoco plugin and configuring its main tasks.

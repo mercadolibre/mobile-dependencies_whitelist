@@ -16,6 +16,7 @@ import com.mercadolibre.android.gradle.library.core.action.modules.jacoco.Librar
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.mockkObject
+import io.mockk.verify
 import org.gradle.api.Project
 import org.gradle.api.tasks.testing.Test
 import org.gradle.testing.jacoco.tasks.JacocoReport
@@ -36,11 +37,22 @@ class JacocoTest : AbstractPluginManager() {
         root = moduleManager.createSampleRoot(ROOT_PROJECT, tmpFolder)
         projects[LIBRARY_PROJECT] = moduleManager.createSampleSubProject(LIBRARY_PROJECT, tmpFolder, root)
 
+        jacocoModule.executeInAfterEvaluate()
+
         JacocoConfigurationExtension().excludeList = listOf()
 
         jacocoModule.createNeededTasks(projects[LIBRARY_PROJECT]!!)
 
         projects[LIBRARY_PROJECT]!!.tasks.create("testAnyNameUnitTest", Test::class.java)
+    }
+
+    @org.junit.Test
+    fun `When the JavaJacocoModule is called before evaluate execute her configuration`() {
+        val project = mockk<Project>(relaxed = true)
+
+        jacocoModule.moduleConfiguration(project)
+
+        verify { project.tasks.register(JACOCO_FULL_REPORT_TASK) }
     }
 
     @org.junit.Test
