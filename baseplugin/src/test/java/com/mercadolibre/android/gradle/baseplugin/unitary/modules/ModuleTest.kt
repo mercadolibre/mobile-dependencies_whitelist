@@ -36,6 +36,8 @@ class ModuleTest : AbstractPluginManager() {
 
         module.moduleConfiguration(mockeRoot)
 
+        ModuleOnOffExtension().enabled
+
         every { project.projectContent.extension.create(ANY_NAME, ModuleOnOffExtension::class.java) } returns mockk(relaxed = true)
 
         module.createExtension(mockeProjectRoot)

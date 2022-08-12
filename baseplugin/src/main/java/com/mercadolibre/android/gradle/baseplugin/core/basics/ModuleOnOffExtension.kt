@@ -8,5 +8,5 @@ open class ModuleOnOffExtension {
     /**
      * This variable constains the flag to put on or off any module.
      */
-    var enabled = true
+    open var enabled = true
 }

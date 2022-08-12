@@ -2,6 +2,7 @@ package com.mercadolibre.android.gradle.app.module
 
 import com.mercadolibre.android.gradle.app.core.action.modules.bugsnag.BugsnagModule
 import com.mercadolibre.android.gradle.app.core.action.modules.jacoco.AppJacocoModule
+import com.mercadolibre.android.gradle.app.core.action.modules.keystore.KeyStoreModule
 import com.mercadolibre.android.gradle.app.core.action.modules.lint.AppLintModule
 import com.mercadolibre.android.gradle.app.core.action.modules.lint.ApplicationLintOptionsModule
 import com.mercadolibre.android.gradle.app.core.action.modules.pluginDescription.AppPluginDescriptionExtensionsModule
@@ -20,7 +21,8 @@ internal object ModuleProvider {
             ApplicationLintOptionsModule(),
             AppPluginDescriptionModule(),
             BugsnagModule(),
-            AppPluginDescriptionExtensionsModule()
+            AppPluginDescriptionExtensionsModule(),
+            KeyStoreModule()
         )
 
     /**

@@ -19,6 +19,7 @@ import org.gradle.api.Project
 import org.gradle.api.Task
 import org.gradle.api.artifacts.Configuration
 import org.gradle.api.plugins.ExtensionContainer
+import org.gradle.api.tasks.SourceSet
 import org.gradle.api.tasks.TaskContainer
 import org.gradle.api.tasks.TaskProvider
 import org.gradle.internal.impldep.org.junit.rules.TemporaryFolder
@@ -137,7 +138,13 @@ abstract class AbstractPluginManager : ExtensionGetter() {
 
     fun mockVariant(): BaseVariant = mockk<BaseVariant>().apply { configVariant(this) }
 
+    fun mockSourceSet(): SourceSet = mockk<SourceSet>().apply { configSourceSet(this) }
+
     fun mockAppVariant(): ApplicationVariant = mockk<ApplicationVariant>().apply { configVariant(this) }
+
+    private fun configSourceSet(sourceSet: SourceSet) {
+        every { sourceSet.name } returns "AnyProductFlavoranyName"
+    }
 
     private fun configVariant(variant: BaseVariant) {
         val configuration = mockk<Configuration>()

@@ -1,5 +1,10 @@
+# 13.2.0
+- Se modifica la extesnsion del KeyStore Module
+- Se modifica la interface Module para que se pueda modificar su funcionamiento
+- Se agrega el AppBasicsConfigurer que fuerza dependencias para que no se genere output
+
 # 13.1.3
-- Se agrega la configuracion para agregar el versionName Automaticamente
+- Se agrega la configuracion para agregar el versionName Automaticamente a los proyectos
 - Se modifica el tiempo de ejecucion de los modulos jacoco para que puedan leer los productFlavor
 
 # 13.1.2

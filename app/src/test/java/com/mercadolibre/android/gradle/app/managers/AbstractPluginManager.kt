@@ -127,6 +127,7 @@ abstract class AbstractPluginManager : ExtensionGetter() {
         every { project.version } returns VERSION_1
         every { tasks.names } returns mockk(relaxed = true)
         every { project.extensions } returns extensions
+        every { project.configurations } returns mockk(relaxed = true)
 
         val sampleTaskProvider = mockk<TaskProvider<Task>>()
 
