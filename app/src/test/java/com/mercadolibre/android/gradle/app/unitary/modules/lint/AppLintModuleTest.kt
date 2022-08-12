@@ -11,18 +11,18 @@ import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basic
 import com.mercadolibre.android.gradle.baseplugin.core.components.APP_PLUGINS
 import io.mockk.every
 import io.mockk.mockk
+import org.gradle.api.Project
+import org.gradle.language.base.plugins.LifecycleBasePlugin
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
 import java.io.File
-import org.gradle.api.Project
-import org.gradle.language.base.plugins.LifecycleBasePlugin
 
 @RunWith(JUnit4::class)
 class AppLintModuleTest : AbstractPluginManager() {
 
     private val lintModule = AppLintModule()
 
-        @org.junit.Before
+    @org.junit.Before
     fun setUp() {
         initTmpFolder()
 
@@ -48,7 +48,6 @@ class AppLintModuleTest : AbstractPluginManager() {
 
     @org.junit.Test
     fun `When the AppLintModule is created work`() {
-        lintModule.getVariants(projects[APP_PROJECT]!!)
-        assert(lintModule.getLinter()::class == ReleaseDependenciesLint::class)
+        assert(lintModule.getLinter(mockk(relaxed = true))::class == ReleaseDependenciesLint::class)
     }
 }

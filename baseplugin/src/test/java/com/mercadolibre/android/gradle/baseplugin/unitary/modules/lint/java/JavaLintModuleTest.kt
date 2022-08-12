@@ -1,25 +1,26 @@
-package com.mercadolibre.android.gradle.library.unitary.modules.lint
+package com.mercadolibre.android.gradle.baseplugin.unitary.modules.lint.java
 
 import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.PluginConfigurer
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.LintGradleExtension
-import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.library.LibraryAllowListDependenciesLint
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.library.JavaLintModule
 import com.mercadolibre.android.gradle.baseplugin.core.components.LIBRARY_PLUGINS
-import com.mercadolibre.android.gradle.library.core.action.modules.lint.LibraryLintModule
-import com.mercadolibre.android.gradle.library.managers.AbstractPluginManager
-import com.mercadolibre.android.gradle.library.managers.LIBRARY_PROJECT
-import com.mercadolibre.android.gradle.library.managers.ROOT_PROJECT
-import com.mercadolibre.android.gradle.library.utils.domain.ModuleType
+import com.mercadolibre.android.gradle.baseplugin.integration.utils.domain.ModuleType
+import com.mercadolibre.android.gradle.baseplugin.managers.AbstractPluginManager
+import com.mercadolibre.android.gradle.baseplugin.managers.LIBRARY_PROJECT
+import com.mercadolibre.android.gradle.baseplugin.managers.ROOT_PROJECT
 import io.mockk.every
 import io.mockk.mockk
+import io.mockk.verify
 import org.gradle.api.Project
+import org.gradle.api.tasks.SourceSetContainer
 import org.gradle.language.base.plugins.LifecycleBasePlugin
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
 
 @RunWith(JUnit4::class)
-class LibraryLintModuleTest : AbstractPluginManager() {
+class JavaLintModuleTest : AbstractPluginManager() {
 
-    private val lintModule = LibraryLintModule()
+    private val lintModule = JavaLintModule()
 
     @org.junit.Before
     fun setUp() {
@@ -40,12 +41,11 @@ class LibraryLintModuleTest : AbstractPluginManager() {
     fun `When the LibraryLintModule is called setup`() {
         val project = mockk<Project>(relaxed = true) {
             every { tasks.names.contains(LifecycleBasePlugin.CHECK_TASK_NAME) } returns false
+            every { extensions.findByType(SourceSetContainer::class.java) } returns mockk(relaxed = true)
         }
+        lintModule.getLinter(project)
         lintModule.setUpLint(project)
-    }
 
-    @org.junit.Test
-    fun `When the LibraryLintModule is created work`() {
-        assert(lintModule.getLinter(projects[LIBRARY_PROJECT]!!)::class == LibraryAllowListDependenciesLint::class)
+        verify { project.extensions.findByType(SourceSetContainer::class.java) }
     }
 }

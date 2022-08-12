@@ -1,6 +1,5 @@
 package com.mercadolibre.android.gradle.app.core.action.modules.lint
 
-import com.android.build.gradle.api.BaseVariant
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.Lint
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.LintGradleExtension
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_RELEASE_DEPENDENCIES_TASK
@@ -27,7 +26,7 @@ class ReleaseDependenciesLint : Lint() {
      * This method is responsible for verifying that the dependencies of all the variants are valid or
      * if they are about to expire, perform the warnign.
      */
-    override fun lint(project: Project, variants: List<BaseVariant>): Boolean {
+    override fun lint(project: Project): Boolean {
         findExtension<LintGradleExtension>(project)?.apply {
             if (!releaseDependenciesLintEnabled) {
                 return false

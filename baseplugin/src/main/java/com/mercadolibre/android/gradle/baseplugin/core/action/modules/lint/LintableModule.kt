@@ -1,6 +1,5 @@
 package com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint
 
-import com.android.build.gradle.api.BaseVariant
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.Lint
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.LintGradleExtension
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINTABLE_DESCRIPTION
@@ -30,14 +29,9 @@ abstract class LintableModule : Module() {
     override fun getExtensionName(): String = LINTABLE_EXTENSION
 
     /**
-     * This method is responsible for collecting the variants of the module.
-     */
-    abstract fun getVariants(project: Project): List<BaseVariant>
-
-    /**
      * This method is in charge of providing the object that the Lint will do.
      */
-    abstract fun getLinter(): Lint
+    abstract fun getLinter(project: Project): Lint
 
     /**
      * This is the method in charge of executing the lint within a project.
@@ -69,7 +63,7 @@ abstract class LintableModule : Module() {
      * This is the method in charge of verifying that all the dependencies are correct.
      */
     open fun configureVariants(project: Project) {
-        val lintErrored = getLinter().lint(project, getVariants(project))
+        val lintErrored = getLinter(project).lint(project)
         if (lintErrored) {
             throw GradleException(LINT_TASK_FAIL_MESSAGE)
         }

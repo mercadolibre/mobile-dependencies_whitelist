@@ -1,13 +1,13 @@
 package com.mercadolibre.android.gradle.baseplugin.unitary.modules.lint
 
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.LintGradleExtension
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.library.JavaLintModule
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINTABLE_EXTENSION
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINTABLE_TASK
 import com.mercadolibre.android.gradle.baseplugin.integration.utils.domain.ModuleType
 import com.mercadolibre.android.gradle.baseplugin.managers.AbstractPluginManager
 import com.mercadolibre.android.gradle.baseplugin.managers.LIBRARY_PROJECT
 import com.mercadolibre.android.gradle.baseplugin.managers.ROOT_PROJECT
-import com.mercadolibre.android.gradle.library.core.action.modules.lint.LibraryLintModule
 import org.gradle.language.base.plugins.LifecycleBasePlugin
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
@@ -15,7 +15,7 @@ import org.junit.runners.JUnit4
 @RunWith(JUnit4::class)
 class LintableModuleTest : AbstractPluginManager() {
 
-    private val lintableModule = LibraryLintModule()
+    private val lintableModule = JavaLintModule()
 
     @org.junit.Before
     fun setUp() {
@@ -24,7 +24,6 @@ class LintableModuleTest : AbstractPluginManager() {
         root = moduleManager.createSampleRoot(ROOT_PROJECT, tmpFolder)
         projects[LIBRARY_PROJECT] = moduleManager.createSampleSubProject(LIBRARY_PROJECT, tmpFolder, root)
 
-        lintableModule.getVariants(projects[LIBRARY_PROJECT]!!)
         lintableModule.configureVariants(projects[LIBRARY_PROJECT]!!)
         lintableModule.configure(projects[LIBRARY_PROJECT]!!)
 

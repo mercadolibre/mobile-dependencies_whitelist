@@ -1,8 +1,12 @@
-package com.mercadolibre.android.gradle.library.unitary.modules.lint
+package com.mercadolibre.android.gradle.baseplugin.unitary.modules.lint.java
 
 import com.google.gson.JsonObject
 import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.PluginConfigurer
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.LintGradleExtension
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.Dependency
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.Status
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.StatusBase
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.library.LibraryAllowListDependenciesLint
 import com.mercadolibre.android.gradle.baseplugin.core.components.ALLOW_LIST_URL
 import com.mercadolibre.android.gradle.baseplugin.core.components.API_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.EXPIRES_CONSTANT
@@ -16,21 +20,17 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_REPORT_ER
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_WARNING_FILENAME
 import com.mercadolibre.android.gradle.baseplugin.core.components.NAME_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.VERSION_CONSTANT
-import com.mercadolibre.android.gradle.library.core.action.modules.lint.LibraryAllowListDependenciesLint
-import com.mercadolibre.android.gradle.library.core.action.modules.lint.dependencies.Dependency
-import com.mercadolibre.android.gradle.library.core.action.modules.lint.dependencies.Status
-import com.mercadolibre.android.gradle.library.core.action.modules.lint.dependencies.StatusBase
-import com.mercadolibre.android.gradle.library.managers.ANY_GROUP
-import com.mercadolibre.android.gradle.library.managers.ANY_GROUP2
-import com.mercadolibre.android.gradle.library.managers.ANY_GROUP3
-import com.mercadolibre.android.gradle.library.managers.ANY_GROUP4
-import com.mercadolibre.android.gradle.library.managers.ANY_NAME
-import com.mercadolibre.android.gradle.library.managers.AbstractPluginManager
-import com.mercadolibre.android.gradle.library.managers.LIBRARY_PROJECT
-import com.mercadolibre.android.gradle.library.managers.ROOT_PROJECT
-import com.mercadolibre.android.gradle.library.managers.VERSION_1
-import com.mercadolibre.android.gradle.library.managers.VERSION_2
-import com.mercadolibre.android.gradle.library.managers.VERSION_3
+import com.mercadolibre.android.gradle.baseplugin.managers.ANY_GROUP
+import com.mercadolibre.android.gradle.baseplugin.managers.ANY_GROUP2
+import com.mercadolibre.android.gradle.baseplugin.managers.ANY_GROUP3
+import com.mercadolibre.android.gradle.baseplugin.managers.ANY_GROUP4
+import com.mercadolibre.android.gradle.baseplugin.managers.ANY_NAME
+import com.mercadolibre.android.gradle.baseplugin.managers.AbstractPluginManager
+import com.mercadolibre.android.gradle.baseplugin.managers.LIBRARY_PROJECT
+import com.mercadolibre.android.gradle.baseplugin.managers.ROOT_PROJECT
+import com.mercadolibre.android.gradle.baseplugin.managers.VERSION_1
+import com.mercadolibre.android.gradle.baseplugin.managers.VERSION_2
+import com.mercadolibre.android.gradle.baseplugin.managers.VERSION_3
 import io.mockk.every
 import io.mockk.mockk
 import org.junit.Assert
@@ -42,7 +42,7 @@ import java.util.Date
 @RunWith(JUnit4::class)
 class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
 
-    private val lintableModule = LibraryAllowListDependenciesLint()
+    private val lintableModule = LibraryAllowListDependenciesLint(listOf(ANY_NAME, ANY_NAME))
 
     @org.junit.Before
     fun setUp() {
@@ -80,15 +80,12 @@ class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
             dependencyAllowListUrl = ALLOW_LIST_URL
         }
 
-        val variant = mockVariant()
-
-        lintableModule.lint(projects[LIBRARY_PROJECT]!!, arrayListOf(variant))
+        lintableModule.lint(projects[LIBRARY_PROJECT]!!)
     }
 
     @org.junit.Test
     fun `When the LibraryAllowListDependenciesLintTest is enabled and lint is called`() {
-        val variant = mockVariant()
-        lintableModule.lint(projects[LIBRARY_PROJECT]!!, arrayListOf(variant))
+        lintableModule.lint(projects[LIBRARY_PROJECT]!!)
     }
 
     @org.junit.Test
@@ -97,8 +94,7 @@ class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
 
         lintableModule.allowListGoingToExpire.add(dependency)
 
-        val variant = mockVariant()
-        lintableModule.lint(projects[LIBRARY_PROJECT]!!, arrayListOf(variant))
+        lintableModule.lint(projects[LIBRARY_PROJECT]!!)
     }
 
     @org.junit.Test
@@ -107,7 +103,6 @@ class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
 
         lintableModule.allowListGoingToExpire.add(dependency)
 
-        val variant = mockVariant()
         lintableModule.hasFailed = true
         lintableModule.name()
 
@@ -125,7 +120,7 @@ class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
         projects[LIBRARY_PROJECT]!!.configurations.findByName(API_CONSTANT)
             ?.dependencies?.addAll(listOf(dependencyForApi1, dependencyForApi2))
 
-        lintableModule.lint(projects[LIBRARY_PROJECT]!!, arrayListOf(variant))
+        lintableModule.lint(projects[LIBRARY_PROJECT]!!)
     }
 
     @org.junit.Test

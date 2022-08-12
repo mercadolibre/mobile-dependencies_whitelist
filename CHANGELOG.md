@@ -1,4 +1,5 @@
 # 13.2.0
+- Se agrega el linteo para los modulos java conjunto a su extension
 - Se modifica la extesnsion del KeyStore Module
 - Se modifica la interface Module para que se pueda modificar su funcionamiento
 - Se agrega el AppBasicsConfigurer que fuerza dependencias para que no se genere output

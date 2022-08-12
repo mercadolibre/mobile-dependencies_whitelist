@@ -1,16 +1,15 @@
-package com.mercadolibre.android.gradle.library.core.action.modules.lint
+package com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.library
 
-import com.android.build.gradle.api.BaseVariant
 import com.google.gson.JsonElement
 import com.google.gson.JsonParser
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.Lint
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.LintGradleExtension
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.Dependency
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.Status
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.StatusBase
 import com.mercadolibre.android.gradle.baseplugin.core.components.ALLOWLIST_CONSTANT
-import com.mercadolibre.android.gradle.baseplugin.core.components.API_CONSTANT
-import com.mercadolibre.android.gradle.baseplugin.core.components.COMPILE_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.EXPIRES_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.GROUP_CONSTANT
-import com.mercadolibre.android.gradle.baseplugin.core.components.IMPLEMENTATION_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_DEPENDENCIES_TASK
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_ERROR_ALLOWED_DEPENDENCIES_PREFIX
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_ERROR_TITLE
@@ -20,11 +19,7 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_WARNIGN_D
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_WARNIGN_TITLE
 import com.mercadolibre.android.gradle.baseplugin.core.components.NAME_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.VERSION_CONSTANT
-import com.mercadolibre.android.gradle.library.core.action.modules.lint.dependencies.Dependency
-import com.mercadolibre.android.gradle.library.core.action.modules.lint.dependencies.Status
-import com.mercadolibre.android.gradle.library.core.action.modules.lint.dependencies.StatusBase
 import org.gradle.api.Project
-import org.gradle.configurationcache.extensions.capitalized
 import java.net.URL
 import java.text.SimpleDateFormat
 import java.util.regex.Pattern
@@ -33,7 +28,7 @@ import java.util.regex.Pattern
  * The LibraryAllowListDependenciesLint class is in charge of reviewing all the dependencies of the project through the AllowList to
  * report if there is any deprecated in a Library.
  */
-class LibraryAllowListDependenciesLint : Lint() {
+class LibraryAllowListDependenciesLint(private val variantNames: List<String>) : Lint() {
 
     private val defaultGradleVersion = "unspecified"
 
@@ -54,7 +49,7 @@ class LibraryAllowListDependenciesLint : Lint() {
      * This method is responsible for verifying that the dependencies of all the variants are valid or
      * if they are about to expire, perform the warning.
      */
-    override fun lint(project: Project, variants: List<BaseVariant>): Boolean {
+    override fun lint(project: Project): Boolean {
         hasFailed = false
         findExtension<LintGradleExtension>(project)?.apply {
             if (!dependenciesLintEnabled) {
@@ -63,16 +58,9 @@ class LibraryAllowListDependenciesLint : Lint() {
             if (project.plugins.hasPlugin("com.android.library")) {
                 setUpAllowlist(dependencyAllowListUrl)
 
-                for (variant in variants) {
-                    val variantName = variant.name
-                    analyzeDependency(project, "${variantName}${IMPLEMENTATION_CONSTANT.capitalized()}")
-                    analyzeDependency(project, "${variantName}${API_CONSTANT.capitalized()}")
-                    analyzeDependency(project, "${variantName}${COMPILE_CONSTANT.capitalized()}")
+                for (variantName in variantNames) {
+                    analyzeDependency(project, variantName)
                 }
-
-                analyzeDependency(project, API_CONSTANT)
-                analyzeDependency(project, IMPLEMENTATION_CONSTANT)
-                analyzeDependency(project, COMPILE_CONSTANT)
 
                 if (hasFailed) {
                     report(

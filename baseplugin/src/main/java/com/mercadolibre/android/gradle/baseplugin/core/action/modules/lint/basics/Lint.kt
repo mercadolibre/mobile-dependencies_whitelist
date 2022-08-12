@@ -18,5 +18,5 @@ abstract class Lint : ExtensionGetter() {
     /**
      * This method is responsible for providing the functionality of checking dependencies.
      */
-    abstract fun lint(project: Project, variants: List<BaseVariant>): Boolean
+    abstract fun lint(project: Project): Boolean
 }

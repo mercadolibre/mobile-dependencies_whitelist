@@ -63,9 +63,7 @@ class ReleaseDependenciesTest : AbstractPluginManager() {
 
     @org.junit.Test
     fun `When the ReleaseDependenciesLint lint excute right`() {
-        val variant = mockVariant()
-
-        releaseDependencies.lint(projects[APP_PROJECT]!!, arrayListOf(variant))
+        releaseDependencies.lint(projects[APP_PROJECT]!!)
     }
 
     @org.junit.Test
@@ -77,7 +75,7 @@ class ReleaseDependenciesTest : AbstractPluginManager() {
 
         every { mockedSubProject.extension.findByType(LintGradleExtension::class.java) } returns extension
 
-        releaseDependencies.lint(mockedSubProject.project, arrayListOf())
+        releaseDependencies.lint(mockedSubProject.project)
 
         verify { extension.releaseDependenciesLintEnabled }
         verify { mockedSubProject.project.extensions }

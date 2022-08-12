@@ -1,6 +1,6 @@
 [versions]
 innerProjectVersion = "EXPERIMENTAL-13.1.0-20220801164918"
-basePluginVersion = "EXPERIMENTAL-13.2.0-20220812162646"
+basePluginVersion = "EXPERIMENTAL-13.2.0-20220812173116"
 
 [libraries]
 gradle-plugin-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version = "1.5.31" }
