@@ -23,9 +23,3 @@ sourceSets {
 
     }
 }
-
-meliPlugin {
-    appDetection {
-        isProductiveApp true
-    }
-}

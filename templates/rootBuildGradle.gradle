@@ -1,4 +1,4 @@
-apply plugin: 'mercadolibre.gradle.config.settings'
+apply plugin: 'mercadolibre.gradle.config.base'
 
 buildscript {
     repositories {

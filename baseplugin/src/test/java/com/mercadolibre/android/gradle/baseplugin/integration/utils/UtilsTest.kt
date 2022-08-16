@@ -25,6 +25,7 @@ abstract class UtilsTest : AbstractPluginManager() {
         pathsAffectingAllModules.forEach { File(tmpFolder.root, it).mkdirs() }
 
         root = moduleManager.createRootProject(ROOT_PROJECT, getProjectsName(), projects, fileManager)
+
         gradle = runGradle(tmpFolder.root)
     }
 

@@ -1,3 +1,6 @@
+#14.0.0
+- Se divide el BasePlugin en los Plugins BasePlugin para el root, y el BaseSettingsPlugin para las settings del root
+
 # 13.2.0
 - Se agrega el linteo para los modulos java conjunto a su extension
 - Se modifica la extesnsion del KeyStore Module

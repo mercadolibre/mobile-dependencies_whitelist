@@ -1,24 +1,18 @@
 package com.mercadolibre.android.gradle.app.unitary.modules
 
-import com.android.build.gradle.BaseExtension
-import com.mercadolibre.android.gradle.app.BaseAppPlugin
 import com.mercadolibre.android.gradle.app.core.action.modules.lint.ApplicationLintOptionsModule
-import com.mercadolibre.android.gradle.app.utils.domain.ModuleType
 import com.mercadolibre.android.gradle.app.managers.APP_PROJECT
 import com.mercadolibre.android.gradle.app.managers.AbstractPluginManager
-
 import com.mercadolibre.android.gradle.app.managers.ROOT_PROJECT
-import com.mercadolibre.android.gradle.baseplugin.BasePlugin
 import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.PluginConfigurer
 import com.mercadolibre.android.gradle.baseplugin.core.components.APP_PLUGINS
-import java.io.File
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
+import java.io.File
 
 @RunWith(JUnit4::class)
-class ApplicationLintOptionsTest: AbstractPluginManager() {
+class ApplicationLintOptionsTest : AbstractPluginManager() {
 
-    private val appPlugin = BaseAppPlugin()
     private val appLintOptions = ApplicationLintOptionsModule()
 
     @org.junit.Test
@@ -35,5 +29,4 @@ class ApplicationLintOptionsTest: AbstractPluginManager() {
         appLintOptions.configure(projects[APP_PROJECT]!!)
         appLintOptions.configureLintOptions(projects[APP_PROJECT]!!)
     }
-
 }

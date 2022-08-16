@@ -1,9 +1,11 @@
 package com.mercadolibre.android.gradle.baseplugin.unitary
 
 import com.mercadolibre.android.gradle.baseplugin.BasePlugin
+import com.mercadolibre.android.gradle.baseplugin.BaseSettingsPlugin
 import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.BasicsConfigurer
 import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.ExtensionsConfigurer
 import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.ModuleConfigurer
+import com.mercadolibre.android.gradle.baseplugin.core.domain.interfaces.SettingsModule
 import com.mercadolibre.android.gradle.baseplugin.managers.AbstractPluginManager
 import com.mercadolibre.android.gradle.baseplugin.managers.ROOT_PROJECT
 import com.mercadolibre.android.gradle.baseplugin.module.ModuleProvider
@@ -17,9 +19,10 @@ import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
 
 @RunWith(JUnit4::class)
-class BasePluginTest: AbstractPluginManager() {
+class BasePluginTest : AbstractPluginManager() {
 
     val basePlugin = BasePlugin()
+    val baseSettingsPlugin = BaseSettingsPlugin()
 
     val basicsConfigurer: BasicsConfigurer = mock {}
     val extensionsConfigurer: ExtensionsConfigurer = mock {}
@@ -55,11 +58,14 @@ class BasePluginTest: AbstractPluginManager() {
     @org.junit.Test
     fun `When the BasePlugin is applied the ModuleConfigurer configures the settings`() {
         val settings = mockk<Settings>(relaxed = true)
+        val module = mockk<SettingsModule>(relaxed = true)
 
         mockkObject(ModuleProvider)
 
-        every { ModuleProvider.provideSettingsModules() } returns listOf(mockk(relaxed = true))
+        every { ModuleProvider.provideSettingsModules() } returns listOf(module)
 
-        basePlugin.applySettings(settings)
+        baseSettingsPlugin.apply(settings)
+
+        io.mockk.verify { module.configure(settings) }
     }
 }

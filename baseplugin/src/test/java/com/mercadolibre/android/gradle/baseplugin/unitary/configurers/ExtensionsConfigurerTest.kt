@@ -21,7 +21,6 @@ class ExtensionsConfigurerTest : AbstractPluginManager() {
 
     @org.junit.Test
     fun `When the ExtensionsConfigurer create all extensions`() {
-
         val extensionsNames = arrayListOf<String>()
 
         for (module in ModuleProvider.provideAllModules()) {

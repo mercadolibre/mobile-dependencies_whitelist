@@ -17,7 +17,7 @@ import io.mockk.verify
 
 class ModuleConfigurerTest : AbstractPluginManager() {
 
-    private val basePlugin = BasePlugin()
+    private val baseRootPlugin = BasePlugin()
 
     private val moduleConfigurer = LibraryModuleConfigurer()
 
@@ -33,7 +33,7 @@ class ModuleConfigurerTest : AbstractPluginManager() {
         root = moduleManager.createSampleRoot(ROOT_PROJECT, tmpFolder)
         projects[LIBRARY_PROJECT] = moduleManager.createSampleSubProject(LIBRARY_PROJECT, tmpFolder, root)
 
-        basePlugin.apply(root)
+        baseRootPlugin.apply(root)
 
         mockkObject(ModuleProvider)
 

@@ -24,9 +24,13 @@ dependencies {
 
 gradlePlugin {
     plugins {
+        register("mercadolibre.gradle.config.base") {
+            id = "mercadolibre.gradle.config.base"
+            implementationClass = "com.mercadolibre.android.gradle.baseplugin.BasePlugin"
+        }
         register("mercadolibre.gradle.config.settings") {
             id = "mercadolibre.gradle.config.settings"
-            implementationClass = "com.mercadolibre.android.gradle.baseplugin.BasePlugin"
+            implementationClass = "com.mercadolibre.android.gradle.baseplugin.BaseSettingsPlugin"
         }
     }
 }

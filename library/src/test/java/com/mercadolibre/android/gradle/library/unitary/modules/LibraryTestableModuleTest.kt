@@ -5,15 +5,15 @@ import com.mercadolibre.android.gradle.baseplugin.BasePlugin
 import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.PluginConfigurer
 import com.mercadolibre.android.gradle.baseplugin.core.components.LIBRARY_PLUGINS
 import com.mercadolibre.android.gradle.library.core.action.modules.testeable.LibraryTestableModule
-import com.mercadolibre.android.gradle.library.utils.domain.ModuleType
 import com.mercadolibre.android.gradle.library.managers.AbstractPluginManager
 import com.mercadolibre.android.gradle.library.managers.LIBRARY_PROJECT
 import com.mercadolibre.android.gradle.library.managers.ROOT_PROJECT
+import com.mercadolibre.android.gradle.library.utils.domain.ModuleType
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
 
 @RunWith(JUnit4::class)
-class LibraryTestableModuleTest: AbstractPluginManager() {
+class LibraryTestableModuleTest : AbstractPluginManager() {
 
     val testableModule = LibraryTestableModule()
 

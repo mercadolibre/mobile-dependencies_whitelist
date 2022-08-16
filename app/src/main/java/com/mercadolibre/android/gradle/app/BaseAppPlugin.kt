@@ -5,13 +5,14 @@ import com.mercadolibre.android.gradle.app.core.action.configurers.AppExtensionC
 import com.mercadolibre.android.gradle.app.core.action.configurers.AppModuleConfigurer
 import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.AndroidConfigurer
 import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.PluginConfigurer
-import com.mercadolibre.android.gradle.baseplugin.core.basics.AbstractPlugin
+import com.mercadolibre.android.gradle.baseplugin.core.basics.AbstractProjectPlugin
 import com.mercadolibre.android.gradle.baseplugin.core.components.APP_PLUGINS
 
 /**
  * BaseAppPlugin is in charge of configuring the app module of the repository where it is being applied.
  */
-class BaseAppPlugin : AbstractPlugin() {
+class BaseAppPlugin : AbstractProjectPlugin() {
+
     /**
      * This variable contains the configurers that will be executed when applying the plugin.
      */
