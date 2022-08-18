@@ -34,6 +34,20 @@ class KeyStoreModule : Module() {
     }
 
     /**
+     * This method is responsible for execute the configuration of the module.
+     */
+    override fun executeModule(project: Project) {
+        val extension = findOnOffExtension(project, getExtensionName())
+        if (extension != null) {
+            if (extension.enabled) {
+                configure(project)
+            }
+        } else {
+            configure(project)
+        }
+    }
+
+    /**
      * In case it is a productive app, this method searches for the key and generates the necessary file for sign in
      * and generates a task that validates it.
      */

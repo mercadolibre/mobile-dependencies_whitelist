@@ -1,3 +1,6 @@
+#14.0.1
+- Ya que el KeystoreModule no se ejecuta como default se evita que envie la notificacion de desactivado manualmente
+
 #14.0.0
 - Se divide el BasePlugin en los Plugins BasePlugin para el root, y el BaseSettingsPlugin para las settings del root
 

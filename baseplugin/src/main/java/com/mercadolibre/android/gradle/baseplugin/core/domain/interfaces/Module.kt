@@ -41,7 +41,7 @@ abstract class Module : ExtensionProvider, ExtensionGetter() {
     /**
      * This method is responsible for execute the configuration of the module.
      */
-    fun executeModule(project: Project) {
+    open fun executeModule(project: Project) {
         val extension = findOnOffExtension(project, this@Module.getExtensionName())
         if (extension != null) {
             if (extension.enabled) {
@@ -61,6 +61,6 @@ abstract class Module : ExtensionProvider, ExtensionGetter() {
         return className[0].toLowerCase() + className.substring(1, className.length)
     }
 
-    private fun findOnOffExtension(project: Project, name: String): ModuleOnOffExtension? =
+    fun findOnOffExtension(project: Project, name: String): ModuleOnOffExtension? =
         findExtension(project, name) as? ModuleOnOffExtension
 }
