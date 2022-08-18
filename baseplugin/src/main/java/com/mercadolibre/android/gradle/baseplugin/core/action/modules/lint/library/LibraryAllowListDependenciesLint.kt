@@ -5,9 +5,13 @@ import com.google.gson.JsonParser
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.Lint
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.LintGradleExtension
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.Dependency
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.DependencyDataInAllowList
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.Status
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.StatusBase
 import com.mercadolibre.android.gradle.baseplugin.core.components.ALLOWLIST_CONSTANT
+import com.mercadolibre.android.gradle.baseplugin.core.components.ANSI_GREEN
+import com.mercadolibre.android.gradle.baseplugin.core.components.ANSI_YELLOW
+import com.mercadolibre.android.gradle.baseplugin.core.components.ARROW
 import com.mercadolibre.android.gradle.baseplugin.core.components.EXPIRES_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.GROUP_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_DEPENDENCIES_TASK
@@ -19,6 +23,8 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_WARNIGN_D
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_WARNIGN_TITLE
 import com.mercadolibre.android.gradle.baseplugin.core.components.NAME_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.VERSION_CONSTANT
+import com.mercadolibre.android.gradle.baseplugin.core.components.ansi
+import com.mercadolibre.android.gradle.baseplugin.core.components.removeAnsi
 import org.gradle.api.Project
 import java.net.URL
 import java.text.SimpleDateFormat
@@ -98,26 +104,42 @@ class LibraryAllowListDependenciesLint(private val variantNames: List<String>) :
 
         var message = "$LINT_WARNIGN_TITLE \n"
         for (dependency in allowListGoingToExpire) {
-            message += "(${findDependencyInList(dependency, allowListDependencies)?.rawExpiresDate})" +
-                " - ${dependency.group}:${dependency.name}:${dependency.version} (Deprecated!)\n"
+
+            val depAllowListData = findDependencyInList(dependency, allowListDependencies)
+            var availableVersion = ""
+
+            if (depAllowListData.availableVersion != null) {
+                availableVersion = "Available version $ARROW ${depAllowListData.availableVersion}".ansi(ANSI_GREEN)
+            }
+
+            message += "(${findDependencyInList(dependency, allowListDependencies).allowListDep?.rawExpiresDate})" +
+                " - ${dependency.group}:${dependency.name}:${dependency.version} (${"Deprecated!".ansi(ANSI_YELLOW)}) $availableVersion\\n"
         }
         message += "\n$LINT_WARNIGN_DESCRIPTION\n"
         println(message)
-        file.appendText(message)
+        file.appendText(message.removeAnsi(ANSI_GREEN).removeAnsi(ANSI_YELLOW))
     }
 
-    private fun findDependencyInList(dependency: Dependency, list: ArrayList<Dependency>): Dependency? {
+    private fun findDependencyInList(dependency: Dependency, list: ArrayList<Dependency>): DependencyDataInAllowList {
+        val depAllowListData = DependencyDataInAllowList(null, null)
+
         val dependencyFullName = "${dependency.group}:${dependency.name}:${dependency.version}"
+
         for (allowListDep in list) {
-            val pattern = Pattern.compile(
+            val depWithSameVersion = Pattern.compile(
                 "${allowListDep.group}:${allowListDep.name}:(${allowListDep.version})",
                 Pattern.CASE_INSENSITIVE
             )
-            if (pattern.matcher(dependencyFullName).matches()) {
-                return allowListDep
+
+            if (depWithSameVersion.matcher(dependencyFullName).matches()) {
+                depAllowListData.allowListDep = allowListDep
+            } else if ("${allowListDep.group}:${allowListDep.name}" == "${dependency.group}:${dependency.name}" &&
+                (allowListDep.expires == null || allowListDep.expires == Long.MAX_VALUE)
+            ) {
+                depAllowListData.availableVersion = allowListDep.version?.replace("|", " or ")
             }
         }
-        return null
+        return depAllowListData
     }
 
     private fun report(message: String, project: Project) {
@@ -129,7 +151,7 @@ class LibraryAllowListDependenciesLint(private val variantNames: List<String>) :
             hasFailed = true
             println("\n" + LINT_ERROR_TITLE)
             file.writeText(LINT_ERROR_TITLE)
-            file.appendText("${System.getProperty("line.separator")}$message")
+            file.appendText("${System.getProperty("line.separator")}${message.removeAnsi(ANSI_GREEN).removeAnsi(ANSI_YELLOW)}")
         }
 
         println(message)
@@ -155,7 +177,8 @@ class LibraryAllowListDependenciesLint(private val variantNames: List<String>) :
     }
 
     private fun getStatusDependencyInAllowList(dependency: Dependency): StatusBase {
-        val dep = findDependencyInList(dependency, allowListDependencies)
+        val depAllowListData = findDependencyInList(dependency, allowListDependencies)
+        val dep = depAllowListData.allowListDep
         if (dep != null) {
             return if (dep.expires == null) {
                 Status.available()
@@ -165,15 +188,15 @@ class LibraryAllowListDependenciesLint(private val variantNames: List<String>) :
                         Status.available()
                     }
                     System.currentTimeMillis() < dep.expires -> {
-                        Status.goignToExpire()
+                        Status.goingToExpire(depAllowListData.availableVersion)
                     }
                     else -> {
-                        Status.expired()
+                        Status.expired(depAllowListData.availableVersion)
                     }
                 }
             }
         }
-        return Status.invalid()
+        return Status.invalid(depAllowListData.availableVersion)
     }
 
     /**

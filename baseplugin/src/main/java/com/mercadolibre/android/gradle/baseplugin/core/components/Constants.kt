@@ -82,6 +82,9 @@ infix fun String.ansi(ansiColor: String): String = ansiColor + this + ANSI_RESET
 /** This method is responsible for providing an ANSI style. */
 infix fun Int.ansi(ansiColor: String): String = ansiColor + this.toString() + ANSI_RESET
 
+/** This method is responsible for remove an ANSI style. */
+infix fun String.removeAnsi(ansiColor: String): String = this.replace(ansiColor, "").replace(ANSI_RESET, "")
+
 /**
  * These variables describe the behavior of the configurators.
  */

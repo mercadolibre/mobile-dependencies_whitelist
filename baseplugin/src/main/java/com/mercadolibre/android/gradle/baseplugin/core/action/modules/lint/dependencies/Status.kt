@@ -13,20 +13,20 @@ object Status {
     /**
      * This method is responsible for generating an available dependency state.
      */
-    fun available(): StatusBase = StatusBase(shouldReport = false, isBlocker = false, LINT_AVAILABLE)
+    fun available(): StatusBase = StatusBase(shouldReport = false, isBlocker = false, LINT_AVAILABLE, null)
 
     /**
      * This method is responsible for generating an invalid dependency state.
      */
-    fun invalid(): StatusBase = StatusBase(shouldReport = true, isBlocker = true, LINT_INVALID)
+    fun invalid(message: String?): StatusBase = StatusBase(shouldReport = true, isBlocker = true, LINT_INVALID, message)
 
     /**
      * This method is responsible for generating an expired dependency state.
      */
-    fun expired(): StatusBase = StatusBase(shouldReport = true, isBlocker = true, LINT_EXPIRED)
+    fun expired(message: String?): StatusBase = StatusBase(shouldReport = true, isBlocker = true, LINT_EXPIRED, message)
 
     /**
      * This method is responsible for generating an goign to expire dependency state.
      */
-    fun goignToExpire(): StatusBase = StatusBase(shouldReport = true, isBlocker = false, LINT_GOING_TO_EXPIRE)
+    fun goingToExpire(message: String?): StatusBase = StatusBase(shouldReport = true, isBlocker = false, LINT_GOING_TO_EXPIRE, message)
 }

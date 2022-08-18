@@ -1,4 +1,5 @@
-#14.0.1
+#14.1.0
+- Se especifica la version disponible al mostrar un error en Linteo
 - Ya que el KeystoreModule no se ejecuta como default se evita que envie la notificacion de desactivado manualmente
 
 #14.0.0

@@ -8,7 +8,10 @@ import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.depen
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.StatusBase
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.library.LibraryAllowListDependenciesLint
 import com.mercadolibre.android.gradle.baseplugin.core.components.ALLOW_LIST_URL
+import com.mercadolibre.android.gradle.baseplugin.core.components.ANSI_GREEN
+import com.mercadolibre.android.gradle.baseplugin.core.components.ANSI_YELLOW
 import com.mercadolibre.android.gradle.baseplugin.core.components.API_CONSTANT
+import com.mercadolibre.android.gradle.baseplugin.core.components.ARROW
 import com.mercadolibre.android.gradle.baseplugin.core.components.EXPIRES_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.GROUP_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.LIBRARY_PLUGINS
@@ -20,6 +23,7 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_REPORT_ER
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_WARNING_FILENAME
 import com.mercadolibre.android.gradle.baseplugin.core.components.NAME_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.VERSION_CONSTANT
+import com.mercadolibre.android.gradle.baseplugin.core.components.ansi
 import com.mercadolibre.android.gradle.baseplugin.managers.ANY_GROUP
 import com.mercadolibre.android.gradle.baseplugin.managers.ANY_GROUP2
 import com.mercadolibre.android.gradle.baseplugin.managers.ANY_GROUP3
@@ -62,13 +66,19 @@ class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
 
     @org.junit.Test
     fun `When one Status Base is created works`() {
-        val status = StatusBase(shouldReport = false, isBlocker = true, name = ANY_NAME)
-        Status.goignToExpire()
+        val status = StatusBase(shouldReport = false, isBlocker = true, name = ANY_NAME, message = "ANY_MESSAGE")
+        val statusWithOutMessage = StatusBase(shouldReport = true, isBlocker = true, name = ANY_NAME, message = "1.+")
+        Status.goingToExpire(null)
         try {
             Assert.fail(status.message(ANY_NAME))
         } catch (e: IllegalAccessException) {
             assert(e.message == LINT_REPORT_ERROR)
         }
+
+        assert(
+            statusWithOutMessage.message(ANY_NAME) == "- $ANY_NAME (${ANY_NAME.toLowerCase().capitalize().ansi(ANSI_YELLOW)}) " +
+                "Available version $ARROW 1.+".ansi(ANSI_GREEN)
+        )
     }
 
     @org.junit.Test
@@ -135,6 +145,8 @@ class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
 
         val dependencyExpired =
             Dependency(ANY_GROUP, ANY_NAME, VERSION_1, (System.currentTimeMillis() - 2.592e+9).toLong(), currentDate)
+        val dependencyNotExpired =
+            Dependency(ANY_GROUP, ANY_NAME, VERSION_3, (System.currentTimeMillis() - 2.592e+9).toLong(), currentDate)
         val dependencyExpired2 =
             Dependency(ANY_GROUP2, ANY_NAME, "$VERSION_1|$VERSION_2", (System.currentTimeMillis() - 2.592e+9).toLong(), currentDate)
         val dependencyExpired3 =
@@ -145,7 +157,16 @@ class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
             Dependency(ANY_GROUP4, ANY_NAME, null, System.currentTimeMillis() + 100000, currentDate)
 
         lintableModule.allowListDependencies
-            .addAll(listOf(dependencyExpired, dependencyExpired2, dependencyExpired3, dependencyExpired4, dependencyExpired5))
+            .addAll(
+                listOf(
+                    dependencyExpired,
+                    dependencyNotExpired,
+                    dependencyExpired2,
+                    dependencyExpired3,
+                    dependencyExpired4,
+                    dependencyExpired5
+                )
+            )
 
         lintableModule.analyzeDependency(dependency, projects[LIBRARY_PROJECT]!!)
         lintableModule.analyzeDependency(dependency2, projects[LIBRARY_PROJECT]!!)

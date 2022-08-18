@@ -1,6 +1,10 @@
 package com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies
 
+import com.mercadolibre.android.gradle.baseplugin.core.components.ANSI_GREEN
+import com.mercadolibre.android.gradle.baseplugin.core.components.ANSI_YELLOW
+import com.mercadolibre.android.gradle.baseplugin.core.components.ARROW
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_REPORT_ERROR
+import com.mercadolibre.android.gradle.baseplugin.core.components.ansi
 
 /**
  * The Status Base class is in charge of containing the information obtained from a dependency in the allow list
@@ -9,15 +13,23 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_REPORT_ER
  * @param shouldReport This variable represents whether this status should be reported.
  * @param isBlocker This variable represents whether this state is blocking.
  * @param name This variable contains the name of the type of report that.
+ * @param message This variable contains the version available if exists.
  */
-class StatusBase(val shouldReport: Boolean, val isBlocker: Boolean, val name: String) {
+class StatusBase(val shouldReport: Boolean, val isBlocker: Boolean, val name: String, var message: String?) {
     /**
-     * This method is responsible for providing the error message when the dependency is not valid.
+     * This method is in charge of verifying if it is necessary to report an error or share the deprecation message.
      */
     fun message(dependency: String): String {
         if (!shouldReport) {
             throw IllegalAccessException(LINT_REPORT_ERROR)
         }
-        return "- $dependency (${name.toLowerCase().capitalize()})"
+
+        val baseMessage = "- $dependency (${name.toLowerCase().capitalize().ansi(ANSI_YELLOW)})"
+
+        return if (message != null) {
+            "$baseMessage ${("Available version $ARROW " + message!!).ansi(ANSI_GREEN)}"
+        } else {
+            baseMessage
+        }
     }
 }
