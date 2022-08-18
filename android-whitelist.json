@@ -732,15 +732,9 @@
       "version": "3\\.\\+"
     },
     {
-      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android\\.metrics",
       "name": "metrics",
       "version": "6\\.\\+"
-    },
-    {
-      "group": "com\\.mercadolibre\\.android\\.metrics",
-      "name": "metrics",
-      "version": "7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.navigationcp",
@@ -2138,7 +2132,7 @@
     {
       "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
       "name": "core",
-      "version": "1\\.0\\.0"
+      "version": "1\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.si_billing_info",
