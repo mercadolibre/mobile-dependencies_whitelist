@@ -451,19 +451,32 @@
       "version": "10\\.\\+"
     },
     {
+      "expires": "2022-11-15",
       "group": "com\\.mercadolibre\\.android",
       "name": "notifications",
       "version": "mercadolibre-19\\.\\+"
     },
     {
+      "expires": "2022-11-15",
       "group": "com\\.mercadolibre\\.android",
       "name": "notifications",
       "version": "mercadopago-19\\.\\+"
     },
     {
+      "expires": "2022-11-15",
       "group": "com\\.mercadolibre\\.android",
       "name": "notifications_commons",
       "version": "19\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "notifications",
+      "version": "20\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "notifications_commons",
+      "version": "20\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.rich_notifications",
