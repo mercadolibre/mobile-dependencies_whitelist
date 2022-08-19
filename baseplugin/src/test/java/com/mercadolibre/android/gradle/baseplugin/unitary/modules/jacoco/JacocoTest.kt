@@ -19,6 +19,7 @@ import io.mockk.mockkObject
 import io.mockk.verify
 import org.gradle.api.Project
 import org.gradle.api.tasks.testing.Test
+import org.gradle.testing.jacoco.plugins.JacocoTaskExtension
 import org.gradle.testing.jacoco.tasks.JacocoReport
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
@@ -34,6 +35,8 @@ class JacocoTest : AbstractPluginManager() {
     fun setUp() {
         initTmpFolder()
 
+        mockedRoot = mockRootProject(mutableListOf(LIBRARY_PROJECT))
+
         root = moduleManager.createSampleRoot(ROOT_PROJECT, tmpFolder)
         projects[LIBRARY_PROJECT] = moduleManager.createSampleSubProject(LIBRARY_PROJECT, tmpFolder, root)
 
@@ -47,8 +50,25 @@ class JacocoTest : AbstractPluginManager() {
     }
 
     @org.junit.Test
+    fun `When the JavaJacocoModule is called configure her tasks`() {
+        val testTask = mockk<Test>(relaxed = true)
+        val jacocoTestExtension = mockk<JacocoTaskExtension>(relaxed = true)
+        val list = listOf(testTask)
+
+        every { testTask.extensions.findByType(JacocoTaskExtension::class.java) } returns jacocoTestExtension
+
+        jacocoModule.configureTasks(list)
+
+        verify { testTask.testLogging }
+        verify { jacocoTestExtension.excludes = listOf("jdk.internal.*") }
+        verify { jacocoTestExtension.isIncludeNoLocationClasses = true }
+    }
+
+    @org.junit.Test
     fun `When the JavaJacocoModule is called before evaluate execute her configuration`() {
         val project = mockk<Project>(relaxed = true)
+
+        every { project.tasks.register(JACOCO_FULL_REPORT_TASK).get() } returns mockk(relaxed = true)
 
         jacocoModule.moduleConfiguration(project)
 
@@ -85,8 +105,10 @@ class JacocoTest : AbstractPluginManager() {
 
     @org.junit.Test
     fun `When the JavaJacocoModule is called configure the project`() {
+        val project = mockk<Project>(relaxed = true)
+
         jacocoModule.configure(projects[LIBRARY_PROJECT]!!)
-        jacocoModule.configureProject(projects[LIBRARY_PROJECT]!!)
+        jacocoModule.configureProject(project)
         jacocoModule.configureTestReport(mockk(relaxed = true))
         assert(projects[LIBRARY_PROJECT]!!.tasks.names.contains(JACOCO_FULL_REPORT_TASK))
         assert(projects[LIBRARY_PROJECT]!!.tasks.names.contains(JACOCO_TEST_REPORT_TASK))

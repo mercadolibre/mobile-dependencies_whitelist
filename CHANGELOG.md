@@ -1,8 +1,9 @@
-#14.1.0
+# 14.1.0
 - Se especifica la version disponible al mostrar un error en Linteo
 - Ya que el KeystoreModule no se ejecuta como default se evita que envie la notificacion de desactivado manualmente
+- Se excluye los test en jdk.internal para que no fallen los test en Java 11
 
-#14.0.0
+# 14.0.0
 - Se divide el BasePlugin en los Plugins BasePlugin para el root, y el BaseSettingsPlugin para las settings del root
 
 # 13.2.0
