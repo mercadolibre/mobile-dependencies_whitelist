@@ -26,9 +26,10 @@ open class AndroidConfigurer : Configurer, ExtensionGetter() {
                 compileSdkVersion(provideApiSdkLevel())
                 buildToolsVersion(provideBuildToolsVersion())
 
-                defaultConfig {
+                with(defaultConfig) {
                     setMinSdkVersion(provideMinSdk())
                     setTargetSdkVersion(provideApiSdkLevel())
+                    consumerProguardFiles("proguard-rules.pro")
                 }
 
                 project.allprojects {

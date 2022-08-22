@@ -1,3 +1,6 @@
+# 14.2.0
+- Se agrega la configuracion Default de Proguard para los modulos
+
 # 14.1.0
 - Se especifica la version disponible al mostrar un error en Linteo
 - Ya que el KeystoreModule no se ejecuta como default se evita que envie la notificacion de desactivado manualmente

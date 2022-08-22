@@ -44,10 +44,12 @@ class ProjectInfoModule : Module() {
                 """
                 - ${"Compile SDK".ansi(ANSI_YELLOW)}            $ARROW $compileSdkVersion
                 - ${"Build Tools Version".ansi(ANSI_YELLOW)}    $ARROW $buildToolsVersion
-                - ${"Min Sdk Version".ansi(ANSI_YELLOW)}        $ARROW ${defaultConfig.minSdkVersion}
-                - ${"Target Sdk Version".ansi(ANSI_YELLOW)}     $ARROW ${defaultConfig.targetSdkVersion}
+                - ${"Min Sdk Version".ansi(ANSI_YELLOW)}        $ARROW ${defaultConfig.minSdkVersion!!.apiString}
+                - ${"Target Sdk Version".ansi(ANSI_YELLOW)}     $ARROW ${defaultConfig.targetSdkVersion!!.apiString}
                 - ${"Source Compatibility".ansi(ANSI_YELLOW)}   $ARROW ${compileOptions.sourceCompatibility}
                 - ${"Target Compatibility".ansi(ANSI_YELLOW)}   $ARROW ${compileOptions.targetCompatibility}
+                
+                - ${"Consumer Proguard Files".ansi(ANSI_YELLOW)}         $ARROW ${defaultConfig.consumerProguardFiles}
             """
             )
         }

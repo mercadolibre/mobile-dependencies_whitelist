@@ -7,6 +7,7 @@ import com.mercadolibre.android.gradle.app.managers.ROOT_PROJECT
 import com.mercadolibre.android.gradle.app.utils.domain.ModuleType
 import com.mercadolibre.android.gradle.baseplugin.core.components.JACOCO_FULL_REPORT_TASK
 import com.mercadolibre.android.gradle.baseplugin.core.components.JACOCO_TEST_REPORT_TASK
+import io.mockk.every
 import io.mockk.mockk
 import io.mockk.verify
 import org.gradle.api.Project
@@ -39,6 +40,8 @@ class AppJacocoModuleTest : AbstractPluginManager() {
     @org.junit.Test
     fun `When the JavaJacocoModule is called before evaluate execute her configuration`() {
         val project = mockk<Project>(relaxed = true)
+
+        every { project.tasks.register(JACOCO_FULL_REPORT_TASK).get() } returns mockk(relaxed = true)
 
         jacocoModule.moduleConfiguration(project)
 

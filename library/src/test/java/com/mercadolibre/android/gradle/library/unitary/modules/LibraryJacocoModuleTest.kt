@@ -7,6 +7,7 @@ import com.mercadolibre.android.gradle.library.managers.AbstractPluginManager
 import com.mercadolibre.android.gradle.library.managers.LIBRARY_PROJECT
 import com.mercadolibre.android.gradle.library.managers.ROOT_PROJECT
 import com.mercadolibre.android.gradle.library.utils.domain.ModuleType
+import io.mockk.every
 import io.mockk.mockk
 import io.mockk.verify
 import org.gradle.api.Project
@@ -36,6 +37,8 @@ class LibraryJacocoModuleTest : AbstractPluginManager() {
     @org.junit.Test
     fun `When the JavaJacocoModule is called before evaluate execute her configuration`() {
         val project = mockk<Project>(relaxed = true)
+
+        every { project.tasks.register(JACOCO_FULL_REPORT_TASK).get() } returns mockk(relaxed = true)
 
         jacocoModule.moduleConfiguration(project)
 
