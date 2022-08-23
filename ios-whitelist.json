@@ -625,17 +625,10 @@
       "version": "^~>\\s?0.[0-9]+.?[0-9]*$"
     },
     {
-      "expires": "2022-09-30",
       "name": "MLNotifications",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?3.[0-9]+$"
-    },
-    {
-      "name": "MLNotifications",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?4.[0-9]+$"
     },
     {
       "name": "MLOnDemandResources",
