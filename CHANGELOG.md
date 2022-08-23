@@ -1,3 +1,6 @@
+# 15.0.0
+- Se actualiza la version de COMPILE_API_SDK_LEVEL a 32 para soportar Android 12
+
 # 14.2.0
 - Se agrega la configuracion Default de Proguard para los modulos
 
