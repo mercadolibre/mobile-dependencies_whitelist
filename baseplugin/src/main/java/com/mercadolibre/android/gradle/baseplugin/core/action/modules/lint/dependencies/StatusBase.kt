@@ -1,10 +1,7 @@
 package com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies
 
-import com.mercadolibre.android.gradle.baseplugin.core.components.ANSI_GREEN
-import com.mercadolibre.android.gradle.baseplugin.core.components.ANSI_YELLOW
 import com.mercadolibre.android.gradle.baseplugin.core.components.ARROW
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_REPORT_ERROR
-import com.mercadolibre.android.gradle.baseplugin.core.components.ansi
 
 /**
  * The Status Base class is in charge of containing the information obtained from a dependency in the allow list
@@ -24,10 +21,10 @@ class StatusBase(val shouldReport: Boolean, val isBlocker: Boolean, val name: St
             throw IllegalAccessException(LINT_REPORT_ERROR)
         }
 
-        val baseMessage = "- $dependency (${name.toLowerCase().capitalize().ansi(ANSI_YELLOW)})"
+        val baseMessage = "- $dependency (${name.toLowerCase().capitalize()})"
 
         return if (message != null) {
-            "$baseMessage ${("Available version $ARROW " + message!!).ansi(ANSI_GREEN)}"
+            "$baseMessage ${("Available version $ARROW " + message!!)}"
         } else {
             baseMessage
         }

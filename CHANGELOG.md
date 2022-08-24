@@ -1,3 +1,7 @@
+# 14.2.1
+- Se cambia la carpeta donde se almacenan los reportes de linteo para que CI los detecte
+- Se elimina el estilo que aplica el Linteo a los output ya que CI los formatea de una forma diferente
+
 # 14.2.0
 - Se agrega la configuracion Default de Proguard para los modulos
 - Se modifica el tiempo en el que se aplican los plugins para eliminar posibles errores

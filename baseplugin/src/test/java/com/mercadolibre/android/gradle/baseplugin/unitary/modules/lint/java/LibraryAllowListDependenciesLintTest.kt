@@ -8,8 +8,6 @@ import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.depen
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.StatusBase
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.library.LibraryAllowListDependenciesLint
 import com.mercadolibre.android.gradle.baseplugin.core.components.ALLOW_LIST_URL
-import com.mercadolibre.android.gradle.baseplugin.core.components.ANSI_GREEN
-import com.mercadolibre.android.gradle.baseplugin.core.components.ANSI_YELLOW
 import com.mercadolibre.android.gradle.baseplugin.core.components.API_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.ARROW
 import com.mercadolibre.android.gradle.baseplugin.core.components.EXPIRES_CONSTANT
@@ -23,7 +21,6 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_REPORT_ER
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_WARNING_FILENAME
 import com.mercadolibre.android.gradle.baseplugin.core.components.NAME_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.VERSION_CONSTANT
-import com.mercadolibre.android.gradle.baseplugin.core.components.ansi
 import com.mercadolibre.android.gradle.baseplugin.managers.ANY_GROUP
 import com.mercadolibre.android.gradle.baseplugin.managers.ANY_GROUP2
 import com.mercadolibre.android.gradle.baseplugin.managers.ANY_GROUP3
@@ -76,8 +73,7 @@ class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
         }
 
         assert(
-            statusWithOutMessage.message(ANY_NAME) == "- $ANY_NAME (${ANY_NAME.toLowerCase().capitalize().ansi(ANSI_YELLOW)}) " +
-                "Available version $ARROW 1.+".ansi(ANSI_GREEN)
+            statusWithOutMessage.message(ANY_NAME) == "- $ANY_NAME (${ANY_NAME.toLowerCase().capitalize()}) Available version $ARROW 1.+"
         )
     }
 
@@ -175,7 +171,7 @@ class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
         lintableModule.analyzeDependency(dependency5, projects[LIBRARY_PROJECT]!!)
 
         val lintErrorFile = projects[LIBRARY_PROJECT]!!.file(
-            "build/reports/${LibraryAllowListDependenciesLint::class.java.simpleName}/$LINT_FILENAME"
+            "build/reports/LibraryWhiteListedDependenciesLint/$LINT_FILENAME"
         )
         val lintOutPut = lintErrorFile.inputStream().bufferedReader().use { it.readText() }
 
