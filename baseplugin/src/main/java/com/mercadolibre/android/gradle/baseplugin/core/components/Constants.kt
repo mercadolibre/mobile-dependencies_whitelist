@@ -46,14 +46,14 @@ const val APP_PLUGIN = "com.android.application"
 
 /** This list contains the plugins that an library needs. */
 val LIBRARY_PLUGINS = listOf(
-    KOTLIN_ANDROID,
-    LIBRARY_PLUGIN
+    LIBRARY_PLUGIN,
+    KOTLIN_ANDROID
 )
 
 /** This list contains the plugins that an app needs. */
 val APP_PLUGINS = listOf(
-    KOTLIN_ANDROID,
-    APP_PLUGIN
+    APP_PLUGIN,
+    KOTLIN_ANDROID
 )
 /** This variable contains an CONSOLE style. */
 const val WARNIGN_MESSAGE = "WARNING:"
