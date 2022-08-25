@@ -3,7 +3,7 @@ package com.mercadolibre.android.gradle.baseplugin.core.components
 import org.gradle.api.JavaVersion
 
 internal const val MIN_SDK_LEVEL = 23
-internal const val COMPILE_API_SDK_LEVEL = 30
+internal const val COMPILE_API_SDK_LEVEL = 32
 internal const val BUILD_TOOLS_VERSION = "30.0.2"
 
 internal const val GRADLE_VERSION = 7
