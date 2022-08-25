@@ -9,8 +9,6 @@ import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.depen
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.Status
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.StatusBase
 import com.mercadolibre.android.gradle.baseplugin.core.components.ALLOWLIST_CONSTANT
-import com.mercadolibre.android.gradle.baseplugin.core.components.ANSI_GREEN
-import com.mercadolibre.android.gradle.baseplugin.core.components.ANSI_YELLOW
 import com.mercadolibre.android.gradle.baseplugin.core.components.ARROW
 import com.mercadolibre.android.gradle.baseplugin.core.components.EXPIRES_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.GROUP_CONSTANT
@@ -23,8 +21,6 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_WARNIGN_D
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_WARNIGN_TITLE
 import com.mercadolibre.android.gradle.baseplugin.core.components.NAME_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.VERSION_CONSTANT
-import com.mercadolibre.android.gradle.baseplugin.core.components.ansi
-import com.mercadolibre.android.gradle.baseplugin.core.components.removeAnsi
 import org.gradle.api.Project
 import java.net.URL
 import java.text.SimpleDateFormat
@@ -109,15 +105,15 @@ class LibraryAllowListDependenciesLint(private val variantNames: List<String>) :
             var availableVersion = ""
 
             if (depAllowListData.availableVersion != null) {
-                availableVersion = "Available version $ARROW ${depAllowListData.availableVersion}".ansi(ANSI_GREEN)
+                availableVersion = "Available version $ARROW ${depAllowListData.availableVersion}"
             }
 
             message += "(${findDependencyInList(dependency, allowListDependencies).allowListDep?.rawExpiresDate})" +
-                " - ${dependency.group}:${dependency.name}:${dependency.version} (${"Deprecated!".ansi(ANSI_YELLOW)}) $availableVersion\\n"
+                " - ${dependency.group}:${dependency.name}:${dependency.version} (Deprecated!) $availableVersion\\n"
         }
         message += "\n$LINT_WARNIGN_DESCRIPTION\n"
         println(message)
-        file.appendText(message.removeAnsi(ANSI_GREEN).removeAnsi(ANSI_YELLOW))
+        file.appendText(message)
     }
 
     private fun findDependencyInList(dependency: Dependency, list: ArrayList<Dependency>): DependencyDataInAllowList {
@@ -151,10 +147,9 @@ class LibraryAllowListDependenciesLint(private val variantNames: List<String>) :
             hasFailed = true
             println("\n" + LINT_ERROR_TITLE)
             file.writeText(LINT_ERROR_TITLE)
-            file.appendText("${System.getProperty("line.separator")}${message.removeAnsi(ANSI_GREEN).removeAnsi(ANSI_YELLOW)}")
+            file.appendText("${System.getProperty("line.separator")}$message")
+            println(message)
         }
-
-        println(message)
     }
 
     /**

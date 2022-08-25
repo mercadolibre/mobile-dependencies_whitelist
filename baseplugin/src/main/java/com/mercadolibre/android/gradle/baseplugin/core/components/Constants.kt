@@ -46,14 +46,14 @@ const val APP_PLUGIN = "com.android.application"
 
 /** This list contains the plugins that an library needs. */
 val LIBRARY_PLUGINS = listOf(
-    KOTLIN_ANDROID,
-    LIBRARY_PLUGIN
+    LIBRARY_PLUGIN,
+    KOTLIN_ANDROID
 )
 
 /** This list contains the plugins that an app needs. */
 val APP_PLUGINS = listOf(
-    KOTLIN_ANDROID,
-    APP_PLUGIN
+    APP_PLUGIN,
+    KOTLIN_ANDROID
 )
 /** This variable contains an CONSOLE style. */
 const val WARNIGN_MESSAGE = "WARNING:"
@@ -302,12 +302,15 @@ const val LINT_REPORT_ERROR = "Cant report this type of dependency"
 const val LINT_RELEASE_ERROR_TITLE = "Error. Found non-release dependencies in the module release version:"
 
 /** This variable contains values necessary for the operation of a module. */
-val LINT_LIBRARY_FILE_BLOCKER = "build/reports/LibraryAllowListDependenciesLint/$LINT_FILENAME"
+// In case of modifying this variable it is necessary to change it in Mobile-cd
+val LINT_LIBRARY_FILE_BLOCKER = "build/reports/LibraryWhiteListedDependenciesLint/$LINT_FILENAME"
 
 /** This variable contains values necessary for the operation of a module. */
-val LINT_LIBRARY_FILE_WARNING = "build/reports/LibraryAllowListDependenciesLint/$LINT_WARNING_FILENAME"
+// In case of modifying this variable it is necessary to change it in Mobile-cd
+val LINT_LIBRARY_FILE_WARNING = "build/reports/LibraryWhiteListedDependenciesLint/$LINT_WARNING_FILENAME"
 
 /** This variable contains values necessary for the operation of a module. */
+// In case of modifying this variable it is necessary to change it in Mobile-cd
 val LINT_RELEASE_FILE = "build/reports/ReleaseDependenciesLint/$LINT_FILENAME"
 
 /**

@@ -24,7 +24,7 @@ siendo implementadas en el proyecto. Hay un closure sobre cada proyecto donde po
     enabled = true
     dependenciesLintEnabled = true
     releaseDependenciesLintEnabled = true
-    dependencyWhitelistUrl = "https://raw.githubusercontent.com/mercadolibre/mobile-dependencies_whitelist/master/android-whitelist.json" // Si alguien distinto a Meli quiere su whitelist, deberia cambiar esto
+    dependencyAllowListUrl = "https://raw.githubusercontent.com/mercadolibre/mobile-dependencies_whitelist/master/android-whitelist.json" // Si alguien distinto a Meli quiere su whitelist, deberia cambiar esto
     }
 ```
 
