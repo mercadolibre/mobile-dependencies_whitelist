@@ -1065,13 +1065,6 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
-      "expires": "2022-08-25",
-      "name": "MLScanner",
-      "source": "private",
-      "target": "production",
-      "version": "~>\\s?[1-3]+.[0-9]+"
-    },
-    {
       "name": "Scanner",
       "source": "private",
       "target": "production",
