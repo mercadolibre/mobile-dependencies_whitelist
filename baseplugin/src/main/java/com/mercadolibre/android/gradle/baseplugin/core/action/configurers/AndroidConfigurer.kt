@@ -29,6 +29,10 @@ open class AndroidConfigurer : Configurer, ExtensionGetter() {
                 with(defaultConfig) {
                     setMinSdkVersion(provideMinSdk())
                     setTargetSdkVersion(provideApiSdkLevel())
+                    // Stops the Gradle plugin’s automatic rasterization of vectors
+                    vectorDrawables.useSupportLibrary = false
+                    generatedDensities = emptySet()
+                    vectorDrawables.setGeneratedDensities(emptySet())
                     consumerProguardFiles("proguard-rules.pro")
                 }
 
