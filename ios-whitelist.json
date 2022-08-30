@@ -1572,6 +1572,12 @@
       "source": "public",
       "target": "production",
       "version": "3.16.1"
+    },
+    {
+      "name": "MLReviews",
+      "source": "private",
+      "target": "test",
+      "version": "^~>\\s?2.[0-9]+.?[0-9]*$"
     }
   ]
 }
