@@ -1576,13 +1576,13 @@
     {
       "name": "MLReviews",
       "source": "private",
-      "target": "test",
+      "target": "production",
       "version": "^~>\\s?2.[0-9]+.?[0-9]*$"
     },
     {
       "name": "Reviews",
       "source": "private",
-      "target": "test",
+      "target": "production",
       "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
     }
   ]
