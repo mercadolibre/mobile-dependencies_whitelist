@@ -1,6 +1,3 @@
-# 15.0.0
-- Se actualiza la version de COMPILE_API_SDK_LEVEL a 32 para soportar Android 12
-
 # 14.2.1
 - Se cambia la carpeta donde se almacenan los reportes de linteo para que CI los detecte
 - Se elimina el estilo que aplica el Linteo a los output ya que CI los formatea de una forma diferente
