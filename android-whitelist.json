@@ -421,9 +421,15 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "melidata-sdk",
       "version": "14\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "melidata-sdk",
+      "version": "15\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -639,8 +645,13 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2022-09-05",
       "group": "com\\.mercadolibre\\.android\\.commons",
       "version": "23\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.commons",
+      "version": "24\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.remote\\.configuration",
@@ -2031,9 +2042,15 @@
       "version": "1\\.+"
     },
     {
+      "expires": "2022-10-01",
       "group": "com\\.mercadolibre\\.android\\.opentelemetry",
       "name": "setup",
       "version": "3\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.opentelemetry",
+      "name": "setup",
+      "version": "4\\.+"
     },
     {
       "expires": "2022-09-15",
@@ -2042,9 +2059,15 @@
       "version": "1\\.+"
     },
     {
+      "expires": "2022-10-01",
       "group": "com\\.mercadolibre\\.android\\.opentelemetry",
       "name": "core",
       "version": "3\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.opentelemetry",
+      "name": "core",
+      "version": "4\\.+"
     },
     {
       "expires": "2022-09-01",
