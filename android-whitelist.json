@@ -2048,9 +2048,21 @@
       "version": "4\\.+"
     },
     {
+      "expires": "2022-09-15",
+      "group": "com\\.mercadolibre\\.android\\.opentelemetry",
+      "name": "core",
+      "version": "1\\.+"
+    },
+    {
+      "expires": "2022-10-01",
       "group": "com\\.mercadolibre\\.android\\.opentelemetry",
       "name": "core",
       "version": "3\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.opentelemetry",
+      "name": "core",
+      "version": "4\\.+"
     },
     {
       "expires": "2022-09-01",
