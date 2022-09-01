@@ -1584,6 +1584,12 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
+    },
+    {
+      "name": "NetworkStatus",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
     }
   ]
 }
