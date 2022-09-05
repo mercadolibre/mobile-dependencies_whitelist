@@ -259,13 +259,6 @@
       "version": "0.8"
     },
     {
-      "expires": "2022-08-30",
-      "name": "InAppUpdates",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
       "name": "InAppUpdateFlow",
       "source": "private",
       "target": "production",
@@ -385,13 +378,6 @@
     },
     {
       "name": "Pendings",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "expires": "2022-08-30",
-      "name": "PXAddon",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
@@ -589,17 +575,10 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "expires": "2022-10-30",
       "name": "MLMetrics",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+"
-    },
-    {
-      "name": "MLMetrics",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "MLMilestoneTracker",
@@ -810,13 +789,6 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?3.[0-9]+$"
-    },
-    {
-      "expires": "2022-08-29",
-      "name": "MerchRealestates",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "MerchRealestates",
@@ -1181,20 +1153,6 @@
       "version": "^~>\\s?10|[1-9].[0-9]+$"
     },
     {
-      "expires": "2022-08-29",
-      "name": "StartUPInitializer",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?3.[0-9]+.?[0-9]*$"
-    },
-    {
-      "expires": "2022-08-29",
-      "name": "StartUPInitializer",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?4.[0-9]+.?[0-9]*$"
-    },
-    {
       "name": "StartUPInitializer",
       "source": "private",
       "target": "production",
@@ -1385,13 +1343,6 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?2.[0-9]+"
-    },
-    {
-      "expires": "2022-08-29",
-      "name": "NewRelicAgent",
-      "source": "public",
-      "target": "production",
-      "version": "^~>\\s?7.3.[0-9]+$"
     },
     {
       "name": "MLAdjust",
