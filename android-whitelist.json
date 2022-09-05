@@ -61,6 +61,16 @@
       "version": "3\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.buyingflow",
+      "name": "checkout_flow",
+      "version": "0\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.buyingflow",
+      "name": "shipping_flow",
+      "version": "0\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.registration",
       "name": "core",
       "version": "mercadolibre-6\\.\\+"
