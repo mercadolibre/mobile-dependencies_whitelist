@@ -333,36 +333,6 @@
       "version": "production-12\\.\\+|develop-12\\.\\+"
     },
     {
-      "expires": "2022-08-30",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "authentication",
-      "version": "18\\.\\+"
-    },
-    {
-      "expires": "2022-08-30",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "authentication-enrollment",
-      "version": "19\\.\\+"
-    },
-    {
-      "expires": "2022-08-30",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "authentication",
-      "version": "19\\.\\+"
-    },
-    {
-      "expires": "2022-08-30",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "authentication-enrollment",
-      "version": "20\\.\\+"
-    },
-    {
-      "expires": "2022-08-30",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "authentication",
-      "version": "20\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android",
       "name": "authentication-enrollment",
       "version": "21\\.\\+"
@@ -378,12 +348,6 @@
       "version": "3\\.\\+"
     },
     {
-      "expires": "2022-08-31",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "configuration-manager",
-      "version": "4\\.\\+|5\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android",
       "name": "configuration-manager",
       "version": "6\\.\\+"
@@ -392,18 +356,6 @@
       "group": "com\\.mercadolibre\\.android\\.ignite",
       "name": "core",
       "version": "5\\.\\+"
-    },
-    {
-      "expires": "2022-08-30",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "login",
-      "version": "mercadopago-14\\.\\+|mercadolibre-14\\.\\+"
-    },
-    {
-      "expires": "2022-08-30",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "login",
-      "version": "mercadopago-15\\.\\+|mercadolibre-15\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -806,11 +758,6 @@
     {
       "group": "com\\.mercadolibre\\.android\\.qadb",
       "version": "5\\.\\+"
-    },
-    {
-      "expires": "2022-09-01",
-      "group": "com\\.mercadolibre\\.android\\.qadb",
-      "version": "3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.remedy",
@@ -2070,12 +2017,6 @@
       "version": "4\\.+"
     },
     {
-      "expires": "2022-09-01",
-      "group": "com\\.mercadolibre\\.android\\.braze",
-      "name": "core",
-      "version": "1\\.0\\.0"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.braze",
       "name": "core",
       "version": "3.\\+"
@@ -2143,6 +2084,11 @@
     {
       "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
       "name": "core",
+      "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
+      "name": "recommendations",
       "version": "1\\.+"
     },
     {
