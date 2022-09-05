@@ -343,14 +343,26 @@
       "version": "production-12\\.\\+|develop-12\\.\\+"
     },
     {
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "authentication-enrollment",
       "version": "21\\.\\+"
     },
     {
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "authentication",
       "version": "21\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "authentication-enrollment",
+      "version": "22\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "authentication",
+      "version": "22\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -2123,6 +2135,16 @@
       "group": "com\\.polidea\\.rxandroidble",
       "name": "rxandroidble",
       "version": "1\\.5\\.0"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.reviews",
+      "name": "core",
+      "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.reviews",
+      "name": "form",
+      "version": "1\\.+"
     }
   ]
 }
