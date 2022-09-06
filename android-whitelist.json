@@ -61,6 +61,16 @@
       "version": "3\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.buyingflow",
+      "name": "checkout_flow",
+      "version": "0\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.buyingflow",
+      "name": "shipping_flow",
+      "version": "0\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.registration",
       "name": "core",
       "version": "mercadolibre-6\\.\\+"
@@ -1988,6 +1998,15 @@
     {
       "group": "io\\.opentelemetry",
       "name": "opentelemetry-sdk"
+    },
+    {
+      "group": "io\\.opentelemetry",
+      "name": "opentelemetry-extension-trace-propagators"
+    },
+    {
+      "group": "io\\.opentelemetry\\.instrumentation",
+      "name": "opentelemetry-okhttp-3.0",
+      "version": "1\\.+"
     },
     {
       "group": "io\\.grpc",
