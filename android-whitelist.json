@@ -2000,6 +2000,15 @@
       "name": "opentelemetry-sdk"
     },
     {
+      "group": "io\\.opentelemetry",
+      "name": "opentelemetry-extension-trace-propagators"
+    },
+    {
+      "group": "io\\.opentelemetry\\.instrumentation",
+      "name": "opentelemetry-okhttp-3.0",
+      "version": "1\\.+"
+    },
+    {
       "group": "io\\.grpc",
       "name": "grpc-okhttp",
       "version": "1\\.41\\.+"
