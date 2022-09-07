@@ -50,21 +50,6 @@ class JacocoTest : AbstractPluginManager() {
     }
 
     @org.junit.Test
-    fun `When the JavaJacocoModule is called configure her tasks`() {
-        val testTask = mockk<Test>(relaxed = true)
-        val jacocoTestExtension = mockk<JacocoTaskExtension>(relaxed = true)
-        val list = listOf(testTask)
-
-        every { testTask.extensions.findByType(JacocoTaskExtension::class.java) } returns jacocoTestExtension
-
-        jacocoModule.configureTasks(list)
-
-        verify { testTask.testLogging }
-        verify { jacocoTestExtension.excludes = listOf("jdk.internal.*") }
-        verify { jacocoTestExtension.isIncludeNoLocationClasses = true }
-    }
-
-    @org.junit.Test
     fun `When the JavaJacocoModule is called before evaluate execute her configuration`() {
         val project = mockk<Project>(relaxed = true)
 
