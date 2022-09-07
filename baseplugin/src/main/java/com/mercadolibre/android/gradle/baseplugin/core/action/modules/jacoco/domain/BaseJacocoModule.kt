@@ -15,6 +15,7 @@ import org.gradle.api.tasks.testing.Test
 import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 import org.gradle.api.tasks.testing.logging.TestLogEvent
 import org.gradle.kotlin.dsl.apply
+import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.withType
 import org.gradle.testing.jacoco.plugins.JacocoTaskExtension
 
@@ -32,22 +33,26 @@ open class BaseJacocoModule : Module() {
         val task = project.tasks.register(JACOCO_FULL_REPORT_TASK).get()
         task.group = JACOCO_GROUP
 
+        configureTasks(project)
         afterEvaluate {
             createNeededTasks(project)
-            configureTasks(project.tasks.withType<Test>().toList())
+            configureTasks(project)
         }
     }
 
     /**
      * This method is in charge to config the Report Tasks.
      */
-    fun configureTasks(tasks: List<Test>) {
-        for (testTask in tasks) {
-            val extension = testTask.extensions.findByType(JacocoTaskExtension::class.java)!!
-            extension.isIncludeNoLocationClasses = true
-            extension.excludes = listOf("jdk.internal.*")
-            testTask.testLogging.events = setOf(TestLogEvent.FAILED)
-            testTask.testLogging.exceptionFormat = TestExceptionFormat.FULL
+    fun configureTasks(project: Project) {
+        project.tasks.withType<Test> {
+            configure<JacocoTaskExtension> {
+                this.excludes = mutableListOf("jdk.internal.*")
+                isIncludeNoLocationClasses = true
+            }
+            testLogging {
+                events = setOf(TestLogEvent.FAILED)
+                exceptionFormat = TestExceptionFormat.FULL
+            }
         }
     }
 

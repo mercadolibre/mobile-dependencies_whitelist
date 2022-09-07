@@ -1,7 +1,6 @@
 package com.mercadolibre.android.gradle.baseplugin.unitary.modules.lint.java
 
 import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.PluginConfigurer
-import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.LintGradleExtension
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.library.JavaLintModule
 import com.mercadolibre.android.gradle.baseplugin.core.components.LIBRARY_PLUGINS
 import com.mercadolibre.android.gradle.baseplugin.integration.utils.domain.ModuleType
@@ -31,10 +30,6 @@ class JavaLintModuleTest : AbstractPluginManager() {
 
         PluginConfigurer(LIBRARY_PLUGINS).configureProject(projects[LIBRARY_PROJECT]!!)
         addMockVariant(projects[LIBRARY_PROJECT]!!, ModuleType.LIBRARY)
-
-        findExtension<LintGradleExtension>(projects[LIBRARY_PROJECT]!!)?.apply {
-            this.enabled = true
-        }
     }
 
     @org.junit.Test

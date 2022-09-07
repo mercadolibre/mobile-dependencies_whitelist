@@ -1,5 +1,8 @@
-# 15.0.0
-- Se actualiza la version de COMPILE_API_SDK_LEVEL a 32 para soportar Android 12
+# 14.2.2
+- Se elimina la variable que bloquea el modulo para utilizar las dos variables que ya tenia, asi dejando una sola forma de bloquear el modulo
+- Se elimina el error de output que genera el linteo al no aplicar el salto de linea
+- Se modifica la forma de declarar el exclude de las tasks de jacoco para que funcione con java 11
+- Se modifica la forma de declarar la variable isIncludeNoLocationClasses de las tasks de jacoco para que detecte el coverage
 
 # 14.2.1
 - Se cambia la carpeta donde se almacenan los reportes de linteo para que CI los detecte

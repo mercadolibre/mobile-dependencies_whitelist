@@ -53,10 +53,6 @@ class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
         projects[LIBRARY_PROJECT] = moduleManager.createSampleSubProject(LIBRARY_PROJECT, tmpFolder, root)
 
         PluginConfigurer(LIBRARY_PLUGINS).configureProject(projects[LIBRARY_PROJECT]!!)
-        findExtension<LintGradleExtension>(projects[LIBRARY_PROJECT]!!)?.apply {
-            this.enabled = true
-            this.dependenciesLintEnabled = true
-        }
 
         projects[LIBRARY_PROJECT]!!.extensions.create(LINTABLE_EXTENSION, LintGradleExtension::class.java)
     }
@@ -81,7 +77,6 @@ class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
     fun `When the LibraryAllowListDependenciesLintTest is disable and lint is called`() {
 
         findExtension<LintGradleExtension>(projects[LIBRARY_PROJECT]!!)?.apply {
-            enabled = false
             dependenciesLintEnabled = false
             dependencyAllowListUrl = ALLOW_LIST_URL
         }

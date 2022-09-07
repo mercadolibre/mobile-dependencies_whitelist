@@ -109,7 +109,7 @@ class LibraryAllowListDependenciesLint(private val variantNames: List<String>) :
             }
 
             message += "(${findDependencyInList(dependency, allowListDependencies).allowListDep?.rawExpiresDate})" +
-                " - ${dependency.group}:${dependency.name}:${dependency.version} (Deprecated!) $availableVersion\\n"
+                " - ${dependency.group}:${dependency.name}:${dependency.version} (Deprecated!) $availableVersion\n"
         }
         message += "\n$LINT_WARNIGN_DESCRIPTION\n"
         println(message)
