@@ -744,6 +744,12 @@
       "version": "^~>\\s?1.[0-9]+"
     },
     {
+      "name": "MLSIBillingInfo",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "MLSupermarket",
       "source": "private",
       "target": "production",
@@ -1061,6 +1067,13 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "expires": "2022-09-30",
+      "name": "MLScanner",
+      "source": "private",
+      "target": "production",
+      "version": "~>\\s?[1-3]+.[0-9]+"
     },
     {
       "name": "Scanner",
