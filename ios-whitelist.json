@@ -1,6 +1,12 @@
 {
   "whitelist": [
     {
+      "name": "AdvertisingADN",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+"
+    },
+    {
       "name": "MLCheckoutFlow",
       "source": "private",
       "target": "production",
