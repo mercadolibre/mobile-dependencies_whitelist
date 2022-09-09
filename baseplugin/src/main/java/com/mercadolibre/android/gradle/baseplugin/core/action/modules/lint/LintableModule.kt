@@ -6,6 +6,7 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.LINTABLE_DESCR
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINTABLE_EXTENSION
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINTABLE_TASK
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_TASK_FAIL_MESSAGE
+import com.mercadolibre.android.gradle.baseplugin.core.components.WARNIGN_MESSAGE
 import com.mercadolibre.android.gradle.baseplugin.core.domain.interfaces.Module
 import org.gradle.api.GradleException
 import org.gradle.api.Project
@@ -15,6 +16,22 @@ import org.gradle.language.base.plugins.LifecycleBasePlugin
  * The LintableModule module is in charge of configuring the Linteo in each of the variants of the project modules.
  */
 abstract class LintableModule : Module() {
+
+    /**
+     * This method is responsible for execute the configuration of the module.
+     */
+    override fun executeModule(project: Project) {
+        val extension = findExtension(project, getExtensionName()) as? LintGradleExtension
+        if (extension != null) {
+            if (extension.dependenciesLintEnabled && extension.releaseDependenciesLintEnabled) {
+                configure(project)
+            } else {
+                println("$WARNIGN_MESSAGE The ${getExtensionName()} is manually disabled in ${project.name} module.")
+            }
+        } else {
+            configure(project)
+        }
+    }
 
     /**
      * This method is responsible for providing the extension name that Lintable needs to work.
