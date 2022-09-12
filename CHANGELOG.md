@@ -1,5 +1,5 @@
 # 14.3.0
-- TODO
+- Desabilitar la generación de imágenes PNG a partir de elementos `vector drawables`
 
 # 14.2.2
 - Se elimina la variable que bloquea el modulo para utilizar las dos variables que ya tenia, asi dejando una sola forma de bloquear el modulo
