@@ -5,7 +5,7 @@
 
 
 ## Retrocompatibilidad
-#### Indicar los cambios que van a tener que hacer los que están usando esta lib si califica.
+#### Indicar los cambios que van a tener que hacer los que están usando esta dependencia, si califica.
 
 
 ## ¿Por qué necesitamos este cambio?
