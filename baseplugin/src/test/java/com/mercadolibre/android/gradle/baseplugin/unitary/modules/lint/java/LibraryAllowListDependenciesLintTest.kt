@@ -69,7 +69,8 @@ class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
         }
 
         assert(
-            statusWithOutMessage.message(ANY_NAME) == "- $ANY_NAME (${ANY_NAME.toLowerCase().capitalize()}) Available version $ARROW 1.+"
+            statusWithOutMessage.message(ANY_NAME) ==
+                "- $ANY_NAME (${ANY_NAME.toLowerCase().capitalize()}) Available version $ARROW 1.+"
         )
     }
 

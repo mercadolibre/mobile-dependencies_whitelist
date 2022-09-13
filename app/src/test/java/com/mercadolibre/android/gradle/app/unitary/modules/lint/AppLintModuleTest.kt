@@ -33,9 +33,6 @@ class AppLintModuleTest : AbstractPluginManager() {
 
         PluginConfigurer(APP_PLUGINS).configureProject(projects[APP_PROJECT]!!)
         addMockVariant(projects[APP_PROJECT]!!, ModuleType.APP)
-        findExtension<LintGradleExtension>(projects[APP_PROJECT]!!)?.apply {
-            this.enabled = true
-        }
     }
 
     @org.junit.Test

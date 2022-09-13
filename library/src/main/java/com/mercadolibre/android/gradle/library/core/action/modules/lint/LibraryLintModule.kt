@@ -8,7 +8,6 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.API_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.COMPILE_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.IMPLEMENTATION_CONSTANT
 import org.gradle.api.Project
-import org.gradle.configurationcache.extensions.capitalized
 
 /**
  * This class takes care of the Lint of the App type modules.
@@ -23,9 +22,9 @@ class LibraryLintModule : LintableModule() {
         findExtension<LibraryExtension>(project)?.apply {
             libraryVariants.all {
                 val variantName = this.name
-                variantNames.add("${variantName}${IMPLEMENTATION_CONSTANT.capitalized()}")
-                variantNames.add("${variantName}${API_CONSTANT.capitalized()}")
-                variantNames.add("${variantName}${COMPILE_CONSTANT.capitalized()}")
+                variantNames.add("${variantName}${IMPLEMENTATION_CONSTANT.capitalize()}")
+                variantNames.add("${variantName}${API_CONSTANT.capitalize()}")
+                variantNames.add("${variantName}${COMPILE_CONSTANT.capitalize()}")
             }
         }
         variantNames.add(API_CONSTANT)

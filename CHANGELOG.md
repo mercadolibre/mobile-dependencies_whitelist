@@ -1,3 +1,6 @@
+# 14.2.3
+- Se modifica la forma en que se capitalizan las variables ya que la forma en que se hacia podia no estar declarada en algunos repositorios 
+
 # 14.2.2
 - Se elimina la variable que bloquea el modulo para utilizar las dos variables que ya tenia, asi dejando una sola forma de bloquear el modulo
 - Se elimina el error de output que genera el linteo al no aplicar el salto de linea

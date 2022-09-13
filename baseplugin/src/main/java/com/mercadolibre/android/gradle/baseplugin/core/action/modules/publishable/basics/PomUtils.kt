@@ -23,7 +23,6 @@ import org.gradle.api.Project
 import org.gradle.api.XmlProvider
 import org.gradle.api.artifacts.Dependency
 import org.gradle.api.artifacts.ModuleDependency
-import org.gradle.configurationcache.extensions.capitalized
 
 /**
  * PomUtils is in charge of generating the Nodes that contain the dependencies of the project so that they
@@ -37,19 +36,19 @@ class PomUtils : ExtensionGetter() {
                 DEFAULT_CONSTANT,
                 ARCHIVES_CONSTANT,
                 COMPILE_CONSTANT,
-                "${variantName}${COMPILE_CONSTANT.capitalized()}",
+                "${variantName}${COMPILE_CONSTANT.capitalize()}",
                 IMPLEMENTATION_CONSTANT,
-                "${variantName}${IMPLEMENTATION_CONSTANT.capitalized()}",
+                "${variantName}${IMPLEMENTATION_CONSTANT.capitalize()}",
                 API_CONSTANT,
-                "${variantName}${API_CONSTANT.capitalized()}"
+                "${variantName}${API_CONSTANT.capitalize()}"
             )
 
         if (flavor != null) {
             compileConfigurations.addAll(
                 listOf(
-                    "${flavor}${API_CONSTANT.capitalized()}",
-                    "${flavor}${IMPLEMENTATION_CONSTANT.capitalized()}",
-                    "${flavor}${COMPILE_CONSTANT.capitalized()}"
+                    "${flavor}${API_CONSTANT.capitalize()}",
+                    "${flavor}${IMPLEMENTATION_CONSTANT.capitalize()}",
+                    "${flavor}${COMPILE_CONSTANT.capitalize()}"
                 )
             )
         }
@@ -57,20 +56,20 @@ class PomUtils : ExtensionGetter() {
         val testConfigurations = listOf(
             TEST_CONSTANT,
             "$TEST_CONSTANT${variantName.capitalize()}",
-            "$TEST_CONSTANT${COMPILE_CONSTANT.capitalized()}",
-            "$TEST_CONSTANT${COMPILE_CONSTANT.capitalized()}${variantName.capitalize()}"
+            "$TEST_CONSTANT${COMPILE_CONSTANT.capitalize()}",
+            "$TEST_CONSTANT${COMPILE_CONSTANT.capitalize()}${variantName.capitalize()}"
         )
         val runtimeConfigurations =
             listOf(
                 RUNTIME_CONSTANT,
                 "${RUNTIME_CONSTANT}Only",
-                "${variantName}${RUNTIME_CONSTANT.capitalized()}", "${variantName}${RUNTIME_CONSTANT.capitalized()}Only"
+                "${variantName}${RUNTIME_CONSTANT.capitalize()}", "${variantName}${RUNTIME_CONSTANT.capitalize()}Only"
             )
         val providedConfigurations =
             listOf(
                 PROVIDED_CONSTANT,
                 "${COMPILE_CONSTANT}Only",
-                "${variantName}${COMPILE_CONSTANT.capitalized()}Only"
+                "${variantName}${COMPILE_CONSTANT.capitalize()}Only"
             )
 
         return when (configuration) {
@@ -91,11 +90,11 @@ class PomUtils : ExtensionGetter() {
     }
 
     private fun addGroup(node: Node, dependency: Dependency) {
-        node.appendNode("$GROUP_CONSTANT${ID_CONSTANT.capitalized()}", dependency.group)
+        node.appendNode("$GROUP_CONSTANT${ID_CONSTANT.capitalize()}", dependency.group)
     }
 
     private fun addName(node: Node, dependency: Dependency) {
-        node.appendNode("$ARTIFACT_CONSTANT${ID_CONSTANT.capitalized()}", dependency.name)
+        node.appendNode("$ARTIFACT_CONSTANT${ID_CONSTANT.capitalize()}", dependency.name)
     }
 
     private fun addVersion(node: Node, dependency: Dependency) {
@@ -115,8 +114,8 @@ class PomUtils : ExtensionGetter() {
                 val exclusionsNode = node.appendNode(EXCLUSIONS_CONSTANT)
                 dependency.excludeRules.all { rule ->
                     val exclusionNode = exclusionsNode.appendNode(EXCLUSION_CONSTANT)
-                    exclusionNode.appendNode("$GROUP_CONSTANT${ID_CONSTANT.capitalized()}", rule.group)
-                    exclusionNode.appendNode("$ARTIFACT_CONSTANT${ID_CONSTANT.capitalized()}", rule.module)
+                    exclusionNode.appendNode("$GROUP_CONSTANT${ID_CONSTANT.capitalize()}", rule.group)
+                    exclusionNode.appendNode("$ARTIFACT_CONSTANT${ID_CONSTANT.capitalize()}", rule.module)
                     true
                 }
             }

@@ -30,10 +30,6 @@ class LibraryLintModuleTest : AbstractPluginManager() {
 
         PluginConfigurer(LIBRARY_PLUGINS).configureProject(projects[LIBRARY_PROJECT]!!)
         addMockVariant(projects[LIBRARY_PROJECT]!!, ModuleType.LIBRARY)
-
-        findExtension<LintGradleExtension>(projects[LIBRARY_PROJECT]!!)?.apply {
-            this.enabled = true
-        }
     }
 
     @org.junit.Test

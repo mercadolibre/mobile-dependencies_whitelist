@@ -18,7 +18,6 @@ import org.gradle.api.JavaVersion
 import org.gradle.api.Project
 import org.gradle.api.Task
 import org.gradle.api.tasks.TaskProvider
-import org.gradle.configurationcache.extensions.capitalized
 import org.gradle.external.javadoc.JavadocMemberLevel
 import org.gradle.external.javadoc.StandardJavadocDocletOptions
 import java.io.File
@@ -127,7 +126,7 @@ abstract class PublishAarTask : PublishTask() {
     /**
      * This method is in charge of looking for the Source Jar task.
      */
-    fun getSourcesJarTaskName(variant: BaseVariant): String = "${variant.name}${SOURCES_CONSTANT.capitalized()}$PACKAGING_JAR_CONSTANT"
+    fun getSourcesJarTaskName(variant: BaseVariant): String = "${variant.name}${SOURCES_CONSTANT.capitalize()}$PACKAGING_JAR_CONSTANT"
 
     /**
      * This method is in charge of looking for the Java Doc Jar task.
