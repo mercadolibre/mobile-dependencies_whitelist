@@ -1,6 +1,6 @@
 default: &defaultJob
   docker:
-    - image: circleci/node:latest
+    - image: cimg/ruby:3.0.2-node
   resource_class: small
   steps:
     - checkout
@@ -8,16 +8,11 @@ default: &defaultJob
         name: "Install linter"
         command: sudo npm install jsonlint -g
     - run:
-        name: "Run linter"
-        command: jsonlint $FILE
-    - run:
         name: "Install JSON sorter"
         command: sudo npm install json-sort-cli -g
     - run:
-        name: "Run JSON sorter lint"
-        command: | 
-          jsonsort $FILE
-          if [[ $(git ls-files -m | wc -l | xargs) != 0 ]]; then exit 1; else exit 0; fi
+        name: "Run Checks"
+        command: ./scripts/checks.sh
 
 version: 2
 jobs:
@@ -46,7 +41,7 @@ jobs:
       - checkout
       - run:
           name: Run Clean Script
-          command: ./scripts/clean_whitelists.sh
+          command: ./scripts/clean_allowlists.sh
 
 workflows:
   version: 2

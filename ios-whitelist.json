@@ -1,10 +1,34 @@
 {
   "whitelist": [
     {
-      "name": "MLCheckoutSDK",
+      "name": "AdvertisingADN",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+"
+    },
+    {
+      "name": "MLCheckoutFlow",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+.?[0-9]*$"
+    },
+    {
+      "name": "BfSplitPayment",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?2.[0-9]+.?[0-9]*$"
+    },
+    {
+      "name": "MLCheckout",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?9.[0-9]+.?[0-9]*$"
+    },
+    {
+      "name": "MLCheckoutSDK",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?3.[0-9]+.?[0-9]*$"
     },
     {
       "name": "PPMagnesWrapper",
@@ -16,7 +40,7 @@
       "name": "Adjust",
       "source": "public",
       "target": "production",
-      "version": "(4.28.([0-9]+)|4.29.([0-9]+))$"
+      "version": "^~>\\s?4.29.[0-9]+$"
     },
     {
       "name": "AmountLabel",
@@ -28,7 +52,13 @@
       "name": "Bugsnag",
       "source": "public",
       "target": "production",
-      "version": "6.9.6"
+      "version": "^~>\\s?6.[0-9]+.?[0-9]*$"
+    },
+    {
+      "name": "BugsnagNetworkRequestPlugin",
+      "source": "public",
+      "target": "production",
+      "version": "^~>\\s?6.[0-9]+.?[0-9]*$"
     },
     {
       "name": "CHTCollectionViewWaterfallLayout",
@@ -43,6 +73,12 @@
       "version": "3.4.0"
     },
     {
+      "name": "DataPrivacyHelper",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "DiscountTouchpoint",
       "source": "private",
       "target": "production",
@@ -52,7 +88,19 @@
       "name": "FBSDKCoreKit",
       "source": "public",
       "target": "production",
-      "version": "^~>\\s?(9.0.0)$"
+      "version": "^~>\\s?(13.2.0)$"
+    },
+    {
+      "name": "FBSDKCoreKit_Basics",
+      "source": "public",
+      "target": "production",
+      "version": "^~>\\s?(13.2.0)$"
+    },
+    {
+      "name": "FBAEMKit",
+      "source": "public",
+      "target": "production",
+      "version": "^~>\\s?(13.2.0)$"
     },
     {
       "name": "FSQCollectionViewAlignedLayout",
@@ -223,6 +271,12 @@
       "version": "0.8"
     },
     {
+      "name": "InAppUpdateFlow",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "InStore-Discovery",
       "source": "private",
       "target": "production",
@@ -244,13 +298,7 @@
       "name": "InsurtechFloxComponents",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "name": "InsuProxy",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "InStoreUIComponents",
@@ -305,17 +353,10 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "expires": "2021-10-08",
       "name": "MLAddresses",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "name": "MLAddresses",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?5.[0-9]+$"
+      "version": "^~>\\s?6.[0-9]+$"
     },
     {
       "name": "MLAnalytics",
@@ -357,7 +398,7 @@
       "name": "PXAddon",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "MLCardForm",
@@ -378,7 +419,7 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "name": "MLCard",
+      "name": "MlCards",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
@@ -393,7 +434,13 @@
       "name": "MLCart",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?2.[0-9]+$"
+      "version": "^~>\\s?3.[0-9]+$"
+    },
+    {
+      "name": "BuyingflowCart",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
     },
     {
       "name": "MLCharts",
@@ -417,7 +464,7 @@
       "name": "MLFeesAndInstallments",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s2.[0-9]+$"
+      "version": "^~>\\s2|3.[0-9]+$"
     },
     {
       "name": "MLClassifiedsDynamicFlow",
@@ -447,7 +494,7 @@
       "name": "MLCommons",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
     },
     {
       "name": "MLRemoteConfigurations",
@@ -459,7 +506,7 @@
       "name": "MLCreditsBehaviours",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?[1-2].[0-9]+"
+      "version": "^~>\\s?3.[0-9]+"
     },
     {
       "name": "MLDynamicModal",
@@ -495,13 +542,13 @@
       "name": "MLLocalStorage",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?0.[0-9]+.?[0-9]*$"
     },
     {
       "name": "StaticResources",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "MLLogin",
@@ -525,7 +572,7 @@
       "name": "MLMap",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?2.[0-9]+"
+      "version": "^~>\\s?3.[0-9]+"
     },
     {
       "name": "MLMapComponent",
@@ -534,10 +581,17 @@
       "version": "^~>\\s?2.[0-9]+"
     },
     {
+      "expires": "2022-10-30",
       "name": "MLMelidata",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLMelidata",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLMetrics",
@@ -573,7 +627,7 @@
       "name": "MLNetworking",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?0.[0-9]+.?[0-9]*$"
     },
     {
       "name": "MLNotifications",
@@ -615,7 +669,13 @@
       "name": "MLCommonUIComponents",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?2.[0-9]+"
+    },
+    {
+      "name": "MLRecommendationsCombo",
+      "source": "private",
+      "target": "test",
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "MLRecommendationCombo",
@@ -639,28 +699,40 @@
       "name": "MLRemedy",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?4.[0-9]+"
+      "version": "^~>\\s?5.[0-9]+"
     },
     {
       "name": "MLUserBlocker",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "MLRemedies",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?3.[0-9]+"
+      "version": "^~>\\s?4.[0-9]+"
+    },
+    {
+      "name": "IvCommons",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "MLRuleEngine",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+"
+      "version": "^~>\\s?1.[0-9]+"
     },
     {
       "name": "MLSearch/Suggestion",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?4.[0-9]+$"
+    },
+    {
+      "name": "MLSearch/Compats",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?4.[0-9]+$"
@@ -670,6 +742,12 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MLSIBillingInfo",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLSupermarket",
@@ -711,7 +789,7 @@
       "name": "MLVPP",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?[0-1]+.[0-9]+"
+      "version": "^~>\\s?[0-2]+.[0-9]+"
     },
     {
       "name": "MLVariations",
@@ -735,7 +813,7 @@
       "name": "MPMerchEngine",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?2.[0-9]+$"
+      "version": "^~>\\s?3.[0-9]+$"
     },
     {
       "name": "MerchRealestates",
@@ -771,7 +849,7 @@
       "name": "MLThreeDS",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?[1-2].[0-9].[0-9]+$"
     },
     {
       "name": "OperationDetail/Commons",
@@ -846,13 +924,6 @@
       "version": "4.4.2"
     },
     {
-      "expires": "2021-10-04",
-      "name": "SDWebImage",
-      "source": "public",
-      "target": "production",
-      "version": "^~>\\s?3.[0-9]+$"
-    },
-    {
       "name": "SmiSdk",
       "source": "private",
       "target": "production",
@@ -904,19 +975,19 @@
       "name": "MPContacts",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?3.[0-9]+$"
+      "version": "^~>\\s?4.[0-9]+$"
     },
     {
       "name": "MPMoneyTransfer",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?[2-4].[0-9]+$"
+      "version": "^~>\\s?5.[0-9]+$"
     },
     {
       "name": "MLBiometricSecurity",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?[0-1].[0-9]+$"
     },
     {
       "name": "NativeReauth",
@@ -928,19 +999,26 @@
       "name": "BiometricSecurityUI",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?[1-2].[0-9]+$"
     },
     {
+      "expires": "2022-12-01",
       "name": "SecurityOptions",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "SecurityOptions",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
       "name": "MobileDevicesSecurity",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "MLNotificationsHelpers",
@@ -988,10 +1066,24 @@
       "name": "MeliCards",
       "source": "private",
       "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "expires": "2022-09-30",
+      "name": "MLScanner",
+      "source": "private",
+      "target": "production",
+      "version": "~>\\s?[1-3]+.[0-9]+"
+    },
+    {
+      "name": "Scanner",
+      "source": "private",
+      "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "name": "MLScanner",
+      "expires": "2022-10-30",
+      "name": "Traceability",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
@@ -1000,7 +1092,7 @@
       "name": "Traceability",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "AndesUIDraftModal",
@@ -1012,7 +1104,7 @@
       "name": "MLBFFloxComponent",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "AndesUI",
@@ -1042,7 +1134,7 @@
       "name": "MLCreditsCore",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "MPSPPrepaid",
@@ -1060,25 +1152,25 @@
       "name": "MLPurchases/Integration",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "CardsEngagement/Feedback",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "CardsComponents",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "CardsBanking",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "MLTFSCommons",
@@ -1090,19 +1182,19 @@
       "name": "PointFlowEngine",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?[1-3].[0-9]+$"
+      "version": "^~>\\s?10|[1-9].[0-9]+$"
     },
     {
       "name": "StartUPInitializer",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?[1-2].[0-9]+$"
+      "version": "^~>\\s?5.[0-9]+.?[0-9]*$"
     },
     {
       "name": "PointUI",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?[1-3].[0-9]+$"
+      "version": "^~>\\s?10|[1-9].[0-9]+$"
     },
     {
       "name": "GarexGpage",
@@ -1114,7 +1206,7 @@
       "name": "CardsAcquisition",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "MLConfigurationProvider",
@@ -1186,7 +1278,7 @@
       "name": "Nimble",
       "source": "public",
       "target": "test",
-      "version": "^~>\\s?7.[0-9]+$"
+      "version": "^~>\\s?9.[0-9]+$"
     },
     {
       "name": "OCMock",
@@ -1264,13 +1356,13 @@
       "name": "GoogleMLKit/TextRecognition",
       "source": "public",
       "target": "production",
-      "version": "2.2.0"
+      "version": "2.1.0"
     },
     {
       "name": "GoogleMLKit/BarcodeScanning",
       "source": "public",
       "target": "production",
-      "version": "2.2.0"
+      "version": "2.1.0"
     },
     {
       "name": "ZIPFoundation",
@@ -1282,7 +1374,7 @@
       "name": "Cashout",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "MLAdjust",
@@ -1306,13 +1398,181 @@
       "name": "DaManagement",
       "source": "private",
       "target": "production",
+      "version": "^~>\\s?2.[0-9]+"
+    },
+    {
+      "name": "InAppReport",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "name": "CreditsFloxClient",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "HomeToolkit",
+      "source": "private",
+      "target": "production",
       "version": "^~>\\s?1.[0-9]+"
     },
     {
-      "name": "Incognia",
+      "name": "Braze-ios",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "Appboy-iOS-SDK/Core",
+      "source": "public",
+      "target": "production",
+      "version": "^~>4.5.[0-9]+$"
+    },
+    {
+      "name": "MercadoCoin",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "name": "ReauthNativeAdapter",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MobileCryptography",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "Valkiria",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "CongratsSdk",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+"
+    },
+    {
+      "name": "ADAssertLayout",
       "source": "public",
       "target": "test",
-      "version": "6.1.1"
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "ADLayoutTest",
+      "source": "public",
+      "target": "test",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "SwiftCheck",
+      "source": "public",
+      "target": "test",
+      "version": "^~>\\s?0.1[0-9]+$"
+    },
+    {
+      "name": "Regulations",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "DevicesSdk",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+"
+    },
+    {
+      "name": "RiskManagement",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+.?[0-9]*$"
+    },
+    {
+      "name": "OpenTelemetryApi",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
+    },
+    {
+      "name": "OpenTelemetryProtocolExporter",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
+    },
+    {
+      "name": "OpenTelemetrySdk",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
+    },
+    {
+      "name": "SwiftAtomics",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
+    },
+    {
+      "name": "SwiftAtomicsShims",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
+    },
+    {
+      "name": "gRPC-Swift",
+      "source": "public",
+      "target": "production",
+      "version": "1.7.3"
+    },
+    {
+      "name": "SwiftNIO",
+      "source": "public",
+      "target": "production",
+      "version": "2.40.0"
+    },
+    {
+      "name": "Opentelemetry",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "Onboarding",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "GoogleAds-IMA-iOS-SDK",
+      "source": "public",
+      "target": "production",
+      "version": "3.16.1"
+    },
+    {
+      "name": "MLReviews",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+.?[0-9]*$"
+    },
+    {
+      "name": "Reviews",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
+    },
+    {
+      "name": "NetworkStatus",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
     }
   ]
 }
