@@ -67,10 +67,17 @@
       "version": "0.8"
     },
     {
+      "expires": "2022-11-15",
       "name": "Charts",
       "source": "public",
       "target": "production",
       "version": "3.4.0"
+    },
+    {
+      "name": "Charts",
+      "source": "public",
+      "target": "production",
+      "version": "4.1.0"
     },
     {
       "name": "DataPrivacyHelper",
