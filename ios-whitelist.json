@@ -419,10 +419,17 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "expires": "2022-10-14",
       "name": "MlCards",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?[0-1].[0-9]+"
+      "version": "^~>\\s?0.[0-9]+"
+    },
+    {
+      "name": "MlCards",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+"
     },
     {
       "name": "MLCardDrawer",
@@ -672,19 +679,7 @@
       "version": "^~>\\s?2.[0-9]+"
     },
     {
-      "name": "MLRecommendationsCombo/Combos",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
-    },
-    {
-      "name": "MLRecommendationsCombo/Core",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
-    },
-    {
-      "name": "MLRecommendationsCombo/Recommendations",
+      "name": "MLRecommendationsCombo",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+"
