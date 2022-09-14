@@ -1,37 +1,39 @@
 # Los Módulos
 
-Los módulos aportan herramientas al entorno de desarrollo del developer. A continuación brindamos una lista con cada uno
-y sus funcionalidades.
+Los módulos complementan el entorno de desarrollo, agregando funcionalidades, siendo enlistados por el `ModuleProvider`
+y ejecutados por el `ModuleConfigurer` de cada plugin.
+A continuación brindamos una lista con la descripción de cada uno:
 
 ### Build Scan
 
-Gradle Enterprise nos brinda la posibilidad de publicar los `builds` de forma que podamos acceder a ellos y analizarlos
-de forma remota como también compartirlos con otros colaboradores. Este Módulo se encarga de agregar esta funcionalidad
-al repositorio.
+Este módulo brinda la funcionalidad que Gradle Enterprise nos permite, publicar y almacenar los `builds`, para que
+nosotros u otros desarrolladores puedan acceder a ellos y analizarlos en remoto.
 
 ### Jacoco
 
-Se agrega plugin de jacoco, el mismo permite tener reportes para cada task de test del proyecto. El mismo creará una
-task `jacocoFullReport` la cual corre todos los tests posibles (para cada buildType/flavor/sourceSet) y genera los
-reportes en formatos detectables por las aplicaciones de coverage.
+Este módulo brinda la funcionalidad de los reportes de coverage, que podemos utilizar nosotros y también se van a revisar
+en los checks de Github, se crearán diferentes tasks pero la principal será la de `jacocoFullReport` que ejecuta todos
+los tests posibles (para cada buildType/flavor/sourceSet) y genera los reportes en formatos detectables por las
+aplicaciones de coverage.
 
 ### Lint
-Se agregan lints específicos encargados de verificar si existen librerías deprecadas, expiradas o inválidas que están
-siendo implementadas en el proyecto. Hay un closure sobre cada proyecto donde podemos habilitar o deshabilitar. (y tiene ciertas configuraciones específicas de cada lint)
+
+Este módulo brinda la funcionalidad de verificación de dependencias, teniendo en cuenta esto somos capaces de tener una
+Allow List donde tendremos todas los package y módulos que son admitidos dentro de los repositorios de meli. Siendo así
+También contamos con las variables para desactivar el linteo y cambiar el archivo de donde traemos la Allow List.
 
 ```groovy
-    lintGradle {
-    enabled = true
+lintGradle {
     dependenciesLintEnabled = true
     releaseDependenciesLintEnabled = true
     dependencyAllowListUrl = "https://raw.githubusercontent.com/mercadolibre/mobile-dependencies_whitelist/master/android-whitelist.json" // Si alguien distinto a Meli quiere su whitelist, deberia cambiar esto
-    }
+}
 ```
 
 ### Publishable
 
-Los diferentes plugins te permiten realizar publicaciones ya sean Locales, para uso únicamente en tu pc, o Experimentales
-siendo estos capaces de ser ejecutados en otras pc.
+Este módulo brinda la funcionalidad de realizar publicaciones locales, para uso únicamente en tu terminal, y Experimentales
+siendo estos capaces de ser ejecutados en otras terminales.
 
 Para ser capaces de publicar nuestros módulos debemos agregar en cada proyecto publicable la property `group` y `versión`.
 El artifact va a ser el nombre del módulo (podríamos tranquilamente cambiarlo tambien, pero si va a ser el mismo no hace falta)
@@ -66,24 +68,38 @@ Es importante tener en cuenta lo siguiente:
 - En caso de tener dependencias locales, agregarlas como `implementation project(path: '...')` y automáticamente nosotros vamos a referenciarlas como corresponde.
 - En caso de haber productFlavors, los mismos para diferenciarlos en una misma publicación van a tener su nombre como prefijo en la version "Ejemplo com.mercadolibre.group:artifact:flavorA-1.0.0"
 
+### Bugsnag
+
+Este módulo brinda la funcionalidad de implementar el detector de errores bugs nag para que luego podremos analizar los
+problemas que surgen.
+
+### DexCount
+
+Este módulo brinda la funcionalidad de enumerar las funciones, clases y otros valores mediante el plugin de DexCount.
+
 ### List Projects
 
-Este módulo se encarga de generar la task `listProjects` que enlista los proyectos que contiene el repositorio, para que
+Este módulo brinda la funcionalidad de `listProjects` que enlista los proyectos que contiene el repositorio, para que
 frameworks externos al proyecto puedan reconocerlos.
 
 ### Project Version
 
-Este módulo se encarga de generar la task `getProjectVersion` que genera un archivo con la versión del proyecto, para que
+Este módulo brinda la funcionalidad de `getProjectVersion` que genera un archivo con la versión del proyecto, para que
 frameworks externos al proyecto puedan reconocerlos.
 
 ### List Variants
 
-Este módulo se encarga de generar la task `listVariants` que enlista las variantes que tiene cada modulo dentro del
+Este módulo brinda la funcionalidad de `listVariants` que enlista las variantes que tiene cada módulo dentro del
 repositorio.
+
+### Project Info
+
+Este módulo brinda la funcionalidad de `projectInfo` que enlista las configuraciones aplicadas en el proyecto y en cada
+uno de los módulos.
 
 ### Plugin Description
 
-Este módulo se encarga de generar la task `pluginDescription` que enlista las configuraciones y módulos que son aplicados
+Este modulo brinda la funcionalidad de `pluginDescription` que enlista las configuraciones y módulos que son aplicados
 por cada plugin dentro del proyecto. Para tener más contexto de la funcionalidad que manejan los plugins.
 
 # Herencia de Módulos
@@ -91,5 +107,3 @@ por cada plugin dentro del proyecto. Para tener más contexto de la funcionalida
 Existen casos donde se necesita que un módulo sea aplicado de una forma particular pero respete la misma funcionalidad
 siendo así podemos heredar de los `Módulos` que necesitemos dentro del `Plugin` que necesite su propia implementación y
 agregarlo a su propia lista de módulos.
-
-

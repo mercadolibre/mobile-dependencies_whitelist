@@ -4,14 +4,15 @@
 El primer paso que debemos dar es conocer si necesitamos un nuevo configurer o un nuevo módulo, teniendo en cuenta que
 Los `Configurer` se encargan de las configuraciones y los `Módulos` agregan funcionalidades. Segundo debemos encontrar
 el plugin que queremos modificar en base al impacto que buscamos, por ejemplo si necesitamos una configuración en una
-librería iremos al BaseLibraryPlugin, si es de una app al BaseAppPlugin y si es del root o respecta a libreria y app
+librería iremos al Library Plugin, si es de una app al App Plugin y si es del root o respecta a libreria y app
 iría al BasePlugin.
 
 ----
 
 ## Crear un configurador
-Para que podamos ejecutar el nuevo contenido mediante uno de los Plugins deberemos heredar de la clase `Configurer`.
-Luego dentro de la ruta `core/action/configurers` (BasePlugin por ejemplo) podremos generar el archivo.
+En caso de que queremos apuntar a configurar un aspecto del repositorio que no tiene un configurer podemos generar el 
+nuevo contenido dentro de `anyPlugin/core/action/configurers` para luego heredar de la clase `Configurer` y empezar a 
+crear.
 
 ```kotlin
 interface Configurer {
@@ -28,22 +29,23 @@ Library para librerías y app para aplicaciones productivas como también test a
 
 ## Crear un módulo
 Para que podamos ejecutar el nuevo contenido mediante el `ModuleConfigurer` deberemos heredar de la clase `Module`.
-Dentro de la ruta core/action/modules (BasePlugin por ejemplo) generamos una carpeta y agregamos los archivos que sean
-necesarios.
+Dentro de la ruta `anyPlugin/core/action/modules` generamos una carpeta y agregamos los archivos que sean necesarios.
 
 ```kotlin
-interface Module {
-    fun configure(project: Project) // Esta sera la funcion llamada por el plugin y donde podrás agregar la funcionalidad
+class Module {
+    fun executeInAfterEvaluate(): Boolean = true // Esta es la función que nos permite cambiar el tiempo de ejecución de nuestro módulo.
+    fun configure(project: Project) // Esta será la función llamada por el plugin y donde podrás agregar la funcionalidad.
 }
 ```
 
-Proximamente agregaremos el módulo a su lista respectiva lo que hará que cuando el `ModuleConfigurer` configure un módulo o proyecto
-sea ejecutada su configuración. Por último deberemos agregar los test de la funcionalidad para cumplir con el coverage.
+Próximamente debemos buscar el `ModuleProvider` del plugin, dentro de él existe una lista donde se recorren todos los
+módulos, solicitando que apliquen su funcionalidad. Para que el nuevo contenido sea llamada deberá estar en esa lista.
 
-## ¿Cómo se manejan las variables?
+```kotlin
+  internal object ModuleProvider {
 
-Teniendo en cuenta que muchas de las configuraciones o funcionalidades necesitan `Strings`, `Ints`, `Booleans`, etc.
-dentro del `BasePlugin` existe un archivo llamado `CONSTANS.kt` donde podrás agregar tus variables para luego importarlas
-en el plugin que necesites.
-
-
+  private val androidPluginModules =
+      listOf(
+          NewModule() // Agregamos el nuevo modulo a la lista
+      )
+```

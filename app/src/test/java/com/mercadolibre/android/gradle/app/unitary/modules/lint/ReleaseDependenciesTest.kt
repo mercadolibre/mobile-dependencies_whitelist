@@ -55,7 +55,6 @@ class ReleaseDependenciesTest : AbstractPluginManager() {
         configuration.dependencies.add(dependency)
 
         findExtension<LintGradleExtension>(projects[APP_PROJECT]!!)?.apply {
-            this.enabled = true
             this.dependenciesLintEnabled = true
             this.releaseDependenciesLintEnabled = true
         }
