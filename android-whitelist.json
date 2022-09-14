@@ -391,6 +391,11 @@
       "version": "mercadopago-16\\.\\+|mercadolibre-16\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "login_components",
+      "version": "16\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.authchallenges",
       "name": "authchallenges",
       "version": "1\\.\\+"
