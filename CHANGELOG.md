@@ -1,3 +1,6 @@
+# 14.3.0
+- Se elimina la responsabilida de aplicar los archivos de proguard del Base Plugin y se lleva a App y Library.
+
 # 14.2.3
 - Se modifica la forma en que se capitalizan las variables ya que la forma en que se hacia podia no estar declarada en algunos repositorios 
 

@@ -1,9 +1,9 @@
 package com.mercadolibre.android.gradle.app
 
+import com.mercadolibre.android.gradle.app.core.action.configurers.AppAndroidConfigurer
 import com.mercadolibre.android.gradle.app.core.action.configurers.AppBasicsConfigurer
 import com.mercadolibre.android.gradle.app.core.action.configurers.AppExtensionConfigurer
 import com.mercadolibre.android.gradle.app.core.action.configurers.AppModuleConfigurer
-import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.AndroidConfigurer
 import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.PluginConfigurer
 import com.mercadolibre.android.gradle.baseplugin.core.basics.AbstractProjectPlugin
 import com.mercadolibre.android.gradle.baseplugin.core.components.APP_PLUGINS
@@ -18,7 +18,7 @@ class BaseAppPlugin : AbstractProjectPlugin() {
      */
     override val configurers = arrayListOf(
         PluginConfigurer(APP_PLUGINS),
-        AndroidConfigurer(),
+        AppAndroidConfigurer(),
         AppExtensionConfigurer(),
         AppModuleConfigurer(),
         AppBasicsConfigurer()
