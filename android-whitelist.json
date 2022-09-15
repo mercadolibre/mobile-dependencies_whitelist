@@ -1417,9 +1417,15 @@
       "version": "mercadolibre-5\\.\\+|mercadopago-5\\.\\+"
     },
     {
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "cardform",
       "version": "2\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "cardform",
+      "version": "3\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.insu_flox_components",
@@ -2130,6 +2136,12 @@
       "group": "com\\.mercadolibre\\.android\\.braze",
       "name": "core",
       "version": "3.\\+"
+    },
+    {
+      "expires": "2023-04-30",
+      "group": "com\\.appboy",
+      "name": "android-sdk-ui",
+      "version": "18\\.0\\.1"
     },
     {
       "group": "com\\.appboy",
