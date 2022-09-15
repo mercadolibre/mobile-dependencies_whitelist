@@ -458,12 +458,12 @@
       "expires": "2022-11-15",
       "group": "com\\.mercadolibre\\.android\\.rich_notifications",
       "name": "carousel",
-      "version": "1\\.\\+"
+      "version": "1\\.\\+|2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.rich_notifications",
       "name": "carousel",
-      "version": "3\\.\\+"
+      "version": "3\\.\\+|4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -1730,9 +1730,15 @@
       "version": "5\\.22\\.4"
     },
     {
+      "expires": "2022-11-15",
       "group": "com\\.mercadolibre\\.android",
       "name": "notificationcenter",
       "version": "mercadolibre-11\\.\\+|mercadopago-11\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "notificationcenter",
+      "version": "mercadolibre-12\\.\\+|mercadopago-12\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.devices_sdk",
