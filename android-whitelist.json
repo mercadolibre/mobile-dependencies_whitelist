@@ -1,9 +1,15 @@
 {
   "whitelist": [
     {
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android\\.onboarding",
       "name": "onboarding",
       "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.onboarding",
+      "name": "onboarding",
+      "version": "2\\.+"
     },
     {
       "expires": "2022-09-16",
@@ -707,13 +713,24 @@
       "version": "8\\.\\+|mercadolibre-8\\.\\+|mercadopago-8\\.\\+"
     },
     {
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android\\.merchengine",
       "version": "3\\.\\+|mercadopago-3\\.\\+|mercadolibre-3\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.merchengine",
+      "version": "6\\.\\+|mercadopago-6\\.\\+|mercadolibre-6\\.\\+"
+    },
+    {
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android\\.merch_realestates",
       "name": "merchrealestates",
       "version": "2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.merch_realestates",
+      "name": "merchrealestates",
+      "version": "3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.metrics",
@@ -854,39 +871,81 @@
       "version": "4\\.\\+"
     },
     {
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
       "name": "api",
       "version": "2\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
+      "name": "api",
+      "version": "3\\.\\+"
+    },
+    {
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android\\.home\\.toolkit",
       "name": "core",
       "version": "1\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.home\\.toolkit",
+      "name": "core",
+      "version": "2\\.\\+"
+    },
+    {
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
       "name": "home",
       "version": "mercadopago-2\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
+      "name": "home",
+      "version": "mercadopago-3\\.+"
+    },
+    {
+      "expires": "2022-09-30",
+      "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
       "name": "sections",
       "version": "mercadopago-2\\.+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
+      "name": "sections",
+      "version": "mercadopago-3\\.+"
+    },
+    {
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android\\.usersections\\",
       "name": "sections",
       "version": "mercadopago-3\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.usersections\\",
+      "name": "sections",
+      "version": "mercadopago-4\\.+"
+    },
+    {
+      "expires": "2022-09-30",
+      "group": "com\\.mercadolibre\\.android\\.usersections\\",
       "name": "ui-sections",
       "version": "mercadopago-3\\.+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.usersections\\",
+      "name": "ui-sections",
+      "version": "mercadopago-4\\.+"
+    },
+    {
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android\\.usersections",
       "name": "ui-sections",
       "version": "mercadolibre-3\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.usersections",
+      "name": "ui-sections",
+      "version": "mercadolibre-4\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.mercadocoin",
@@ -894,14 +953,26 @@
       "version": "2\\.\\+"
     },
     {
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android\\.pendings",
       "name": "pendingsview",
       "version": "1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.pendings",
+      "name": "pendingsview",
+      "version": "2\\.\\+"
+    },
+    {
+      "expires": "2022-09-30",
+      "group": "com\\.mercadolibre\\.android\\.pendings",
       "name": "pendingscontainer",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.pendings",
+      "name": "pendingscontainer",
+      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cardscomponents",
@@ -1340,9 +1411,15 @@
       "version": "6\\.+"
     },
     {
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android\\.modalsengine",
       "name": "modals-engine",
       "version": "mercadolibre-5\\.\\+|mercadopago-5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.modalsengine",
+      "name": "modals-engine",
+      "version": "mercadolibre-6\\.\\+|mercadopago-6\\.\\+"
     },
     {
       "expires": "2022-09-30",
