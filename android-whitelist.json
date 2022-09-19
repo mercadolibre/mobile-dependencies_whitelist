@@ -505,14 +505,26 @@
       "version": "19\\.\\+"
     },
     {
+      "expires": "2022-12-15",
       "group": "com\\.mercadolibre\\.android",
       "name": "notifications",
-      "version": "20\\.\\+|21\\.\\+"
+      "version": "20\\.\\+"
+    },
+    {
+      "expires": "2022-12-15",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "notifications_commons",
+      "version": "20\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "notifications",
+      "version": "21\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "notifications_commons",
-      "version": "20\\.\\+|21\\.\\+"
+      "version": "21\\.\\+"
     },
     {
       "expires": "2022-11-15",
@@ -521,9 +533,15 @@
       "version": "1\\.\\+|2\\.\\+"
     },
     {
+      "expires": "2022-12-15",
       "group": "com\\.mercadolibre\\.android\\.rich_notifications",
       "name": "carousel",
-      "version": "3\\.\\+|4\\.\\+"
+      "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.rich_notifications",
+      "name": "carousel",
+      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
