@@ -1353,9 +1353,16 @@
       "version": "2\\.\\+"
     },
     {
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android\\.security_two_fa",
       "name": "totp",
       "version": "5\\.\\+"
+    },
+    {
+      "expires": "2022-09-30",
+      "group": "com\\.mercadolibre\\.android\\.security_two_fa",
+      "name": "totp",
+      "version": "6\\.\\+"
     },
     {
       "expires": "2022-09-30",
@@ -2041,9 +2048,15 @@
       "version": "2\\.+"
     },
     {
+      "expires": "2022-12-31",
       "group": "com\\.mercadolibre\\.android\\.point_smartpos_scanner",
       "name": "scanner",
       "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_smartpos_scanner",
+      "name": "scanner",
+      "version": "2\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.liveness_detection",
