@@ -6,7 +6,6 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISH_CONSTA
 import org.gradle.api.Project
 import org.gradle.api.Task
 import org.gradle.api.tasks.TaskProvider
-import org.gradle.configurationcache.extensions.capitalized
 
 /**
  * The TaskGenerator class is responsible for generating the publication tasks for each of the options that exist.
@@ -43,7 +42,7 @@ class TaskGenerator(
 
                         dependsOn(list)
 
-                        var finalizedTask = "$PUBLISH_CONSTANT${taskName.capitalized()}PublicationTo$repositoryName"
+                        var finalizedTask = "$PUBLISH_CONSTANT${taskName.capitalize()}PublicationTo$repositoryName"
 
                         if (!repositoryName.contains(PUBLISHING_MAVEN_LOCAL)) {
                             finalizedTask += "Repository"

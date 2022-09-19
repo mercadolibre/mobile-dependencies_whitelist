@@ -35,7 +35,6 @@ open class AndroidConfigurer : Configurer, ExtensionGetter() {
                         useSupportLibrary = false
                         setGeneratedDensities(emptySet())
                     }
-                    consumerProguardFiles("proguard-rules.pro")
                 }
 
                 project.allprojects {

@@ -11,7 +11,6 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_POM
 import org.gradle.api.Project
 import org.gradle.api.publish.PublishingExtension
 import org.gradle.api.publish.maven.MavenPublication
-import org.gradle.configurationcache.extensions.capitalized
 
 /**
  * This class generates the All posts with help of PomUtils.
@@ -52,7 +51,7 @@ abstract class PublishTask : ExtensionGetter() {
                             .writeText(this.asString().toString())
                     }
 
-                    val pomTaskName = "$POM_FILE_TASK${taskName.capitalize()}${PUBLICATION_CONSTANT.capitalized()}"
+                    val pomTaskName = "$POM_FILE_TASK${taskName.capitalize()}${PUBLICATION_CONSTANT.capitalize()}"
                     if (project.tasks.names.contains(pomTaskName)) {
                         project.tasks.named(taskName).configure {
                             dependsOn(pomTaskName)

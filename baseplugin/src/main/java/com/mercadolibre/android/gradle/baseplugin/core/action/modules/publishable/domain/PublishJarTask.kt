@@ -15,7 +15,6 @@ import org.gradle.api.file.FileTree
 import org.gradle.api.tasks.SourceSet
 import org.gradle.api.tasks.TaskProvider
 import org.gradle.api.tasks.javadoc.Javadoc
-import org.gradle.configurationcache.extensions.capitalized
 import org.gradle.external.javadoc.JavadocMemberLevel
 import org.gradle.external.javadoc.StandardJavadocDocletOptions
 
@@ -41,7 +40,7 @@ abstract class PublishJarTask : PublishTask() {
         listOf(
             "${variant.name}$PUBLISHING_JAVADOC_TASK$PACKAGING_JAR_CONSTANT",
             PACKAGING_JAR_CONSTANT.toLowerCase(),
-            "${variant.name}${SOURCES_CONSTANT.capitalized()}$PACKAGING_JAR_CONSTANT"
+            "${variant.name}${SOURCES_CONSTANT.capitalize()}$PACKAGING_JAR_CONSTANT"
         )
 
     /**

@@ -1,5 +1,11 @@
-# 14.3.0
+# 14.4.0
 - Desabilitar la generación de imágenes PNG a partir de elementos `vector drawables`
+
+# 14.3.0
+- Se elimina la responsabilida de aplicar los archivos de proguard del Base Plugin y se lleva a App y Library.
+
+# 14.2.3
+- Se modifica la forma en que se capitalizan las variables ya que la forma en que se hacia podia no estar declarada en algunos repositorios 
 
 # 14.2.2
 - Se elimina la variable que bloquea el modulo para utilizar las dos variables que ya tenia, asi dejando una sola forma de bloquear el modulo
