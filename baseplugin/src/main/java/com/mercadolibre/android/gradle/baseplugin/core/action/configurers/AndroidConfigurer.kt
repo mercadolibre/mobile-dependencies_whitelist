@@ -6,7 +6,6 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.ANDROID_CONFIG
 import com.mercadolibre.android.gradle.baseplugin.core.domain.interfaces.Configurer
 import com.mercadolibre.android.gradle.baseplugin.module.VersionProvider
 import org.gradle.api.Project
-import org.gradle.internal.impldep.com.jcraft.jsch.ConfigRepository.defaultConfig
 
 /**
  * The Android Configurer is in charge of setting the variables necessary to compile an Android module.
