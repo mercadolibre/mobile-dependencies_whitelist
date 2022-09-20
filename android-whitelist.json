@@ -559,29 +559,59 @@
       "version": "13\\.\\+"
     },
     {
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient",
       "version": "18\\.\\+"
     },
     {
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-adapter-bus",
       "version": "18\\.\\+"
     },
     {
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-adapter-rx2",
       "version": "18\\.\\+"
     },
     {
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-converter-json",
       "version": "18\\.\\+"
     },
     {
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-extension-header",
       "version": "18\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient",
+      "version": "19\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient-adapter-bus",
+      "version": "19\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient-adapter-rx2",
+      "version": "19\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient-converter-json",
+      "version": "19\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient-extension-header",
+      "version": "19\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -2298,7 +2328,7 @@
       "version": "3.\\+"
     },
     {
-      "expires": "2023-04-30",
+      "expires": "2022-09-30",
       "group": "com\\.appboy",
       "name": "android-sdk-ui",
       "version": "18\\.0\\.1"
