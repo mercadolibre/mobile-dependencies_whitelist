@@ -1,3 +1,6 @@
+# 14.4.0
+- Desabilitar la generación de imágenes PNG a partir de elementos `vector drawables`
+
 # 14.3.0
 - Se elimina la responsabilida de aplicar los archivos de proguard del Base Plugin y se lleva a App y Library.
 

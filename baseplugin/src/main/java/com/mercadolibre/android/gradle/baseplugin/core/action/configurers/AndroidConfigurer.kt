@@ -29,6 +29,11 @@ open class AndroidConfigurer : Configurer, ExtensionGetter() {
                 with(defaultConfig) {
                     setMinSdkVersion(provideMinSdk())
                     setTargetSdkVersion(provideApiSdkLevel())
+                    // Stops the Gradle plugin’s automatic generation pngs from vectors drawables
+                    vectorDrawables.apply {
+                        useSupportLibrary = false
+                        setGeneratedDensities(emptySet())
+                    }
                 }
 
                 project.allprojects {
