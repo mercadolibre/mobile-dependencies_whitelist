@@ -1,3 +1,9 @@
+# 15.0.1
+- Se agregan los fix de la version 14.2.1 en adelante a la version 15
+
+# 15.0.0
+- Se actualiza la version de COMPILE_API_SDK_LEVEL a 32 para soportar Android 12
+
 # 14.3.0
 - Se elimina la responsabilida de aplicar los archivos de proguard del Base Plugin y se lleva a App y Library.
 
