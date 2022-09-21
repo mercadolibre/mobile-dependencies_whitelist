@@ -1,22 +1,48 @@
 [versions]
-innerProjectVersion = "EXPERIMENTAL-14.2.3-20220913155648"
-basePluginVersion = "EXPERIMENTAL-14.2.3-20220913155648"
+##################################################################################
+# Meli libs
+##################################################################################
+autoImplementation = "EXPERIMENTAL-14.2.3-20220913155648"
+autoImplementationBasePlugin = "EXPERIMENTAL-14.2.3-20220913155648"
+##################################################################################
+# Misc libs
+##################################################################################
+pluginKotlin = "1.5.31"
+buildTools = "4.2.2"
+bugsnag = "5.+"
+dexcount= "1.0.3"
+gradleEnterprise = "3.6.4"
+##################################################################################
+# Test libs
+##################################################################################
+mockito = "2.2.0"
+mock = "1.11.0"
+jUnit = "4.12"
+assertj = "3.11.1"
 
 [libraries]
-gradle-plugin-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version = "1.5.31" }
-gradle-buildTools-plugin = { module = "com.android.tools.build:gradle", version = "4.2.2" }
-gradle-scan-enterprise = { module = "com.gradle:gradle-enterprise-gradle-plugin", version = "3.6.4" }
-misc-dexcount = { module = "com.getkeepsafe.dexcount:dexcount-gradle-plugin", version = "1.0.3" }
-bugsnag-plugin = { module = "com.bugsnag:bugsnag-android-gradle-plugin", version = "5.+" }
-bugsnag-lib = { module = "com.bugsnag:bugsnag-android", version = "5.+" }
-meli-gradle-plugin-baseplugin = { group = "com.mercadolibre.android.gradle", name = "baseplugin", version.ref = "basePluginVersion" }
-meli-gradle-plugin-app = { group = "com.mercadolibre.android.gradle", name = "app", version.ref = "innerProjectVersion" }
-meli-gradle-plugin-library = { group = "com.mercadolibre.android.gradle", name = "library", version.ref = "innerProjectVersion" }
-
-test-mockito = { group = "com.nhaarman.mockitokotlin2", name = "mockito-kotlin", version = "2.2.0" }
-test-mock = { group = "io.mockk", name = "mockk", version = "1.11.0" }
-test-jUnitLib = { module = "junit:junit", version = "4.12" }
-test-assertj = { module = "org.assertj:assertj-core", version = "3.11.1" }
+##################################################################################
+# Meli libs
+##################################################################################
+meli-gradle-plugin-baseplugin = { group = "com.mercadolibre.android.gradle", name = "baseplugin", version.ref = "autoImplementationBasePlugin" }
+meli-gradle-plugin-app = { group = "com.mercadolibre.android.gradle", name = "app", version.ref = "autoImplementation" }
+meli-gradle-plugin-library = { group = "com.mercadolibre.android.gradle", name = "library", version.ref = "autoImplementation" }
+##################################################################################
+# Misc libs
+##################################################################################
+gradle-plugin-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "pluginKotlin" }
+gradle-buildTools-plugin = { module = "com.android.tools.build:gradle", version.ref = "buildTools" }
+gradle-scan-enterprise = { module = "com.gradle:gradle-enterprise-gradle-plugin", version.ref = "gradleEnterprise" }
+misc-dexcount = { module = "com.getkeepsafe.dexcount:dexcount-gradle-plugin", version.ref = "dexcount" }
+misc-bugsnag-plugin = { module = "com.bugsnag:bugsnag-android-gradle-plugin", version.ref = "bugsnag" }
+misc-bugsnag-lib = { module = "com.bugsnag:bugsnag-android", version.ref = "bugsnag" }
+##################################################################################
+# Test libs
+##################################################################################
+test-mockito = { group = "com.nhaarman.mockitokotlin2", name = "mockito-kotlin", version.ref = "mockito" }
+test-mock = { group = "io.mockk", name = "mockk", version.ref = "mock" }
+test-jUnitLib = { module = "junit:junit", version.ref = "jUnit" }
+test-assertj = { module = "org.assertj:assertj-core", version.ref = "assertj" }
 
 [bundles]
 test = ["test-mockito", "test-mock", "test-jUnitLib", "gradle-scan-enterprise", "gradle-buildTools-plugin", "gradle-plugin-kotlin", "test-assertj", "misc-dexcount"]
