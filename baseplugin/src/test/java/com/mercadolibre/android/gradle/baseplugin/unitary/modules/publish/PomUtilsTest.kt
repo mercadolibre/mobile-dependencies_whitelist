@@ -72,13 +72,16 @@ class PomUtilsTest : AbstractPluginManager() {
     fun `Config with PomUtils without dependency data`() {
         val dependency = mockk<Dependency>()
         val node = mockk<Node>(relaxed = true)
+        val dependenciesList = arrayListOf<Dependency>()
 
         every { dependency.group } returns null
         every { dependency.version } returns null
 
         every { dependency.version } returns "version"
 
-        pomUtils.configDependency(node, "scope", arrayListOf(), dependency)
+        pomUtils.configDependency(node, "scope", dependenciesList, dependency)
+
+        assert(dependenciesList.isEmpty())
     }
 
     @org.junit.Test
@@ -94,10 +97,13 @@ class PomUtilsTest : AbstractPluginManager() {
         projects[LIBRARY_PROJECT]!!.configurations.add(configuration)
 
         pomUtils.injectDependencies(projects[LIBRARY_PROJECT]!!, xmlProvider, ANY_NAME, ANY_FLAVOR)
+
+        //Pom Utils use configuration name to get the Scope
+        verify { configuration.name }
     }
 
     @org.junit.Test
-    fun `Inject dependencies with PomUtils without parameters`() {
+    fun `Inject dependencies with PomUtils without flavor`() {
         val configuration = mockk<Configuration>(relaxed = true)
 
         val xmlProvider = mockk<XmlProvider>(relaxed = true)
@@ -109,6 +115,9 @@ class PomUtilsTest : AbstractPluginManager() {
         projects[LIBRARY_PROJECT]!!.configurations.add(configuration)
 
         pomUtils.injectDependencies(projects[LIBRARY_PROJECT]!!, xmlProvider, ANY_NAME, null)
+
+        //Pom Utils use configuration name to get the Scope
+        verify { configuration.name }
     }
 
     @org.junit.Test
@@ -124,5 +133,8 @@ class PomUtilsTest : AbstractPluginManager() {
         projects[LIBRARY_PROJECT]!!.configurations.add(configuration)
 
         pomUtils.injectDependencies(projects[LIBRARY_PROJECT]!!, xmlProvider, ANY_NAME, null)
+
+        //Pom Utils use configuration name to get the Scope
+        verify { configuration.name }
     }
 }

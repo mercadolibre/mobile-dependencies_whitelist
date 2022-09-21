@@ -22,13 +22,14 @@ class LibraryPluginDescriptionTest {
     }
 
     @org.junit.Test
-    fun `When the LibraryPluginDescriptionModule is created works`() {
+    fun `When the LibraryPluginDescriptionModule is called then return correct messages`() {
         val pluginDescription = LibraryPluginDescriptionModule()
 
         val task = mockk<Task>(relaxed = true)
 
         pluginDescription.printMessage(ANY_NAME, ANY_NAME)
         pluginDescription.configureTask(task)
+
         assert(pluginDescription.makeMessage(ANY_NAME, ANY_NAME) == "- $ANY_NAME\n$ANY_NAME")
         assert(
             pluginDescription.content() ==
@@ -37,13 +38,14 @@ class LibraryPluginDescriptionTest {
     }
 
     @org.junit.Test
-    fun `When the LibraryPluginDescriptionExtension is created works`() {
+    fun `When the LibraryPluginDescriptionExtension is called then return the correct content`() {
         val pluginDescription = LibraryPluginDescriptionExtensionsModule()
 
         val task = mockk<Task>(relaxed = true)
 
         pluginDescription.printMessage(ANY_NAME, ANY_NAME)
         pluginDescription.configureTask(task)
+
         assert(pluginDescription.makeMessage(ANY_NAME, ANY_NAME) == "- $ANY_NAME\n$ANY_NAME")
 
         var names = ""

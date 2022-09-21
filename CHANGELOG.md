@@ -5,13 +5,15 @@
 - Se elimina la responsabilida de aplicar los archivos de proguard del Base Plugin y se lleva a App y Library.
 
 # 14.2.3
-- Se modifica la forma en que se capitalizan las variables ya que la forma en que se hacia podia no estar declarada en algunos repositorios 
+- Se modifica la forma en que se capitalizan las variables ya que la forma en que se hacia podia no estar declarada en algunos repositorios
+- Se mejoran las practicas utilizadas en los test de todos los plugins
 
 # 14.2.2
 - Se elimina la variable que bloquea el modulo para utilizar las dos variables que ya tenia, asi dejando una sola forma de bloquear el modulo
 - Se elimina el error de output que genera el linteo al no aplicar el salto de linea
 - Se modifica la forma de declarar el exclude de las tasks de jacoco para que funcione con java 11
 - Se modifica la forma de declarar la variable isIncludeNoLocationClasses de las tasks de jacoco para que detecte el coverage
+- Se modifican el nombre de las variables de bugsnag y AGP para que sean mas entendibles
 
 # 14.2.1
 - Se cambia la carpeta donde se almacenan los reportes de linteo para que CI los detecte

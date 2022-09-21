@@ -2,23 +2,32 @@ package com.mercadolibre.android.gradle.baseplugin.unitary.modules.publish
 
 import com.android.build.gradle.api.BaseVariant
 import com.android.builder.model.SourceProvider
-import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.PluginConfigurer
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.JavaPublishableModule
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.basics.TaskGenerator
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.basics.VersionContainer
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.subClasses.PublishAarExperimentalTask
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.subClasses.PublishAarLocalTask
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.subClasses.PublishAarPrivateReleaseTask
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.subClasses.PublishAarPublicReleaseTask
-import com.mercadolibre.android.gradle.baseplugin.core.components.LIBRARY_PLUGINS
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISH_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.SOURCE_SETS_DEFAULT
 import com.mercadolibre.android.gradle.baseplugin.managers.ANY_NAME
 import com.mercadolibre.android.gradle.baseplugin.managers.AbstractPluginManager
 import com.mercadolibre.android.gradle.baseplugin.managers.LIBRARY_PROJECT
 import com.mercadolibre.android.gradle.baseplugin.managers.ROOT_PROJECT
+import com.mercadolibre.android.gradle.baseplugin.managers.VERSION_1
+import io.mockk.Called
 import io.mockk.every
 import io.mockk.mockk
+import io.mockk.verify
+import org.gradle.api.Action
+import org.gradle.api.Project
+import org.gradle.api.Task
+import org.gradle.api.publish.PublicationContainer
+import org.gradle.api.publish.PublishingExtension
 import org.gradle.api.tasks.SourceSet
+import org.gradle.api.tasks.SourceSetContainer
+import org.gradle.api.tasks.TaskProvider
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
 
@@ -42,13 +51,30 @@ class PublishableModuleTest : AbstractPluginManager() {
     }
 
     @org.junit.Test
-    fun `When the PublishJartask is created works fine`() {
-        PluginConfigurer(LIBRARY_PLUGINS).configureProject(projects[LIBRARY_PROJECT]!!)
-        javaPublishableModule.configure(projects[LIBRARY_PROJECT]!!)
+    fun `When the JavaPublishableModule is called then configure all sourceset`() {
+        val project = mockk<Project>(relaxed = true)
+        val extension = mockk<SourceSetContainer>(relaxed = true)
+        val publishExtension = mockk<PublishingExtension>(relaxed = true)
+
+        every { project.configurations.findByName("archives") } returns mockk(relaxed = true)
+        every { project.configurations.findByName("default") } returns mockk(relaxed = true)
+        every { project.extensions.findByType(SourceSetContainer::class.java) } returns extension
+        every { project.extensions.findByType(PublishingExtension::class.java) } returns publishExtension
+
+        javaPublishableModule.configure(project)
+
+        // Project find the extension
+        verify { project.extensions.findByType(SourceSetContainer::class.java) }
+
+        // Module configure the repositories to publish
+        verify { publishExtension.publications(any<Action<PublicationContainer>>()) }
+
+        // Project configure all Source Set in SourceSetContainer extension
+        verify { extension.all(any<Action<SourceSet>>()) }
     }
 
     @org.junit.Test
-    fun `When the PublishAartask is created works fine`() {
+    fun `When any PublishAarTask is called and register then return a task`() {
         val variant = mockLibVariant()
         val sourceSet = mockk<SourceProvider>() {
             every { javaDirectories } returns listOf(mockk(relaxed = true))
@@ -56,20 +82,43 @@ class PublishableModuleTest : AbstractPluginManager() {
 
         every { variant.sourceSets } returns listOf(sourceSet)
 
-        PublishAarExperimentalTask().register(projects[LIBRARY_PROJECT]!!, variant, ANY_NAME)
+        val task = PublishAarExperimentalTask().register(projects[LIBRARY_PROJECT]!!, variant, ANY_NAME)
+
+        assert(task is TaskProvider<Task>)
     }
 
     @org.junit.Test
-    fun `When the TaskGenerator is created works fine`() {
-        val taskGenerator = TaskGenerator(ANY_NAME, ANY_NAME, mockk(relaxed = true), listOf(), ANY_NAME, projects[LIBRARY_PROJECT]!!)
+    fun `When the TaskGenerator is created make a task and her own version`() {
+        val project = mockk<Project>(relaxed = true)
+        val versionContainer = mockk<VersionContainer>(relaxed = true)
+
+        every { project.name } returns LIBRARY_PROJECT
+        every { project.version } returns VERSION_1
+
+        val taskGenerator = TaskGenerator(ANY_NAME, VERSION_1, versionContainer, listOf(), ANY_NAME, project)
         taskGenerator.logVersion(ANY_NAME)
+
+        verify { versionContainer.put(LIBRARY_PROJECT, ANY_NAME, VERSION_1) }
+
+        verify { project.tasks.register(ANY_NAME) }
     }
 
     @org.junit.Test
-    fun `When the TaskGenerator is created works fine when task is already created`() {
-        projects[LIBRARY_PROJECT]!!.tasks.create(ANY_NAME)
-        val taskGenerator = TaskGenerator(ANY_NAME, ANY_NAME, mockk(relaxed = true), listOf(), ANY_NAME, projects[LIBRARY_PROJECT]!!)
+    fun `When the TaskGenerator is created dont create again when task is already created`() {
+        val project = mockk<Project>(relaxed = true)
+        val versionContainer = mockk<VersionContainer>(relaxed = true)
+
+        every { project.name } returns LIBRARY_PROJECT
+        every { project.version } returns VERSION_1
+
+        every { project.tasks.names.contains(ANY_NAME) } returns true
+
+        val taskGenerator = TaskGenerator(ANY_NAME, VERSION_1, versionContainer, listOf(), ANY_NAME, project)
         taskGenerator.logVersion(ANY_NAME)
+
+        verify { versionContainer.put(LIBRARY_PROJECT, ANY_NAME, VERSION_1) }
+
+        verify { project.tasks.register(ANY_NAME) wasNot Called }
     }
 
     @org.junit.Test

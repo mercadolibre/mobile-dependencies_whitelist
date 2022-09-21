@@ -15,6 +15,8 @@ import org.gradle.api.tasks.testing.Test
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
 import java.io.File
+import org.gradle.api.Task
+import org.gradle.api.tasks.TaskProvider
 
 @RunWith(JUnit4::class)
 class AppJacocoModuleTest : AbstractPluginManager() {
@@ -38,7 +40,7 @@ class AppJacocoModuleTest : AbstractPluginManager() {
     }
 
     @org.junit.Test
-    fun `When the JavaJacocoModule is called before evaluate execute her configuration`() {
+    fun `When the AppJacocoModule is called before evaluate execute her configuration`() {
         val project = mockk<Project>(relaxed = true)
 
         every { project.tasks.register(JACOCO_FULL_REPORT_TASK).get() } returns mockk(relaxed = true)
@@ -49,8 +51,12 @@ class AppJacocoModuleTest : AbstractPluginManager() {
     }
 
     @org.junit.Test
-    fun `When the LibraryJacocoModule configures all the Variants tasks`() {
-        jacocoModule.configVariantsTasks(projects[APP_PROJECT]!!, mockk(relaxed = true))
+    fun `When the AppJacocoModule configures all the Variants tasks`() {
+        val taskProvider = mockk<TaskProvider<Task>>(relaxed = true)
+
+        jacocoModule.configVariantsTasks(projects[APP_PROJECT]!!, taskProvider)
+
+        verify { taskProvider.configure(any()) }
     }
 
     @org.junit.Test

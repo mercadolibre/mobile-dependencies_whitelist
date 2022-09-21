@@ -7,6 +7,8 @@ import com.mercadolibre.android.gradle.baseplugin.core.action.modules.jacoco.bas
 import com.mercadolibre.android.gradle.baseplugin.core.action.providers.VariantUtils
 import com.mercadolibre.android.gradle.baseplugin.core.components.JACOCO_EXTENSION
 import com.mercadolibre.android.gradle.baseplugin.core.components.JACOCO_FULL_REPORT_TASK
+import com.mercadolibre.android.gradle.baseplugin.core.components.JACOCO_GROUP
+import com.mercadolibre.android.gradle.baseplugin.core.components.JACOCO_TEST_REPORT_DESCRIPTION
 import com.mercadolibre.android.gradle.baseplugin.core.components.JACOCO_TEST_REPORT_TASK
 import com.mercadolibre.android.gradle.baseplugin.managers.ANY_NAME
 import com.mercadolibre.android.gradle.baseplugin.managers.AbstractPluginManager
@@ -17,10 +19,12 @@ import io.mockk.every
 import io.mockk.mockk
 import io.mockk.mockkObject
 import io.mockk.verify
+import org.gradle.api.Action
 import org.gradle.api.Project
+import org.gradle.api.tasks.TaskProvider
 import org.gradle.api.tasks.testing.Test
-import org.gradle.testing.jacoco.plugins.JacocoTaskExtension
 import org.gradle.testing.jacoco.tasks.JacocoReport
+import org.gradle.testing.jacoco.tasks.JacocoReportsContainer
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
 import java.io.File
@@ -61,16 +65,17 @@ class JacocoTest : AbstractPluginManager() {
     }
 
     @org.junit.Test
-    fun `When the AndroidJacocoModule is called findOrCreate test report task`() {
+    fun `When the AndroidJacocoModule is called then find or create test report task`() {
         val project = mockk<Project>(relaxed = true)
 
         val task = libraryJacocoModule.findOrCreateJacocoTestReportTask(project)
+
         assert(libraryJacocoModule.getExtensionName() == JACOCO_EXTENSION)
         assert(task === libraryJacocoModule.findOrCreateJacocoTestReportTask(project))
     }
 
     @org.junit.Test
-    fun `When the AndroidJacocoModule is called configure the project`() {
+    fun `When the AndroidJacocoModule is called then configure the reports`() {
         val variant = mockVariant()
         val report = mockk<JacocoReport>(relaxed = true)
         val test = mockk<Test>()
@@ -86,21 +91,32 @@ class JacocoTest : AbstractPluginManager() {
         every { libraryJacocoModule.executionDataFile(test) } returns "/"
 
         libraryJacocoModule.configureReport(report, test, variant, projects[LIBRARY_PROJECT]!!)
+
+        verify { report.group = JACOCO_GROUP }
+        verify { report.description = "$JACOCO_TEST_REPORT_DESCRIPTION for the AnyProductFlavoranyName variant." }
+        verify { report.executionData.from(any()) }
+
+        verify { report.sourceDirectories.from(any()) }
+        verify { report.classDirectories.from(any()) }
+        verify { report.executionData.from(any()) }
+
+        verify { report.reports(any<Action<JacocoReportsContainer>>()) }
     }
 
     @org.junit.Test
-    fun `When the JavaJacocoModule is called configure the project`() {
+    fun `When the JavaJacocoModule is called then create all necessary task`() {
         val project = mockk<Project>(relaxed = true)
 
         jacocoModule.configure(projects[LIBRARY_PROJECT]!!)
         jacocoModule.configureProject(project)
         jacocoModule.configureTestReport(mockk(relaxed = true))
+
         assert(projects[LIBRARY_PROJECT]!!.tasks.names.contains(JACOCO_FULL_REPORT_TASK))
         assert(projects[LIBRARY_PROJECT]!!.tasks.names.contains(JACOCO_TEST_REPORT_TASK))
     }
 
     @org.junit.Test
-    fun `When the LibraryJacocoModule is called configure the project`() {
+    fun `When the LibraryJacocoModule is called create the jacoco report task`() {
         val variant = mockk<BaseVariant>()
 
         every { variant.name } returns ANY_NAME
@@ -110,6 +126,12 @@ class JacocoTest : AbstractPluginManager() {
 
         every { VariantUtils.javaCompile(variant).destinationDirectory.asFile.orNull } returns mockk(relaxed = true)
 
-        libraryJacocoModule.createReportTask(variant, projects[LIBRARY_PROJECT]!!)
+        val task = libraryJacocoModule.createReportTask(variant, projects[LIBRARY_PROJECT]!!)
+
+        // Create task name with variant.name
+        verify { variant.name }
+
+        // Task created
+        assert(task is TaskProvider<JacocoReport>)
     }
 }

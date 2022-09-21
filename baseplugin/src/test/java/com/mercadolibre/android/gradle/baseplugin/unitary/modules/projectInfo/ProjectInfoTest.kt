@@ -7,6 +7,7 @@ import com.mercadolibre.android.gradle.baseplugin.managers.AbstractPluginManager
 import com.mercadolibre.android.gradle.baseplugin.managers.LIBRARY_PROJECT
 import io.mockk.every
 import io.mockk.mockk
+import io.mockk.verify
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
 
@@ -27,7 +28,7 @@ class ProjectInfoTest : AbstractPluginManager() {
 
         projectInfo.configure(mockedSubProject)
 
-        io.mockk.verify { mockedSubProject.tasks }
+        verify { mockedSubProject.tasks }
     }
 
     @org.junit.Test
@@ -37,9 +38,9 @@ class ProjectInfoTest : AbstractPluginManager() {
 
         projectInfo.getInfo(mockedSubProject.project)
 
-        io.mockk.verify { mockedBaseExtension.compileSdkVersion }
-        io.mockk.verify { mockedBaseExtension.defaultConfig }
-        io.mockk.verify { mockedBaseExtension.compileOptions }
+        verify { mockedBaseExtension.compileSdkVersion }
+        verify { mockedBaseExtension.defaultConfig }
+        verify { mockedBaseExtension.compileOptions }
     }
 
     @org.junit.Test
@@ -49,7 +50,7 @@ class ProjectInfoTest : AbstractPluginManager() {
 
         projectInfo.printConfiguration(mockedRootProject)
 
-        io.mockk.verify { mockedRootProject.subprojects }
-        io.mockk.verify { mockedSubProject.name }
+        verify { mockedRootProject.subprojects }
+        verify { mockedSubProject.name }
     }
 }

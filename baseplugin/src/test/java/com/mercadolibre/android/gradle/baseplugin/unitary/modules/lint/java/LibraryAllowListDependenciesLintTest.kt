@@ -58,7 +58,7 @@ class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
     }
 
     @org.junit.Test
-    fun `When one Status Base is created works`() {
+    fun `When one Status Base is called then return the correct message`() {
         val status = StatusBase(shouldReport = false, isBlocker = true, name = ANY_NAME, message = "ANY_MESSAGE")
         val statusWithOutMessage = StatusBase(shouldReport = true, isBlocker = true, name = ANY_NAME, message = "1.+")
         Status.goingToExpire(null)
