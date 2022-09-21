@@ -1367,6 +1367,12 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "AccountRelationships",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "MerchRealestates",
       "source": "private",
       "target": "production",
