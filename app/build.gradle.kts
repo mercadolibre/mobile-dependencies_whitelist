@@ -11,11 +11,11 @@ dependencies {
     implementation(libs.meli.gradle.plugin.baseplugin)
 
     testImplementation(libs.bundles.test)
-    
+
     testImplementation(libs.meli.gradle.plugin.baseplugin)
-    
-    compileOnly(libs.bugsnag.plugin)
-    testImplementation(libs.bugsnag.plugin)
+
+    compileOnly(libs.misc.bugsnag.plugin)
+    testImplementation(libs.misc.bugsnag.plugin)
 
     implementation(libs.meli.gradle.plugin.baseplugin)
 }
