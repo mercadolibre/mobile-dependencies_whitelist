@@ -1606,14 +1606,28 @@
       "version": "8\\.+"
     },
     {
+      "description": "Deprecation for migration to Android 12",
+      "expires": "2022-9-30",
       "group": "com\\.mercadolibre\\.android\\.andesui",
       "name": "coachmark",
       "version": "5\\.\\+"
     },
     {
+      "description": "Deprecation for migration to Android 12",
+      "expires": "2022-9-30",
       "group": "com\\.mercadolibre\\.android\\.andesui",
       "name": "components",
       "version": "5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.andesui",
+      "name": "coachmark",
+      "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.andesui",
+      "name": "components",
+      "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.discounts_touchpoint",
