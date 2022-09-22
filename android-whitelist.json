@@ -1197,9 +1197,16 @@
       "version": "1\\.\\+"
     },
     {
+      "description": "This library will be deprecated after the migration to Android 12, the new version will be 7.0.0",
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android\\.pos_readers",
       "name": "posreaders",
       "version": "6\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.pos_readers",
+      "name": "posreaders",
+      "version": "7\\.+"
     },
     {
       "expires": "2022-10-03",
@@ -1208,11 +1215,18 @@
       "version": "1\\.+"
     },
     {
+      "description": "This library will be deprecated after the migration to Android 12, the new version will be 3.0.0",
+      "expires": "2022-09-30",
       "group": "com\\.mercadopago\\.android\\.point_ui",
       "name": "components",
       "version": "2\\.+"
     },
     {
+      "group": "com\\.mercadopago\\.android\\.point_ui",
+      "name": "components",
+      "version": "3\\.+"
+    },
+    {
       "expires": "2022-10-30",
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
       "name": "paymentflowfcu",
@@ -1237,14 +1251,28 @@
       "version": "4\\.+"
     },
     {
+      "description": "This library will be deprecated after the migration to Android 12, the new version will be 6.0.0",
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
       "name": "paymentflowfcu",
       "version": "5\\.+"
     },
     {
+      "description": "This library will be deprecated after the migration to Android 12, the new version will be 6.0.0",
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
       "name": "entities_fcu",
       "version": "5\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
+      "name": "paymentflowfcu",
+      "version": "6\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
+      "name": "entities_fcu",
+      "version": "6\\.+"
     },
     {
       "expires": "2022-10-30",
@@ -1265,14 +1293,28 @@
       "version": "2\\.+"
     },
     {
+      "description": "This library will be deprecated after the migration to Android 12, the new version will be 4.0.0",
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android\\.point\\.mpos",
       "name": "mpos",
       "version": "3\\.+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.point\\.mpos",
+      "name": "mpos",
+      "version": "4\\.+"
+    },
+    {
+      "description": "This library will be deprecated after the migration to Android 12, the new version will be 9.0.0",
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android\\.payment_flow",
       "name": "paymentflow",
       "version": "8\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.payment_flow",
+      "name": "paymentflow",
+      "version": "9\\.\\+"
     },
     {
       "group": "com\\.polidea\\.rxandroidble2",
