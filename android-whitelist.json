@@ -131,6 +131,11 @@
       "version": "0\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.smart_coupons",
+      "name": "coupons",
+      "version": "1\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.registration",
       "name": "core",
       "version": "mercadolibre-6\\.\\+"
@@ -222,7 +227,7 @@
     },
     {
       "description": "This library will be deprecated after the migration to Android 12, on 2022-09-16 the new version 17.0.1 will be enabled",
-      "expires": "2022-09-22",
+      "expires": "2022-09-30",
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-analytics",
       "version": "17\\.0\\.0"
@@ -258,9 +263,16 @@
       "version": "21\\.1\\.2"
     },
     {
+      "description": "Google migra su servicio de attestation de safetynet a integrity deprecandola",
+      "expires": "2023-03-01",
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-safetynet",
       "version": "17\\.0\\.0"
+    },
+    {
+      "group": "com\\.google\\.android\\.play",
+      "name": "integrity",
+      "version": "1\\.0\\.1"
     },
     {
       "group": "com\\.google\\.android\\.gms",
@@ -375,13 +387,13 @@
       "version": "0\\.4\\.4"
     },
     {
-      "expires": "2022-09-20",
+      "expires": "2022-12-20",
       "group": "com\\.google\\.zxing",
       "name": "core",
       "version": "3\\.3\\.2"
     },
     {
-      "expires": "2022-09-20",
+      "expires": "2022-12-20",
       "group": "com\\.journeyapps",
       "name": "zxing-android-embedded",
       "version": "3\\.6\\.0|4\\.0\\.2"
@@ -460,6 +472,11 @@
       "version": "1\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.accountrelationships",
+      "name": "accountrelationships",
+      "version": "0\\.\\+"
+    },
+    {
       "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "melidata-sdk",
@@ -486,43 +503,55 @@
       "version": "10\\.\\+"
     },
     {
-      "expires": "2022-11-15",
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "notifications",
       "version": "mercadolibre-19\\.\\+"
     },
     {
-      "expires": "2022-11-15",
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "notifications",
       "version": "mercadopago-19\\.\\+"
     },
     {
-      "expires": "2022-11-15",
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "notifications_commons",
       "version": "19\\.\\+"
     },
     {
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "notifications",
       "version": "20\\.\\+"
     },
     {
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "notifications_commons",
       "version": "20\\.\\+"
     },
     {
-      "expires": "2022-11-15",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "notifications",
+      "version": "21\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "notifications_commons",
+      "version": "21\\.\\+"
+    },
+    {
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android\\.rich_notifications",
       "name": "carousel",
-      "version": "1\\.\\+"
+      "version": "3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.rich_notifications",
       "name": "carousel",
-      "version": "3\\.\\+"
+      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -540,29 +569,59 @@
       "version": "13\\.\\+"
     },
     {
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient",
       "version": "18\\.\\+"
     },
     {
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-adapter-bus",
       "version": "18\\.\\+"
     },
     {
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-adapter-rx2",
       "version": "18\\.\\+"
     },
     {
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-converter-json",
       "version": "18\\.\\+"
     },
     {
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-extension-header",
       "version": "18\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient",
+      "version": "19\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient-adapter-bus",
+      "version": "19\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient-adapter-rx2",
+      "version": "19\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient-converter-json",
+      "version": "19\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient-extension-header",
+      "version": "19\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -914,9 +973,15 @@
       "version": "13\\.\\+"
     },
     {
+      "expires": "2022-10-1",
       "group": "com\\.mercadolibre\\.android\\.security",
       "name": "attestation",
       "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.security",
+      "name": "attestation",
+      "version": "6\\.\\+|7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.uicomponents",
@@ -1598,7 +1663,7 @@
     },
     {
       "description": "This library will be deprecated after the migration to Android 12, on 2022-09-16 the new version 1.4.0 will be enabled",
-      "expires": "2022-09-22",
+      "expires": "2022-09-30",
       "group": "androidx\\.browser",
       "name": "browser",
       "version": "1\\.0\\.0"
@@ -1675,7 +1740,7 @@
     },
     {
       "description": "This library will be deprecated after the migration to Android 12, on 2022-09-16 the new version 1.6.0 will be enabled",
-      "expires": "2022-09-22",
+      "expires": "2022-09-30",
       "group": "androidx\\.core",
       "name": "core",
       "version": "1\\.3\\.1"
@@ -1687,7 +1752,7 @@
     },
     {
       "description": "This library will be deprecated after the migration to Android 12, on 2022-09-16 the new version 1.6.0 will be enabled",
-      "expires": "2022-09-22",
+      "expires": "2022-09-30",
       "group": "androidx\\.core",
       "name": "core-ktx",
       "version": "1\\.2\\.0"
@@ -1749,7 +1814,7 @@
     },
     {
       "description": "This library will be deprecated after the migration to Android 12, on 2022-09-16 the new version 2.6.0 will be enabled",
-      "expires": "2022-09-22",
+      "expires": "2022-09-30",
       "group": "androidx\\.work",
       "name": "work-runtime",
       "version": "2\\.1\\.0"
@@ -1761,7 +1826,7 @@
     },
     {
       "description": "This library will be deprecated after the migration to Android 12, on 2022-09-16 the new version 2.6.0 will be enabled",
-      "expires": "2022-09-22",
+      "expires": "2022-09-30",
       "group": "androidx\\.work",
       "name": "work-runtime-ktx",
       "version": "2\\.1\\.0"
@@ -1936,9 +2001,15 @@
       "version": "5\\.22\\.4"
     },
     {
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "notificationcenter",
       "version": "mercadolibre-11\\.\\+|mercadopago-11\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "notificationcenter",
+      "version": "mercadolibre-12\\.\\+|mercadopago-12\\.\\+"
     },
     {
       "description": "Actualizar a 4.+ por a migracion API32",
@@ -2273,7 +2344,7 @@
       "version": "3.\\+"
     },
     {
-      "expires": "2023-04-30",
+      "expires": "2022-09-30",
       "group": "com\\.appboy",
       "name": "android-sdk-ui",
       "version": "18\\.0\\.1"
@@ -2395,6 +2466,11 @@
       "group": "com\\.bitmovin\\.player",
       "name": "player",
       "version": "3\\.13\\.3"
+    },
+    {
+      "group": "com\\.google\\.ads\\.interactivemedia.\\v3",
+      "name": "interactivemedia",
+      "version": "3\\.25\\.1"
     }
   ]
 }
