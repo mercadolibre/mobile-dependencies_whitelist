@@ -131,10 +131,16 @@
       "version": "0\\.\\+"
     },
     {
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android\\.smart_coupons",
       "name": "coupons",
       "version": "1\\.\\+"
     },
+    {
+      "group": "com\\.mercadolibre\\.android\\.smart_coupons",
+      "name": "coupons",
+      "version": "2\\.\\+"
+    },   
     {
       "group": "com\\.mercadolibre\\.android\\.registration",
       "name": "core",
