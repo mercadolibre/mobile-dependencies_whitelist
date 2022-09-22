@@ -1119,9 +1119,16 @@
       "version": "2\\.\\+"
     },
     {
+      "description": "This library will be deprecated after the migration to Android 12",
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android\\.cardscomponents",
       "name": "cards-components",
       "version": "7\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cardscomponents",
+      "name": "cards-components",
+      "version": "8\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.commons",
