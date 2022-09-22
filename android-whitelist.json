@@ -688,9 +688,15 @@
       "version": "5\\.\\+"
     },
     {
+      "expires": "2022-12-30",
       "group": "com\\.mercadolibre\\.android\\.local\\.storage",
       "name": "core",
-      "version": "6\\.\\+|7\\.\\+"
+      "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.local\\.storage",
+      "name": "core",
+      "version": "7\\.\\+"
     },
     {
       "expires": "2022-11-30",
@@ -699,9 +705,15 @@
       "version": "5\\.\\+"
     },
     {
+      "expires": "2022-12-30",
       "group": "com\\.mercadolibre\\.android\\.local\\.storage",
       "name": "kvs-defaults",
-      "version": "6\\.\\+|7\\.\\+"
+      "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.local\\.storage",
+      "name": "kvs-defaults",
+      "version": "7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.maps",
