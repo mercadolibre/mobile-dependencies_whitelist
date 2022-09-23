@@ -758,8 +758,13 @@
       "version": "4\\.\\+"
     },
     {
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.instore_ui_components",
       "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.instore_ui_components",
+      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.flox",
@@ -1583,9 +1588,15 @@
       "version": "mercadolibre-5\\.\\+|mercadopago-5\\.\\+|mercadolibre-6\\.\\+|mercadopago-6\\.\\+"
     },
     {
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.mlbusinesscomponents",
       "name": "mlbusinesscomponents",
       "version": "2\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.mlbusinesscomponents",
+      "name": "mlbusinesscomponents",
+      "version": "3\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
