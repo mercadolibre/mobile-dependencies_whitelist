@@ -131,9 +131,15 @@
       "version": "0\\.\\+"
     },
     {
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android\\.smart_coupons",
       "name": "coupons",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.smart_coupons",
+      "name": "coupons",
+      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.registration",
@@ -969,19 +975,37 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "compats",
       "version": "13\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.search",
+      "name": "compats",
+      "version": "14\\.\\+"
+    },
+    {
+      "expires": "2022-09-30",
+      "group": "com\\.mercadolibre\\.android\\.search",
       "name": "input",
       "version": "13\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.search",
+      "name": "input",
+      "version": "14\\.\\+"
+    },
+    {
+      "expires": "2022-09-30",
+      "group": "com\\.mercadolibre\\.android\\.search",
       "name": "search",
       "version": "13\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.search",
+      "name": "search",
+      "version": "14\\.\\+"
     },
     {
       "expires": "2022-10-1",
@@ -1416,7 +1440,7 @@
     },
     {
       "description": "migrate help: https://developer.android.com/topic/libraries/view-binding/migration",
-      "expires": "2022-09-30",
+      "expires": "2022-12-30",
       "group": "org\\.jetbrains\\.kotlin",
       "name": "kotlin-android-extensions-runtime",
       "version": "1\\.5\\.32"
@@ -1993,22 +2017,22 @@
     {
       "group": "org\\.robolectric",
       "name": "robolectric",
-      "version": "4\\.0\\.1"
+      "version": "4\\.5\\.1"
     },
     {
       "group": "org\\.robolectric",
       "name": "shadows-multidex",
-      "version": "4\\.0\\.1"
+      "version": "4\\.5\\.1"
     },
     {
       "group": "org\\.robolectric",
       "name": "shadows-supportv4",
-      "version": "4\\.0\\.1"
+      "version": "4\\.5\\.1"
     },
     {
       "group": "org\\.robolectric",
       "name": "shadows-playservices",
-      "version": "4\\.0\\.1"
+      "version": "4\\.5\\.1"
     },
     {
       "group": "junit",
@@ -2580,6 +2604,11 @@
       "group": "com\\.google\\.ads\\.interactivemedia.\\v3",
       "name": "interactivemedia",
       "version": "3\\.25\\.1"
+    },
+    {
+      "group": "com\\.google\\.android\\.gms",
+      "name": "play-services-cast-framework",
+      "version": "21\\.0\\.1"
     }
   ]
 }
