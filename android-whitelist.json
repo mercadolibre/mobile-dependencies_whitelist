@@ -1866,6 +1866,11 @@
       "version": "1\\.6\\.0"
     },
     {
+      "group": "androidx\\.core",
+      "name": "core-splashscreen",
+      "version": "1\\.\\+"
+    },
+    {
       "description": "This library will be deprecated after the migration to Android 12, on 2022-09-16 the new version 1.6.0 will be enabled",
       "expires": "2022-09-30",
       "group": "androidx\\.core",
