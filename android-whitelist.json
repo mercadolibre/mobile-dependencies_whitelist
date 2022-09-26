@@ -131,9 +131,15 @@
       "version": "0\\.\\+"
     },
     {
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android\\.smart_coupons",
       "name": "coupons",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.smart_coupons",
+      "name": "coupons",
+      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.registration",
@@ -758,8 +764,13 @@
       "version": "4\\.\\+"
     },
     {
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.instore_ui_components",
       "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.instore_ui_components",
+      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.flox",
@@ -1210,9 +1221,16 @@
       "version": "1\\.\\+"
     },
     {
+      "description": "This library will be deprecated after the migration to Android 12, the new version will be 7.0.0",
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android\\.pos_readers",
       "name": "posreaders",
       "version": "6\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.pos_readers",
+      "name": "posreaders",
+      "version": "7\\.+"
     },
     {
       "expires": "2022-10-03",
@@ -1221,11 +1239,18 @@
       "version": "1\\.+"
     },
     {
+      "description": "This library will be deprecated after the migration to Android 12, the new version will be 3.0.0",
+      "expires": "2022-09-30",
       "group": "com\\.mercadopago\\.android\\.point_ui",
       "name": "components",
       "version": "2\\.+"
     },
     {
+      "group": "com\\.mercadopago\\.android\\.point_ui",
+      "name": "components",
+      "version": "3\\.+"
+    },
+    {
       "expires": "2022-10-30",
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
       "name": "paymentflowfcu",
@@ -1250,14 +1275,28 @@
       "version": "4\\.+"
     },
     {
+      "description": "This library will be deprecated after the migration to Android 12, the new version will be 6.0.0",
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
       "name": "paymentflowfcu",
       "version": "5\\.+"
     },
     {
+      "description": "This library will be deprecated after the migration to Android 12, the new version will be 6.0.0",
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
       "name": "entities_fcu",
       "version": "5\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
+      "name": "paymentflowfcu",
+      "version": "6\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
+      "name": "entities_fcu",
+      "version": "6\\.+"
     },
     {
       "expires": "2022-10-30",
@@ -1278,14 +1317,28 @@
       "version": "2\\.+"
     },
     {
+      "description": "This library will be deprecated after the migration to Android 12, the new version will be 4.0.0",
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android\\.point\\.mpos",
       "name": "mpos",
       "version": "3\\.+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.point\\.mpos",
+      "name": "mpos",
+      "version": "4\\.+"
+    },
+    {
+      "description": "This library will be deprecated after the migration to Android 12, the new version will be 9.0.0",
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android\\.payment_flow",
       "name": "paymentflow",
       "version": "8\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.payment_flow",
+      "name": "paymentflow",
+      "version": "9\\.\\+"
     },
     {
       "group": "com\\.polidea\\.rxandroidble2",
@@ -1423,14 +1476,26 @@
       "version": "6\\.\\+"
     },
     {
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android\\.security",
       "name": "security_preferences",
       "version": "mercadopago-5\\.\\+|mercadolibre-5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.security",
+      "name": "security_preferences",
+      "version": "mercadopago-6\\.\\+|mercadolibre-6\\.\\+"
+    },
+    {
+      "expires": "2022-09-30",
+      "group": "com\\.mercadolibre\\.android\\.security",
       "name": "security_ui",
       "version": "mercadopago-5\\.\\+|mercadolibre-5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.security",
+      "name": "security_ui",
+      "version": "mercadopago-6\\.\\+|mercadolibre-6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.security",
@@ -1553,9 +1618,15 @@
       "version": "mercadolibre-5\\.\\+|mercadopago-5\\.\\+|mercadolibre-6\\.\\+|mercadopago-6\\.\\+"
     },
     {
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.mlbusinesscomponents",
       "name": "mlbusinesscomponents",
       "version": "2\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.mlbusinesscomponents",
+      "name": "mlbusinesscomponents",
+      "version": "3\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -1588,15 +1659,21 @@
       "version": "5\\.\\+"
     },
     {
-      "expires": "2022-12-10",
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android\\.draftandesui",
       "name": "draft-modal",
       "version": "5\\.+"
     },
     {
+      "expires": "2022-09-30",
       "group": "com\\.mercadolibre\\.android\\.draftandesui",
       "name": "draft-modal",
       "version": "6\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.draftandesui",
+      "name": "draft-modal",
+      "version": "8\\.+"
     },
     {
       "expires": "2022-09-30",
@@ -1705,6 +1782,11 @@
       "group": "androidx\\.browser",
       "name": "browser",
       "version": "1\\.4\\.0"
+    },
+    {
+      "group": "androidx\\.swiperefreshlayout",
+      "name": "swiperefreshlayout",
+      "version": "1\\.1\\.0"
     },
     {
       "description": "This library will be deprecated after the migration to Android 12, on 2022-09-16 the new version 1.4.0 will be enabled",
@@ -1929,22 +2011,22 @@
     {
       "group": "org\\.robolectric",
       "name": "robolectric",
-      "version": "4\\.0\\.1"
+      "version": "4\\.5\\.1"
     },
     {
       "group": "org\\.robolectric",
       "name": "shadows-multidex",
-      "version": "4\\.0\\.1"
+      "version": "4\\.5\\.1"
     },
     {
       "group": "org\\.robolectric",
       "name": "shadows-supportv4",
-      "version": "4\\.0\\.1"
+      "version": "4\\.5\\.1"
     },
     {
       "group": "org\\.robolectric",
       "name": "shadows-playservices",
-      "version": "4\\.0\\.1"
+      "version": "4\\.5\\.1"
     },
     {
       "group": "junit",
