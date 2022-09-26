@@ -1,3 +1,6 @@
+# 14.5.0
+- Se realiza el bump de Gradle Enterprise Plugin desde 3.6.4 a la 3.10.3
+
 # 14.4.0
 - Desabilitar la generación de imágenes PNG a partir de elementos `vector drawables`
 
