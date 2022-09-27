@@ -1205,7 +1205,7 @@
       "version": "^~>\\s?10|[1-9].[0-9]+$"
     },
     {
-      "expires": "2022-12-30",
+      "expires": "2022-10-30",
       "name": "StartUPInitializer",
       "source": "private",
       "target": "production",
@@ -1215,7 +1215,7 @@
       "name": "StartUPInitializer",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?6.[0-9]+.?[0-9]*$"
+      "version": "^~>\\s?6.[0-9]+"
     },
     {
       "name": "PointUI",
