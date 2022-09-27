@@ -1612,6 +1612,12 @@
       "source": "private",
       "target": "production",
       "version": "3.26.0"
+    },
+    {
+      "name": "google-cast-sdk",
+      "source": "public",
+      "target": "production",
+      "version": "4.7.0"
     }
   ]
 }
