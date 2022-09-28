@@ -2,64 +2,105 @@
 - Se cambian los experimentales del plugin de gradle por versiones publicadas
 
 # 14.5.0
+
+## Modificado
 - Se realiza el bump de Gradle Enterprise Plugin desde 3.6.4 a la 3.10.3
 
 # 14.4.0
+
+## Agregado
 - Desabilitar la generación de imágenes PNG a partir de elementos `vector drawables`
 
 # 14.3.0
+
+## Modificado
 - Se elimina la responsabilida de aplicar los archivos de proguard del Base Plugin y se lleva a App y Library.
 
 # 14.2.3
+
+## Modificado
 - Se modifica la forma en que se capitalizan las variables ya que la forma en que se hacia podia no estar declarada en algunos repositorios
 - Se mejoran las practicas utilizadas en los test de todos los plugins
 
 # 14.2.2
+
+## Eliminado
 - Se elimina la variable que bloquea el modulo para utilizar las dos variables que ya tenia, asi dejando una sola forma de bloquear el modulo
+
+## Fixeado
 - Se elimina el error de output que genera el linteo al no aplicar el salto de linea
+
+## Modificado
 - Se modifica la forma de declarar el exclude de las tasks de jacoco para que funcione con java 11
 - Se modifica la forma de declarar la variable isIncludeNoLocationClasses de las tasks de jacoco para que detecte el coverage
 - Se modifican el nombre de las variables de bugsnag y AGP para que sean mas entendibles
 
 # 14.2.1
+
+## Modificado
 - Se cambia la carpeta donde se almacenan los reportes de linteo para que CI los detecte
+
+## Eliminado
 - Se elimina el estilo que aplica el Linteo a los output ya que CI los formatea de una forma diferente
 
 # 14.2.0
+
+## Agregado
 - Se agrega la configuracion Default de Proguard para los modulos
+
+## Modificado
 - Se modifica el tiempo en el que se aplican los plugins para eliminar posibles errores
 
 # 14.1.0
+
+## Agregado
 - Se especifica la version disponible al mostrar un error en Linteo
-- Ya que el KeystoreModule no se ejecuta como default se evita que envie la notificacion de desactivado manualmente
 - Se excluye los test en jdk.internal para que no fallen los test en Java 11
 
+## Modificado
+- Ya que el KeystoreModule no se ejecuta como default se evita que envie la notificacion de desactivado manualmente
+
 # 14.0.0
+
+## Modificado
 - Se divide el BasePlugin en los Plugins BasePlugin para el root, y el BaseSettingsPlugin para las settings del root
 
 # 13.2.0
+
+## Agregado
 - Se agrega el linteo para los modulos java conjunto a su extension
-- Se modifica la extesnsion del KeyStore Module
-- Se modifica la interface Module para que se pueda modificar su funcionamiento
 - Se agrega el AppBasicsConfigurer que fuerza dependencias para que no se genere output
 
+## Modificado
+- Se modifica la extesnsion del KeyStore Module
+- Se modifica la interface Module para que se pueda modificar su funcionamiento
+
 # 13.1.3
+
+## Agregado
 - Se agrega la configuracion para agregar el versionName Automaticamente a los proyectos
+
+## Modificado
 - Se modifica el tiempo de ejecucion de los modulos jacoco para que puedan leer los productFlavor
 
 # 13.1.2
+
+## Agregado
 - Se agrega las configuraciones necesarias para que Jacoco encuentre todas las clases a testear
 
 # 13.1.1
+
+## Modificado
 - Se modifica el nombre que imprimen los modulos al ser desactivados, se cambio el nombre de su clase por el nombre de su extension 
 
 # 13.1.0
+
+## Agregado
 - Se genera el Plugin de Dynamic Feature para configurar los modulos de este estilo
 - Se genera el DynamicFeatureAndroidConfigurer que configurara los modulos para que sean capaces de compilar
 - Se agregaron los test del nuevo plugin Dynamic Feature
 - Se agrega la task projectInfo para saber las versiones de Android que utiliza un proyecto
 - Se agrega la funcionalidad a los test de mockear proyectos completos con sus subprojectos, y extensiones
-- Se mejora la calidad de los test para que verifiquen el funcionamiento correctamente 
 - Se configura el Build cache para que el proyecto Root no tenga que hacerlo
 - Se configura el Bugsnag para que el proyecto Root no tenga que hacerlo
 - Se agrega el Badge de InnerSourceReady
@@ -67,74 +108,120 @@
 - Se le da la funcionalidad al BuildScanModule de aplicar el Plugin de Gradle Enterprise
 - Se agrega el modulo DexCount para eliminarlo de los repositorios y configurarlo en los plugins
 
+## Modificado
+- Se mejora la calidad de los test para que verifiquen el funcionamiento correctamente 
+
 # 13.0.10
-- Se agregan las bases para apuntar a InnerSource Ready
+
+## Modificado
 - Usamos libraryName en lugar de versionName
-- Se solucionan los problemas al linetar multiples modulos al mismo tiempo
 - Se divide la responsabilida del Lintable module de lintear Apps y Librerias llevandola a su modulo correspondiente
 - Al momento de generar los Publish se almaceda el timestamp para que todas las versiones tengan el mismo
-- Se agrega la documentacion para eliminar los issues de DeteKt
 - Se modifica el pre-commit-config.yaml segun nos comenta el equipo de Code Quality por un issue de que DeteKt no genera reporte
 - Se hace que el archivo de detekt se genere dentro del build
+
+## Fixeado
+- Se solucionan los problemas al linetar multiples modulos al mismo tiempo
+
+## Agregado
+- Se agrega la documentacion para eliminar los issues de DeteKt
 - Se detecta automaticamente si los test estan en CI o en Local
 
 # 13.0.9 (unpublished)
+
+## Modificado
 - Se mejora el rendimiento de los tests
 
 # 13.0.8
+
+## Modificado
 - Se elimina el operador !! del group al almacenar una dependencia 
 - Se reinicia la flag de Lint cada vez que se llama la task
+
+## Agregado
 - Se agrega documentacion al codigo para cumplir con el DeteKt
 
 # 13.0.7
+
+## Modificado
 - Se elimina el operador !! de la version al almacenar una dependencia ya que los bundles no tienen version
 
 # 13.0.6
+
+## Agregado
 - Por problemas al publicar la version debemos agregar la variable "libraryVersion"
 
 # 13.0.5 (unpublished)
+
+## Agregado
 - Soporte para evaluación de Regrex de la allowlist
 
 # 13.0.4
+
+## Fixeado
 - Se agrega un fix al Linteo del Plugin
 - Se evita que la task pluginDescription se ejecute sola
-- Se eliman las variables duplicadas de Gradle
 - Se evita que el settings gradle tenga dependencias
+
+## Eliminado
+- Se eliman las variables duplicadas de Gradle
+
+## Modificado
 - Se cambia el termino WhiteList a AllowList
 
 # 13.0.3 (unpublished)
+
+## Eliminado
 - se elimina las experimentales en 13.0.1 y 13.0.2
+
+## Agregado
 - se agrega webhook code quality
 
 # 13.0.2
+
+## Modificado
 - Se genera la version que depende 13.0.1 elimanando los implementation que tienen experimental transitivos
 
 # 13.0.1
+
+## Modificado
 - Se genera la version que depende 13.0.0 eliminando los implementation que tienen experimental explicitos
 
 # 13.0.0
+
+## Modificado
+- Migracion Groovy a Kotlin
 - Requiere Gradle 7.+
+- Migro build.gradle del modulo Base a .kts
+- Muevo afuera logica relacionada al alta de los repositorios del BasePlugin
+
+## Agregado
 - Se agrega kotlin DSL a todos los modulos
 - Se agregan los skeletons de los modulos para App y Library, con sus correspondientes android apply 
-- Migro build.gradle del modulo Base a .kts
-- Muevo afuera logica relacionada al alta de los repositorios del BasePlugin 
 - Agrego el file lib.versions.toml para declaracion de variables en el repo, y cambio todas las referencias para usarlo.
 - Agrego el extension de configuracion para la app
-- Migracion Groovy a Kotlin
 - Se generan 3 mudulos que contienen plugins, baseplugin, app y library
 - Se agregan test unitarios y de integracion
 
 # 12.2.0
+
+## Fixeado
 - Se corrige el path del resource del keystore para no romper en Windows.
 - 
 # 12.1.0
+
+## Modificado
 - Se agregar check para "compile", "implementation" y api en variant para soportar AGP7
 
 # 12.0.1
+
+## Fixeado
 - Se genera nuevamente el release por un fallo en ci que no soportaba gradle 7.
 - Update gradle 7.4
 
 # 12.0.0
+
+## Fixeado
 - Se migra a gradle 7.3.3
 - remove smartlook repo
 
@@ -149,7 +236,7 @@
 - Se reemplazan todos los repositorios externos por proxies de Nexus. Hacemos esto JCenter presentó downtime y nos sacó tiempo de desarrollo. Por eso vamos a usar la cache del Nexus y como fallback estos repositorios.
 
 # 11.3.0
-## Cambiado
+## Modificado
 - Remove WARNING: variant.getJavaCompile ()' is obsolete....
 - Remoce WARNING: variantOutput.getPackageLibrary()' is obsolete...
 
@@ -166,15 +253,15 @@
 - Cleaning SCA and other lint configurations
 
 # 11.0.1
-## Cambiado
+## Modificado
 - Se utilizan correctamente las credenciales propias de Experimental. Ya no es necesario setear la variable de entorno NEXUS_DEPLOYER_USER y NEXUS_DEPLOYER_PASSWORD.
 
 # 11.0.0
-## Cambiado
+## Modificado
 - Se cambia la manera de obtener las credenciales de los repositories de read. Ahora se requiere de las credenciales seteadas en el gradle.properties global.
 
 # 10.6.0
-## Cambiado
+## Modificado
 - Fix comparacion por Gstring vs String. Esto hacia que las dependencia tipo variant no se agreguen al pom xml. Ejemplo `releaseImplementation group:artifact:version`
 
 # 10.5.0
@@ -195,11 +282,11 @@ jacocoConfiguration {
 - Se elimina plugin 'com.github.dcendents.android-maven' y repositorio de datami que nos son usados.
 
 # 10.2.0
-## Cambiado
+## Modificado
 - Rotación de passwords de Nexus por leak
 
 # 10.1.0
-## Cambiado
+## Modificado
 - Se vuelve a ser compliance con Configuration Avoidance en la lógica de exclusión de Findbugs y Spotbugs
 - se agrega el nuevo repo nexus de ML y se elimina el obsoleto bintray
 ## Agregado
@@ -236,7 +323,7 @@ jacocoConfiguration {
 ## Eliminado
 - Se elimina el Bintray Gradle Plugin junto a sus implementaciones dado que el 01/05/2021 Bintray da de baja sus servicios
 
-## Cambiado
+## Modificado
 - Se modifican la publicación para soportar el Maven Gradle Plugin hacia un servicio Nexus privado interno
 - Se modifican los repositorios de Bintray que se inyectan a los repositorios, reemplazandolos por los del Nexus
 
@@ -358,7 +445,7 @@ jacocoConfiguration {
 - Se Agrega el soporte para publicar los builds a Gradle Enterprise
 
 # v5.10.0
-## Cambiado
+## Modificado
 - Se migra el plugin a Gradle 4
 
 # v5.9.0
@@ -379,7 +466,7 @@ jacocoConfiguration {
 - Se cambia la key de bintray read por la nueva
 
 # v4.5.1
-## Cambiado
+## Modificado
 - Se cambia la key de bintray read por la nueva
 
 # v5.5.1
@@ -476,38 +563,38 @@ jacocoConfiguration {
 - Agregamos la url de nuestro repo publico
 
 # v4.4.6
-## Cambiado
+## Modificado
 - Typo de la 4.4.5
 
 # v4.4.5
-## Cambiado
+## Modificado
 - Se desactiva findbugs de todos los proyectos automaticamente
 
 # v4.4.4
-## Cambiado
+## Modificado
 - Se fixea el aar que se provee al publicar, ya que en las publicaciones flavored el name viene en camelcase y necesitamos hypencase (ver https://github.com/mercadolibre/mobile-android_gradle/pull/131)
 
 # v4.4.3
-## Cambiado
+## Modificado
 - Se fixea issue en el pom, no agregando correctamente nodos de exclusiones.
 
 # v4.4.2
-## Cambiado
+## Modificado
 - Se arregla validacion de si una dependencia es local o no cuando tienen groups distintos dentro del mismo repositorio
 - Se arregla conflicto entre las versiones de cada tipo de publicacion
 
 # v4.4.1
-## Cambiado
+## Modificado
 - Se arregla pom con dependencias locales dinamicas que quedaban fijas
 
 # v4.4.0
-## Cambiado
+## Modificado
 - Se refactoriza la creacion de los poms
 - Se saca findbugs ya que figura como 'compile' para proyectos de java puros
 - Se da soporte para poms con configuration de gradle 4.X
 
 # v4.3.1
-## Cambiado
+## Modificado
 - Se fixea issue en el pom, no agregando los nodos de exclusiones.
 
 # v4.3.0
@@ -516,7 +603,7 @@ jacocoConfiguration {
 - Se agrega campo `expires` para cada dependencia de la whitelist
 
 # v4.2.2
-## Cambiado
+## Modificado
 - Se fixea issue en lockVersions, cambiando configuraciones ya resueltas - #116
 - Se fixea una race condition con la task check al agregarle una dependencia - #117
 - Se fixea NPE con jars locales como dependencias en el lintReleaseDependencies - #118
@@ -556,14 +643,14 @@ jacocoConfiguration {
 - Arreglamos un error que hacia que las otras libs con el mismo groupId queden con la version propia
 
 # v4.1.0
-## Cambiado
+## Modificado
 - Dejamos de depender de `check` para todas las task de release
 
 # v4.0.1
 ## Arreglado
 - Los .jar de alpha, experimental y release estaban siendo pisados por los sources.
 
-## Cambiado
+## Modificado
 - Dejamos de correr `check` al publicar versiones experimentales de los .jar.
 
 ## Eliminado
