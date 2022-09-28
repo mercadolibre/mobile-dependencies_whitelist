@@ -784,9 +784,15 @@
       "version": "7\\.\\+"
     },
     {
+      "expires": "2022-10-07",
       "group": "com\\.mercadolibre\\.android\\.fluxclient",
       "name": "flux-client",
       "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.fluxclient",
+      "name": "flux-client",
+      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.history",
@@ -857,9 +863,15 @@
       "version": "10\\.\\+"
     },
     {
+      "expires": "2022-10-14",
       "group": "com\\.mercadolibre\\.android\\.matt",
       "name": "core",
       "version": "8\\.\\+|mercadolibre-8\\.\\+|mercadopago-8\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.matt",
+      "name": "core",
+      "version": "9\\.\\+|mercadolibre-9\\.\\+|mercadopago-9\\.\\+"
     },
     {
       "expires": "2022-09-30",
@@ -2223,14 +2235,32 @@
       "version": "1\\.+"
     },
     {
+      "expires": "2022-09-30",
+      "group": "com\\.mercadolibre\\.android\\.point_smart_helpers",
+      "name": "hardware_buttons",
+      "version": "1\\.+"
+    },
+    {
+      "expires": "2022-10-30",
       "group": "com\\.mercadolibre\\.android\\.point_smart_helpers",
       "name": "point_commons",
       "version": "2\\.+"
     },
     {
+      "expires": "2022-10-30",
       "group": "com\\.mercadolibre\\.android\\.point_smart_helpers",
       "name": "hardware_buttons",
-      "version": "1\\.+"
+      "version": "2\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_smart_helpers",
+      "name": "point_commons",
+      "version": "3\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_smart_helpers",
+      "name": "hardware_buttons",
+      "version": "3\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point_credits",
