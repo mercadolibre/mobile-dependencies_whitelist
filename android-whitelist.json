@@ -303,6 +303,13 @@
     {
       "group": "com\\.mercadolibre\\.android\\.dynamic_features",
       "name": "core",
+      "version": "8\\.\\+"
+    },
+    {
+      "description": "Deprecada porque no soporta API level 32",
+      "expires": "2022-10-07",
+      "group": "com\\.mercadolibre\\.android\\.dynamic_features",
+      "name": "core",
       "version": "7\\.\\+"
     },
     {
@@ -455,9 +462,23 @@
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "configuration-manager",
+      "version": "7\\.\\+"
+    },
+    {
+      "description": "Deprecada porque no soporta API level 32",
+      "expires": "2022-10-07",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "configuration-manager",
       "version": "6\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.ignite",
+      "name": "core",
+      "version": "6\\.\\+"
+    },
+    {
+      "description": "Deprecada porque no soporta API level 32",
+      "expires": "2022-10-07",
       "group": "com\\.mercadolibre\\.android\\.ignite",
       "name": "core",
       "version": "5\\.\\+"
@@ -752,9 +773,21 @@
     },
     {
       "group": "com\\.mercadolibre\\.android\\.commons",
+      "version": "25\\.\\+"
+    },
+    {
+      "description": "Deprecada porque no soporta API level 32",
+      "expires": "2022-10-07",
+      "group": "com\\.mercadolibre\\.android\\.commons",
       "version": "24\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.remote\\.configuration",
+      "version": "5\\.\\+"
+    },
+    {
+      "description": "Deprecada porque no soporta API level 32",
+      "expires": "2022-10-07",
       "group": "com\\.mercadolibre\\.android\\.remote\\.configuration",
       "version": "4\\.\\+"
     },
@@ -831,26 +864,26 @@
       "version": "mercadolibre-9\\.\\+|mercadopago-9\\.\\+"
     },
     {
-      "expires": "2022-11-30",
-      "group": "com\\.mercadolibre\\.android\\.local\\.storage",
-      "name": "core",
-      "version": "5\\.\\+|6\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.local\\.storage",
       "name": "core",
       "version": "7\\.\\+"
     },
     {
-      "expires": "2022-11-30",
-      "group": "com\\.mercadolibre\\.android\\.local\\.storage",
-      "name": "kvs-defaults",
-      "version": "5\\.\\+|6\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.local\\.storage",
       "name": "kvs-defaults",
       "version": "7\\.\\+"
+    },
+    {
+      "expires": "2022-10-07",
+      "group": "com\\.mercadolibre\\.android\\.local\\.storage",
+      "name": "core",
+      "version": "5\\.\\+|6\\.\\+"
+    },
+    {
+      "expires": "2022-10-07",
+      "group": "com\\.mercadolibre\\.android\\.local\\.storage",
+      "name": "kvs-defaults",
+      "version": "5\\.\\+|6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.maps",
@@ -928,9 +961,23 @@
     {
       "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
       "name": "core",
+      "version": "10\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
+      "name": "renderer-fresco",
+      "version": "10\\.\\+"
+    },
+    {
+      "description": "Deprecada porque no soporta API level 32",
+      "expires": "2022-10-07",
+      "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
+      "name": "core",
       "version": "9\\.\\+"
     },
     {
+      "description": "Deprecada porque no soporta API level 32",
+      "expires": "2022-10-07",
       "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
       "name": "renderer-fresco",
       "version": "9\\.\\+"
@@ -938,14 +985,35 @@
     {
       "group": "com\\.mercadolibre\\.android\\.place",
       "name": "annotation",
+      "version": "8\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.place",
+      "name": "core",
+      "version": "8\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.place",
+      "name": "processor",
+      "version": "8\\.\\+"
+    },
+    {
+      "description": "Deprecada porque no soporta API level 32",
+      "expires": "2022-10-07",
+      "group": "com\\.mercadolibre\\.android\\.place",
+      "name": "annotation",
       "version": "7\\.\\+"
     },
     {
+      "description": "Deprecada porque no soporta API level 32",
+      "expires": "2022-10-07",
       "group": "com\\.mercadolibre\\.android\\.place",
       "name": "core",
       "version": "7\\.\\+"
     },
     {
+      "description": "Deprecada porque no soporta API level 32",
+      "expires": "2022-10-07",
       "group": "com\\.mercadolibre\\.android\\.place",
       "name": "processor",
       "version": "7\\.\\+"
@@ -2158,9 +2226,16 @@
       "version": "mercadolibre-11\\.\\+|mercadopago-11\\.\\+"
     },
     {
+      "description": "Deprecada porque no soporta API level 32",
+      "expires": "2022-10-07",
       "group": "com\\.mercadolibre\\.android",
       "name": "notificationcenter",
       "version": "mercadolibre-12\\.\\+|mercadopago-12\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "notificationcenter",
+      "version": "mercadolibre-13\\.\\+|mercadopago-13\\.\\+"
     },
     {
       "description": "Actualizar a 4.+ por a migracion API32",
@@ -2442,6 +2517,13 @@
     {
       "group": "com\\.mercadolibre\\.android\\.in_app_report",
       "name": "MLInAppReport",
+      "version": "3\\.\\+"
+    },
+    {
+      "description": "Deprecada porque no soporta API level 32",
+      "expires": "2022-10-07",
+      "group": "com\\.mercadolibre\\.android\\.in_app_report",
+      "name": "MLInAppReport",
       "version": "2\\.\\+"
     },
     {
@@ -2536,9 +2618,23 @@
     {
       "group": "com\\.mercadolibre\\.android\\.mobile_cryptography",
       "name": "core",
+      "version": "3\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.mobile_cryptography",
+      "name": "test-utils",
+      "version": "3\\.+"
+    },
+    {
+      "description": "Deprecada porque no soporta API level 32",
+      "expires": "2022-10-07",
+      "group": "com\\.mercadolibre\\.android\\.mobile_cryptography",
+      "name": "core",
       "version": "2\\.+"
     },
     {
+      "description": "Deprecada porque no soporta API level 32",
+      "expires": "2022-10-07",
       "group": "com\\.mercadolibre\\.android\\.mobile_cryptography",
       "name": "test-utils",
       "version": "2\\.+"
@@ -2645,6 +2741,16 @@
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-cast-framework",
       "version": "21\\.0\\.1"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.developer_mode",
+      "name": "no-dm-core",
+      "version": "8\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.developer_mode",
+      "name": "dm-core",
+      "version": "8\\.\\+"
     }
   ]
 }
