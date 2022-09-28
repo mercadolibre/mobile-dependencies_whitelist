@@ -2491,16 +2491,9 @@
       "version": "2\\.6\\.0"
     },
     {
-      "description": "This library will be deprecated after the migration to Android 12, on 2022-09-16 the new version 3.0.0 will be enabled",
-      "expires": "2022-10-30",
       "group": "com\\.mercadolibre\\.android\\.point_smart_pos_sdk",
       "name": "PPCompAndroidLib",
       "version": "0\\.+"
-    },
-    {
-      "group": "com\\.mercadolibre\\.android\\.point_smart_pos_sdk",
-      "name": "PPCompAndroidLib",
-      "version": "3\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point_more_options",
@@ -2524,9 +2517,16 @@
       "version": "dev-1\\.\\+|a910-1\\.\\+|d20-1\\.\\+|1\\.\\+"
     },
     {
+      "description": "This library will be deprecated after the migration to Android 12, on 2022-09-16 the new version 3.0.0 will be enabled",
+      "expires": "2022-10-30",
       "group": "com\\.mercadolibre\\.android\\.point_smart_pos_sdk",
       "name": "device",
       "version": "dev-2\\.\\+|a910-2\\.\\+|d20-2\\.\\+|2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_smart_pos_sdk",
+      "name": "device",
+      "version": "dev-3\\.\\+|a910-3\\.\\+|d20-3\\.\\+|3\\.\\+"
     },
     {
       "description": "This library will be deprecated after the migration to Android 12, on 2022-09-16 the new version 2.0.0 will be enabled",
