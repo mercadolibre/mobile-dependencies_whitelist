@@ -1,3 +1,6 @@
+# 14.5.1
+- Se cambian los experimentales del plugin de gradle por versiones publicadas
+
 # 14.5.0
 - Se realiza el bump de Gradle Enterprise Plugin desde 3.6.4 a la 3.10.3
 
