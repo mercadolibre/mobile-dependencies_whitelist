@@ -1572,10 +1572,17 @@
       "version": "2.40.0"
     },
     {
+      "expires": "2022-11-30",
       "name": "Opentelemetry",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "Opentelemetry",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "Onboarding",
