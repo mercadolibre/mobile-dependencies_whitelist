@@ -542,31 +542,31 @@
       "version": "10\\.\\+"
     },
     {
-      "expires": "2022-09-30",
+      "expires": "2022-10-13",
       "group": "com\\.mercadolibre\\.android",
       "name": "notifications",
       "version": "mercadolibre-19\\.\\+"
     },
     {
-      "expires": "2022-09-30",
+      "expires": "2022-10-13",
       "group": "com\\.mercadolibre\\.android",
       "name": "notifications",
       "version": "mercadopago-19\\.\\+"
     },
     {
-      "expires": "2022-09-30",
+      "expires": "2022-10-13",
       "group": "com\\.mercadolibre\\.android",
       "name": "notifications_commons",
       "version": "19\\.\\+"
     },
     {
-      "expires": "2022-09-30",
+      "expires": "2022-10-13",
       "group": "com\\.mercadolibre\\.android",
       "name": "notifications",
       "version": "20\\.\\+"
     },
     {
-      "expires": "2022-09-30",
+      "expires": "2022-10-13",
       "group": "com\\.mercadolibre\\.android",
       "name": "notifications_commons",
       "version": "20\\.\\+"
@@ -608,31 +608,31 @@
       "version": "13\\.\\+"
     },
     {
-      "expires": "2022-09-30",
+      "expires": "2022-10-13",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient",
       "version": "18\\.\\+"
     },
     {
-      "expires": "2022-09-30",
+      "expires": "2022-10-13",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-adapter-bus",
       "version": "18\\.\\+"
     },
     {
-      "expires": "2022-09-30",
+      "expires": "2022-10-13",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-adapter-rx2",
       "version": "18\\.\\+"
     },
     {
-      "expires": "2022-09-30",
+      "expires": "2022-10-13",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-converter-json",
       "version": "18\\.\\+"
     },
     {
-      "expires": "2022-09-30",
+      "expires": "2022-10-13",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-extension-header",
       "version": "18\\.\\+"
@@ -1367,14 +1367,14 @@
       "version": "7\\.+"
     },
     {
-      "expires": "2022-10-03",
+      "expires": "2022-10-13",
       "group": "com\\.mercadopago\\.android\\.point_ui",
       "name": "components",
       "version": "1\\.+"
     },
     {
       "description": "This library will be deprecated after the migration to Android 12, the new version will be 3.0.0",
-      "expires": "2022-09-30",
+      "expires": "2022-10-13",
       "group": "com\\.mercadopago\\.android\\.point_ui",
       "name": "components",
       "version": "2\\.+"
@@ -1410,14 +1410,14 @@
     },
     {
       "description": "This library will be deprecated after the migration to Android 12, the new version will be 6.0.0",
-      "expires": "2022-09-30",
+      "expires": "2022-10-13",
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
       "name": "paymentflowfcu",
       "version": "5\\.+"
     },
     {
       "description": "This library will be deprecated after the migration to Android 12, the new version will be 6.0.0",
-      "expires": "2022-09-30",
+      "expires": "2022-10-13",
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
       "name": "entities_fcu",
       "version": "5\\.+"
@@ -1452,7 +1452,7 @@
     },
     {
       "description": "This library will be deprecated after the migration to Android 12, the new version will be 4.0.0",
-      "expires": "2022-09-30",
+      "expires": "2022-10-13",
       "group": "com\\.mercadolibre\\.android\\.point\\.mpos",
       "name": "mpos",
       "version": "3\\.+"
@@ -1464,7 +1464,7 @@
     },
     {
       "description": "This library will be deprecated after the migration to Android 12, the new version will be 9.0.0",
-      "expires": "2022-09-30",
+      "expires": "2022-10-13",
       "group": "com\\.mercadolibre\\.android\\.payment_flow",
       "name": "paymentflow",
       "version": "8\\.\\+"
@@ -1855,14 +1855,14 @@
     },
     {
       "description": "Deprecation for migration to Android 12",
-      "expires": "2022-9-30",
+      "expires": "2022-10-13",
       "group": "com\\.mercadolibre\\.android\\.andesui",
       "name": "coachmark",
       "version": "5\\.\\+"
     },
     {
       "description": "Deprecation for migration to Android 12",
-      "expires": "2022-9-30",
+      "expires": "2022-10-13",
       "group": "com\\.mercadolibre\\.android\\.andesui",
       "name": "components",
       "version": "5\\.\\+"
@@ -2281,7 +2281,7 @@
     },
     {
       "description": "Actualizar a 4.+ por a migracion API32",
-      "expires": "2022-09-30",
+      "expires": "2022-10-13",
       "group": "com\\.mercadolibre\\.android\\.devices_sdk",
       "name": "devices",
       "version": "3\\.\\+"
