@@ -910,9 +910,15 @@
       "version": "5\\.\\+|6\\.\\+"
     },
     {
+      "expires": "2022-10-13",
       "group": "com\\.mercadolibre\\.android\\.maps",
       "name": "core",
       "version": "7\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.maps",
+      "name": "core",
+      "version": "8\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.marketplace\\.map",
