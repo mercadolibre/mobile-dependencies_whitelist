@@ -515,14 +515,26 @@
       "version": "15\\.\\+"
     },
     {
+      "expires": "2022-10-15",
       "group": "com\\.mercadolibre\\.android",
       "name": "milestone-tracker",
       "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
+      "name": "milestone-tracker",
+      "version": "6\\.\\+"
+    },
+    {
+      "expires": "2022-10-15",
+      "group": "com\\.mercadolibre\\.android",
       "name": "multiimageview",
       "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "multiimageview",
+      "version": "7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -1063,9 +1075,15 @@
       "version": "7\\.\\+"
     },
     {
+      "expires": "2022-10-07",
       "group": "com\\.mercadolibre\\.android\\.risk_management",
       "name": "riskmanagement",
       "version": "2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.risk_management",
+      "name": "riskmanagement",
+      "version": "3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.livecommerce",
