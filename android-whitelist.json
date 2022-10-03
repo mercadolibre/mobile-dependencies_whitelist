@@ -678,6 +678,13 @@
       "version": "14\\.\\+"
     },
     {
+      "description": "Esta lib se encuentra deprecada, eliminar su uso",
+      "expires": "2022-10-13",
+      "group": "com\\.mercadolibre\\.android\\.biometrics",
+      "name": "sdk",
+      "version": "4\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.bookmarks",
       "name": "bookmarks",
       "version": "5\\.\\+"
