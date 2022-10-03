@@ -2,16 +2,18 @@
 ##################################################################################
 # Meli libs
 ##################################################################################
-autoImplementation = "14.5.0"
-autoImplementationBasePlugin = "14.5.0"
+autoImplementation = "EXPERIMENTAL-16.0.0-20221003172845"
+autoImplementationBasePlugin = "EXPERIMENTAL-16.0.0-20221003172845"
 ##################################################################################
 # Misc libs
 ##################################################################################
 pluginKotlin = "1.5.31"
-buildTools = "4.2.2"
-bugsnag = "5.+"
+buildTools = "7.2.2"
+bugsnagLib = "5.+"
+bugsnagPlugin = "7.2.1"
 dexcount= "1.0.3"
 gradleEnterprise = "3.10.3"
+gson = "2.8.7"
 ##################################################################################
 # Test libs
 ##################################################################################
@@ -34,8 +36,9 @@ gradle-plugin-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", v
 gradle-buildTools-plugin = { module = "com.android.tools.build:gradle", version.ref = "buildTools" }
 gradle-scan-enterprise = { module = "com.gradle:gradle-enterprise-gradle-plugin", version.ref = "gradleEnterprise" }
 misc-dexcount = { module = "com.getkeepsafe.dexcount:dexcount-gradle-plugin", version.ref = "dexcount" }
-misc-bugsnag-plugin = { module = "com.bugsnag:bugsnag-android-gradle-plugin", version.ref = "bugsnag" }
-misc-bugsnag-lib = { module = "com.bugsnag:bugsnag-android", version.ref = "bugsnag" }
+misc-bugsnag-plugin = { module = "com.bugsnag:bugsnag-android-gradle-plugin", version.ref = "bugsnagPlugin" }
+misc-bugsnag-lib = { module = "com.bugsnag:bugsnag-android", version.ref = "bugsnagLib" }
+misc-gson = { module = "com.google.code.gson:gson", version.ref = "gson"}
 ##################################################################################
 # Test libs
 ##################################################################################

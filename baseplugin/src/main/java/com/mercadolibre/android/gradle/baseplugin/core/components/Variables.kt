@@ -8,4 +8,4 @@ internal const val BUILD_TOOLS_VERSION = "30.0.2"
 
 internal const val GRADLE_VERSION = 7
 
-internal val JAVA_VERSION = JavaVersion.VERSION_1_8
+internal val JAVA_VERSION = JavaVersion.VERSION_11

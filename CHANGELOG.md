@@ -1,3 +1,7 @@
+# 16.0.0
+- Migracion AGP 7
+- Se agrega la depedencia de Gson ya que AGP 7 no la contiene 
+
 # 14.5.1
 - Se cambian los experimentales del plugin de gradle por versiones publicadas
 
