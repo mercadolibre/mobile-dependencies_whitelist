@@ -910,9 +910,15 @@
       "version": "5\\.\\+|6\\.\\+"
     },
     {
+      "expires": "2022-10-13",
       "group": "com\\.mercadolibre\\.android\\.maps",
       "name": "core",
       "version": "7\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.maps",
+      "name": "core",
+      "version": "8\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.marketplace\\.map",
@@ -1356,7 +1362,7 @@
     },
     {
       "description": "This library will be deprecated after the migration to Android 12, the new version will be 7.0.0",
-      "expires": "2022-09-30",
+      "expires": "2022-10-13",
       "group": "com\\.mercadolibre\\.android\\.pos_readers",
       "name": "posreaders",
       "version": "6\\.+"
