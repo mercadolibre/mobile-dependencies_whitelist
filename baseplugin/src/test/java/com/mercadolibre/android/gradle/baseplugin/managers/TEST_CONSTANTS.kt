@@ -4,6 +4,7 @@ const val ROOT_PROJECT = "root"
 const val LIBRARY_PROJECT = "p1"
 const val APP_PROJECT = "p2"
 const val TEST_APP_PROJECT = "p3"
+const val DF_PROJECT = "p4"
 
 const val ANY_NAME = "anyName"
 const val ANY_GROUP = "anyGroup"

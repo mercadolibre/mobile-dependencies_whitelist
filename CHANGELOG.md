@@ -1,4 +1,12 @@
+# 14.6.0
+
+## Agregado
+- Se agrega el modulo ConfigPluginModule que disparara una warning o un error en caso de que encuentre un modulo sin el meli plugin de gradle
+- Se agrega un objeto con la responsabilidad de enviar mensajes a consola 
+
 # 14.5.1
+
+## Modificado
 - Se cambian los experimentales del plugin de gradle por versiones publicadas
 
 # 14.5.0
