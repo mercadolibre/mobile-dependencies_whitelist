@@ -1,10 +1,17 @@
 {
   "whitelist": [
     {
+      "expires": "2022-11-01",
       "name": "AdvertisingADN",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+"
+    },
+    {
+      "name": "AdvertisingADN",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLCheckoutFlow",
@@ -1089,13 +1096,6 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
-      "expires": "2022-09-30",
-      "name": "MLScanner",
-      "source": "private",
-      "target": "production",
-      "version": "~>\\s?[1-3]+.[0-9]+"
-    },
-    {
       "name": "Scanner",
       "source": "private",
       "target": "production",
@@ -1572,10 +1572,17 @@
       "version": "2.40.0"
     },
     {
+      "expires": "2022-11-30",
       "name": "Opentelemetry",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "Opentelemetry",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "Onboarding",
