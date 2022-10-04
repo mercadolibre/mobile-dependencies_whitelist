@@ -2183,14 +2183,26 @@
       "version": "4\\.\\+"
     },
     {
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.addresses",
       "name": "core",
       "version": "6\\.\\+"
     },
     {
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.addresses",
       "name": "zipcode",
       "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.addresses",
+      "name": "core",
+      "version": "mercadolibre-7\\.\\+|mercadopago-7\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.addresses",
+      "name": "zipcode",
+      "version": "mercadolibre-7\\.\\+|mercadopago-7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.nfcpayments",
