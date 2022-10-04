@@ -1,6 +1,19 @@
 {
   "whitelist": [
     {
+      "expires": "2022-11-01",
+      "name": "AdvertisingADN",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+"
+    },
+    {
+      "name": "AdvertisingADN",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "MLCheckoutFlow",
       "source": "private",
       "target": "production",
@@ -61,10 +74,17 @@
       "version": "0.8"
     },
     {
+      "expires": "2022-11-15",
       "name": "Charts",
       "source": "public",
       "target": "production",
       "version": "3.4.0"
+    },
+    {
+      "name": "Charts",
+      "source": "public",
+      "target": "production",
+      "version": "4.1.0"
     },
     {
       "name": "DataPrivacyHelper",
@@ -413,10 +433,17 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "expires": "2022-10-14",
       "name": "MlCards",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?0.[0-9]+"
+    },
+    {
+      "name": "MlCards",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+"
     },
     {
       "name": "MLCardDrawer",
@@ -666,10 +693,16 @@
       "version": "^~>\\s?2.[0-9]+"
     },
     {
+      "name": "DANetworking",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
       "name": "MLRecommendationsCombo",
       "source": "private",
-      "target": "test",
-      "version": "^~>\\s?0.[0-9]+$"
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+"
     },
     {
       "name": "MLRecommendationCombo",
@@ -736,6 +769,12 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MLSIBillingInfo",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLSupermarket",
@@ -1166,10 +1205,17 @@
       "version": "^~>\\s?10|[1-9].[0-9]+$"
     },
     {
+      "expires": "2022-10-30",
       "name": "StartUPInitializer",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?5.[0-9]+.?[0-9]*$"
+    },
+    {
+      "name": "StartUPInitializer",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?6.[0-9]+"
     },
     {
       "name": "PointUI",
@@ -1326,6 +1372,12 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "AccountRelationships",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "MerchRealestates",
@@ -1520,10 +1572,17 @@
       "version": "2.40.0"
     },
     {
+      "expires": "2022-11-30",
       "name": "Opentelemetry",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "Opentelemetry",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "Onboarding",
@@ -1554,6 +1613,12 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
+    },
+    {
+      "name": "BitmovinPlayer",
+      "source": "private",
+      "target": "production",
+      "version": "3.26.0"
     }
   ]
 }
