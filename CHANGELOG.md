@@ -1,3 +1,8 @@
+# 14.6.1
+
+## Modificado
+- Se modifica la forma en que el linteo maneja los errores para que muestre todos al mismo tiempo
+
 # 14.6.0
 
 ## Agregado
