@@ -1469,15 +1469,14 @@
       "version": "2\\.4\\.0"
     },
     {
-      "description": "Esta libs se encuentra deprecada, debemos utilizar data-dispatcher",
-      "expires": "2023-04-19",
       "group": "org\\.greenrobot",
       "name": "eventbus",
       "version": "3\\.1\\.1"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.footmarks",
-      "version": "7\\.2\\.4"
+      "name": "sdk",
+      "version": "7\\.2\\.5"
     }
     {
       "group": "com\\.otaliastudios",
