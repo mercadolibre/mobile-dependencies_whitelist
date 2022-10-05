@@ -2033,6 +2033,13 @@
       "version": "3\\.3\\.0"
     },
     {
+      "description": "Only use in case you have the following issue, io.mockk.MockKException: Class cast exception happened.",
+      "expires": "2022-10-07",
+      "group": "org\\.robolectric",
+      "name": "robolectric",
+      "version": "4\\.0\\.1"
+    },
+    {
       "group": "org\\.robolectric",
       "name": "robolectric",
       "version": "4\\.5\\.1"
@@ -2176,14 +2183,26 @@
       "version": "4\\.\\+"
     },
     {
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.addresses",
       "name": "core",
       "version": "6\\.\\+"
     },
     {
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.addresses",
       "name": "zipcode",
       "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.addresses",
+      "name": "core",
+      "version": "mercadolibre-7\\.\\+|mercadopago-7\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.addresses",
+      "name": "zipcode",
+      "version": "mercadolibre-7\\.\\+|mercadopago-7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.nfcpayments",
@@ -2251,6 +2270,13 @@
       "group": "com\\.mercadolibre\\.android\\.point_smart_helpers",
       "name": "point_commons",
       "version": "3\\.+"
+    },
+    {
+      "description": "This library will be deprecated after the migration to Android 12, the new version will be 3.0.0",
+      "expires": "2022-10-07",
+      "group": "com\\.mercadolibre\\.android\\.point_smart_helpers",
+      "name": "hardware_buttons",
+      "version": "1\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point_smart_helpers",
