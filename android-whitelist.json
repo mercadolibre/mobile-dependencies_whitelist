@@ -2121,24 +2121,59 @@
     {
       "group": "com\\.mercadolibre\\.android\\.tfs_commons",
       "name": "tracking",
+      "version": "mercadopago-4\\.\\+|mercadolibre-4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.tfs_commons",
+      "name": "imageutils",
+      "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.tfs_commons",
+      "name": "ktx",
+      "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.tfs_commons",
+      "name": "mvp",
+      "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.tfs_commons",
+      "name": "errorhandler",
+      "version": "4\\.\\+"
+    },
+    {
+      "description": "Actualizar a 4.+ por la migración API32",
+      "expires": "2022-10-13",
+      "group": "com\\.mercadolibre\\.android\\.tfs_commons",
+      "name": "tracking",
       "version": "mercadopago-3\\.\\+|mercadolibre-3\\.\\+"
     },
     {
+      "description": "Actualizar a 4.+ por la migración API32",
+      "expires": "2022-10-13",
       "group": "com\\.mercadolibre\\.android\\.tfs_commons",
       "name": "imageutils",
       "version": "3\\.\\+"
     },
     {
+      "description": "Actualizar a 4.+ por la migración API32",
+      "expires": "2022-10-13",
       "group": "com\\.mercadolibre\\.android\\.tfs_commons",
       "name": "ktx",
       "version": "3\\.\\+"
     },
     {
+      "description": "Actualizar a 4.+ por la migración API32",
+      "expires": "2022-10-13",
       "group": "com\\.mercadolibre\\.android\\.tfs_commons",
       "name": "mvp",
       "version": "3\\.\\+"
     },
     {
+      "description": "Actualizar a 4.+ por la migración API32",
+      "expires": "2022-10-13",
       "group": "com\\.mercadolibre\\.android\\.tfs_commons",
       "name": "errorhandler",
       "version": "3\\.\\+"
