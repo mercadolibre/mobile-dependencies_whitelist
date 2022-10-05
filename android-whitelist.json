@@ -2102,9 +2102,18 @@
     {
       "group": "com\\.mercadolibre\\.android\\.fees_installments",
       "name": "mlfees",
+      "version": "6\\.\\+"
+    },
+    {
+      "description": "Actualizar a 6.+ por la migración API32",
+      "expires": "2022-10-13",
+      "group": "com\\.mercadolibre\\.android\\.fees_installments",
+      "name": "mlfees",
       "version": "5\\.\\+"
     },
     {
+      "description": "Se debe utilizar la librería mlfees",
+      "expires": "2022-10-13",
       "group": "com\\.mercadolibre\\.android\\.fees_installments",
       "name": "mlfees-legacy",
       "version": "3\\.\\+"
