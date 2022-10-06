@@ -1,8 +1,10 @@
 package com.mercadolibre.android.gradle.library.unitary.modules
 
 import com.android.build.gradle.api.LibraryVariant
+import com.mercadolibre.android.gradle.baseplugin.core.components.PACKAGING_AAR_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISH_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.RELEASE_CONSTANT
+import com.mercadolibre.android.gradle.baseplugin.core.components.TASK_TYPE_PRIVATE_RELEASE
 import com.mercadolibre.android.gradle.library.core.action.modules.publishable.LibraryPublishableModule
 import com.mercadolibre.android.gradle.library.managers.ANY_NAME
 import com.mercadolibre.android.gradle.library.managers.AbstractPluginManager
@@ -11,6 +13,7 @@ import com.mercadolibre.android.gradle.library.managers.ROOT_PROJECT
 import com.mercadolibre.android.gradle.library.utils.domain.ModuleType
 import io.mockk.every
 import io.mockk.mockk
+import io.mockk.verify
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
 
@@ -37,18 +40,23 @@ class LibraryPublishableModuleTest: AbstractPluginManager() {
 
     @org.junit.Test
     fun `When the LibraryPublishableModule is called create tasks`() {
+        val taskName = "publish${PACKAGING_AAR_CONSTANT.capitalize()}$TASK_TYPE_PRIVATE_RELEASE${RELEASE_CONSTANT.capitalize()}"
 
         every { variant.name } returns RELEASE_CONSTANT
 
         publishableModule.createTasksFor(variant, projects[LIBRARY_PROJECT]!!)
+
+        assert(projects[LIBRARY_PROJECT]!!.tasks.names.contains(taskName))
     }
 
     @org.junit.Test
     fun `When the LibraryPublishableModule is called create a sub task`() {
-
         every { variant.name } returns RELEASE_CONSTANT
+
         projects[LIBRARY_PROJECT]!!.tasks.create(ANY_NAME)
         publishableModule.createStubTask(ANY_NAME, mockk(relaxed = true), projects[LIBRARY_PROJECT]!!)
+
+        assert(projects[LIBRARY_PROJECT]!!.tasks.names.contains(ANY_NAME))
     }
 
     @org.junit.Test

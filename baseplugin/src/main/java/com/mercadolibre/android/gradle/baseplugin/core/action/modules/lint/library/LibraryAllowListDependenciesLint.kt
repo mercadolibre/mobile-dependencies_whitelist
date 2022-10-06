@@ -147,9 +147,9 @@ class LibraryAllowListDependenciesLint(private val variantNames: List<String>) :
             hasFailed = true
             println("\n" + LINT_ERROR_TITLE)
             file.writeText(LINT_ERROR_TITLE)
-            file.appendText("${System.getProperty("line.separator")}$message")
-            println(message)
         }
+        file.appendText("${System.getProperty("line.separator")}$message")
+        println(message)
     }
 
     /**

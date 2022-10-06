@@ -6,7 +6,9 @@ class AppModuleProviderTest {
 
     @org.junit.Test
     fun `When the AppModuleProviderTest is called provide modules`() {
-        ModuleProvider.provideAppAndroidModules()
+        val modules = ModuleProvider.provideAppAndroidModules()
+
+        assert(modules.isNotEmpty())
     }
 
 }

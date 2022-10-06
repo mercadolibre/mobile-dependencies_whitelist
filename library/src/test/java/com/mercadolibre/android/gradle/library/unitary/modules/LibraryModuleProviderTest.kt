@@ -6,7 +6,9 @@ class LibraryModuleProviderTest {
 
     @org.junit.Test
     fun `When the AppModuleProviderTest is called provide modules`() {
-        ModuleProvider.provideLibraryAndroidModules()
+        val modules = ModuleProvider.provideLibraryAndroidModules()
+
+        assert(modules.isNotEmpty())
     }
 
 }

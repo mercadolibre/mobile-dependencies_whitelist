@@ -58,7 +58,7 @@ class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
     }
 
     @org.junit.Test
-    fun `When one Status Base is created works`() {
+    fun `When one Status Base is called then return the correct message`() {
         val status = StatusBase(shouldReport = false, isBlocker = true, name = ANY_NAME, message = "ANY_MESSAGE")
         val statusWithOutMessage = StatusBase(shouldReport = true, isBlocker = true, name = ANY_NAME, message = "1.+")
         Status.goingToExpire(null)
@@ -172,6 +172,12 @@ class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
         val lintOutPut = lintErrorFile.inputStream().bufferedReader().use { it.readText() }
 
         assert(lintOutPut.contains("ERROR: The following dependencies are not allowed:"))
+
+        // multiple outputs
+        assert(lintOutPut.contains("- anyGroup4:anyName:1.0.0 (Invalid)"))
+        assert(lintOutPut.contains("- anyGroup3:anyName:3.0.0 (Invalid)"))
+        assert(lintOutPut.contains("- anyGroup2:anyName:1.0.0 (Expired)"))
+        assert(lintOutPut.contains("- anyGroup:anyName:1.0.0 (Expired)"))
     }
 
     @org.junit.Test

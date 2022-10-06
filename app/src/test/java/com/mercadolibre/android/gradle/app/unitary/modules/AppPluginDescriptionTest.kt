@@ -22,19 +22,19 @@ class AppPluginDescriptionTest {
     }
 
     @org.junit.Test
-    fun `When the AppPluginDescriptionModule is created works`() {
+    fun `When the AppPluginDescriptionModule is called return the correct message`() {
         val pluginDescription = AppPluginDescriptionModule()
-
         val task = mockk<Task>(relaxed = true)
 
         pluginDescription.printMessage(ANY_NAME, ANY_NAME)
         pluginDescription.configureTask(task)
+
         assert(pluginDescription.makeMessage(ANY_NAME, ANY_NAME) == "- $ANY_NAME\n$ANY_NAME")
         assert(pluginDescription.content() == AppModuleConfigurer().getModules("App Modules", ModuleProvider.provideAppAndroidModules()))
     }
 
     @org.junit.Test
-    fun `When the AppPluginDescriptionExtension is created works`() {
+    fun `When the AppPluginDescriptionExtension is called then return the correct content`() {
         val pluginDescription = AppPluginDescriptionExtensionsModule()
 
         val task = mockk<Task>(relaxed = true)

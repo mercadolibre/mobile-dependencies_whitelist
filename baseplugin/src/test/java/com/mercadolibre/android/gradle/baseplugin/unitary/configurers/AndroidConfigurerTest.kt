@@ -71,4 +71,18 @@ class AndroidConfigurerTest : AbstractPluginManager() {
             assert(compileOptions.targetCompatibility == VersionProvider.provideJavaVersion())
         }
     }
+
+    @org.junit.Test
+    fun `When the AndroidConfigurer configures a project set on vectorDrawables the property useSupportLibrary to false`() {
+        findExtension<BaseExtension>(projects[LIBRARY_PROJECT]!!)?.apply {
+            assert(defaultConfig.vectorDrawables.useSupportLibrary == false)
+        }
+    }
+
+    @org.junit.Test
+    fun `When the AndroidConfigurer configures a project set on vectorDrawables the property generaredDensities to empty array`() {
+        findExtension<BaseExtension>(projects[LIBRARY_PROJECT]!!)?.apply {
+            assert(defaultConfig.vectorDrawables.generatedDensities!!.isEmpty())
+        }
+    }
 }

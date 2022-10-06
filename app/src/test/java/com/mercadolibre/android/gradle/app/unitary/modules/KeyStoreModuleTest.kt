@@ -36,23 +36,25 @@ class KeyStoreModuleTest : AbstractPluginManager() {
 
     @org.junit.Test
     fun `When the KeyStoreModule configures the project write the keystore file`() {
-        val project = mockk<Project>()
-        val file = File("./build/tmp/asd.txt")
+        val project = mockk<Project>(relaxed = true)
+        val file = File("./build/tmp/test.txt")
         file.createNewFile()
 
-        every { project.file("./build/tmp") } returns file
+        every { project.file("./build/tmp/test.txt") } returns file
 
-        keyStoreModule.writeFile(project, "./build/tmp", file)
+        keyStoreModule.writeFile(project, "./build/tmp/test.txt", file)
+
+        verify { project.file("./build/tmp/test.txt") }
     }
 
     @org.junit.Test
     fun `When the KeyStoreModule configures the project not productive does nothing`() {
-
         projects[APP_PROJECT]!!.extensions.findByType(KeyStoreExtension::class.java)?.apply {
             enabled = false
         }
 
         keyStoreModule.configure(projects[APP_PROJECT]!!)
+
         assert(projects[APP_PROJECT]!!.tasks.findByName(UNPACK_DEBUG_KEY_STORE_TASK) == null)
     }
 
@@ -65,6 +67,7 @@ class KeyStoreModuleTest : AbstractPluginManager() {
         }
 
         keyStoreModule.configure(projects[APP_PROJECT]!!)
+
         assert(projects[APP_PROJECT]!!.tasks.findByName(UNPACK_DEBUG_KEY_STORE_TASK) != null)
     }
 
@@ -81,13 +84,11 @@ class KeyStoreModuleTest : AbstractPluginManager() {
     @org.junit.Test
     fun `When the KeyStoreModule is called check her extension and is enabled`() {
         val mockedProjectRoot = project.projectContent.project
-
-        every { mockedProjectRoot.extensions.findByType(KeyStoreExtension::class.java) } returns mockk(relaxed = true)
-
         val extensionOnOff = mockk<ModuleOnOffExtension>(relaxed = true) {
             every { enabled } returns true
         }
 
+        every { mockedProjectRoot.extensions.findByType(KeyStoreExtension::class.java) } returns mockk(relaxed = true)
         every { findExtension(mockedProjectRoot, "keyStoreExtension") as? ModuleOnOffExtension } returns extensionOnOff
 
         keyStoreModule.executeModule(mockedProjectRoot)

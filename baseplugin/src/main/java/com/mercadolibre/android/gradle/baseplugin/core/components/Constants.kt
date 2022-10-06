@@ -43,6 +43,8 @@ const val KOTLIN_ANDROID = "kotlin-android"
 const val LIBRARY_PLUGIN = "com.android.library"
 /** This variable contains a plugin. */
 const val APP_PLUGIN = "com.android.application"
+/** This variable contains a plugin. */
+const val DF_PLUGIN = "com.android.dynamic-feature"
 
 /** This list contains the plugins that an library needs. */
 val LIBRARY_PLUGINS = listOf(
