@@ -11,9 +11,15 @@
       "version": "2\\.+"
     },
     {
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.gamification",
       "name": "gamification",
       "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.gamification",
+      "name": "gamification",
+      "version": "2\\.+"
     },
     {
       "expires": "2022-10-13",
@@ -2249,14 +2255,26 @@
       "version": "mercadolibre-7\\.\\+|mercadopago-7\\.\\+"
     },
     {
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.nfcpayments",
       "name": "core",
       "version": "2\\.+"
     },
     {
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.nfcpayments",
       "name": "flows",
       "version": "2\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.nfcpayments",
+      "name": "core",
+      "version": "3\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.nfcpayments",
+      "name": "flows",
+      "version": "3\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.nfcpayments",
