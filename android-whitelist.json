@@ -811,9 +811,16 @@
       "version": "5\\.\\+"
     },
     {
+      "description": "Deprecada porque no soporta API level 32, usar v8.+",
+      "expires": "2022-10-14",
       "group": "com\\.mercadolibre\\.android\\.flox",
       "name": "engine",
       "version": "7\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.flox",
+      "name": "engine",
+      "version": "8\\.\\+"
     },
     {
       "expires": "2022-10-07",
