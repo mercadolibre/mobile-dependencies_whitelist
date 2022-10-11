@@ -871,9 +871,16 @@
       "version": "3\\.\\+"
     },
     {
+      "description": "This library will be deprecated after the migration to Android 12, the new version will be 10.0.0",
+      "expires": "2022-10-13",
       "group": "com\\.mercadolibre\\.android\\.instore",
       "name": "instore",
       "version": "mercadolibre-9\\.\\+|mercadopago-9\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.instore",
+      "name": "instore",
+      "version": "mercadolibre-10\\.\\+|mercadopago-10\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.local\\.storage",
