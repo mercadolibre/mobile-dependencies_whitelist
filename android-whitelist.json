@@ -747,9 +747,16 @@
       "version": "2\\.\\+"
     },
     {
+      "description": "This library will be deprecated after the migration to Android 12, the new version 2.0.0 will be enabled",
+      "expires": "2022-10-20",
       "group": "com\\.mercadolibre\\.android\\.credits\\.toolkit",
       "name": "toolkit",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.credits\\.toolkit",
+      "name": "toolkit",
+      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.credits\\.behaviour",
