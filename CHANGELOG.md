@@ -1,3 +1,15 @@
+# 15.0.3
+- Se bumpea la version de gradle enterprise build scan a la 3.11.2 para el breaking change 
+
+# 15.0.2
+- Se agregan los fix de la version 14.6.1 en adelante a la version 15
+
+# 15.0.1
+- Se agregan los fix de la version 14.2.1 en adelante a la version 15
+
+# 15.0.0
+- Se actualiza la version de COMPILE_API_SDK_LEVEL a 32 para soportar Android 12
+
 # 14.7.0
 - Bump del plugin de  Build Scan de Gradle Enterprise a su version 3.11.2 
 
