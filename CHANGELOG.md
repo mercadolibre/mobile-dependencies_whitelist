@@ -1,3 +1,6 @@
+# 14.7.0
+- Bump del plugin de  Build Scan de Gradle Enterprise a su version 3.11.2 
+
 # 14.6.1
 
 ## Modificado
