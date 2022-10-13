@@ -791,6 +791,11 @@
     },
     {
       "group": "com\\.mercadolibre\\.android\\.commons",
+      "version": "26\\.\\+"
+    },
+    {
+      "expires": "2022-11-01",
+      "group": "com\\.mercadolibre\\.android\\.commons",
       "version": "25\\.\\+"
     },
     {
@@ -1155,8 +1160,13 @@
       "version": "6\\.\\+|7\\.\\+"
     },
     {
+      "expires": "2022-10-20",
       "group": "com\\.mercadolibre\\.android\\.uicomponents",
       "version": "14\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.uicomponents",
+      "version": "15\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.navigation_manager",
@@ -1627,6 +1637,16 @@
       "version": "mercadopago-3\\.\\+|mercadolibre-3\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.security_two_fa",
+      "name": "faceauth",
+      "version": "mercadolibre-6\\.\\+|mercadopago-6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.security_two_fa",
+      "name": "totp",
+      "version": "6\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.security",
       "name": "native_reauth",
       "version": "mercadopago-4\\.\\+|mercadolibre-4\\.\\+"
@@ -1712,15 +1732,9 @@
       "version": "2\\.+"
     },
     {
-      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.mlbusinesscomponents",
       "name": "mlbusinesscomponents",
       "version": "3\\.+"
-    },
-    {
-      "group": "com\\.mercadolibre\\.android\\.mlbusinesscomponents",
-      "name": "mlbusinesscomponents",
-      "version": "4\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -1820,9 +1834,16 @@
       "version": "6\\.\\+"
     },
     {
+      "description": "This library will be deprecated after the migration to Android 12",
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.discounts_touchpoint",
       "name": "discounts_touchpoint",
       "version": "mercadopago-3\\.\\+|mercadolibre-3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.discounts_touchpoint",
+      "name": "discounts_touchpoint",
+      "version": "mercadopago-4\\.\\+|mercadolibre-4\\.\\+"
     },
     {
       "group": "androidx.preference",
@@ -2132,14 +2153,21 @@
       "version": "1\\.4\\.1"
     },
     {
+      "expires": "2022-10-20",
       "group": "com\\.mercadolibre\\.android\\.user_blocker",
       "name": "user_blocker",
       "version": "mercadolibre-2\\.\\+"
     },
     {
+      "expires": "2022-10-20",
       "group": "com\\.mercadolibre\\.android\\.user_blocker",
       "name": "user_blocker",
       "version": "mercadopago-2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.user_blocker",
+      "name": "user_blocker",
+      "version": "mercadopago-4\\.\\+|mercadolibre-4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.collaboratorsui",
