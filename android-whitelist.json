@@ -1508,32 +1508,14 @@
       "version": "2\\.\\+"
     },
     {
-      "expires": "2022-09-30",
-      "group": "com\\.mercadolibre\\.android\\.security_two_fa",
-      "name": "faceauth",
-      "version": "mercadolibre-5\\.\\+|mercadopago-5\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.security_two_fa",
       "name": "faceauth",
       "version": "mercadolibre-6\\.\\+|mercadopago-6\\.\\+"
     },
     {
-      "expires": "2022-09-30",
-      "group": "com\\.mercadolibre\\.android\\.security_two_fa",
-      "name": "totp",
-      "version": "5\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.security_two_fa",
       "name": "totp",
       "version": "6\\.\\+"
-    },
-    {
-      "expires": "2022-09-30",
-      "group": "com\\.mercadolibre\\.android\\.security_two_fa",
-      "name": "totpinapp",
-      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.security_two_fa",
