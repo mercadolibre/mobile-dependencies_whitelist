@@ -1,6 +1,11 @@
 {
   "whitelist": [
     {
+      "group": "com\\.mercadolibre\\.android\\.nfcpushprovisioning",
+      "name": "tpcsdk",
+      "version": "1\\.+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.onboarding",
       "name": "onboarding",
       "version": "2\\.+"
