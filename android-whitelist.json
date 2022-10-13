@@ -1,6 +1,11 @@
 {
   "whitelist": [
     {
+      "group": "com\\.mercadolibre\\.android\\.nfcpushprovisioning",
+      "name": "tpcsdk",
+      "version": "1\\.+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.onboarding",
       "name": "onboarding",
       "version": "2\\.+"
@@ -9,6 +14,11 @@
       "group": "com\\.mercadolibre\\.android\\.advertising",
       "name": "adn",
       "version": "2\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "viewability",
+      "version": "1\\.+"
     },
     {
       "expires": "2022-10-31",
@@ -1292,9 +1302,15 @@
       "version": "7\\.\\+"
     },
     {
+      "expires": "2022-10-31",
       "group": "com\\.mercadopago\\.android\\.congrats",
       "name": "congrats",
       "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadopago\\.android\\.congrats",
+      "name": "congrats",
+      "version": "7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.dami_ui_components",
