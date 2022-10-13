@@ -1642,6 +1642,16 @@
       "version": "mercadopago-3\\.\\+|mercadolibre-3\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.security_two_fa",
+      "name": "faceauth",
+      "version": "mercadolibre-6\\.\\+|mercadopago-6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.security_two_fa",
+      "name": "totp",
+      "version": "6\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.security",
       "name": "native_reauth",
       "version": "mercadopago-4\\.\\+|mercadolibre-4\\.\\+"
@@ -1727,15 +1737,9 @@
       "version": "2\\.+"
     },
     {
-      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.mlbusinesscomponents",
       "name": "mlbusinesscomponents",
       "version": "3\\.+"
-    },
-    {
-      "group": "com\\.mercadolibre\\.android\\.mlbusinesscomponents",
-      "name": "mlbusinesscomponents",
-      "version": "4\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -1835,9 +1839,16 @@
       "version": "6\\.\\+"
     },
     {
+      "description": "This library will be deprecated after the migration to Android 12",
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.discounts_touchpoint",
       "name": "discounts_touchpoint",
       "version": "mercadopago-3\\.\\+|mercadolibre-3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.discounts_touchpoint",
+      "name": "discounts_touchpoint",
+      "version": "mercadopago-4\\.\\+|mercadolibre-4\\.\\+"
     },
     {
       "group": "androidx.preference",
@@ -2875,6 +2886,20 @@
       "group": "com\\.mercadolibre\\.android\\.developer_mode",
       "name": "dm-core",
       "version": "8\\.\\+"
+    },
+    {
+      "description": "This library will on 2023 Q2. Used only on smart",
+      "expires": "2023-5-15",
+      "group": "androidx\\.navigation",
+      "name": "navigation-fragment-ktx",
+      "version": "2\\.3\\.0"
+    },
+    {
+      "description": "This library will on 2023 Q2. Used only on smart",
+      "expires": "2023-5-15",
+      "group": "androidx\\.navigation",
+      "name": "navigation-ui-ktx",
+      "version": "2\\.3\\.0"
     }
   ]
 }
