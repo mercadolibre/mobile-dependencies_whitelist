@@ -1,6 +1,11 @@
 {
   "whitelist": [
     {
+      "group": "com\\.mercadolibre\\.android\\.nfcpushprovisioning",
+      "name": "tpcsdk",
+      "version": "1\\.+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.onboarding",
       "name": "onboarding",
       "version": "2\\.+"
@@ -11,9 +16,20 @@
       "version": "2\\.+"
     },
     {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "viewability",
+      "version": "1\\.+"
+    },
+    {
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.gamification",
       "name": "gamification",
       "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.gamification",
+      "name": "gamification",
+      "version": "2\\.+"
     },
     {
       "expires": "2022-10-13",
@@ -562,9 +578,15 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2022-10-15",
       "group": "com\\.mercadolibre\\.android",
       "name": "progress-circle",
       "version": "5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "progress-circle",
+      "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.testing",
@@ -741,9 +763,16 @@
       "version": "2\\.\\+"
     },
     {
+      "description": "This library will be deprecated after the migration to Android 12, the new version 2.0.0 will be enabled",
+      "expires": "2022-10-20",
       "group": "com\\.mercadolibre\\.android\\.credits\\.toolkit",
       "name": "toolkit",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.credits\\.toolkit",
+      "name": "toolkit",
+      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.credits\\.behaviour",
@@ -772,11 +801,16 @@
     },
     {
       "group": "com\\.mercadolibre\\.android\\.commons",
+      "version": "26\\.\\+"
+    },
+    {
+      "expires": "2022-11-01",
+      "group": "com\\.mercadolibre\\.android\\.commons",
       "version": "25\\.\\+"
     },
     {
       "description": "Deprecada porque no soporta API level 32",
-      "expires": "2022-10-07",
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.commons",
       "version": "24\\.\\+"
     },
@@ -786,7 +820,7 @@
     },
     {
       "description": "Deprecada porque no soporta API level 32",
-      "expires": "2022-10-07",
+      "expires": "2022-10-13",
       "group": "com\\.mercadolibre\\.android\\.remote\\.configuration",
       "version": "4\\.\\+"
     },
@@ -805,9 +839,16 @@
       "version": "5\\.\\+"
     },
     {
+      "description": "Deprecada porque no soporta API level 32, usar v8.+",
+      "expires": "2022-10-14",
       "group": "com\\.mercadolibre\\.android\\.flox",
       "name": "engine",
       "version": "7\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.flox",
+      "name": "engine",
+      "version": "8\\.\\+"
     },
     {
       "expires": "2022-10-07",
@@ -837,9 +878,15 @@
       "version": "5\\.\\+"
     },
     {
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.instore\\.home\\.sections",
       "name": "instore_home_sections",
       "version": "mercadopago-3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.instore\\.home\\.sections",
+      "name": "instore_home_sections",
+      "version": "mercadopago-4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.instore",
@@ -852,9 +899,16 @@
       "version": "3\\.\\+"
     },
     {
+      "description": "This library will be deprecated after the migration to Android 12, the new version will be 10.0.0",
+      "expires": "2022-10-13",
       "group": "com\\.mercadolibre\\.android\\.instore",
       "name": "instore",
       "version": "mercadolibre-9\\.\\+|mercadopago-9\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.instore",
+      "name": "instore",
+      "version": "mercadolibre-10\\.\\+|mercadopago-10\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.local\\.storage",
@@ -953,9 +1007,15 @@
       "version": "9\\.\\+"
     },
     {
+      "expires": "2022-10-13",
       "group": "com\\.mercadolibre\\.android\\.navigationcp",
       "name": "shipping-address",
       "version": "8\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.navigationcp",
+      "name": "shipping-address",
+      "version": "9\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
@@ -1034,9 +1094,15 @@
       "version": "5\\.\\+"
     },
     {
+      "expires": "2022-10-13",
       "group": "com\\.mercadolibre\\.android\\.remedy",
       "name": "remedy",
       "version": "mercadolibre-1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.remedy",
+      "name": "remedy",
+      "version": "mercadopago-6\\.\\+|mercadolibre-6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.rule\\.engine",
@@ -1066,7 +1132,7 @@
       "version": "1\\.\\+"
     },
     {
-      "expires": "2022-10-13",
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "compats",
       "version": "13\\.\\+"
@@ -1077,7 +1143,7 @@
       "version": "14\\.\\+"
     },
     {
-      "expires": "2022-10-13",
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "input",
       "version": "13\\.\\+"
@@ -1088,7 +1154,7 @@
       "version": "14\\.\\+"
     },
     {
-      "expires": "2022-10-13",
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "search",
       "version": "13\\.\\+"
@@ -1104,8 +1170,13 @@
       "version": "6\\.\\+|7\\.\\+"
     },
     {
+      "expires": "2022-10-20",
       "group": "com\\.mercadolibre\\.android\\.uicomponents",
       "version": "14\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.uicomponents",
+      "version": "15\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.navigation_manager",
@@ -1116,7 +1187,7 @@
       "version": "2\\.\\+"
     },
     {
-      "expires": "2022-10-07",
+      "expires": "2022-10-13",
       "group": "com\\.mercadolibre\\.android\\.mlwebkit",
       "version": "3.\\+"
     },
@@ -1230,9 +1301,15 @@
       "version": "7\\.\\+"
     },
     {
+      "expires": "2022-10-31",
       "group": "com\\.mercadopago\\.android\\.congrats",
       "name": "congrats",
       "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadopago\\.android\\.congrats",
+      "name": "congrats",
+      "version": "7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.dami_ui_components",
@@ -1240,9 +1317,15 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2022-10-14",
       "group": "com\\.mercadolibre\\.android\\.static_resources",
       "name": "static_resources",
       "version": "5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.static_resources",
+      "name": "static_resources",
+      "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.digital_accounts_components",
@@ -1276,7 +1359,7 @@
     },
     {
       "description": "This library will be deprecated after the migration to Android 12, the new version will be 3.0.0",
-      "expires": "2022-10-07",
+      "expires": "2022-10-31",
       "group": "com\\.mercadopago\\.android\\.point_flow_engine",
       "name": "navigation",
       "version": "1\\.\\+"
@@ -1552,7 +1635,7 @@
       "version": "6\\.\\+"
     },
     {
-      "expires": "2022-10-07",
+      "expires": "2022-10-13",
       "group": "com\\.mercadolibre\\.android\\.security",
       "name": "security_preferences",
       "version": "mercadopago-5\\.\\+|mercadolibre-5\\.\\+"
@@ -1578,6 +1661,16 @@
       "group": "com\\.mercadolibre\\.android\\.security",
       "name": "native_reauth",
       "version": "mercadopago-3\\.\\+|mercadolibre-3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.security_two_fa",
+      "name": "faceauth",
+      "version": "mercadolibre-6\\.\\+|mercadopago-6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.security_two_fa",
+      "name": "totp",
+      "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.security",
@@ -1767,9 +1860,16 @@
       "version": "6\\.\\+"
     },
     {
+      "description": "This library will be deprecated after the migration to Android 12",
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.discounts_touchpoint",
       "name": "discounts_touchpoint",
       "version": "mercadopago-3\\.\\+|mercadolibre-3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.discounts_touchpoint",
+      "name": "discounts_touchpoint",
+      "version": "mercadopago-4\\.\\+|mercadolibre-4\\.\\+"
     },
     {
       "group": "androidx.preference",
@@ -2037,6 +2137,13 @@
       "version": "3\\.3\\.0"
     },
     {
+      "description": "Only use in case you have the following issue, io.mockk.MockKException: Class cast exception happened.",
+      "expires": "2022-10-21",
+      "group": "org\\.robolectric",
+      "name": "robolectric",
+      "version": "4\\.0\\.1"
+    },
+    {
       "group": "org\\.robolectric",
       "name": "robolectric",
       "version": "4\\.5\\.1"
@@ -2072,14 +2179,21 @@
       "version": "1\\.4\\.1"
     },
     {
+      "expires": "2022-10-20",
       "group": "com\\.mercadolibre\\.android\\.user_blocker",
       "name": "user_blocker",
       "version": "mercadolibre-2\\.\\+"
     },
     {
+      "expires": "2022-10-20",
       "group": "com\\.mercadolibre\\.android\\.user_blocker",
       "name": "user_blocker",
       "version": "mercadopago-2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.user_blocker",
+      "name": "user_blocker",
+      "version": "mercadopago-4\\.\\+|mercadolibre-4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.collaboratorsui",
@@ -2099,9 +2213,18 @@
     {
       "group": "com\\.mercadolibre\\.android\\.fees_installments",
       "name": "mlfees",
+      "version": "6\\.\\+"
+    },
+    {
+      "description": "Actualizar a 6.+ por la migración API32",
+      "expires": "2022-10-13",
+      "group": "com\\.mercadolibre\\.android\\.fees_installments",
+      "name": "mlfees",
       "version": "5\\.\\+"
     },
     {
+      "description": "Se debe utilizar la librería mlfees",
+      "expires": "2022-10-13",
       "group": "com\\.mercadolibre\\.android\\.fees_installments",
       "name": "mlfees-legacy",
       "version": "3\\.\\+"
@@ -2109,24 +2232,59 @@
     {
       "group": "com\\.mercadolibre\\.android\\.tfs_commons",
       "name": "tracking",
+      "version": "mercadopago-4\\.\\+|mercadolibre-4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.tfs_commons",
+      "name": "imageutils",
+      "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.tfs_commons",
+      "name": "ktx",
+      "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.tfs_commons",
+      "name": "mvp",
+      "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.tfs_commons",
+      "name": "errorhandler",
+      "version": "4\\.\\+"
+    },
+    {
+      "description": "Actualizar a 4.+ por la migración API32",
+      "expires": "2022-10-13",
+      "group": "com\\.mercadolibre\\.android\\.tfs_commons",
+      "name": "tracking",
       "version": "mercadopago-3\\.\\+|mercadolibre-3\\.\\+"
     },
     {
+      "description": "Actualizar a 4.+ por la migración API32",
+      "expires": "2022-10-13",
       "group": "com\\.mercadolibre\\.android\\.tfs_commons",
       "name": "imageutils",
       "version": "3\\.\\+"
     },
     {
+      "description": "Actualizar a 4.+ por la migración API32",
+      "expires": "2022-10-13",
       "group": "com\\.mercadolibre\\.android\\.tfs_commons",
       "name": "ktx",
       "version": "3\\.\\+"
     },
     {
+      "description": "Actualizar a 4.+ por la migración API32",
+      "expires": "2022-10-13",
       "group": "com\\.mercadolibre\\.android\\.tfs_commons",
       "name": "mvp",
       "version": "3\\.\\+"
     },
     {
+      "description": "Actualizar a 4.+ por la migración API32",
+      "expires": "2022-10-13",
       "group": "com\\.mercadolibre\\.android\\.tfs_commons",
       "name": "errorhandler",
       "version": "3\\.\\+"
@@ -2180,24 +2338,50 @@
       "version": "4\\.\\+"
     },
     {
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.addresses",
       "name": "core",
       "version": "6\\.\\+"
     },
     {
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.addresses",
       "name": "zipcode",
       "version": "6\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.addresses",
+      "name": "core",
+      "version": "mercadolibre-7\\.\\+|mercadopago-7\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.addresses",
+      "name": "zipcode",
+      "version": "mercadolibre-7\\.\\+|mercadopago-7\\.\\+"
+    },
+    {
+      "description": "Actualizar a mercadopago-4.+ por a migracion API32",
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.nfcpayments",
       "name": "core",
       "version": "2\\.+"
     },
     {
+      "description": "Actualizar a mercadopago-4.+ por a migracion API32",
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.nfcpayments",
       "name": "flows",
       "version": "2\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.nfcpayments",
+      "name": "core",
+      "version": "mercadopago-4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.nfcpayments",
+      "name": "flows",
+      "version": "mercadopago-4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.nfcpayments",
@@ -2257,13 +2441,20 @@
       "version": "3\\.+"
     },
     {
+      "description": "This library will be deprecated after the migration to Android 12, the new version will be 3.0.0",
+      "expires": "2022-10-31",
+      "group": "com\\.mercadolibre\\.android\\.point_smart_helpers",
+      "name": "hardware_buttons",
+      "version": "1\\.+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.point_smart_helpers",
       "name": "hardware_buttons",
       "version": "3\\.+"
     },
     {
       "description": "This library will be deprecated after the migration to Android 12, the new version will be 3.0.0",
-      "expires": "2022-10-07",
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.point_credits",
       "name": "credits",
       "version": "1\\.+"
@@ -2275,21 +2466,21 @@
     },
     {
       "description": "This library will be deprecated after the migration to Android 12, on 2022-09-16 the new version 7.0.0 will be enabled",
-      "expires": "2022-10-07",
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.point_recharge",
       "name": "cellphone",
       "version": "2\\.+"
     },
     {
       "description": "This library will be deprecated after the migration to Android 12, on 2022-09-16 the new version 7.0.0 will be enabled",
-      "expires": "2022-10-07",
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.point_recharge",
       "name": "core",
       "version": "2\\.+"
     },
     {
       "description": "This library will be deprecated after the migration to Android 12, on 2022-09-16 the new version 7.0.0 will be enabled",
-      "expires": "2022-10-07",
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.point_recharge",
       "name": "antennas",
       "version": "2\\.+"
@@ -2317,7 +2508,7 @@
     },
     {
       "description": "This library will be deprecated after the migration to Android 12, on 2022-09-16 the new version 3.0.0 will be enabled",
-      "expires": "2022-10-07",
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.point_smartpos_scanner",
       "name": "scanner",
       "version": "2\\.+"
@@ -2363,33 +2554,63 @@
       "version": "1\\.0\\.0"
     },
     {
+      "expires": "2022-11-30",
       "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
       "name": "spirtechmodule",
       "version": "3\\.\\+"
     },
     {
+      "expires": "2022-11-30",
       "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
       "name": "decodingmanager",
       "version": "3\\.\\+"
     },
     {
+      "expires": "2022-11-30",
       "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
       "name": "ccmmexico_enhanceddevice",
       "version": "3\\.\\+"
     },
     {
+      "expires": "2022-11-30",
       "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
       "name": "ccmgeneral",
       "version": "3\\.\\+"
     },
     {
+      "expires": "2022-11-30",
       "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
       "name": "ccmmexico",
       "version": "3\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
+      "name": "spirtechmodule",
+      "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
+      "name": "decodingmanager",
+      "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
+      "name": "ccmmexico_enhanceddevice",
+      "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
+      "name": "ccmgeneral",
+      "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
+      "name": "ccmmexico",
+      "version": "4\\.\\+"
+    },
+    {
       "description": "This library will be deprecated after the migration to Android 12, on 2022-09-16 the new version 17.0.1 will be enabled",
-      "expires": "2022-10-07",
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.point_virtualization",
       "name": "point_virtualization",
       "version": "1\\.+"
@@ -2419,18 +2640,32 @@
       "version": "1\\.+"
     },
     {
+      "description": "This library will be deprecated after the migration to Android 12, the new version 5.0.0 is enabled",
+      "expires": "2022-10-21",
       "group": "com\\.mercadolibre\\.android\\.cardsbanking",
       "name": "cards-home-section",
       "version": "4\\.\\+"
     },
     {
+      "description": "This library will be deprecated after the migration to Android 12, the new version 5.0.0 is enabled",
+      "expires": "2022-10-21",
       "group": "com\\.mercadolibre\\.android\\.cardsbanking",
       "name": "card-widget",
       "version": "4\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.cardsbanking",
+      "name": "cards-home-section",
+      "version": "5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cardsbanking",
+      "name": "card-widget",
+      "version": "5\\.\\+"
+    },
+    {
       "description": "This library will be deprecated after the migration to Android 12, on 2022-09-16 the new version 3.0.0 will be enabled",
-      "expires": "2022-10-07",
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.point_smart_pos_sdk",
       "name": "device",
       "version": "dev-2\\.\\+|a910-2\\.\\+|d20-2\\.\\+|2\\.\\+"
@@ -2442,28 +2677,28 @@
     },
     {
       "description": "This library will be deprecated after the migration to Android 12, on 2022-09-16 the new version 2.0.0 will be enabled",
-      "expires": "2022-10-07",
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.point_printer",
       "name": "core",
       "version": "1\\.+"
     },
     {
       "description": "This library will be deprecated after the migration to Android 12, on 2022-09-16 the new version 2.0.0 will be enabled",
-      "expires": "2022-10-07",
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.point_printer",
       "name": "renderer",
       "version": "1\\.+"
     },
     {
       "description": "This library will be deprecated after the migration to Android 12, on 2022-09-16 the new version 2.0.0 will be enabled",
-      "expires": "2022-10-07",
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.point_printer",
       "name": "controller_a910",
       "version": "1\\.+"
     },
     {
       "description": "This library will be deprecated after the migration to Android 12, on 2022-09-16 the new version 2.0.0 will be enabled",
-      "expires": "2022-10-07",
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.point_printer",
       "name": "controller_d20",
       "version": "1\\.+"
@@ -2704,6 +2939,20 @@
       "group": "com\\.mercadolibre\\.android\\.developer_mode",
       "name": "dm-core",
       "version": "8\\.\\+"
+    },
+    {
+      "description": "This library will on 2023 Q2. Used only on smart",
+      "expires": "2023-5-15",
+      "group": "androidx\\.navigation",
+      "name": "navigation-fragment-ktx",
+      "version": "2\\.3\\.0"
+    },
+    {
+      "description": "This library will on 2023 Q2. Used only on smart",
+      "expires": "2023-5-15",
+      "group": "androidx\\.navigation",
+      "name": "navigation-ui-ktx",
+      "version": "2\\.3\\.0"
     }
   ]
 }
