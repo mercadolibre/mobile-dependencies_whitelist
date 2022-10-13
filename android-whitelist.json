@@ -1,6 +1,11 @@
 {
   "whitelist": [
     {
+      "group": "com\\.mercadolibre\\.android\\.nfcpushprovisioning",
+      "name": "tpcsdk",
+      "version": "1\\.+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.onboarding",
       "name": "onboarding",
       "version": "2\\.+"
@@ -9,6 +14,11 @@
       "group": "com\\.mercadolibre\\.android\\.advertising",
       "name": "adn",
       "version": "2\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "viewability",
+      "version": "1\\.+"
     },
     {
       "expires": "2022-10-31",
