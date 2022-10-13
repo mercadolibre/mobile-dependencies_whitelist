@@ -1637,6 +1637,16 @@
       "version": "mercadopago-3\\.\\+|mercadolibre-3\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.security_two_fa",
+      "name": "faceauth",
+      "version": "mercadolibre-6\\.\\+|mercadopago-6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.security_two_fa",
+      "name": "totp",
+      "version": "6\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.security",
       "name": "native_reauth",
       "version": "mercadopago-4\\.\\+|mercadolibre-4\\.\\+"
