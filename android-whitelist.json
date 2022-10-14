@@ -707,6 +707,12 @@
       "version": "4\\.\\+"
     },
     {
+      "expires": "2022-10-21",
+      "group": "com\\.mercadolibre\\.android\\.bookmarks",
+      "name": "bookmarks",
+      "version": "6\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.bookmarks",
       "name": "bookmarks",
       "version": "5\\.\\+"
@@ -1199,10 +1205,22 @@
     {
       "group": "com\\.mercadolibre\\.android\\.uinavigationcp",
       "name": "addresshub",
+      "version": "8\\.\\+"
+    },
+    {
+      "expires": "2022-10-21",
+      "group": "com\\.mercadolibre\\.android\\.uinavigationcp",
+      "name": "addresshub",
       "version": "5\\.\\+"
     },
     {
-      "group": "com\\.mercadolibre\\.android\\.variations",
+      "expires": "2022-10-21",
+      "group": "com\\.mercadolibre\\.android\\.",
+      "name": "variations",
+      "version": "7\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.",
       "name": "variations",
       "version": "6\\.\\+"
     },
