@@ -14,6 +14,7 @@ const val ANY_GROUP4 = "anyGroup4"
 const val ANY_FLAVOR = "anyFlavorName"
 const val ANY_CONFIGURATION = "anyConfiguration"
 const val ANY_PATH = "anyPath"
+const val ANY_VERSION = ".*"
 
 const val VERSION_1 = "1.0.0"
 const val VERSION_2 = "2.0.0"

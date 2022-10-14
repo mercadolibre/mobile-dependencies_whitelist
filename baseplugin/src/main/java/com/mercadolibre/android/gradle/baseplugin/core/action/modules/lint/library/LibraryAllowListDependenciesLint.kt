@@ -42,6 +42,8 @@ class LibraryAllowListDependenciesLint(private val variantNames: List<String>) :
     /** This list contains the dependencies that are about to expire. */
     val allowListGoingToExpire = arrayListOf<Dependency>()
 
+    private val UNDEFINED_VERSION = ".*"
+
     /**
      * This method is responsible for providing a name to the linteo class.
      */
@@ -129,13 +131,22 @@ class LibraryAllowListDependenciesLint(private val variantNames: List<String>) :
 
             if (depWithSameVersion.matcher(dependencyFullName).matches()) {
                 depAllowListData.allowListDep = allowListDep
-            } else if ("${allowListDep.group}:${allowListDep.name}" == "${dependency.group}:${dependency.name}" &&
-                (allowListDep.expires == null || allowListDep.expires == Long.MAX_VALUE)
-            ) {
+            }
+
+            if (isTheSameDependency(dependency, allowListDep) && isAllowed(allowListDep)) {
                 depAllowListData.availableVersion = allowListDep.version?.replace("|", " or ")
             }
         }
         return depAllowListData
+    }
+
+    private fun isAllowed(allowListDep: Dependency): Boolean {
+        return allowListDep.expires == null || allowListDep.expires == Long.MAX_VALUE
+    }
+
+    private fun isTheSameDependency(dependency: Dependency, allowListDep: Dependency): Boolean {
+        return allowListDep.group == dependency.group &&
+            (allowListDep.name == UNDEFINED_VERSION || (allowListDep.name == dependency.name || allowListDep.name == null))
     }
 
     private fun report(message: String, project: Project) {
@@ -234,8 +245,8 @@ class LibraryAllowListDependenciesLint(private val variantNames: List<String>) :
 
         return Dependency(
             it.asJsonObject[GROUP_CONSTANT].asString.replace("\\", ""),
-            getVariableFromJson(NAME_CONSTANT, it, ".*"),
-            getVariableFromJson(VERSION_CONSTANT, it, ".*"),
+            getVariableFromJson(NAME_CONSTANT, it, UNDEFINED_VERSION),
+            getVariableFromJson(VERSION_CONSTANT, it, UNDEFINED_VERSION),
             expires,
             getVariableFromJson(EXPIRES_CONSTANT, it, null),
         )

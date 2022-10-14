@@ -1,3 +1,8 @@
+# 14.7.1
+
+## Modificado
+- Se modifica la forma en que se buscan las versiones desponibles de las dependencias en caso de que esten expiradas
+
 # 14.7.0
 - Bump del plugin de  Build Scan de Gradle Enterprise a su version 3.11.2 
 

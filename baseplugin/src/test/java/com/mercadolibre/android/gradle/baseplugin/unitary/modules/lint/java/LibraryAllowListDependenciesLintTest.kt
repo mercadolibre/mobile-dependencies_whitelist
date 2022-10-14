@@ -26,6 +26,7 @@ import com.mercadolibre.android.gradle.baseplugin.managers.ANY_GROUP2
 import com.mercadolibre.android.gradle.baseplugin.managers.ANY_GROUP3
 import com.mercadolibre.android.gradle.baseplugin.managers.ANY_GROUP4
 import com.mercadolibre.android.gradle.baseplugin.managers.ANY_NAME
+import com.mercadolibre.android.gradle.baseplugin.managers.ANY_VERSION
 import com.mercadolibre.android.gradle.baseplugin.managers.AbstractPluginManager
 import com.mercadolibre.android.gradle.baseplugin.managers.LIBRARY_PROJECT
 import com.mercadolibre.android.gradle.baseplugin.managers.ROOT_PROJECT
@@ -138,7 +139,7 @@ class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
         val dependencyExpired =
             Dependency(ANY_GROUP, ANY_NAME, VERSION_1, (System.currentTimeMillis() - 2.592e+9).toLong(), currentDate)
         val dependencyNotExpired =
-            Dependency(ANY_GROUP, ANY_NAME, VERSION_3, (System.currentTimeMillis() - 2.592e+9).toLong(), currentDate)
+            Dependency(ANY_GROUP, ANY_VERSION, VERSION_3, (System.currentTimeMillis() - 2.592e+9).toLong(), currentDate)
         val dependencyExpired2 =
             Dependency(ANY_GROUP2, ANY_NAME, "$VERSION_1|$VERSION_2", (System.currentTimeMillis() - 2.592e+9).toLong(), currentDate)
         val dependencyExpired3 =
