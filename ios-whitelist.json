@@ -1175,6 +1175,12 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
+      "name": "Gamification",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "CardsEngagement/Feedback",
       "source": "private",
       "target": "production",
@@ -1350,6 +1356,13 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "name": "SPPSpirtech",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "expires": "2022-12-30",
       "name": "SPPSpirtech",
       "source": "private",
       "target": "production",

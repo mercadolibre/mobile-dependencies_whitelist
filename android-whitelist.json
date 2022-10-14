@@ -1,6 +1,11 @@
 {
   "whitelist": [
     {
+      "group": "com\\.mercadolibre\\.android\\.nfcpushprovisioning",
+      "name": "tpcsdk",
+      "version": "1\\.+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.onboarding",
       "name": "onboarding",
       "version": "2\\.+"
@@ -9,6 +14,11 @@
       "group": "com\\.mercadolibre\\.android\\.advertising",
       "name": "adn",
       "version": "2\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "viewability",
+      "version": "1\\.+"
     },
     {
       "expires": "2022-10-31",
@@ -22,55 +32,55 @@
       "version": "2\\.+"
     },
     {
-      "expires": "2022-10-13",
+      "expires": "2022-10-20",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "review",
       "version": "4\\.\\+"
     },
     {
-      "expires": "2022-10-13",
+      "expires": "2022-10-20",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "congrats",
       "version": "4\\.\\+"
     },
     {
-      "expires": "2022-10-13",
+      "expires": "2022-10-20",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "integrator_sdk",
       "version": "4\\.\\+"
     },
     {
-      "expires": "2022-10-13",
+      "expires": "2022-10-20",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "one_tap",
       "version": "4\\.\\+"
     },
     {
-      "expires": "2022-10-13",
+      "expires": "2022-10-20",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "payment",
       "version": "4\\.\\+"
     },
     {
-      "expires": "2022-10-13",
+      "expires": "2022-10-20",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "shipping",
       "version": "4\\.\\+"
     },
     {
-      "expires": "2022-10-13",
+      "expires": "2022-10-20",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "billing_info",
       "version": "4\\.\\+"
     },
     {
-      "expires": "2022-10-13",
+      "expires": "2022-10-20",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "flow",
       "version": "4\\.\\+"
     },
     {
-      "expires": "2022-10-13",
+      "expires": "2022-10-20",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "split_payments",
       "version": "3\\.\\+"
@@ -131,7 +141,7 @@
       "version": "0\\.\\+"
     },
     {
-      "expires": "2022-10-13",
+      "expires": "2022-10-20",
       "group": "com\\.mercadolibre\\.android\\.smart_coupons",
       "name": "coupons",
       "version": "1\\.\\+"
@@ -702,7 +712,7 @@
       "version": "5\\.\\+"
     },
     {
-      "expires": "2022-10-13",
+      "expires": "2022-10-20",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.flox\\.components",
       "name": "core",
       "version": "6\\.\\+"
@@ -939,7 +949,7 @@
       "version": "11\\.\\+"
     },
     {
-      "expires": "2022-10-13",
+      "expires": "2022-10-20",
       "group": "com\\.mercadolibre\\.android\\.marketplace\\.map",
       "name": "marketplace\\-map",
       "version": "10\\.\\+"
@@ -1100,7 +1110,7 @@
       "version": "8\\.\\+"
     },
     {
-      "expires": "2022-10-13",
+      "expires": "2022-10-20",
       "group": "com\\.mercadolibre\\.android\\.rule\\.engine",
       "name": "rule\\-engine",
       "version": "7\\.\\+"
@@ -1122,7 +1132,7 @@
       "version": "1\\.\\+"
     },
     {
-      "expires": "2022-10-13",
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "compats",
       "version": "13\\.\\+"
@@ -1133,7 +1143,7 @@
       "version": "14\\.\\+"
     },
     {
-      "expires": "2022-10-13",
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "input",
       "version": "13\\.\\+"
@@ -1144,7 +1154,7 @@
       "version": "14\\.\\+"
     },
     {
-      "expires": "2022-10-13",
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "search",
       "version": "13\\.\\+"
@@ -1173,11 +1183,12 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2022-10-15",
       "group": "com\\.mercadolibre\\.android\\.mlwebkit",
       "version": "2\\.\\+"
     },
     {
-      "expires": "2022-10-13",
+      "expires": "2022-10-15",
       "group": "com\\.mercadolibre\\.android\\.mlwebkit",
       "version": "3.\\+"
     },
@@ -1291,9 +1302,15 @@
       "version": "7\\.\\+"
     },
     {
+      "expires": "2022-10-31",
       "group": "com\\.mercadopago\\.android\\.congrats",
       "name": "congrats",
       "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadopago\\.android\\.congrats",
+      "name": "congrats",
+      "version": "7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.dami_ui_components",
@@ -1892,7 +1909,7 @@
     },
     {
       "description": "This library will be deprecated after the migration to Android 12, on 2022-09-16 the new version 1.4.0 will be enabled",
-      "expires": "2022-10-13",
+      "expires": "2022-10-20",
       "group": "androidx\\.browser",
       "name": "browser",
       "version": "1\\.0\\.0"
@@ -2334,12 +2351,14 @@
       "version": "mercadolibre-7\\.\\+|mercadopago-7\\.\\+"
     },
     {
+      "description": "Actualizar a mercadopago-4.+ por a migracion API32",
       "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.nfcpayments",
       "name": "core",
       "version": "2\\.+"
     },
     {
+      "description": "Actualizar a mercadopago-4.+ por a migracion API32",
       "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.nfcpayments",
       "name": "flows",
@@ -2348,12 +2367,12 @@
     {
       "group": "com\\.mercadolibre\\.android\\.nfcpayments",
       "name": "core",
-      "version": "3\\.+"
+      "version": "mercadopago-4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.nfcpayments",
       "name": "flows",
-      "version": "3\\.+"
+      "version": "mercadopago-4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.nfcpayments",
@@ -2526,29 +2545,59 @@
       "version": "1\\.0\\.0"
     },
     {
+      "expires": "2022-11-30",
       "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
       "name": "spirtechmodule",
       "version": "3\\.\\+"
     },
     {
+      "expires": "2022-11-30",
       "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
       "name": "decodingmanager",
       "version": "3\\.\\+"
     },
     {
+      "expires": "2022-11-30",
       "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
       "name": "ccmmexico_enhanceddevice",
       "version": "3\\.\\+"
     },
     {
+      "expires": "2022-11-30",
       "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
       "name": "ccmgeneral",
       "version": "3\\.\\+"
     },
     {
+      "expires": "2022-11-30",
       "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
       "name": "ccmmexico",
       "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
+      "name": "spirtechmodule",
+      "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
+      "name": "decodingmanager",
+      "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
+      "name": "ccmmexico_enhanceddevice",
+      "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
+      "name": "ccmgeneral",
+      "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
+      "name": "ccmmexico",
+      "version": "4\\.\\+"
     },
     {
       "description": "This library will be deprecated after the migration to Android 12, on 2022-09-16 the new version 17.0.1 will be enabled",
