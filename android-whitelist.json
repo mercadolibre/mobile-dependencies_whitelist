@@ -996,25 +996,14 @@
     },
     {
       "expires": "2022-10-21",
-      "group": "com\\.mercadolibre\\.android\\.usersections\\",
-      "name": "ui-sections",
-      "version": "mercadopago-3\\.+"
-    },
-    {
-      "group": "com\\.mercadolibre\\.android\\.usersections\\",
-      "name": "ui-sections",
-      "version": "mercadopago-4\\.+"
-    },
-    {
-      "expires": "2022-10-21",
       "group": "com\\.mercadolibre\\.android\\.usersections",
       "name": "ui-sections",
-      "version": "mercadolibre-3\\.+"
+      "version": "mercadolibre-3\\.+|mercadopago-3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.usersections",
       "name": "ui-sections",
-      "version": "mercadolibre-4\\.+"
+      "version": "mercadolibre-4\\.+|mercadopago-4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.mercadocoin",
