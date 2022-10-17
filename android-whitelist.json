@@ -852,8 +852,13 @@
       "version": "6\\.\\+"
     },
     {
+      "expires": "2022-11-14",
       "group": "com\\.mercadolibre\\.android\\.qadb",
       "version": "5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.qadb",
+      "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.remedy",
@@ -1232,6 +1237,16 @@
       "group": "de\\.greenrobot",
       "name": "eventbus",
       "version": "2\\.4\\.0|3\\.1\\.1"
+    },
+    {
+      "group": "org\\.greenrobot",
+      "name": "eventbus",
+      "version": "3\\.1\\.1"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.footmarks",
+      "name": "sdk",
+      "version": "7\\.\\+"
     },
     {
       "group": "com\\.otaliastudios",
@@ -2406,19 +2421,37 @@
       "version": "1\\.+"
     },
     {
+      "expires": "2022-10-30",
       "group": "com\\.mercadolibre\\.android\\.reviews3",
       "name": "core",
       "version": "2\\.+"
     },
     {
+      "expires": "2022-10-30",
       "group": "com\\.mercadolibre\\.android\\.reviews3",
       "name": "form",
       "version": "2\\.+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.reviews3",
+      "name": "core",
+      "version": "3\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.reviews3",
+      "name": "form",
+      "version": "3\\.+"
+    },
+    {
+      "expires": "2022-10-30",
       "group": "com\\.mercadolibre\\.android\\.reviews",
       "name": "reviews",
       "version": "5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.reviews",
+      "name": "reviews",
+      "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.ml_cards",
