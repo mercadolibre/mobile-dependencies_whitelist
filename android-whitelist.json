@@ -784,6 +784,12 @@
       "version": "6\\.\\+|mercadopago-6\\.\\+|mercadolibre-6\\.\\+"
     },
     {
+      "expires": "2022-10-21",
+      "group": "com\\.mercadolibre\\.android\\.merch_realestates",
+      "name": "merchrealestates",
+      "version": "2\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.merch_realestates",
       "name": "merchrealestates",
       "version": "3\\.\\+"
@@ -989,19 +995,26 @@
       "version": "mercadopago-3\\.+"
     },
     {
+      "expires": "2022-10-21",
+      "group": "com\\.mercadolibre\\.android\\.usersections\\",
+      "name": "sections",
+      "version": "mercadopago-3\\.+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.usersections\\",
       "name": "sections",
       "version": "mercadopago-4\\.+"
     },
     {
-      "group": "com\\.mercadolibre\\.android\\.usersections\\",
+      "expires": "2022-10-21",
+      "group": "com\\.mercadolibre\\.android\\.usersections",
       "name": "ui-sections",
-      "version": "mercadopago-4\\.+"
+      "version": "mercadolibre-3\\.+|mercadopago-3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.usersections",
       "name": "ui-sections",
-      "version": "mercadolibre-4\\.+"
+      "version": "mercadolibre-4\\.+|mercadopago-4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.mercadocoin",
@@ -1230,6 +1243,16 @@
       "group": "de\\.greenrobot",
       "name": "eventbus",
       "version": "2\\.4\\.0|3\\.1\\.1"
+    },
+    {
+      "group": "org\\.greenrobot",
+      "name": "eventbus",
+      "version": "3\\.1\\.1"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.footmarks",
+      "name": "sdk",
+      "version": "7\\.\\+"
     },
     {
       "group": "com\\.otaliastudios",
@@ -2404,19 +2427,37 @@
       "version": "1\\.+"
     },
     {
+      "expires": "2022-10-30",
       "group": "com\\.mercadolibre\\.android\\.reviews3",
       "name": "core",
       "version": "2\\.+"
     },
     {
+      "expires": "2022-10-30",
       "group": "com\\.mercadolibre\\.android\\.reviews3",
       "name": "form",
       "version": "2\\.+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.reviews3",
+      "name": "core",
+      "version": "3\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.reviews3",
+      "name": "form",
+      "version": "3\\.+"
+    },
+    {
+      "expires": "2022-10-30",
       "group": "com\\.mercadolibre\\.android\\.reviews",
       "name": "reviews",
       "version": "5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.reviews",
+      "name": "reviews",
+      "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.ml_cards",
