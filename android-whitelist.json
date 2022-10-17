@@ -784,6 +784,12 @@
       "version": "6\\.\\+|mercadopago-6\\.\\+|mercadolibre-6\\.\\+"
     },
     {
+      "expires": "2022-10-21",
+      "group": "com\\.mercadolibre\\.android\\.merch_realestates",
+      "name": "merchrealestates",
+      "version": "2\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.merch_realestates",
       "name": "merchrealestates",
       "version": "3\\.\\+"
@@ -978,19 +984,26 @@
       "version": "mercadopago-3\\.+"
     },
     {
+      "expires": "2022-10-21",
+      "group": "com\\.mercadolibre\\.android\\.usersections\\",
+      "name": "sections",
+      "version": "mercadopago-3\\.+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.usersections\\",
       "name": "sections",
       "version": "mercadopago-4\\.+"
     },
     {
-      "group": "com\\.mercadolibre\\.android\\.usersections\\",
+      "expires": "2022-10-21",
+      "group": "com\\.mercadolibre\\.android\\.usersections",
       "name": "ui-sections",
-      "version": "mercadopago-4\\.+"
+      "version": "mercadolibre-3\\.+|mercadopago-3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.usersections",
       "name": "ui-sections",
-      "version": "mercadolibre-4\\.+"
+      "version": "mercadolibre-4\\.+|mercadopago-4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.mercadocoin",
