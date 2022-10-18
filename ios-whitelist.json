@@ -1631,6 +1631,13 @@
       "source": "public",
       "target": "production",
       "version": "4.7.0"
+    },
+    {
+      "expires": "2022-12-31",
+      "name": "NewRelicAgent",
+      "source": "public",
+      "target": "production",
+      "version": "^~>\\s?7.[0-9]+.?[0-9]*$"
     }
   ]
 }
