@@ -612,6 +612,12 @@
     {
       "group": "com\\.mercadolibre\\.android\\.cart",
       "name": "manager",
+      "version": "mercadolibre-12\\.\\+|mercadopago-12\\.\\+"
+    },
+    {
+      "expires": "2022-10-30",
+      "group": "com\\.mercadolibre\\.android\\.cart",
+      "name": "manager",
       "version": "mercadolibre-11\\.\\+|mercadopago-11\\.\\+"
     },
     {
