@@ -1,8 +1,29 @@
 # 16.0.0
 - Migracion AGP 7
-- Se agrega la depedencia de Gson ya que AGP 7 no la contiene 
+- Se agrega la depedencia de Gson ya que AGP 7 no la contiene
+
+# 14.7.1
+
+## Modificado
+- Se modifica la forma en que se buscan las versiones desponibles de las dependencias en caso de que esten expiradas
+
+# 14.7.0
+- Bump del plugin de  Build Scan de Gradle Enterprise a su version 3.11.2 
+
+# 14.6.1
+
+## Modificado
+- Se modifica la forma en que el linteo maneja los errores para que muestre todos al mismo tiempo
+
+# 14.6.0
+
+## Agregado
+- Se agrega el modulo ConfigPluginModule que disparara una warning o un error en caso de que encuentre un modulo sin el meli plugin de gradle
+- Se agrega un objeto con la responsabilidad de enviar mensajes a consola 
 
 # 14.5.1
+
+## Modificado
 - Se cambian los experimentales del plugin de gradle por versiones publicadas
 
 # 14.5.0
