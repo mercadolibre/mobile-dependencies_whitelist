@@ -1419,15 +1419,15 @@
       "version": "13\\.\\+"
     },
     {
-      "expires": "2023-01-30",
+      "expires": "2022-12-01",
       "group": "com\\.mercadolibre\\.android\\.loyalty\\.datamanager",
       "name": "data-manager",
-      "version": "5\\.\\+"
+      "version": "5\\.\\+|6\\.\\+|7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.loyalty\\.datamanager",
       "name": "data-manager",
-      "version": "6\\.\\+|7\\.\\+|8\\.\\+"
+      "version": "8\\.\\+"
     },
     {
       "expires": "2023-01-30",
@@ -1439,15 +1439,15 @@
       "version": "6\\.\\+|7\\.\\+"
     },
     {
-      "expires": "2023-01-30",
+      "expires": "2022-12-01",
       "group": "com\\.mercadolibre\\.android\\.loyalty\\.common",
       "name": "common",
-      "version": "mercadolibre-4\\.\\+|mercadopago-4\\.\\+"
+      "version": "mercadolibre-4\\.\\+|mercadopago-4\\.\\+|mercadolibre-5\\.\\+|mercadopago-5\\.\\+|mercadolibre-6\\.\\+|mercadopago-6\\.\\+|"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.loyalty\\.common",
       "name": "common",
-      "version": "mercadolibre-5\\.\\+|mercadopago-5\\.\\+|mercadolibre-6\\.\\+|mercadopago-6\\.\\+|mercadolibre-7\\.\\+|mercadopago-7\\.\\+"
+      "version": "mercadolibre-7\\.\\+|mercadopago-7\\.\\+"
     },
     {
       "expires": "2022-10-31",
