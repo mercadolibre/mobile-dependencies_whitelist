@@ -612,6 +612,12 @@
     {
       "group": "com\\.mercadolibre\\.android\\.cart",
       "name": "manager",
+      "version": "mercadolibre-12\\.\\+|mercadopago-12\\.\\+"
+    },
+    {
+      "expires": "2022-10-30",
+      "group": "com\\.mercadolibre\\.android\\.cart",
+      "name": "manager",
       "version": "mercadolibre-11\\.\\+|mercadopago-11\\.\\+"
     },
     {
@@ -655,9 +661,16 @@
       "version": "4\\.\\+"
     },
     {
+      "description": "Deprecada porque no soporta API level 32",
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.cross_app_links",
       "name": "core",
       "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cross_app_links",
+      "name": "core",
+      "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.charts",
@@ -689,9 +702,15 @@
       "version": "5\\.\\+"
     },
     {
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.cpg",
       "name": "ui_components",
       "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cpg",
+      "name": "ui_components",
+      "version": "6\\.\\+"
     },
     {
       "expires": "2022-10-31",
@@ -840,16 +859,26 @@
       "version": "8\\.\\+"
     },
     {
+      "expires": "2022-11-07",
       "group": "com\\.mercadolibre\\.android\\.recommendations",
       "version": "13\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.recommendations",
+      "version": "14\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.remedies",
       "version": "mercadopago-3\\.\\+"
     },
     {
+      "expires": "2022-11-07",
       "group": "com\\.mercadolibre\\.android\\.comparator",
       "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.comparator",
+      "version": "7\\.\\+"
     },
     {
       "expires": "2022-11-14",
