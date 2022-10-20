@@ -1578,6 +1578,12 @@
       "version": "2.40.0"
     },
     {
+      "name": "OpbRedirect",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
       "expires": "2022-11-30",
       "name": "Opentelemetry",
       "source": "private",
