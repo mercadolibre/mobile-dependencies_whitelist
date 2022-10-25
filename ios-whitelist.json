@@ -547,6 +547,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "expires": "2022-12-31",
       "name": "MLImagePicker",
       "source": "private",
       "target": "production",
@@ -595,17 +596,10 @@
       "version": "^~>\\s?2.[0-9]+"
     },
     {
-      "expires": "2022-10-30",
       "name": "MLMelidata",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "name": "MLMelidata",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLMetrics",
@@ -1583,6 +1577,12 @@
       "source": "public",
       "target": "production",
       "version": "2.40.0"
+    },
+    {
+      "name": "OpbRedirect",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+"
     },
     {
       "expires": "2022-11-30",
