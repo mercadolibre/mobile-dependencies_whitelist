@@ -87,6 +87,13 @@
       "version": "0\\.\\+"
     },
     {
+      "description": "version necesaria para sacar la version 16.1 de checkout",
+      "expires": "2022-12-01",
+      "group": "com\\.mercadolibre\\.android\\.buyingflow",
+      "name": "shipping_flow",
+      "version": "0\\.\\1.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.buyingflow",
       "name": "shipping_flow",
       "version": "0\\.\\+"
