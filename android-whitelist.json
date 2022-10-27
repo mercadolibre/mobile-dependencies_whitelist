@@ -97,9 +97,26 @@
       "version": "2\\.\\+"
     },
     {
+      "expires": "2022-12-01",
       "group": "com\\.mercadolibre\\.android\\.registration",
       "name": "core",
-      "version": "mercadolibre-6\\.\\+"
+      "version": "mercadolibre-8\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.registration",
+      "name": "core",
+      "version": "mercadolibre-9\\.\\+|mercadolibre-10\\.\\+"
+    },
+    {
+      "expires": "2022-12-01",
+      "group": "com\\.mercadolibre\\.android\\.registration",
+      "name": "core",
+      "version": "mercadopago-8\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.registration",
+      "name": "core",
+      "version": "mercadopago-9\\.\\+|mercadopago-10\\.\\+"
     },
     {
       "group": "com\\.squareup\\.picasso",
@@ -398,14 +415,26 @@
       "version": "mercadopago-16\\.\\+|mercadolibre-16\\.\\+"
     },
     {
+      "expires": "2022-12-01",
       "group": "com\\.mercadolibre\\.android\\.authchallenges",
       "name": "authchallenges",
-      "version": "1\\.\\+"
+      "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.authchallenges",
+      "name": "authchallenges",
+      "version": "5\\.\\+"
+    },
+    {
+      "expires": "2022-12-01",
+      "group": "com\\.mercadolibre\\.android\\.hub",
+      "name": "hub",
+      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.hub",
       "name": "hub",
-      "version": "1\\.\\+"
+      "version": "5\\.\\+|6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.accountrelationships",
