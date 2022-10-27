@@ -100,12 +100,12 @@
       "expires": "2022-12-01",
       "group": "com\\.mercadolibre\\.android\\.registration",
       "name": "core",
-      "version": "mercadolibre-8\\.\\+"
+      "version": "mercadolibre-8\\.\\+|mercadopago-8\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.registration",
       "name": "core",
-      "version": "mercadolibre-9\\.\\+|mercadolibre-10\\.\\+"
+      "version": "mercadolibre-9\\.\\+|mercadopago-9\\.\\+"
     },
     {
       "expires": "2022-12-01",
@@ -116,7 +116,7 @@
     {
       "group": "com\\.mercadolibre\\.android\\.registration",
       "name": "core",
-      "version": "mercadopago-9\\.\\+|mercadopago-10\\.\\+"
+      "version": "mercadolibre-10\\.\\+|mercadopago-10\\.\\+"
     },
     {
       "group": "com\\.squareup\\.picasso",
