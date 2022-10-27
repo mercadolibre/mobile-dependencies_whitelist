@@ -2,6 +2,23 @@
 
 Los módulos complementan el entorno de desarrollo, agregando funcionalidades, siendo enlistados por el `ModuleProvider`
 y ejecutados por el `ModuleConfigurer` de cada plugin.
+
+Cada uno de los módulos hereda de la clase `Module` que brinda el funcionamiento de generar una extensión de tipo
+`ModuleOnOffExtension` permitiendonos bloquear la ejecución de un modulo totalmente, para encontrar el nombre de la extensión
+de cada uno de los módulos podemos ejecutar la tarea:
+
+```gradle
+./gradlew pluginDescription
+```
+
+Para luego dentro del build.gradle del proyecto que queramos afectar agreguemos ese nombre con la flag `enabled` en false
+
+```gradle
+    anyModuleExtension {
+        enabled = false
+    }
+```
+
 A continuación brindamos una lista con la descripción de cada uno:
 
 ### Build Scan
