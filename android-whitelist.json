@@ -97,7 +97,7 @@
       "version": "2\\.\\+"
     },
     {
-      "expires": "2022-12-01",
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.registration",
       "name": "core",
       "version": "mercadolibre-8\\.\\+|mercadopago-8\\.\\+"
@@ -108,7 +108,7 @@
       "version": "mercadolibre-9\\.\\+|mercadopago-9\\.\\+"
     },
     {
-      "expires": "2022-12-01",
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.registration",
       "name": "core",
       "version": "mercadopago-8\\.\\+"
@@ -415,7 +415,7 @@
       "version": "mercadopago-16\\.\\+|mercadolibre-16\\.\\+"
     },
     {
-      "expires": "2022-12-01",
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.authchallenges",
       "name": "authchallenges",
       "version": "4\\.\\+"
@@ -426,7 +426,7 @@
       "version": "5\\.\\+"
     },
     {
-      "expires": "2022-12-01",
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.hub",
       "name": "hub",
       "version": "4\\.\\+"
@@ -437,9 +437,15 @@
       "version": "5\\.\\+|6\\.\\+"
     },
     {
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.accountrelationships",
       "name": "accountrelationships",
       "version": "0\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.accountrelationships",
+      "name": "accountrelationships",
+      "version": "1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
