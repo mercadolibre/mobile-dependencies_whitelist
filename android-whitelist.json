@@ -97,9 +97,15 @@
       "version": "2\\.\\+"
     },
     {
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.registration",
       "name": "core",
-      "version": "mercadolibre-6\\.\\+"
+      "version": "mercadolibre-8\\.\\+|mercadopago-8\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.registration",
+      "name": "core",
+      "version": "mercadolibre-9\\.\\+|mercadopago-9\\.\\+|mercadolibre-10\\.\\+|mercadopago-10\\.\\+"
     },
     {
       "group": "com\\.squareup\\.picasso",
@@ -398,19 +404,37 @@
       "version": "mercadopago-16\\.\\+|mercadolibre-16\\.\\+"
     },
     {
+      "expires": "2022-10-31",
       "group": "com\\.mercadolibre\\.android\\.authchallenges",
       "name": "authchallenges",
-      "version": "1\\.\\+"
+      "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.authchallenges",
+      "name": "authchallenges",
+      "version": "5\\.\\+"
+    },
+    {
+      "expires": "2022-10-31",
+      "group": "com\\.mercadolibre\\.android\\.hub",
+      "name": "hub",
+      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.hub",
       "name": "hub",
-      "version": "1\\.\\+"
+      "version": "5\\.\\+|6\\.\\+"
+    },
+    {
+      "expires": "2022-10-31",
+      "group": "com\\.mercadolibre\\.android\\.accountrelationships",
+      "name": "accountrelationships",
+      "version": "0\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.accountrelationships",
       "name": "accountrelationships",
-      "version": "0\\.\\+"
+      "version": "1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -1276,26 +1300,26 @@
       "version": "1\\.\\+"
     },
     {
-      "expires": "2023-01-30",
+      "expires": "2022-12-01",
       "group": "com\\.mercadolibre\\.android\\.loyalty",
       "name": "webview",
-      "version": "mercadolibre-12\\.\\+|mercadopago-12\\.\\+"
+      "version": "mercadolibre-15\\.\\+|mercadopago-15\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.loyalty",
       "name": "webview",
-      "version": "mercadolibre-13\\.\\+|mercadopago-13\\.\\+"
+      "version": "mercadolibre-16\\.\\+|mercadopago-16\\.\\+"
     },
     {
-      "expires": "2023-01-30",
+      "expires": "2022-12-01",
       "group": "com\\.mercadolibre\\.android\\.loyalty",
       "name": "drawer",
-      "version": "12\\.\\+"
+      "version": "15\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.loyalty",
       "name": "drawer",
-      "version": "13\\.\\+"
+      "version": "16\\.\\+"
     },
     {
       "expires": "2022-12-01",
@@ -1309,13 +1333,13 @@
       "version": "8\\.\\+"
     },
     {
-      "expires": "2023-01-30",
+      "expires": "2022-12-01",
       "group": "com\\.mercadolibre\\.android\\.loyalty_ui_components",
-      "version": "5\\.+"
+      "version": "7\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.loyalty_ui_components",
-      "version": "6\\.\\+|7\\.\\+"
+      "version": "8\\.\\+"
     },
     {
       "expires": "2022-12-01",
@@ -2155,6 +2179,12 @@
       "version": "2\\.+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
+      "name": "scanner",
+      "version": "mercadolibre-7\\.\\+|mercadopago-7\\.\\+"
+    },
+    {
+      "expires": "2022-11-11",
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "scanner",
       "version": "mercadolibre-6\\.\\+|mercadopago-6\\.\\+"
