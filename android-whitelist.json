@@ -572,12 +572,6 @@
       "version": "mercadolibre-12\\.\\+|mercadopago-12\\.\\+"
     },
     {
-      "expires": "2022-10-30",
-      "group": "com\\.mercadolibre\\.android\\.cart",
-      "name": "manager",
-      "version": "mercadolibre-11\\.\\+|mercadopago-11\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.cart",
       "name": "cart",
       "version": "mercadolibre-11\\.\\+|mercadopago-11\\.\\+"
@@ -949,12 +943,6 @@
       "version": "mercadolibre-4\\.+|mercadopago-4\\.\\+"
     },
     {
-      "expires": "2022-10-30",
-      "group": "com\\.mercadolibre\\.android\\.mercadocoin",
-      "name": "cryptodata",
-      "version": "2\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.mercadocoin",
       "name": "cryptodata",
       "version": "3\\.\\+"
@@ -999,12 +987,6 @@
       "group": "com\\.mercadolibre\\.android\\.static_resources",
       "name": "static_resources",
       "version": "6\\.\\+"
-    },
-    {
-      "expires": "2022-10-30",
-      "group": "com\\.mercadopago\\.android\\.digital_accounts_components",
-      "name": "digital_accounts_components",
-      "version": "3\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.digital_accounts_components",
@@ -1059,30 +1041,6 @@
       "version": "3\\.+"
     },
     {
-      "expires": "2022-10-30",
-      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
-      "name": "paymentflowfcu",
-      "version": "3\\.+"
-    },
-    {
-      "expires": "2022-10-30",
-      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
-      "name": "entities_fcu",
-      "version": "3\\.+"
-    },
-    {
-      "expires": "2022-10-30",
-      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
-      "name": "paymentflowfcu",
-      "version": "4\\.+"
-    },
-    {
-      "expires": "2022-10-30",
-      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
-      "name": "entities_fcu",
-      "version": "4\\.+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
       "name": "paymentflowfcu",
       "version": "6\\.+"
@@ -1091,24 +1049,6 @@
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
       "name": "entities_fcu",
       "version": "6\\.+"
-    },
-    {
-      "expires": "2022-10-30",
-      "group": "com\\.mercadolibre\\.android\\.point\\.mpos",
-      "name": "mpos",
-      "version": "1\\.+"
-    },
-    {
-      "expires": "2022-10-30",
-      "group": "com\\.mercadolibre\\.android\\.payment_flow",
-      "name": "paymentflow",
-      "version": "7\\.\\+"
-    },
-    {
-      "expires": "2022-10-30",
-      "group": "com\\.mercadolibre\\.android\\.point\\.mpos",
-      "name": "mpos",
-      "version": "2\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point\\.mpos",
@@ -1498,9 +1438,15 @@
       "version": "1\\.1\\.0"
     },
     {
+      "expires": "2023-03-31",
       "group": "androidx\\.databinding",
       "name": "viewbinding",
       "version": "3\\.6\\.3|4.+"
+    },
+    {
+      "group": "androidx\\.databinding",
+      "name": "viewbinding",
+      "version": "7\\.2\\.2"
     },
     {
       "group": "com\\.google\\.android\\.material",
@@ -1886,18 +1832,6 @@
       "group": "com\\.auth0\\.android",
       "name": "jwtdecode",
       "version": "1\\.+"
-    },
-    {
-      "expires": "2022-10-30",
-      "group": "com\\.mercadolibre\\.android\\.point_smart_helpers",
-      "name": "point_commons",
-      "version": "2\\.+"
-    },
-    {
-      "expires": "2022-10-30",
-      "group": "com\\.mercadolibre\\.android\\.point_smart_helpers",
-      "name": "hardware_buttons",
-      "version": "2\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point_smart_helpers",
@@ -2331,18 +2265,6 @@
       "version": "1\\.+"
     },
     {
-      "expires": "2022-10-30",
-      "group": "com\\.mercadolibre\\.android\\.reviews3",
-      "name": "core",
-      "version": "2\\.+"
-    },
-    {
-      "expires": "2022-10-30",
-      "group": "com\\.mercadolibre\\.android\\.reviews3",
-      "name": "form",
-      "version": "2\\.+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.reviews3",
       "name": "core",
       "version": "3\\.+"
@@ -2351,12 +2273,6 @@
       "group": "com\\.mercadolibre\\.android\\.reviews3",
       "name": "form",
       "version": "3\\.+"
-    },
-    {
-      "expires": "2022-10-30",
-      "group": "com\\.mercadolibre\\.android\\.reviews",
-      "name": "reviews",
-      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.reviews",

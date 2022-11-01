@@ -1089,13 +1089,6 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "expires": "2022-10-30",
-      "name": "Traceability",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
       "name": "Traceability",
       "source": "private",
       "target": "production",
@@ -1196,13 +1189,6 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?10|[1-9].[0-9]+$"
-    },
-    {
-      "expires": "2022-10-30",
-      "name": "StartUPInitializer",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?5.[0-9]+.?[0-9]*$"
     },
     {
       "name": "StartUPInitializer",
