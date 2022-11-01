@@ -1010,17 +1010,17 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "expires": "2022-12-01",
+      "expires": "2022-11-15",
       "name": "BiometricSecurityUI",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?[1-2].[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "BiometricSecurityUI",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?3.[0-9]+$"
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "expires": "2022-12-01",
@@ -1091,13 +1091,6 @@
     },
     {
       "name": "Scanner",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "expires": "2022-10-30",
-      "name": "Traceability",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
@@ -1203,13 +1196,6 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?10|[1-9].[0-9]+$"
-    },
-    {
-      "expires": "2022-10-30",
-      "name": "StartUPInitializer",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?5.[0-9]+.?[0-9]*$"
     },
     {
       "name": "StartUPInitializer",
