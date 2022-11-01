@@ -2245,19 +2245,37 @@
       "version": "6\\.\\+"
     },
     {
+      "expires": "2022-11-15",
       "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
       "name": "combo",
       "version": "1\\.+"
     },
     {
+      "expires": "2022-11-15",
       "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
       "name": "core",
       "version": "1\\.+"
     },
     {
+      "expires": "2022-11-15",
       "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
       "name": "recommendations",
       "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
+      "name": "combo",
+      "version": "2\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
+      "name": "core",
+      "version": "2\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
+      "name": "recommendations",
+      "version": "2\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.si_billing_info",
