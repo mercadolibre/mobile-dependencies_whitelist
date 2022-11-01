@@ -1010,10 +1010,17 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "name": "BiometricSecurityUI",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?[1-2].[0-9]+$"
+      “expires”: “2022-11-15",
+      “name”: “BiometricSecurityUI”,
+      “source”: “private”,
+      “target”: “production”,
+      “version”: “^~>\\s?1.[0-9]+$”
+    },
+    {
+      “name”: “BiometricSecurityUI”,
+      “source”: “private”,
+      “target”: “production”,
+      “version”: “^~>\\s?2.[0-9]+$”
     },
     {
       "expires": "2022-12-01",
