@@ -452,6 +452,8 @@
       "version": "7\\.\\+"
     },
     {
+      "description": "this lib has been deprecated, we're using com.mercadolibre.android.restclient",
+      "expires": "2023-03-31",
       "group": "com\\.mercadolibre\\.android",
       "name": "networking",
       "version": "10\\.\\+"
@@ -512,6 +514,7 @@
       "version": "19\\.\\+"
     },
     {
+      "expires": "2022-12-31",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-legacy",
       "version": "14\\.\\+"
