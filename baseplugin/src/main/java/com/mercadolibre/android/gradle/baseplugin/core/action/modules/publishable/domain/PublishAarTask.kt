@@ -3,7 +3,7 @@ package com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishab
 import com.android.build.gradle.BaseExtension
 import com.android.build.gradle.api.BaseVariant
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.basics.PublishManager
-import com.mercadolibre.android.gradle.baseplugin.core.action.providers.VariantUtils
+import com.mercadolibre.android.gradle.baseplugin.core.action.utils.VariantUtils
 import com.mercadolibre.android.gradle.baseplugin.core.components.BUNDLE_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.DOCUMENTATION_GROUP
 import com.mercadolibre.android.gradle.baseplugin.core.components.PACKAGING_AAR_CONSTANT

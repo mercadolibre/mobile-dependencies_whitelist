@@ -8,7 +8,7 @@ import com.android.build.gradle.api.BaseVariant
 import com.android.build.gradle.api.LibraryVariant
 import com.mercadolibre.android.gradle.app.utils.domain.ModuleType
 import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.PluginConfigurer
-import com.mercadolibre.android.gradle.baseplugin.core.action.providers.VariantUtils
+import com.mercadolibre.android.gradle.baseplugin.core.action.utils.VariantUtils
 import com.mercadolibre.android.gradle.baseplugin.core.basics.ExtensionGetter
 import com.mercadolibre.android.gradle.baseplugin.core.components.APP_PLUGINS
 import com.mercadolibre.android.gradle.baseplugin.core.components.LIBRARY_PLUGINS

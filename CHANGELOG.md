@@ -1,9 +1,26 @@
+# 14.8.0
+
+## Agregado
+- Se genera el Plugin Lint Module encargado de realizar el linteo de plugins
+- Se genera el JsonUtils encargado de administrar el manejo de Jsons
+
+## Modificado
+- Se empieza a utilizar el JsonUtils para la clase LibraryAllowlistDependenciesLint
+- Se empieza a utilizar OutputUtils en los modulos cambiando asi su forma de imprimir en pantalla o escribir reportes, como tambien se cambian sus tests
+  - AbstractPluginDescription
+  - PluginDescriptionModule
+  - ListProjectsModule
+  - LibraryAllowListDependenciesLint
+  - List Variants
+
 # 14.7.1
 
 ## Modificado
 - Se modifica la forma en que se buscan las versiones desponibles de las dependencias en caso de que esten expiradas
 
 # 14.7.0
+
+## Modificado
 - Bump del plugin de  Build Scan de Gradle Enterprise a su version 3.11.2 
 
 # 14.6.1

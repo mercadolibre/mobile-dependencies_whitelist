@@ -1,5 +1,6 @@
 package com.mercadolibre.android.gradle.baseplugin.core.action.modules.listProjects
 
+import com.mercadolibre.android.gradle.baseplugin.core.action.utils.OutputUtils
 import com.mercadolibre.android.gradle.baseplugin.core.components.BEGINNING_TOKEN
 import com.mercadolibre.android.gradle.baseplugin.core.components.LIST_PROJECTS_DESCRIPTION
 import com.mercadolibre.android.gradle.baseplugin.core.components.LIST_PROJECTS_TASK
@@ -34,9 +35,9 @@ class ListProjectsModule : Module() {
      * This is the method responsible for generating the report of all projects.
      */
     fun printProjects(project: Project) {
-        println(BEGINNING_TOKEN)
+        OutputUtils.logMessage(BEGINNING_TOKEN)
         for (subProject in project.subprojects) {
-            println(subProject.name)
+            OutputUtils.logMessage(subProject.name)
         }
     }
 }

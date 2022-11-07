@@ -266,18 +266,18 @@ val JACOCO_ANDROID_EXCLUDE = listOf(
  */
 
 /** This variable contains values necessary for the operation of a module. */
-const val LINT_ERROR_TITLE = "ERROR: The following dependencies are not allowed:"
+const val LINT_ERROR_TITLE = "The following dependencies are not allowed:"
 
 /** This variable contains values necessary for the operation of a module. */
-const val LINT_WARNIGN_TITLE = "WARNING: The following dependencies has been marked as deprecated:"
+const val LINT_WARNIGN_TITLE = "The following dependencies has been marked as deprecated:"
 
 /** This variable contains values necessary for the operation of a module. */
 const val LINT_TASK_FAIL_MESSAGE = "Errors found while running lints, please check the console output for more information"
 
 /** This variable contains values necessary for the operation of a module. */
-const val LINT_ERROR_ALLOWED_DEPENDENCIES_PREFIX = "\nYour project can only contain the dependencies listed in: URL \n" +
+const val LINT_ERROR_POSTDATA = "\nYour project can only contain the dependencies listed in: <URL> \n" +
     "If you think one of them should be in the allowlist, please start here " +
-    "https://sites.google.com/mercadolibre.com/mobile/arquitectura/libs-utilitarias/libs-externas\n"
+    "https://sites.google.com/mercadolibre.com/mobile/arquitectura/allowlist\n"
 
 /** This variable contains values necessary for the operation of a module. */
 const val LINT_FILENAME = "lint.ld"

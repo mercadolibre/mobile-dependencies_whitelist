@@ -2,15 +2,13 @@ package com.mercadolibre.android.gradle.baseplugin.unitary.modules.lint
 
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.LintGradleExtension
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.library.JavaLintModule
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.pluginLint.PluginLintModule
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINTABLE_EXTENSION
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINTABLE_TASK
 import com.mercadolibre.android.gradle.baseplugin.integration.utils.domain.ModuleType
 import com.mercadolibre.android.gradle.baseplugin.managers.AbstractPluginManager
 import com.mercadolibre.android.gradle.baseplugin.managers.LIBRARY_PROJECT
 import com.mercadolibre.android.gradle.baseplugin.managers.ROOT_PROJECT
-import com.nhaarman.mockitokotlin2.verifyNoMoreInteractions
-import io.mockk.Called
-import io.mockk.called
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.verify
@@ -24,6 +22,7 @@ import org.junit.runners.JUnit4
 class LintableModuleTest : AbstractPluginManager() {
 
     private val lintableModule = JavaLintModule()
+    private val lintablePluginModule = PluginLintModule("Any")
 
     @org.junit.Before
     fun setUp() {
@@ -34,6 +33,9 @@ class LintableModuleTest : AbstractPluginManager() {
 
         lintableModule.configureVariants(projects[LIBRARY_PROJECT]!!)
         lintableModule.configure(projects[LIBRARY_PROJECT]!!)
+
+        lintablePluginModule.configureVariants(projects[LIBRARY_PROJECT]!!)
+        lintablePluginModule.configure(projects[LIBRARY_PROJECT]!!)
 
         addMockVariant(projects[LIBRARY_PROJECT]!!, ModuleType.LIBRARY)
     }
@@ -49,7 +51,6 @@ class LintableModuleTest : AbstractPluginManager() {
 
         every { project.extensions.findByName(LINTABLE_EXTENSION) } returns extension
 
-        verify { project.extensions.create(LINTABLE_EXTENSION, LintGradleExtension::class.java) }
         verify { project.extensions.findByName(LINTABLE_EXTENSION) }
 
         // Project call lint in After Evaluate
@@ -77,10 +78,9 @@ class LintableModuleTest : AbstractPluginManager() {
 
         lintableModule.executeModule(project)
 
-        verify { project.extensions.create(LINTABLE_EXTENSION, LintGradleExtension::class.java) }
         verify { project.extensions.findByName(LINTABLE_EXTENSION) }
 
-        //Print warning message with project.name
+        // Print warning message with project.name
         verify { project.name }
 
         // Project not call lint in After Evaluate

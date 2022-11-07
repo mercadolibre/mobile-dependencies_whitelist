@@ -1,6 +1,6 @@
 package com.mercadolibre.android.gradle.baseplugin.core.action.modules.configPlugin
 
-import com.mercadolibre.android.gradle.baseplugin.core.action.providers.OutPutUtils
+import com.mercadolibre.android.gradle.baseplugin.core.action.utils.OutputUtils
 import com.mercadolibre.android.gradle.baseplugin.core.components.APP_PLUGIN
 import com.mercadolibre.android.gradle.baseplugin.core.components.DF_PLUGIN
 import com.mercadolibre.android.gradle.baseplugin.core.components.LIBRARY_PLUGIN
@@ -91,10 +91,13 @@ class ConfigPluginModule : Module() {
                 )
 
                 if (isBlocker) {
-                    OutPutUtils.sendMultipleErrorMessages(message)
-                    throw GradleException(PLUGIN_LINT_TASK_FAIL_MESSAGE)
+                    OutputUtils.logError(message)
                 } else {
-                    OutPutUtils.sendMultipleWarningMessages(message)
+                    OutputUtils.logWarning(message)
+                }
+
+                if (isBlocker) {
+                    throw GradleException(PLUGIN_LINT_TASK_FAIL_MESSAGE)
                 }
             }
         }

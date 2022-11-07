@@ -4,7 +4,7 @@ import com.android.build.gradle.api.BaseVariant
 import com.android.builder.model.SourceProvider
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.jacoco.JavaJacocoModule
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.jacoco.basics.JacocoConfigurationExtension
-import com.mercadolibre.android.gradle.baseplugin.core.action.providers.VariantUtils
+import com.mercadolibre.android.gradle.baseplugin.core.action.utils.VariantUtils
 import com.mercadolibre.android.gradle.baseplugin.core.components.JACOCO_EXTENSION
 import com.mercadolibre.android.gradle.baseplugin.core.components.JACOCO_FULL_REPORT_TASK
 import com.mercadolibre.android.gradle.baseplugin.core.components.JACOCO_GROUP

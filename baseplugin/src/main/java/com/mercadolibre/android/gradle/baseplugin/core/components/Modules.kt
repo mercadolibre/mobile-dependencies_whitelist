@@ -9,6 +9,7 @@ import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.libra
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.listProjects.ListProjectsModule
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.listVariants.ListVariantsModule
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.pluginDescription.PluginDescriptionModule
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.pluginLint.PluginLintModule
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.projectInfo.ProjectInfoModule
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.projectVersion.ProjectVersionModule
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.JavaPublishableModule
