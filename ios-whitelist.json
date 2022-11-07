@@ -1,7 +1,6 @@
 {
   "whitelist": [
     {
-<<<<<<< HEAD
       "expires": "2023-03-01",
       "name": "AdvertisingADN",
       "source": "private",
@@ -9,8 +8,6 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-=======
->>>>>>> master
       "name": "AdvertisingADN",
       "source": "private",
       "target": "production",
