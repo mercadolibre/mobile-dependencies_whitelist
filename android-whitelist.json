@@ -487,14 +487,28 @@
       "version": "14\\.\\+"
     },
     {
+      "description": "Deprecada por borrado de componentes sin uso",
+      "expires": "2022-11-11",
       "group": "com\\.mercadolibre\\.android",
       "name": "ui",
       "version": "9\\.\\+"
     },
     {
+      "description": "Deprecada por borrado de componentes sin uso",
+      "expires": "2022-11-11",
       "group": "com\\.mercadolibre\\.android",
       "name": "ui_legacy",
       "version": "9\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "ui",
+      "version": "10\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "ui_legacy",
+      "version": "10\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.activity",
