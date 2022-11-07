@@ -1,13 +1,6 @@
 {
   "whitelist": [
     {
-      "expires": "2022-11-01",
-      "name": "AdvertisingADN",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?0.[0-9]+"
-    },
-    {
       "name": "AdvertisingADN",
       "source": "private",
       "target": "production",
