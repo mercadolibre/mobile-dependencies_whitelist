@@ -2,6 +2,8 @@
 
 ## Agregado
 - Se genera el Plugin Lint Module encargado de realizar el linteo de plugins
+  - Se agrega el kotlin-android-extension a la lista de linteo
+  - Se agrega el SCA a la lista de linteo
 - Se genera el JsonUtils encargado de administrar el manejo de Jsons
 
 ## Modificado
