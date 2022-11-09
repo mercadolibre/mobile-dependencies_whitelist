@@ -1624,6 +1624,12 @@
       "source": "public",
       "target": "production",
       "version": "4.7.0"
+    },
+    {
+      "name": "Mplay",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
     }
   ]
 }
