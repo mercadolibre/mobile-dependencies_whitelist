@@ -36,7 +36,7 @@ class PluginLint(private val projectType: String) : Lint() {
     // The postdata of the reports
     private val PLUGIN_LINT_POSTDATA =
         "\nYour project has a plugin that matched with one listed in Meli Plugin." +
-                "\nPlease follow the suggested link to know how to procced. $WIKI_LINK"
+            "\nPlease follow the suggested link to know how to procced. $WIKI_LINK"
 
     /**
      * This list contains the dependencies in the allow list.
@@ -48,6 +48,15 @@ class PluginLint(private val projectType: String) : Lint() {
             isBlocker = false,
             "We no longer recommend using this plugin, more info here:" +
                 "https://android-developers.googleblog.com/2020/11/the-future-of-kotlin-android-extensions.html",
+            "library|app",
+            null
+        ),
+        Plugin(
+            "com.monits.staticCodeAnalysis",
+            isRequired = false,
+            isBlocker = false,
+            "We no longer recommend using this plugin, more info here:" +
+                "https://sites.google.com/mercadolibre.com/mobile/arquitectura/listed-plugins/sca-plugin",
             "library|app",
             null
         )
