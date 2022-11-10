@@ -30,14 +30,6 @@ const val BUILD_CACHE_CI_GRADLE_PASSWORD = "CI_GRADLE_USER_PASSWORD"
 const val ALLOW_LIST_URL = "https://raw.githubusercontent.com/mercadolibre/mobile-dependencies_whitelist/master/android-whitelist.json"
 
 /** This variable contains a plugin. */
-const val DEXCOUNT_PLUGIN = "com.getkeepsafe.dexcount"
-/** This variable contains a plugin. */
-const val BUGSNAG_PLUGIN = "com.bugsnag.android.gradle"
-/** This variable contains a plugin. */
-const val MAVEN_PUBLISH = "org.gradle.maven-publish"
-/** This variable contains a plugin. */
-const val JACOCO_PLUGIN = "org.gradle.jacoco"
-/** This variable contains a plugin. */
 const val KOTLIN_ANDROID = "kotlin-android"
 /** This variable contains a plugin. */
 const val LIBRARY_PLUGIN = "com.android.library"

@@ -1,14 +1,13 @@
 package com.mercadolibre.android.gradle.app.core.action.modules.bugsnag
 
+import com.bugsnag.android.gradle.BugsnagPlugin
 import com.bugsnag.android.gradle.BugsnagPluginExtension
 import com.mercadolibre.android.gradle.baseplugin.core.components.BUGSNAG_EXTENSION
-import com.mercadolibre.android.gradle.baseplugin.core.components.BUGSNAG_PLUGIN
 import com.mercadolibre.android.gradle.baseplugin.core.components.BUGSNAG_RETRY_CONVENTION
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISH_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.domain.interfaces.ExtensionProvider
 import com.mercadolibre.android.gradle.baseplugin.core.domain.interfaces.Module
 import org.gradle.api.Project
-import org.gradle.kotlin.dsl.apply
 
 /**
  * This class is responsible for adding bugsnag functionality to a repository.
@@ -31,7 +30,7 @@ class BugsnagModule : Module(), ExtensionProvider {
     override fun configure(project: Project) {
         findExtension<BugsnagExtension>(project)?.apply {
             if (enabled) {
-                project.apply(plugin = BUGSNAG_PLUGIN)
+                project.plugins.apply(BugsnagPlugin::class.java)
 
                 findExtension<BugsnagPluginExtension>(project)?.apply {
                     retryCount.convention(BUGSNAG_RETRY_CONVENTION)

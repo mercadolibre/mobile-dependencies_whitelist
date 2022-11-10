@@ -1,5 +1,8 @@
 # 14.8.0
 
+## Modificado
+- Se modifica la forma en que se aplica el plugin de Dexcount y Bugsnag para que sea una mejor practica.
+
 ## Agregado
 - Se genera el Plugin Lint Module encargado de realizar el linteo de plugins
 - Se genera el JsonUtils encargado de administrar el manejo de Jsons

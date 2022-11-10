@@ -5,7 +5,6 @@ import com.mercadolibre.android.gradle.baseplugin.core.action.modules.jacoco.bas
 import com.mercadolibre.android.gradle.baseplugin.core.components.JACOCO_EXTENSION
 import com.mercadolibre.android.gradle.baseplugin.core.components.JACOCO_FULL_REPORT_TASK
 import com.mercadolibre.android.gradle.baseplugin.core.components.JACOCO_GROUP
-import com.mercadolibre.android.gradle.baseplugin.core.components.JACOCO_PLUGIN
 import com.mercadolibre.android.gradle.baseplugin.core.components.JACOCO_TEST_REPORT_TASK
 import com.mercadolibre.android.gradle.baseplugin.core.components.JACOCO_VERIFICATION_GROUP
 import com.mercadolibre.android.gradle.baseplugin.core.components.TEST_TASK
@@ -14,9 +13,9 @@ import org.gradle.api.Project
 import org.gradle.api.tasks.testing.Test
 import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 import org.gradle.api.tasks.testing.logging.TestLogEvent
-import org.gradle.kotlin.dsl.apply
 import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.withType
+import org.gradle.testing.jacoco.plugins.JacocoPlugin
 import org.gradle.testing.jacoco.plugins.JacocoTaskExtension
 
 /**
@@ -28,7 +27,7 @@ open class BaseJacocoModule : Module() {
      * This method is responsible for applying the Jacoco plugin and configuring its main tasks.
      */
     override fun configure(project: Project) {
-        project.apply(plugin = JACOCO_PLUGIN)
+        project.plugins.apply(JacocoPlugin::class.java)
 
         val task = project.tasks.register(JACOCO_FULL_REPORT_TASK).get()
         task.group = JACOCO_GROUP
