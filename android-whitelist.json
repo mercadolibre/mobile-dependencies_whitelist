@@ -490,20 +490,6 @@
       "version": "14\\.\\+"
     },
     {
-      "description": "Deprecada por borrado de componentes sin uso",
-      "expires": "2022-11-11",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "ui",
-      "version": "9\\.\\+"
-    },
-    {
-      "description": "Deprecada por borrado de componentes sin uso",
-      "expires": "2022-11-11",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "ui_legacy",
-      "version": "9\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android",
       "name": "ui",
       "version": "10\\.\\+"
@@ -748,22 +734,12 @@
       "version": "8\\.\\+"
     },
     {
-      "expires": "2022-11-07",
-      "group": "com\\.mercadolibre\\.android\\.recommendations",
-      "version": "13\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.recommendations",
       "version": "14\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.remedies",
       "version": "mercadopago-3\\.\\+"
-    },
-    {
-      "expires": "2022-11-07",
-      "group": "com\\.mercadolibre\\.android\\.comparator",
-      "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.comparator",
@@ -1943,32 +1919,14 @@
       "version": "mercadolibre-7\\.\\+|mercadopago-7\\.\\+"
     },
     {
-      "expires": "2022-11-11",
-      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
-      "name": "scanner",
-      "version": "mercadolibre-6\\.\\+|mercadopago-6\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "ocr",
       "version": "mercadolibre-7\\.\\+|mercadopago-7\\.\\+"
     },
     {
-      "expires": "2022-11-11",
-      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
-      "name": "ocr",
-      "version": "mercadolibre-6\\.\\+|mercadopago-6\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "barcode",
       "version": "mercadolibre-7\\.\\+|mercadopago-7\\.\\+"
-    },
-    {
-      "expires": "2022-11-11",
-      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
-      "name": "barcode",
-      "version": "mercadolibre-6\\.\\+|mercadopago-6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.in_app_report",
