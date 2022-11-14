@@ -937,14 +937,28 @@
       "version": "3\\.+"
     },
     {
+      "description": "This library is deprecated",
+      "expires": "2022-12-14",
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
       "name": "paymentflowfcu",
       "version": "6\\.+"
     },
     {
+      "description": "This library is deprecated",
+      "expires": "2022-12-14",
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
       "name": "entities_fcu",
       "version": "6\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
+      "name": "paymentflowfcu",
+      "version": "7\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
+      "name": "entities_fcu",
+      "version": "7\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point\\.mpos",
