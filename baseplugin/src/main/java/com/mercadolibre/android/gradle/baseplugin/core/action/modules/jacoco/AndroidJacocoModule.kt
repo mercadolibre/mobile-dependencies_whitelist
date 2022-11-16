@@ -3,7 +3,7 @@ package com.mercadolibre.android.gradle.baseplugin.core.action.modules.jacoco
 import com.android.build.gradle.api.BaseVariant
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.jacoco.basics.JacocoConfigurationExtension
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.jacoco.domain.BaseJacocoModule
-import com.mercadolibre.android.gradle.baseplugin.core.action.providers.VariantUtils
+import com.mercadolibre.android.gradle.baseplugin.core.action.utils.VariantUtils
 import com.mercadolibre.android.gradle.baseplugin.core.components.DIR_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.EXCLUDES_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.JACOCO_ANDROID_EXCLUDE

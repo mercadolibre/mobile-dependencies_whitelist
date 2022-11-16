@@ -1,10 +1,9 @@
 package com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.publishable
 
 import com.mercadolibre.android.gradle.baseplugin.core.action.providers.RepositoryProvider
-import com.mercadolibre.android.gradle.baseplugin.core.components.MAVEN_PUBLISH
 import com.mercadolibre.android.gradle.baseplugin.core.domain.interfaces.Module
 import org.gradle.api.Project
-import org.gradle.kotlin.dsl.apply
+import org.gradle.api.publish.maven.plugins.MavenPublishPlugin
 
 /**
  * PublishableModule is in charge of adding the Maven Publication plugin and adding the repositories
@@ -17,7 +16,7 @@ open class PublishableModule : Module() {
      * and apply the Maven publication plugin.
      */
     override fun configure(project: Project) {
-        project.apply(plugin = MAVEN_PUBLISH)
+        project.plugins.apply(MavenPublishPlugin::class.java)
 
         project.configurations.findByName("archives")?.apply {
             extendsFrom(project.configurations.findByName("default"))

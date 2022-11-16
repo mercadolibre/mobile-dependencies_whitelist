@@ -1,4 +1,4 @@
-# ¿El plugin se auto implementa?
+## ¿El plugin se auto implementa?
 
 Si, siempre existen dos versiones de los `Plugins` el primero es repositorio donde estamos haciendo nuestros cambios,
 y el segundo es el que lo configura. Debido a que el `Módulo` de publicación está dentro del repositorio genera esta
@@ -6,14 +6,14 @@ necesidad de auto implementarse para poder publicar versiones.
 
 ----
 
-# ¿Cómo detecto cual es cual?
+## ¿Cómo detecto cual es cual?
 
 Dentro del `gradle.properties` tendremos la variable `library.version` que contiene la versión de nuestros cambios, y las
 variables que contienen el `Plugin` que está configurando el repositorio está en la variable `innerProjectVersion` dentro
 del `gradle.properties` y `libs.version.toml`.
 
 ----
-# Casos importantes
+## Casos importantes
 
 #### Necesito hacer cambios en el `BasePlugin` y eso afecta a los otros plugins o a todo el repositorio
 

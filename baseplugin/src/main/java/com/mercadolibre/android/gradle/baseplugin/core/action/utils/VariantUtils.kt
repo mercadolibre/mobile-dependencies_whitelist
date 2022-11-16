@@ -1,4 +1,4 @@
-package com.mercadolibre.android.gradle.baseplugin.core.action.providers
+package com.mercadolibre.android.gradle.baseplugin.core.action.utils
 
 import com.android.build.gradle.api.BaseVariant
 import com.mercadolibre.android.gradle.baseplugin.core.components.JAVA_COMPILE_PROVIDER

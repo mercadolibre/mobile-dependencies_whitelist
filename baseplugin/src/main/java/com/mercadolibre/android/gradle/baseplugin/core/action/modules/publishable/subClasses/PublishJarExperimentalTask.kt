@@ -5,6 +5,7 @@ import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishabl
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.domain.PublishJarTask
 import com.mercadolibre.android.gradle.baseplugin.core.components.INTERNAL_EXPERIMENTAL
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_EXPERIMENTAL_SUBFIX_TASK
+import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISHING_TIME_GENERATOR
 import org.gradle.api.Project
 import org.gradle.api.Task
 import org.gradle.api.tasks.SourceSet
@@ -25,7 +26,7 @@ class PublishJarExperimentalTask : PublishJarTask() {
 
         val taskGenerator = TaskGenerator(
             taskName,
-            "${PUBLISHING_EXPERIMENTAL_SUBFIX_TASK}${project.version}-${TimeStampManager.getOrCreateTimeStamp()}",
+            "${PUBLISHING_EXPERIMENTAL_SUBFIX_TASK}${project.version}-${TimeStampManager.getOrCreateTimeStamp(PUBLISHING_TIME_GENERATOR)}",
             versionContainer,
             getListOfDependsOn(),
             INTERNAL_EXPERIMENTAL,

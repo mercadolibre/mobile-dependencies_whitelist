@@ -26,7 +26,7 @@ Sus pasos básicos para ponerse en marcha:
 - Si toma demasiado tiempo entregar el código, siempre cambie la base hacia el maestro antes de solicitar una revisión y evite las confirmaciones de combinación inversa.
 
 * **Feature request**: Las solicitudes serán atendidas dependiendo el músculo disponible como también la necesidad que tenga el cambio.
-* **Bug reports**: Cualquier error que sea reportado debe incluir el "OutPut" del problema qué sucede si califica, el entorno donde fue ecuado
+* **Bug reports**: Cualquier error que sea reportado debe incluir el "Output" del problema qué sucede si califica, el entorno donde fue ecuado
   (CI, Local, Producción, etc) conjunto a la versión del plugin que se está utilizando.
 * **Pull Request**: Toda propuesta podrá ser enviada por un PR para que la podamos analizar como también challengear.
 

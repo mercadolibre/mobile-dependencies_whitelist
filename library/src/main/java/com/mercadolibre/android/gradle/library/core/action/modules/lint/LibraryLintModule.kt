@@ -7,12 +7,14 @@ import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.libra
 import com.mercadolibre.android.gradle.baseplugin.core.components.API_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.COMPILE_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.IMPLEMENTATION_CONSTANT
+import com.mercadolibre.android.gradle.baseplugin.core.components.LINTABLE_DESCRIPTION
+import com.mercadolibre.android.gradle.baseplugin.core.components.LINTABLE_TASK
 import org.gradle.api.Project
 
 /**
  * This class takes care of the Lint of the App type modules.
  */
-class LibraryLintModule : LintableModule() {
+class LibraryLintModule : LintableModule(LINTABLE_TASK, LINTABLE_DESCRIPTION) {
 
     /**
      * This method is in charge of providing the object that the Lint will do.

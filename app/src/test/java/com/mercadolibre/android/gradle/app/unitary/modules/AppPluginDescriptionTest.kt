@@ -27,9 +27,8 @@ class AppPluginDescriptionTest {
         val task = mockk<Task>(relaxed = true)
 
         pluginDescription.printMessage(ANY_NAME, ANY_NAME)
-        pluginDescription.configureTask(task)
 
-        assert(pluginDescription.makeMessage(ANY_NAME, ANY_NAME) == "- $ANY_NAME\n$ANY_NAME")
+        assert(pluginDescription.makeLog(ANY_NAME, ANY_NAME) == "- $ANY_NAME\n$ANY_NAME")
         assert(pluginDescription.content() == AppModuleConfigurer().getModules("App Modules", ModuleProvider.provideAppAndroidModules()))
     }
 
@@ -40,8 +39,7 @@ class AppPluginDescriptionTest {
         val task = mockk<Task>(relaxed = true)
 
         pluginDescription.printMessage(ANY_NAME, ANY_NAME)
-        pluginDescription.configureTask(task)
-        assert(pluginDescription.makeMessage(ANY_NAME, ANY_NAME) == "- $ANY_NAME\n$ANY_NAME")
+        assert(pluginDescription.makeLog(ANY_NAME, ANY_NAME) == "- $ANY_NAME\n$ANY_NAME")
 
         var names = ""
         for (extensionProvider in ModuleProvider.provideAppAndroidModules()) {

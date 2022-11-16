@@ -1,7 +1,11 @@
-- **Catch Up**
-  - [Inicio](catchUp/home.md)
-  - [Módulos](catchUp/modules.md)
-  - [Publicación del Plugin](catchUp/pluginPublication.md)
+- **Conceptos**
+  - [Arquitectura](concepts/architecture.md)
+  - [Referencias](concepts/references.md)
+- **Funcionamiento**
+  - [Responsabilidades](functionality/home.md)
+  - [Módulos](functionality/modules.md)
+  - [Publicación del Plugin](functionality/pluginPublication.md)
+  - [Test](functionality/test.md)
 - **¿Cómo agrego contenido?**
   - [Agregar Contenido](newContent/newContent.md)
 

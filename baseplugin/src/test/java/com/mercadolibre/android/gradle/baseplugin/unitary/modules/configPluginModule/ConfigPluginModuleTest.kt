@@ -1,7 +1,7 @@
 package com.mercadolibre.android.gradle.baseplugin.unitary.modules.configPluginModule
 
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.configPlugin.ConfigPluginModule
-import com.mercadolibre.android.gradle.baseplugin.core.action.providers.OutPutUtils
+import com.mercadolibre.android.gradle.baseplugin.core.action.utils.OutputUtils
 import com.mercadolibre.android.gradle.baseplugin.core.components.MELI_GROUP
 import com.mercadolibre.android.gradle.baseplugin.managers.APP_PROJECT
 import com.mercadolibre.android.gradle.baseplugin.managers.AbstractPluginManager
@@ -35,7 +35,7 @@ class ConfigPluginModuleTest : AbstractPluginManager() {
     fun setUp() {
         initTmpFolder()
 
-        mockkObject(OutPutUtils)
+        mockkObject(OutputUtils)
 
         mockedRoot = mockRootProject(listOf(LIBRARY_PROJECT, APP_PROJECT, DF_PROJECT))
     }
@@ -84,7 +84,7 @@ class ConfigPluginModuleTest : AbstractPluginManager() {
 
         configModule.lint(mockedProjectSubProject)
 
-        verify { OutPutUtils.sendAWarningMessage("p1 needs Meli Library Plugin") }
+        verify { OutputUtils.logWarning("p1 needs Meli Library Plugin") }
     }
 
     @org.junit.Test
@@ -101,7 +101,7 @@ class ConfigPluginModuleTest : AbstractPluginManager() {
 
         configModule.lint(mockedProjectSubProject)
 
-        verify { OutPutUtils.sendAWarningMessage("p2 needs Meli App Plugin") }
+        verify { OutputUtils.logWarning("p2 needs Meli App Plugin") }
     }
 
     @org.junit.Test
@@ -118,7 +118,7 @@ class ConfigPluginModuleTest : AbstractPluginManager() {
 
         configModule.lint(mockedProjectSubProject)
 
-        verify { OutPutUtils.sendAWarningMessage("p4 needs Meli Dynamicfeatures Plugin") }
+        verify { OutputUtils.logWarning("p4 needs Meli Dynamicfeatures Plugin") }
     }
 
     @org.junit.Test
@@ -135,7 +135,7 @@ class ConfigPluginModuleTest : AbstractPluginManager() {
 
         configModule.lint(mockedProjectSubProject)
 
-        verify(exactly = 0) { OutPutUtils.sendAWarningMessage(any()) }
+        verify(exactly = 0) { OutputUtils.logWarning(any<String>()) }
     }
 
     @org.junit.Test
@@ -148,7 +148,7 @@ class ConfigPluginModuleTest : AbstractPluginManager() {
 
         configModule.lint(mockedProjectSubProject)
 
-        verify(exactly = 0) { OutPutUtils.sendAWarningMessage(any()) }
+        verify(exactly = 0) { OutputUtils.logWarning(any<String>()) }
     }
 
     @org.junit.Test(expected = GradleException::class)
@@ -167,6 +167,6 @@ class ConfigPluginModuleTest : AbstractPluginManager() {
 
         configModule.lint(mockedProjectSubProject)
 
-        verify { OutPutUtils.sendAWarningMessage("p1 needs Meli Library Plugin") }
+        verify { OutputUtils.logWarning("p1 needs Meli Library Plugin") }
     }
 }
