@@ -1,3 +1,8 @@
+# 15.0.7
+
+## Backport
+- Backport de la version 14.8.3 a la version 15.0.7
+- 
 # 15.0.6
 
 ## Backport
@@ -32,6 +37,11 @@
 
 ## Modificado
 - Se actualiza la version de COMPILE_API_SDK_LEVEL a 32 para soportar Android 12
+
+# 14.8.3
+
+## Fix
+- Se cambia el tiempo de ejecucion en donde se leen las extensiones de Module On Off para que sea capaz de captar el valor
 
 # 14.8.2
 

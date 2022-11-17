@@ -32,7 +32,9 @@ abstract class Module : ExtensionProvider, ExtensionGetter() {
      */
     fun moduleConfiguration(project: Project) {
         if (executeInAfterEvaluate()) {
-            executeModule(project)
+            project.afterEvaluate {
+                executeModule(project)
+            }
         } else {
             configure(project)
         }
