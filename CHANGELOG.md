@@ -1,7 +1,7 @@
 # 15.0.5
 
 ## Backport
-- Backport de la version 14.8.0 a la version 15.0.5
+- Backport de la version 14.8.1 a la version 15.0.5
 
 # 15.0.4
 
