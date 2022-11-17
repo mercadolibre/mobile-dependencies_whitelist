@@ -1,3 +1,8 @@
+# 15.0.5
+
+## Backport
+- Backport de la version 14.8.0 a la version 15.0.5
+
 # 15.0.4
 
 ## Fix
@@ -11,12 +16,12 @@
 # 15.0.2
 
 ## Agregado
-- Se agregan los fix de la version 14.6.1 en adelante a la version 15
+- Backport de la version 14.6.1 a la version 15.0.2
 
 # 15.0.1
 
 ## Agregado
-- Se agregan los fix de la version 14.2.1 en adelante a la version 15
+- Backport de la version 14.2.1 a la version 15.0.1
 
 # 15.0.0
 
