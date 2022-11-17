@@ -1,7 +1,7 @@
 # 15.0.5
 
 ## Backport
-- Backport de la version 14.8.0 a la version 15.0.5
+- Backport de la version 14.8.1 a la version 15.0.5
 
 # 15.0.4
 
@@ -27,6 +27,12 @@
 
 ## Modificado
 - Se actualiza la version de COMPILE_API_SDK_LEVEL a 32 para soportar Android 12
+
+# 14.8.1
+
+## Modificado
+- Se modifica la forma en que la interfaz Module genera el nombre de las extensiones
+- Se modifica la forma en que se verifica si el proyecto quiere aplicar bugsnag o no
 
 # 14.8.0
 
