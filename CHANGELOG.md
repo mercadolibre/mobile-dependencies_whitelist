@@ -1,6 +1,11 @@
 # 14.8.2
 
 ## Fix
+- Se cambia el tiempo de ejecucion en donde se leen las extensiones de Module On Off para que sea capaz de captar el valor
+
+# 14.8.2
+
+## Fix
 - Se cambia el compile only de la dependencia del plugin de bugsnag a un implementation para que pueda obtenerlo y aplicarlo no solamente obtenerlo
 
 # 14.8.1
