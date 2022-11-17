@@ -24,7 +24,7 @@ abstract class Module : ExtensionProvider, ExtensionGetter() {
      * This method is responsible for create the extensions needed for a module.
      */
     override fun createExtension(project: Project) {
-        project.extensions.create(getLowerCaseName(), ModuleOnOffExtension::class.java)
+        project.extensions.create(getExtensionName(), ModuleOnOffExtension::class.java)
     }
 
     /**

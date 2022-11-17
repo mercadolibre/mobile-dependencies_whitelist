@@ -1,9 +1,9 @@
 package com.mercadolibre.android.gradle.app.unitary.modules.bugsnag
 
 import com.bugsnag.android.gradle.BugsnagPluginExtension
-import com.mercadolibre.android.gradle.app.core.action.modules.bugsnag.BugsnagExtension
 import com.mercadolibre.android.gradle.app.core.action.modules.bugsnag.BugsnagModule
 import com.mercadolibre.android.gradle.app.managers.AbstractPluginManager
+import com.mercadolibre.android.gradle.baseplugin.core.basics.ModuleOnOffExtension
 import com.mercadolibre.android.gradle.baseplugin.core.components.BUGSNAG_EXTENSION
 import com.mercadolibre.android.gradle.baseplugin.core.components.BUGSNAG_RETRY_CONVENTION
 import io.mockk.Called
@@ -25,16 +25,18 @@ class BugsnagModuleTest : AbstractPluginManager() {
 
         bugsnagModule.createExtension(project)
 
-        verify { project.extensions.create(BUGSNAG_EXTENSION, BugsnagExtension::class.java) }
+        verify { project.extensions.create(BUGSNAG_EXTENSION, ModuleOnOffExtension::class.java) }
     }
 
     @org.junit.Test
     fun `When the BugsnagModule is called configure the project and is disabled`() {
         val project = mockk<Project>(relaxed = true)
-        val extension = mockk<BugsnagExtension>(relaxed = true)
+        val extension = mockk<ModuleOnOffExtension>(relaxed = true) {
+            enabled = true
+        }
         val extensionPlugin = mockk<BugsnagPluginExtension>(relaxed = true)
 
-        every { project.extensions.findByType(BugsnagExtension::class.java) } returns extension
+        every { project.extensions.findByType(ModuleOnOffExtension::class.java) } returns extension
         every { project.extensions.findByType(BugsnagPluginExtension::class.java) } returns extensionPlugin
         every { extension.enabled } returns false
 
@@ -46,10 +48,12 @@ class BugsnagModuleTest : AbstractPluginManager() {
     @org.junit.Test
     fun `When the BugsnagModule is called configure the project`() {
         val project = mockk<Project>(relaxed = true)
-        val extension = mockk<BugsnagExtension>(relaxed = true)
+        val extension = mockk<ModuleOnOffExtension>(relaxed = true) {
+            enabled = true
+        }
         val extensionPlugin = mockk<BugsnagPluginExtension>(relaxed = true)
 
-        every { project.extensions.findByType(BugsnagExtension::class.java) } returns extension
+        every { project.extensions.findByType(ModuleOnOffExtension::class.java) } returns extension
         every { project.extensions.findByType(BugsnagPluginExtension::class.java) } returns extensionPlugin
         every { extension.enabled } returns true
 

@@ -28,6 +28,13 @@
 ## Modificado
 - Se actualiza la version de COMPILE_API_SDK_LEVEL a 32 para soportar Android 12
 
+# 14.8.1
+
+## Modificado
+- Se modifica la forma en que la interfaz Module genera el nombre de las extensiones
+- Se modifica la forma en que se verifica si el proyecto quiere aplicar bugsnag o no
+>>>>>>> 90771a4210e154e58b37e6ab93680d1667ecaa10
+
 # 14.8.0
 
 ## Modificado
