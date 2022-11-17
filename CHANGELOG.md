@@ -33,7 +33,6 @@
 ## Modificado
 - Se modifica la forma en que la interfaz Module genera el nombre de las extensiones
 - Se modifica la forma en que se verifica si el proyecto quiere aplicar bugsnag o no
->>>>>>> 90771a4210e154e58b37e6ab93680d1667ecaa10
 
 # 14.8.0
 
