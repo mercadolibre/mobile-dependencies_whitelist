@@ -61,6 +61,5 @@ abstract class Module : ExtensionProvider, ExtensionGetter() {
         return className[0].toLowerCase() + className.substring(1, className.length)
     }
 
-    fun findOnOffExtension(project: Project, name: String): ModuleOnOffExtension? =
-        findExtension(project, name) as? ModuleOnOffExtension
+    fun findOnOffExtension(project: Project, name: String): ModuleOnOffExtension? = findExtension(project, name) as? ModuleOnOffExtension
 }

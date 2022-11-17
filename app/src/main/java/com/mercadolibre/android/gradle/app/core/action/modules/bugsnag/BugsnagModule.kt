@@ -2,6 +2,7 @@ package com.mercadolibre.android.gradle.app.core.action.modules.bugsnag
 
 import com.bugsnag.android.gradle.BugsnagPlugin
 import com.bugsnag.android.gradle.BugsnagPluginExtension
+import com.mercadolibre.android.gradle.baseplugin.core.basics.ModuleOnOffExtension
 import com.mercadolibre.android.gradle.baseplugin.core.components.BUGSNAG_EXTENSION
 import com.mercadolibre.android.gradle.baseplugin.core.components.BUGSNAG_RETRY_CONVENTION
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISH_CONSTANT
@@ -15,6 +16,10 @@ import org.gradle.api.Project
 class BugsnagModule : Module(), ExtensionProvider {
 
     override fun getExtensionName(): String = BUGSNAG_EXTENSION
+
+    override fun createExtension(project: Project) {
+        project.extensions.create(getExtensionName(), BugsnagExtension::class.java)
+    }
 
     /**
      * This method takes care of configuring Bugsnag within the project.

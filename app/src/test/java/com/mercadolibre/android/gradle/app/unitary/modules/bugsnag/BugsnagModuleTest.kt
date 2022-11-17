@@ -1,6 +1,7 @@
 package com.mercadolibre.android.gradle.app.unitary.modules.bugsnag
 
 import com.bugsnag.android.gradle.BugsnagPluginExtension
+import com.mercadolibre.android.gradle.app.core.action.modules.bugsnag.BugsnagExtension
 import com.mercadolibre.android.gradle.app.core.action.modules.bugsnag.BugsnagModule
 import com.mercadolibre.android.gradle.app.managers.AbstractPluginManager
 import com.mercadolibre.android.gradle.baseplugin.core.basics.ModuleOnOffExtension
@@ -22,10 +23,14 @@ class BugsnagModuleTest : AbstractPluginManager() {
     @org.junit.Test
     fun `When the BugsnagModule is called create her extension`() {
         val project = mockk<Project>(relaxed = true)
+        val extension = BugsnagExtension()
+
+        every { project.extensions.create(BUGSNAG_EXTENSION, BugsnagExtension::class.java) } returns extension
 
         bugsnagModule.createExtension(project)
 
-        verify { project.extensions.create(BUGSNAG_EXTENSION, ModuleOnOffExtension::class.java) }
+        assert(!extension.enabled)
+        verify { project.extensions.create(BUGSNAG_EXTENSION, BugsnagExtension::class.java) }
     }
 
     @org.junit.Test
