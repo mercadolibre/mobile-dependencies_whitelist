@@ -28,24 +28,24 @@ class TimeStampManagerTest : AbstractPluginManager() {
 
     @org.junit.Test
     fun `Get a time stamp`() {
-        val createdTime = TimeStampManager.getOrCreateTimeStamp() // Create
+        val createdTime = TimeStampManager.getOrCreateTimeStamp(PUBLISHING_TIME_GENERATOR) // Create
 
-        assert(createdTime === TimeStampManager.getOrCreateTimeStamp()) // Get
+        assert(createdTime === TimeStampManager.getOrCreateTimeStamp(PUBLISHING_TIME_GENERATOR)) // Get
     }
 
     @org.junit.Test
     fun `Delete a time stamp`() {
-        val createdTime = TimeStampManager.getOrCreateTimeStamp() // Create
+        val createdTime = TimeStampManager.getOrCreateTimeStamp(PUBLISHING_TIME_GENERATOR) // Create
 
         TimeStampManager.deleteTimeStamp() // Delete
 
-        assert(TimeStampManager.getOrCreateTimeStamp() !== createdTime)
+        assert(TimeStampManager.getOrCreateTimeStamp(PUBLISHING_TIME_GENERATOR) !== createdTime)
     }
 
     @org.junit.Test
     fun `Delete a time stamp if not exist`() {
         TimeStampManager.deleteTimeStamp() // Delete
-        assert(TimeStampManager.getOrCreateTimeStamp() == SimpleDateFormat(PUBLISHING_TIME_GENERATOR)
+        assert(TimeStampManager.getOrCreateTimeStamp(PUBLISHING_TIME_GENERATOR) == SimpleDateFormat(PUBLISHING_TIME_GENERATOR)
             .apply { timeZone = TimeZone.getTimeZone(PUBLISHING_TIME_ZONE) }.format(Date()))
     }
 }

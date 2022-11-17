@@ -28,9 +28,8 @@ class LibraryPluginDescriptionTest {
         val task = mockk<Task>(relaxed = true)
 
         pluginDescription.printMessage(ANY_NAME, ANY_NAME)
-        pluginDescription.configureTask(task)
 
-        assert(pluginDescription.makeMessage(ANY_NAME, ANY_NAME) == "- $ANY_NAME\n$ANY_NAME")
+        assert(pluginDescription.makeLog(ANY_NAME, ANY_NAME) == "- $ANY_NAME\n$ANY_NAME")
         assert(
             pluginDescription.content() ==
                 LibraryModuleConfigurer().getModules("Library Module", ModuleProvider.provideLibraryAndroidModules())
@@ -44,9 +43,8 @@ class LibraryPluginDescriptionTest {
         val task = mockk<Task>(relaxed = true)
 
         pluginDescription.printMessage(ANY_NAME, ANY_NAME)
-        pluginDescription.configureTask(task)
 
-        assert(pluginDescription.makeMessage(ANY_NAME, ANY_NAME) == "- $ANY_NAME\n$ANY_NAME")
+        assert(pluginDescription.makeLog(ANY_NAME, ANY_NAME) == "- $ANY_NAME\n$ANY_NAME")
 
         var names = ""
         for (extensionProvider in ModuleProvider.provideLibraryAndroidModules()) {

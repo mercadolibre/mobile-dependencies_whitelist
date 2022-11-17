@@ -1,19 +1,20 @@
 package com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.library
 
 import com.google.gson.JsonElement
-import com.google.gson.JsonParser
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.Lint
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.LintGradleExtension
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.Dependency
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.DependencyDataInAllowList
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.Status
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.StatusBase
+import com.mercadolibre.android.gradle.baseplugin.core.action.utils.JsonUtils
+import com.mercadolibre.android.gradle.baseplugin.core.action.utils.OutputUtils
 import com.mercadolibre.android.gradle.baseplugin.core.components.ALLOWLIST_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.ARROW
 import com.mercadolibre.android.gradle.baseplugin.core.components.EXPIRES_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.GROUP_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_DEPENDENCIES_TASK
-import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_ERROR_ALLOWED_DEPENDENCIES_PREFIX
+import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_ERROR_POSTDATA
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_ERROR_TITLE
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_LIBRARY_FILE_BLOCKER
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_LIBRARY_FILE_WARNING
@@ -22,8 +23,6 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_WARNIGN_T
 import com.mercadolibre.android.gradle.baseplugin.core.components.NAME_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.VERSION_CONSTANT
 import org.gradle.api.Project
-import java.net.URL
-import java.text.SimpleDateFormat
 import java.util.regex.Pattern
 
 /**
@@ -32,17 +31,18 @@ import java.util.regex.Pattern
  */
 class LibraryAllowListDependenciesLint(private val variantNames: List<String>) : Lint() {
 
+    private val URL_PLACEHOLDER = "<URL>"
+
+    private val UNDEFINED_VERSION = ".*"
+
     private val defaultGradleVersion = "unspecified"
 
-    /** This variable contains the output of the lint report. */
-    var hasFailed = false
+    private var hasFailed = false
 
     /** This list contains the dependencies in the allow list. */
     val allowListDependencies = arrayListOf<Dependency>()
     /** This list contains the dependencies that are about to expire. */
-    val allowListGoingToExpire = arrayListOf<Dependency>()
-
-    private val UNDEFINED_VERSION = ".*"
+    private val allowListGoingToExpire = arrayListOf<Dependency>()
 
     /**
      * This method is responsible for providing a name to the linteo class.
@@ -56,21 +56,13 @@ class LibraryAllowListDependenciesLint(private val variantNames: List<String>) :
     override fun lint(project: Project): Boolean {
         hasFailed = false
         findExtension<LintGradleExtension>(project)?.apply {
-            if (!dependenciesLintEnabled) {
-                return false
-            }
-            if (project.plugins.hasPlugin("com.android.library")) {
-                setUpAllowlist(dependencyAllowListUrl)
+            if (dependenciesLintEnabled) {
+                getAllowList(dependencyAllowListUrl)
 
-                for (variantName in variantNames) {
-                    analyzeDependency(project, variantName)
-                }
+                analyzeDependencies(project)
 
                 if (hasFailed) {
-                    report(
-                        LINT_ERROR_ALLOWED_DEPENDENCIES_PREFIX.replace("URL", dependencyAllowListUrl),
-                        project
-                    )
+                    report(LINT_ERROR_POSTDATA.replace(URL_PLACEHOLDER, dependencyAllowListUrl), project)
                 }
 
                 if (allowListGoingToExpire.size > 0) {
@@ -79,6 +71,18 @@ class LibraryAllowListDependenciesLint(private val variantNames: List<String>) :
             }
         }
         return hasFailed
+    }
+
+    private fun getAllowList(url: String) {
+        JsonUtils.getJson(url)[ALLOWLIST_CONSTANT].asJsonArray.all {
+            allowListDependencies.add(jsonNodeToDependency(it))
+        }
+    }
+
+    private fun analyzeDependencies(project: Project) {
+        for (variantName in variantNames) {
+            analyzeDependency(project, variantName)
+        }
     }
 
     private fun analyzeDependency(project: Project, variantName: String) {
@@ -92,47 +96,53 @@ class LibraryAllowListDependenciesLint(private val variantNames: List<String>) :
     /**
      * This method is responsible for generating reports in case there are dependencies that have warnings.
      */
-    fun reportWarnings(project: Project) {
-        val file = project.file(LINT_LIBRARY_FILE_WARNING)
-        if (project.file(LINT_LIBRARY_FILE_WARNING).exists()) {
-            project.file(LINT_LIBRARY_FILE_WARNING).delete()
-        } else {
-            file.parentFile.mkdirs()
+    private fun reportWarnings(project: Project) {
+        val file = project.file(LINT_LIBRARY_FILE_WARNING).apply {
+            // Warning file Exist ?
+            if (exists()) {
+                // Delete old warnings
+                delete()
+            } else {
+                // Make the dir to save new Warnings
+                parentFile.mkdirs()
+            }
         }
 
-        var message = "$LINT_WARNIGN_TITLE \n"
-        for (dependency in allowListGoingToExpire) {
+        with(OutputUtils) {
+            writeAReportMessage(LINT_WARNIGN_TITLE, file)
+            logWarning(LINT_WARNIGN_TITLE)
 
-            val depAllowListData = findDependencyInList(dependency, allowListDependencies)
-            var availableVersion = ""
+            for (dependency in allowListGoingToExpire) {
+                val depAllowListData = findDependencyInList(dependency, allowListDependencies)
 
-            if (depAllowListData.availableVersion != null) {
-                availableVersion = "Available version $ARROW ${depAllowListData.availableVersion}"
+                val expireDate = "(${depAllowListData.allowListDep?.rawExpiresDate})"
+                val dependecyData = " - ${dependency.group}:${dependency.name}:${dependency.version} (Deprecated!) "
+                val availableVersion = if (depAllowListData.availableVersion != null) "Available version $ARROW ${depAllowListData.availableVersion}" else ""
+
+                logMessage(expireDate + dependecyData + availableVersion)
+                writeAReportMessage(expireDate + dependecyData + availableVersion, file)
             }
 
-            message += "(${findDependencyInList(dependency, allowListDependencies).allowListDep?.rawExpiresDate})" +
-                " - ${dependency.group}:${dependency.name}:${dependency.version} (Deprecated!) $availableVersion\n"
+            logMessage(LINT_WARNIGN_DESCRIPTION)
+            writeAReportMessage(LINT_WARNIGN_DESCRIPTION, file)
         }
-        message += "\n$LINT_WARNIGN_DESCRIPTION\n"
-        println(message)
-        file.appendText(message)
     }
 
-    private fun findDependencyInList(dependency: Dependency, list: ArrayList<Dependency>): DependencyDataInAllowList {
+    private fun findDependencyInList(dependency: Dependency, allowList: ArrayList<Dependency>): DependencyDataInAllowList {
         val depAllowListData = DependencyDataInAllowList(null, null)
 
         val dependencyFullName = "${dependency.group}:${dependency.name}:${dependency.version}"
 
-        for (allowListDep in list) {
-            val depWithSameVersion = Pattern.compile(
-                "${allowListDep.group}:${allowListDep.name}:(${allowListDep.version})",
-                Pattern.CASE_INSENSITIVE
-            )
+        // Iterate on dependencies in allowlist
+        for (allowListDep in allowList) {
+            val dependencyPattern = "${allowListDep.group}:${allowListDep.name}:(${allowListDep.version})"
 
-            if (depWithSameVersion.matcher(dependencyFullName).matches()) {
+            // Check if this dependency is the same as the one currently iterating
+            if (Pattern.compile(dependencyPattern, Pattern.CASE_INSENSITIVE).matcher(dependencyFullName).matches()) {
                 depAllowListData.allowListDep = allowListDep
             }
 
+            // Check if this dependency is one of the available versions of the dependency being iterated
             if (isTheSameDependency(dependency, allowListDep) && isAllowed(allowListDep)) {
                 depAllowListData.availableVersion = allowListDep.version?.replace("|", " or ")
             }
@@ -151,16 +161,15 @@ class LibraryAllowListDependenciesLint(private val variantNames: List<String>) :
 
     private fun report(message: String, project: Project) {
         val file = project.file(LINT_LIBRARY_FILE_BLOCKER)
-        if (!hasFailed) {
-            if (!file.exists()) {
-                file.parentFile.mkdirs()
+        with(OutputUtils) {
+            if (!hasFailed) {
+                hasFailed = true
+                writeAReportMessage(LINT_ERROR_TITLE, file)
+                logError(LINT_ERROR_TITLE)
             }
-            hasFailed = true
-            println("\n" + LINT_ERROR_TITLE)
-            file.writeText(LINT_ERROR_TITLE)
+            logMessage(message)
+            writeAReportMessage("\n$message", file)
         }
-        file.appendText("${System.getProperty("line.separator")}$message")
-        println(message)
     }
 
     /**
@@ -168,9 +177,7 @@ class LibraryAllowListDependenciesLint(private val variantNames: List<String>) :
      */
     fun analyzeDependency(dependency: Dependency, project: Project) {
         val dependencyFullName = "${dependency.group}:${dependency.name}:${dependency.version}"
-        val isLocalModule = project.rootProject.allprojects.find {
-            dependencyFullName.contains("${it.group}:${it.name}")
-        } != null
+        val isLocalModule = project.rootProject.allprojects.find { dependencyFullName.contains("${it.group}:${it.name}") } != null
 
         if (!dependencyFullName.contains(defaultGradleVersion) && !isLocalModule) {
             val result = getStatusDependencyInAllowList(dependency)
@@ -206,49 +213,17 @@ class LibraryAllowListDependenciesLint(private val variantNames: List<String>) :
     }
 
     /**
-     * This method is responsible for obtaining data from a Json safely.
-     */
-    fun getVariableFromJson(name: String, json: JsonElement, defaultValue: String?): String? = if (json.asJsonObject[name] != null) {
-        json.asJsonObject[name].asString.replace("\\", "")
-    } else {
-        defaultValue
-    }
-
-    private fun castStringToDate(date: String): Long = SimpleDateFormat("yyyy-MM-dd").parse(date.replace("\\", "")).time
-
-    /**
-     * This method is in charge of casting a Json element to a Date in a safe way.
-     */
-    fun castJsonElementToDate(it: JsonElement): Long? {
-        val element = it.asJsonObject[EXPIRES_CONSTANT]
-        if (element == null || element.asString == "null") {
-            return null
-        }
-        return castStringToDate(element.asString)
-    }
-
-    private fun setUpAllowlist(allowListUrl: String) {
-        with(URL(allowListUrl).openConnection()) {
-            val json = JsonParser.parseReader(getInputStream().reader())
-
-            json.asJsonObject[ALLOWLIST_CONSTANT].asJsonArray.all {
-                allowListDependencies.add(jsonNodeToDependency(it))
-            }
-        }
-    }
-
-    /**
      * This method is responsible for obtaining the nodes of the dependencies and storing them through the Data Class Dependency.
      */
     fun jsonNodeToDependency(it: JsonElement): Dependency {
-        val expires: Long? = castJsonElementToDate(it.asJsonObject)
+        val expires: Long? = JsonUtils.castJsonElementToDate(it.asJsonObject)
 
         return Dependency(
             it.asJsonObject[GROUP_CONSTANT].asString.replace("\\", ""),
-            getVariableFromJson(NAME_CONSTANT, it, UNDEFINED_VERSION),
-            getVariableFromJson(VERSION_CONSTANT, it, UNDEFINED_VERSION),
+            JsonUtils.getVariableFromJson(NAME_CONSTANT, it, UNDEFINED_VERSION),
+            JsonUtils.getVariableFromJson(VERSION_CONSTANT, it, UNDEFINED_VERSION),
             expires,
-            getVariableFromJson(EXPIRES_CONSTANT, it, null),
+            JsonUtils.getVariableFromJson(EXPIRES_CONSTANT, it, null),
         )
     }
 }

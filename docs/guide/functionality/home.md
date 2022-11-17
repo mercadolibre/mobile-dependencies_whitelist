@@ -102,36 +102,3 @@ El Dynamic Features Plugin se aplica dentro de la siguiente forma:
 ```gradle
 apply plugin: 'mercadolibre.gradle.config.dynamicfeatures'
 ```
-----
-
-# Funcionamiento
-
-Existiendo los Configurers que planteamos con la arquitectura podemos saber a donde a apuntar nuestros cambios al momento
-de agregar contenido al Plugin, a continuación una descripción de cada uno.
-
-##### Android Configurer
-Es el encargado de aministrar la extensión `android` ya sea de un módulo librería, app, o dynamic features. De esta forma
-aplicando estas variables para que los repositorios no tengan que hacerlo:
-
-    - Variables
-        - Api Sdk Level
-        - Min Sdk Level
-        - Build Tools Version
-        - Java Version
-
-##### Basics Configurer
-Es el encargado de brindar los repositorios necesarios para que el proyecto envie informacion al igual que configura
-la forma en que se administran las versiones dinámicas.
-
-##### Module Configurer
-Es el encargado de llamar a cada uno de los módulos que ingeniamos para que realice la configuración de su funcionalidad
-dentro del proyecto al que está apuntando este configurer consiguiendo así complementar el entorno de trabajo del
-repositorio.
-
-##### Extensions Configurer
-Es el encargado de generar las extensiones de On Off de los módulos para que estos sean capaces de funcionar de una forma
-correcta y en caso de que sea necesario se puedan apagar o customizar según las variables que se pasen por su extensión.
-
-##### Plugin Configurer
-Es el encargado de aplicar los plugins en los proyectos para que puedan cumplir su rol correctamente. Siendo el caso de una
-librería, una app o un dynamicfeature.

@@ -8,6 +8,6 @@ Estos plugins buscan centralizar la configuración que existen en los repositori
 
 [Fury](https://web.furycloud.io/mobile-gradle-android/summary)
 [Github](https://github.com/mercadolibre/fury_mobile-gradle-android)
-[Empezar](catchUp/home.md)
+[Empezar](functionality/home.md)
 
 ![color](#afface)

@@ -1,6 +1,82 @@
+# 16.0.1
+
+## Backport
+- Backport de la version 15.0.6 a la version 16.0.1
+
 # 16.0.0
+
+## Modificado
 - Migracion AGP 7
+-
+## Agregado
 - Se agrega la depedencia de Gson ya que AGP 7 no la contiene
+
+# 15.0.6
+
+## Backport
+- Backport de la version 14.8.2 a la version 15.0.6
+- 
+# 15.0.5
+
+## Backport
+- Backport de la version 14.8.1 a la version 15.0.5
+
+# 15.0.4
+
+## Fix
+- RePublish 
+
+# 15.0.3
+
+## Modificado
+- Se bumpea la version de gradle enterprise build scan a la 3.11.2 para el breaking change 
+
+# 15.0.2
+
+## Agregado
+- Backport de la version 14.6.1 a la version 15.0.2
+
+# 15.0.1
+
+## Agregado
+- Backport de la version 14.2.1 a la version 15.0.1
+
+# 15.0.0
+
+## Modificado
+- Se actualiza la version de COMPILE_API_SDK_LEVEL a 32 para soportar Android 12
+
+# 14.8.2
+
+## Fix
+- Se cambia el compile only de la dependencia del plugin de bugsnag a un implementation para que pueda obtenerlo y aplicarlo no solamente obtenerlo
+
+# 14.8.1
+
+## Modificado
+- Se modifica la forma en que la interfaz Module genera el nombre de las extensiones
+- Se modifica la forma en que se verifica si el proyecto quiere aplicar bugsnag o no
+
+# 14.8.0
+
+## Modificado
+- Se modifica la forma en que se aplica el plugin de Dexcount y Bugsnag para que sea una mejor practica.
+
+## Agregado
+- Se genera el Plugin Lint Module encargado de realizar el linteo de plugins
+  - Se agrega el kotlin-android-extension a la lista de linteo
+  - Se agrega el SCA a la lista de linteo
+- Se genera el JsonUtils encargado de administrar el manejo de Jsons
+
+## Modificado
+- Se empieza a utilizar el JsonUtils para la clase LibraryAllowlistDependenciesLint
+- Se empieza a utilizar OutputUtils en los modulos cambiando asi su forma de imprimir en pantalla o escribir reportes, como tambien se cambian sus tests
+  - AbstractPluginDescription
+  - PluginDescriptionModule
+  - ListProjectsModule
+  - LibraryAllowListDependenciesLint
+  - List Variants
+>>>>>>> 1f6134d570e7a45f8c871e7903e5acbd170012a9
 
 # 14.7.1
 
@@ -8,6 +84,8 @@
 - Se modifica la forma en que se buscan las versiones desponibles de las dependencias en caso de que esten expiradas
 
 # 14.7.0
+
+## Modificado
 - Bump del plugin de  Build Scan de Gradle Enterprise a su version 3.11.2 
 
 # 14.6.1

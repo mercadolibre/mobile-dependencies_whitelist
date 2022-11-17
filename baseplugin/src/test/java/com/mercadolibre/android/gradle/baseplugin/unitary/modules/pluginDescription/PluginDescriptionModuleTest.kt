@@ -25,18 +25,24 @@ class PluginDescriptionModuleTest : AbstractPluginManager() {
     @org.junit.Test
     fun `When the any PluginDescriptionModuleTest is called create the description Task`() {
         val mockedProjectRoot = mockedRoot.projectContent.project
+
+        // Mock Tasks
         val taskDescription = mockk<Task>(relaxed = true)
         val taskModule = mockk<Task>(relaxed = true)
 
-        every { mockedRoot.projectContent.tasks.register(PLUGIN_MODULES_DESCRIPTION_TASK).get() } returns taskDescription
-        every { mockedRoot.projectContent.tasks.register(PLUGIN_DESCRIPTION_TASK).get() } returns taskModule
-        every { mockedRoot.projectContent.tasks.findByName(PLUGIN_MODULES_DESCRIPTION_TASK) } returns taskDescription
+        // Mock creation or getter of tasks
+        every { mockedProjectRoot.tasks.register(PLUGIN_MODULES_DESCRIPTION_TASK).get() } returns taskDescription
+        every { mockedProjectRoot.tasks.register(PLUGIN_DESCRIPTION_TASK).get() } returns taskModule
+        every { mockedProjectRoot.tasks.findByName(PLUGIN_MODULES_DESCRIPTION_TASK) } returns taskDescription
 
+        // Create the module and description task
         pluginDescription.configure(mockedProjectRoot)
 
+        // Set correctly group and description
         verify { taskDescription.group = MELI_SUB_GROUP }
         verify { taskDescription.description = PLUGIN_DESCRIPTION_DESCRIPTION }
 
+        // Set correctly group and description
         verify { taskModule.group = MELI_GROUP }
         verify { taskModule.description = PLUGIN_DESCRIPTION_DESCRIPTION }
     }

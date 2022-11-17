@@ -2,6 +2,7 @@ package com.mercadolibre.android.gradle.baseplugin.core.action.modules.listVaria
 
 import com.android.build.gradle.AppExtension
 import com.android.build.gradle.LibraryExtension
+import com.mercadolibre.android.gradle.baseplugin.core.action.utils.OutputUtils
 import com.mercadolibre.android.gradle.baseplugin.core.components.ANSI_GREEN
 import com.mercadolibre.android.gradle.baseplugin.core.components.ANSI_YELLOW
 import com.mercadolibre.android.gradle.baseplugin.core.components.LIST_VARIANTS_DESCRIPTION
@@ -39,22 +40,28 @@ class ListVariantsModule : Module() {
      * This is the method in charge of shows the variants within the repository.
      */
     fun printVariants(project: Project) {
-        println("Root Project: ${project.name}".ansi(ANSI_GREEN))
+        OutputUtils.logMessage("Root Project: ${project.name}".ansi(ANSI_GREEN))
         for (subProject in project.subprojects) {
-            println(SEPARATOR)
-            print("${subProject.name.ansi(ANSI_GREEN)} - ")
+            val variants = arrayListOf<String>()
+
+            OutputUtils.logMessage(SEPARATOR)
+
+            var title = "${subProject.name} - "
+
             findExtension<LibraryExtension>(subProject)?.apply {
-                print("ModuleType: Library \n".ansi(ANSI_GREEN))
-                for (variant in buildTypes) {
-                    println("${variant.name.ansi(ANSI_YELLOW)}")
-                }
+                title += "ModuleType: Library\n"
+                variants.addAll(buildTypes.names)
             }
 
             findExtension<AppExtension>(subProject)?.apply {
-                print("ModuleType: App \n".ansi(ANSI_GREEN))
-                for (variant in buildTypes) {
-                    println("${variant.name.ansi(ANSI_YELLOW)}")
-                }
+                title += "ModuleType: App\n"
+                variants.addAll(buildTypes.names)
+            }
+
+            OutputUtils.logMessage(title)
+
+            for (variant in variants) {
+                OutputUtils.logMessage(variant.ansi(ANSI_YELLOW))
             }
         }
     }

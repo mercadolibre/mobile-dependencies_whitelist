@@ -7,6 +7,7 @@ import com.mercadolibre.android.gradle.app.core.action.modules.lint.AppLintModul
 import com.mercadolibre.android.gradle.app.core.action.modules.lint.ApplicationLintOptionsModule
 import com.mercadolibre.android.gradle.app.core.action.modules.pluginDescription.AppPluginDescriptionExtensionsModule
 import com.mercadolibre.android.gradle.app.core.action.modules.pluginDescription.AppPluginDescriptionModule
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.pluginLint.PluginLintModule
 import com.mercadolibre.android.gradle.baseplugin.core.domain.interfaces.Module
 
 /**
@@ -22,7 +23,8 @@ internal object ModuleProvider {
             AppPluginDescriptionModule(),
             BugsnagModule(),
             AppPluginDescriptionExtensionsModule(),
-            KeyStoreModule()
+            KeyStoreModule(),
+            PluginLintModule("app")
         )
 
     /**
