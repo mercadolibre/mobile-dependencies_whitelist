@@ -1,3 +1,8 @@
+# 15.0.6
+
+## Backport
+- Backport de la version 14.8.2 a la version 15.0.6
+- 
 # 15.0.5
 
 ## Backport
@@ -27,6 +32,11 @@
 
 ## Modificado
 - Se actualiza la version de COMPILE_API_SDK_LEVEL a 32 para soportar Android 12
+
+# 14.8.2
+
+## Fix
+- Se cambia el compile only de la dependencia del plugin de bugsnag a un implementation para que pueda obtenerlo y aplicarlo no solamente obtenerlo
 
 # 14.8.1
 

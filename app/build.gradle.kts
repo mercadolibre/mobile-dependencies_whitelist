@@ -14,7 +14,7 @@ dependencies {
 
     testImplementation(libs.meli.gradle.plugin.baseplugin)
 
-    compileOnly(libs.misc.bugsnag.plugin)
+    implementation(libs.misc.bugsnag.plugin)
     testImplementation(libs.misc.bugsnag.plugin)
 
     implementation(libs.meli.gradle.plugin.baseplugin)
