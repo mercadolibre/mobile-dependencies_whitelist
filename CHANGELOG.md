@@ -1,3 +1,9 @@
+# 14.8.1
+
+## Modificado
+- Se modifica la forma en que la interfaz Module genera el nombre de las extensiones
+- Se modifica la forma en que se verifica si el proyecto quiere aplicar bugsnag o no
+
 # 14.8.0
 
 ## Modificado
