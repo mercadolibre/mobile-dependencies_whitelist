@@ -1,13 +1,6 @@
 {
   "whitelist": [
     {
-      "expires": "2022-11-01",
-      "name": "AdvertisingADN",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?0.[0-9]+"
-    },
-    {
       "name": "AdvertisingADN",
       "source": "private",
       "target": "production",
@@ -72,13 +65,6 @@
       "source": "public",
       "target": "production",
       "version": "0.8"
-    },
-    {
-      "expires": "2022-11-15",
-      "name": "Charts",
-      "source": "public",
-      "target": "production",
-      "version": "3.4.0"
     },
     {
       "name": "Charts",
@@ -1096,13 +1082,6 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "expires": "2022-10-30",
-      "name": "Traceability",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
       "name": "Traceability",
       "source": "private",
       "target": "production",
@@ -1203,13 +1182,6 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?10|[1-9].[0-9]+$"
-    },
-    {
-      "expires": "2022-10-30",
-      "name": "StartUPInitializer",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?5.[0-9]+.?[0-9]*$"
     },
     {
       "name": "StartUPInitializer",
