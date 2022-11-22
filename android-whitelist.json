@@ -1361,19 +1361,19 @@
     {
       "expires": "2023-03-31",
       "group": "androidx\\.databinding",
-      "name": "common",
+      "name": "databinding-common",
       "version": "3\\.6\\.3|4.+"
     },
     {
       "expires": "2023-03-31",
       "group": "androidx\\.databinding",
-      "name": "runtime",
+      "name": "databinding-runtime",
       "version": "3\\.6\\.3|4.+"
     },
     {
       "expires": "2023-03-31",
       "group": "androidx\\.databinding",
-      "name": "adapters",
+      "name": "databinding-adapters",
       "version": "3\\.6\\.3|4.+"
     },
     {
@@ -1384,17 +1384,17 @@
     },
     {
       "group": "androidx\\.databinding",
-      "name": "adapters",
+      "name": "databinding-adapters",
       "version": "7\\.2\\.2"
     },
     {
       "group": "androidx\\.databinding",
-      "name": "runtime",
+      "name": "databinding-runtime",
       "version": "7\\.2\\.2"
     },
     {
       "group": "androidx\\.databinding",
-      "name": "common",
+      "name": "databinding-common",
       "version": "7\\.2\\.2"
     },
     {
