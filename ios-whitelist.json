@@ -1106,6 +1106,12 @@
       "version": "^~>\\s?3.[0-9]+"
     },
     {
+      "name": "AndesIntegrations",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+"
+    },
+    {
       "name": "MLLoyalDM",
       "source": "private",
       "target": "production",
@@ -1420,6 +1426,12 @@
     },
     {
       "name": "CreditsFloxClient",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "CreditsToolkit",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
