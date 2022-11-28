@@ -1,5 +1,6 @@
 package com.mercadolibre.android.gradle.app.core.action.modules.bugsnag
 
+import com.android.build.gradle.internal.crash.afterEvaluate
 import com.bugsnag.android.gradle.BugsnagPlugin
 import com.bugsnag.android.gradle.BugsnagPluginExtension
 import com.mercadolibre.android.gradle.baseplugin.core.basics.ModuleOnOffExtension
@@ -19,6 +20,20 @@ class BugsnagModule : Module(), ExtensionProvider {
 
     override fun createExtension(project: Project) {
         project.extensions.create(getExtensionName(), BugsnagExtension::class.java)
+    }
+
+    /**
+     * This method is responsible for execute the configuration of the module.
+     */
+    override fun executeModule(project: Project) {
+        val extension = findExtension<BugsnagExtension>(project)
+        if (extension != null) {
+            if (extension.enabled) {
+                configure(project)
+            }
+        } else {
+            configure(project)
+        }
     }
 
     /**
