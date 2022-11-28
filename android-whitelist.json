@@ -1298,6 +1298,11 @@
       "version": "7\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.andes_integrations",
+      "name": "integrations",
+      "version": "mercadopago-1\\.\\+|mercadolibre-1\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.discounts_touchpoint",
       "name": "discounts_touchpoint",
       "version": "mercadopago-4\\.\\+|mercadolibre-4\\.\\+"
