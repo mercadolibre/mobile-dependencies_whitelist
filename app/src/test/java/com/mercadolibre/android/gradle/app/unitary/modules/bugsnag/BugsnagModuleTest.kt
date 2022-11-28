@@ -33,6 +33,20 @@ class BugsnagModuleTest : AbstractPluginManager() {
     }
 
     @org.junit.Test
+    fun `When the BugsnagModule is called configure the project and her extension not exist`() {
+        val project = mockk<Project>(relaxed = true)
+        val extension = mockk<BugsnagExtension>(relaxed = true)
+        val extensionPlugin = mockk<BugsnagPluginExtension>(relaxed = true)
+
+        every { project.extensions.findByType(BugsnagExtension::class.java) } returns null
+        every { project.extensions.findByType(BugsnagPluginExtension::class.java) } returns null
+
+        bugsnagModule.executeModule(project)
+
+        verify { extensionPlugin.retryCount.convention(BUGSNAG_RETRY_CONVENTION) wasNot Called }
+    }
+
+    @org.junit.Test
     fun `When the BugsnagModule is called configure the project and is disabled`() {
         val project = mockk<Project>(relaxed = true)
         val extension = mockk<BugsnagExtension>(relaxed = true)

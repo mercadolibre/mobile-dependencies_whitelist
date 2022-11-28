@@ -21,11 +21,26 @@ abstract class Module : ExtensionProvider, ExtensionGetter() {
     abstract fun configure(project: Project)
 
     /**
+     * This method is responsible for get the exetnsion name of the module.
+     */
+    override fun getExtensionName(): String = getLowerCaseName()
+
+    private fun getLowerCaseName(): String {
+        val className = this::class.java.simpleName
+        return className[0].toLowerCase() + className.substring(1, className.length)
+    }
+
+    /**
      * This method is responsible for create the extensions needed for a module.
      */
     override fun createExtension(project: Project) {
         project.extensions.create(getExtensionName(), ModuleOnOffExtension::class.java)
     }
+
+    /**
+     * This method is responsible for get the OnOff extension.
+     */
+    fun findOnOffExtension(project: Project, name: String): ModuleOnOffExtension? = findExtension(project, name) as? ModuleOnOffExtension
 
     /**
      * This method is responsible for check the flag of On Off module.
@@ -55,13 +70,4 @@ abstract class Module : ExtensionProvider, ExtensionGetter() {
             configure(project)
         }
     }
-
-    override fun getExtensionName(): String = getLowerCaseName()
-
-    private fun getLowerCaseName(): String {
-        val className = this::class.java.simpleName
-        return className[0].toLowerCase() + className.substring(1, className.length)
-    }
-
-    fun findOnOffExtension(project: Project, name: String): ModuleOnOffExtension? = findExtension(project, name) as? ModuleOnOffExtension
 }
