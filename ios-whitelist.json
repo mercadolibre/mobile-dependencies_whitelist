@@ -74,13 +74,6 @@
       "version": "0.8"
     },
     {
-      "expires": "2022-11-15",
-      "name": "Charts",
-      "source": "public",
-      "target": "production",
-      "version": "3.4.0"
-    },
-    {
       "name": "Charts",
       "source": "public",
       "target": "production",
@@ -1010,13 +1003,6 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "expires": "2022-11-15",
-      "name": "BiometricSecurityUI",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
       "name": "BiometricSecurityUI",
       "source": "private",
       "target": "production",
@@ -1118,6 +1104,12 @@
       "source": "public",
       "target": "production",
       "version": "^~>\\s?3.[0-9]+"
+    },
+    {
+      "name": "AndesIntegrations",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+"
     },
     {
       "name": "MLLoyalDM",
@@ -1403,6 +1395,12 @@
       "version": "^~>\\s?2.[0-9]+"
     },
     {
+      "name": "CashRails",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
       "name": "MLAdjust",
       "source": "private",
       "target": "production",
@@ -1434,6 +1432,12 @@
     },
     {
       "name": "CreditsFloxClient",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "CreditsToolkit",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
