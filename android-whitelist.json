@@ -459,6 +459,16 @@
       "version": "13\\.\\+"
     },
     {
+      "group": "androidx\\.benchmark",
+      "name": "benchmark-macro-junit4",
+      "version": "1\\.1\\.0"
+    },
+    {
+      "group": "androidx\\.test\\.ext",
+      "name": "junit",
+      "version": "1\\.1\\.3"
+    },
+    {
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient",
       "version": "19\\.\\+"
@@ -751,7 +761,21 @@
     },
     {
       "group": "com\\.mercadolibre\\.android\\.remedies",
-      "version": "mercadopago-3\\.\\+"
+      "version": "15\\.\\+"
+    },
+    {
+      "expires": "2022-12-15",
+      "group": "com\\.mercadolibre\\.android\\.remedies",
+      "version": "14\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.liveness_detection\\.liveness",
+      "version": "6\\.\\+"
+    },
+    {
+      "expires": "2022-12-15",
+      "group": "com\\.mercadolibre\\.android\\.liveness_detection\\.liveness",
+      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.comparator",
