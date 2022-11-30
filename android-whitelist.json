@@ -751,7 +751,21 @@
     },
     {
       "group": "com\\.mercadolibre\\.android\\.remedies",
-      "version": "mercadopago-3\\.\\+"
+      "version": "15\\.\\+"
+    },
+    {
+      "expires": "2022-12-15",
+      "group": "com\\.mercadolibre\\.android\\.remedies",
+      "version": "14\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.liveness_detection\\.liveness",
+      "version": "6\\.\\+"
+    },
+    {
+      "expires": "2022-12-15",
+      "group": "com\\.mercadolibre\\.android\\.liveness_detection\\.liveness",
+      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.comparator",
