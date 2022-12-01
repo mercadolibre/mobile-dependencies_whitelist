@@ -1787,6 +1787,21 @@
       "version": "0\\.90\\.2"
     },
     {
+      "group": "com\\.facebook\\.flipper",
+      "name": "flipper",
+      "version": "0\\.90\\.2"
+    },
+    {
+      "group": "com\\.facebook\\.flipper",
+      "name": "flipper-leakcanary2-plugin",
+      "version": "0\\.90\\.2"
+    },
+    {
+      "group": "com\\.facebook\\.soloader",
+      "name": "soloader",
+      "version": "0\\.10\\.1"
+    },
+    {
       "group": "com\\.auth0\\.android",
       "name": "auth0",
       "version": "1\\.+"
