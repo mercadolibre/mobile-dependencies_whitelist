@@ -142,12 +142,22 @@
     },
     {
       "group": "com\\.facebook\\.fresco",
+      "name": "animated-webp",
+      "version": "2\\.2\\.0"
+    },
+    {
+      "group": "com\\.facebook\\.fresco",
       "name": "fresco",
       "version": "2\\.2\\.0"
     },
     {
       "group": "com\\.facebook\\.fresco",
       "name": "imagepipeline-okhttp3",
+      "version": "2\\.2\\.0"
+    },
+    {
+      "group": "com\\.facebook\\.fresco",
+      "name": "webpsupport",
       "version": "2\\.2\\.0"
     },
     {
@@ -325,7 +335,7 @@
       "version": "26\\.8\\.0"
     },
     {
-      "expires": "2022-12-01",
+      "expires": "2023-06-01",
       "group": "com\\.google\\.firebase",
       "name": "firebase-ads"
     },
@@ -494,12 +504,6 @@
       "version": "19\\.\\+"
     },
     {
-      "expires": "2022-11-30",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "restclient-legacy",
-      "version": "14\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android",
       "name": "ui",
       "version": "10\\.\\+"
@@ -605,11 +609,6 @@
     {
       "group": "com\\.mercadolibre\\.android\\.commons",
       "version": "27\\.\\+"
-    },
-    {
-      "expires": "2022-12-01",
-      "group": "com\\.mercadolibre\\.android\\.commons",
-      "version": "26\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.remote\\.configuration",
@@ -1204,21 +1203,9 @@
       "version": "1\\.\\+"
     },
     {
-      "expires": "2022-12-01",
-      "group": "com\\.mercadolibre\\.android\\.loyalty",
-      "name": "webview",
-      "version": "mercadolibre-15\\.\\+|mercadopago-15\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.loyalty",
       "name": "webview",
       "version": "mercadolibre-16\\.\\+|mercadopago-16\\.\\+"
-    },
-    {
-      "expires": "2022-12-01",
-      "group": "com\\.mercadolibre\\.android\\.loyalty",
-      "name": "drawer",
-      "version": "15\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.loyalty",
@@ -1226,30 +1213,13 @@
       "version": "16\\.\\+"
     },
     {
-      "expires": "2022-12-01",
-      "group": "com\\.mercadolibre\\.android\\.loyalty\\.datamanager",
-      "name": "data-manager",
-      "version": "7\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.loyalty\\.datamanager",
       "name": "data-manager",
       "version": "8\\.\\+"
     },
     {
-      "expires": "2022-12-01",
-      "group": "com\\.mercadolibre\\.android\\.loyalty_ui_components",
-      "version": "7\\.+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.loyalty_ui_components",
       "version": "8\\.\\+"
-    },
-    {
-      "expires": "2022-12-01",
-      "group": "com\\.mercadolibre\\.android\\.loyalty\\.common",
-      "name": "common",
-      "version": "mercadolibre-6\\.\\+|mercadopago-6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.loyalty\\.common",
@@ -1940,20 +1910,6 @@
       "group": "com\\.mercadolibre\\.android\\.point_more_options",
       "name": "point_moreoptions",
       "version": "1\\.+"
-    },
-    {
-      "description": "This library will expire on November 30",
-      "expires": "2022-11-30",
-      "group": "com\\.mercadolibre\\.android\\.cardsbanking",
-      "name": "cards-home-section",
-      "version": "5\\.\\+"
-    },
-    {
-      "description": "This library will expire on November 30",
-      "expires": "2022-11-30",
-      "group": "com\\.mercadolibre\\.android\\.cardsbanking",
-      "name": "card-widget",
-      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cardsbanking",

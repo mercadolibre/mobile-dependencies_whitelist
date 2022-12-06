@@ -1009,13 +1009,6 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
-      "expires": "2022-12-01",
-      "name": "SecurityOptions",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
       "name": "SecurityOptions",
       "source": "private",
       "target": "production",
@@ -1573,13 +1566,6 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+"
-    },
-    {
-      "expires": "2022-11-30",
-      "name": "Opentelemetry",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "Opentelemetry",
