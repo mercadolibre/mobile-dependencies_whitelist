@@ -478,6 +478,11 @@
       "version": "4\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.notifications_helpers",
+      "name": "notifications_permissions",
+      "version": "1\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android",
       "name": "picasso-disk-cache",
       "version": "1\\.\\+"
@@ -2302,6 +2307,10 @@
       "group": "androidx\\.navigation",
       "name": "navigation-ui-ktx",
       "version": "2\\.3\\.0"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.seller_home_section",
+      "version": "1\\.\\+"
     },
     {
       "description": "This library is for PoC purposes only, NOT IMPLEMENTED",
