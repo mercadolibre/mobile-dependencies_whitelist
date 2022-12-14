@@ -1037,9 +1037,20 @@
       "version": "7\\.\\+"
     },
     {
+      "expires": "2022-12-31",
       "group": "com\\.mercadolibre\\.android\\.dami_ui_components",
       "name": "ui_components",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.dami_ui_components",
+      "name": "ui_components",
+      "version": "2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.dami_ui_components",
+      "name": "base_testapp",
+      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.static_resources",
