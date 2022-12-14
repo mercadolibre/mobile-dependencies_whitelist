@@ -378,7 +378,7 @@
       "version": "production-12\\.\\+|develop-12\\.\\+"
     },
     {
-      "group": "com\\.mercadolibre\\.android\\.authentication",
+      "group": "com\\.mercadolibre\\.android",
       "name": "authentication-enrollment",
       "version": "23\\.\\+"
     },
@@ -389,7 +389,7 @@
       "version": "22\\.\\+"
     },
     {
-      "group": "com\\.mercadolibre\\.android\\.authentication",
+      "group": "com\\.mercadolibre\\.android",
       "name": "authentication",
       "version": "23\\.\\+"
     },
