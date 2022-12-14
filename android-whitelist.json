@@ -378,11 +378,23 @@
       "version": "production-12\\.\\+|develop-12\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.authentication",
+      "name": "authentication-enrollment",
+      "version": "23\\.\\+"
+    },
+    {
+      "expires": "2023-03-31",
       "group": "com\\.mercadolibre\\.android",
       "name": "authentication-enrollment",
       "version": "22\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.authentication",
+      "name": "authentication",
+      "version": "23\\.\\+"
+    },
+    {
+      "expires": "2023-03-31",
       "group": "com\\.mercadolibre\\.android",
       "name": "authentication",
       "version": "22\\.\\+"
@@ -473,9 +485,26 @@
       "version": "22\\.\\+"
     },
     {
+      "expires": "2023-03-31",
       "group": "com\\.mercadolibre\\.android\\.rich_notifications",
       "name": "carousel",
       "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.rich_notifications",
+      "name": "carousel",
+      "version": "5\\.\\+"
+    },
+    {
+      "expires": "2023-03-31",
+      "group": "com\\.mercadolibre\\.android\\.notifications_helpers",
+      "name": "notifications_permissions",
+      "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.notifications_helpers",
+      "name": "notifications_permissions",
+      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -1001,6 +1030,8 @@
       "version": "7\\.\\+"
     },
     {
+      "description": "This library will be deprecated",
+      "expires": "2023-03-31",
       "group": "com\\.mercadopago\\.android\\.congrats",
       "name": "congrats",
       "version": "7\\.\\+"
@@ -1803,9 +1834,15 @@
       "version": "mercadolibre-14\\.\\+|mercadopago-14\\.\\+"
     },
     {
+      "expires": "2023-03-31",
       "group": "com\\.mercadolibre\\.android\\.devices_sdk",
       "name": "devices",
       "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.devices_sdk",
+      "name": "devices",
+      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.behavioral_sdk",
@@ -1861,6 +1898,21 @@
       "group": "com\\.facebook\\.flipper",
       "name": "flipper-network-plugin",
       "version": "0\\.90\\.2"
+    },
+    {
+      "group": "com\\.facebook\\.flipper",
+      "name": "flipper",
+      "version": "0\\.90\\.2"
+    },
+    {
+      "group": "com\\.facebook\\.flipper",
+      "name": "flipper-leakcanary2-plugin",
+      "version": "0\\.90\\.2"
+    },
+    {
+      "group": "com\\.facebook\\.soloader",
+      "name": "soloader",
+      "version": "0\\.10\\.1"
     },
     {
       "group": "com\\.auth0\\.android",
@@ -2276,7 +2328,7 @@
     {
       "group": "com\\.bitmovin\\.player",
       "name": "player",
-      "version": "3\\.24\\.0"
+      "version": "3\\.21\\.0"
     },
     {
       "group": "com\\.google\\.ads\\.interactivemedia.\\v3",
@@ -2311,6 +2363,17 @@
       "group": "androidx\\.navigation",
       "name": "navigation-ui-ktx",
       "version": "2\\.3\\.0"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.seller_home_section",
+      "version": "1\\.\\+"
+    },
+    {
+      "description": "This library is for PoC purposes only, NOT IMPLEMENTED",
+      "expires": "2023-1-31",
+      "group": "com\\.mercadolibre\\.android\\.point\\.mpoc",
+      "name": "verimatrix",
+      "version": "0\\.\\+"
     }
   ]
 }
