@@ -881,18 +881,8 @@
       "version": "15\\.\\+"
     },
     {
-      "expires": "2022-12-15",
-      "group": "com\\.mercadolibre\\.android\\.remedies",
-      "version": "14\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.liveness_detection\\.liveness",
       "version": "6\\.\\+"
-    },
-    {
-      "expires": "2022-12-15",
-      "group": "com\\.mercadolibre\\.android\\.liveness_detection\\.liveness",
-      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.comparator",
@@ -1101,20 +1091,6 @@
       "group": "com\\.mercadopago\\.android\\.point_ui",
       "name": "components",
       "version": "3\\.+"
-    },
-    {
-      "description": "This library is deprecated",
-      "expires": "2022-12-14",
-      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
-      "name": "paymentflowfcu",
-      "version": "6\\.+"
-    },
-    {
-      "description": "This library is deprecated",
-      "expires": "2022-12-14",
-      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
-      "name": "entities_fcu",
-      "version": "6\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
