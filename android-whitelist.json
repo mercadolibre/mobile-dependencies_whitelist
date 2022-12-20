@@ -351,13 +351,13 @@
       "version": "0\\.4\\.4"
     },
     {
-      "expires": "2022-12-20",
+      "expires": "2023-03-20",
       "group": "com\\.google\\.zxing",
       "name": "core",
       "version": "3\\.3\\.2"
     },
     {
-      "expires": "2022-12-20",
+      "expires": "2023-03-20",
       "group": "com\\.journeyapps",
       "name": "zxing-android-embedded",
       "version": "3\\.6\\.0|4\\.0\\.2"
@@ -380,9 +380,21 @@
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "authentication-enrollment",
+      "version": "23\\.\\+"
+    },
+    {
+      "expires": "2023-03-31",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "authentication-enrollment",
       "version": "22\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "authentication",
+      "version": "23\\.\\+"
+    },
+    {
+      "expires": "2023-03-31",
       "group": "com\\.mercadolibre\\.android",
       "name": "authentication",
       "version": "22\\.\\+"
@@ -873,18 +885,8 @@
       "version": "15\\.\\+"
     },
     {
-      "expires": "2022-12-15",
-      "group": "com\\.mercadolibre\\.android\\.remedies",
-      "version": "14\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.liveness_detection\\.liveness",
       "version": "6\\.\\+"
-    },
-    {
-      "expires": "2022-12-15",
-      "group": "com\\.mercadolibre\\.android\\.liveness_detection\\.liveness",
-      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.comparator",
@@ -1029,9 +1031,20 @@
       "version": "7\\.\\+"
     },
     {
+      "expires": "2022-12-31",
       "group": "com\\.mercadolibre\\.android\\.dami_ui_components",
       "name": "ui_components",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.dami_ui_components",
+      "name": "ui_components",
+      "version": "2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.dami_ui_components",
+      "name": "base_testapp",
+      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.static_resources",
@@ -1082,20 +1095,6 @@
       "group": "com\\.mercadopago\\.android\\.point_ui",
       "name": "components",
       "version": "3\\.+"
-    },
-    {
-      "description": "This library is deprecated",
-      "expires": "2022-12-14",
-      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
-      "name": "paymentflowfcu",
-      "version": "6\\.+"
-    },
-    {
-      "description": "This library is deprecated",
-      "expires": "2022-12-14",
-      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
-      "name": "entities_fcu",
-      "version": "6\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
@@ -1881,6 +1880,21 @@
       "version": "0\\.90\\.2"
     },
     {
+      "group": "com\\.facebook\\.flipper",
+      "name": "flipper",
+      "version": "0\\.90\\.2"
+    },
+    {
+      "group": "com\\.facebook\\.flipper",
+      "name": "flipper-leakcanary2-plugin",
+      "version": "0\\.90\\.2"
+    },
+    {
+      "group": "com\\.facebook\\.soloader",
+      "name": "soloader",
+      "version": "0\\.10\\.1"
+    },
+    {
       "group": "com\\.auth0\\.android",
       "name": "auth0",
       "version": "1\\.+"
@@ -2340,6 +2354,16 @@
       "group": "com\\.mercadolibre\\.android\\.point\\.mpoc",
       "name": "verimatrix",
       "version": "0\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_bill_payment",
+      "name": "point_billpayment",
+      "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cx_support_daisy",
+      "name": "daisy",
+      "version": "mercadopago-1\\.\\+|mercadolibre-1\\.\\+"
     }
   ]
 }
