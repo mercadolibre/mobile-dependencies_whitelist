@@ -49,11 +49,13 @@ class LibraryJacocoModuleTest : AbstractPluginManager() {
 
     @org.junit.Test
     fun `When the LibraryJacocoModule configures all the Variants tasks`() {
-        val taskProvider = mockk<TaskProvider<Task>>(relaxed = true)
+        val taskProvider = mockk<TaskProvider<Task>>(relaxed = true) {
+            every { get() } returns mockk(relaxed = true)
+        }
 
         jacocoModule.configVariantsTasks(projects[LIBRARY_PROJECT]!!, taskProvider)
 
-        verify { taskProvider.configure(any()) }
+        verify { taskProvider.get() }
     }
 
     @org.junit.Test
