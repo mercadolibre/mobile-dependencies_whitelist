@@ -32,11 +32,7 @@ object VariantUtils {
             variant.outputs.first().dirName
         }
 
-    private fun hasProperty(self: BaseVariant, name: String): MetaProperty? {
-        return InvokerHelper.getMetaClass(self).hasProperty(self, name)
-    }
+    private fun hasProperty(self: BaseVariant, name: String): MetaProperty? = InvokerHelper.getMetaClass(self).hasProperty(self, name)
 
-    private fun getProperty(self: BaseVariant, name: String): Any? {
-        return InvokerHelper.getProperty(self, name)
-    }
+    private fun getProperty(self: BaseVariant, name: String): Any? = InvokerHelper.getProperty(self, name)
 }
