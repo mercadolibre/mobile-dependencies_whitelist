@@ -1,4 +1,44 @@
-# 14.8.2
+# 15.0.7
+
+## Backport
+- Backport de la version 14.8.3 a la version 15.0.7
+- 
+# 15.0.6
+
+## Backport
+- Backport de la version 14.8.2 a la version 15.0.6
+- 
+# 15.0.5
+
+## Backport
+- Backport de la version 14.8.1 a la version 15.0.5
+
+# 15.0.4
+
+## Fix
+- RePublish 
+
+# 15.0.3
+
+## Modificado
+- Se bumpea la version de gradle enterprise build scan a la 3.11.2 para el breaking change 
+
+# 15.0.2
+
+## Agregado
+- Backport de la version 14.6.1 a la version 15.0.2
+
+# 15.0.1
+
+## Agregado
+- Backport de la version 14.2.1 a la version 15.0.1
+
+# 15.0.0
+
+## Modificado
+- Se actualiza la version de COMPILE_API_SDK_LEVEL a 32 para soportar Android 12
+
+# 14.8.3
 
 ## Fix
 - Se cambia el tiempo de ejecucion en donde se leen las extensiones de Module On Off para que sea capaz de captar el valor

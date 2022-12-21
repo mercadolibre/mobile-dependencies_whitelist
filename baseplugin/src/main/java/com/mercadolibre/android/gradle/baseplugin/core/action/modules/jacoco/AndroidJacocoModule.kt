@@ -93,11 +93,9 @@ abstract class AndroidJacocoModule : BaseJacocoModule() {
             this.classDirectories.from(classDirectories)
             this.executionData.from("${project.buildDir}/jacoco/test${variant.name}UnitTest.exec")
 
-            reports {
-                xml.required.set(true)
-                csv.required.set(false)
-                html.required.set(true)
-            }
+            reports.html.required.set(true)
+            reports.csv.required.set(false)
+            reports.xml.required.set(true)
         }
     }
 

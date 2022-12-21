@@ -38,7 +38,6 @@ class BuildScanModule : SettingsModule, ExtensionGetter() {
 
     override fun configure(settings: Settings) {
         settings.plugins.apply(GradleEnterprisePlugin::class.java)
-
         findExtension<GradleEnterpriseExtension>(settings)?.apply {
             configBuildScanExtension(buildScan, settings.rootProject.name, System.getenv().containsKey(CI_CONSTANT))
         }

@@ -40,10 +40,7 @@ class LibraryJacocoModule : AndroidJacocoModule() {
     fun configVariantsTasks(project: Project, jacocoTestReportTask: TaskProvider<Task>) {
         findExtension<LibraryExtension>(project)?.apply {
             for (variant in libraryVariants) {
-                val reportTask = createReportTask(variant, project)
-                jacocoTestReportTask.configure {
-                    dependsOn(reportTask)
-                }
+                jacocoTestReportTask.get().dependsOn(createReportTask(variant, project))
             }
         }
     }

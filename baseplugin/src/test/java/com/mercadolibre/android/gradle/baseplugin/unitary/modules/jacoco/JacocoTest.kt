@@ -99,8 +99,6 @@ class JacocoTest : AbstractPluginManager() {
         verify { report.sourceDirectories.from(any()) }
         verify { report.classDirectories.from(any()) }
         verify { report.executionData.from(any()) }
-
-        verify { report.reports(any<Action<JacocoReportsContainer>>()) }
     }
 
     @org.junit.Test
