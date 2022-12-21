@@ -95,10 +95,9 @@ class LibraryPublishableModule : PublishableModule() {
                 dependsOn(realTask)
             }
         } else {
-            project.tasks.register(name) {
-                group = PUBLISHING_GROUP
-                dependsOn(realTask)
-            }
+            val task = project.tasks.register(name)
+            task.get().group = PUBLISHING_GROUP
+            task.get().dependsOn(realTask)
         }
     }
 }

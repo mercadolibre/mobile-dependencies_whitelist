@@ -21,13 +21,34 @@ class BugsnagModuleTest : AbstractPluginManager() {
     private val bugsnagModule = BugsnagModule()
 
     @org.junit.Test
+    fun `When the BugsnagModule is called and is enabled`() {
+        val project = mockk<Project>(relaxed = true)
+        val extensionPlugin = mockk<BugsnagPluginExtension>(relaxed = true)
+        val extension = BugsnagExtension().apply {
+            enabled = true
+        }
+
+        every { project.extensions.findByType(BugsnagExtension::class.java) } returns extension
+        every { project.extensions.findByType(BugsnagPluginExtension::class.java) } returns extensionPlugin
+
+        bugsnagModule.executeModule(project)
+
+        assert(extension.enabled)
+
+        verify { extensionPlugin.retryCount.convention(BUGSNAG_RETRY_CONVENTION) }
+        verify { extensionPlugin.variantFilter(any()) }
+    }
+
+    @org.junit.Test
     fun `When the BugsnagModule is called create her extension`() {
         val project = mockk<Project>(relaxed = true)
         val extension = BugsnagExtension()
 
         every { project.extensions.create(BUGSNAG_EXTENSION, BugsnagExtension::class.java) } returns extension
+        every { project.extensions.findByType(BugsnagExtension::class.java) } returns extension
 
         bugsnagModule.createExtension(project)
+        bugsnagModule.executeModule(project)
 
         assert(!extension.enabled)
         verify { project.extensions.create(BUGSNAG_EXTENSION, BugsnagExtension::class.java) }
