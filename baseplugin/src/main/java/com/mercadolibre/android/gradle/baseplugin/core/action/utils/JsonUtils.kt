@@ -47,7 +47,9 @@ object JsonUtils {
         }
     }
 
-    private fun castStringToDate(date: String): Long = SimpleDateFormat(DATE_PATTERN).parse(date.replace("\\", "")).time
+    private fun castStringToDate(date: String): Long {
+        return SimpleDateFormat(DATE_PATTERN).parse(date.replace("\\", "")).time
+    }
 
     /**
      * This method is in charge of casting a Json element to a Date in a safe way.

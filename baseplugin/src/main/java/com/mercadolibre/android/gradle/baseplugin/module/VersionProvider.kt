@@ -15,25 +15,35 @@ object VersionProvider {
     /**
      * This method is in charge of providing the Min Sdk Version variable.
      */
-    fun provideMinSdk(): Int = MIN_SDK_LEVEL
+    fun provideMinSdk(): Int {
+        return MIN_SDK_LEVEL
+    }
 
     /**
      * This method is in charge of providing the Api Sdk Level Version variable.
      */
-    fun provideApiSdkLevel(): Int = COMPILE_API_SDK_LEVEL
+    fun provideApiSdkLevel(): Int {
+        return COMPILE_API_SDK_LEVEL
+    }
 
     /**
      * This method is in charge of providing the Gradle Version variable.
      */
-    fun gradlewVersion(): Int = GRADLE_VERSION
+    fun gradlewVersion(): Int {
+        return GRADLE_VERSION
+    }
 
     /**
      * This method is in charge of providing the Build Tools Version variable.
      */
-    fun provideBuildToolsVersion(): String = BUILD_TOOLS_VERSION
+    fun provideBuildToolsVersion(): String {
+        return BUILD_TOOLS_VERSION
+    }
 
     /**
      * This method is in charge of providing the Java Version variable.
      */
-    fun provideJavaVersion(): JavaVersion = JAVA_VERSION
+    fun provideJavaVersion(): JavaVersion {
+        return JAVA_VERSION
+    }
 }
