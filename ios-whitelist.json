@@ -1651,6 +1651,12 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "description": "This library is a webview for the Shorts initiative",
+      "name": "Shorts",
+      "source": "private",
+      "version": "^~>\\s?1.[0-9]+$"
     }
   ]
 }
