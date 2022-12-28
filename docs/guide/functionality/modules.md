@@ -33,17 +33,23 @@ en los checks de Github, se crearán diferentes tasks pero la principal será la
 los tests posibles (para cada buildType/flavor/sourceSet) y genera los reportes en formatos detectables por las
 aplicaciones de coverage.
 
-### Lint
+### Lint de Dependencias y Plugins
 
-Este módulo brinda la funcionalidad de verificación de dependencias, teniendo en cuenta esto somos capaces de tener una
-Allow List donde tendremos todas los package y módulos que son admitidos dentro de los repositorios de meli. Siendo así
-También contamos con las variables para desactivar el linteo y cambiar el archivo de donde traemos la Allow List.
+Dentro del linteo tenemos dos enfoques, siendo el primero las dependencias que puede tener un proyecto y luego sus plugins
+de esta forma están divididos en dos módulos. Estos módulos brindan la funcionalidad de verificación,
+teniendo en cuenta esto somos capaces de tener una Allow List donde tendremos todas los package y módulos por el lado
+de las dependecias y los IDs por el lado de los plugins que son admitidos dentro de los repositorios de meli. 
+
+Para administrar el linteo contamos con una extensión que nos permite activar o desactivar cada uno de ellos, ya sea
+linteo de dependencias de librerias o aplicaciones como así también el de plugins, con la posibilidad de que cambiemos
+el URL de la allow list.
 
 ```groovy
 lintGradle {
+    pluginsLintEnabled = true
     dependenciesLintEnabled = true
     releaseDependenciesLintEnabled = true
-    dependencyAllowListUrl = "https://raw.githubusercontent.com/mercadolibre/mobile-dependencies_whitelist/master/android-whitelist.json" // Si alguien distinto a Meli quiere su whitelist, deberia cambiar esto
+    dependencyAllowListUrl = ALLOW_LIST_URL
 }
 ```
 
