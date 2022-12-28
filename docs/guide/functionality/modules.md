@@ -38,10 +38,10 @@ aplicaciones de coverage.
 Dentro del linteo tenemos dos enfoques, siendo el primero las dependencias que puede tener un proyecto y luego sus plugins
 de esta forma están divididos en dos módulos. Estos módulos brindan la funcionalidad de verificación,
 teniendo en cuenta esto somos capaces de tener una Allow List donde tendremos todas los package y módulos por el lado
-de las dependecias y los IDs por el lado de los plugins que son admitidos dentro de los repositorios de meli. 
+de las dependencias y los IDs por el lado de los plugins que son admitidos dentro de los repositorios de meli.
 
 Para administrar el linteo contamos con una extensión que nos permite activar o desactivar cada uno de ellos, ya sea
-linteo de dependencias de librerias o aplicaciones como así también el de plugins, con la posibilidad de que cambiemos
+linteo de dependencias de librerías o aplicaciones como así también el de plugins, con la posibilidad de que cambiemos
 el URL de la allow list.
 
 ```groovy
