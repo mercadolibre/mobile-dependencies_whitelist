@@ -968,11 +968,6 @@
       "version": "15\\.\\+"
     },
     {
-      "expires": "2022-12-31",
-      "group": "com\\.mercadolibre\\.android\\.navigation_manager",
-      "version": "1\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.navigation_manager",
       "version": "3\\.\\+"
     },
@@ -1056,12 +1051,6 @@
       "group": "com\\.mercadopago\\.android\\.congrats",
       "name": "congrats",
       "version": "7\\.\\+"
-    },
-    {
-      "expires": "2022-12-31",
-      "group": "com\\.mercadolibre\\.android\\.dami_ui_components",
-      "name": "ui_components",
-      "version": "1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.dami_ui_components",
@@ -1244,13 +1233,6 @@
       "group": "org\\.apache\\.commons",
       "name": "commons-lang3",
       "version": "3\\.6"
-    },
-    {
-      "description": "migrate help: https://developer.android.com/topic/libraries/view-binding/migration",
-      "expires": "2022-12-30",
-      "group": "org\\.jetbrains\\.kotlin",
-      "name": "kotlin-android-extensions-runtime",
-      "version": "1\\.5\\.32"
     },
     {
       "group": "org\\.jetbrains\\.kotlin",
@@ -1960,12 +1942,6 @@
       "group": "com\\.mercadolibre\\.android\\.point_recharge",
       "name": "antennas",
       "version": "7\\.+"
-    },
-    {
-      "expires": "2022-12-31",
-      "group": "com\\.mercadolibre\\.android\\.point_smartpos_scanner",
-      "name": "scanner",
-      "version": "1\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point_smartpos_scanner",

@@ -540,13 +540,6 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "expires": "2022-12-31",
-      "name": "MLImagePicker",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
       "name": "MLLocalStorage",
       "source": "private",
       "target": "production",
