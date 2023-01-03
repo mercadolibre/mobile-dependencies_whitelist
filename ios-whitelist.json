@@ -1650,6 +1650,12 @@
       "name": "Shorts",
       "source": "private",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLClips",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     }
   ]
 }
