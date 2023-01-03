@@ -1,17 +1,17 @@
 {
   "whitelist": [
     {
-      "expires": "2022-11-01",
+      "expires": "2023-03-01",
       "name": "AdvertisingADN",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "AdvertisingADN",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "MLCheckoutFlow",
@@ -72,13 +72,6 @@
       "source": "public",
       "target": "production",
       "version": "0.8"
-    },
-    {
-      "expires": "2022-11-15",
-      "name": "Charts",
-      "source": "public",
-      "target": "production",
-      "version": "3.4.0"
     },
     {
       "name": "Charts",
@@ -440,7 +433,7 @@
     },
     {
       "name": "MLCardDrawer",
-      "source": "public",
+      "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
     },
@@ -547,12 +540,6 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "name": "MLImagePicker",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
       "name": "MLLocalStorage",
       "source": "private",
       "target": "production",
@@ -595,17 +582,10 @@
       "version": "^~>\\s?2.[0-9]+"
     },
     {
-      "expires": "2022-10-30",
       "name": "MLMelidata",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "name": "MLMelidata",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLMetrics",
@@ -1016,17 +996,17 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "expires": "2023-01-15",
       "name": "BiometricSecurityUI",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?[1-2].[0-9]+$"
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
-      "expires": "2022-12-01",
-      "name": "SecurityOptions",
+      "name": "BiometricSecurityUI",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?3.[0-9]+$"
     },
     {
       "name": "SecurityOptions",
@@ -1095,13 +1075,6 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "expires": "2022-10-30",
-      "name": "Traceability",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
       "name": "Traceability",
       "source": "private",
       "target": "production",
@@ -1124,6 +1097,12 @@
       "source": "public",
       "target": "production",
       "version": "^~>\\s?3.[0-9]+"
+    },
+    {
+      "name": "AndesIntegrations",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+"
     },
     {
       "name": "MLLoyalDM",
@@ -1202,13 +1181,6 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?10|[1-9].[0-9]+$"
-    },
-    {
-      "expires": "2022-10-30",
-      "name": "StartUPInitializer",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?5.[0-9]+.?[0-9]*$"
     },
     {
       "name": "StartUPInitializer",
@@ -1355,7 +1327,13 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
-      "expires": "2022-12-30",
+      "name": "SpGlobeWrapper",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "expires": "2023-01-20",
       "name": "SPPSpirtech",
       "source": "private",
       "target": "production",
@@ -1416,6 +1394,12 @@
       "version": "^~>\\s?2.[0-9]+"
     },
     {
+      "name": "CashRails",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
       "name": "MLAdjust",
       "source": "private",
       "target": "production",
@@ -1447,6 +1431,12 @@
     },
     {
       "name": "CreditsFloxClient",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "CreditsToolkit",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
@@ -1494,7 +1484,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "name": "CongratsSdk",
+      "name": "FeedbackScreen",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+"
@@ -1578,11 +1568,10 @@
       "version": "2.40.0"
     },
     {
-      "expires": "2022-11-30",
-      "name": "Opentelemetry",
+      "name": "OpbRedirect",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+"
     },
     {
       "name": "Opentelemetry",
@@ -1631,6 +1620,42 @@
       "source": "public",
       "target": "production",
       "version": "4.7.0"
+    },
+    {
+      "name": "Mplay",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
+    },
+    {
+      "name": "MLCardForm",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "SellerHomeSection",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "CxSupportDaisy",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "description": "This library is a webview for the Shorts initiative",
+      "name": "Shorts",
+      "source": "private",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLClips",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     }
   ]
 }
