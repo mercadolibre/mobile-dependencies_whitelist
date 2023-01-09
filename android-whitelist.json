@@ -2414,6 +2414,21 @@
       "group": "com\\.mercadolibre\\.android\\.clips",
       "name": "clips",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.fbm\\.wms\\.hardware",
+      "name": "honeywell",
+      "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.fbm\\.wms\\.hardware",
+      "name": "zebra",
+      "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.symbol",
+      "name": "emdk",
+      "version": "9\\.\\+"
     }
   ]
 }
