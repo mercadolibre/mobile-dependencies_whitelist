@@ -1905,7 +1905,7 @@
     {
       "group": "com\\.facebook\\.flipper",
       "name": "flipper-network-plugin",
-      "version": "0\\.90\\.2"
+      "version": "0\\.45\\.0"
     },
     {
       "group": "com\\.facebook\\.flipper",
@@ -2416,6 +2416,11 @@
       "group": "com\\.mercadolibre\\.android\\.shorts",
       "name": "shorts",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "androidx\\.mediarouter",
+      "name": "mediarouter",
+      "version": "1\\.2\\.2"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.clips",
