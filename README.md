@@ -45,7 +45,7 @@ JSON Schema:
 
 ```
 lintGradle {
-    dependencyWhitelistUrl = "https://raw.githubusercontent.com/YOUR_GITHUB_USER/mobile-dependencies_whitelist/master/android-whitelist.json"
+    dependencyAllowListUrl = "https://raw.githubusercontent.com/YOUR_GITHUB_USER/mobile-dependencies_whitelist/master/android-whitelist.json"
 }
 ```
 

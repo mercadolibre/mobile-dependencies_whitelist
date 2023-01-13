@@ -4,7 +4,7 @@ require 'net/http'
 require_relative 'util/slack_notification'
 
 # Script that checks and remove all libs that has expired dates and Makes a PR with the modifications
-module clean_allowlists
+module Clean_allowlists
     ANDROID_ALLOWLIST_PATH_FILE = "./android-whitelist.json"
     IOS_ALLOWLIST_PATH_FILE = "./ios-whitelist.json"
     SLACK_WEBHOOK_FAIL_URL = ENV['SLACK_NOTIFICATION_FAIL_WEBHOOK']
