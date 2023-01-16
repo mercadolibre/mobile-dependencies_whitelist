@@ -40,6 +40,6 @@ abstract class UtilsTest : AbstractPluginManager() {
 
     @org.junit.Test
     fun `The build must be published after being compiled`() {
-        assert(gradle.output.contains("https://gradle.adminml.com"))
+        assert(gradle.output.contains("Publishing build scan...") )
     }
 }
