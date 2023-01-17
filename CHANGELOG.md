@@ -1,8 +1,24 @@
+# 16.0.2
+- Backport de la version 15.0.7 a la version 16.0.2
+
+# 16.0.1
+
+## Backport
+- Backport de la version 15.0.6 a la version 16.0.1
+
+# 16.0.0
+
+## Modificado
+- Migracion AGP 7
+-
+## Agregado
+- Se agrega la depedencia de Gson ya que AGP 7 no la contiene
+
 # 15.0.7
 
 ## Backport
 - Backport de la version 14.8.3 a la version 15.0.7
-- 
+
 # 15.0.6
 
 ## Backport
