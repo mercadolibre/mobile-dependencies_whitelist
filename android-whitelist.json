@@ -804,9 +804,15 @@
       "version": "11\\.\\+"
     },
     {
+      "expires": "2023-02-02",
       "group": "com\\.mercadolibre\\.android\\.matt",
       "name": "core",
       "version": "9\\.\\+|mercadolibre-9\\.\\+|mercadopago-9\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.matt",
+      "name": "core",
+      "version": "mercadolibre-10\\.\\+|mercadopago-10\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.merchengine",
@@ -815,6 +821,16 @@
     {
       "group": "com\\.mercadolibre\\.android\\.merch_realestates",
       "name": "merchrealestates",
+      "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.merch_realestates",
+      "name": "mprealestates",
+      "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.merch_realestates",
+      "name": "dismisscontent",
       "version": "3\\.\\+"
     },
     {
@@ -2450,6 +2466,11 @@
     {
       "group": "com\\.mercadolibre\\.android\\.ccap_sdk",
       "name": "ccapsdk",
+      "version": "0\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.secure_inputs",
+      "name": "secureinputs",
       "version": "0\\.+"
     }
   ]
