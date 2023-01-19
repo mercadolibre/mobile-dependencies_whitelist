@@ -1483,6 +1483,12 @@
       "version": "^~>\\s?0.[0-9]+"
     },
     {
+      "name": "CcapSdk",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+"
+    },
+    {
       "name": "ADAssertLayout",
       "source": "public",
       "target": "test",
@@ -1649,6 +1655,12 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "SecureInputs",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
     }
   ]
 }
