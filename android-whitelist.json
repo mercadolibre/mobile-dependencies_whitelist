@@ -1437,14 +1437,26 @@
       "version": "3\\.+"
     },
     {
+      "expires": "2023-02-28",
       "group": "com\\.mercadolibre\\.android\\.insu_flox_components",
       "name": "floxcomponents",
       "version": "mercadolibre-7\\.\\+|mercadopago-7\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.insu_flox_components",
+      "name": "floxcomponents",
+      "version": "mercadolibre-8\\.\\+|mercadopago-8\\.\\+"
+    },
+    {
+      "expires": "2023-02-28",
       "group": "com\\.mercadolibre\\.android\\.insu_qpage_on",
       "name": "qpage_on",
       "version": "8\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.insu_qpage_on",
+      "name": "qpage_on",
+      "version": "9\\.+"
     },
     {
       "expires": "2023-03-31",
