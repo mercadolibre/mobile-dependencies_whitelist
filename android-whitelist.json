@@ -2519,6 +2519,21 @@
       "group": "com\\.mercadolibre\\.android\\.secure_inputs",
       "name": "secureinputs",
       "version": "0\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.app_monitoring",
+      "name": "app_monitoring",
+      "version": "0\\.1\\.\\+"
+    },
+    {
+      "group": "com\\.datadoghq",
+      "name": "dd-sdk-android-gradle-plugin",
+      "version": "1\\.6\\.+"
+    },
+    {
+      "group": "com\\.datadoghq",
+      "name": "dd-sdk-android",
+      "version": "1\\.16\\.+"
     }
   ]
 }
