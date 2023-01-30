@@ -91,6 +91,21 @@ Es importante tener en cuenta lo siguiente:
 - En caso de tener dependencias locales, agregarlas como `implementation project(path: '...')` y automáticamente nosotros vamos a referenciarlas como corresponde.
 - En caso de haber productFlavors, los mismos para diferenciarlos en una misma publicación van a tener su nombre como prefijo en la version "Ejemplo com.mercadolibre.group:artifact:flavorA-1.0.0"
 
+Everest:
+
+Para la iniciativa de Everest se agregó el software component `versionCatalog` que se encarga de procesar el catalogo de versiones.
+También se agrego el componente `javaPlatform` que se encarga del manejo de dependencias transitivas.
+
+Para el caso de `versionCatalog` se sigue el flujo normal generando tambien su configuración del pom, mientras que para `javaPlatform` no se configura ya que no es necesario y además genera conflictos.
+
+Estos dos componentes son definidos en Everest mediante el siguiente código:
+```
+plugins {
+    id("version-catalog")
+    id("java-platform")
+}
+```
+
 ### Bugsnag
 
 Este módulo brinda la funcionalidad de implementar el detector de errores bugs nag para que luego podremos analizar los

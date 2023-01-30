@@ -1,3 +1,6 @@
+# 16.0.3
+- Se agregaron los componentes de version catalog y java platform para su publicación
+
 # 16.0.2
 - Backport de la version 15.0.7 a la version 16.0.2
 

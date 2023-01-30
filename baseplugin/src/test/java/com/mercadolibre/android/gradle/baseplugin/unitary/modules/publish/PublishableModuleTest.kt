@@ -3,6 +3,7 @@ package com.mercadolibre.android.gradle.baseplugin.unitary.modules.publish
 import com.android.build.gradle.api.BaseVariant
 import com.android.builder.model.SourceProvider
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.JavaPublishableModule
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.basics.PomUtils
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.basics.TaskGenerator
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.basics.VersionContainer
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.subClasses.PublishAarExperimentalTask
@@ -11,6 +12,9 @@ import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishabl
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.subClasses.PublishAarPublicReleaseTask
 import com.mercadolibre.android.gradle.baseplugin.core.components.PUBLISH_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.SOURCE_SETS_DEFAULT
+import com.mercadolibre.android.gradle.baseplugin.dto.JavaPlatformComponentPublishable
+import com.mercadolibre.android.gradle.baseplugin.dto.PublishableFactory
+import com.mercadolibre.android.gradle.baseplugin.dto.VersionCatalogComponentPublishable
 import com.mercadolibre.android.gradle.baseplugin.managers.ANY_NAME
 import com.mercadolibre.android.gradle.baseplugin.managers.AbstractPluginManager
 import com.mercadolibre.android.gradle.baseplugin.managers.LIBRARY_PROJECT
@@ -20,16 +24,21 @@ import io.mockk.Called
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.verify
+import java.io.File
 import org.gradle.api.Action
 import org.gradle.api.Project
 import org.gradle.api.Task
+import org.gradle.api.XmlProvider
+import org.gradle.api.component.SoftwareComponent
 import org.gradle.api.publish.PublicationContainer
 import org.gradle.api.publish.PublishingExtension
+import org.gradle.api.publish.maven.MavenPublication
 import org.gradle.api.tasks.SourceSet
 import org.gradle.api.tasks.SourceSetContainer
 import org.gradle.api.tasks.TaskProvider
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
+
 
 @RunWith(JUnit4::class)
 class PublishableModuleTest : AbstractPluginManager() {
@@ -187,4 +196,136 @@ class PublishableModuleTest : AbstractPluginManager() {
     fun `When the JavaPublishableModule configures the project create publish Task to AndroidPublicReleases Repository`() {
         assert(projects[LIBRARY_PROJECT]!!.tasks.findByName("publishAllPublicationsToAndroidPublicReleasesRepository") != null)
     }
+
+    @org.junit.Test
+    fun `When the JavaPublishable contains javaPlatform component`() {
+        val publishable = VersionCatalogComponentPublishable(
+            mockk(relaxed = true), "", mockk(relaxed = true), "", "", mockk(relaxed = true)
+        )
+        val mavenPublication = mockk<MavenPublication>(relaxed = true)
+        publishable.makeComponentIfExist(mavenPublication, mockk())
+        verify { mavenPublication.from(any()) }
+    }
+
+    @org.junit.Test
+    fun `When the JavaPublishable does not contains publishing extension`() {
+        val task = PublishAarPublicReleaseTask()
+        val project = mockk<Project>(relaxed = true)
+        val publishExtension = mockk<PublishingExtension>(relaxed = true)
+        task.project = project
+
+        every { findExtension<PublishingExtension>(project) } returns null
+
+        task.registerPublish(project, listOf(), "", "")
+
+        verify(exactly = 0) { publishExtension.publications(any<Action<PublicationContainer>>()) }
+    }
+
+    @org.junit.Test
+    fun `When the JavaPublishable does not contains java platform`() {
+        assert(!PublishableFactory.isJavaPlatformComponentNotNull(null))
+    }
+
+    @org.junit.Test
+    fun `When the JavaPublishable contains java platform`() {
+        assert(PublishableFactory.isJavaPlatformComponentNotNull(mockk()))
+    }
+
+    @org.junit.Test
+    fun `When the JavaPublishable does not contains version catalog`() {
+        assert(!PublishableFactory.isVersionCatalogComponentNotNull(null))
+    }
+
+    @org.junit.Test
+    fun `When the JavaPublishable contains version catalog`() {
+        assert(PublishableFactory.isVersionCatalogComponentNotNull(mockk()))
+    }
+
+    @org.junit.Test
+    fun `When the JavaPublishable run the java platform plugin`() {
+        val mavenPublication = mockk<MavenPublication>(relaxed = true)
+        val javaPlatformComponent = mockk<SoftwareComponent>(relaxed = true)
+        val publishable = JavaPlatformComponentPublishable(
+            mockk(relaxed = true), "", mavenPublication, javaPlatformComponent
+        )
+
+        publishable.process()
+
+        verify { publishable.makeComponentIfExist(mavenPublication, javaPlatformComponent) }
+    }
+
+    @org.junit.Test
+    fun `When the JavaPublishable run the version catalog plugin`() {
+        val mavenPublication = mockk<MavenPublication>(relaxed = true)
+        val versionCatalogComponent = mockk<SoftwareComponent>(relaxed = true)
+        val publishable = VersionCatalogComponentPublishable(
+            mockk(relaxed = true), "", mavenPublication, "", "", versionCatalogComponent
+        )
+
+        publishable.process()
+
+        verify { publishable.makeComponentIfExist(mavenPublication, versionCatalogComponent) }
+    }
+
+    @org.junit.Test
+    fun `When the JavaPublishable run is VersionCatalogComponentPublishable type`() {
+        val task = PublishAarPublicReleaseTask()
+        val project = mockk<Project>(relaxed = true)
+        val mavenPublication = mockk<MavenPublication>(relaxed = true)
+        task.project = project
+        task.taskName = "exampleTask"
+        assert(
+            PublishableFactory.getPublishable(project, "", mavenPublication, "",
+                "", mockk(relaxed = true), null) is VersionCatalogComponentPublishable
+        )
+    }
+
+    @org.junit.Test
+    fun `When the JavaPublishable run is JavaPlatformComponentPublishable type`() {
+        val task = PublishAarPublicReleaseTask()
+        val project = mockk<Project>(relaxed = true)
+        val mavenPublication = mockk<MavenPublication>(relaxed = true)
+        task.project = project
+        task.taskName = "exampleTask"
+        assert(
+            PublishableFactory.getPublishable(project, "", mavenPublication, "",
+                "", null, mockk(relaxed = true)) is JavaPlatformComponentPublishable
+        )
+    }
+
+    @org.junit.Test
+    fun `When the JavaPublishable does not contains the task`() {
+        val publishable = VersionCatalogComponentPublishable(
+            mockk(relaxed = true), "", mockk(relaxed = true), "", "", mockk(relaxed = true)
+        )
+        val project = mockk<Project>(relaxed = true)
+
+        publishable.configurePomTaskIfExist("")
+
+        verify { project.tasks.named(ANY_NAME) wasNot Called }
+    }
+
+    @org.junit.Test
+    fun `When pomUtils is called inject dependencies`() {
+        val publishable = VersionCatalogComponentPublishable(
+            mockk(relaxed = true), "", mockk(relaxed = true), "", "", mockk(relaxed = true)
+        )
+        val pomUtils = mockk<PomUtils>(relaxed = true)
+        val xmlProvider = mockk<XmlProvider>(relaxed = true)
+        val file = File("build/test/test.txt")
+        file.parentFile.mkdirs()
+        file.createNewFile()
+
+        val task = PublishAarPublicReleaseTask()
+
+        task.project = mockk(relaxed = true)
+        task.taskName = "exampleTask"
+
+        publishable.useXmlProvider(pomUtils, xmlProvider, "", "", file)
+
+        verify { pomUtils.injectDependencies(any(), any(), any(), any()) }
+
+        file.parentFile.delete()
+    }
+
 }
