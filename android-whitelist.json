@@ -2505,7 +2505,12 @@
     },
     {
       "group": "com\\.mercadolibre\\.android\\.app_monitoring",
-      "name": "app_monitoring",
+      "name": "setup",
+      "version": "0\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.app_monitoring",
+      "name": "core",
       "version": "0\\.\\+"
     },
     {
