@@ -1069,19 +1069,40 @@
       "version": "3\\.\\+"
     },
     {
+      "description": "This library will be deprecated by upgrade of AGP 7.2.2",
+      "expires": "2023-03-06",
       "group": "com\\.mercadolibre\\.android\\.home\\.toolkit",
       "name": "core",
       "version": "2\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.home\\.toolkit",
+      "name": "core",
+      "version": "3\\.\\+"
+    },
+    {
+      "description": "This library will be deprecated by upgrade of AGP 7.2.2",
+      "expires": "2023-03-06",
       "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
       "name": "home",
       "version": "mercadopago-3\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
+      "name": "home",
+      "version": "mercadopago-4\\.+"
+    },
+    {
+      "description": "This library will be deprecated by upgrade of AGP 7.2.2",
+      "expires": "2023-03-06",
+      "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
       "name": "sections",
       "version": "mercadopago-3\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
+      "name": "sections",
+      "version": "mercadopago-4\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.usersections\\",
