@@ -788,11 +788,6 @@
       "version": "1\\.\\+"
     },
     {
-      "expires": "2023-01-31",
-      "group": "com\\.mercadolibre\\.android\\.remote\\.configuration",
-      "version": "6\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.remote\\.configuration",
       "version": "7\\.\\+"
     },
@@ -876,12 +871,6 @@
       "group": "com\\.mercadolibre\\.android\\.marketplace\\.map",
       "name": "marketplace\\-map",
       "version": "11\\.\\+"
-    },
-    {
-      "expires": "2023-02-02",
-      "group": "com\\.mercadolibre\\.android\\.matt",
-      "name": "core",
-      "version": "9\\.\\+|mercadolibre-9\\.\\+|mercadopago-9\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.matt",
@@ -2508,13 +2497,6 @@
     {
       "group": "com\\.mercadolibre\\.android\\.seller_home_section",
       "version": "1\\.\\+"
-    },
-    {
-      "description": "This library is for PoC purposes only, NOT IMPLEMENTED",
-      "expires": "2023-1-31",
-      "group": "com\\.mercadolibre\\.android\\.point\\.mpoc",
-      "name": "verimatrix",
-      "version": "0\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point_bill_payment",
