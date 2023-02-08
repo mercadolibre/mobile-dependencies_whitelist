@@ -942,6 +942,8 @@
       "version": "1.0"
     },
     {
+      "description": "This library will be deprecated, use instead Andes Feedback Screen.",
+      "expires": "2023-06-30",
       "name": "WalletCongrats",
       "source": "private",
       "target": "production",
