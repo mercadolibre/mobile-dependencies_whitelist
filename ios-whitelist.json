@@ -1098,6 +1098,12 @@
       "version": "^~>\\s?0.[0-9]+"
     },
     {
+      "name": "MLLoyal",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?9.[0-9]+"
+    },
+    {
       "name": "MLLoyalDM",
       "source": "private",
       "target": "production",
