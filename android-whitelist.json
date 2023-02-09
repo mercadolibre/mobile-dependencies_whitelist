@@ -1038,9 +1038,16 @@
       "version": "15\\.\\+"
     },
     {
+      "description": "The version of this library will be deprecated.",
+      "expires": "2023-06-01",
       "group": "com\\.mercadolibre\\.android\\.security",
       "name": "attestation",
-      "version": "6\\.\\+|7\\.\\+"
+      "version": "7\\.\\+|7\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.security",
+      "name": "attestation",
+      "version": "8\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.uicomponents",
