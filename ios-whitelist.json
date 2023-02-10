@@ -1680,6 +1680,12 @@
       "source": "public",
       "target": "production",
       "version": "^~>\\s?(1.14.0)$"
+    },
+    {
+      "name": "Dogfooding",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     }
   ]
 }
