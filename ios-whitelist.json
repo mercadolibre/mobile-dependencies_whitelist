@@ -942,6 +942,8 @@
       "version": "1.0"
     },
     {
+      "description": "This library will be deprecated, use instead Andes Feedback Screen.",
+      "expires": "2023-06-30",
       "name": "WalletCongrats",
       "source": "private",
       "target": "production",
@@ -1074,6 +1076,7 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
+      "expires": "2023-05-31",
       "name": "AndesUIDraftModal",
       "source": "private",
       "target": "production",
@@ -1096,6 +1099,12 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+"
+    },
+    {
+      "name": "MLLoyal",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?9.[0-9]+"
     },
     {
       "name": "MLLoyalDM",
@@ -1672,6 +1681,12 @@
       "source": "public",
       "target": "production",
       "version": "^~>\\s?(1.14.0)$"
+    },
+    {
+      "name": "Dogfooding",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     }
   ]
 }
