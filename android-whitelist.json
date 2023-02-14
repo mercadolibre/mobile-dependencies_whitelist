@@ -1138,9 +1138,16 @@
       "version": "2\\.\\+"
     },
     {
+      "description": "This library will be deprecated by upgrade of AGP 7.2.2",
+      "expires": "2023-03-14",
       "group": "com\\.mercadolibre\\.android\\.pendings",
       "name": "pendingscontainer",
       "version": "2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.pendings",
+      "name": "pendingscontainer",
+      "version": "3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cardscomponents",
@@ -1514,9 +1521,16 @@
       "version": "8\\.+"
     },
     {
+      "description": "This library will be deprecated by upgrade of AGP 7.2.2",
+      "expires": "2023-03-14",
       "group": "com\\.mercadolibre\\.android\\.modalsengine",
       "name": "modals-engine",
       "version": "mercadolibre-6\\.\\+|mercadopago-6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.modalsengine",
+      "name": "modals-engine",
+      "version": "mercadolibre-7\\.\\+|mercadopago-7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
