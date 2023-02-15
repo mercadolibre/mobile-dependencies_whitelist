@@ -1133,9 +1133,16 @@
       "version": "3\\.\\+"
     },
     {
+      "description": "This library will be deprecated by upgrade of AGP 7.2.2",
+      "expires": "2023-03-14",
       "group": "com\\.mercadolibre\\.android\\.pendings",
       "name": "pendingsview",
       "version": "2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.pendings",
+      "name": "pendingsview",
+      "version": "3\\.\\+"
     },
     {
       "description": "This library will be deprecated by upgrade of AGP 7.2.2",
