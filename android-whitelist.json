@@ -2184,13 +2184,13 @@
       "version": "3\\.+"
     },
     {
-      "description": "Esta lib si conecta con Melidata para envio de tracks.",
+      "description": "This library create a connection with Melidata to send tracks through it.",
       "group": "com\\.mercadolibre\\.android\\.point_smart_helpers",
       "name": "analytic-concrete",
       "version": "3\\.+"
     },
     {
-      "description": "Esta lib és la abstractiones para si enviar los tracks.",
+      "description": "This library has abstraction for client to create custom tracks with path and data.",
       "group": "com\\.mercadolibre\\.android\\.point_smart_helpers",
       "name": "analytic-interface",
       "version": "3\\.+"
