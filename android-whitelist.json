@@ -437,14 +437,26 @@
       "version": "3\\.6\\.0|4\\.0\\.2"
     },
     {
+      "expires": "2023-06-01",
       "group": "com\\.mercadolibre\\.android\\.startupinitializer",
       "name": "application",
-      "version": "9\\.\\+|10\\.\\+"
+      "version": "9\\.\\+"
+    },
+    {
+      "expires": "2023-06-01",
+      "group": "com\\.mercadolibre\\.android\\.startupinitializer",
+      "name": "splash",
+      "version": "9\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.startupinitializer",
+      "name": "application",
+      "version": "10\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.startupinitializer",
       "name": "splash",
-      "version": "9\\.\\+|10\\.\\+"
+      "version": "10\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
