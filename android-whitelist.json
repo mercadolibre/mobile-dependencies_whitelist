@@ -1073,7 +1073,13 @@
     },
     {
       "group": "com\\.mercadolibre\\.android\\.navigation_manager",
+      "name": "core",
       "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.navigation_manager",
+      "name": "tabbar",
+      "version": "mercadopago-3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.mlwebkit",
