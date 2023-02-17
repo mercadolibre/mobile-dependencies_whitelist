@@ -2184,6 +2184,18 @@
       "version": "3\\.+"
     },
     {
+      "description": "Esta lib si conecta con Melidata para envio de tracks.",
+      "group": "com\\.mercadolibre\\.android\\.point_smart_helpers",
+      "name": "analytic-concrete",
+      "version": "3\\.+"
+    },
+    {
+      "description": "Esta lib és la abstractiones para si enviar los tracks.",
+      "group": "com\\.mercadolibre\\.android\\.point_smart_helpers",
+      "name": "analytic-interface",
+      "version": "3\\.+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.point_credits",
       "name": "credits",
       "version": "3\\.+"
