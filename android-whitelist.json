@@ -316,12 +316,6 @@
       "version": "17\\.1\\.0"
     },
     {
-      "expires": "2023-02-24",
-      "group": "com\\.google\\.android\\.libraries\\.places",
-      "name": "places",
-      "version": "2\\.4\\.0"
-    },
-    {
       "group": "com\\.google\\.android\\.libraries\\.places",
       "name": "places",
       "version": "2\\.5\\.0"
@@ -1082,8 +1076,13 @@
       "version": "mercadopago-3\\.\\+"
     },
     {
+      "expires": "2023-03-06",
       "group": "com\\.mercadolibre\\.android\\.mlwebkit",
       "version": "4.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.mlwebkit",
+      "version": "6.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.uinavigationcp",
@@ -1543,6 +1542,11 @@
     {
       "group": "org\\.jetbrains\\.kotlinx",
       "name": "kotlinx-coroutines-core",
+      "version": "1\\.5\\.2"
+    },
+    {
+      "group": "org\\.jetbrains\\.kotlinx",
+      "name": "kotlinx-coroutines-reactive",
       "version": "1\\.5\\.2"
     },
     {
@@ -2664,8 +2668,8 @@
       "version": "1\\.\\+"
     },
     {
-      "group": "com\\.mercadolibre\\.android\\.ccap_sdk",
-      "name": "ccapsdk",
+      "group": "com\\.mercadolibre\\.android\\.ccap",
+      "name": "ccap-sdk",
       "version": "0\\.+"
     },
     {
@@ -2697,6 +2701,30 @@
       "group": "com\\.mercadolibre\\.android\\.data_dispatcher",
       "name": "core",
       "version": "1\\.+"
+    },
+    {
+      "description": "This library is used for push-notification with mqtt",
+      "group": "com\\.gojek\\.courier",
+      "name": "courier",
+      "version": "0\\.1\\.\\+"
+    },
+    {
+      "description": "This library is used for push-notification with mqtt",
+      "group": "com\\.gojek\\.courier",
+      "name": "courier-message-adapter-gson",
+      "version": "0\\.1\\.\\+"
+    },
+    {
+      "description": "This library is used for push-notification with mqtt",
+      "group": "com\\.gojek\\.courier",
+      "name": "courier-stream-adapter-coroutines",
+      "version": "0\\.1\\.\\+"
+    },
+    {
+      "description": "This library is used for push-notification with mqtt",
+      "group": "com\\.gojek\\.courier",
+      "name": "workmanager-2\\.6\\.0-pingsender",
+      "version": "0\\.1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.everest",
