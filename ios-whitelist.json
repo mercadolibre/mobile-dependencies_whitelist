@@ -1693,6 +1693,30 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "Everest/Core",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "Everest/Data",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "Everest/Networking",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "Everest/UI",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     }
   ]
 }
