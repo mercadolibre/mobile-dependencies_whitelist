@@ -896,8 +896,14 @@
       "version": "mercadolibre-10\\.\\+|mercadopago-10\\.\\+"
     },
     {
+      "description": "This library will be deprecated by upgrade of AGP 7.2.2",
+      "expires": "2023-03-27",
       "group": "com\\.mercadolibre\\.android\\.merchengine",
-      "version": "6\\.\\+|mercadopago-6\\.\\+|mercadolibre-6\\.\\+"
+      "version": "6\\.\\+|mercadopago-6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.merchengine",
+      "version": "7\\.\\+|mercadopago-7\\.\\+|mercadolibre-7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.merch_realestates",
@@ -905,14 +911,26 @@
       "version": "3\\.\\+"
     },
     {
-      "group": "com\\.mercadolibre\\.android\\.merch_realestates",
+      "description": "This library will be deprecated by upgrade of AGP 7.2.2",
+      "expires": "2023-03-27",
       "name": "mprealestates",
       "version": "3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.merch_realestates",
+      "name": "mprealestates",
+      "version": "4\\.\\+"
+    },
+    {
+      "description": "This library will be deprecated by upgrade of AGP 7.2.2",
+      "expires": "2023-03-27",
       "name": "dismisscontent",
       "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.merch_realestates",
+      "name": "dismisscontent",
+      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.metrics",
@@ -1147,14 +1165,28 @@
       "version": "mercadopago-4\\.+"
     },
     {
+      "description": "This library will be deprecated by upgrade of AGP 7.2.2",
+      "expires": "2023-03-27",
       "group": "com\\.mercadolibre\\.android\\.usersections\\",
       "name": "sections",
       "version": "mercadopago-4\\.+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.usersections\\",
+      "name": "sections",
+      "version": "mercadopago-5\\.+"
+    },
+    {
+      "description": "This library will be deprecated by upgrade of AGP 7.2.2",
+      "expires": "2023-03-27",
+      "group": "com\\.mercadolibre\\.android\\.usersections\\",
+      "name": "ui-sections",
+      "version": "mercadopago-4\\.+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.usersections",
       "name": "ui-sections",
-      "version": "mercadolibre-4\\.+|mercadopago-4\\.\\+"
+      "version": "mercadolibre-4\\.+|mercadopago-5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.mercadocoin",
