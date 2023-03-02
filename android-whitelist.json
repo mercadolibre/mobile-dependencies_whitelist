@@ -167,11 +167,6 @@
       "version": "2\\.5\\.2"
     },
     {
-      "group": "androidx\\.lifecycle",
-      "name": "lifecycle-livedata-core",
-      "version": "2\\.2\\.0"
-    },
-    {
       "group": "com\\.adjust\\.sdk",
       "name": "adjust-android",
       "version": "4\\.28\\.4"
@@ -1687,19 +1682,37 @@
       "version": "1\\.0\\.0"
     },
     {
+      "expires": "2023-10-31",
       "group": "androidx\\.appcompat",
       "name": "appcompat",
       "version": "1\\.2\\.0"
     },
     {
+      "group": "androidx\\.appcompat",
+      "name": "appcompat",
+      "version": "1\\.3\\.1"
+    },
+    {
+      "expires": "2023-10-31",
       "group": "androidx\\.activity",
       "name": "activity",
       "version": "1\\.1\\.0"
     },
     {
+      "expires": "2023-10-31",
       "group": "androidx\\.activity",
       "name": "activity-ktx",
       "version": "1\\.1\\.0"
+    },
+    {
+      "group": "androidx\\.activity",
+      "name": "activity",
+      "version": "1\\.2\\.4"
+    },
+    {
+      "group": "androidx\\.activity",
+      "name": "activity-ktx",
+      "version": "1\\.2\\.4"
     },
     {
       "group": "androidx\\.cardview",
@@ -1841,14 +1854,26 @@
       "version": "1\\.6\\.0"
     },
     {
+      "expires": "2023-10-31",
       "group": "androidx\\.fragment",
       "name": "fragment",
       "version": "1\\.2\\.5"
     },
     {
+      "expires": "2023-10-31",
       "group": "androidx\\.fragment",
       "name": "fragment-ktx",
       "version": "1\\.2\\.5"
+    },
+    {
+      "group": "androidx\\.fragment",
+      "name": "fragment",
+      "version": "1\\.3\\.6"
+    },
+    {
+      "group": "androidx\\.fragment",
+      "name": "fragment-ktx",
+      "version": "1\\.3\\.6"
     },
     {
       "group": "androidx\\.installreferrer",
@@ -1861,34 +1886,92 @@
       "version": "1\\.1\\.2"
     },
     {
+      "expires": "2023-03-31",
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-livedata-core",
+      "version": "2\\.2\\.0"
+    },
+    {
+      "expires": "2023-03-31",
       "group": "androidx\\.lifecycle",
       "name": "lifecycle-viewmodel",
       "version": "2\\.2\\.0"
     },
     {
+      "expires": "2023-03-31",
       "group": "androidx\\.lifecycle",
       "name": "lifecycle-process",
       "version": "2\\.2\\.0"
     },
     {
+      "expires": "2023-03-31",
       "group": "androidx\\.lifecycle",
       "name": "lifecycle-runtime-ktx",
       "version": "2\\.2\\.0"
     },
     {
+      "expires": "2023-03-31",
       "group": "androidx\\.lifecycle",
       "name": "lifecycle-viewmodel-ktx",
       "version": "2\\.2\\.0"
     },
     {
+      "expires": "2023-03-31",
       "group": "androidx\\.lifecycle",
       "name": "lifecycle-livedata-ktx",
       "version": "2\\.2\\.0"
     },
     {
+      "expires": "2023-03-31",
       "group": "androidx\\.lifecycle",
       "name": "lifecycle-common-java8",
       "version": "2\\.2\\.0"
+    },
+    {
+      "expires": "2023-03-31",
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-service",
+      "version": "2\\.2\\.0"
+    },
+    {
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-service",
+      "version": "2\\.3\\.1"
+    },
+    {
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-livedata-core",
+      "version": "2\\.3\\.1"
+    },
+    {
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-viewmodel",
+      "version": "2\\.3\\.1"
+    },
+    {
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-process",
+      "version": "2\\.3\\.1"
+    },
+    {
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-runtime-ktx",
+      "version": "2\\.3\\.1"
+    },
+    {
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-viewmodel-ktx",
+      "version": "2\\.3\\.1"
+    },
+    {
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-livedata-ktx",
+      "version": "2\\.3\\.1"
+    },
+    {
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-common-java8",
+      "version": "2\\.3\\.1"
     },
     {
       "group": "androidx\\.work",
