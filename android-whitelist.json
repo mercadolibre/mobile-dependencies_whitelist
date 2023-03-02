@@ -2367,7 +2367,7 @@
     {
       "group": "com\\.mercadolibre\\.android\\.point_smart_pos_sdk",
       "name": "device",
-      "version": "dev-4\\.\\+|a910-4\\.\\+|d20-4\\.\\+|4\\.\\+"
+      "version": "dev-4\\.\\+|a910-4\\.\\+|d20-4\\.\\+|mp600-4\\.\\+|4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point_printer",
@@ -2387,6 +2387,11 @@
     {
       "group": "com\\.mercadolibre\\.android\\.point_printer",
       "name": "controller_d20",
+      "version": "2\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_printer",
+      "name": "controller_mp600",
       "version": "2\\.+"
     },
     {
@@ -2760,6 +2765,11 @@
       "group": "com\\.gojek\\.courier",
       "name": "workmanager-2\\.6\\.0-pingsender",
       "version": "0\\.1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.performance_tools",
+      "name": "leakcanary",
+      "version": "1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.everest",
