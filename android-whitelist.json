@@ -13,6 +13,12 @@
     {
       "group": "com\\.mercadolibre\\.android\\.advertising",
       "name": "adn",
+      "version": "3\\.+"
+    },
+    {
+      "expires": "2023-03-16",
+      "group": "com\\.mercadolibre\\.android\\.advertising",
+      "name": "adn",
       "version": "2\\.+"
     },
     {
@@ -165,11 +171,6 @@
       "group": "com\\.squareup\\.picasso",
       "name": "picasso",
       "version": "2\\.5\\.2"
-    },
-    {
-      "group": "androidx\\.lifecycle",
-      "name": "lifecycle-livedata-core",
-      "version": "2\\.2\\.0"
     },
     {
       "group": "com\\.adjust\\.sdk",
@@ -1682,19 +1683,48 @@
       "version": "1\\.0\\.0"
     },
     {
+      "expires": "2023-10-31",
       "group": "androidx\\.appcompat",
       "name": "appcompat",
       "version": "1\\.2\\.0"
     },
     {
+      "expires": "2023-10-31",
+      "group": "androidx\\.appcompat",
+      "name": "appcompat-resources",
+      "version": "1\\.2\\.0"
+    },
+    {
+      "group": "androidx\\.appcompat",
+      "name": "appcompat",
+      "version": "1\\.3\\.1"
+    },
+    {
+      "group": "androidx\\.appcompat",
+      "name": "appcompat-resources",
+      "version": "1\\.3\\.1"
+    },
+    {
+      "expires": "2023-10-31",
       "group": "androidx\\.activity",
       "name": "activity",
       "version": "1\\.1\\.0"
     },
     {
+      "expires": "2023-10-31",
       "group": "androidx\\.activity",
       "name": "activity-ktx",
       "version": "1\\.1\\.0"
+    },
+    {
+      "group": "androidx\\.activity",
+      "name": "activity",
+      "version": "1\\.2\\.4"
+    },
+    {
+      "group": "androidx\\.activity",
+      "name": "activity-ktx",
+      "version": "1\\.2\\.4"
     },
     {
       "group": "androidx\\.cardview",
@@ -1836,14 +1866,26 @@
       "version": "1\\.6\\.0"
     },
     {
+      "expires": "2023-10-31",
       "group": "androidx\\.fragment",
       "name": "fragment",
       "version": "1\\.2\\.5"
     },
     {
+      "expires": "2023-10-31",
       "group": "androidx\\.fragment",
       "name": "fragment-ktx",
       "version": "1\\.2\\.5"
+    },
+    {
+      "group": "androidx\\.fragment",
+      "name": "fragment",
+      "version": "1\\.3\\.6"
+    },
+    {
+      "group": "androidx\\.fragment",
+      "name": "fragment-ktx",
+      "version": "1\\.3\\.6"
     },
     {
       "group": "androidx\\.installreferrer",
@@ -1856,34 +1898,125 @@
       "version": "1\\.1\\.2"
     },
     {
+      "expires": "2023-03-31",
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-livedata-core",
+      "version": "2\\.2\\.0"
+    },
+    {
+      "expires": "2023-03-31",
       "group": "androidx\\.lifecycle",
       "name": "lifecycle-viewmodel",
       "version": "2\\.2\\.0"
     },
     {
+      "expires": "2023-03-31",
       "group": "androidx\\.lifecycle",
       "name": "lifecycle-process",
       "version": "2\\.2\\.0"
     },
     {
+      "expires": "2023-03-31",
       "group": "androidx\\.lifecycle",
       "name": "lifecycle-runtime-ktx",
       "version": "2\\.2\\.0"
     },
     {
+      "expires": "2023-03-31",
       "group": "androidx\\.lifecycle",
       "name": "lifecycle-viewmodel-ktx",
       "version": "2\\.2\\.0"
     },
     {
+      "expires": "2023-03-31",
       "group": "androidx\\.lifecycle",
       "name": "lifecycle-livedata-ktx",
       "version": "2\\.2\\.0"
     },
     {
+      "expires": "2023-03-31",
       "group": "androidx\\.lifecycle",
       "name": "lifecycle-common-java8",
       "version": "2\\.2\\.0"
+    },
+    {
+      "expires": "2023-03-31",
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-common",
+      "version": "2\\.2\\.0"
+    },
+    {
+      "expires": "2023-03-31",
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-livedata",
+      "version": "2\\.2\\.0"
+    },
+    {
+      "expires": "2023-03-31",
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-livedata-core-ktx",
+      "version": "2\\.2\\.0"
+    },
+    {
+      "expires": "2023-03-31",
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-service",
+      "version": "2\\.2\\.0"
+    },
+    {
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-common",
+      "version": "2\\.3\\.1"
+    },
+    {
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-service",
+      "version": "2\\.3\\.1"
+    },
+    {
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-livedata-core",
+      "version": "2\\.3\\.1"
+    },
+    {
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-livedata-core-ktx",
+      "version": "2\\.3\\.1"
+    },
+    {
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-livedata",
+      "version": "2\\.3\\.1"
+    },
+    {
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-viewmodel",
+      "version": "2\\.3\\.1"
+    },
+    {
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-process",
+      "version": "2\\.3\\.1"
+    },
+    {
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-runtime-ktx",
+      "version": "2\\.3\\.1"
+    },
+    {
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-viewmodel-ktx",
+      "version": "2\\.3\\.1"
+    },
+    {
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-livedata-ktx",
+      "version": "2\\.3\\.1"
+    },
+    {
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-common-java8",
+      "version": "2\\.3\\.1"
     },
     {
       "group": "androidx\\.work",
@@ -2693,6 +2826,11 @@
       "version": "1\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.fbm\\.wms\\.oem",
+      "name": "device",
+      "version": "1\\.\\+"
+    },
+    {
       "group": "com\\.symbol",
       "name": "emdk",
       "version": "9\\.\\+"
@@ -2760,6 +2898,11 @@
       "group": "com\\.gojek\\.courier",
       "name": "workmanager-2\\.6\\.0-pingsender",
       "version": "0\\.1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.performance_tools",
+      "name": "leakcanary",
+      "version": "1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.everest",
