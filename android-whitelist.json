@@ -1688,8 +1688,19 @@
       "version": "1\\.2\\.0"
     },
     {
+      "expires": "2023-10-31",
+      "group": "androidx\\.appcompat",
+      "name": "appcompat-resources",
+      "version": "1\\.2\\.0"
+    },
+    {
       "group": "androidx\\.appcompat",
       "name": "appcompat",
+      "version": "1\\.3\\.1"
+    },
+    {
+      "group": "androidx\\.appcompat",
+      "name": "appcompat-resources",
       "version": "1\\.3\\.1"
     },
     {
@@ -1930,8 +1941,31 @@
     {
       "expires": "2023-03-31",
       "group": "androidx\\.lifecycle",
+      "name": "lifecycle-common",
+      "version": "2\\.2\\.0"
+    },
+    {
+      "expires": "2023-03-31",
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-livedata",
+      "version": "2\\.2\\.0"
+    },
+    {
+      "expires": "2023-03-31",
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-livedata-core-ktx",
+      "version": "2\\.2\\.0"
+    },
+    {
+      "expires": "2023-03-31",
+      "group": "androidx\\.lifecycle",
       "name": "lifecycle-service",
       "version": "2\\.2\\.0"
+    },
+    {
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-common",
+      "version": "2\\.3\\.1"
     },
     {
       "group": "androidx\\.lifecycle",
@@ -1941,6 +1975,16 @@
     {
       "group": "androidx\\.lifecycle",
       "name": "lifecycle-livedata-core",
+      "version": "2\\.3\\.1"
+    },
+    {
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-livedata-core-ktx",
+      "version": "2\\.3\\.1"
+    },
+    {
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-livedata",
       "version": "2\\.3\\.1"
     },
     {
@@ -2778,6 +2822,11 @@
     {
       "group": "com\\.mercadolibre\\.android\\.fbm\\.wms\\.hardware",
       "name": "zebra",
+      "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.fbm\\.wms\\.oem",
+      "name": "device",
       "version": "1\\.\\+"
     },
     {
