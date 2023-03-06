@@ -1,17 +1,16 @@
 {
   "whitelist": [
     {
+      "name": "OMSDK",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "Viewability",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+"
-    },
-    {
-      "expires": "2023-03-01",
-      "name": "AdvertisingADN",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "AdvertisingADN",
@@ -1677,16 +1676,30 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "expires": "2023-05-31",
       "name": "DatadogSDK",
       "source": "public",
       "target": "production",
       "version": "^~>\\s?(1.14.0)$"
     },
     {
+      "expires": "2023-05-31",
       "name": "DatadogSDKCrashReporting",
       "source": "public",
       "target": "production",
       "version": "^~>\\s?(1.14.0)$"
+    },
+    {
+      "name": "DatadogSDK",
+      "source": "public",
+      "target": "production",
+      "version": "^~>\\s?(1.16.0)$"
+    },
+    {
+      "name": "DatadogSDKCrashReporting",
+      "source": "public",
+      "target": "production",
+      "version": "^~>\\s?(1.16.0)$"
     },
     {
       "name": "Dogfooding",
