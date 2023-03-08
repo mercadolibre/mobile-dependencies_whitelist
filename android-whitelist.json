@@ -862,9 +862,16 @@
       "version": "mercadopago-7\\.\\+|mercadolibre-7\\.\\+"
     },
     {
+      "description": "This library will be deprecated by upgrade of AGP 7.2.2",
       "group": "com\\.mercadolibre\\.android\\.merch_realestates",
+      "expires": "2023-03-27",
       "name": "merchrealestates",
       "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.merch_realestates",
+      "name": "merchrealestates",
+      "version": "4\\.\\+"
     },
     {
       "description": "This library will be deprecated by upgrade of AGP 7.2.2",
