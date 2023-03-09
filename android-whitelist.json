@@ -1477,28 +1477,44 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2023-06-01",
       "group": "com\\.mercadolibre\\.android\\.loyalty",
-      "name": "webview",
       "version": "mercadolibre-16\\.\\+|mercadopago-16\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.loyalty",
-      "name": "drawer",
-      "version": "16\\.\\+"
+      "version": "mercadolibre-17\\.\\+|mercadopago-17\\.\\+"
     },
     {
+      "expires": "2023-06-01",
       "group": "com\\.mercadolibre\\.android\\.loyalty\\.datamanager",
       "name": "data-manager",
       "version": "8\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.loyalty\\.datamanager",
+      "name": "data-manager",
+      "version": "9\\.\\+"
+    },
+    {
+      "expires": "2023-06-01",
       "group": "com\\.mercadolibre\\.android\\.loyalty_ui_components",
       "version": "8\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.loyalty_ui_components",
+      "version": "9\\.\\+"
+    },
+    {
+      "expires": "2023-06-01",
       "group": "com\\.mercadolibre\\.android\\.loyalty\\.common",
       "name": "common",
       "version": "mercadolibre-7\\.\\+|mercadopago-7\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.loyalty\\.common",
+      "name": "common",
+      "version": "mercadolibre-8\\.\\+|mercadopago-8\\.\\+"
     },
     {
       "expires": "2023-03-20",
