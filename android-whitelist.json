@@ -2853,6 +2853,11 @@
       "group": "com\\.mercadolibre\\.android\\.errorhandler\\.v2",
       "name": "core",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.facebook\\.stetho",
+      "name": "stetho-okhttp3",
+      "version": "1\\.5\\.\\1"
     }
   ]
 }
