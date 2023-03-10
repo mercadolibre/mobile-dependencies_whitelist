@@ -2189,9 +2189,15 @@
       "version": "5\\.\\+"
     },
     {
+      "expires": "2023-03-31",
       "group": "com\\.mercadolibre\\.android\\.behavioral_sdk",
       "name": "behavioral",
       "version": "0\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.behavioral_sdk",
+      "name": "behavioral",
+      "version": "1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.addresses",
@@ -2842,6 +2848,11 @@
       "group": "com\\.mercadolibre\\.android\\.everest",
       "name": "platform",
       "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.errorhandler\\.v2",
+      "name": "core",
+      "version": "1\\.\\+"
     }
   ]
 }
