@@ -731,8 +731,13 @@
       "version": "27\\.\\+"
     },
     {
+      "expires": "2023-10-30",
       "group": "com\\.mercadolibre\\.android\\.commons",
       "version": "28\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.commons",
+      "version": "29\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point\\.lot\\.management",
@@ -2853,6 +2858,11 @@
       "group": "com\\.mercadolibre\\.android\\.errorhandler\\.v2",
       "name": "core",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "org\\.jetbrains\\.kotlin",
+      "name": "kotlin-parcelize-runtime",
+      "version": "1\\.5\\.32"
     }
   ]
 }
