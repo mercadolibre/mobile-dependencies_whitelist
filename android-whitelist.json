@@ -1070,11 +1070,6 @@
       "version": "mercadopago-3\\.\\+"
     },
     {
-      "expires": "2023-03-06",
-      "group": "com\\.mercadolibre\\.android\\.mlwebkit",
-      "version": "4.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.mlwebkit",
       "version": "6.\\+"
     },
@@ -1099,35 +1094,14 @@
       "version": "3\\.\\+"
     },
     {
-      "description": "This library will be deprecated by upgrade of AGP 7.2.2",
-      "expires": "2023-03-06",
-      "group": "com\\.mercadolibre\\.android\\.home\\.toolkit",
-      "name": "core",
-      "version": "2\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.home\\.toolkit",
       "name": "core",
       "version": "3\\.\\+"
     },
     {
-      "description": "This library will be deprecated by upgrade of AGP 7.2.2",
-      "expires": "2023-03-06",
-      "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
-      "name": "home",
-      "version": "mercadopago-3\\.+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
       "name": "home",
       "version": "mercadopago-4\\.+"
-    },
-    {
-      "description": "This library will be deprecated by upgrade of AGP 7.2.2",
-      "expires": "2023-03-06",
-      "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
-      "name": "sections",
-      "version": "mercadopago-3\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
@@ -1285,12 +1259,6 @@
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
       "name": "entities_fcu",
       "version": "8\\.+"
-    },
-    {
-      "expires": "2023-03-10",
-      "group": "com\\.mercadolibre\\.android\\.point\\.mpos",
-      "name": "mpos",
-      "version": "4\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point\\.mpos",
