@@ -443,6 +443,12 @@
       "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
     },
     {
+      "name": "PxPmSelector",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
+    },
+    {
       "name": "MLCart",
       "source": "private",
       "target": "production",
