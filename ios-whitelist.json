@@ -1736,6 +1736,12 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "Qualtrics",
+      "source": "private",
+      "target": "production",
+      "version": "2.9.1"
     }
   ]
 }
