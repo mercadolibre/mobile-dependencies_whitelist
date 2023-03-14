@@ -2577,24 +2577,48 @@
       "version": "2\\.\\+"
     },
     {
+      "expires": "2023-05-03",
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "seller",
-      "version": "8\\.\\+"
+      "version": "9\\.\\+"
+    },
+    {
+      "group": "com\\.mercadopago\\.android\\.cashin",
+      "name": "seller",
+      "version": "10\\.\\+"
+    },
+    {
+      "expires": "2023-05-03",
+      "group": "com\\.mercadopago\\.android\\.cashin",
+      "name": "payer",
+      "version": "9\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "payer",
-      "version": "8\\.\\+"
+      "version": "10\\.\\+"
+    },
+    {
+      "expires": "2023-05-03",
+      "group": "com\\.mercadopago\\.android\\.cashin",
+      "name": "commons",
+      "version": "9\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "commons",
-      "version": "8\\.\\+"
+      "version": "10\\.\\+"
+    },
+    {
+      "expires": "2023-05-03",
+      "group": "com\\.mercadolibre\\.android\\.cashout",
+      "name": "cashout",
+      "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cashout",
       "name": "cashout",
-      "version": "5\\.\\+"
+      "version": "7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
