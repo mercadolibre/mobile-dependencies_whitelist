@@ -199,9 +199,15 @@
       "version": "19\\.2\\.0"
     },
     {
+      "expires": "2023-04-25",
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-base",
       "version": "17\\.6\\.0"
+    },
+    {
+      "group": "com\\.google\\.android\\.gms",
+      "name": "play-services-base",
+      "version": "18\\.1\\.0"
     },
     {
       "group": "com\\.google\\.android\\.gms",
@@ -702,9 +708,16 @@
       "version": "2\\.\\+"
     },
     {
+      "description": "This library will be deprecated after the migration to AGP 7, new version 3.0.0 will be enabled",
+      "expires": "2023-03-31",
       "group": "com\\.mercadolibre\\.android\\.credits\\.toolkit",
       "name": "toolkit",
       "version": "2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.credits\\.toolkit",
+      "name": "toolkit",
+      "version": "3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.credits\\.behaviour",
@@ -731,8 +744,13 @@
       "version": "27\\.\\+"
     },
     {
+      "expires": "2023-10-30",
       "group": "com\\.mercadolibre\\.android\\.commons",
       "version": "28\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.commons",
+      "version": "29\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point\\.lot\\.management",
@@ -1040,7 +1058,7 @@
     },
     {
       "description": "The version of this library will be deprecated.",
-      "expires": "2023-06-01",
+      "expires": "2023-03-09",
       "group": "com\\.mercadolibre\\.android\\.security",
       "name": "attestation",
       "version": "7\\.\\+"
@@ -1063,11 +1081,6 @@
       "group": "com\\.mercadolibre\\.android\\.navigation_manager",
       "name": "tabbar",
       "version": "mercadopago-3\\.\\+"
-    },
-    {
-      "expires": "2023-03-06",
-      "group": "com\\.mercadolibre\\.android\\.mlwebkit",
-      "version": "4.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.mlwebkit",
@@ -1094,35 +1107,14 @@
       "version": "3\\.\\+"
     },
     {
-      "description": "This library will be deprecated by upgrade of AGP 7.2.2",
-      "expires": "2023-03-06",
-      "group": "com\\.mercadolibre\\.android\\.home\\.toolkit",
-      "name": "core",
-      "version": "2\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.home\\.toolkit",
       "name": "core",
       "version": "3\\.\\+"
     },
     {
-      "description": "This library will be deprecated by upgrade of AGP 7.2.2",
-      "expires": "2023-03-06",
-      "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
-      "name": "home",
-      "version": "mercadopago-3\\.+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
       "name": "home",
       "version": "mercadopago-4\\.+"
-    },
-    {
-      "description": "This library will be deprecated by upgrade of AGP 7.2.2",
-      "expires": "2023-03-06",
-      "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
-      "name": "sections",
-      "version": "mercadopago-3\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
@@ -1280,12 +1272,6 @@
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
       "name": "entities_fcu",
       "version": "8\\.+"
-    },
-    {
-      "expires": "2023-03-10",
-      "group": "com\\.mercadolibre\\.android\\.point\\.mpos",
-      "name": "mpos",
-      "version": "4\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point\\.mpos",
@@ -2189,9 +2175,15 @@
       "version": "5\\.\\+"
     },
     {
+      "expires": "2023-03-31",
       "group": "com\\.mercadolibre\\.android\\.behavioral_sdk",
       "name": "behavioral",
       "version": "0\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.behavioral_sdk",
+      "name": "behavioral",
+      "version": "1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.addresses",
@@ -2326,19 +2318,26 @@
       "version": "9\\.+"
     },
     {
+      "expires": "2023-04-25",
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-mlkit-text-recognition",
       "version": "16\\.1\\.3"
     },
     {
       "group": "com\\.google\\.android\\.gms",
+      "name": "play-services-mlkit-text-recognition",
+      "version": "18\\.0\\.2"
+    },
+    {
+      "expires": "2023-04-25",
+      "group": "com\\.google\\.android\\.gms",
       "name": "play-services-mlkit-barcode-scanning",
       "version": "16\\.1\\.4"
     },
     {
-      "group": "com\\.google\\.mlkit",
-      "name": "barcode-scanning",
-      "version": "16\\.1\\.2"
+      "group": "com\\.google\\.android\\.gms",
+      "name": "play-services-mlkit-barcode-scanning",
+      "version": "18\\.1\\.0"
     },
     {
       "expires": "2023-04-17",
@@ -2689,7 +2688,7 @@
     {
       "group": "com\\.bitmovin\\.player",
       "name": "player",
-      "version": "3\\.21\\.0"
+      "version": "3\\.33\\.0"
     },
     {
       "group": "com\\.google\\.ads\\.interactivemedia.\\v3",
@@ -2699,7 +2698,7 @@
     {
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-cast-framework",
-      "version": "21\\.0\\.1"
+      "version": "21\\.2\\.0"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.developer_mode",
@@ -2859,6 +2858,11 @@
       "group": "com\\.mercadolibre\\.android\\.errorhandler\\.v2",
       "name": "core",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "org\\.jetbrains\\.kotlin",
+      "name": "kotlin-parcelize-runtime",
+      "version": "1\\.5\\.32"
     }
   ]
 }
