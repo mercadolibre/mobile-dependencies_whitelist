@@ -1036,25 +1036,16 @@
       "version": "3\\.\\+"
     },
     {
-      "group": "com\\.mercadolibre\\.android\\.search",
-      "name": "compats",
-      "version": "14\\.\\+"
-    },
-    {
-      "group": "com\\.mercadolibre\\.android\\.search",
-      "name": "input",
-      "version": "14\\.\\+"
-    },
-    {
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android\\.search",
-      "name": "search",
-      "version": "14\\.\\+"
-    },
-    {
+      "description": "The version of this library will be deprecated.",
+      "expires": "2023-04-13",
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "search",
       "version": "15\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.search",
+      "name": "search",
+      "version": "16\\.\\+"
     },
     {
       "description": "The version of this library will be deprecated.",
@@ -1097,9 +1088,16 @@
       "version": "7\\.\\+"
     },
     {
+      "description": "The version of this library will be deprecated.",
+      "expires": "2023-04-13",
       "group": "com\\.mercadolibre\\.android\\.vpp",
       "name": "vip_commons",
       "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.vpp",
+      "name": "vip_commons",
+      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
