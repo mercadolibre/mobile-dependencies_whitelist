@@ -2417,6 +2417,11 @@
       "version": "0\\.+"
     },
     {
+      "group": "com\\.mercadolibre\\.smartpos\\.android\\.sdk_newland",
+      "name": "bcnewland",
+      "version": "1\\.235\\.0"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.point_more_options",
       "name": "point_moreoptions",
       "version": "1\\.+"
@@ -2440,7 +2445,7 @@
     {
       "group": "com\\.mercadolibre\\.android\\.point_smart_pos_sdk",
       "name": "device",
-      "version": "dev-4\\.\\+|a910-4\\.\\+|d20-4\\.\\+|mp600-4\\.\\+|4\\.\\+"
+      "version": "dev-4\\.\\+|a910-4\\.\\+|d20-4\\.\\+|n950-4\\.\\+|4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point_printer",
@@ -2464,7 +2469,7 @@
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point_printer",
-      "name": "controller_mp600",
+      "name": "controller_n950",
       "version": "2\\.+"
     },
     {
