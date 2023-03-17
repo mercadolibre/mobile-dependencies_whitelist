@@ -1463,6 +1463,20 @@
       "version": "1\\.\\+"
     },
     {
+      "description": "This package version will be updated as loyalty from now on. More Info: https://sites.google.com/mercadolibre.com/loyalty-wiki/nativo/dependencias-loyalty",
+      "expires": "2023-05-01",
+      "group": "com\\.mercadolibre\\.android\\.loyalty",
+      "name": "webview",
+      "version": "mercadolibre-16\\.\\+|mercadopago-16\\.\\+"
+    },
+    {
+      "description": "This package version will be updated as loyalty from now on. More Info: https://sites.google.com/mercadolibre.com/loyalty-wiki/nativo/dependencias-loyalty",
+      "expires": "2023-05-01",
+      "group": "com\\.mercadolibre\\.android\\.loyalty",
+      "name": "drawer",
+      "version": "16\\.\\+"
+    },
+    {
       "expires": "2023-06-01",
       "group": "com\\.mercadolibre\\.android\\.loyalty",
       "version": "mercadolibre-16\\.\\+|mercadopago-16\\.\\+"
