@@ -699,8 +699,14 @@
       "version": "3\\.\\+"
     },
     {
+      "description": "This library will be deprecated after the migration to AGP 7, new version 5.0.0 will be enabled",
+      "expires": "2023-03-23",
       "group": "com\\.mercadolibre\\.android\\.credits\\.ui_components",
       "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.credits\\.ui_components",
+      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.credits\\.floxclient",
