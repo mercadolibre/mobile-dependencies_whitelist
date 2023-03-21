@@ -693,8 +693,14 @@
       "version": "3\\.\\+"
     },
     {
+      "description": "This library will be deprecated after the migration to AGP 7, new version 5.0.0 will be enabled",
+      "expires": "2023-03-24",
       "group": "com\\.mercadolibre\\.android\\.credits\\.ui_components",
       "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.credits\\.ui_components",
+      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.credits\\.floxclient",
@@ -2425,6 +2431,11 @@
       "version": "0\\.+"
     },
     {
+      "group": "com\\.mercadolibre\\.smartpos\\.android\\.sdk_newland",
+      "name": "bcnewland",
+      "version": "1\\.+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.point_more_options",
       "name": "point_moreoptions",
       "version": "1\\.+"
@@ -2448,7 +2459,7 @@
     {
       "group": "com\\.mercadolibre\\.android\\.point_smart_pos_sdk",
       "name": "device",
-      "version": "dev-4\\.\\+|a910-4\\.\\+|d20-4\\.\\+|mp600-4\\.\\+|4\\.\\+"
+      "version": "dev-4\\.\\+|a910-4\\.\\+|d20-4\\.\\+|n950-4\\.\\+|4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point_printer",
@@ -2472,7 +2483,7 @@
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point_printer",
-      "name": "controller_mp600",
+      "name": "controller_n950",
       "version": "2\\.+"
     },
     {
