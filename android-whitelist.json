@@ -2139,9 +2139,15 @@
       "version": "5\\.\\+"
     },
     {
+      "expires": "2023-04-15",
       "group": "com\\.mercadolibre\\.android\\.navigation",
       "name": "menu",
       "version": "mercadolibre-7\\.\\+|mercadopago-7\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.navigation",
+      "name": "menu",
+      "version": "mercadolibre-9\\.\\+|mercadopago-9\\.\\+"
     },
     {
       "group": "com\\.squareup\\.leakcanary",
