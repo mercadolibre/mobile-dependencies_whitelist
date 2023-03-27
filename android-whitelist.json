@@ -1008,6 +1008,7 @@
       "version": "6\\.\\+"
     },
     {
+      "expires": "2023-06-01",
       "group": "com\\.mercadolibre\\.android\\.comparator",
       "version": "7\\.\\+"
     },
@@ -1264,9 +1265,15 @@
       "version": "8\\.+"
     },
     {
+      "expires": "2023-04-30",
       "group": "com\\.mercadolibre\\.android\\.point\\.mpos",
       "name": "mpos",
       "version": "5\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point\\.mpos",
+      "name": "mpos",
+      "version": "6\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.payment_flow",
@@ -2654,7 +2661,7 @@
     {
       "group": "com\\.mercadolibre\\.android\\.ccap",
       "name": "congrats-sdk",
-      "version": "0\\.+"
+      "version": "1\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.data_privacy_helper",
@@ -2743,6 +2750,11 @@
     {
       "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
       "name": "core",
+      "version": "2\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
+      "name": "comparator",
       "version": "2\\.+"
     },
     {
