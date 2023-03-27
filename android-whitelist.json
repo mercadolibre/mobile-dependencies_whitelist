@@ -693,12 +693,6 @@
       "version": "3\\.\\+"
     },
     {
-      "description": "This library will be deprecated after the migration to AGP 7, new version 5.0.0 will be enabled",
-      "expires": "2023-03-24",
-      "group": "com\\.mercadolibre\\.android\\.credits\\.ui_components",
-      "version": "4\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.credits\\.ui_components",
       "version": "5\\.\\+"
     },
@@ -766,11 +760,6 @@
       "version": "6\\.\\+"
     },
     {
-      "expires": "2023-03-20",
-      "group": "com\\.mercadolibre\\.android\\.instore_ui_components",
-      "version": "5\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.instore_ui_components",
       "version": "6\\.\\+"
     },
@@ -805,12 +794,6 @@
       "group": "com\\.mercadolibre\\.android\\.history",
       "name": "history_manager",
       "version": "5\\.\\+"
-    },
-    {
-      "expires": "2023-03-20",
-      "group": "com\\.mercadolibre\\.android\\.instore\\.home\\.sections",
-      "name": "instore_home_sections",
-      "version": "mercadopago-4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.instore\\.home\\.sections",
@@ -1101,9 +1084,16 @@
       "version": "4\\.\\+"
     },
     {
+      "description": "This library is deprecated by bump of AGP 7.2.2",
+      "expires": "2023-03-31",
       "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
       "name": "api",
       "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
+      "name": "api",
+      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.home\\.toolkit",
@@ -1121,14 +1111,28 @@
       "version": "mercadopago-4\\.+"
     },
     {
+      "description": "This library is deprecated by bump of AGP 7.2.2",
+      "expires": "2023-03-31",
       "group": "com\\.mercadolibre\\.android\\.usersections\\",
       "name": "sections",
       "version": "mercadopago-4\\.+"
     },
     {
+      "description": "This library is deprecated by bump of AGP 7.2.2",
+      "expires": "2023-03-31",
       "group": "com\\.mercadolibre\\.android\\.usersections",
       "name": "ui-sections",
       "version": "mercadolibre-4\\.+|mercadopago-4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.usersections\\",
+      "name": "sections",
+      "version": "mercadopago-5\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.usersections",
+      "name": "ui-sections",
+      "version": "mercadolibre-5\\.+|mercadopago-5\\.\\+"
     },
     {
       "expires": "2023-10-31",
@@ -1514,12 +1518,6 @@
       "version": "mercadolibre-8\\.\\+|mercadopago-8\\.\\+"
     },
     {
-      "expires": "2023-03-20",
-      "group": "com\\.mercadolibre\\.android\\.mlbusinesscomponents",
-      "name": "mlbusinesscomponents",
-      "version": "3\\.+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.mlbusinesscomponents",
       "name": "mlbusinesscomponents",
       "version": "4\\.+"
@@ -1617,12 +1615,6 @@
       "group": "com\\.mercadolibre\\.android\\.andes_integrations",
       "name": "integrations",
       "version": "mercadopago-1\\.\\+|mercadolibre-1\\.\\+"
-    },
-    {
-      "expires": "2023-03-20",
-      "group": "com\\.mercadolibre\\.android\\.discounts_touchpoint",
-      "name": "discounts_touchpoint",
-      "version": "mercadopago-4\\.\\+|mercadolibre-4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.discounts_touchpoint",
@@ -2768,14 +2760,26 @@
       "version": "1\\.+"
     },
     {
+      "expires": "2023-04-22",
       "group": "com\\.mercadolibre\\.android\\.reviews3",
       "name": "core",
       "version": "4\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.reviews3",
+      "name": "core",
+      "version": "5\\.+"
+    },
+    {
+      "expires": "2023-04-22",
+      "group": "com\\.mercadolibre\\.android\\.reviews3",
       "name": "form",
       "version": "4\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.reviews3",
+      "name": "form",
+      "version": "5\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.reviews",
