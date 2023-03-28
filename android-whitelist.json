@@ -1020,25 +1020,40 @@
       "version": "3\\.\\+"
     },
     {
+      "description": "The version of this library will be deprecated.",
+      "expires": "2023-04-13",
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "compats",
-      "version": "14\\.\\+"
+      "version": "15\\.\\+"
+    },
+    {
+      "description": "The version of this library will be deprecated.",
+      "expires": "2023-04-13",
+      "group": "com\\.mercadolibre\\.android\\.search",
+      "name": "input",
+      "version": "15\\.\\+"
+    },
+    {
+      "description": "The version of this library will be deprecated.",
+      "expires": "2023-04-13",
+      "group": "com\\.mercadolibre\\.android\\.search",
+      "name": "search",
+      "version": "15\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.search",
+      "name": "compats",
+      "version": "16\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "input",
-      "version": "14\\.\\+"
-    },
-    {
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android\\.search",
-      "name": "search",
-      "version": "14\\.\\+"
+      "version": "16\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "search",
-      "version": "15\\.\\+"
+      "version": "16\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.security",
