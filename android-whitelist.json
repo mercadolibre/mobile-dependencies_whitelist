@@ -838,9 +838,15 @@
       "version": "8\\.\\+"
     },
     {
+      "expires": "2023-04-30",
       "group": "com\\.mercadolibre\\.android\\.maps",
       "name": "core",
       "version": "8\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.maps",
+      "name": "core",
+      "version": "9\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.marketplace\\.map",
@@ -2725,6 +2731,11 @@
     {
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "ui_component",
+      "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cash_rails",
+      "name": "commons",
       "version": "1\\.\\+"
     },
     {
