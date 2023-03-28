@@ -1150,15 +1150,15 @@
       "version": "mercadolibre-5\\.+|mercadopago-5\\.\\+"
     },
     {
-      "expires": "2023-10-31",
+      "expires": "2023-05-15",
       "group": "com\\.mercadolibre\\.android\\.mercadocoin",
       "name": "cryptodata",
-      "version": "3\\.\\+"
+      "version": "3\\.\\+|4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.mercadocoin",
       "name": "cryptodata",
-      "version": "4\\.\\+"
+      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.pendings",
