@@ -443,6 +443,12 @@
       "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
     },
     {
+      "name": "PxPmSelector",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
+    },
+    {
       "name": "MLCart",
       "source": "private",
       "target": "production",
@@ -1733,6 +1739,12 @@
     },
     {
       "name": "ErrorHandler",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "FeatureFlagConfiguration",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
