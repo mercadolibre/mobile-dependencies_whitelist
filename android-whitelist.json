@@ -838,9 +838,15 @@
       "version": "8\\.\\+"
     },
     {
+      "expires": "2023-04-30",
       "group": "com\\.mercadolibre\\.android\\.maps",
       "name": "core",
       "version": "8\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.maps",
+      "name": "core",
+      "version": "9\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.marketplace\\.map",
@@ -1182,7 +1188,7 @@
     },
     {
       "description": "This library will be deprecated",
-      "expires": "2023-03-31",
+      "expires": "2023-05-02",
       "group": "com\\.mercadopago\\.android\\.congrats",
       "name": "congrats",
       "version": "7\\.\\+"
@@ -2737,6 +2743,11 @@
     {
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "ui_component",
+      "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cash_rails",
+      "name": "commons",
       "version": "1\\.\\+"
     },
     {
