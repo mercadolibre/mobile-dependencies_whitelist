@@ -3009,6 +3009,21 @@
       "version": "production-1\\.\\+"
     },
     {
+      "group": "com\\.qualtrics",
+      "name": "digital",
+      "version": "2\\.9\\.0"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.ml_qualtrics",
+      "name": "core",
+      "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.ml_qualtrics",
+      "name": "ui",
+      "version": "1\\.\\+"
+    },
+    {
       "group": "org\\.jetbrains\\.kotlin",
       "name": "kotlin-parcelize-runtime",
       "version": "1\\.5\\.32"
