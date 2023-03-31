@@ -1433,7 +1433,7 @@
     },
     {
       "description": "migrate help: https://developer.android.com/topic/libraries/view-binding/migration",
-      "expires": "2023-03-31",
+      "expires": "2023-05-15",
       "group": "org\\.jetbrains\\.kotlin",
       "name": "kotlin-android-extensions-runtime",
       "version": "1\\.5\\.32"
@@ -1759,7 +1759,7 @@
       "version": "3\\.6\\.3|4.+"
     },
     {
-      "expires": "2023-03-31",
+      "expires": "2023-05-15",
       "group": "androidx\\.databinding",
       "name": "viewbinding",
       "version": "3\\.6\\.3|4.+"
