@@ -472,6 +472,12 @@
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "multiimageview",
+      "version": "8\\.\\+"
+    },
+    {
+      "expires": "2023-04-30",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "multiimageview",
       "version": "7\\.\\+"
     },
     {
@@ -527,14 +533,26 @@
       "version": "2\\.\\+"
     },
     {
+      "expires": "2023-06-30",
       "group": "com\\.mercadolibre\\.android\\.notifications_helpers",
       "name": "notifications_permissions",
       "version": "3\\.\\+"
     },
     {
+      "expires": "2023-06-30",
       "group": "com\\.mercadolibre\\.android\\.notifications_helpers",
       "name": "typed_modal",
       "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.notifications_helpers",
+      "name": "notifications_permissions",
+      "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.notifications_helpers",
+      "name": "typed_modal",
+      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -1156,15 +1174,15 @@
       "version": "mercadolibre-5\\.+|mercadopago-5\\.\\+"
     },
     {
-      "expires": "2023-10-31",
+      "expires": "2023-05-15",
       "group": "com\\.mercadolibre\\.android\\.mercadocoin",
       "name": "cryptodata",
-      "version": "3\\.\\+"
+      "version": "3\\.\\+|4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.mercadocoin",
       "name": "cryptodata",
-      "version": "4\\.\\+"
+      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.pendings",
@@ -2069,6 +2087,11 @@
       "version": "4\\.5\\.1"
     },
     {
+      "group": "org\\.robolectric",
+      "name": "shadowapi",
+      "version": "4\\.5\\.1"
+    },
+    {
       "group": "junit",
       "name": "junit",
       "version": "4\\.13"
@@ -2402,14 +2425,26 @@
       "version": "18\\.1\\.0"
     },
     {
+      "expires": "2023-04-17",
       "group": "androidx\\.camera",
       "name": "camera-camera2",
       "version": "1\\.0\\.0"
     },
     {
+      "expires": "2023-04-17",
       "group": "androidx\\.camera",
       "name": "camera-lifecycle",
       "version": "1\\.0\\.0"
+    },
+    {
+      "group": "androidx\\.camera",
+      "name": "camera-camera2",
+      "version": "1\\.1\\.0"
+    },
+    {
+      "group": "androidx\\.camera",
+      "name": "camera-lifecycle",
+      "version": "1\\.1\\.0"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
@@ -2983,6 +3018,21 @@
       "group": "com\\.mercadolibre\\.android\\.errorhandler\\.v2",
       "name": "core",
       "version": "production-1\\.\\+"
+    },
+    {
+      "group": "com\\.qualtrics",
+      "name": "digital",
+      "version": "2\\.9\\.0"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.ml_qualtrics",
+      "name": "core",
+      "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.ml_qualtrics",
+      "name": "ui",
+      "version": "1\\.\\+"
     },
     {
       "group": "org\\.jetbrains\\.kotlin",
