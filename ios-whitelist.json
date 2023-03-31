@@ -1744,6 +1744,24 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "Qualtrics",
+      "source": "public",
+      "target": "production",
+      "version": "2.9.1"
+    },
+    {
+      "name": "MLQualtrics/Core",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLQualtrics/UI",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "FeatureFlagConfiguration",
       "source": "private",
       "target": "production",
