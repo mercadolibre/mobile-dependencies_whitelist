@@ -2700,6 +2700,11 @@
       "group": "org\\.jetbrains\\.kotlin",
       "name": "kotlin-parcelize-runtime",
       "version": "1\\.5\\.32"
+    },
+    {
+      "group": "com\\.facebook\\.stetho",
+      "name": "stetho-okhttp3",
+      "version": "1\\.5\\.\\1"
     }
   ]
 }
