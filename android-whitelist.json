@@ -333,6 +333,11 @@
       "name": "firebase-messaging"
     },
     {
+      "expires": "2023-10-01",
+      "group": "com\\.google\\.firebase",
+      "name": "firebase-perf"
+    },
+    {
       "group": "com\\.google\\.firebase",
       "name": "firebase-bom",
       "version": "26\\.8\\.0"
