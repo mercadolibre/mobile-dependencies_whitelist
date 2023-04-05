@@ -199,15 +199,9 @@
       "version": "19\\.2\\.0"
     },
     {
-      "expires": "2023-04-25",
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-base",
       "version": "17\\.6\\.0"
-    },
-    {
-      "group": "com\\.google\\.android\\.gms",
-      "name": "play-services-base",
-      "version": "18\\.1\\.0"
     },
     {
       "group": "com\\.google\\.android\\.gms",
@@ -333,6 +327,11 @@
       "name": "firebase-messaging"
     },
     {
+      "expires": "2023-10-01",
+      "group": "com\\.google\\.firebase",
+      "name": "firebase-perf"
+    },
+    {
       "group": "com\\.google\\.firebase",
       "name": "firebase-bom",
       "version": "26\\.8\\.0"
@@ -450,6 +449,13 @@
       "group": "com\\.mercadolibre\\.android",
       "name": "multiimageview",
       "version": "8\\.\\+"
+    },
+    {
+      "description": "this lib has been deprecated, we're using com.mercadolibre.android.restclient",
+      "expires": "2023-12-31",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "networking",
+      "version": "10\\.\\+"
     },
     {
       "expires": "2023-04-30",
@@ -2107,26 +2113,19 @@
       "version": "9\\.+"
     },
     {
-      "expires": "2023-04-25",
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-mlkit-text-recognition",
       "version": "16\\.1\\.3"
     },
     {
       "group": "com\\.google\\.android\\.gms",
-      "name": "play-services-mlkit-text-recognition",
-      "version": "18\\.0\\.2"
-    },
-    {
-      "expires": "2023-04-25",
-      "group": "com\\.google\\.android\\.gms",
       "name": "play-services-mlkit-barcode-scanning",
       "version": "16\\.1\\.4"
     },
     {
-      "group": "com\\.google\\.android\\.gms",
-      "name": "play-services-mlkit-barcode-scanning",
-      "version": "18\\.1\\.0"
+      "group": "com\\.google\\.mlkit",
+      "name": "barcode-scanning",
+      "version": "16\\.1\\.2"
     },
     {
       "expires": "2023-04-17",
@@ -2225,29 +2224,59 @@
       "version": "dev-4\\.\\+|a910-4\\.\\+|d20-4\\.\\+|n950-4\\.\\+|4\\.\\+"
     },
     {
+      "expires": "2023-06-01",
       "group": "com\\.mercadolibre\\.android\\.point_printer",
       "name": "core",
       "version": "2\\.+"
     },
     {
+      "expires": "2023-06-01",
       "group": "com\\.mercadolibre\\.android\\.point_printer",
       "name": "renderer",
       "version": "2\\.+"
     },
     {
+      "expires": "2023-06-01",
       "group": "com\\.mercadolibre\\.android\\.point_printer",
       "name": "controller_a910",
       "version": "2\\.+"
     },
     {
+      "expires": "2023-06-01",
       "group": "com\\.mercadolibre\\.android\\.point_printer",
       "name": "controller_d20",
       "version": "2\\.+"
     },
     {
+      "expires": "2023-06-01",
       "group": "com\\.mercadolibre\\.android\\.point_printer",
       "name": "controller_n950",
       "version": "2\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_printer",
+      "name": "core",
+      "version": "3\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_printer",
+      "name": "renderer",
+      "version": "3\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_printer",
+      "name": "controller_a910",
+      "version": "3\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_printer",
+      "name": "controller_d20",
+      "version": "3\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_printer",
+      "name": "controller_n950",
+      "version": "3\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
