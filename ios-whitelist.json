@@ -1,11 +1,16 @@
 {
   "whitelist": [
     {
-      "expires": "2023-03-01",
-      "name": "AdvertisingADN",
+      "name": "OMSDK",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "Viewability",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+"
     },
     {
       "name": "AdvertisingADN",
@@ -433,6 +438,12 @@
     },
     {
       "name": "MLCardDrawer",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
+    },
+    {
+      "name": "PxPmSelector",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
@@ -1617,7 +1628,7 @@
       "version": "3.26.0"
     },
     {
-      "name": "google-cast-sdk",
+      "name": "google-cast-sdk-no-bluetooth",
       "source": "public",
       "target": "production",
       "version": "4.7.0"
@@ -1671,22 +1682,96 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "expires": "2023-05-31",
       "name": "DatadogSDK",
       "source": "public",
       "target": "production",
       "version": "^~>\\s?(1.14.0)$"
     },
     {
+      "expires": "2023-05-31",
       "name": "DatadogSDKCrashReporting",
       "source": "public",
       "target": "production",
       "version": "^~>\\s?(1.14.0)$"
     },
     {
+      "name": "DatadogSDK",
+      "source": "public",
+      "target": "production",
+      "version": "^~>\\s?(1.16.0)$"
+    },
+    {
+      "name": "DatadogSDKCrashReporting",
+      "source": "public",
+      "target": "production",
+      "version": "^~>\\s?(1.16.0)$"
+    },
+    {
       "name": "Dogfooding",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "Everest/Core",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "Everest/Data",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "Everest/Networking",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "Everest/UI",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "ErrorHandler",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "Qualtrics",
+      "source": "public",
+      "target": "production",
+      "version": "2.9.1"
+    },
+    {
+      "name": "MLQualtrics/Core",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLQualtrics/UI",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "FeatureFlagConfiguration",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "Matt",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
     }
   ]
 }
