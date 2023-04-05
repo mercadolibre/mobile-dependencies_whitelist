@@ -26,9 +26,15 @@
       "version": "1\\.+"
     },
     {
+      "expires": "2023-04-28",
       "group": "com\\.mercadolibre\\.android\\.gamification",
       "name": "gamification",
       "version": "2\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.gamification",
+      "name": "gamification",
+      "version": "3\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
@@ -193,15 +199,9 @@
       "version": "19\\.2\\.0"
     },
     {
-      "expires": "2023-04-25",
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-base",
       "version": "17\\.6\\.0"
-    },
-    {
-      "group": "com\\.google\\.android\\.gms",
-      "name": "play-services-base",
-      "version": "18\\.1\\.0"
     },
     {
       "group": "com\\.google\\.android\\.gms",
@@ -327,7 +327,7 @@
       "name": "firebase-messaging"
     },
     {
-      "expires": "2023-04-01",
+      "expires": "2023-10-01",
       "group": "com\\.google\\.firebase",
       "name": "firebase-perf"
     },
@@ -391,32 +391,14 @@
       "version": "23\\.\\+"
     },
     {
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "authentication-enrollment",
-      "version": "22\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android",
       "name": "authentication",
       "version": "23\\.\\+"
     },
     {
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "authentication",
-      "version": "22\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android",
       "name": "carddrawer",
       "version": "3\\.\\+"
-    },
-    {
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "configuration-manager",
-      "version": "7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -429,9 +411,15 @@
       "version": "6\\.\\+"
     },
     {
+      "expires": "2023-05-15",
       "group": "com\\.mercadolibre\\.android",
       "name": "login",
       "version": "mercadopago-16\\.\\+|mercadolibre-16\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "login",
+      "version": "mercadopago-17\\.\\+|mercadolibre-17\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.authchallenges",
@@ -454,12 +442,6 @@
       "version": "1\\.\\+"
     },
     {
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "melidata-sdk",
-      "version": "15\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android",
       "name": "melidata-sdk",
       "version": "16\\.\\+"
@@ -475,31 +457,19 @@
       "version": "8\\.\\+"
     },
     {
+      "description": "this lib has been deprecated, we're using com.mercadolibre.android.restclient",
+      "expires": "2023-12-31",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "networking",
+      "version": "10\\.\\+"
+    },
+    {
       "expires": "2023-04-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "multiimageview",
       "version": "7\\.\\+"
     },
     {
-      "description": "this lib has been deprecated, we're using com.mercadolibre.android.restclient",
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "networking",
-      "version": "10\\.\\+"
-    },
-    {
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "notifications",
-      "version": "21\\.\\+"
-    },
-    {
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "notifications_commons",
-      "version": "21\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android",
       "name": "notifications",
       "version": "22\\.\\+"
@@ -508,23 +478,11 @@
       "group": "com\\.mercadolibre\\.android",
       "name": "notifications_commons",
       "version": "22\\.\\+"
-    },
-    {
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android\\.rich_notifications",
-      "name": "carousel",
-      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.rich_notifications",
       "name": "carousel",
       "version": "5\\.\\+"
-    },
-    {
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android\\.notifications_helpers",
-      "name": "notifications_permissions",
-      "version": "1\\.\\+"
     },
     {
       "expires": "2023-05-31",
@@ -578,36 +536,6 @@
       "group": "androidx\\.test\\.ext",
       "name": "junit",
       "version": "1\\.1\\.3"
-    },
-    {
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "restclient",
-      "version": "19\\.\\+"
-    },
-    {
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "restclient-adapter-bus",
-      "version": "19\\.\\+"
-    },
-    {
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "restclient-adapter-rx2",
-      "version": "19\\.\\+"
-    },
-    {
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "restclient-converter-json",
-      "version": "19\\.\\+"
-    },
-    {
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "restclient-extension-header",
-      "version": "19\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -720,13 +648,6 @@
       "version": "2\\.\\+"
     },
     {
-      "description": "This library will be deprecated after the migration to AGP 7, new version 3.0.0 will be enabled",
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android\\.credits\\.toolkit",
-      "name": "toolkit",
-      "version": "2\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.credits\\.toolkit",
       "name": "toolkit",
       "version": "3\\.\\+"
@@ -736,9 +657,15 @@
       "version": "4\\.\\+"
     },
     {
+      "expires": "2023-04-30",
       "group": "com\\.mercadolibre\\.android\\.cross_app_links",
       "name": "core",
       "version": "mercadolibre-6\\.\\+|mercadopago-6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cross_app_links",
+      "name": "core",
+      "version": "mercadolibre-7\\.\\+|mercadopago-7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.charts",
@@ -749,11 +676,6 @@
       "group": "com\\.mercadolibre\\.android\\.classifieds",
       "name": "dynamic-flow",
       "version": "1\\.\\+"
-    },
-    {
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android\\.commons",
-      "version": "27\\.\\+"
     },
     {
       "expires": "2023-10-30",
@@ -773,30 +695,28 @@
       "version": "7\\.\\+"
     },
     {
+      "expires": "2023-05-31",
       "group": "com\\.mercadolibre\\.android\\.cpg",
       "name": "ui_components",
       "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cpg",
+      "name": "ui_components",
+      "version": "7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.instore_ui_components",
       "version": "6\\.\\+"
     },
     {
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android\\.flox",
-      "name": "engine",
-      "version": "8\\.\\+"
+      "group": "com\\.mercadolibre\\.android\\.instore_ui_components",
+      "version": "7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.flox",
       "name": "engine",
       "version": "9\\.\\+"
-    },
-    {
-      "expires": "2023-03-30",
-      "group": "com\\.mercadolibre\\.android\\.fluxclient",
-      "name": "flux-client",
-      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.fluxclient",
@@ -834,18 +754,6 @@
       "version": "mercadolibre-10\\.\\+|mercadopago-10\\.\\+"
     },
     {
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android\\.local\\.storage",
-      "name": "core",
-      "version": "7\\.\\+"
-    },
-    {
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android\\.local\\.storage",
-      "name": "kvs-defaults",
-      "version": "7\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.local\\.storage",
       "name": "core",
       "version": "8\\.\\+"
@@ -877,45 +785,18 @@
       "version": "mercadolibre-10\\.\\+|mercadopago-10\\.\\+"
     },
     {
-      "description": "This library will be deprecated by upgrade of AGP 7.2.2",
-      "expires": "2023-03-27",
-      "group": "com\\.mercadolibre\\.android\\.merchengine",
-      "version": "6\\.\\+|mercadopago-6\\.\\+|mercadolibre-6\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.merchengine",
       "version": "mercadopago-7\\.\\+|mercadolibre-7\\.\\+"
     },
     {
-      "description": "This library will be deprecated by upgrade of AGP 7.2.2",
-      "expires": "2023-03-27",
-      "group": "com\\.mercadolibre\\.android\\.merch_realestates",
-      "name": "merchrealestates",
-      "version": "3\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.merch_realestates",
       "name": "merchrealestates",
       "version": "4\\.\\+"
     },
     {
-      "description": "This library will be deprecated by upgrade of AGP 7.2.2",
-      "expires": "2023-03-27",
-      "group": "com\\.mercadolibre\\.android\\.merch_realestates",
-      "name": "mprealestates",
-      "version": "3\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.merch_realestates",
       "name": "mprealestates",
       "version": "4\\.\\+"
-    },
-    {
-      "description": "This library will be deprecated by upgrade of AGP 7.2.2",
-      "expires": "2023-03-27",
-      "group": "com\\.mercadolibre\\.android\\.merch_realestates",
-      "name": "dismisscontent",
-      "version": "3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.merch_realestates",
@@ -943,18 +824,6 @@
       "version": "9\\.\\+"
     },
     {
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
-      "name": "core",
-      "version": "10\\.\\+"
-    },
-    {
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
-      "name": "renderer-fresco",
-      "version": "10\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
       "name": "core",
       "version": "11\\.\\+"
@@ -968,24 +837,6 @@
       "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
       "name": "configurer",
       "version": "11\\.\\+"
-    },
-    {
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android\\.place",
-      "name": "annotation",
-      "version": "8\\.\\+"
-    },
-    {
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android\\.place",
-      "name": "core",
-      "version": "8\\.\\+"
-    },
-    {
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android\\.place",
-      "name": "processor",
-      "version": "8\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.place",
@@ -1123,13 +974,6 @@
       "version": "4\\.\\+"
     },
     {
-      "description": "This library is deprecated by bump of AGP 7.2.2",
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
-      "name": "api",
-      "version": "3\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
       "name": "api",
       "version": "4\\.\\+"
@@ -1148,20 +992,6 @@
       "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
       "name": "sections",
       "version": "mercadopago-4\\.+"
-    },
-    {
-      "description": "This library is deprecated by bump of AGP 7.2.2",
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android\\.usersections\\",
-      "name": "sections",
-      "version": "mercadopago-4\\.+"
-    },
-    {
-      "description": "This library is deprecated by bump of AGP 7.2.2",
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android\\.usersections",
-      "name": "ui-sections",
-      "version": "mercadolibre-4\\.+|mercadopago-4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.usersections\\",
@@ -1210,20 +1040,6 @@
       "group": "com\\.mercadopago\\.android\\.congrats",
       "name": "congrats",
       "version": "7\\.\\+"
-    },
-    {
-      "description": "This library will be deprecatedby upgrade of AGP 7.2.2",
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android\\.dami_ui_components",
-      "name": "ui_components",
-      "version": "2\\.\\+"
-    },
-    {
-      "description": "This library will be deprecatedby upgrade of AGP 7.2.2",
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android\\.dami_ui_components",
-      "name": "base_testapp",
-      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.dami_ui_components",
@@ -1427,7 +1243,7 @@
     },
     {
       "description": "migrate help: https://developer.android.com/topic/libraries/view-binding/migration",
-      "expires": "2023-03-31",
+      "expires": "2023-05-15",
       "group": "org\\.jetbrains\\.kotlin",
       "name": "kotlin-android-extensions-runtime",
       "version": "1\\.5\\.32"
@@ -1629,18 +1445,6 @@
       "version": "9\\.+"
     },
     {
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android\\.andesui",
-      "name": "coachmark",
-      "version": "6\\.\\+"
-    },
-    {
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android\\.andesui",
-      "name": "components",
-      "version": "6\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.andesui",
       "name": "coachmark",
       "version": "7\\.\\+"
@@ -1735,25 +1539,7 @@
       "version": "1\\.1\\.0"
     },
     {
-      "expires": "2023-03-31",
-      "group": "androidx\\.databinding",
-      "name": "databinding-common",
-      "version": "3\\.6\\.3|4.+"
-    },
-    {
-      "expires": "2023-03-31",
-      "group": "androidx\\.databinding",
-      "name": "databinding-runtime",
-      "version": "3\\.6\\.3|4.+"
-    },
-    {
-      "expires": "2023-03-31",
-      "group": "androidx\\.databinding",
-      "name": "databinding-adapters",
-      "version": "3\\.6\\.3|4.+"
-    },
-    {
-      "expires": "2023-03-31",
+      "expires": "2023-05-15",
       "group": "androidx\\.databinding",
       "name": "viewbinding",
       "version": "3\\.6\\.3|4.+"
@@ -2128,39 +1914,14 @@
       "version": "7\\.\\+"
     },
     {
-      "description": "This library will be deprecated by upgrade of AGP 7.2.2",
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android\\.fees_installments",
-      "name": "mlfees",
-      "version": "6\\.\\+"
-    },
-    {
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android\\.tfs_commons",
-      "name": "tracking",
-      "version": "mercadopago-4\\.\\+|mercadolibre-4\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.tfs_commons",
       "name": "tracking",
       "version": "mercadopago-5\\.\\+|mercadolibre-5\\.\\+"
     },
     {
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android\\.tfs_commons",
-      "name": "imageutils",
-      "version": "4\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.tfs_commons",
       "name": "imageutils",
       "version": "5\\.\\+"
-    },
-    {
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android\\.tfs_commons",
-      "name": "ktx",
-      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.tfs_commons",
@@ -2168,21 +1929,9 @@
       "version": "5\\.\\+"
     },
     {
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android\\.tfs_commons",
-      "name": "mvp",
-      "version": "4\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.tfs_commons",
       "name": "mvp",
       "version": "5\\.\\+"
-    },
-    {
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android\\.tfs_commons",
-      "name": "errorhandler",
-      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.tfs_commons",
@@ -2221,32 +1970,14 @@
       "version": "5\\.22\\.4"
     },
     {
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "notificationcenter",
-      "version": "mercadolibre-13\\.\\+|mercadopago-13\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android",
       "name": "notificationcenter",
       "version": "mercadolibre-14\\.\\+|mercadopago-14\\.\\+"
     },
     {
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android\\.devices_sdk",
-      "name": "devices",
-      "version": "4\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.devices_sdk",
       "name": "devices",
       "version": "5\\.\\+"
-    },
-    {
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android\\.behavioral_sdk",
-      "name": "behavioral",
-      "version": "0\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.behavioral_sdk",
@@ -2398,26 +2129,19 @@
       "version": "9\\.+"
     },
     {
-      "expires": "2023-04-25",
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-mlkit-text-recognition",
       "version": "16\\.1\\.3"
     },
     {
       "group": "com\\.google\\.android\\.gms",
-      "name": "play-services-mlkit-text-recognition",
-      "version": "18\\.0\\.2"
-    },
-    {
-      "expires": "2023-04-25",
-      "group": "com\\.google\\.android\\.gms",
       "name": "play-services-mlkit-barcode-scanning",
       "version": "16\\.1\\.4"
     },
     {
-      "group": "com\\.google\\.android\\.gms",
-      "name": "play-services-mlkit-barcode-scanning",
-      "version": "18\\.1\\.0"
+      "group": "com\\.google\\.mlkit",
+      "name": "barcode-scanning",
+      "version": "16\\.1\\.2"
     },
     {
       "expires": "2023-04-17",
@@ -2467,12 +2191,6 @@
       "version": "3\\.\\+"
     },
     {
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android\\.globe",
-      "name": "libc2d",
-      "version": "2\\.2\\.1\\-52"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.globe",
       "name": "libc2d",
       "version": "2\\.2\\.5\\-55"
@@ -2517,70 +2235,94 @@
       "version": "6\\.\\+"
     },
     {
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android\\.point_smart_pos_sdk",
-      "name": "device",
-      "version": "dev-3\\.\\+|a910-3\\.\\+|d20-3\\.\\+|3\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.point_smart_pos_sdk",
       "name": "device",
       "version": "dev-4\\.\\+|a910-4\\.\\+|d20-4\\.\\+|n950-4\\.\\+|4\\.\\+"
     },
     {
+      "expires": "2023-06-01",
       "group": "com\\.mercadolibre\\.android\\.point_printer",
       "name": "core",
       "version": "2\\.+"
     },
     {
+      "expires": "2023-06-01",
       "group": "com\\.mercadolibre\\.android\\.point_printer",
       "name": "renderer",
       "version": "2\\.+"
     },
     {
+      "expires": "2023-06-01",
       "group": "com\\.mercadolibre\\.android\\.point_printer",
       "name": "controller_a910",
       "version": "2\\.+"
     },
     {
+      "expires": "2023-06-01",
       "group": "com\\.mercadolibre\\.android\\.point_printer",
       "name": "controller_d20",
       "version": "2\\.+"
     },
     {
+      "expires": "2023-06-01",
       "group": "com\\.mercadolibre\\.android\\.point_printer",
       "name": "controller_n950",
       "version": "2\\.+"
     },
     {
-      "expires": "2023-03-31",
+      "group": "com\\.mercadolibre\\.android\\.point_printer",
+      "name": "core",
+      "version": "3\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_printer",
+      "name": "renderer",
+      "version": "3\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_printer",
+      "name": "controller_a910",
+      "version": "3\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_printer",
+      "name": "controller_d20",
+      "version": "3\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_printer",
+      "name": "controller_n950",
+      "version": "3\\.+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "scanner",
-      "version": "mercadolibre-7\\.\\+|mercadopago-7\\.\\+"
+      "version": "mercadolibre-9\\.\\+|mercadopago-9\\.\\+"
     },
     {
-      "expires": "2023-03-31",
+      "expires": "2023-04-25",
+      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
+      "name": "scanner",
+      "version": "mercadolibre-8\\.\\+|mercadopago-8\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "ocr",
-      "version": "mercadolibre-7\\.\\+|mercadopago-7\\.\\+"
+      "version": "mercadolibre-9\\.\\+|mercadopago-9\\.\\+"
     },
     {
-      "expires": "2023-03-31",
+      "expires": "2023-04-25",
+      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
+      "name": "ocr",
+      "version": "mercadolibre-8\\.\\+|mercadopago-8\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "barcode",
-      "version": "mercadolibre-7\\.\\+|mercadopago-7\\.\\+"
+      "version": "mercadolibre-9\\.\\+|mercadopago-9\\.\\+"
     },
     {
-      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
-      "name": "scanner",
-      "version": "mercadolibre-8\\.\\+|mercadopago-8\\.\\+"
-    },
-    {
-      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
-      "name": "ocr",
-      "version": "mercadolibre-8\\.\\+|mercadopago-8\\.\\+"
-    },
-    {
+      "expires": "2023-04-25",
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "barcode",
       "version": "mercadolibre-8\\.\\+|mercadopago-8\\.\\+"
@@ -2666,18 +2408,6 @@
       "group": "com\\.mercadolibre\\.android\\.px\\.tokenization",
       "name": "enrollment",
       "version": "1\\.+"
-    },
-    {
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android\\.mobile_cryptography",
-      "name": "core",
-      "version": "3\\.+"
-    },
-    {
-      "expires": "2023-03-31",
-      "group": "com\\.mercadolibre\\.android\\.mobile_cryptography",
-      "name": "test-utils",
-      "version": "3\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.mobile_cryptography",
@@ -3033,6 +2763,11 @@
       "group": "org\\.jetbrains\\.kotlin",
       "name": "kotlin-parcelize-runtime",
       "version": "1\\.5\\.32"
+    },
+    {
+      "group": "com\\.facebook\\.stetho",
+      "name": "stetho-okhttp3",
+      "version": "1\\.5\\.\\1"
     }
   ]
 }
