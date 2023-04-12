@@ -2220,6 +2220,12 @@
       "version": "3\\.\\+"
     },
     {
+      "expires": "2023-06-1",
+      "group": "com\\.mercadolibre\\.android\\.globe",
+      "name": "libc2d",
+      "version": "2\\.2\\.1\\-52"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.globe",
       "name": "libc2d",
       "version": "2\\.2\\.5\\-55"
@@ -2527,6 +2533,11 @@
     {
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "core",
+      "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cash_rails",
+      "name": "feedback",
       "version": "1\\.\\+"
     },
     {
