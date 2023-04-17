@@ -2148,6 +2148,11 @@
       "version": "3\\.+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.point_push_notifications",
+      "name": "mqtt",
+      "version": "0\\.1\\.+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.liveness_detection",
       "name": "facetec",
       "version": "sdk-9\\.+"
@@ -2599,11 +2604,6 @@
       "group": "com\\.mercadolibre\\.android\\.reviews3",
       "name": "form",
       "version": "4\\.+"
-    },
-    {
-      "group": "com\\.mercadolibre\\.android\\.reviews",
-      "name": "reviews",
-      "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.ml_cards",
