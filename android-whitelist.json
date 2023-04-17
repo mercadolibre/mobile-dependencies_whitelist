@@ -907,27 +907,6 @@
       "version": "3\\.\\+"
     },
     {
-      "description": "The version of this library will be deprecated.",
-      "expires": "2023-04-13",
-      "group": "com\\.mercadolibre\\.android\\.search",
-      "name": "compats",
-      "version": "15\\.\\+"
-    },
-    {
-      "description": "The version of this library will be deprecated.",
-      "expires": "2023-04-13",
-      "group": "com\\.mercadolibre\\.android\\.search",
-      "name": "input",
-      "version": "15\\.\\+"
-    },
-    {
-      "description": "The version of this library will be deprecated.",
-      "expires": "2023-04-13",
-      "group": "com\\.mercadolibre\\.android\\.search",
-      "name": "search",
-      "version": "15\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "compats",
       "version": "16\\.\\+"
@@ -1975,12 +1954,6 @@
     {
       "group": "com\\.mercadolibre\\.android\\.cardsengagement",
       "version": "5\\.\\+"
-    },
-    {
-      "expires": "2023-04-15",
-      "group": "com\\.mercadolibre\\.android\\.navigation",
-      "name": "menu",
-      "version": "mercadolibre-7\\.\\+|mercadopago-7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.navigation",
