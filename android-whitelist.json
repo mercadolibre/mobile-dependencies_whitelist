@@ -2158,9 +2158,16 @@
       "version": "16\\.1\\.4"
     },
     {
+      "expires": "2023-04-30",
       "group": "com\\.google\\.mlkit",
       "name": "barcode-scanning",
       "version": "16\\.1\\.2"
+    },
+    {
+      "expires": "2023-08-04",
+      "group": "com\\.google\\.mlkit",
+      "name": "barcode-scanning",
+      "version": "17\\.0\\.1"
     },
     {
       "expires": "2023-04-17",
@@ -2322,6 +2329,12 @@
     {
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "scanner",
+      "version": "mercadolibre-10\\.\\+|mercadopago-10\\.\\+"
+    },
+    {
+      "expires": "2023-04-25",
+      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
+      "name": "scanner",
       "version": "mercadolibre-9\\.\\+|mercadopago-9\\.\\+"
     },
     {
@@ -2333,6 +2346,12 @@
     {
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "ocr",
+      "version": "mercadolibre-10\\.\\+|mercadopago-10\\.\\+"
+    },
+    {
+      "expires": "2023-04-25",
+      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
+      "name": "ocr",
       "version": "mercadolibre-9\\.\\+|mercadopago-9\\.\\+"
     },
     {
@@ -2342,6 +2361,12 @@
       "version": "mercadolibre-8\\.\\+|mercadopago-8\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
+      "name": "barcode",
+      "version": "mercadolibre-10\\.\\+|mercadopago-10\\.\\+"
+    },
+    {
+      "expires": "2023-04-25",
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "barcode",
       "version": "mercadolibre-9\\.\\+|mercadopago-9\\.\\+"
