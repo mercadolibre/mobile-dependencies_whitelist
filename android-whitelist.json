@@ -826,14 +826,26 @@
       "version": "7\\.\\+"
     },
     {
+      "expires": "2023-05-20",
       "group": "com\\.mercadolibre\\.android\\.navigationcp",
       "name": "navigationcp",
       "version": "9\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.navigationcp",
+      "name": "navigationcp",
+      "version": "10\\.\\+"
+    },
+    {
+      "expires": "2023-05-20",
+      "group": "com\\.mercadolibre\\.android\\.navigationcp",
       "name": "shipping-address",
       "version": "9\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.navigationcp",
+      "name": "shipping-address",
+      "version": "10\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
@@ -1083,9 +1095,15 @@
       "version": "3\\.\\+"
     },
     {
+      "expires": "2023-05-15",
       "group": "com\\.mercadolibre\\.android\\.pos_readers",
       "name": "posreaders",
       "version": "7\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.pos_readers",
+      "name": "posreaders",
+      "version": "8\\.+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.point_ui",
@@ -1117,14 +1135,26 @@
       "version": "8\\.+"
     },
     {
+      "expires": "2023-06-18",
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
       "name": "paymentflowfcu",
       "version": "9\\.+"
     },
     {
+      "expires": "2023-06-18",
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
       "name": "entities_fcu",
       "version": "9\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
+      "name": "paymentflowfcu",
+      "version": "10\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
+      "name": "entities_fcu",
+      "version": "10\\.+"
     },
     {
       "expires": "2023-04-30",
@@ -1199,7 +1229,7 @@
     },
     {
       "description": "Esta libs se encuentra deprecada, debemos utilizar data-dispatcher",
-      "expires": "2023-04-19",
+      "expires": "2023-06-01",
       "group": "de\\.greenrobot",
       "name": "eventbus",
       "version": "2\\.4\\.0|3\\.1\\.1"
@@ -2123,7 +2153,7 @@
     {
       "group": "com\\.mercadolibre\\.android\\.point_push_notifications",
       "name": "mqtt",
-      "version": "0\\.1\\.+"
+      "version": "0\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.liveness_detection",
@@ -2138,6 +2168,12 @@
     {
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-mlkit-text-recognition",
+      "version": "17\\.0\\.1"
+    },
+    {
+      "expires": "2023-04-25",
+      "group": "com\\.google\\.android\\.gms",
+      "name": "play-services-mlkit-text-recognition",
       "version": "16\\.1\\.3"
     },
     {
@@ -2146,9 +2182,16 @@
       "version": "16\\.1\\.4"
     },
     {
+      "expires": "2023-04-30",
       "group": "com\\.google\\.mlkit",
       "name": "barcode-scanning",
       "version": "16\\.1\\.2"
+    },
+    {
+      "expires": "2023-08-04",
+      "group": "com\\.google\\.mlkit",
+      "name": "barcode-scanning",
+      "version": "17\\.0\\.1"
     },
     {
       "expires": "2023-04-17",
@@ -2310,6 +2353,12 @@
     {
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "scanner",
+      "version": "mercadolibre-10\\.\\+|mercadopago-10\\.\\+"
+    },
+    {
+      "expires": "2023-04-25",
+      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
+      "name": "scanner",
       "version": "mercadolibre-9\\.\\+|mercadopago-9\\.\\+"
     },
     {
@@ -2321,6 +2370,12 @@
     {
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "ocr",
+      "version": "mercadolibre-10\\.\\+|mercadopago-10\\.\\+"
+    },
+    {
+      "expires": "2023-04-25",
+      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
+      "name": "ocr",
       "version": "mercadolibre-9\\.\\+|mercadopago-9\\.\\+"
     },
     {
@@ -2330,6 +2385,12 @@
       "version": "mercadolibre-8\\.\\+|mercadopago-8\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
+      "name": "barcode",
+      "version": "mercadolibre-10\\.\\+|mercadopago-10\\.\\+"
+    },
+    {
+      "expires": "2023-04-25",
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "barcode",
       "version": "mercadolibre-9\\.\\+|mercadopago-9\\.\\+"
