@@ -1496,10 +1496,10 @@
       "version": "^~>\\s?0.[0-9]+"
     },
     {
-      "name": "CcapSdk",
+      "name": "SmartTokenization",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+"
+      "version": "^~>\\s?1.[0-9]+"
     },
     {
       "name": "ADAssertLayout",
@@ -1769,6 +1769,12 @@
     },
     {
       "name": "Matt",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "XProdModules",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
