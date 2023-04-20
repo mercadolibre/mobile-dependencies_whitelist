@@ -1083,9 +1083,15 @@
       "version": "3\\.\\+"
     },
     {
+      "expires": "2023-05-15",
       "group": "com\\.mercadolibre\\.android\\.pos_readers",
       "name": "posreaders",
       "version": "7\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.pos_readers",
+      "name": "posreaders",
+      "version": "8\\.+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.point_ui",
