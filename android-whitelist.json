@@ -2854,6 +2854,11 @@
       "group": "com\\.facebook\\.stetho",
       "name": "stetho-okhttp3",
       "version": "1\\.5\\.\\1"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.xprod\\.modules",
+      "name": "webview",
+      "version": "mercadolibre-0\\.\\+|mercadopago-0\\.\\+"
     }
   ]
 }
