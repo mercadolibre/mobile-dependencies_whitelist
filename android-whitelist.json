@@ -1377,35 +1377,55 @@
     },
     {
       "description": "migrate help: https://developer.android.com/topic/libraries/view-binding/migration",
-      "expires": "2023-03-31",
+      "expires": "2023-07-31",
       "group": "org\\.jetbrains\\.kotlin",
       "name": "kotlin-android-extensions-runtime",
       "version": "1\\.5\\.32"
     },
     {
+      "expires": "2023-07-31",
       "group": "org\\.jetbrains\\.kotlin",
       "name": "kotlin-reflect",
       "version": "1\\.5\\.32"
     },
     {
+      "expires": "2023-07-31",
       "group": "org\\.jetbrains\\.kotlin",
       "name": "kotlin-stdlib",
       "version": "1\\.5\\.32"
     },
     {
+      "expires": "2023-07-31",
       "group": "org\\.jetbrains\\.kotlin",
       "name": "kotlin-stdlib-common",
       "version": "1\\.5\\.32"
     },
     {
+      "expires": "2023-07-31",
       "group": "org\\.jetbrains\\.kotlin",
       "name": "kotlin-stdlib-jdk8",
       "version": "1\\.5\\.32"
     },
     {
+      "expires": "2023-07-31",
       "group": "org\\.jetbrains\\.kotlin",
       "name": "kotlin-stdlib-jdk7",
       "version": "1\\.5\\.32"
+    },
+    {
+      "group": "org\\.jetbrains\\.kotlin",
+      "name": "kotlin-reflect",
+      "version": "1\\.8\\.10"
+    },
+    {
+      "group": "org\\.jetbrains\\.kotlin",
+      "name": "kotlin-stdlib",
+      "version": "1\\.8\\.10"
+    },
+    {
+      "group": "org\\.jetbrains\\.kotlin",
+      "name": "kotlin-stdlib-common",
+      "version": "1\\.8\\.10"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.userbiometrics",
@@ -1984,24 +2004,48 @@
       "version": "1\\.4\\.0"
     },
     {
+      "expires": "2023-07-31",
       "group": "androidx\\.room",
       "name": "room-runtime",
       "version": "2\\.3\\.0"
     },
     {
+      "expires": "2023-07-31",
       "group": "androidx\\.room",
       "name": "room-compiler",
       "version": "2\\.3\\.0"
     },
     {
+      "expires": "2023-07-31",
       "group": "androidx\\.room",
       "name": "room-ktx",
       "version": "2\\.3\\.0"
     },
     {
+      "expires": "2023-07-31",
       "group": "androidx\\.room",
       "name": "room-rxjava2",
       "version": "2\\.3\\.0"
+    },
+    {
+      "group": "androidx\\.room",
+      "name": "room-runtime",
+      "version": "2\\.4\\.3"
+    },
+    {
+      "group": "androidx\\.room",
+      "name": "room-compiler",
+      "version": "2\\.4\\.3"
+    },
+    {
+      "group": "androidx\\.room",
+      "name": "room-ktx",
+      "version": "2\\.4\\.3"
+    },
+    {
+      "group": "androidx\\.room",
+      "name": "room-rxjava2",
+      "version": "2\\.4\\.3"
     },
     {
       "group": "androidx\\.biometric",
@@ -2950,9 +2994,15 @@
       "version": "production-1\\.\\+"
     },
     {
+      "expires": "2023-07-31",
       "group": "org\\.jetbrains\\.kotlin",
       "name": "kotlin-parcelize-runtime",
       "version": "1\\.5\\.32"
+    },
+    {
+      "group": "org\\.jetbrains\\.kotlin",
+      "name": "kotlin-parcelize-runtime",
+      "version": "1\\.8\\.10"
     }
   ]
 }
