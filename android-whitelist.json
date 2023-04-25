@@ -1488,9 +1488,16 @@
       "version": "7\\.\\+"
     },
     {
+      "description": "Deprecation for migration to agp 7 and java 11",
+      "expires": "2023-04-30",
       "group": "com\\.mercadolibre\\.android\\.andes_integrations",
       "name": "integrations",
       "version": "mercadopago-1\\.\\+|mercadolibre-1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.andes_integrations",
+      "name": "integrations",
+      "version": "mercadopago-2\\.\\+|mercadolibre-2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.discounts_touchpoint",
@@ -2192,18 +2199,6 @@
       "group": "com\\.google\\.mlkit",
       "name": "barcode-scanning",
       "version": "17\\.0\\.1"
-    },
-    {
-      "expires": "2023-04-17",
-      "group": "androidx\\.camera",
-      "name": "camera-camera2",
-      "version": "1\\.0\\.0"
-    },
-    {
-      "expires": "2023-04-17",
-      "group": "androidx\\.camera",
-      "name": "camera-lifecycle",
-      "version": "1\\.0\\.0"
     },
     {
       "group": "androidx\\.camera",
