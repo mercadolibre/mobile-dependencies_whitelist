@@ -1208,6 +1208,11 @@
       "version": "2\\.6\\.4"
     },
     {
+      "group": "com\\.squareup\\.retrofit2",
+      "name": "converter-scalars",
+      "version": "2\\.6\\.4"
+    },
+    {
       "group": "com\\.squareup\\.okio",
       "name": "okio",
       "version": "1\\.14\\.0"
@@ -1488,9 +1493,16 @@
       "version": "7\\.\\+"
     },
     {
+      "description": "Deprecation for migration to agp 7 and java 11",
+      "expires": "2023-04-30",
       "group": "com\\.mercadolibre\\.android\\.andes_integrations",
       "name": "integrations",
       "version": "mercadopago-1\\.\\+|mercadolibre-1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.andes_integrations",
+      "name": "integrations",
+      "version": "mercadopago-2\\.\\+|mercadolibre-2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.discounts_touchpoint",
@@ -2194,18 +2206,6 @@
       "version": "17\\.0\\.1"
     },
     {
-      "expires": "2023-04-17",
-      "group": "androidx\\.camera",
-      "name": "camera-camera2",
-      "version": "1\\.0\\.0"
-    },
-    {
-      "expires": "2023-04-17",
-      "group": "androidx\\.camera",
-      "name": "camera-lifecycle",
-      "version": "1\\.0\\.0"
-    },
-    {
       "group": "androidx\\.camera",
       "name": "camera-camera2",
       "version": "1\\.1\\.0"
@@ -2571,39 +2571,81 @@
       "version": "7\\.\\+"
     },
     {
+      "expires": "2023-05-31",
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "rating",
       "version": "1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
+      "name": "rating",
+      "version": "2\\.\\+"
+    },
+    {
+      "expires": "2023-05-31",
+      "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "core",
       "version": "1\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.cash_rails",
+      "name": "core",
+      "version": "2\\.\\+"
+    },
+    {
+      "expires": "2023-05-31",
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "feedback",
       "version": "1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
+      "name": "feedback",
+      "version": "2\\.\\+"
+    },
+    {
+      "expires": "2023-05-31",
+      "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "tab",
       "version": "1\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.cash_rails",
+      "name": "tab",
+      "version": "2\\.\\+"
+    },
+    {
+      "expires": "2023-05-31",
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "ui_component",
       "version": "1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
+      "name": "ui_component",
+      "version": "2\\.\\+"
+    },
+    {
+      "expires": "2023-05-31",
+      "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "commons",
       "version": "1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
+      "name": "commons",
+      "version": "2\\.\\+"
+    },
+    {
+      "expires": "2023-05-31",
+      "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "map",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cash_rails",
+      "name": "map",
+      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.mp_sellers_growth",
@@ -2839,7 +2881,7 @@
     {
       "group": "com\\.qualtrics",
       "name": "digital",
-      "version": "2\\.9\\.0"
+      "version": "2\\.9\\.3"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.ml_qualtrics",
@@ -2860,6 +2902,11 @@
       "group": "com\\.facebook\\.stetho",
       "name": "stetho-okhttp3",
       "version": "1\\.5\\.\\1"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.xprod\\.modules",
+      "name": "webview",
+      "version": "0\\.\\+"
     }
   ]
 }
