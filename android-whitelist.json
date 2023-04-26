@@ -1213,6 +1213,11 @@
       "version": "2\\.6\\.4"
     },
     {
+      "group": "com\\.squareup\\.retrofit2",
+      "name": "converter-scalars",
+      "version": "2\\.6\\.4"
+    },
+    {
       "group": "com\\.squareup\\.okio",
       "name": "okio",
       "version": "1\\.14\\.0"
@@ -2875,7 +2880,7 @@
     {
       "group": "com\\.qualtrics",
       "name": "digital",
-      "version": "2\\.9\\.0"
+      "version": "2\\.9\\.3"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.ml_qualtrics",
