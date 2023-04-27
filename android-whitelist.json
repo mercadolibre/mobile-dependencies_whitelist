@@ -1094,7 +1094,12 @@
     {
       "group": "com\\.mercadopago\\.android\\.px",
       "name": "addons",
-      "version": "4\\.55\\.\\+|4\\.\\+"
+      "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.px",
+      "name": "usdk",
+      "version": "6\\.5\\.52"
     },
     {
       "group": "com\\.mercadopago\\.android\\.sdk",
@@ -1217,6 +1222,11 @@
     {
       "group": "com\\.squareup\\.retrofit2",
       "name": "converter-gson",
+      "version": "2\\.6\\.4"
+    },
+    {
+      "group": "com\\.squareup\\.retrofit2",
+      "name": "converter-scalars",
       "version": "2\\.6\\.4"
     },
     {
@@ -2882,7 +2892,7 @@
     {
       "group": "com\\.qualtrics",
       "name": "digital",
-      "version": "2\\.9\\.0"
+      "version": "2\\.9\\.3"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.ml_qualtrics",
