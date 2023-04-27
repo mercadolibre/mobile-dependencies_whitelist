@@ -1082,7 +1082,12 @@
     {
       "group": "com\\.mercadopago\\.android\\.px",
       "name": "addons",
-      "version": "4\\.55\\.\\+|4\\.\\+"
+      "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.px",
+      "name": "usdk",
+      "version": "6\\.5\\.52"
     },
     {
       "group": "com\\.mercadopago\\.android\\.sdk",
