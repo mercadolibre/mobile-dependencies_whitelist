@@ -2791,6 +2791,12 @@
       "group": "com\\.mercadolibre\\.android\\.xprod\\.modules",
       "name": "webview",
       "version": "0\\.\\+"
+    },
+    {
+      "description": "Android library used to easily integrate SmartPOS modules with PTM for seamless updates.",
+      "group": "com\\.mercadopago\\.point",
+      "name": "ptm-helper",
+      "version": "5\\.\\+"
     }
   ]
 }
