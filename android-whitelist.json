@@ -2764,9 +2764,15 @@
       "version": "1\\.12\\.0"
     },
     {
+      "expires": "2023-05-12",
       "group": "com\\.mercadolibre\\.android\\.data_dispatcher",
       "name": "core",
       "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.data_dispatcher",
+      "name": "core",
+      "version": "2\\.+"
     },
     {
       "description": "This library is used for push-notification with mqtt",
