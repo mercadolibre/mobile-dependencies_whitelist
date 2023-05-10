@@ -672,13 +672,13 @@
       "version": "1\\.\\+"
     },
     {
-      "expires": "2023-10-30",
+      "expires": "2023-05-26",
       "group": "com\\.mercadolibre\\.android\\.commons",
-      "version": "28\\.\\+"
+      "version": "28\\.\\+|29\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.commons",
-      "version": "29\\.\\+"
+      "version": "30\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point\\.lot\\.management",
@@ -2731,9 +2731,15 @@
       "version": "1\\.12\\.0"
     },
     {
+      "expires": "2023-05-19",
       "group": "com\\.mercadolibre\\.android\\.data_dispatcher",
       "name": "core",
       "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.data_dispatcher",
+      "name": "core",
+      "version": "2\\.+"
     },
     {
       "description": "This library is used for push-notification with mqtt",
