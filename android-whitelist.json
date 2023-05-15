@@ -86,9 +86,15 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2023-06-10",
       "group": "com\\.mercadolibre\\.android\\.smart_coupons",
       "name": "coupons",
       "version": "2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.smart_coupons",
+      "name": "coupons",
+      "version": "3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.registration",
@@ -666,13 +672,13 @@
       "version": "1\\.\\+"
     },
     {
-      "expires": "2023-10-30",
+      "expires": "2023-05-26",
       "group": "com\\.mercadolibre\\.android\\.commons",
-      "version": "28\\.\\+"
+      "version": "28\\.\\+|29\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.commons",
-      "version": "29\\.\\+"
+      "version": "30\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point\\.lot\\.management",
@@ -891,9 +897,15 @@
       "version": "mercadopago-6\\.\\+|mercadolibre-6\\.\\+"
     },
     {
+      "expires": "2023-06-10",
       "group": "com\\.mercadolibre\\.android\\.rule\\.engine",
       "name": "rule\\-engine",
       "version": "8\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.rule\\.engine",
+      "name": "rule\\-engine",
+      "version": "9\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.risk_management",
@@ -2702,7 +2714,7 @@
     {
       "group": "com\\.mercadolibre\\.android\\.ccap",
       "name": "secure-inputs",
-      "version": "0\\.+"
+      "version": "1\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.app_monitoring",
@@ -2725,9 +2737,15 @@
       "version": "1\\.12\\.0"
     },
     {
+      "expires": "2023-05-19",
       "group": "com\\.mercadolibre\\.android\\.data_dispatcher",
       "name": "core",
       "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.data_dispatcher",
+      "name": "core",
+      "version": "2\\.+"
     },
     {
       "description": "This library is used for push-notification with mqtt",
@@ -2797,6 +2815,17 @@
       "group": "com\\.mercadolibre\\.android\\.xprod\\.modules",
       "name": "webview",
       "version": "0\\.\\+"
+    },
+    {
+      "description": "Android library used to easily integrate SmartPOS modules with PTM for seamless updates.",
+      "group": "com\\.mercadopago\\.point",
+      "name": "ptm-helper",
+      "version": "5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.fbm\\.wms\\.crashlytics",
+      "name": "crashlytics",
+      "version": "1\\.\\+"
     }
   ]
 }
