@@ -1120,32 +1120,14 @@
       "version": "3\\.\\+"
     },
     {
-      "expires": "2023-05-15",
       "group": "com\\.mercadolibre\\.android\\.pos_readers",
       "name": "posreaders",
       "version": "7\\.+"
-    },
-    {
-      "group": "com\\.mercadolibre\\.android\\.pos_readers",
-      "name": "posreaders",
-      "version": "8\\.+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.point_ui",
       "name": "components",
       "version": "3\\.+"
-    },
-    {
-      "expires": "2023-05-10",
-      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
-      "name": "paymentflowfcu",
-      "version": "7\\.+"
-    },
-    {
-      "expires": "2023-05-10",
-      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
-      "name": "entities_fcu",
-      "version": "7\\.+"
     },
     {
       "expires": "2023-05-15",
@@ -1300,7 +1282,7 @@
     },
     {
       "description": "migrate help: https://developer.android.com/topic/libraries/view-binding/migration",
-      "expires": "2023-05-15",
+      "expires": "2023-07-31",
       "group": "org\\.jetbrains\\.kotlin",
       "name": "kotlin-android-extensions-runtime",
       "version": "1\\.5\\.32"
@@ -2333,14 +2315,32 @@
     {
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "scanner",
+      "version": "mercadolibre-11\\.\\+|mercadopago-11\\.\\+"
+    },
+    {
+      "expires": "2023-05-29",
+      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
+      "name": "scanner",
       "version": "mercadolibre-10\\.\\+|mercadopago-10\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "ocr",
+      "version": "mercadolibre-11\\.\\+|mercadopago-11\\.\\+"
+    },
+    {
+      "expires": "2023-05-29",
+      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
+      "name": "ocr",
       "version": "mercadolibre-10\\.\\+|mercadopago-10\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
+      "name": "barcode",
+      "version": "mercadolibre-11\\.\\+|mercadopago-11\\.\\+"
+    },
+    {
+      "expires": "2023-05-29",
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "barcode",
       "version": "mercadolibre-10\\.\\+|mercadopago-10\\.\\+"
@@ -2644,15 +2644,15 @@
       "version": "10\\.\\+"
     },
     {
-      "description": "This library will on 2023 Q2. Used only on smart",
-      "expires": "2023-5-15",
+      "description": "This library will on 2023 Q3. Used only on smart",
+      "expires": "2023-12-15",
       "group": "androidx\\.navigation",
       "name": "navigation-fragment-ktx",
       "version": "2\\.3\\.0"
     },
     {
-      "description": "This library will on 2023 Q2. Used only on smart",
-      "expires": "2023-5-15",
+      "description": "This library will on 2023 Q3. Used only on smart",
+      "expires": "2023-12-15",
       "group": "androidx\\.navigation",
       "name": "navigation-ui-ktx",
       "version": "2\\.3\\.0"
@@ -2696,12 +2696,12 @@
     {
       "group": "com\\.mercadolibre\\.android\\.fbm\\.wms\\.hardware",
       "name": "honeywell",
-      "version": "1\\.\\+"
+      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.fbm\\.wms\\.hardware",
       "name": "zebra",
-      "version": "1\\.\\+"
+      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.fbm\\.wms\\.oem",
@@ -2836,7 +2836,7 @@
     },
     {
       "group": "com\\.mercadolibre\\.android\\.fbm\\.wms\\.crashlytics",
-      "name": "crashlytics",
+      "name": "core",
       "version": "1\\.\\+"
     }
   ]
