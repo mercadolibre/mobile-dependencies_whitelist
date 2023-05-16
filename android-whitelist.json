@@ -685,9 +685,15 @@
       "version": "5\\.\\+"
     },
     {
+      "expires": "2023-05-19",
       "group": "com\\.mercadolibre\\.android\\.credits\\.floxclient",
       "name": "core",
       "version": "2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.credits\\.floxclient",
+      "name": "core",
+      "version": "3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.credits\\.toolkit",
@@ -731,15 +737,15 @@
       "version": "7\\.\\+"
     },
     {
-      "expires": "2023-05-31",
+      "expires": "2023-06-30",
       "group": "com\\.mercadolibre\\.android\\.cpg",
       "name": "ui_components",
-      "version": "6\\.\\+"
+      "version": "6\\.\\+|7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cpg",
       "name": "ui_components",
-      "version": "7\\.\\+"
+      "version": "8\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.instore_ui_components",
@@ -1587,10 +1593,10 @@
       "version": "1\\.1\\.0"
     },
     {
-      "expires": "2023-05-15",
+      "expires": "2023-05-29",
       "group": "androidx\\.databinding",
       "name": "viewbinding",
-      "version": "3\\.6\\.3|4.+"
+      "version": "4\\.\\+"
     },
     {
       "group": "androidx\\.databinding",
