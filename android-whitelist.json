@@ -655,9 +655,15 @@
       "version": "5\\.\\+"
     },
     {
+      "expires": "2023-05-19",
       "group": "com\\.mercadolibre\\.android\\.credits\\.floxclient",
       "name": "core",
       "version": "2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.credits\\.floxclient",
+      "name": "core",
+      "version": "3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.credits\\.toolkit",
@@ -1557,10 +1563,10 @@
       "version": "1\\.1\\.0"
     },
     {
-      "expires": "2023-05-15",
+      "expires": "2023-05-29",
       "group": "androidx\\.databinding",
       "name": "viewbinding",
-      "version": "3\\.6\\.3|4.+"
+      "version": "4\\.\\+"
     },
     {
       "group": "androidx\\.databinding",
