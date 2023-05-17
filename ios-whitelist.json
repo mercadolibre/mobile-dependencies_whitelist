@@ -1397,13 +1397,13 @@
       "name": "Cashout",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?2.[0-9]+"
+      "version": "^(~>)?\\s?(1|2|3).\\d+.?\\d*$"
     },
     {
       "name": "CashRails",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^(~>)?\\s?(1|2|3).\\d+.?\\d*$"
     },
     {
       "name": "MLAdjust",
