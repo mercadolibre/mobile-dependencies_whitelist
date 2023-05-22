@@ -2949,7 +2949,17 @@
     },
     {
       "group": "com\\.google\\.android\\.exoplayer",
-      "name": "exoplayer",
+      "name": "exoplayer-core",
+      "version": "2\\.18\\.1"
+    },
+    {
+      "group": "com\\.google\\.android\\.exoplayer",
+      "name": "exoplayer-dash",
+      "version": "2\\.18\\.1"
+    },
+    {
+      "group": "com\\.google\\.android\\.exoplayer",
+      "name": "exoplayer-ui",
       "version": "2\\.18\\.1"
     }
   ]
