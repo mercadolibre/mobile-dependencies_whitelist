@@ -396,18 +396,6 @@
       "version": "production-12\\.\\+|develop-12\\.\\+"
     },
     {
-      "expires": "2023-05-15",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "authentication-enrollment",
-      "version": "23\\.\\+"
-    },
-    {
-      "expires": "2023-05-15",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "authentication",
-      "version": "23\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android",
       "name": "authentication-enrollment",
       "version": "24\\.\\+"
@@ -431,12 +419,6 @@
       "group": "com\\.mercadolibre\\.android\\.ignite",
       "name": "core",
       "version": "6\\.\\+"
-    },
-    {
-      "expires": "2023-05-15",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "login",
-      "version": "mercadopago-16\\.\\+|mercadolibre-16\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -695,12 +677,6 @@
       "version": "5\\.\\+"
     },
     {
-      "expires": "2023-05-19",
-      "group": "com\\.mercadolibre\\.android\\.credits\\.floxclient",
-      "name": "core",
-      "version": "2\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.credits\\.floxclient",
       "name": "core",
       "version": "3\\.\\+"
@@ -871,21 +847,9 @@
       "version": "7\\.\\+"
     },
     {
-      "expires": "2023-05-20",
-      "group": "com\\.mercadolibre\\.android\\.navigationcp",
-      "name": "navigationcp",
-      "version": "9\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.navigationcp",
       "name": "navigationcp",
       "version": "10\\.\\+"
-    },
-    {
-      "expires": "2023-05-20",
-      "group": "com\\.mercadolibre\\.android\\.navigationcp",
-      "name": "shipping-address",
-      "version": "9\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.navigationcp",
@@ -1004,12 +968,6 @@
       "version": "3\\.\\+"
     },
     {
-      "expires": "2023-05-15",
-      "group": "com\\.mercadolibre\\.android\\.navigation_manager",
-      "name": "tabbar",
-      "version": "mercadopago-3\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.navigation_manager",
       "name": "core",
       "version": "4\\.\\+"
@@ -1072,12 +1030,6 @@
       "group": "com\\.mercadolibre\\.android\\.usersections",
       "name": "ui-sections",
       "version": "mercadolibre-5\\.+|mercadopago-5\\.\\+"
-    },
-    {
-      "expires": "2023-05-15",
-      "group": "com\\.mercadolibre\\.android\\.mercadocoin",
-      "name": "cryptodata",
-      "version": "3\\.\\+|4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.mercadocoin",
@@ -1174,18 +1126,6 @@
       "group": "com\\.mercadopago\\.android\\.point_ui",
       "name": "components",
       "version": "4\\.+"
-    },
-    {
-      "expires": "2023-05-15",
-      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
-      "name": "paymentflowfcu",
-      "version": "8\\.+"
-    },
-    {
-      "expires": "2023-05-15",
-      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
-      "name": "entities_fcu",
-      "version": "8\\.+"
     },
     {
       "expires": "2023-06-18",
@@ -2849,12 +2789,6 @@
       "group": "com\\.datadoghq",
       "name": "dd-sdk-android",
       "version": "1\\.12\\.0"
-    },
-    {
-      "expires": "2023-05-19",
-      "group": "com\\.mercadolibre\\.android\\.data_dispatcher",
-      "name": "core",
-      "version": "1\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.data_dispatcher",
