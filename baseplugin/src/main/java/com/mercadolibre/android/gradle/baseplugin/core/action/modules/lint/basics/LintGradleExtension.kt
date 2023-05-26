@@ -14,4 +14,6 @@ open class LintGradleExtension {
     var dependenciesLintEnabled = true
     /** This variable represents whether lint plugins is enabled. */
     var pluginsLintEnabled = true
+    /** This variable represents that Alpha Dependencies are enabled. */
+    var alphaDependenciesEnabled = false
 }

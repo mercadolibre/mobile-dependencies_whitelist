@@ -3,6 +3,7 @@ package com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.libr
 import com.google.gson.JsonElement
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.Lint
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.LintGradleExtension
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.AlphaAllowedProjects
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.Dependency
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.DependencyDataInAllowList
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.Status
@@ -13,6 +14,7 @@ import com.mercadolibre.android.gradle.baseplugin.core.components.ALLOWLIST_CONS
 import com.mercadolibre.android.gradle.baseplugin.core.components.ARROW
 import com.mercadolibre.android.gradle.baseplugin.core.components.EXPIRES_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.GROUP_CONSTANT
+import com.mercadolibre.android.gradle.baseplugin.core.components.IS_ALPHA
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_DEPENDENCIES_TASK
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_ERROR_POSTDATA
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_ERROR_TITLE
@@ -41,6 +43,7 @@ class LibraryAllowListDependenciesLint(private val variantNames: List<String>) :
 
     /** This list contains the dependencies in the allow list. */
     val allowListDependencies = arrayListOf<Dependency>()
+
     /** This list contains the dependencies that are about to expire. */
     private val allowListGoingToExpire = arrayListOf<Dependency>()
 
@@ -58,13 +61,13 @@ class LibraryAllowListDependenciesLint(private val variantNames: List<String>) :
         findExtension<LintGradleExtension>(project)?.apply {
             if (dependenciesLintEnabled) {
                 getAllowList(dependencyAllowListUrl)
-
                 analyzeDependencies(project)
-
                 if (hasFailed) {
-                    report(LINT_ERROR_POSTDATA.replace(URL_PLACEHOLDER, dependencyAllowListUrl), project)
+                    report(
+                        LINT_ERROR_POSTDATA.replace(URL_PLACEHOLDER, dependencyAllowListUrl),
+                        project
+                    )
                 }
-
                 if (allowListGoingToExpire.size > 0) {
                     reportWarnings(project)
                 }
@@ -88,7 +91,12 @@ class LibraryAllowListDependenciesLint(private val variantNames: List<String>) :
     private fun analyzeDependency(project: Project, variantName: String) {
         project.configurations.findByName(variantName)?.apply {
             for (dependency in dependencies) {
-                analyzeDependency(Dependency(dependency.group, dependency.name, dependency.version, 0, ""), project)
+                analyzeDependency(
+                    with(dependency) {
+                        Dependency(group, name, version, 0, "", false)
+                    },
+                    project
+                )
             }
         }
     }
@@ -113,14 +121,22 @@ class LibraryAllowListDependenciesLint(private val variantNames: List<String>) :
             logWarning(LINT_WARNIGN_TITLE)
 
             for (dependency in allowListGoingToExpire) {
-                val depAllowListData = findDependencyInList(dependency, allowListDependencies)
+                val depAllowListData = findDependencyInList(
+                    project,
+                    dependency,
+                    allowListDependencies
+                )
 
                 val expireDate = "(${depAllowListData.allowListDep?.rawExpiresDate})"
-                val dependecyData = " - ${dependency.group}:${dependency.name}:${dependency.version} (Deprecated!) "
-                val availableVersion = if (depAllowListData.availableVersion != null) "Available version $ARROW ${depAllowListData.availableVersion}" else ""
+                val dependencyData = " - ${dependency.group}:${dependency.name}:${dependency.version} (Deprecated!) "
+                val availableVersion = if (depAllowListData.availableVersion != null) {
+                    "Available version $ARROW ${depAllowListData.availableVersion}"
+                } else {
+                    ""
+                }
 
-                logMessage(expireDate + dependecyData + availableVersion)
-                writeAReportMessage(expireDate + dependecyData + availableVersion, file)
+                logMessage(expireDate + dependencyData + availableVersion)
+                writeAReportMessage(expireDate + dependencyData + availableVersion, file)
             }
 
             logMessage(LINT_WARNIGN_DESCRIPTION)
@@ -128,35 +144,63 @@ class LibraryAllowListDependenciesLint(private val variantNames: List<String>) :
         }
     }
 
-    private fun findDependencyInList(dependency: Dependency, allowList: ArrayList<Dependency>): DependencyDataInAllowList {
+    private fun findDependencyInList(
+        project: Project,
+        dependency: Dependency,
+        allowList: ArrayList<Dependency>
+    ): DependencyDataInAllowList {
         val depAllowListData = DependencyDataInAllowList(null, null)
 
         val dependencyFullName = "${dependency.group}:${dependency.name}:${dependency.version}"
 
         // Iterate on dependencies in allowlist
         for (allowListDep in allowList) {
-            val dependencyPattern = "${allowListDep.group}:${allowListDep.name}:(${allowListDep.version})"
+            val dependencyPattern =
+                "${allowListDep.group}:${allowListDep.name}:(${allowListDep.version})"
 
             // Check if this dependency is the same as the one currently iterating
-            if (Pattern.compile(dependencyPattern, Pattern.CASE_INSENSITIVE).matcher(dependencyFullName).matches()) {
+            if (Pattern.compile(dependencyPattern, Pattern.CASE_INSENSITIVE)
+                    .matcher(dependencyFullName).matches()
+            ) {
                 depAllowListData.allowListDep = allowListDep
             }
 
             // Check if this dependency is one of the available versions of the dependency being iterated
-            if (isTheSameDependency(dependency, allowListDep) && isAllowed(allowListDep)) {
+            if (isTheSameDependency(dependency, allowListDep) && isAllowedByDeadline(allowListDep)) {
                 depAllowListData.availableVersion = allowListDep.version?.replace("|", " or ")
+            }
+
+            findExtension<LintGradleExtension>(project)?.apply {
+                if (alphaDependenciesEnabled
+                    && !isAllowedByAlpha(project, allowListDep)
+                ) {
+                    depAllowListData.availableVersion = null
+                }
             }
         }
         return depAllowListData
     }
 
-    private fun isAllowed(allowListDep: Dependency): Boolean {
+    private fun isAllowedByDeadline(allowListDep: Dependency): Boolean {
         return allowListDep.expires == null || allowListDep.expires == Long.MAX_VALUE
+    }
+
+    private fun isAllowedByAlpha(project: Project, allowListDep: Dependency): Boolean {
+        var alphaAllowed = false
+        allowListDep.isAlpha?.let { allowListAlphaEnabled ->
+            if (allowListAlphaEnabled)
+                AlphaAllowedProjects.groups.forEach { alphaAllowedGroup ->
+                    if (alphaAllowedGroup == project.group) {
+                        alphaAllowed = true
+                    }
+                }
+        }
+        return alphaAllowed
     }
 
     private fun isTheSameDependency(dependency: Dependency, allowListDep: Dependency): Boolean {
         return allowListDep.group == dependency.group &&
-            (allowListDep.name == UNDEFINED_VERSION || (allowListDep.name == dependency.name || allowListDep.name == null))
+                (allowListDep.name == UNDEFINED_VERSION || (allowListDep.name == dependency.name || allowListDep.name == null))
     }
 
     private fun report(message: String, project: Project) {
@@ -177,10 +221,12 @@ class LibraryAllowListDependenciesLint(private val variantNames: List<String>) :
      */
     fun analyzeDependency(dependency: Dependency, project: Project) {
         val dependencyFullName = "${dependency.group}:${dependency.name}:${dependency.version}"
-        val isLocalModule = project.rootProject.allprojects.find { dependencyFullName.contains("${it.group}:${it.name}") } != null
+        val isLocalModule = project.rootProject.allprojects.find {
+            dependencyFullName.contains("${it.group}:${it.name}")
+        } != null
 
         if (!dependencyFullName.contains(defaultGradleVersion) && !isLocalModule) {
-            val result = getStatusDependencyInAllowList(dependency)
+            val result = getStatusDependencyInAllowList(project, dependency)
             if (result.isBlocker) {
                 report(result.message(dependencyFullName), project)
             } else if (result.shouldReport) {
@@ -189,20 +235,32 @@ class LibraryAllowListDependenciesLint(private val variantNames: List<String>) :
         }
     }
 
-    private fun getStatusDependencyInAllowList(dependency: Dependency): StatusBase {
-        val depAllowListData = findDependencyInList(dependency, allowListDependencies)
-        val dep = depAllowListData.allowListDep
-        if (dep != null) {
-            return if (dep.expires == null) {
+    private fun getStatusDependencyInAllowList(
+        project: Project,
+        dependency: Dependency
+    ): StatusBase {
+        val depAllowListData = findDependencyInList(
+            project,
+            dependency,
+            allowListDependencies
+        )
+        depAllowListData.allowListDep?.let { data ->
+            return if (data.expires == null) {
                 Status.available()
+            } else if (dependency.isAlpha == true
+                && depAllowListData.availableVersion == null
+            ) {
+                Status.alphaDenied()
             } else {
                 when {
-                    dep.expires == Long.MAX_VALUE -> {
+                    data.expires == Long.MAX_VALUE -> {
                         Status.available()
                     }
-                    System.currentTimeMillis() < dep.expires -> {
+
+                    System.currentTimeMillis() < data.expires -> {
                         Status.goingToExpire(depAllowListData.availableVersion)
                     }
+
                     else -> {
                         Status.expired(depAllowListData.availableVersion)
                     }
@@ -220,10 +278,11 @@ class LibraryAllowListDependenciesLint(private val variantNames: List<String>) :
 
         return Dependency(
             it.asJsonObject[GROUP_CONSTANT].asString.replace("\\", ""),
-            JsonUtils.getVariableFromJson(NAME_CONSTANT, it, UNDEFINED_VERSION),
-            JsonUtils.getVariableFromJson(VERSION_CONSTANT, it, UNDEFINED_VERSION),
+            JsonUtils.getStringVariableFromJson(NAME_CONSTANT, it, UNDEFINED_VERSION),
+            JsonUtils.getStringVariableFromJson(VERSION_CONSTANT, it, UNDEFINED_VERSION),
             expires,
-            JsonUtils.getVariableFromJson(EXPIRES_CONSTANT, it, null),
+            JsonUtils.getStringVariableFromJson(EXPIRES_CONSTANT, it, null),
+            JsonUtils.getBooleanVariableFromJson(IS_ALPHA, it, false)
         )
     }
 }

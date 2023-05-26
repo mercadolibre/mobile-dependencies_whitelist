@@ -21,9 +21,9 @@ class JsonProviderTest {
         item.addProperty(NAME_CONSTANT, ANY_NAME)
         item.addProperty(VERSION_CONSTANT, VERSION_1)
 
-        Assert.assertEquals(expected.name, JsonUtils.getVariableFromJson(NAME_CONSTANT, item, ".*"))
-        Assert.assertEquals(expected.group, JsonUtils.getVariableFromJson(GROUP_CONSTANT, item, ""))
-        Assert.assertEquals(expected.version, JsonUtils.getVariableFromJson(VERSION_CONSTANT, item, ".*"))
+        Assert.assertEquals(expected.name, JsonUtils.getStringVariableFromJson(NAME_CONSTANT, item, ".*"))
+        Assert.assertEquals(expected.group, JsonUtils.getStringVariableFromJson(GROUP_CONSTANT, item, ""))
+        Assert.assertEquals(expected.version, JsonUtils.getStringVariableFromJson(VERSION_CONSTANT, item, ".*"))
     }
 
     @org.junit.Test
@@ -32,7 +32,7 @@ class JsonProviderTest {
 
         val item = JsonObject()
         item.addProperty(ANY_GROUP, ANY_GROUP)
-        val actual = JsonUtils.getVariableFromJson("no_exist", item, null)
+        val actual = JsonUtils.getStringVariableFromJson("no_exist", item, null)
 
         Assert.assertEquals(expected, actual)
     }

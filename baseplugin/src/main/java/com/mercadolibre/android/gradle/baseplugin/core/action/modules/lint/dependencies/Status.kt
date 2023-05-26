@@ -1,5 +1,6 @@
 package com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies
 
+import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_ALPHA_DENIED
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_AVAILABLE
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_EXPIRED
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_GOING_TO_EXPIRE
@@ -24,6 +25,11 @@ object Status {
      * This method is responsible for generating an expired dependency state.
      */
     fun expired(message: String?): StatusBase = StatusBase(shouldReport = true, isBlocker = true, LINT_EXPIRED, message)
+
+    /**
+     * This method is responsible for generating an alpha denied dependency state.
+     */
+    fun alphaDenied(): StatusBase = StatusBase(shouldReport = true, isBlocker = true, LINT_ALPHA_DENIED, null)
 
     /**
      * This method is responsible for generating an goign to expire dependency state.

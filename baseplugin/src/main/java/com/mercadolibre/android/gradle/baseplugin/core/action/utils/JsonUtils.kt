@@ -39,9 +39,20 @@ object JsonUtils {
     /**
      * This method is responsible for obtaining data from a Json safely.
      */
-    fun getVariableFromJson(name: String, json: JsonElement, defaultValue: String?): String? {
+    fun getStringVariableFromJson(name: String, json: JsonElement, defaultValue: String?): String? {
         return if (json.asJsonObject[name] != null) {
             json.asJsonObject[name].asString.replace("\\", "")
+        } else {
+            defaultValue
+        }
+    }
+
+    /**
+     * This method is responsible for obtaining data from a Json safely.
+     */
+    fun getBooleanVariableFromJson(name: String, json: JsonElement, defaultValue: Boolean?): Boolean? {
+        return if (json.asJsonObject[name] != null) {
+            json.asJsonObject[name].asString.replace("\\", "").toBoolean()
         } else {
             defaultValue
         }

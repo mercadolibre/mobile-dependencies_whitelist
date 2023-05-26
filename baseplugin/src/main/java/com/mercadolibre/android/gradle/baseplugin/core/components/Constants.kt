@@ -287,6 +287,9 @@ const val LINT_INVALID = "invalid"
 const val LINT_EXPIRED = "expired"
 
 /** This variable contains values necessary for the operation of a module. */
+const val LINT_ALPHA_DENIED = "alpha denied"
+
+/** This variable contains values necessary for the operation of a module. */
 const val LINT_GOING_TO_EXPIRE = "going to expire"
 
 /** This variable contains values necessary for the operation of a module. */
@@ -462,6 +465,7 @@ const val DEPENDENCIES_CONSTANT = "dependencies" /** This variable contains a ke
 const val VERSION_CONSTANT = "version" /** This variable contains a keyword used to generate text statements. */
 const val EXPIRES_CONSTANT = "expires" /** This variable contains a keyword used to generate text statements. */
 const val RAW_EXPIRES_DATE_CONSTANT = "rawExpiresDate" /** This variable contains a keyword used to generate text statements. */
+const val IS_ALPHA = "isAlpha" /** This variable contains a keyword used to generate text statements. */
 const val GROUP_CONSTANT = "group" /** This variable contains a keyword used to generate text statements. */
 const val NAME_CONSTANT = "name" /** This variable contains a keyword used to generate text statements. */
 const val ARTIFACT_CONSTANT = "artifact" /** This variable contains a keyword used to generate text statements. */
