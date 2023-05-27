@@ -52,7 +52,7 @@ object JsonUtils {
      */
     fun getBooleanVariableFromJson(name: String, json: JsonElement, defaultValue: Boolean?): Boolean? {
         return if (json.asJsonObject[name] != null) {
-            json.asJsonObject[name].asString.replace("\\", "").toBoolean()
+            json.asJsonObject[name].asBoolean
         } else {
             defaultValue
         }

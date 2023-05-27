@@ -160,7 +160,7 @@ class LibraryAllowListDependenciesLint(private val variantNames: List<String>) :
 
             // Check if this dependency is the same as the one currently iterating
             if (Pattern.compile(dependencyPattern, Pattern.CASE_INSENSITIVE)
-                    .matcher(dependencyFullName).matches()
+                .matcher(dependencyFullName).matches()
             ) {
                 depAllowListData.allowListDep = allowListDep
             }
@@ -171,8 +171,8 @@ class LibraryAllowListDependenciesLint(private val variantNames: List<String>) :
             }
 
             findExtension<LintGradleExtension>(project)?.apply {
-                if (alphaDependenciesEnabled
-                    && !isAllowedByAlpha(project, allowListDep)
+                if (alphaDependenciesEnabled &&
+                    !isAllowedByAlpha(project, allowListDep)
                 ) {
                     depAllowListData.availableVersion = null
                 }
@@ -200,7 +200,7 @@ class LibraryAllowListDependenciesLint(private val variantNames: List<String>) :
 
     private fun isTheSameDependency(dependency: Dependency, allowListDep: Dependency): Boolean {
         return allowListDep.group == dependency.group &&
-                (allowListDep.name == UNDEFINED_VERSION || (allowListDep.name == dependency.name || allowListDep.name == null))
+            (allowListDep.name == UNDEFINED_VERSION || (allowListDep.name == dependency.name || allowListDep.name == null))
     }
 
     private fun report(message: String, project: Project) {
@@ -247,8 +247,8 @@ class LibraryAllowListDependenciesLint(private val variantNames: List<String>) :
         depAllowListData.allowListDep?.let { data ->
             return if (data.expires == null) {
                 Status.available()
-            } else if (dependency.isAlpha == true
-                && depAllowListData.availableVersion == null
+            } else if (dependency.isAlpha == true &&
+                depAllowListData.availableVersion == null
             ) {
                 Status.alphaDenied()
             } else {
