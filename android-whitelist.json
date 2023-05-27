@@ -1,6 +1,11 @@
 {
   "whitelist": [
     {
+      "group": "androix\\.compose\\.ui",
+      "name": "ui",
+      "version": "1\\.+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.nfcpushprovisioning",
       "name": "tpcsdk",
       "version": "1\\.+"
