@@ -50,9 +50,9 @@ object JsonUtils {
     /**
      * This method is responsible for obtaining data from a Json safely.
      */
-    fun getBooleanVariableFromJson(name: String, json: JsonElement, defaultValue: Boolean?): Boolean? {
+    fun getBooleanVariableFromJson(name: String, json: JsonElement, defaultValue: Boolean): Boolean {
         return if (json.asJsonObject[name] != null) {
-            json.asJsonObject[name].asBoolean
+            json.asJsonObject[name].asJsonPrimitive.asBoolean
         } else {
             defaultValue
         }

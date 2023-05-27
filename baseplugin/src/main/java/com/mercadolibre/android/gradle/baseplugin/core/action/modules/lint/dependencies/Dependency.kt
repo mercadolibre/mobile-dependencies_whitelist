@@ -14,5 +14,5 @@ data class Dependency(
     val version: String?,
     val expires: Long?,
     val rawExpiresDate: String?,
-    val isAlpha: Boolean?
+    val isAlpha: Boolean
 )
