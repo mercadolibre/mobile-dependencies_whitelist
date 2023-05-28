@@ -4,8 +4,8 @@ import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.depen
 import com.mercadolibre.android.gradle.baseplugin.core.extensions.asMilliseconds
 
 internal object ValidateDeadlineUseCase {
-    fun validate(allowListDep: Dependency): Boolean {
-        return allowListDep.expires == null
-                || allowListDep.expires.asMilliseconds() == Long.MAX_VALUE
+    fun validate(allowListDependency: Dependency): Boolean {
+        return allowListDependency.expires == null ||
+            allowListDependency.expires.asMilliseconds() == Long.MAX_VALUE
     }
 }

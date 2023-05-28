@@ -12,11 +12,11 @@ import io.mockk.mockk
 import io.mockk.mockkObject
 import io.mockk.unmockkAll
 import io.mockk.verify
-import java.text.SimpleDateFormat
-import java.util.Date
 import org.gradle.api.Project
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
+import java.text.SimpleDateFormat
+import java.util.Date
 
 @RunWith(JUnit4::class)
 class PluginLintTest : AbstractPluginManager() {

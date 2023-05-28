@@ -19,7 +19,7 @@ object Status {
     /**
      * This method is responsible for generating an invalid dependency state.
      */
-    fun invalid(message: String?): StatusBase = StatusBase(shouldReport = true, isBlocker = true, LINT_INVALID, message)
+    fun invalid(): StatusBase = StatusBase(shouldReport = true, isBlocker = true, LINT_INVALID, null)
 
     /**
      * This method is responsible for generating an expired dependency state.

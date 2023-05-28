@@ -6,7 +6,7 @@ package com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.depe
  * @param availableVersion The version avaiable of this dependency.
  */
 internal class DependencyAnalysis(
-    var dependency: Dependency?,
-    var availableVersion: String?,
+    var dependency: Dependency,
+    var availableVersion: String? = null,
     var isAllowedAlpha: Boolean = false
 )

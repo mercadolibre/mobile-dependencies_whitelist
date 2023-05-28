@@ -24,7 +24,7 @@ class StatusBase(val shouldReport: Boolean, val isBlocker: Boolean, val name: St
         val baseMessage = "- $dependency (${name.toLowerCase().capitalize()})"
 
         return if (message != null) {
-            "$baseMessage ${("Available version $ARROW " + message!!)}"
+            "$baseMessage ${("Available version $ARROW $message")}"
         } else {
             baseMessage
         }
