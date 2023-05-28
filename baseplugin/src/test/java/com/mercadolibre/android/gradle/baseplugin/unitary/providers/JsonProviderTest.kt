@@ -2,7 +2,6 @@ package com.mercadolibre.android.gradle.baseplugin.unitary.providers
 
 import com.google.gson.JsonObject
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.Dependency
-import com.mercadolibre.android.gradle.baseplugin.core.action.utils.JsonUtils
 import com.mercadolibre.android.gradle.baseplugin.core.components.GROUP_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.NAME_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.VERSION_CONSTANT

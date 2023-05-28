@@ -5,7 +5,6 @@ import com.mercadolibre.android.gradle.baseplugin.core.action.configurers.Plugin
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.LintGradleExtension
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.Dependency
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.library.LibraryAllowListDependenciesLint
-import com.mercadolibre.android.gradle.baseplugin.core.action.utils.JsonUtils
 import com.mercadolibre.android.gradle.baseplugin.core.action.utils.OutputUtils
 import com.mercadolibre.android.gradle.baseplugin.core.components.EXPIRES_CONSTANT
 import com.mercadolibre.android.gradle.baseplugin.core.components.GROUP_CONSTANT
@@ -87,7 +86,7 @@ class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
         lintableModule.allowListDependencies.addAll(listOf(dependency, availableVersion))
 
         // Check if the dependency is in the allow list
-        lintableModule.analyzeDependency(dependency, projects[LIBRARY_PROJECT]!!)
+        lintableModule.analyzeProjectDependency(dependency, projects[LIBRARY_PROJECT]!!)
 
         // Detect deprecated Dependencies
         lintableModule.lint(projects[LIBRARY_PROJECT]!!)
@@ -106,7 +105,7 @@ class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
         lintableModule.allowListDependencies.add(dependency)
 
         // Check if the dependency is in the allow list
-        lintableModule.analyzeDependency(dependency, projects[LIBRARY_PROJECT]!!)
+        lintableModule.analyzeProjectDependency(dependency, projects[LIBRARY_PROJECT]!!)
 
         // Do not report anything
         verify(inverse = true) { OutputUtils.logError(any<String>()) }
@@ -122,7 +121,7 @@ class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
         lintableModule.allowListDependencies.add(dependency)
 
         // Check if the dependency is in the allow list
-        lintableModule.analyzeDependency(dependency, projects[LIBRARY_PROJECT]!!)
+        lintableModule.analyzeProjectDependency(dependency, projects[LIBRARY_PROJECT]!!)
 
         // Do not report anything
         verify(inverse = true) { OutputUtils.logError(any<String>()) }
@@ -135,7 +134,7 @@ class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
         val dependency = Dependency(ANY_GROUP, ANY_NAME, VERSION_1, null, null)
 
         // Check if the dependency is in the allow list
-        lintableModule.analyzeDependency(dependency, projects[LIBRARY_PROJECT]!!)
+        lintableModule.analyzeProjectDependency(dependency, projects[LIBRARY_PROJECT]!!)
 
         // Report error of the the dependency not listed
         verify { OutputUtils.logError("The following dependencies are not allowed:") }
@@ -155,7 +154,7 @@ class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
         lintableModule.allowListDependencies.add(dependency)
 
         // Check if the dependency is in the allow list
-        lintableModule.analyzeDependency(dependency, projects[LIBRARY_PROJECT]!!)
+        lintableModule.analyzeProjectDependency(dependency, projects[LIBRARY_PROJECT]!!)
 
         // Do not report any warning
         verify(exactly = 1) { OutputUtils.logError(any<String>()) }
@@ -178,7 +177,7 @@ class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
         lintableModule.allowListDependencies.add(dependency)
 
         // Check if the dependency is in the allow list
-        lintableModule.analyzeDependency(dependency, projects[LIBRARY_PROJECT]!!)
+        lintableModule.analyzeProjectDependency(dependency, projects[LIBRARY_PROJECT]!!)
 
         // Detect deprecated Dependencies
         lintableModule.lint(projects[LIBRARY_PROJECT]!!)
@@ -207,7 +206,7 @@ class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
         lintableModule.allowListDependencies.addAll(listOf(dependency, availableVersion))
 
         // Check if the dependency is in the allow list
-        lintableModule.analyzeDependency(dependency, projects[LIBRARY_PROJECT]!!)
+        lintableModule.analyzeProjectDependency(dependency, projects[LIBRARY_PROJECT]!!)
 
         // Detect deprecated Dependencies
         lintableModule.lint(projects[LIBRARY_PROJECT]!!)
@@ -235,9 +234,9 @@ class LibraryAllowListDependenciesLintTest : AbstractPluginManager() {
         lintableModule.allowListDependencies.addAll(listOf(dependency1, dependency2, dependency3))
 
         // Check if the dependencies is in the allow list and not expired
-        lintableModule.analyzeDependency(dependency1, projects[LIBRARY_PROJECT]!!)
-        lintableModule.analyzeDependency(dependency2, projects[LIBRARY_PROJECT]!!)
-        lintableModule.analyzeDependency(dependency3, projects[LIBRARY_PROJECT]!!)
+        lintableModule.analyzeProjectDependency(dependency1, projects[LIBRARY_PROJECT]!!)
+        lintableModule.analyzeProjectDependency(dependency2, projects[LIBRARY_PROJECT]!!)
+        lintableModule.analyzeProjectDependency(dependency3, projects[LIBRARY_PROJECT]!!)
 
         // Detect deprecated Dependencies
         lintableModule.lint(projects[LIBRARY_PROJECT]!!)

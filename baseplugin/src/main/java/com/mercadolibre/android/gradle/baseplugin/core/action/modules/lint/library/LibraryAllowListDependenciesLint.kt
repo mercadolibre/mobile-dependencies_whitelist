@@ -1,285 +1,162 @@
 package com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.library
 
-import com.google.gson.JsonElement
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.Lint
-import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.LintGradleExtension
-import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.AlphaAllowedProjects
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.Dependency
-import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.DependencyDataInAllowList
-import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.Status
-import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.StatusBase
-import com.mercadolibre.android.gradle.baseplugin.core.action.utils.JsonUtils
-import com.mercadolibre.android.gradle.baseplugin.core.action.utils.OutputUtils
-import com.mercadolibre.android.gradle.baseplugin.core.components.ALLOWLIST_CONSTANT
-import com.mercadolibre.android.gradle.baseplugin.core.components.ARROW
-import com.mercadolibre.android.gradle.baseplugin.core.components.EXPIRES_CONSTANT
-import com.mercadolibre.android.gradle.baseplugin.core.components.GROUP_CONSTANT
-import com.mercadolibre.android.gradle.baseplugin.core.components.IS_ALPHA
+import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.DependencyAnalysis
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_DEPENDENCIES_TASK
-import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_ERROR_POSTDATA
-import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_ERROR_TITLE
+import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_ERROR_POSTDATA_MESSAGE
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_LIBRARY_FILE_BLOCKER
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_LIBRARY_FILE_WARNING
-import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_WARNIGN_DESCRIPTION
-import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_WARNIGN_TITLE
-import com.mercadolibre.android.gradle.baseplugin.core.components.NAME_CONSTANT
-import com.mercadolibre.android.gradle.baseplugin.core.components.VERSION_CONSTANT
+import com.mercadolibre.android.gradle.baseplugin.core.extensions.parseAvailable
+import com.mercadolibre.android.gradle.baseplugin.core.extensions.setup
+import com.mercadolibre.android.gradle.baseplugin.core.extensions.fullName
+import com.mercadolibre.android.gradle.baseplugin.core.extensions.isSameVersion
+import com.mercadolibre.android.gradle.baseplugin.core.extensions.isLocal
+import com.mercadolibre.android.gradle.baseplugin.core.extensions.new
+import com.mercadolibre.android.gradle.baseplugin.core.extensions.setAllowListDefault
+import com.mercadolibre.android.gradle.baseplugin.core.extensions.setProjectDefault
+import com.mercadolibre.android.gradle.baseplugin.core.usecase.GetAllowedDependenciesUseCase.get
+import com.mercadolibre.android.gradle.baseplugin.core.usecase.MatchDependenciesUseCase.match
+import com.mercadolibre.android.gradle.baseplugin.core.usecase.GetDependencyStatusUseCase
+import com.mercadolibre.android.gradle.baseplugin.core.usecase.LogLibraryBlockersUseCase
+import com.mercadolibre.android.gradle.baseplugin.core.usecase.LogLibraryBlockersComplianceUseCase
+import com.mercadolibre.android.gradle.baseplugin.core.usecase.LogLibraryWarningsComplianceUseCase
+import com.mercadolibre.android.gradle.baseplugin.core.usecase.LogLibraryWarningsUseCase
+import com.mercadolibre.android.gradle.baseplugin.core.usecase.ValidateAlphaUseCase
+import com.mercadolibre.android.gradle.baseplugin.core.usecase.ValidateDeadlineUseCase
 import org.gradle.api.Project
-import java.util.regex.Pattern
+
+private const val UNSPECIFIED_GRADLE_VERSION = "unspecified"
 
 /**
  * The LibraryAllowListDependenciesLint class is in charge of reviewing all the dependencies of the project through the AllowList to
  * report if there is any deprecated in a Library.
  */
-class LibraryAllowListDependenciesLint(private val variantNames: List<String>) : Lint() {
-
-    private val URL_PLACEHOLDER = "<URL>"
-
-    private val UNDEFINED_VERSION = ".*"
-
-    private val defaultGradleVersion = "unspecified"
-
-    private var hasFailed = false
-
-    /** This list contains the dependencies in the allow list. */
-    val allowListDependencies = arrayListOf<Dependency>()
+class LibraryAllowListDependenciesLint(
+    private val variantNames: List<String>
+) : Lint() {
 
     /** This list contains the dependencies that are about to expire. */
-    private val allowListGoingToExpire = arrayListOf<Dependency>()
+    private val allowListGoingToExpireBuffer = mutableListOf<() -> Unit>()
+
+    private val allowListInvalidBuffer = mutableListOf<() -> Unit>()
 
     /**
      * This method is responsible for providing a name to the linteo class.
      */
     override fun name(): String = LINT_DEPENDENCIES_TASK
 
+    private lateinit var project: Project
+
+    private val lintGradle by lazy { setup(project) }
+
     /**
      * This method is responsible for verifying that the dependencies of all the variants are valid or
      * if they are about to expire, perform the warning.
      */
     override fun lint(project: Project): Boolean {
-        hasFailed = false
-        findExtension<LintGradleExtension>(project)?.apply {
+        this.project = project
+        lintGradle.apply {
             if (dependenciesLintEnabled) {
-                getAllowList(dependencyAllowListUrl)
-                analyzeDependencies(project)
-                if (hasFailed) {
-                    report(
-                        LINT_ERROR_POSTDATA.replace(URL_PLACEHOLDER, dependencyAllowListUrl),
-                        project
-                    )
-                }
-                if (allowListGoingToExpire.size > 0) {
-                    reportWarnings(project)
-                }
-            }
-        }
-        return hasFailed
-    }
-
-    private fun getAllowList(url: String) {
-        JsonUtils.getJson(url)[ALLOWLIST_CONSTANT].asJsonArray.all {
-            allowListDependencies.add(jsonNodeToDependency(it))
-        }
-    }
-
-    private fun analyzeDependencies(project: Project) {
-        for (variantName in variantNames) {
-            analyzeDependency(project, variantName)
-        }
-    }
-
-    private fun analyzeDependency(project: Project, variantName: String) {
-        project.configurations.findByName(variantName)?.apply {
-            for (dependency in dependencies) {
-                analyzeDependency(
-                    with(dependency) {
-                        Dependency(group, name, version, 0, "", false)
-                    },
-                    project
-                )
-            }
-        }
-    }
-
-    /**
-     * This method is responsible for generating reports in case there are dependencies that have warnings.
-     */
-    private fun reportWarnings(project: Project) {
-        val file = project.file(LINT_LIBRARY_FILE_WARNING).apply {
-            // Warning file Exist ?
-            if (exists()) {
-                // Delete old warnings
-                delete()
-            } else {
-                // Make the dir to save new Warnings
-                parentFile.mkdirs()
-            }
-        }
-
-        with(OutputUtils) {
-            writeAReportMessage(LINT_WARNIGN_TITLE, file)
-            logWarning(LINT_WARNIGN_TITLE)
-
-            for (dependency in allowListGoingToExpire) {
-                val depAllowListData = findDependencyInList(
-                    project,
-                    dependency,
-                    allowListDependencies
-                )
-
-                val expireDate = "(${depAllowListData.allowListDep?.rawExpiresDate})"
-                val dependencyData = " - ${dependency.group}:${dependency.name}:${dependency.version} (Deprecated!) "
-                val availableVersion = if (depAllowListData.availableVersion != null) {
-                    "Available version $ARROW ${depAllowListData.availableVersion}"
-                } else {
-                    ""
+                variantNames.forEach { name ->
+                    analyzeByVariantName(name)
                 }
 
-                logMessage(expireDate + dependencyData + availableVersion)
-                writeAReportMessage(expireDate + dependencyData + availableVersion, file)
-            }
+                allowListInvalidBuffer.apply {
+                    if (isNotEmpty()) {
+                        val file = project.file(LINT_LIBRARY_FILE_BLOCKER).new()
+                        val messages = { forEach { log -> log() } }
+                        LogLibraryBlockersComplianceUseCase.log(file, dependencyAllowListUrl, messages)
+                    }
+                }
 
-            logMessage(LINT_WARNIGN_DESCRIPTION)
-            writeAReportMessage(LINT_WARNIGN_DESCRIPTION, file)
-        }
-    }
-
-    private fun findDependencyInList(
-        project: Project,
-        dependency: Dependency,
-        allowList: ArrayList<Dependency>
-    ): DependencyDataInAllowList {
-        val depAllowListData = DependencyDataInAllowList(null, null)
-
-        val dependencyFullName = "${dependency.group}:${dependency.name}:${dependency.version}"
-
-        // Iterate on dependencies in allowlist
-        for (allowListDep in allowList) {
-            val dependencyPattern =
-                "${allowListDep.group}:${allowListDep.name}:(${allowListDep.version})"
-
-            // Check if this dependency is the same as the one currently iterating
-            if (Pattern.compile(dependencyPattern, Pattern.CASE_INSENSITIVE)
-                    .matcher(dependencyFullName).matches()
-            ) {
-                depAllowListData.allowListDep = allowListDep
-            }
-
-            // Check if this dependency is one of the available versions of the dependency being iterated
-            if (isTheSameDependency(dependency, allowListDep) && isAllowedByDeadline(allowListDep)) {
-                depAllowListData.availableVersion = allowListDep.version?.replace("|", " or ")
-            }
-
-            findExtension<LintGradleExtension>(project)?.apply {
-                if (alphaDependenciesEnabled &&
-                    !isAllowedByAlpha(project, allowListDep)
-                ) {
-                    depAllowListData.availableVersion = null
+                allowListGoingToExpireBuffer.apply {
+                    if (isEmpty()) {
+                        val file = project.file(LINT_LIBRARY_FILE_WARNING).new()
+                        val messages = { forEach { log -> log() } }
+                        LogLibraryWarningsComplianceUseCase.log(file, messages)
+                    }
                 }
             }
         }
-        return depAllowListData
+
+        return allowListInvalidBuffer.isNotEmpty()
     }
 
-    private fun isAllowedByDeadline(allowListDep: Dependency): Boolean {
-        return allowListDep.expires == null || allowListDep.expires == Long.MAX_VALUE
-    }
-
-    private fun isAllowedByAlpha(project: Project, allowListDep: Dependency): Boolean {
-        var alphaAllowed = false
-        if (allowListDep.isAlpha) {
-            AlphaAllowedProjects.groups.forEach { alphaAllowedGroup ->
-                if (alphaAllowedGroup == project.group) {
-                    alphaAllowed = true
+    private fun analyzeByVariantName(name: String) {
+        project.configurations.findByName(name)?.apply {
+            for (versionCatalogDependency in dependencies) {
+                val dependency = versionCatalogDependency.setProjectDefault()
+                analyzeDependency(dependency)?.let { analyzed ->
+                    GetDependencyStatusUseCase.get(lintGradle, analyzed).apply {
+                        if (isBlocker) {
+                            addToInvalidBuffer(analyzed)
+                        } else if (shouldReport) {
+                            addToWarningBuffer(analyzed)
+                        }
+                    }
                 }
             }
-        }
-        return alphaAllowed
-    }
-
-    private fun isTheSameDependency(dependency: Dependency, allowListDep: Dependency): Boolean {
-        return allowListDep.group == dependency.group &&
-                (allowListDep.name == UNDEFINED_VERSION || (allowListDep.name == dependency.name || allowListDep.name == null))
-    }
-
-    private fun report(message: String, project: Project) {
-        val file = project.file(LINT_LIBRARY_FILE_BLOCKER)
-        with(OutputUtils) {
-            if (!hasFailed) {
-                hasFailed = true
-                writeAReportMessage(LINT_ERROR_TITLE, file)
-                logError(LINT_ERROR_TITLE)
-            }
-            logMessage(message)
-            writeAReportMessage("\n$message", file)
         }
     }
 
     /**
      * This method is responsible for verifying if the dependency has to be reported, or has any warning.
      */
-    fun analyzeDependency(dependency: Dependency, project: Project) {
-        val dependencyFullName = "${dependency.group}:${dependency.name}:${dependency.version}"
-        val isLocalModule = project.rootProject.allprojects.find {
-            dependencyFullName.contains("${it.group}:${it.name}")
-        } != null
+    private fun analyzeDependency(projectDependency: Dependency): DependencyAnalysis? {
+        val name = projectDependency.fullName()
+        val isNotInvalidAnalysis = !name.contains(UNSPECIFIED_GRADLE_VERSION)
+                && !projectDependency.isLocal(project)
 
-        if (!dependencyFullName.contains(defaultGradleVersion) && !isLocalModule) {
-            val result = getStatusDependencyInAllowList(project, dependency)
-            if (result.isBlocker) {
-                report(result.message(dependencyFullName), project)
-            } else if (result.shouldReport) {
-                allowListGoingToExpire.add(dependency)
-            }
+        if (isNotInvalidAnalysis) {
+            return analyzeAgainstAllowList(projectDependency)
         }
+
+        return null
     }
 
-    private fun getStatusDependencyInAllowList(
-        project: Project,
-        dependency: Dependency
-    ): StatusBase {
-        val depAllowListData = findDependencyInList(
-            project,
-            dependency,
-            allowListDependencies
-        )
-        depAllowListData.allowListDep?.let { data ->
-            return if (data.expires == null) {
-                Status.available()
-            } else if (dependency.isAlpha && depAllowListData.availableVersion == null) {
-                Status.alphaDenied()
-            } else {
-                when {
-                    data.expires == Long.MAX_VALUE -> {
-                        Status.available()
+    private fun analyzeAgainstAllowList(projectDependency: Dependency): DependencyAnalysis {
+        val analysis = DependencyAnalysis(null, null)
+        for (allowListDependency in get(lintGradle.dependencyAllowListUrl)) {
+            with(allowListDependency) {
+                setAllowListDefault()
+                if (match(projectDependency, allowListDependency)) {
+                    analysis.dependency = this
+
+                    val isValidByDeadline = isSameVersion(projectDependency)
+                            && ValidateDeadlineUseCase.validate(this)
+
+                    val isValidByAlpha = lintGradle.alphaDependenciesEnabled
+                            && ValidateAlphaUseCase.validate(allowListDependency, project)
+
+                    if (isValidByDeadline) {
+                        analysis.availableVersion = parseAvailable()
                     }
 
-                    System.currentTimeMillis() < data.expires -> {
-                        Status.goingToExpire(depAllowListData.availableVersion)
-                    }
-
-                    else -> {
-                        Status.expired(depAllowListData.availableVersion)
+                    if (isValidByAlpha) {
+                        analysis.isAllowedAlpha = true
                     }
                 }
             }
         }
-        return Status.invalid(depAllowListData.availableVersion)
+        return analysis
     }
 
-    /**
-     * This method is responsible for obtaining the nodes of the dependencies and storing them through the Data Class Dependency.
-     */
-    fun jsonNodeToDependency(it: JsonElement): Dependency {
-        val expires: Long? = JsonUtils.castJsonElementToDate(it.asJsonObject)
+    private fun addToInvalidBuffer(analyzed: DependencyAnalysis) {
+        allowListInvalidBuffer.add {
+            LogLibraryBlockersUseCase.log(
+                project.file(LINT_LIBRARY_FILE_BLOCKER),
+                analyzed,
+            )
+        }
+    }
 
-        return Dependency(
-            it.asJsonObject[GROUP_CONSTANT].asString.replace("\\", ""),
-            JsonUtils.getStringVariableFromJson(NAME_CONSTANT, it, UNDEFINED_VERSION),
-            JsonUtils.getStringVariableFromJson(VERSION_CONSTANT, it, UNDEFINED_VERSION),
-            expires,
-            JsonUtils.getStringVariableFromJson(EXPIRES_CONSTANT, it, null),
-            JsonUtils.getBooleanVariableFromJson(IS_ALPHA, it, false)
-        )
+    private fun addToWarningBuffer(analyzed: DependencyAnalysis) {
+        allowListGoingToExpireBuffer.add {
+            LogLibraryWarningsUseCase.log(
+                project.file(LINT_LIBRARY_FILE_WARNING),
+                analyzed
+            )
+        }
     }
 }

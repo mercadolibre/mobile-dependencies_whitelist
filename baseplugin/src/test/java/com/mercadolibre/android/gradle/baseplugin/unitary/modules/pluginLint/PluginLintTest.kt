@@ -4,7 +4,6 @@ import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basic
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.pluginLint.PluginLint
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.pluginLint.plugins.Plugin
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.publishable.basics.TimeStampManager
-import com.mercadolibre.android.gradle.baseplugin.core.action.utils.JsonUtils
 import com.mercadolibre.android.gradle.baseplugin.core.action.utils.OutputUtils
 import com.mercadolibre.android.gradle.baseplugin.managers.AbstractPluginManager
 import com.mercadolibre.android.gradle.baseplugin.managers.LIBRARY_PROJECT
