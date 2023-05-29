@@ -17,7 +17,7 @@ internal object LogLibraryWarningsUseCase {
             val suggestion = availableVersion?.let {
                 "Available version $ARROW $availableVersion"
             } ?: "Will no longer be available"
-            val message = "- (Deprecated!) ($expires) ${projectDependency?.fullName()} | $suggestion"
+            val message = "- (Deprecated!) ($expires) ${dependency?.fullName()} | $suggestion"
             logMessage(message)
             writeAReportMessage(message, file)
         }

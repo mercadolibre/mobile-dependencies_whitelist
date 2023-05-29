@@ -9,7 +9,7 @@ internal object ValidateDependencyStatusUseCase {
 
     fun validate(dependencyAnalysis: DependencyAnalysis): StatusBase {
         dependencyAnalysis.apply {
-            val hasNotMatchedAnyOnAllowList = dependencyAnalysis.projectDependency == null
+            val hasNotMatchedAnyOnAllowList = dependency == null || notFound.isNotEmpty()
             if (hasNotMatchedAnyOnAllowList) {
                 return Status.invalid(availableVersion)
             }

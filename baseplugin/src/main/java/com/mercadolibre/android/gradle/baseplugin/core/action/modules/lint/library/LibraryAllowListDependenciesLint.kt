@@ -3,7 +3,6 @@ package com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.libr
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.Lint
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.Dependency
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.DependencyAnalysis
-import com.mercadolibre.android.gradle.baseplugin.core.action.utils.OutputUtils.logMessage
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_DEPENDENCIES_TASK
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_LIBRARY_FILE_BLOCKER
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_LIBRARY_FILE_WARNING
@@ -127,7 +126,7 @@ class LibraryAllowListDependenciesLint(
             rawAllowListDependency.parseAllowlistDefaults().let { allowListDependency ->
                 if (projectDependency.matches(allowListDependency)) {
 
-                    analysis = analysis.copy(projectDependency = projectDependency)
+                    analysis = analysis.copy(dependency = projectDependency)
 
                     val isUpToDateVersion =  ValidateDeadlineUseCase.validate(
                         projectDependency,
@@ -151,9 +150,12 @@ class LibraryAllowListDependenciesLint(
                     if (isValidByAlpha) {
                         analysis = analysis.copy(isAllowedAlpha = true)
                     }
-
                 }
             }
+        }
+        val hasNotFoundAnyMatch = analysis.dependency == null
+        if (hasNotFoundAnyMatch) {
+            analysis = analysis.copy(notFound = projectDependency.fullName())
         }
         return analysis
     }
