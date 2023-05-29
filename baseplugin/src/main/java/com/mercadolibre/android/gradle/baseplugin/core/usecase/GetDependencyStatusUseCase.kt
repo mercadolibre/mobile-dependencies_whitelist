@@ -10,13 +10,17 @@ internal object GetDependencyStatusUseCase {
 
     fun get(lint: LintGradleExtension, dependencyAnalysis: DependencyAnalysis): StatusBase {
         dependencyAnalysis.apply {
-            if (allowListDependency.expires == null) {
+            if (projectDependency != null && allowListDependency == null) {
+                return Status.invalid()
+            }
+
+            if (allowListDependency?.expires == null) {
                 return Status.available()
             } else if (lint.alphaDependenciesEnabled && !isAllowedAlpha) {
                 return Status.alphaDenied()
             }
 
-            allowListDependency.expires?.let { date ->
+            allowListDependency?.expires?.let { date ->
                 if (System.currentTimeMillis() < date.asMilliseconds()) {
                     return Status.goingToExpire(availableVersion)
                 } else {

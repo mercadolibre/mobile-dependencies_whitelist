@@ -12,8 +12,9 @@ internal object LogLibraryBlockersUseCase {
         file: File,
         dependencyAnalysis: DependencyAnalysis
     ) {
-        val message = dependencyAnalysis.projectDependency.fullName()
-        logMessage(message)
-        writeAReportMessage("\n$message", file)
+        dependencyAnalysis.projectDependency?.fullName()?.let { message ->
+            logMessage(message)
+            writeAReportMessage("\n$message", file)
+        }
     }
 }

@@ -3,7 +3,6 @@ package com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.libr
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.Lint
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.Dependency
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.DependencyAnalysis
-import com.mercadolibre.android.gradle.baseplugin.core.action.utils.OutputUtils.logMessage
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_DEPENDENCIES_TASK
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_LIBRARY_FILE_BLOCKER
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_LIBRARY_FILE_WARNING
@@ -91,7 +90,7 @@ class LibraryAllowListDependenciesLint(
         project.configurations.findByName(name)?.apply {
             for (versionCatalogDependency in dependencies) {
                 val projectDependency = versionCatalogDependency.parseProjectDefaults()
-                optionalAnalysis(projectDependency)?.let { analyzed ->
+                analyzeOrNull(projectDependency)?.let { analyzed ->
                     GetDependencyStatusUseCase.get(lintGradle, analyzed).apply {
                         if (isBlocker) {
                             addToInvalidBuffer(analyzed)
@@ -107,7 +106,7 @@ class LibraryAllowListDependenciesLint(
     /**
      * This method is responsible for verifying if the dependency has to be reported, or has any warning.
      */
-    private fun optionalAnalysis(projectDependency: Dependency): DependencyAnalysis? {
+    private fun analyzeOrNull(projectDependency: Dependency): DependencyAnalysis? {
         val name = projectDependency.fullName()
         val isNotInvalidAnalysis = !name.contains(UNSPECIFIED_GRADLE_VERSION) &&
             !projectDependency.isLocal(project)
@@ -119,7 +118,7 @@ class LibraryAllowListDependenciesLint(
         return null
     }
 
-    private fun analyzeByDependency(projectDependency: Dependency): DependencyAnalysis? {
+    private fun analyzeByDependency(projectDependency: Dependency): DependencyAnalysis {
         for (
             rawAllowListDependency
             in GetAllowedDependenciesUseCase.get(lintGradle.dependencyAllowListUrl)
@@ -149,7 +148,7 @@ class LibraryAllowListDependenciesLint(
                 }
             }
         }
-        return null
+        return DependencyAnalysis(projectDependency = projectDependency)
     }
 
     private fun addToInvalidBuffer(analyzed: DependencyAnalysis) {
