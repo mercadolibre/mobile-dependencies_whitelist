@@ -29,8 +29,10 @@ internal fun Dependency.isLocal(project: Project): Boolean {
 
 internal fun Dependency.isSameVersion(dependency: Dependency): Boolean {
     return group == dependency.group &&
-            (name == UNDEFINED_VERSION_PATTERN ||
-                    (name == dependency.name || name == null))
+        (
+            name == UNDEFINED_VERSION_PATTERN ||
+                (name == dependency.name || name == null)
+            )
 }
 
 internal fun Dependency.parseAvailable() = version?.replace("|", " or ")

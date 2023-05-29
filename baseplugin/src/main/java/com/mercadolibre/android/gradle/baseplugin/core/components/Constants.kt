@@ -267,7 +267,7 @@ const val LINT_WARNIGN_TITLE = "The following dependencies has been marked as de
 const val LINT_TASK_FAIL_MESSAGE = "Errors found while running lints, please check the console output for more information"
 
 /** This variable contains values necessary for the operation of a module. */
-const val LINT_ERROR_POSTDATA_MESSAGE = "\nYour project can only contain the dependencies listed in: <URL> \n" +
+const val LINT_ERROR_POSTDATA_MESSAGE = "Your project can only contain the dependencies listed in: <URL> \n" +
     "If you think one of them should be in the allowlist, please start here " +
     "https://sites.google.com/mercadolibre.com/mobile/arquitectura/allowlist\n"
 

@@ -11,8 +11,7 @@ internal object MatchDependenciesUseCase {
         projectDependency: Dependency,
         allowedDependency: Dependency
     ): Boolean {
-        val allowedDependencyRegex = with(allowedDependency) { "$group:$name:($version)" }
-        val pattern = Pattern.compile(allowedDependencyRegex, CASE_INSENSITIVE)
+        val pattern = Pattern.compile(allowedDependency.fullName(), CASE_INSENSITIVE)
         return pattern.matcher(projectDependency.fullName()).matches()
     }
 }

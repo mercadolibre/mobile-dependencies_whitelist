@@ -19,9 +19,6 @@ internal object GetDependencyStatusUseCase {
             }
 
             dependency.expires?.let { date ->
-
-                logMessage("On expire: ${dependency.fullName()}" )
-
                 if (System.currentTimeMillis() < date.asMilliseconds()) {
                     return Status.goingToExpire(availableVersion)
                 } else {

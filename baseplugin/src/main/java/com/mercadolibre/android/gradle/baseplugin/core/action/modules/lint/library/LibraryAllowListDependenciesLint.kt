@@ -11,8 +11,8 @@ import com.mercadolibre.android.gradle.baseplugin.core.extensions.fullName
 import com.mercadolibre.android.gradle.baseplugin.core.extensions.isLocal
 import com.mercadolibre.android.gradle.baseplugin.core.extensions.isSameVersion
 import com.mercadolibre.android.gradle.baseplugin.core.extensions.new
-import com.mercadolibre.android.gradle.baseplugin.core.extensions.parseAvailable
 import com.mercadolibre.android.gradle.baseplugin.core.extensions.parseAllowlistDefaults
+import com.mercadolibre.android.gradle.baseplugin.core.extensions.parseAvailable
 import com.mercadolibre.android.gradle.baseplugin.core.extensions.parseProjectDefaults
 import com.mercadolibre.android.gradle.baseplugin.core.extensions.setup
 import com.mercadolibre.android.gradle.baseplugin.core.usecase.GetAllowedDependenciesUseCase
@@ -109,8 +109,8 @@ class LibraryAllowListDependenciesLint(
      */
     private fun optionalAnalysis(projectDependency: Dependency): DependencyAnalysis? {
         val name = projectDependency.fullName()
-        val isNotInvalidAnalysis = !name.contains(UNSPECIFIED_GRADLE_VERSION)
-                && !projectDependency.isLocal(project)
+        val isNotInvalidAnalysis = !name.contains(UNSPECIFIED_GRADLE_VERSION) &&
+            !projectDependency.isLocal(project)
 
         if (isNotInvalidAnalysis) {
             return analyzeByDependency(projectDependency)
@@ -120,18 +120,19 @@ class LibraryAllowListDependenciesLint(
     }
 
     private fun analyzeByDependency(projectDependency: Dependency): DependencyAnalysis? {
-        for (rawAllowListDependency
-                in GetAllowedDependenciesUseCase.get(lintGradle.dependencyAllowListUrl)
+        for (
+            rawAllowListDependency
+            in GetAllowedDependenciesUseCase.get(lintGradle.dependencyAllowListUrl)
         ) {
             rawAllowListDependency.parseAllowlistDefaults().let { allowListDependency ->
                 if (match(projectDependency, allowListDependency)) {
                     val analysis = DependencyAnalysis(allowListDependency)
 
                     val isValidByDeadline = projectDependency.isSameVersion(allowListDependency) &&
-                            ValidateDeadlineUseCase.validate(allowListDependency)
+                        ValidateDeadlineUseCase.validate(allowListDependency)
 
                     val isValidByAlpha = lintGradle.alphaDependenciesEnabled &&
-                            ValidateAlphaUseCase.validate(allowListDependency, project)
+                        ValidateAlphaUseCase.validate(allowListDependency, project)
 
                     if (isValidByDeadline) {
                         analysis.availableVersion = allowListDependency.parseAvailable()
