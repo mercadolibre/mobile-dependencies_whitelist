@@ -917,8 +917,8 @@
       "version": "0.1.5"
     },
     {
-      "name": "Realm",
       "expires": "2023-06-08",
+      "name": "Realm",
       "source": "private",
       "target": "production",
       "version": "2.10.0"
@@ -992,8 +992,8 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "name": "MPContacts",
       "expires": "2023-06-08",
+      "name": "MPContacts",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?4.[0-9]+$"
