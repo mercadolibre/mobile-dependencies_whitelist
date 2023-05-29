@@ -21,9 +21,15 @@
       "version": "2\\.+"
     },
     {
+      "expires": "2023-06-19",
       "group": "com\\.mercadolibre\\.android\\.advertising",
       "name": "adn",
       "version": "3\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.advertising",
+      "name": "adn",
+      "version": "4\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -446,9 +452,15 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2023-06-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "melidata-sdk",
       "version": "16\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "melidata-sdk",
+      "version": "17\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
