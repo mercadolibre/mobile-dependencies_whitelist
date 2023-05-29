@@ -918,9 +918,16 @@
     },
     {
       "name": "Realm",
+      "expires": "2023-06-08",
       "source": "private",
       "target": "production",
       "version": "2.10.0"
+    },
+    {
+      "name": "Realm",
+      "source": "public",
+      "target": "production",
+      "version": "10.38.0"
     },
     {
       "name": "RxSwift",
@@ -986,9 +993,16 @@
     },
     {
       "name": "MPContacts",
+      "expires": "2023-06-08",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?4.[0-9]+$"
+    },
+    {
+      "name": "MPContacts",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?5.[0-9]+$"
     },
     {
       "name": "MPMoneyTransfer",
