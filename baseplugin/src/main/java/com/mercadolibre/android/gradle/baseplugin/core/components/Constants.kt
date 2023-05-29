@@ -206,7 +206,7 @@ const val UNIT_TEST_TASK_DESCRIPTION = "Run unit tests for the build."
 const val LINTABLE_DESCRIPTION = "Lints the project dependencies to check they are in the allowed allowlist"
 
 /** This variable participates in the description of a Task. */
-const val LINT_WARNIGN_DESCRIPTION = "You should consider upgrading the lib OR contact the team owner to know how to proceed."
+const val LINT_WARNIGN_DESCRIPTION = "\nYou should consider upgrading the lib OR contact the team owner to know how to proceed."
 
 /** This variable participates in the description of a Task. */
 const val LIST_VARIANTS_DESCRIPTION = "List all variant in this project"

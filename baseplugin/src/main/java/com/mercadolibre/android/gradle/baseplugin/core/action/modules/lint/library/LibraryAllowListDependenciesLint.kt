@@ -3,24 +3,24 @@ package com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.libr
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.Lint
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.Dependency
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.DependencyAnalysis
+import com.mercadolibre.android.gradle.baseplugin.core.action.utils.OutputUtils.logMessage
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_DEPENDENCIES_TASK
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_LIBRARY_FILE_BLOCKER
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_LIBRARY_FILE_WARNING
 import com.mercadolibre.android.gradle.baseplugin.core.extensions.fullName
 import com.mercadolibre.android.gradle.baseplugin.core.extensions.isLocal
-import com.mercadolibre.android.gradle.baseplugin.core.extensions.isSameVersion
+import com.mercadolibre.android.gradle.baseplugin.core.extensions.matches
 import com.mercadolibre.android.gradle.baseplugin.core.extensions.new
 import com.mercadolibre.android.gradle.baseplugin.core.extensions.parseAllowlistDefaults
 import com.mercadolibre.android.gradle.baseplugin.core.extensions.parseAvailable
 import com.mercadolibre.android.gradle.baseplugin.core.extensions.parseProjectDefaults
 import com.mercadolibre.android.gradle.baseplugin.core.extensions.setup
 import com.mercadolibre.android.gradle.baseplugin.core.usecase.GetAllowedDependenciesUseCase
-import com.mercadolibre.android.gradle.baseplugin.core.usecase.GetDependencyStatusUseCase
+import com.mercadolibre.android.gradle.baseplugin.core.usecase.ValidateDependencyStatusUseCase
 import com.mercadolibre.android.gradle.baseplugin.core.usecase.LogLibraryBlockersComplianceUseCase
 import com.mercadolibre.android.gradle.baseplugin.core.usecase.LogLibraryBlockersUseCase
 import com.mercadolibre.android.gradle.baseplugin.core.usecase.LogLibraryWarningsComplianceUseCase
 import com.mercadolibre.android.gradle.baseplugin.core.usecase.LogLibraryWarningsUseCase
-import com.mercadolibre.android.gradle.baseplugin.core.usecase.MatchDependenciesUseCase.match
 import com.mercadolibre.android.gradle.baseplugin.core.usecase.ValidateAlphaUseCase
 import com.mercadolibre.android.gradle.baseplugin.core.usecase.ValidateDeadlineUseCase
 import org.gradle.api.Project
@@ -91,11 +91,11 @@ class LibraryAllowListDependenciesLint(
             for (versionCatalogDependency in dependencies) {
                 val projectDependency = versionCatalogDependency.parseProjectDefaults()
                 analyzeOrNull(projectDependency)?.let { analyzed ->
-                    GetDependencyStatusUseCase.get(lintGradle, analyzed).apply {
+                    ValidateDependencyStatusUseCase.validate(analyzed).apply {
                         if (isBlocker) {
-                            addToInvalidBuffer(analyzed)
+                            addToInvalidBuffer(analyzed.copy(status = this))
                         } else if (shouldReport) {
-                            addToWarningBuffer(analyzed)
+                            addToWarningBuffer(analyzed.copy(status = this))
                         }
                     }
                 }
@@ -119,36 +119,43 @@ class LibraryAllowListDependenciesLint(
     }
 
     private fun analyzeByDependency(projectDependency: Dependency): DependencyAnalysis {
+        var analysis = DependencyAnalysis()
         for (
             rawAllowListDependency
             in GetAllowedDependenciesUseCase.get(lintGradle.dependencyAllowListUrl)
         ) {
             rawAllowListDependency.parseAllowlistDefaults().let { allowListDependency ->
-                if (match(projectDependency, allowListDependency)) {
-                    val analysis = DependencyAnalysis(
-                        allowListDependency,
-                        projectDependency
+                if (projectDependency.matches(allowListDependency)) {
+
+                    analysis = analysis.copy(projectDependency = projectDependency)
+
+                    val isUpToDateVersion =  ValidateDeadlineUseCase.validate(
+                        projectDependency,
+                        allowListDependency
                     )
 
-                    val isValidByDeadline = projectDependency.isSameVersion(allowListDependency) &&
-                        ValidateDeadlineUseCase.validate(allowListDependency)
-
-                    val isValidByAlpha = lintGradle.alphaDependenciesEnabled &&
-                        ValidateAlphaUseCase.validate(allowListDependency, project)
-
-                    if (isValidByDeadline) {
-                        analysis.availableVersion = allowListDependency.parseAvailable()
+                    analysis = if (isUpToDateVersion) {
+                        analysis.copy(availableVersion = allowListDependency.parseAvailable())
+                    } else {
+                        allowListDependency.expires.takeUnless { it.isNullOrEmpty() }.let { deadline ->
+                            analysis.copy(expires = deadline)
+                        }
                     }
+
+                    val isValidByAlpha = ValidateAlphaUseCase.validate(
+                        allowListDependency,
+                        project,
+                        lintGradle
+                    )
 
                     if (isValidByAlpha) {
-                        analysis.isAllowedAlpha = true
+                        analysis = analysis.copy(isAllowedAlpha = true)
                     }
 
-                    return analysis
                 }
             }
         }
-        return DependencyAnalysis(projectDependency = projectDependency)
+        return analysis
     }
 
     private fun addToInvalidBuffer(analyzed: DependencyAnalysis) {

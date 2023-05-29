@@ -14,16 +14,12 @@ internal object LogLibraryWarningsUseCase {
      */
     fun log(file: File, analysis: DependencyAnalysis) {
         analysis.apply {
-            val availableVersion = if (availableVersion != null) {
+            val suggestion = availableVersion?.let {
                 "Available version $ARROW $availableVersion"
-            } else {
-                ""
-            }
-            allowListDependency?.apply {
-                val message = "($expires) - ${fullName()} (Deprecated!) $availableVersion"
-                logMessage(message)
-                writeAReportMessage(message, file)
-            }
+            } ?: "Will no longer be available"
+            val message = "- (Deprecated!) ($expires) ${projectDependency?.fullName()} | $suggestion"
+            logMessage(message)
+            writeAReportMessage(message, file)
         }
     }
 }

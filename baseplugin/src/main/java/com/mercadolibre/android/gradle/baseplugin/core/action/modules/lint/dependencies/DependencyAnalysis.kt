@@ -2,12 +2,12 @@ package com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.depe
 
 /**
  * This class contains the information of a dependency on the allowlist.
- * @param allowListDependency The data of the dependency, group, name and version.
  * @param availableVersion The version avaiable of this dependency.
  */
-internal class DependencyAnalysis(
-    var allowListDependency: Dependency? = null,
-    var projectDependency: Dependency? = null,
-    var availableVersion: String? = null,
-    var isAllowedAlpha: Boolean = false
+internal data class DependencyAnalysis(
+    val projectDependency: Dependency? = null,
+    val availableVersion: String? = null,
+    val isAllowedAlpha: Boolean = false,
+    val expires: String? = null,
+    val status: StatusBase? = null
 )
