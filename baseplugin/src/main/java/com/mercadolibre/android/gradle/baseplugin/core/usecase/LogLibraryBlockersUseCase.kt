@@ -12,7 +12,7 @@ internal object LogLibraryBlockersUseCase {
         file: File,
         dependencyAnalysis: DependencyAnalysis
     ) {
-        val message = dependencyAnalysis.dependency.fullName()
+        val message = dependencyAnalysis.projectDependency.fullName()
         logMessage(message)
         writeAReportMessage("\n$message", file)
     }

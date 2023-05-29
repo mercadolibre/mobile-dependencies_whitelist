@@ -126,7 +126,10 @@ class LibraryAllowListDependenciesLint(
         ) {
             rawAllowListDependency.parseAllowlistDefaults().let { allowListDependency ->
                 if (match(projectDependency, allowListDependency)) {
-                    val analysis = DependencyAnalysis(allowListDependency)
+                    val analysis = DependencyAnalysis(
+                        allowListDependency,
+                        projectDependency
+                    )
 
                     val isValidByDeadline = projectDependency.isSameVersion(allowListDependency) &&
                         ValidateDeadlineUseCase.validate(allowListDependency)

@@ -19,7 +19,7 @@ internal object LogLibraryWarningsUseCase {
             } else {
                 ""
             }
-            dependency.apply {
+            allowListDependency.apply {
                 val message = "($expires) - ${fullName()} (Deprecated!) $availableVersion"
                 logMessage(message)
                 writeAReportMessage(message, file)
