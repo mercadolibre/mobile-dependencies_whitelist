@@ -52,5 +52,3 @@ Para encontrar la mejor forma de compartir mejoras te recomendamos revisar el [c
 
 Desde arquitectura podremos darte una mano con cualquier situación que tengas, desde el canal [#help-android](https://meli.slack.com/archives/CSKLKAGC8) o contactarte
 directamente con los colaboradores que mantienen esta librería mediante el mail [mobile-arq@mercadolibre.com](mobile-arq@mercadolibre.com).
-
-
