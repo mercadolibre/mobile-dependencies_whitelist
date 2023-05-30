@@ -3,6 +3,7 @@ package com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.libr
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.Lint
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.Dependency
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.DependencyAnalysis
+import com.mercadolibre.android.gradle.baseplugin.core.action.utils.OutputUtils.logMessage
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_DEPENDENCIES_TASK
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_LIBRARY_FILE_BLOCKER
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_LIBRARY_FILE_WARNING
@@ -15,13 +16,14 @@ import com.mercadolibre.android.gradle.baseplugin.core.extensions.parseAvailable
 import com.mercadolibre.android.gradle.baseplugin.core.extensions.parseProjectDefaults
 import com.mercadolibre.android.gradle.baseplugin.core.extensions.setup
 import com.mercadolibre.android.gradle.baseplugin.core.usecase.GetAllowedDependenciesUseCase
-import com.mercadolibre.android.gradle.baseplugin.core.usecase.ValidateDependencyStatusUseCase
 import com.mercadolibre.android.gradle.baseplugin.core.usecase.LogLibraryBlockersComplianceUseCase
 import com.mercadolibre.android.gradle.baseplugin.core.usecase.LogLibraryBlockersUseCase
 import com.mercadolibre.android.gradle.baseplugin.core.usecase.LogLibraryWarningsComplianceUseCase
 import com.mercadolibre.android.gradle.baseplugin.core.usecase.LogLibraryWarningsUseCase
 import com.mercadolibre.android.gradle.baseplugin.core.usecase.ValidateAlphaUseCase
 import com.mercadolibre.android.gradle.baseplugin.core.usecase.ValidateDeadlineUseCase
+import com.mercadolibre.android.gradle.baseplugin.core.usecase.ValidateDependencyStatusUseCase
+import com.mercadolibre.android.gradle.baseplugin.core.usecase.ValidateDependencyStatusUseCase.validate
 import org.gradle.api.Project
 
 private typealias InvalidBuffer = () -> Unit
@@ -90,7 +92,7 @@ class LibraryAllowListDependenciesLint(
             for (versionCatalogDependency in dependencies) {
                 val projectDependency = versionCatalogDependency.parseProjectDefaults()
                 analyzeOrNull(projectDependency)?.let { analyzed ->
-                    ValidateDependencyStatusUseCase.validate(analyzed).apply {
+                    validate(analyzed).apply {
                         if (isBlocker) {
                             addToInvalidBuffer(analyzed.copy(status = this))
                         } else if (shouldReport) {
@@ -106,15 +108,15 @@ class LibraryAllowListDependenciesLint(
      * This method is responsible for verifying if the dependency has to be reported, or has any warning.
      */
     private fun analyzeOrNull(projectDependency: Dependency): DependencyAnalysis? {
-        val name = projectDependency.fullName()
-        val isNotInvalidAnalysis = !name.contains(UNSPECIFIED_GRADLE_VERSION) &&
+        val isNotInvalidAnalysis = !projectDependency.fullName()
+            .contains(UNSPECIFIED_GRADLE_VERSION) &&
             !projectDependency.isLocal(project)
 
-        if (isNotInvalidAnalysis) {
-            return analyzeByDependency(projectDependency)
+        return if (isNotInvalidAnalysis) {
+            analyzeByDependency(projectDependency)
+        } else {
+            null
         }
-
-        return null
     }
 
     private fun analyzeByDependency(projectDependency: Dependency): DependencyAnalysis {
@@ -128,7 +130,7 @@ class LibraryAllowListDependenciesLint(
 
                     analysis = analysis.copy(dependency = projectDependency)
 
-                    val isUpToDateVersion =  ValidateDeadlineUseCase.validate(
+                    val isUpToDateVersion = ValidateDeadlineUseCase.validate(
                         projectDependency,
                         allowListDependency
                     )
