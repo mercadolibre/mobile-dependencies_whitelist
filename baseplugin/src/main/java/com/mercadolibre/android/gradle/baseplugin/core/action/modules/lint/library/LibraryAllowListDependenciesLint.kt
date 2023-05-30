@@ -3,7 +3,6 @@ package com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.libr
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.basics.Lint
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.Dependency
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.DependencyAnalysis
-import com.mercadolibre.android.gradle.baseplugin.core.action.utils.OutputUtils.logMessage
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_DEPENDENCIES_TASK
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_LIBRARY_FILE_BLOCKER
 import com.mercadolibre.android.gradle.baseplugin.core.components.LINT_LIBRARY_FILE_WARNING
@@ -22,7 +21,6 @@ import com.mercadolibre.android.gradle.baseplugin.core.usecase.LogLibraryWarning
 import com.mercadolibre.android.gradle.baseplugin.core.usecase.LogLibraryWarningsUseCase
 import com.mercadolibre.android.gradle.baseplugin.core.usecase.ValidateAlphaUseCase
 import com.mercadolibre.android.gradle.baseplugin.core.usecase.ValidateDeadlineUseCase
-import com.mercadolibre.android.gradle.baseplugin.core.usecase.ValidateDependencyStatusUseCase
 import com.mercadolibre.android.gradle.baseplugin.core.usecase.ValidateDependencyStatusUseCase.validate
 import org.gradle.api.Project
 
