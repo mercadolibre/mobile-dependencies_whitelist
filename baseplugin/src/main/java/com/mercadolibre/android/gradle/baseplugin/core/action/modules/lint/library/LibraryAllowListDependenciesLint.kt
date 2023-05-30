@@ -87,8 +87,8 @@ class LibraryAllowListDependenciesLint(
 
     private fun analyzeByVariantName(name: String) {
         project.configurations.findByName(name)?.apply {
-            for (versionCatalogDependency in dependencies) {
-                val projectDependency = versionCatalogDependency.parseProjectDefaults()
+            for (rawProjectDependencies in dependencies) {
+                val projectDependency = rawProjectDependencies.parseProjectDefaults()
                 analyzeOrNull(projectDependency)?.let { analyzed ->
                     validate(analyzed).apply {
                         if (isBlocker) {
