@@ -35,8 +35,8 @@ internal fun Dependency.isSameVersion(dependency: Dependency): Boolean {
 }
 
 internal fun Dependency.matches(dependency: Dependency): Boolean {
-    val pattern = Pattern.compile(dependency.id(), Pattern.CASE_INSENSITIVE)
-    return pattern.matcher(id()).matches()
+    val pattern = Pattern.compile(dependency.fullName(), Pattern.CASE_INSENSITIVE)
+    return pattern.matcher(fullName()).matches()
 }
 
 internal fun Dependency.parseAvailable() = version?.replace("|", " or ")

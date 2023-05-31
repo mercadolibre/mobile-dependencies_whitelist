@@ -12,8 +12,8 @@ internal object ValidateDeadlineUseCase {
         val nonSettledExpire = allowListDependency.expires == null
         val settledExpireTooFarAway = allowListDependency.expires?.asMilliseconds() == Long.MAX_VALUE
         (projectDependency.isSameVersion(allowListDependency)
-                && (nonSettledExpire || settledExpireTooFarAway)).let { isUpToDate ->
-                    return isUpToDate
+                && (nonSettledExpire || settledExpireTooFarAway)).let { isAllowedByDeadline ->
+                    return isAllowedByDeadline
         }
     }
 }

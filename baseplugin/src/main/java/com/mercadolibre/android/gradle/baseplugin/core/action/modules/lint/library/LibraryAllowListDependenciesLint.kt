@@ -128,12 +128,12 @@ class LibraryAllowListDependenciesLint(
 
                     analysis = analysis.copy(dependency = projectDependency)
 
-                    val isUpToDateVersion = ValidateDeadlineUseCase.validate(
+                    val isAllowedByDeadline = ValidateDeadlineUseCase.validate(
                         projectDependency,
                         allowListDependency
                     )
 
-                    analysis = if (isUpToDateVersion) {
+                    analysis = if (isAllowedByDeadline) {
                         analysis.copy(availableVersion = allowListDependency.parseAvailable())
                     } else {
                         allowListDependency.expires.takeUnless { it.isNullOrEmpty() }.let { deadline ->
@@ -150,6 +150,8 @@ class LibraryAllowListDependenciesLint(
                     if (isValidByAlpha) {
                         analysis = analysis.copy(isAllowedAlpha = true)
                     }
+
+                    return analysis
                 }
             }
         }
