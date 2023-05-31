@@ -1124,9 +1124,15 @@
       "version": "3\\.\\+"
     },
     {
+      "expires": "2023-06-09",
       "group": "com\\.mercadolibre\\.android\\.pos_readers",
       "name": "posreaders",
       "version": "7\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.pos_readers",
+      "name": "posreaders",
+      "version": "8\\.+"
     },
     {
       "expires": "2023-07-30",
@@ -2928,6 +2934,12 @@
       "group": "com\\.datami",
       "name": "smisdk",
       "version": "4\\.\\+"
+    },
+    {
+      "description": "Wrapper datami sdk",
+      "group": "com\\.mercadolibre\\.android\\.freenavigation",
+      "name": "freenavigation",
+      "version": "1\\.\\+"
     }
   ]
 }
