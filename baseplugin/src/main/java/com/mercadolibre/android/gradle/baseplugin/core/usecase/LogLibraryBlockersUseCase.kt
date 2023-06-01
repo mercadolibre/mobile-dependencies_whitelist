@@ -15,7 +15,6 @@ internal object LogLibraryBlockersUseCase {
     ) {
         dependencyAnalysis.apply {
             projectDependency?.let { log(it.fullName(), file) }
-            notFound.takeIf { it.isNotEmpty() }?.let { name -> log(name, file) }
         }
     }
 

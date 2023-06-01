@@ -20,8 +20,8 @@ import com.mercadolibre.android.gradle.baseplugin.core.usecase.LogLibraryBlocker
 import com.mercadolibre.android.gradle.baseplugin.core.usecase.LogLibraryWarningsComplianceUseCase
 import com.mercadolibre.android.gradle.baseplugin.core.usecase.LogLibraryWarningsUseCase
 import com.mercadolibre.android.gradle.baseplugin.core.usecase.ValidateAlphaUseCase
-import com.mercadolibre.android.gradle.baseplugin.core.usecase.ValidateUnlimitedDeadlineUseCase
 import com.mercadolibre.android.gradle.baseplugin.core.usecase.ValidateDependencyStatusUseCase.validate
+import com.mercadolibre.android.gradle.baseplugin.core.usecase.ValidateUnlimitedDeadlineUseCase
 import org.gradle.api.Project
 
 private typealias InvalidBuffer = () -> Unit
@@ -118,7 +118,7 @@ class LibraryAllowListDependenciesLint(
     }
 
     private fun analyzeByDependency(projectDependency: Dependency): DependencyAnalysis {
-        var analysis = DependencyAnalysis()
+        var analysis = DependencyAnalysis(projectDependency = projectDependency)
         for (
             rawAllowListDependency
             in GetAllowedDependenciesUseCase.get(lintGradle.dependencyAllowListUrl)
@@ -132,7 +132,6 @@ class LibraryAllowListDependenciesLint(
                     )
                     analysis = analysis.copy(
                         allowListDependency = allowListDependency,
-                        projectDependency = projectDependency,
                         isAllowedAlpha = isAllowedAlpha
                     )
                 }
@@ -146,10 +145,6 @@ class LibraryAllowListDependenciesLint(
                     analysis = analysis.copy(availableVersion = allowListDependency.parseAvailable())
                 }
             }
-        }
-        val hasNotFoundAnyMatch = analysis.allowListDependency == null
-        if (hasNotFoundAnyMatch) {
-            analysis = analysis.copy(notFound = projectDependency.fullName())
         }
         return analysis
     }

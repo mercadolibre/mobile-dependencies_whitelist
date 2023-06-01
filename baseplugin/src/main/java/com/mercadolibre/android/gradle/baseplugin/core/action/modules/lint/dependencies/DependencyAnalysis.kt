@@ -9,6 +9,5 @@ internal data class DependencyAnalysis(
     val projectDependency: Dependency? = null,
     val availableVersion: String? = null,
     val isAllowedAlpha: Boolean = false,
-    val status: StatusBase? = null,
-    val notFound: String = ""
+    val status: StatusBase? = null
 )
