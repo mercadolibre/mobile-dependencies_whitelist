@@ -20,7 +20,7 @@ import com.mercadolibre.android.gradle.baseplugin.core.usecase.LogLibraryBlocker
 import com.mercadolibre.android.gradle.baseplugin.core.usecase.LogLibraryWarningsComplianceUseCase
 import com.mercadolibre.android.gradle.baseplugin.core.usecase.LogLibraryWarningsUseCase
 import com.mercadolibre.android.gradle.baseplugin.core.usecase.ValidateAlphaUseCase
-import com.mercadolibre.android.gradle.baseplugin.core.usecase.ValidateDeadlineUseCase
+import com.mercadolibre.android.gradle.baseplugin.core.usecase.ValidateUnlimitedDeadlineUseCase
 import com.mercadolibre.android.gradle.baseplugin.core.usecase.ValidateDependencyStatusUseCase.validate
 import org.gradle.api.Project
 
@@ -125,37 +125,29 @@ class LibraryAllowListDependenciesLint(
         ) {
             rawAllowListDependency.parseAllowlistDefaults().let { allowListDependency ->
                 if (projectDependency.matches(allowListDependency)) {
-
-                    analysis = analysis.copy(dependency = projectDependency)
-
-                    val isAllowedByDeadline = ValidateDeadlineUseCase.validate(
-                        projectDependency,
-                        allowListDependency
-                    )
-
-                    analysis = if (isAllowedByDeadline) {
-                        analysis.copy(availableVersion = allowListDependency.parseAvailable())
-                    } else {
-                        allowListDependency.expires.takeUnless { it.isNullOrEmpty() }.let { deadline ->
-                            analysis.copy(expires = deadline)
-                        }
-                    }
-
-                    val isValidByAlpha = ValidateAlphaUseCase.validate(
+                    val isAllowedAlpha = ValidateAlphaUseCase.validate(
                         allowListDependency,
                         project,
                         lintGradle
                     )
+                    analysis = analysis.copy(
+                        allowListDependency = allowListDependency,
+                        projectDependency = projectDependency,
+                        isAllowedAlpha = isAllowedAlpha
+                    )
+                }
 
-                    if (isValidByAlpha) {
-                        analysis = analysis.copy(isAllowedAlpha = true)
-                    }
+                val isUnlimitedAvailableVersion = ValidateUnlimitedDeadlineUseCase.validate(
+                    projectDependency,
+                    allowListDependency
+                )
 
-                    return analysis
+                if (isUnlimitedAvailableVersion) {
+                    analysis = analysis.copy(availableVersion = allowListDependency.parseAvailable())
                 }
             }
         }
-        val hasNotFoundAnyMatch = analysis.dependency == null
+        val hasNotFoundAnyMatch = analysis.allowListDependency == null
         if (hasNotFoundAnyMatch) {
             analysis = analysis.copy(notFound = projectDependency.fullName())
         }

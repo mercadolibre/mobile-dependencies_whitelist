@@ -1,8 +1,8 @@
 package com.mercadolibre.android.gradle.baseplugin.core.extensions
 
 import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.dependencies.Dependency
-import java.util.regex.Pattern
 import org.gradle.api.Project
+import java.util.regex.Pattern
 import org.gradle.api.artifacts.Dependency as VersionCatalogDependency
 
 internal const val UNDEFINED_VERSION_PATTERN = ".*"
@@ -30,7 +30,7 @@ internal fun Dependency.isLocal(project: Project): Boolean {
 
 internal fun Dependency.isSameVersion(dependency: Dependency): Boolean {
     val matchGroup = dependency.group == group
-    val matchName =  dependency.name == UNDEFINED_VERSION_PATTERN || dependency.name == name || dependency.name == null
+    val matchName = dependency.name == UNDEFINED_VERSION_PATTERN || dependency.name == name || dependency.name == null
     return matchGroup && matchName
 }
 

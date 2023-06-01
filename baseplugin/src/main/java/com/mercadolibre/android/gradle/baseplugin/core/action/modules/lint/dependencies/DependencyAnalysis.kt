@@ -5,10 +5,10 @@ package com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.depe
  * @param availableVersion The version avaiable of this dependency.
  */
 internal data class DependencyAnalysis(
-    val dependency: Dependency? = null,
+    val allowListDependency: Dependency? = null,
+    val projectDependency: Dependency? = null,
     val availableVersion: String? = null,
     val isAllowedAlpha: Boolean = false,
-    val expires: String? = null,
     val status: StatusBase? = null,
     val notFound: String = ""
 )

@@ -4,6 +4,7 @@ import com.mercadolibre.android.gradle.baseplugin.core.action.modules.lint.depen
 import com.mercadolibre.android.gradle.baseplugin.core.action.utils.OutputUtils.logMessage
 import com.mercadolibre.android.gradle.baseplugin.core.action.utils.OutputUtils.writeAReportMessage
 import com.mercadolibre.android.gradle.baseplugin.core.extensions.fullName
+import com.mercadolibre.android.gradle.baseplugin.core.extensions.id
 import java.io.File
 
 internal object LogLibraryBlockersUseCase {
@@ -13,12 +14,8 @@ internal object LogLibraryBlockersUseCase {
         dependencyAnalysis: DependencyAnalysis
     ) {
         dependencyAnalysis.apply {
-            notFound.takeIf { it.isNotEmpty() }?.let { name ->
-                log(name, file)
-            }
-            dependency?.fullName()?.let { name ->
-                log(name, file)
-            }
+            projectDependency?.let { log(it.fullName(), file) }
+            notFound.takeIf { it.isNotEmpty() }?.let { name -> log(name, file) }
         }
     }
 

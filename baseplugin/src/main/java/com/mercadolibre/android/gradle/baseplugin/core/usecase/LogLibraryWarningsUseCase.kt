@@ -5,6 +5,7 @@ import com.mercadolibre.android.gradle.baseplugin.core.action.utils.OutputUtils.
 import com.mercadolibre.android.gradle.baseplugin.core.action.utils.OutputUtils.writeAReportMessage
 import com.mercadolibre.android.gradle.baseplugin.core.components.ARROW
 import com.mercadolibre.android.gradle.baseplugin.core.extensions.fullName
+import com.mercadolibre.android.gradle.baseplugin.core.extensions.id
 import java.io.File
 
 internal object LogLibraryWarningsUseCase {
@@ -17,7 +18,7 @@ internal object LogLibraryWarningsUseCase {
             val suggestion = availableVersion?.let {
                 "Available version $ARROW $availableVersion"
             } ?: "Will no longer be available"
-            val message = "- (Deprecated!) ($expires) ${dependency?.fullName()} | $suggestion"
+            val message = "- (Deprecated!) (${allowListDependency?.expires}) ${projectDependency?.fullName()} | $suggestion"
             logMessage(message)
             writeAReportMessage(message, file)
         }
