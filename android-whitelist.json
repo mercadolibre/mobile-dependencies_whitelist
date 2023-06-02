@@ -911,7 +911,7 @@
       "version": "6\\.\\+"
     },
     {
-      "expires": "2023-06-01",
+      "expires": "2023-09-30",
       "group": "com\\.mercadolibre\\.android\\.comparator",
       "version": "7\\.\\+"
     },
@@ -1124,9 +1124,15 @@
       "version": "3\\.\\+"
     },
     {
+      "expires": "2023-06-09",
       "group": "com\\.mercadolibre\\.android\\.pos_readers",
       "name": "posreaders",
       "version": "7\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.pos_readers",
+      "name": "posreaders",
+      "version": "8\\.+"
     },
     {
       "expires": "2023-07-30",
@@ -2251,7 +2257,7 @@
       "version": "3\\.\\+"
     },
     {
-      "expires": "2023-06-1",
+      "expires": "2023-09-1",
       "group": "com\\.mercadolibre\\.android\\.globe",
       "name": "libc2d",
       "version": "2\\.2\\.1\\-52"
@@ -2533,81 +2539,86 @@
       "version": "7\\.\\+"
     },
     {
-      "expires": "2023-05-31",
-      "group": "com\\.mercadolibre\\.android\\.cash_rails",
-      "name": "rating",
-      "version": "1\\.\\+"
-    },
-    {
+      "expires": "2023-06-30",
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "rating",
       "version": "2\\.\\+"
     },
     {
-      "expires": "2023-05-31",
+      "group": "com\\.mercadolibre\\.android\\.cash_rails",
+      "name": "rating",
+      "version": "3\\.\\+"
+    },
+    {
+      "expires": "2023-06-30",
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "core",
-      "version": "1\\.\\+"
+      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "core",
-      "version": "2\\.\\+"
+      "version": "3\\.\\+"
     },
     {
-      "expires": "2023-05-31",
-      "group": "com\\.mercadolibre\\.android\\.cash_rails",
-      "name": "feedback",
-      "version": "1\\.\\+"
-    },
-    {
+      "expires": "2023-06-30",
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "feedback",
       "version": "2\\.\\+"
     },
     {
-      "expires": "2023-05-31",
+      "group": "com\\.mercadolibre\\.android\\.cash_rails",
+      "name": "feedback",
+      "version": "3\\.\\+"
+    },
+    {
+      "expires": "2023-06-30",
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "tab",
-      "version": "1\\.\\+"
+      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "tab",
-      "version": "2\\.\\+"
+      "version": "3\\.\\+"
     },
     {
-      "expires": "2023-05-31",
-      "group": "com\\.mercadolibre\\.android\\.cash_rails",
-      "name": "ui_component",
-      "version": "1\\.\\+"
-    },
-    {
+      "expires": "2023-06-30",
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "ui_component",
       "version": "2\\.\\+"
     },
     {
-      "expires": "2023-05-31",
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
-      "name": "commons",
-      "version": "1\\.\\+"
+      "name": "ui_component",
+      "version": "3\\.\\+"
     },
     {
+      "expires": "2023-06-30",
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "commons",
       "version": "2\\.\\+"
     },
     {
-      "expires": "2023-05-31",
+      "group": "com\\.mercadolibre\\.android\\.cash_rails",
+      "name": "commons",
+      "version": "3\\.\\+"
+    },
+    {
+      "expires": "2023-06-30",
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "map",
-      "version": "1\\.\\+"
+      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "map",
-      "version": "2\\.\\+"
+      "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cash_rails",
+      "name": "report",
+      "version": "3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.mp_sellers_growth",
@@ -2940,6 +2951,12 @@
       "group": "com\\.datami",
       "name": "smisdk",
       "version": "4\\.\\+"
+    },
+    {
+      "description": "Wrapper datami sdk",
+      "group": "com\\.mercadolibre\\.android\\.freenavigation",
+      "name": "freenavigation",
+      "version": "1\\.\\+"
     }
   ]
 }
