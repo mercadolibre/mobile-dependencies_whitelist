@@ -1684,20 +1684,6 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "expires": "2023-05-31",
-      "name": "DatadogSDK",
-      "source": "public",
-      "target": "production",
-      "version": "^~>\\s?(1.14.0)$"
-    },
-    {
-      "expires": "2023-05-31",
-      "name": "DatadogSDKCrashReporting",
-      "source": "public",
-      "target": "production",
-      "version": "^~>\\s?(1.14.0)$"
-    },
-    {
       "name": "DatadogSDK",
       "source": "public",
       "target": "production",
