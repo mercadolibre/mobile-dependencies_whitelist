@@ -1768,12 +1768,6 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "name": "SmiSdk",
-      "source": "public",
-      "target": "production",
-      "version": "4.2.1"
-    },
-    {
       "name": "SmiSdk-swift",
       "source": "public",
       "target": "production",
