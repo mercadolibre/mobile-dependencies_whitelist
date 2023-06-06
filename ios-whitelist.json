@@ -743,7 +743,19 @@
       "version": "^~>\\s?4.[0-9]+$"
     },
     {
+      "name": "MLSearch/MLAutosuggest",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?4.[0-9]+$"
+    },
+    {
       "name": "MLSearch/Compats",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?4.[0-9]+$"
+    },
+    {
+      "name": "MLSearch/MoreLikeThis",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?4.[0-9]+$"
