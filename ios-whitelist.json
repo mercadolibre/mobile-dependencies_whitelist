@@ -1,8 +1,13 @@
 {
   "whitelist": [
     {
-      "expires": "2022-11-01",
-      "name": "AdvertisingADN",
+      "name": "OMSDK",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "Viewability",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+"
@@ -11,7 +16,7 @@
       "name": "AdvertisingADN",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "MLCheckoutFlow",
@@ -72,13 +77,6 @@
       "source": "public",
       "target": "production",
       "version": "0.8"
-    },
-    {
-      "expires": "2022-11-15",
-      "name": "Charts",
-      "source": "public",
-      "target": "production",
-      "version": "3.4.0"
     },
     {
       "name": "Charts",
@@ -440,7 +438,13 @@
     },
     {
       "name": "MLCardDrawer",
-      "source": "public",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
+    },
+    {
+      "name": "PxPmSelector",
+      "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
     },
@@ -547,13 +551,6 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "expires": "2022-12-31",
-      "name": "MLImagePicker",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
       "name": "MLLocalStorage",
       "source": "private",
       "target": "production",
@@ -635,7 +632,7 @@
       "name": "MLNetworking",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+.?[0-9]*$"
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "MLNotifications",
@@ -746,7 +743,19 @@
       "version": "^~>\\s?4.[0-9]+$"
     },
     {
+      "name": "MLSearch/MLAutosuggest",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?4.[0-9]+$"
+    },
+    {
       "name": "MLSearch/Compats",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?4.[0-9]+$"
+    },
+    {
+      "name": "MLSearch/MoreLikeThis",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?4.[0-9]+$"
@@ -956,6 +965,8 @@
       "version": "1.0"
     },
     {
+      "description": "This library will be deprecated, use instead Andes Feedback Screen.",
+      "expires": "2023-06-30",
       "name": "WalletCongrats",
       "source": "private",
       "target": "production",
@@ -1010,24 +1021,10 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "expires": "2022-12-01",
-      "name": "BiometricSecurityUI",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?[1-2].[0-9]+$"
-    },
-    {
       "name": "BiometricSecurityUI",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?3.[0-9]+$"
-    },
-    {
-      "expires": "2022-12-01",
-      "name": "SecurityOptions",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "SecurityOptions",
@@ -1102,6 +1099,7 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
+      "expires": "2023-06-30",
       "name": "AndesUIDraftModal",
       "source": "private",
       "target": "production",
@@ -1118,6 +1116,18 @@
       "source": "public",
       "target": "production",
       "version": "^~>\\s?3.[0-9]+"
+    },
+    {
+      "name": "AndesIntegrations",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+"
+    },
+    {
+      "name": "MLLoyal",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?9.[0-9]+"
     },
     {
       "name": "MLLoyalDM",
@@ -1342,8 +1352,7 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
-      "expires": "2022-12-30",
-      "name": "SPPSpirtech",
+      "name": "SpGlobeWrapper",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
@@ -1403,6 +1412,12 @@
       "version": "^~>\\s?2.[0-9]+"
     },
     {
+      "name": "CashRails",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
       "name": "MLAdjust",
       "source": "private",
       "target": "production",
@@ -1434,6 +1449,12 @@
     },
     {
       "name": "CreditsFloxClient",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "CreditsToolkit",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
@@ -1481,10 +1502,16 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "name": "CongratsSdk",
+      "name": "FeedbackScreen",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+"
+    },
+    {
+      "name": "SmartTokenization",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+"
     },
     {
       "name": "ADAssertLayout",
@@ -1571,13 +1598,6 @@
       "version": "^~>\\s?1.[0-9]+"
     },
     {
-      "expires": "2022-11-30",
-      "name": "Opentelemetry",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
       "name": "Opentelemetry",
       "source": "private",
       "target": "production",
@@ -1596,12 +1616,6 @@
       "version": "3.16.1"
     },
     {
-      "name": "MLReviews",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?2.[0-9]+.?[0-9]*$"
-    },
-    {
       "name": "Reviews",
       "source": "private",
       "target": "production",
@@ -1614,16 +1628,168 @@
       "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
     },
     {
+      "description": "This version will be deprecated in favor of 3.27 on 2023-06-30",
+      "expires": "2023-06-30",
       "name": "BitmovinPlayer",
       "source": "private",
       "target": "production",
       "version": "3.26.0"
     },
     {
-      "name": "google-cast-sdk",
+      "name": "BitmovinPlayer",
+      "source": "private",
+      "target": "production",
+      "version": "3.36.0"
+    },
+    {
+      "name": "google-cast-sdk-no-bluetooth",
       "source": "public",
       "target": "production",
       "version": "4.7.0"
+    },
+    {
+      "name": "Mplay",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
+    },
+    {
+      "name": "MLCardForm",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "SellerHomeSection",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "CxSupportDaisy",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "description": "This library is a webview for the Shorts initiative",
+      "name": "Shorts",
+      "source": "private",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLClips",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "SecureInputs",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "AppMonitoring",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "DatadogSDK",
+      "source": "public",
+      "target": "production",
+      "version": "^~>\\s?(1.16.0)$"
+    },
+    {
+      "name": "DatadogSDKCrashReporting",
+      "source": "public",
+      "target": "production",
+      "version": "^~>\\s?(1.16.0)$"
+    },
+    {
+      "name": "Dogfooding",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "Everest/Core",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "Everest/Data",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "Everest/Networking",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "Everest/UI",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "ErrorHandler",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "Qualtrics",
+      "source": "public",
+      "target": "production",
+      "version": "2.9.1"
+    },
+    {
+      "name": "MLQualtrics/Core",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLQualtrics/UI",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "FeatureFlagConfiguration",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "Matt",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "XProdModules",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "SmiSdk-swift",
+      "source": "public",
+      "target": "production",
+      "version": "4.2.1"
+    },
+    {
+      "name": "FreeNavigation",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+.?[0-9]*$"
     }
   ]
 }
