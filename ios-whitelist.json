@@ -1016,6 +1016,8 @@
     },
     {
       "name": "SecurityOptions",
+      "description": "This library will be deprecated, use instead Andes Feedback Screen.",
+      "expires": "2023-06-30",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?2.[0-9]+$"
