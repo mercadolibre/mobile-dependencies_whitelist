@@ -1027,6 +1027,8 @@
       "version": "^~>\\s?3.[0-9]+$"
     },
     {
+      "description": "This library will be deprecated.",
+      "expires": "2023-06-30",
       "name": "SecurityOptions",
       "source": "private",
       "target": "production",
