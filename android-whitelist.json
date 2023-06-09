@@ -746,14 +746,26 @@
       "version": "6\\.\\+"
     },
     {
+      "expires": "2023-12-01",
       "group": "com\\.mercadolibre\\.android\\.history",
       "name": "history",
-      "version": "6\\.\\+"
+      "version": "7\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.history",
+      "name": "history",
+      "version": "8\\.\\+"
+    },
+    {
+      "expires": "2023-12-01",
+      "group": "com\\.mercadolibre\\.android\\.history",
+      "name": "history_manager",
+      "version": "7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.history",
       "name": "history_manager",
-      "version": "5\\.\\+"
+      "version": "8\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.instore\\.home\\.sections",
@@ -2596,6 +2608,7 @@
       "version": "2\\.+"
     },
     {
+      "expires": "2023-07-31",
       "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
       "name": "core",
       "version": "2\\.+"
@@ -2606,9 +2619,20 @@
       "version": "2\\.+"
     },
     {
+      "expires": "2023-07-31",
       "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
       "name": "recommendations",
       "version": "2\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
+      "name": "core",
+      "version": "3\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
+      "name": "recommendations",
+      "version": "3\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.si_billing_info",
