@@ -743,7 +743,19 @@
       "version": "^~>\\s?4.[0-9]+$"
     },
     {
+      "name": "MLSearch/MLAutosuggest",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?4.[0-9]+$"
+    },
+    {
       "name": "MLSearch/Compats",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?4.[0-9]+$"
+    },
+    {
+      "name": "MLSearch/MoreLikeThis",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?4.[0-9]+$"
@@ -1015,6 +1027,8 @@
       "version": "^~>\\s?3.[0-9]+$"
     },
     {
+      "description": "This library will be deprecated.",
+      "expires": "2023-06-30",
       "name": "SecurityOptions",
       "source": "private",
       "target": "production",
@@ -1154,6 +1168,14 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "MLPurchases/Integration",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?3.[0-9]+$"
+    },
+    {
+      "description": "This version will be deprecated in favor of 3.0.0 on 2023-06-30",
+      "expires": "2023-06-30",
       "name": "MLPurchases/Integration",
       "source": "private",
       "target": "production",
@@ -1766,6 +1788,18 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "SmiSdk-swift",
+      "source": "public",
+      "target": "production",
+      "version": "4.2.1"
+    },
+    {
+      "name": "FreeNavigation",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+.?[0-9]*$"
     }
   ]
 }
