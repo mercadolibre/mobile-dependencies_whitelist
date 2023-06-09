@@ -2758,9 +2758,20 @@
       "version": "2\\.\\+"
     },
     {
+      "expires": "2023-08-31",
       "group": "com\\.mercadolibre\\.android\\.fbm\\.wms\\.oem",
       "name": "device",
       "version": "2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.fbm\\.wms\\.oem",
+      "name": "device",
+      "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.fbm\\.wms\\.feature\\.toggle",
+      "name": "core",
+      "version": "1\\.\\+"
     },
     {
       "group": "com\\.symbol",
@@ -2919,9 +2930,15 @@
       "version": "2\\.18\\.1"
     },
     {
+      "expires": "2023-08-31",
       "group": "com\\.mercadolibre\\.android\\.fbm\\.wms\\.flan",
       "name": "core",
       "version": "2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.fbm\\.wms\\.flan",
+      "name": "core",
+      "version": "3\\.\\+"
     },
     {
       "description": "This library is used to navagation without costs",
