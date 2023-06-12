@@ -102,12 +102,6 @@
       "version": "1\\.\\+"
     },
     {
-      "expires": "2023-06-10",
-      "group": "com\\.mercadolibre\\.android\\.smart_coupons",
-      "name": "coupons",
-      "version": "2\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.smart_coupons",
       "name": "coupons",
       "version": "3\\.\\+"
@@ -919,12 +913,6 @@
       "version": "mercadopago-6\\.\\+|mercadolibre-6\\.\\+"
     },
     {
-      "expires": "2023-06-10",
-      "group": "com\\.mercadolibre\\.android\\.rule\\.engine",
-      "name": "rule\\-engine",
-      "version": "8\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.rule\\.engine",
       "name": "rule\\-engine",
       "version": "9\\.\\+"
@@ -1121,12 +1109,6 @@
       "group": "com\\.mercadopago\\.android\\.point_flow_engine",
       "name": "navigation",
       "version": "3\\.\\+"
-    },
-    {
-      "expires": "2023-06-09",
-      "group": "com\\.mercadolibre\\.android\\.pos_readers",
-      "name": "posreaders",
-      "version": "7\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.pos_readers",
@@ -2427,18 +2409,6 @@
       "group": "io\\.grpc",
       "name": "grpc-okhttp",
       "version": "1\\.41\\.+"
-    },
-    {
-      "expires": "2023-06-10",
-      "group": "com\\.mercadolibre\\.android\\.opentelemetry",
-      "name": "setup",
-      "version": "4\\.+"
-    },
-    {
-      "expires": "2023-06-10",
-      "group": "com\\.mercadolibre\\.android\\.opentelemetry",
-      "name": "core",
-      "version": "4\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.opentelemetry",
