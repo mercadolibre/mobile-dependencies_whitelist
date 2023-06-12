@@ -102,12 +102,6 @@
       "version": "1\\.\\+"
     },
     {
-      "expires": "2023-06-10",
-      "group": "com\\.mercadolibre\\.android\\.smart_coupons",
-      "name": "coupons",
-      "version": "2\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.smart_coupons",
       "name": "coupons",
       "version": "3\\.\\+"
@@ -353,7 +347,7 @@
       "version": "26\\.8\\.0"
     },
     {
-      "expires": "2023-06-30",
+      "expires": "2023-06-16",
       "group": "com\\.google\\.firebase",
       "name": "firebase-ads"
     },
@@ -746,14 +740,26 @@
       "version": "6\\.\\+"
     },
     {
+      "expires": "2023-12-01",
       "group": "com\\.mercadolibre\\.android\\.history",
       "name": "history",
-      "version": "6\\.\\+"
+      "version": "7\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.history",
+      "name": "history",
+      "version": "8\\.\\+"
+    },
+    {
+      "expires": "2023-12-01",
+      "group": "com\\.mercadolibre\\.android\\.history",
+      "name": "history_manager",
+      "version": "7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.history",
       "name": "history_manager",
-      "version": "5\\.\\+"
+      "version": "8\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.instore\\.home\\.sections",
@@ -905,12 +911,6 @@
       "group": "com\\.mercadolibre\\.android\\.remedy",
       "name": "remedy",
       "version": "mercadopago-6\\.\\+|mercadolibre-6\\.\\+"
-    },
-    {
-      "expires": "2023-06-10",
-      "group": "com\\.mercadolibre\\.android\\.rule\\.engine",
-      "name": "rule\\-engine",
-      "version": "8\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.rule\\.engine",
@@ -1109,12 +1109,6 @@
       "group": "com\\.mercadopago\\.android\\.point_flow_engine",
       "name": "navigation",
       "version": "3\\.\\+"
-    },
-    {
-      "expires": "2023-06-09",
-      "group": "com\\.mercadolibre\\.android\\.pos_readers",
-      "name": "posreaders",
-      "version": "7\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.pos_readers",
@@ -2266,34 +2260,70 @@
       "version": "6\\.\\+"
     },
     {
+      "expires": "2023-10-31",
       "group": "com\\.mercadolibre\\.android\\.point_smart_pos_sdk",
       "name": "device",
       "version": "dev-4\\.\\+|a910-4\\.\\+|d20-4\\.\\+|n950-4\\.\\+|4\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.point_smart_pos_sdk",
+      "name": "device",
+      "version": "dev-5\\.\\+|a910-5\\.\\+|d20-5\\.\\+|n950-5\\.\\+|5\\.\\+"
+    },
+    {
+      "expires": "2023-10-31",
       "group": "com\\.mercadolibre\\.android\\.point_printer",
       "name": "core",
       "version": "3\\.+"
     },
     {
+      "expires": "2023-10-31",
       "group": "com\\.mercadolibre\\.android\\.point_printer",
       "name": "renderer",
       "version": "3\\.+"
     },
     {
+      "expires": "2023-10-31",
       "group": "com\\.mercadolibre\\.android\\.point_printer",
       "name": "controller_a910",
       "version": "3\\.+"
     },
     {
+      "expires": "2023-10-31",
       "group": "com\\.mercadolibre\\.android\\.point_printer",
       "name": "controller_d20",
       "version": "3\\.+"
     },
     {
+      "expires": "2023-10-31",
       "group": "com\\.mercadolibre\\.android\\.point_printer",
       "name": "controller_n950",
       "version": "3\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_printer",
+      "name": "core",
+      "version": "4\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_printer",
+      "name": "renderer",
+      "version": "4\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_printer",
+      "name": "controller_a910",
+      "version": "4\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_printer",
+      "name": "controller_d20",
+      "version": "4\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_printer",
+      "name": "controller_n950",
+      "version": "4\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
@@ -2379,18 +2409,6 @@
       "group": "io\\.grpc",
       "name": "grpc-okhttp",
       "version": "1\\.41\\.+"
-    },
-    {
-      "expires": "2023-06-10",
-      "group": "com\\.mercadolibre\\.android\\.opentelemetry",
-      "name": "setup",
-      "version": "4\\.+"
-    },
-    {
-      "expires": "2023-06-10",
-      "group": "com\\.mercadolibre\\.android\\.opentelemetry",
-      "name": "core",
-      "version": "4\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.opentelemetry",
@@ -2560,6 +2578,7 @@
       "version": "2\\.+"
     },
     {
+      "expires": "2023-07-31",
       "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
       "name": "core",
       "version": "2\\.+"
@@ -2570,9 +2589,20 @@
       "version": "2\\.+"
     },
     {
+      "expires": "2023-07-31",
       "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
       "name": "recommendations",
       "version": "2\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
+      "name": "core",
+      "version": "3\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
+      "name": "recommendations",
+      "version": "3\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.si_billing_info",
@@ -2698,9 +2728,20 @@
       "version": "2\\.\\+"
     },
     {
+      "expires": "2023-08-31",
       "group": "com\\.mercadolibre\\.android\\.fbm\\.wms\\.oem",
       "name": "device",
       "version": "2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.fbm\\.wms\\.oem",
+      "name": "device",
+      "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.fbm\\.wms\\.feature\\.toggle",
+      "name": "core",
+      "version": "1\\.\\+"
     },
     {
       "group": "com\\.symbol",
@@ -2859,9 +2900,15 @@
       "version": "2\\.18\\.1"
     },
     {
+      "expires": "2023-08-31",
       "group": "com\\.mercadolibre\\.android\\.fbm\\.wms\\.flan",
       "name": "core",
       "version": "2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.fbm\\.wms\\.flan",
+      "name": "core",
+      "version": "3\\.\\+"
     },
     {
       "description": "This library is used to navagation without costs",
@@ -2874,6 +2921,12 @@
       "group": "com\\.mercadolibre\\.android\\.freenavigation",
       "name": "freenavigation",
       "version": "1\\.\\+"
+    },
+    {
+      "description": "This PTM library is used to schedule alarms that trigger job executions",
+      "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
+      "name": "qualified-alarm",
+      "version": "0\\.\\+"
     }
   ]
 }
