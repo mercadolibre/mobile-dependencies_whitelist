@@ -2944,6 +2944,21 @@
       "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
       "name": "qualified-alarm",
       "version": "0\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "selling_framework",
+      "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "analytics",
+      "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "di",
+      "version": "1\\.\\+"
     }
   ]
 }
