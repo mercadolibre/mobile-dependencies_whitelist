@@ -414,6 +414,17 @@
       "version": "mercadopago-17\\.\\+|mercadolibre-17\\.\\+"
     },
     {
+      "expires": "2023-10-31",
+      "group": "com\\.mercadolibre\\.android\\.point_login_qr",
+      "name": "ez_login",
+      "version": "dev-3\\.\\+|a910-3\\.\\+|d20-3\\.\\+|3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_login_qr",
+      "name": "ez_login",
+      "version": "dev-4\\.\\+|a910-4\\.\\+|d20-4\\.\\+|n950-4\\.\\+|4\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.authchallenges",
       "name": "authchallenges",
       "version": "5\\.\\+"
@@ -1422,9 +1433,15 @@
       "version": "7\\.\\+"
     },
     {
+      "expires": "2023-07-30",
       "group": "com\\.mercadolibre\\.android\\.mlinappupdates",
       "name": "ml-in-app-updates",
       "version": "5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.mlinappupdates",
+      "name": "ml-in-app-updates",
+      "version": "8\\.\\+"
     },
     {
       "expires": "2023-06-30",
@@ -2927,6 +2944,21 @@
       "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
       "name": "qualified-alarm",
       "version": "0\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "selling_framework",
+      "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "analytics",
+      "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "di",
+      "version": "1\\.\\+"
     }
   ]
 }
