@@ -353,11 +353,6 @@
       "version": "26\\.8\\.0"
     },
     {
-      "expires": "2023-06-16",
-      "group": "com\\.google\\.firebase",
-      "name": "firebase-ads"
-    },
-    {
       "group": "com\\.google\\.maps\\.android",
       "name": "android-maps-utils",
       "version": "0\\.4\\.4"
@@ -1148,18 +1143,6 @@
       "group": "com\\.mercadopago\\.android\\.point_ui",
       "name": "components",
       "version": "5\\.+"
-    },
-    {
-      "expires": "2023-06-18",
-      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
-      "name": "paymentflowfcu",
-      "version": "9\\.+"
-    },
-    {
-      "expires": "2023-06-18",
-      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
-      "name": "entities_fcu",
-      "version": "9\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
