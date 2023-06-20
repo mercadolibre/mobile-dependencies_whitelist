@@ -21,7 +21,7 @@
       "version": "2\\.+"
     },
     {
-      "expires": "2023-06-19",
+      "expires": "2023-06-30",
       "group": "com\\.mercadolibre\\.android\\.advertising",
       "name": "adn",
       "version": "3\\.+"
@@ -47,34 +47,70 @@
       "version": "3\\.+"
     },
     {
+      "expires": "2023-06-16",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "review",
       "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
+      "name": "review",
+      "version": "7\\.\\+"
+    },
+    {
+      "expires": "2023-06-16",
+      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "congrats",
       "version": "6\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
+      "name": "congrats",
+      "version": "7\\.\\+"
+    },
+    {
+      "expires": "2023-06-16",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "integrator_sdk",
       "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
+      "name": "integrator_sdk",
+      "version": "7\\.\\+"
+    },
+    {
+      "expires": "2023-06-16",
+      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "one_tap",
       "version": "6\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
+      "name": "one_tap",
+      "version": "7\\.\\+"
+    },
+    {
+      "expires": "2023-06-16",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "payment",
       "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
+      "name": "payment",
+      "version": "7\\.\\+"
+    },
+    {
+      "expires": "2023-06-16",
+      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "shipping",
       "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
+      "name": "shipping",
+      "version": "7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
@@ -82,14 +118,32 @@
       "version": "6\\.\\+"
     },
     {
+      "expires": "2023-06-16",
+      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
+      "name": "billing_info",
+      "version": "7\\.\\+"
+    },
+    {
+      "expires": "2023-06-16",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "flow",
       "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
+      "name": "flow",
+      "version": "7\\.\\+"
+    },
+    {
+      "expires": "2023-06-16",
+      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "split_payments",
       "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
+      "name": "split_payments",
+      "version": "7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.buyingflow",
@@ -351,11 +405,6 @@
       "group": "com\\.google\\.firebase",
       "name": "firebase-bom",
       "version": "26\\.8\\.0"
-    },
-    {
-      "expires": "2023-06-16",
-      "group": "com\\.google\\.firebase",
-      "name": "firebase-ads"
     },
     {
       "group": "com\\.google\\.maps\\.android",
@@ -1040,7 +1089,7 @@
     {
       "group": "com\\.mercadolibre\\.android\\.usersections\\",
       "name": "sections",
-      "version": "mercadopago-5\\.+"
+      "version": "mercadolibre-5\\.+|mercadopago-5\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.usersections",
@@ -1148,18 +1197,6 @@
       "group": "com\\.mercadopago\\.android\\.point_ui",
       "name": "components",
       "version": "5\\.+"
-    },
-    {
-      "expires": "2023-06-18",
-      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
-      "name": "paymentflowfcu",
-      "version": "9\\.+"
-    },
-    {
-      "expires": "2023-06-18",
-      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
-      "name": "entities_fcu",
-      "version": "9\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
