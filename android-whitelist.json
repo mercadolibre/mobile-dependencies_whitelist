@@ -1333,6 +1333,13 @@
       "version": "1\\.5\\.32"
     },
     {
+      "description": "migrate help: https://developer.android.com/topic/libraries/view-binding/migration",
+      "expires": "2023-08-18",
+      "group": "org\\.jetbrains\\.kotlin",
+      "name": "kotlin-android-extensions-runtime",
+      "version": "1\\.8\\.10"
+    },
+    {
       "expires": "2023-08-18",
       "group": "org\\.jetbrains\\.kotlin",
       "name": "kotlin-reflect",
@@ -1359,8 +1366,20 @@
     {
       "expires": "2023-08-18",
       "group": "org\\.jetbrains\\.kotlin",
+      "name": "kotlin-stdlib-jdk8",
+      "version": "1\\.8\\.10"
+    },
+    {
+      "expires": "2023-08-18",
+      "group": "org\\.jetbrains\\.kotlin",
       "name": "kotlin-stdlib-jdk7",
       "version": "1\\.5\\.32"
+    },
+    {
+      "expires": "2023-08-18",
+      "group": "org\\.jetbrains\\.kotlin",
+      "name": "kotlin-stdlib-jdk7",
+      "version": "1\\.8\\.10"
     },
     {
       "group": "org\\.jetbrains\\.kotlin",
