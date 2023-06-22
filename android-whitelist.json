@@ -877,9 +877,21 @@
     {
       "group": "com\\.mercadolibre\\.android\\.marketplace\\.map",
       "name": "external_access_map",
+      "version": "13\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.marketplace\\.map",
+      "name": "marketplace\\-map",
+      "version": "13\\.\\+"
+    },
+    {
+      "expires": "2023-09-21",
+      "group": "com\\.mercadolibre\\.android\\.marketplace\\.map",
+      "name": "external_access_map",
       "version": "12\\.\\+"
     },
     {
+      "expires": "2023-09-21",
       "group": "com\\.mercadolibre\\.android\\.marketplace\\.map",
       "name": "marketplace\\-map",
       "version": "12\\.\\+"
