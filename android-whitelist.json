@@ -851,6 +851,7 @@
       "version": "mercadopago-5\\.\\+"
     },
     {
+      "expires": "2023-06-27",
       "group": "com\\.mercadolibre\\.android\\.instore",
       "name": "geofencing",
       "version": "1\\.\\+"
@@ -1035,6 +1036,11 @@
     },
     {
       "group": "com\\.mercadolibre\\.android\\.search",
+      "name": "autosuggest",
+      "version": "16\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.search",
       "name": "morelikethis",
       "version": "16\\.\\+"
     },
@@ -1042,6 +1048,11 @@
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "search",
       "version": "16\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.eshops",
+      "name": "components",
+      "version": "1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.security",
