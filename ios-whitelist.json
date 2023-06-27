@@ -1822,6 +1822,12 @@
       "version": "^~>\\s?0.[0-9]+.?[0-9]*$"
     },
     {
+      "name": "PlatsecOauthRedirect",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
       "name": "MLEShops",
       "source": "private",
       "target": "production",
