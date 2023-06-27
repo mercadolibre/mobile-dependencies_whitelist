@@ -32,16 +32,30 @@
       "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
     },
     {
+      "expires": "2023-06-29",
       "name": "BfSplitPayment",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?2.[0-9]+.?[0-9]*$"
     },
     {
+      "name": "BfSplitPayment",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?3.[0-9]+$"
+    },
+    {
+      "expires": "2023-06-29",
       "name": "MLCheckout",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?9.[0-9]+.?[0-9]*$"
+    },
+    {
+      "name": "MLCheckout",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?10.[0-9]+$"
     },
     {
       "expires": "2023-06-29",
@@ -1806,6 +1820,12 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+.?[0-9]*$"
+    },
+    {
+      "name": "PlatsecOauthRedirect",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "MLEShops",
