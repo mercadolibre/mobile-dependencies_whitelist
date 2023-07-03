@@ -59,20 +59,32 @@
       "version": "6\\.\\+"
     },
     {
+      "expires": "2023-10-21",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "review",
       "version": "7\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
+      "name": "review",
+      "version": "8\\.\\+"
+    },
+    {
       "expires": "2023-09-21",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "congrats",
       "version": "6\\.\\+"
     },
     {
+      "expires": "2023-10-21",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "congrats",
       "version": "7\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
+      "name": "congrats",
+      "version": "8\\.\\+"
     },
     {
       "expires": "2023-09-21",
@@ -81,20 +93,32 @@
       "version": "6\\.\\+"
     },
     {
+      "expires": "2023-10-21",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "integrator_sdk",
       "version": "7\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
+      "name": "integrator_sdk",
+      "version": "8\\.\\+"
+    },
+    {
       "expires": "2023-09-21",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "one_tap",
       "version": "6\\.\\+"
     },
     {
+      "expires": "2023-10-21",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "one_tap",
       "version": "7\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
+      "name": "one_tap",
+      "version": "8\\.\\+"
     },
     {
       "expires": "2023-09-21",
@@ -103,31 +127,49 @@
       "version": "6\\.\\+"
     },
     {
+      "expires": "2023-10-21",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "payment",
       "version": "7\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
+      "name": "payment",
+      "version": "8\\.\\+"
+    },
+    {
       "expires": "2023-09-21",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "shipping",
       "version": "6\\.\\+"
     },
     {
+      "expires": "2023-10-21",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "shipping",
       "version": "7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
-      "name": "billing_info",
-      "version": "6\\.\\+"
+      "name": "shipping",
+      "version": "8\\.\\+"
     },
     {
       "expires": "2023-09-21",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "billing_info",
+      "version": "6\\.\\+"
+    },
+    {
+      "expires": "2023-10-21",
+      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
+      "name": "billing_info",
       "version": "7\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
+      "name": "billing_info",
+      "version": "8\\.\\+"
     },
     {
       "expires": "2023-09-21",
@@ -136,9 +178,15 @@
       "version": "6\\.\\+"
     },
     {
+      "expires": "2023-10-21",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "flow",
       "version": "7\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
+      "name": "flow",
+      "version": "8\\.\\+"
     },
     {
       "expires": "2023-09-21",
@@ -147,24 +195,48 @@
       "version": "6\\.\\+"
     },
     {
+      "expires": "2023-10-21",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "split_payments",
       "version": "7\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
+      "name": "split_payments",
+      "version": "8\\.\\+"
+    },
+    {
+      "expires": "2023-10-21",
       "group": "com\\.mercadolibre\\.android\\.buyingflow",
       "name": "checkout_flow",
       "version": "1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.buyingflow",
+      "name": "checkout_flow",
+      "version": "2\\.\\+"
+    },
+    {
+      "expires": "2023-10-21",
+      "group": "com\\.mercadolibre\\.android\\.buyingflow",
       "name": "shipping_flow",
       "version": "1\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.buyingflow",
+      "name": "shipping_flow",
+      "version": "2\\.\\+"
+    },
+    {
+      "expires": "2023-10-21",
       "group": "com\\.mercadolibre\\.android\\.smart_coupons",
       "name": "coupons",
       "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.smart_coupons",
+      "name": "coupons",
+      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.registration",
@@ -666,15 +738,21 @@
       "version": "6\\.\\+"
     },
     {
+      "expires": "2023-09-21",
+      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.flox\\.components",
+      "name": "core",
+      "version": "8\\.\\+"
+    },
+    {
+      "expires": "2023-10-21",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.flox\\.components",
       "name": "core",
       "version": "9\\.\\+"
     },
     {
-      "expires": "2023-09-21",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.flox\\.components",
       "name": "core",
-      "version": "8\\.\\+"
+      "version": "10\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cart",
@@ -945,9 +1023,15 @@
       "version": "mercadopago-6\\.\\+|mercadolibre-6\\.\\+"
     },
     {
+      "expires": "2023-10-21",
       "group": "com\\.mercadolibre\\.android\\.rule\\.engine",
       "name": "rule\\-engine",
       "version": "9\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.rule\\.engine",
+      "name": "rule\\-engine",
+      "version": "10\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.risk_management",
