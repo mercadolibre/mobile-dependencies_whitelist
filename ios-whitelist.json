@@ -1032,9 +1032,16 @@
     },
     {
       "name": "MLBusinessComponents",
+      "expires": "2023-12-01",
       "source": "public",
       "target": "production",
-      "version": "^~>\\s?[1-2].[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLBusinessComponents",
+      "source": "public",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "MLInsightsMetric",
