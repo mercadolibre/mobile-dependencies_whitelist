@@ -1305,6 +1305,16 @@
       "version": "6\\.+"
     },
     {
+      "group": "com\\.mercadolibre\\.mpos\\.android\\.sdk_mpp",
+      "name": "mpp-debug",
+      "version": "1\\.4\\.0"
+    },
+    {
+      "group": "com\\.mercadolibre\\.mpos\\.android\\.sdk_mpp",
+      "name": "mpp-release",
+      "version": "1\\.4\\.0"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.payment_flow",
       "name": "paymentflow",
       "version": "9\\.\\+"
