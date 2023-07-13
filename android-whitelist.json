@@ -27,9 +27,15 @@
       "version": "3\\.+"
     },
     {
+      "expires": "2023-09-30",
       "group": "com\\.mercadolibre\\.android\\.advertising",
       "name": "adn",
       "version": "4\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.advertising",
+      "name": "adn",
+      "version": "5\\.+"
     },
     {
       "expires": "2023-09-30",
@@ -1580,12 +1586,6 @@
       "version": "8\\.\\+"
     },
     {
-      "expires": "2023-06-30",
-      "group": "com\\.mercadolibre\\.android\\.inappupdates",
-      "name": "in-app-updates",
-      "version": "6\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.inappupdates",
       "name": "in-app-updates",
       "version": "7\\.\\+"
@@ -2703,48 +2703,48 @@
       "version": "2\\.\\+"
     },
     {
-      "expires": "2023-07-30",
-      "group": "com\\.mercadopago\\.android\\.cashin",
-      "name": "seller",
-      "version": "10\\.\\+"
-    },
-    {
+      "expires": "2023-08-30",
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "seller",
       "version": "11\\.\\+"
     },
     {
-      "expires": "2023-07-30",
       "group": "com\\.mercadopago\\.android\\.cashin",
-      "name": "payer",
-      "version": "10\\.\\+"
+      "name": "seller",
+      "version": "12\\.\\+"
     },
     {
+      "expires": "2023-08-30",
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "payer",
       "version": "11\\.\\+"
     },
     {
-      "expires": "2023-07-30",
       "group": "com\\.mercadopago\\.android\\.cashin",
-      "name": "commons",
-      "version": "10\\.\\+"
+      "name": "payer",
+      "version": "12\\.\\+"
     },
     {
+      "expires": "2023-08-30",
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "commons",
       "version": "11\\.\\+"
     },
     {
-      "expires": "2023-07-30",
-      "group": "com\\.mercadolibre\\.android\\.cashout",
-      "name": "cashout",
-      "version": "7\\.\\+"
+      "group": "com\\.mercadopago\\.android\\.cashin",
+      "name": "commons",
+      "version": "12\\.\\+"
     },
     {
+      "expires": "2023-08-30",
       "group": "com\\.mercadolibre\\.android\\.cashout",
       "name": "cashout",
       "version": "8\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cashout",
+      "name": "cashout",
+      "version": "9\\.\\+"
     },
     {
       "expires": "2023-07-30",
@@ -3286,6 +3286,16 @@
       "description": "Android library used to easily integrate async Android services.",
       "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
       "name": "android-service",
+      "version": "0\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "print_buyer_ticket",
+      "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.xprod_flox_components",
+      "name": "core",
       "version": "0\\.\\+"
     }
   ]
