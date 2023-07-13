@@ -1607,10 +1607,18 @@
       "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
     },
     {
+      "description": "This version will be deprecated in favor of 3.36.1 on 2023-08-30",
+      "expires": "2023-08-30",
       "name": "BitmovinPlayer",
       "source": "private",
       "target": "production",
       "version": "3.36.0"
+    },
+    {
+      "name": "BitmovinPlayer",
+      "source": "private",
+      "target": "production",
+      "version": "3.36.1"
     },
     {
       "name": "google-cast-sdk-no-bluetooth",
