@@ -1610,7 +1610,7 @@
       "name": "BitmovinPlayer",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s3.36.?[0-9]*$"
+      "version": "3.36.1"
     },
     {
       "name": "google-cast-sdk-no-bluetooth",
