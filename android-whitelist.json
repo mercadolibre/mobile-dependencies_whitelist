@@ -818,8 +818,13 @@
       "version": "30\\.\\+"
     },
     {
+      "expires": "2023-08-31",
       "group": "com\\.mercadolibre\\.android\\.point\\.lot\\.management",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point\\.lot\\.management",
+      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.remote\\.configuration",
@@ -2657,9 +2662,15 @@
       "version": "3.\\+"
     },
     {
+      "expires": "2023-08-30",
       "group": "com\\.appboy",
       "name": "android-sdk-ui",
       "version": "23\\.1\\.2"
+    },
+    {
+      "group": "com\\.braze",
+      "name": "android-sdk-ui",
+      "version": "26\\.1\\.0"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.px\\.tokenization",
@@ -2978,9 +2989,15 @@
       "version": "1\\.2\\.2"
     },
     {
+      "expires": "2023-08-31",
       "group": "com\\.mercadolibre\\.android\\.clips",
       "name": "clips",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.clips",
+      "name": "clips",
+      "version": "3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.fbm\\.wms\\.hardware",
