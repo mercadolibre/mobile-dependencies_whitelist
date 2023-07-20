@@ -1705,13 +1705,13 @@
       "name": "DatadogSDK",
       "source": "public",
       "target": "production",
-      "version": "^~>\\s?(1.21.0)$"
+      "version": "1.21.0"
     },
     {
       "name": "DatadogSDKCrashReporting",
       "source": "public",
       "target": "production",
-      "version": "^~>\\s?(1.21.0)$"
+      "version": "1.21.0"
     },
     {
       "name": "Dogfooding",
