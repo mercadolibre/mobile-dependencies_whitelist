@@ -1092,6 +1092,13 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
+      "expires": "2023-08-03",
+      "name": "AndesUIDraftModal",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+"
+    },
+    {
       "name": "MLBFFloxComponent",
       "source": "private",
       "target": "production",
