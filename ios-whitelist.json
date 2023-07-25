@@ -7,10 +7,17 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "expires": "2023-09-30",
       "name": "Viewability",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+"
+    },
+    {
+      "name": "Viewability",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "AdvertisingADN",
@@ -22,25 +29,25 @@
       "name": "MLCheckoutFlow",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+.?[0-9]*$"
+      "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
     },
     {
       "name": "BfSplitPayment",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?2.[0-9]+.?[0-9]*$"
+      "version": "^~>\\s?3.[0-9]+$"
     },
     {
       "name": "MLCheckout",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?9.[0-9]+.?[0-9]*$"
+      "version": "^~>\\s?10.[0-9]+$"
     },
     {
       "name": "MLCheckoutSDK",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?3.[0-9]+.?[0-9]*$"
+      "version": "^~>\\s?4.[0-9]+.?[0-9]*$"
     },
     {
       "name": "PPMagnesWrapper",
@@ -632,7 +639,7 @@
       "name": "MLNetworking",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+.?[0-9]*$"
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "MLNotifications",
@@ -743,7 +750,19 @@
       "version": "^~>\\s?4.[0-9]+$"
     },
     {
+      "name": "MLSearch/MLAutosuggest",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?4.[0-9]+$"
+    },
+    {
       "name": "MLSearch/Compats",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?4.[0-9]+$"
+    },
+    {
+      "name": "MLSearch/MoreLikeThis",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?4.[0-9]+$"
@@ -953,14 +972,6 @@
       "version": "1.0"
     },
     {
-      "description": "This library will be deprecated, use instead Andes Feedback Screen.",
-      "expires": "2023-06-30",
-      "name": "WalletCongrats",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
-    },
-    {
       "name": "MLHistory",
       "source": "private",
       "target": "production",
@@ -1015,12 +1026,6 @@
       "version": "^~>\\s?3.[0-9]+$"
     },
     {
-      "name": "SecurityOptions",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?2.[0-9]+$"
-    },
-    {
       "name": "MobileDevicesSecurity",
       "source": "private",
       "target": "production",
@@ -1036,7 +1041,7 @@
       "name": "MLBusinessComponents",
       "source": "public",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+"
     },
     {
       "name": "MLInsightsMetric",
@@ -1616,18 +1621,18 @@
       "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
     },
     {
-      "description": "This version will be deprecated in favor of 3.27 on 2023-06-30",
-      "expires": "2023-06-30",
+      "description": "This version will be deprecated in favor of 3.36.1 on 2023-08-30",
+      "expires": "2023-08-30",
       "name": "BitmovinPlayer",
       "source": "private",
       "target": "production",
-      "version": "3.26.0"
+      "version": "3.36.0"
     },
     {
       "name": "BitmovinPlayer",
       "source": "private",
       "target": "production",
-      "version": "3.36.0"
+      "version": "3.36.1"
     },
     {
       "name": "google-cast-sdk-no-bluetooth",
@@ -1654,15 +1659,21 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "HubSeller",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "CxSupportDaisy",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "description": "This library is a webview for the Shorts initiative",
       "name": "Shorts",
       "source": "private",
+      "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
@@ -1675,7 +1686,7 @@
       "name": "SecureInputs",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "AppMonitoring",
@@ -1684,30 +1695,30 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "expires": "2023-05-31",
-      "name": "DatadogSDK",
-      "source": "public",
-      "target": "production",
-      "version": "^~>\\s?(1.14.0)$"
-    },
-    {
-      "expires": "2023-05-31",
-      "name": "DatadogSDKCrashReporting",
-      "source": "public",
-      "target": "production",
-      "version": "^~>\\s?(1.14.0)$"
-    },
-    {
+      "expires": "2023-10-20",
       "name": "DatadogSDK",
       "source": "public",
       "target": "production",
       "version": "^~>\\s?(1.16.0)$"
     },
     {
+      "expires": "2023-10-20",
       "name": "DatadogSDKCrashReporting",
       "source": "public",
       "target": "production",
       "version": "^~>\\s?(1.16.0)$"
+    },
+    {
+      "name": "DatadogSDK",
+      "source": "public",
+      "target": "production",
+      "version": "1.21.0"
+    },
+    {
+      "name": "DatadogSDKCrashReporting",
+      "source": "public",
+      "target": "production",
+      "version": "1.21.0"
     },
     {
       "name": "Dogfooding",
@@ -1780,6 +1791,42 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "SmiSdk-swift",
+      "source": "public",
+      "target": "production",
+      "version": "4.1.3"
+    },
+    {
+      "name": "FreeNavigation",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "PlatsecOauthRedirect",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLEShops",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "XProdFloxComponents",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "IspSf",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     }
   ]
 }
