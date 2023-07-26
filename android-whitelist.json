@@ -1316,6 +1316,16 @@
       "version": "6\\.+"
     },
     {
+      "group": "com\\.mercadolibre\\.mpos\\.android\\.sdk_mpp",
+      "name": "mpp-debug",
+      "version": "1\\.4\\.0"
+    },
+    {
+      "group": "com\\.mercadolibre\\.mpos\\.android\\.sdk_mpp",
+      "name": "mpp-release",
+      "version": "1\\.4\\.0"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.payment_flow",
       "name": "paymentflow",
       "version": "9\\.\\+"
@@ -2905,7 +2915,7 @@
     {
       "group": "com\\.bitmovin\\.player",
       "name": "player",
-      "version": "3\\.33\\.0"
+      "version": "3\\.40\\.0"
     },
     {
       "group": "com\\.google\\.ads\\.interactivemedia.\\v3",
