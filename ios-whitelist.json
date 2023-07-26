@@ -1479,10 +1479,17 @@
       "version": "^~>\\s?1.[0-9]+"
     },
     {
+      "expires": "2023-08-30",
       "name": "Appboy-iOS-SDK/Core",
       "source": "public",
       "target": "production",
       "version": "^~>4.5.[0-9]+$"
+    },
+    {
+      "name": "BrazeKitCompat",
+      "source": "public",
+      "target": "production",
+      "version": "^~>6.3.[0-9]+$"
     },
     {
       "name": "MercadoCoin",
