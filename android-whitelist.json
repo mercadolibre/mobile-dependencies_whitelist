@@ -2655,14 +2655,26 @@
       "version": "1\\.+"
     },
     {
+      "expires": "2023-08-30",
       "group": "io\\.opentelemetry",
       "name": "opentelemetry-api",
-      "version": "1\\.+"
+      "version": "1\\.16\\.+"
+    },
+    {
+      "group": "io\\.opentelemetry",
+      "name": "opentelemetry-api",
+      "version": "1\\.27\\.+"
+    },
+    {
+      "expires": "2023-08-30",
+      "group": "io\\.opentelemetry",
+      "name": "opentelemetry-bom",
+      "version": "1\\.16\\.+"
     },
     {
       "group": "io\\.opentelemetry",
       "name": "opentelemetry-bom",
-      "version": "1\\.+"
+      "version": "1\\.27\\.+"
     },
     {
       "group": "io\\.opentelemetry",
@@ -2681,9 +2693,15 @@
       "name": "opentelemetry-extension-trace-propagators"
     },
     {
+      "expires": "2023-08-30",
       "group": "io\\.opentelemetry\\.instrumentation",
       "name": "opentelemetry-okhttp-3.0",
-      "version": "1\\.+"
+      "version": "1\\.16\\.+"
+    },
+    {
+      "group": "io\\.opentelemetry\\.instrumentation",
+      "name": "opentelemetry-okhttp-3.0",
+      "version": "1\\.27\\.+"
     },
     {
       "expires": "2023-08-30",
@@ -2894,7 +2912,7 @@
       "version": "4\\.+"
     },
     {
-      "expires": "2023-07-31",
+      "expires": "2023-10-31",
       "group": "com\\.mercadolibre\\.android\\.ml_cards",
       "name": "core",
       "version": "2\\.+"
@@ -3018,15 +3036,20 @@
       "version": "2\\.\\+"
     },
     {
-      "expires": "2023-08-31",
+      "expires": "2023-09-30",
       "group": "com\\.mercadolibre\\.android\\.fbm\\.wms\\.oem",
       "name": "device",
-      "version": "2\\.\\+"
+      "version": "3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.fbm\\.wms\\.oem",
       "name": "device",
-      "version": "3\\.\\+"
+      "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.fbm\\.wms\\.oem",
+      "name": "setup",
+      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.fbm\\.wms\\.feature\\.toggle",
@@ -3070,14 +3093,26 @@
       "version": "0\\.\\+"
     },
     {
+      "expires": "2023-10-01",
       "group": "com\\.datadoghq",
       "name": "dd-sdk-android-gradle-plugin",
       "version": "1\\.4\\.0"
     },
     {
       "group": "com\\.datadoghq",
+      "name": "dd-sdk-android-gradle-plugin",
+      "version": "1\\.7\\.0"
+    },
+    {
+      "expires": "2023-10-01",
+      "group": "com\\.datadoghq",
       "name": "dd-sdk-android",
       "version": "1\\.12\\.0"
+    },
+    {
+      "group": "com\\.datadoghq",
+      "name": "dd-sdk-android",
+      "version": "1\\.19\\.3"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.data_dispatcher",
