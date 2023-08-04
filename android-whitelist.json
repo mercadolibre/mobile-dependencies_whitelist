@@ -1353,14 +1353,29 @@
       "version": "6\\.+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.flow_mpoc",
+      "name": "mpoc",
+      "version": "0\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.flow_mpoc",
+      "name": "mypinpad",
+      "version": "0\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.flow_mpoc",
+      "name": "inhouse",
+      "version": "0\\.+"
+    },
+    {
       "group": "com\\.mercadolibre\\.mpos\\.android\\.sdk_mpp",
       "name": "mpp-debug",
-      "version": "1\\.4\\.0"
+      "version": "1\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.mpos\\.android\\.sdk_mpp",
       "name": "mpp-release",
-      "version": "1\\.4\\.0"
+      "version": "1\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.payment_flow",
