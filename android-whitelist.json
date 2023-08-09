@@ -1312,9 +1312,15 @@
       "version": "3\\.\\+"
     },
     {
+      "expires": "2023-08-30",
       "group": "com\\.mercadolibre\\.android\\.pos_readers",
       "name": "posreaders",
       "version": "8\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.pos_readers",
+      "name": "posreaders",
+      "version": "9\\.+"
     },
     {
       "expires": "2023-10-31",
@@ -1328,19 +1334,37 @@
       "version": "5\\.+"
     },
     {
+      "expires": "2023-10-30",
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
       "name": "paymentflowfcu",
       "version": "10\\.+"
     },
     {
+      "expires": "2023-10-30",
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
       "name": "entities_fcu",
       "version": "10\\.+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
+      "name": "paymentflowfcu",
+      "version": "11\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
+      "name": "entities_fcu",
+      "version": "11\\.+"
+    },
+    {
+      "expires": "2023-09-10",
       "group": "com\\.mercadolibre\\.android\\.point\\.mpos",
       "name": "mpos",
       "version": "6\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point\\.mpos",
+      "name": "mpos",
+      "version": "7\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.flow_mpoc",
@@ -3054,14 +3078,26 @@
       "version": "1\\.+"
     },
     {
+      "expires": "2023-10-08",
       "group": "com\\.mercadolibre\\.android\\.app_monitoring",
       "name": "setup",
       "version": "0\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.app_monitoring",
+      "name": "setup",
+      "version": "1\\.\\+"
+    },
+    {
+      "expires": "2023-10-08",
+      "group": "com\\.mercadolibre\\.android\\.app_monitoring",
       "name": "core",
       "version": "0\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.app_monitoring",
+      "name": "core",
+      "version": "1\\.\\+"
     },
     {
       "expires": "2023-10-01",
