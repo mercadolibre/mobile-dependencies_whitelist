@@ -936,10 +936,17 @@
       "version": "0.1.5"
     },
     {
+      "expires": "2023-08-18",
       "name": "Realm",
       "source": "private",
       "target": "production",
       "version": "2.10.0"
+    },
+    {
+      "name": "Realm",
+      "source": "public",
+      "target": "production",
+      "version": "10.38.0"
     },
     {
       "name": "RxSwift",
@@ -996,10 +1003,17 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "expires": "2023-08-18",
       "name": "MPContacts",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?4.[0-9]+$"
+    },
+    {
+      "name": "MPContacts",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?5.[0-9]+$"
     },
     {
       "name": "MPMoneyTransfer",
@@ -1530,10 +1544,17 @@
       "version": "^~>\\s?0.[0-9]+"
     },
     {
+      "expires": "2023-08-25",
       "name": "RiskManagement",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?2.[0-9]+.?[0-9]*$"
+      "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "name": "RiskManagement",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?3.[0-9]+$"
     },
     {
       "name": "OpenTelemetryApi",
@@ -1570,6 +1591,12 @@
       "source": "public",
       "target": "production",
       "version": "1.7.3"
+    },
+    {
+      "name": "MyAccountClient",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "SwiftNIO",
@@ -1682,22 +1709,43 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "expires": "2023-11-08",
       "name": "AppMonitoring",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "name": "AppMonitoring",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "expires": "2023-10-20",
       "name": "DatadogSDK",
       "source": "public",
       "target": "production",
       "version": "^~>\\s?(1.16.0)$"
     },
     {
+      "expires": "2023-10-20",
       "name": "DatadogSDKCrashReporting",
       "source": "public",
       "target": "production",
       "version": "^~>\\s?(1.16.0)$"
+    },
+    {
+      "name": "DatadogSDK",
+      "source": "public",
+      "target": "production",
+      "version": "1.21.0"
+    },
+    {
+      "name": "DatadogSDKCrashReporting",
+      "source": "public",
+      "target": "production",
+      "version": "1.21.0"
     },
     {
       "name": "Dogfooding",
@@ -1806,6 +1854,24 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "BuyingflowCoreFlox",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "BuyingflowPayment",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "PortableWidget",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+"
     }
   ]
 }
