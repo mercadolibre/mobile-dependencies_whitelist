@@ -755,9 +755,21 @@
     {
       "group": "com\\.mercadolibre\\.android\\.cart",
       "name": "manager",
+      "version": "mercadolibre-14\\.\\+|mercadopago-14\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cart",
+      "name": "cart",
+      "version": "mercadolibre-16\\.\\+|mercadopago-16\\.\\+"
+    },
+    {
+      "expires": "2023-10-21",
+      "group": "com\\.mercadolibre\\.android\\.cart",
+      "name": "manager",
       "version": "mercadolibre-12\\.\\+|mercadopago-12\\.\\+"
     },
     {
+      "expires": "2023-10-21",
       "group": "com\\.mercadolibre\\.android\\.cart",
       "name": "cart",
       "version": "mercadolibre-11\\.\\+|mercadopago-11\\.\\+"
