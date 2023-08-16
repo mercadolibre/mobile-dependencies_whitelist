@@ -1489,7 +1489,7 @@
       "name": "BrazeKitCompat",
       "source": "public",
       "target": "production",
-      "version": "^~>6.3.[0-9]+$"
+      "version": "^~>\\s?6.[0-9]+$"
     },
     {
       "name": "MercadoCoin",
