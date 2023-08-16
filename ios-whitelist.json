@@ -936,7 +936,7 @@
       "version": "0.1.5"
     },
     {
-      "expires": "2023-08-18",
+      "expires": "2023-09-08",
       "name": "Realm",
       "source": "private",
       "target": "production",
@@ -1003,7 +1003,7 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "expires": "2023-08-18",
+      "expires": "2023-09-08",
       "name": "MPContacts",
       "source": "private",
       "target": "production",
@@ -1104,13 +1104,6 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?2.[0-9]+$"
-    },
-    {
-      "expires": "2023-08-03",
-      "name": "AndesUIDraftModal",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "MLBFFloxComponent",
@@ -1522,6 +1515,12 @@
       "version": "^~>\\s?0.[0-9]+"
     },
     {
+      "name": "CcapCommons",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+"
+    },
+    {
       "name": "SmartTokenization",
       "source": "private",
       "target": "production",
@@ -1558,10 +1557,17 @@
       "version": "^~>\\s?0.[0-9]+"
     },
     {
+      "expires": "2023-08-25",
       "name": "RiskManagement",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?2.[0-9]+.?[0-9]*$"
+      "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "name": "RiskManagement",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?3.[0-9]+$"
     },
     {
       "name": "OpenTelemetryApi",
@@ -1598,6 +1604,12 @@
       "source": "public",
       "target": "production",
       "version": "1.7.3"
+    },
+    {
+      "name": "MyAccountClient",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "SwiftNIO",
@@ -1710,10 +1722,17 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "expires": "2023-11-08",
       "name": "AppMonitoring",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "AppMonitoring",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "expires": "2023-10-20",
@@ -1848,6 +1867,24 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "BuyingflowCoreFlox",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "BuyingflowPayment",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "PortableWidget",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+"
     }
   ]
 }
