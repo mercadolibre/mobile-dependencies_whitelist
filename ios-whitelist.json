@@ -1885,6 +1885,12 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MobilePermissions",
+      "source": "private",
+      "target": "test",
+      "version": "^~>\\s?0.[0-9]+"
     }
   ]
 }
