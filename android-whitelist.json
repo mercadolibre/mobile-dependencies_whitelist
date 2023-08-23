@@ -2747,88 +2747,136 @@
       "version": "2\\.\\+"
     },
     {
-      "expires": "2023-08-30",
-      "group": "com\\.mercadopago\\.android\\.cashin",
-      "name": "seller",
-      "version": "11\\.\\+"
-    },
-    {
+      "expires": "2023-09-30",
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "seller",
       "version": "12\\.\\+"
     },
     {
-      "expires": "2023-08-30",
       "group": "com\\.mercadopago\\.android\\.cashin",
-      "name": "payer",
-      "version": "11\\.\\+"
+      "name": "seller",
+      "version": "13\\.\\+"
     },
     {
+      "expires": "2023-09-30",
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "payer",
       "version": "12\\.\\+"
     },
     {
-      "expires": "2023-08-30",
       "group": "com\\.mercadopago\\.android\\.cashin",
-      "name": "commons",
-      "version": "11\\.\\+"
+      "name": "payer",
+      "version": "13\\.\\+"
     },
     {
+      "expires": "2023-09-30",
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "commons",
       "version": "12\\.\\+"
     },
     {
-      "expires": "2023-08-30",
-      "group": "com\\.mercadolibre\\.android\\.cashout",
-      "name": "cashout",
-      "version": "8\\.\\+"
+      "group": "com\\.mercadopago\\.android\\.cashin",
+      "name": "commons",
+      "version": "13\\.\\+"
     },
     {
+      "expires": "2023-09-30",
       "group": "com\\.mercadolibre\\.android\\.cashout",
       "name": "cashout",
       "version": "9\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.cashout",
+      "name": "cashout",
+      "version": "10\\.\\+"
+    },
+    {
+      "expires": "2023-09-30",
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "rating",
       "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
+      "name": "rating",
+      "version": "5\\.\\+"
+    },
+    {
+      "expires": "2023-09-30",
+      "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "core",
       "version": "4\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.cash_rails",
+      "name": "core",
+      "version": "5\\.\\+"
+    },
+    {
+      "expires": "2023-09-30",
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "feedback",
       "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
+      "name": "feedback",
+      "version": "5\\.\\+"
+    },
+    {
+      "expires": "2023-09-30",
+      "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "tab",
       "version": "4\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.cash_rails",
+      "name": "tab",
+      "version": "5\\.\\+"
+    },
+    {
+      "expires": "2023-09-30",
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "ui_component",
       "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
+      "name": "ui_component",
+      "version": "5\\.\\+"
+    },
+    {
+      "expires": "2023-09-30",
+      "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "commons",
       "version": "4\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.cash_rails",
+      "name": "commons",
+      "version": "5\\.\\+"
+    },
+    {
+      "expires": "2023-09-30",
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "map",
       "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
+      "name": "map",
+      "version": "5\\.\\+"
+    },
+    {
+      "expires": "2023-09-30",
+      "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "report",
       "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cash_rails",
+      "name": "report",
+      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.mp_sellers_growth",
