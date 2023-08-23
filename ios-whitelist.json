@@ -1851,6 +1851,7 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "expires": "2023-08-30",
       "name": "MLEShops",
       "source": "private",
       "target": "production",
@@ -1885,6 +1886,18 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MobilePermissions",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLEShops",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
     }
   ]
 }
