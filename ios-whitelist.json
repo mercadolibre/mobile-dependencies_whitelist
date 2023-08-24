@@ -1870,24 +1870,24 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "expires": "2023-09-01",
       "name": "BuyingflowCoreFlox",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+$",
-      "expires": "2023-09-01"
-    },
-    {
-      "name": "BuyingflowPayment",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?0.[0-9]+$",
-      "expires": "2023-09-01"
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "BuyingflowCoreFlox",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "expires": "2023-09-01",
+      "name": "BuyingflowPayment",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "BuyingflowPayment",
