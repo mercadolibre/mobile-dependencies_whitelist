@@ -501,6 +501,11 @@
       "version": "24\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.authscopedsession",
+      "name": "scopedsession",
+      "version": "0\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android",
       "name": "carddrawer",
       "version": "3\\.\\+"
@@ -1260,9 +1265,15 @@
       "version": "5\\.\\+"
     },
     {
+      "expires": "2023-09-15",
       "group": "com\\.mercadopago\\.android\\.ml_esc_manager",
       "name": "ml_esc_manager",
       "version": "mercadopago-5\\.\\+|mercadolibre-5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadopago\\.android\\.ml_esc_manager",
+      "name": "ml_esc_manager",
+      "version": "mercadopago-6\\.\\+|mercadolibre-6\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.multiplayer",
