@@ -1139,6 +1139,13 @@
     {
       "group": "com\\.mercadolibre\\.android\\.variations",
       "name": "variations",
+      "version": "8\\.\\+"
+    },
+    {
+      "description": "Deprecated by Android 13 plugin",
+      "expires": "2023-09-31",
+      "group": "com\\.mercadolibre\\.android\\.variations",
+      "name": "variations",
       "version": "7\\.\\+"
     },
     {
