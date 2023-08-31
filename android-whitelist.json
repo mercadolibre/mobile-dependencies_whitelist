@@ -1409,6 +1409,8 @@
       "version": "3\\.14\\.9"
     },
     {
+      "description": "Esta libs se encuentra deprecada, recomendamos utilizar coroutine",
+      "expires": "2024-12-01",
       "group": "com\\.squareup\\.retrofit2",
       "name": "adapter-rxjava2",
       "version": "2\\.6\\.4"
@@ -1466,6 +1468,8 @@
       "version": "2\\.7\\.2"
     },
     {
+      "description": "Esta libs se encuentra deprecada, recomendamos utilizar coroutine",
+      "expires": "2024-12-01",
       "group": "io\\.reactivex\\.rxjava2",
       "name": "rxandroid",
       "version": "2\\.1\\.1"
@@ -1476,11 +1480,15 @@
       "version": "2\\.\\+"
     },
     {
+      "description": "Esta libs se encuentra deprecada, recomendamos utilizar coroutine",
+      "expires": "2024-12-01",
       "group": "io\\.reactivex\\.rxjava2",
       "name": "rxjava",
       "version": "2\\.2\\.8"
     },
     {
+      "description": "Esta libs se encuentra deprecada, recomendamos utilizar coroutine",
+      "expires": "2024-12-01",
       "group": "io\\.reactivex\\.rxjava2",
       "name": "rxkotlin",
       "version": "2\\.2\\.0"
@@ -2079,6 +2087,8 @@
       "version": "2\\.4\\.3"
     },
     {
+      "description": "Esta libs se encuentra deprecada, recomendamos utilizar coroutine",
+      "expires": "2024-12-01",
       "group": "androidx\\.room",
       "name": "room-rxjava2",
       "version": "2\\.4\\.3"
