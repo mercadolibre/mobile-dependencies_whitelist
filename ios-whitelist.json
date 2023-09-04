@@ -936,7 +936,7 @@
       "version": "0.1.5"
     },
     {
-      "expires": "2023-09-08",
+      "expires": "2023-09-30",
       "name": "Realm",
       "source": "private",
       "target": "production",
@@ -1003,7 +1003,7 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "expires": "2023-09-08",
+      "expires": "2023-09-30",
       "name": "MPContacts",
       "source": "private",
       "target": "production",
@@ -1521,10 +1521,18 @@
       "version": "^~>\\s?0.[0-9]+"
     },
     {
+      "description": "This version will be deprecated in favor of 2.0.0 on 2023-12-31",
+      "expires": "2023-12-31",
       "name": "SmartTokenization",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "SmartTokenization",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "ADAssertLayout",
@@ -1647,14 +1655,6 @@
       "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
     },
     {
-      "description": "This version will be deprecated in favor of 3.36.1 on 2023-08-30",
-      "expires": "2023-08-30",
-      "name": "BitmovinPlayer",
-      "source": "private",
-      "target": "production",
-      "version": "3.36.0"
-    },
-    {
       "name": "BitmovinPlayer",
       "source": "private",
       "target": "production",
@@ -1742,16 +1742,30 @@
       "version": "^~>\\s?(1.16.0)$"
     },
     {
+      "expires": "2023-10-20",
       "name": "DatadogSDK",
       "source": "public",
       "target": "production",
       "version": "1.21.0"
     },
     {
+      "expires": "2023-10-20",
       "name": "DatadogSDKCrashReporting",
       "source": "public",
       "target": "production",
       "version": "1.21.0"
+    },
+    {
+      "name": "DatadogSDK",
+      "source": "public",
+      "target": "production",
+      "version": "1.23.0"
+    },
+    {
+      "name": "DatadogSDKCrashReporting",
+      "source": "public",
+      "target": "production",
+      "version": "1.23.0"
     },
     {
       "name": "Dogfooding",
@@ -1844,13 +1858,6 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "expires": "2023-08-30",
-      "name": "MLEShops",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
       "name": "XProdFloxComponents",
       "source": "private",
       "target": "production",
@@ -1863,24 +1870,10 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "expires": "2023-09-01",
-      "name": "BuyingflowCoreFlox",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
       "name": "BuyingflowCoreFlox",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "expires": "2023-09-01",
-      "name": "BuyingflowPayment",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "BuyingflowPayment",
