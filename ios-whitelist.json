@@ -1521,10 +1521,18 @@
       "version": "^~>\\s?0.[0-9]+"
     },
     {
+      "description": "This version will be deprecated in favor of 2.0.0 on 2023-12-31",
+      "expires": "2023-12-31",
       "name": "SmartTokenization",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "SmartTokenization",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "ADAssertLayout",
