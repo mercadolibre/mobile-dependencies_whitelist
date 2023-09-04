@@ -406,12 +406,6 @@
       "version": "2\\.0\\.0"
     },
     {
-      "expires": "2023-08-30",
-      "group": "com\\.google\\.code\\.gson",
-      "name": "gson",
-      "version": "2\\.8\\.5"
-    },
-    {
       "group": "com\\.google\\.code\\.gson",
       "name": "gson",
       "version": "2\\.8\\.8"
@@ -815,11 +809,6 @@
       "version": "30\\.\\+"
     },
     {
-      "expires": "2023-08-31",
-      "group": "com\\.mercadolibre\\.android\\.point\\.lot\\.management",
-      "version": "1\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.point\\.lot\\.management",
       "version": "2\\.\\+"
     },
@@ -923,12 +912,6 @@
       "group": "com\\.mercadolibre\\.android\\.marketplace\\.map",
       "name": "marketplace\\-map",
       "version": "12\\.\\+"
-    },
-    {
-      "expires": "2023-09-03",
-      "group": "com\\.mercadolibre\\.android\\.marketplace\\.map",
-      "name": "marketplace\\-map",
-      "version": "11\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.matt",
@@ -1128,12 +1111,6 @@
       "version": "2\\.\\+"
     },
     {
-      "expires": "2023-08-30",
-      "group": "com\\.mercadolibre\\.android\\.eshops",
-      "name": "components",
-      "version": "1\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.security",
       "name": "attestation",
       "version": "9\\.\\+"
@@ -1181,18 +1158,6 @@
       "group": "com\\.mercadolibre\\.android\\.variations",
       "name": "variations",
       "version": "8\\.\\+"
-    },
-    {
-      "expires": "2023-08-31",
-      "group": "com\\.mercadolibre\\.android\\.vpp",
-      "name": "core",
-      "version": "7\\.\\+"
-    },
-    {
-      "expires": "2023-08-31",
-      "group": "com\\.mercadolibre\\.android\\.vpp",
-      "name": "vip_commons",
-      "version": "7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.vpp",
@@ -1333,12 +1298,6 @@
       "group": "com\\.mercadopago\\.android\\.point_flow_engine",
       "name": "navigation",
       "version": "3\\.\\+"
-    },
-    {
-      "expires": "2023-08-30",
-      "group": "com\\.mercadolibre\\.android\\.pos_readers",
-      "name": "posreaders",
-      "version": "8\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.pos_readers",
@@ -2463,12 +2422,6 @@
       "version": "8\\.+"
     },
     {
-      "expires": "2023-08-30",
-      "group": "com\\.mercadolibre\\.android\\.point_smartpos_scanner",
-      "name": "scanner",
-      "version": "3\\.+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.point_smartpos_scanner",
       "name": "scanner",
       "version": "4\\.+"
@@ -2537,12 +2490,6 @@
       "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
       "name": "ccmmexico",
       "version": "3\\.\\+"
-    },
-    {
-      "expires": "2023-09-1",
-      "group": "com\\.mercadolibre\\.android\\.globe",
-      "name": "libc2d",
-      "version": "2\\.2\\.1\\-52"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.globe",
@@ -2692,21 +2639,9 @@
       "version": "1\\.+"
     },
     {
-      "expires": "2023-08-30",
-      "group": "io\\.opentelemetry",
-      "name": "opentelemetry-api",
-      "version": "1\\.16\\.+"
-    },
-    {
       "group": "io\\.opentelemetry",
       "name": "opentelemetry-api",
       "version": "1\\.27\\.+"
-    },
-    {
-      "expires": "2023-08-30",
-      "group": "io\\.opentelemetry",
-      "name": "opentelemetry-bom",
-      "version": "1\\.16\\.+"
     },
     {
       "group": "io\\.opentelemetry",
@@ -2730,21 +2665,9 @@
       "name": "opentelemetry-extension-trace-propagators"
     },
     {
-      "expires": "2023-08-30",
-      "group": "io\\.opentelemetry\\.instrumentation",
-      "name": "opentelemetry-okhttp-3.0",
-      "version": "1\\.16\\.+"
-    },
-    {
       "group": "io\\.opentelemetry\\.instrumentation",
       "name": "opentelemetry-okhttp-3.0",
       "version": "1\\.27\\.+"
-    },
-    {
-      "expires": "2023-08-30",
-      "group": "io\\.grpc",
-      "name": "grpc-okhttp",
-      "version": "1\\.41\\.+"
     },
     {
       "group": "io\\.grpc",
@@ -2765,12 +2688,6 @@
       "group": "com\\.mercadolibre\\.android\\.braze",
       "name": "core",
       "version": "3.\\+"
-    },
-    {
-      "expires": "2023-08-30",
-      "group": "com\\.appboy",
-      "name": "android-sdk-ui",
-      "version": "23\\.1\\.2"
     },
     {
       "group": "com\\.braze",
@@ -3001,12 +2918,6 @@
       "version": "3\\.+"
     },
     {
-      "expires": "2023-08-31",
-      "group": "com\\.bitmovin\\.player",
-      "name": "player",
-      "version": "3\\.33\\.0"
-    },
-    {
       "group": "com\\.bitmovin\\.player",
       "name": "player",
       "version": "3\\.40\\.0"
@@ -3066,12 +2977,6 @@
       "version": "1\\.\\+"
     },
     {
-      "expires": "2023-08-30",
-      "group": "com\\.mercadolibre\\.android\\.point_bill_payment",
-      "name": "point_billpayment",
-      "version": "1\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.point_bill_payment",
       "name": "point_billpayment",
       "version": "2\\.\\+"
@@ -3097,12 +3002,6 @@
       "group": "androidx\\.mediarouter",
       "name": "mediarouter",
       "version": "1\\.2\\.2"
-    },
-    {
-      "expires": "2023-08-31",
-      "group": "com\\.mercadolibre\\.android\\.clips",
-      "name": "clips",
-      "version": "1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.clips",
@@ -3333,12 +3232,6 @@
       "version": "2\\.18\\.4"
     },
     {
-      "expires": "2023-08-31",
-      "group": "com\\.mercadolibre\\.android\\.fbm\\.wms\\.flan",
-      "name": "core",
-      "version": "2\\.\\+"
-    },
-    {
       "expires": "2023-10-31",
       "group": "com\\.mercadolibre\\.android\\.fbm\\.wms\\.flan",
       "name": "core",
@@ -3475,6 +3368,11 @@
       "group": "com\\.mercadolibre\\.android\\.isp_sf",
       "name": "selling_data",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.wishlists",
+      "name": "wishlists",
+      "version": "0\\.\\+"
     }
   ]
 }
