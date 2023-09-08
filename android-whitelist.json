@@ -2910,11 +2910,34 @@
     {
       "group": "com\\.mercadolibre\\.android\\.reviews3",
       "name": "core",
-      "version": "4\\.+"
+      "version": "5\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.reviews3",
       "name": "form",
+      "version": "5\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.reviews3",
+      "name": "notifications",
+      "version": "5\\.+"
+    },
+    {
+      "expires": "2023-09-30",
+      "group": "com\\.mercadolibre\\.android\\.reviews3",
+      "name": "core",
+      "version": "4\\.+"
+    },
+    {
+      "expires": "2023-09-30",
+      "group": "com\\.mercadolibre\\.android\\.reviews3",
+      "name": "form",
+      "version": "4\\.+"
+    },
+    {
+      "expires": "2023-09-30",
+      "group": "com\\.mercadolibre\\.android\\.reviews3",
+      "name": "notifications",
       "version": "4\\.+"
     },
     {
@@ -3005,6 +3028,13 @@
     },
     {
       "description": "This library is a webview for the Shorts initiative",
+      "group": "com\\.mercadolibre\\.android\\.shorts",
+      "name": "shorts",
+      "version": "2\\.\\+"
+    },
+    {
+      "description": "This library is a webview for the Shorts initiative",
+      "expires": "2023-09-30",
       "group": "com\\.mercadolibre\\.android\\.shorts",
       "name": "shorts",
       "version": "1\\.\\+"
