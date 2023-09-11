@@ -982,11 +982,6 @@
       "version": "9\\.\\+"
     },
     {
-      "expires": "2023-09-06",
-      "group": "com\\.mercadolibre\\.android\\.recommendations",
-      "version": "14\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.recommendations",
       "version": "15\\.\\+"
     },
@@ -1070,36 +1065,6 @@
       "version": "18\\.\\+"
     },
     {
-      "expires": "2023-09-10",
-      "group": "com\\.mercadolibre\\.android\\.search",
-      "name": "compats",
-      "version": "17\\.\\+"
-    },
-    {
-      "expires": "2023-09-10",
-      "group": "com\\.mercadolibre\\.android\\.search",
-      "name": "input",
-      "version": "17\\.\\+"
-    },
-    {
-      "expires": "2023-09-10",
-      "group": "com\\.mercadolibre\\.android\\.search",
-      "name": "autosuggest",
-      "version": "17\\.\\+"
-    },
-    {
-      "expires": "2023-09-10",
-      "group": "com\\.mercadolibre\\.android\\.search",
-      "name": "morelikethis",
-      "version": "17\\.\\+"
-    },
-    {
-      "expires": "2023-09-10",
-      "group": "com\\.mercadolibre\\.android\\.search",
-      "name": "search",
-      "version": "17\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.eshops",
       "name": "components",
       "version": "2\\.\\+"
@@ -1172,20 +1137,6 @@
       "group": "com\\.mercadolibre\\.android\\.home\\.toolkit",
       "name": "core",
       "version": "3\\.\\+"
-    },
-    {
-      "description": "Deprecated by kotlin migration to 1.8v.",
-      "expires": "2023-09-08",
-      "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
-      "name": "home",
-      "version": "mercadopago-4\\.+"
-    },
-    {
-      "description": "Deprecated by kotlin migration to 1.8v.",
-      "expires": "2023-09-08",
-      "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
-      "name": "sections",
-      "version": "mercadopago-4\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
@@ -1336,12 +1287,6 @@
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
       "name": "entities_fcu",
       "version": "11\\.+"
-    },
-    {
-      "expires": "2023-09-10",
-      "group": "com\\.mercadolibre\\.android\\.point\\.mpos",
-      "name": "mpos",
-      "version": "6\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point\\.mpos",
