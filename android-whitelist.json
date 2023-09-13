@@ -982,11 +982,6 @@
       "version": "9\\.\\+"
     },
     {
-      "expires": "2023-09-06",
-      "group": "com\\.mercadolibre\\.android\\.recommendations",
-      "version": "14\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.recommendations",
       "version": "15\\.\\+"
     },
@@ -1070,36 +1065,6 @@
       "version": "18\\.\\+"
     },
     {
-      "expires": "2023-09-10",
-      "group": "com\\.mercadolibre\\.android\\.search",
-      "name": "compats",
-      "version": "17\\.\\+"
-    },
-    {
-      "expires": "2023-09-10",
-      "group": "com\\.mercadolibre\\.android\\.search",
-      "name": "input",
-      "version": "17\\.\\+"
-    },
-    {
-      "expires": "2023-09-10",
-      "group": "com\\.mercadolibre\\.android\\.search",
-      "name": "autosuggest",
-      "version": "17\\.\\+"
-    },
-    {
-      "expires": "2023-09-10",
-      "group": "com\\.mercadolibre\\.android\\.search",
-      "name": "morelikethis",
-      "version": "17\\.\\+"
-    },
-    {
-      "expires": "2023-09-10",
-      "group": "com\\.mercadolibre\\.android\\.search",
-      "name": "search",
-      "version": "17\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.eshops",
       "name": "components",
       "version": "2\\.\\+"
@@ -1172,20 +1137,6 @@
       "group": "com\\.mercadolibre\\.android\\.home\\.toolkit",
       "name": "core",
       "version": "3\\.\\+"
-    },
-    {
-      "description": "Deprecated by kotlin migration to 1.8v.",
-      "expires": "2023-09-08",
-      "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
-      "name": "home",
-      "version": "mercadopago-4\\.+"
-    },
-    {
-      "description": "Deprecated by kotlin migration to 1.8v.",
-      "expires": "2023-09-08",
-      "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
-      "name": "sections",
-      "version": "mercadopago-4\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
@@ -1338,12 +1289,6 @@
       "version": "11\\.+"
     },
     {
-      "expires": "2023-09-10",
-      "group": "com\\.mercadolibre\\.android\\.point\\.mpos",
-      "name": "mpos",
-      "version": "6\\.+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.point\\.mpos",
       "name": "mpos",
       "version": "7\\.+"
@@ -1417,6 +1362,8 @@
       "version": "4\\.9\\.3"
     },
     {
+      "description": "Esta libs se encuentra deprecada, recomendamos utilizar coroutine",
+      "expires": "2024-12-01",
       "group": "com\\.squareup\\.retrofit2",
       "name": "adapter-rxjava2",
       "version": "2\\.6\\.4"
@@ -1474,6 +1421,8 @@
       "version": "2\\.7\\.2"
     },
     {
+      "description": "Esta libs se encuentra deprecada, recomendamos utilizar coroutine",
+      "expires": "2024-12-01",
       "group": "io\\.reactivex\\.rxjava2",
       "name": "rxandroid",
       "version": "2\\.1\\.1"
@@ -1484,11 +1433,15 @@
       "version": "2\\.\\+"
     },
     {
+      "description": "Esta libs se encuentra deprecada, recomendamos utilizar coroutine",
+      "expires": "2024-12-01",
       "group": "io\\.reactivex\\.rxjava2",
       "name": "rxjava",
       "version": "2\\.2\\.8"
     },
     {
+      "description": "Esta libs se encuentra deprecada, recomendamos utilizar coroutine",
+      "expires": "2024-12-01",
       "group": "io\\.reactivex\\.rxjava2",
       "name": "rxkotlin",
       "version": "2\\.2\\.0"
@@ -2087,6 +2040,8 @@
       "version": "2\\.4\\.3"
     },
     {
+      "description": "Esta libs se encuentra deprecada, recomendamos utilizar coroutine",
+      "expires": "2024-12-01",
       "group": "androidx\\.room",
       "name": "room-rxjava2",
       "version": "2\\.4\\.3"
@@ -3197,9 +3152,15 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2023-12-31",
       "group": "com\\.mercadolibre\\.android\\.everest",
       "name": "platform",
       "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.everest",
+      "name": "platform",
+      "version": "2\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.errorhandler\\.v2",
@@ -3252,6 +3213,11 @@
       "group": "org\\.jetbrains\\.kotlin",
       "name": "kotlin-parcelize-runtime",
       "version": "1\\.8\\.10"
+    },
+    {
+      "group": "com\\.google\\.android\\.exoplayer",
+      "name": "exoplayer-common",
+      "version": "2\\.18\\.4"
     },
     {
       "group": "com\\.google\\.android\\.exoplayer",
