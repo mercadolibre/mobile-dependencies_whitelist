@@ -1519,14 +1519,26 @@
       "version": "mercadopago-7\\.\\+|mercadolibre-7\\.\\+"
     },
     {
+      "expires": "2024-02-29",
       "group": "com\\.mercadolibre\\.android\\.security_two_fa",
       "name": "faceauth",
       "version": "mercadolibre-6\\.\\+|mercadopago-6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.security_two_fa",
+      "name": "faceauth",
+      "version": "mercadolibre-8\\.\\+|mercadopago-8\\.\\+"
+    },
+    {
+      "expires": "2024-02-29",
+      "group": "com\\.mercadolibre\\.android\\.security_two_fa",
       "name": "totp",
       "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.security_two_fa",
+      "name": "totp",
+      "version": "8\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.security",
@@ -1545,9 +1557,15 @@
       "version": "6\\.\\+"
     },
     {
+      "expires": "2024-02-29",
       "group": "com\\.mercadolibre\\.android\\.security_two_fa",
       "name": "totpinapp",
       "version": "mercadolibre-7\\.\\+|mercadopago-7\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.security_two_fa",
+      "name": "totpinapp",
+      "version": "mercadolibre-8\\.\\+|mercadopago-8\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.security_options",
