@@ -1,14 +1,26 @@
 {
   "whitelist": [
     {
+      "expires": "2023-09-30",
       "group": "com\\.mercadolibre\\.android\\.nfcpushprovisioning",
       "name": "core",
       "version": "1\\.+"
     },
     {
+      "expires": "2023-09-30",
       "group": "com\\.mercadolibre\\.android\\.nfcpushprovisioning",
       "name": "flows",
       "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.nfcpushprovisioning",
+      "name": "core",
+      "version": "2\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.nfcpushprovisioning",
+      "name": "flows",
+      "version": "2\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.nfcpushprovisioning",
