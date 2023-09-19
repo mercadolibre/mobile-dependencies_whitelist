@@ -3170,9 +3170,15 @@
       "version": "1\\.5\\.\\1"
     },
     {
+      "expires": "2023-10-20",
       "group": "com\\.mercadolibre\\.android\\.xprod\\.modules",
       "name": "webview",
       "version": "0\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.xprod\\.modules",
+      "name": "webview",
+      "version": "1\\.\\+"
     },
     {
       "description": "Android library used to easily integrate SmartPOS modules with PTM for seamless updates.",
