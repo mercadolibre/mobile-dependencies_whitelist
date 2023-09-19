@@ -1,6 +1,11 @@
 {
   "whitelist": [
     {
+      "group": "com\\.mercadolibre\\.android\\.nfcpayments",
+      "name": "visa-sensory-branding",
+      "version": "2\\.+"
+    },
+    {
       "expires": "2023-09-30",
       "group": "com\\.mercadolibre\\.android\\.nfcpushprovisioning",
       "name": "core",
