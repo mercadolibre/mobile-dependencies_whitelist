@@ -3147,12 +3147,12 @@
       "expires": "2023-12-31",
       "group": "com\\.mercadolibre\\.android\\.everest",
       "name": "platform",
-      "version": "1\\.+"
+      "version": "1\\.\\+|2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.everest",
       "name": "platform",
-      "version": "2\\.+"
+      "version": "3\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.errorhandler\\.v2",
