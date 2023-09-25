@@ -1,6 +1,11 @@
 {
   "whitelist": [
     {
+      "group": "com\\.mercadolibre\\.android\\.nfcpayments",
+      "name": "visa-sensory-branding",
+      "version": "2\\.+"
+    },
+    {
       "expires": "2023-09-30",
       "group": "com\\.mercadolibre\\.android\\.nfcpushprovisioning",
       "name": "core",
@@ -799,9 +804,15 @@
       "version": "7\\.\\+"
     },
     {
+      "expires": "2023-11-15",
       "group": "com\\.mercadolibre\\.android\\.cpg",
       "name": "ui_components",
       "version": "8\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cpg",
+      "name": "ui_components",
+      "version": "9\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.instore_ui_components",
@@ -1063,8 +1074,13 @@
       "version": "9\\.\\+"
     },
     {
+      "expires": "2023-11-30",
       "group": "com\\.mercadolibre\\.android\\.uicomponents",
       "version": "16\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.uicomponents",
+      "version": "17\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.navigation_manager",
@@ -1102,9 +1118,15 @@
       "version": "7\\.\\+"
     },
     {
+      "expires": "2023-11-15",
       "group": "com\\.mercadolibre\\.android\\.variations",
       "name": "variations",
       "version": "8\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.variations",
+      "name": "variations",
+      "version": "9\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.vpp",
@@ -3018,6 +3040,11 @@
       "version": "5\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.fbm\\.wms\\.app\\.monitoring",
+      "name": "core",
+      "version": "1\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.fbm\\.wms\\.feature\\.toggle",
       "name": "core",
       "version": "1\\.\\+"
@@ -3136,12 +3163,12 @@
       "expires": "2023-12-31",
       "group": "com\\.mercadolibre\\.android\\.everest",
       "name": "platform",
-      "version": "1\\.+"
+      "version": "1\\.\\+|2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.everest",
       "name": "platform",
-      "version": "2\\.+"
+      "version": "3\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.errorhandler\\.v2",
@@ -3175,9 +3202,15 @@
       "version": "1\\.5\\.\\1"
     },
     {
+      "expires": "2023-10-20",
       "group": "com\\.mercadolibre\\.android\\.xprod\\.modules",
       "name": "webview",
       "version": "0\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.xprod\\.modules",
+      "name": "webview",
+      "version": "1\\.\\+"
     },
     {
       "description": "Android library used to easily integrate SmartPOS modules with PTM for seamless updates.",
