@@ -2473,9 +2473,15 @@
       "version": "2\\.+"
     },
     {
+      "expires": "2023-12-31",
       "group": "com\\.mercadolibre\\.android\\.point_virtualization",
       "name": "point_virtualization",
       "version": "3\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_virtualization",
+      "name": "point_virtualization",
+      "version": "4\\.+"
     },
     {
       "group": "com\\.google\\.firebase",
