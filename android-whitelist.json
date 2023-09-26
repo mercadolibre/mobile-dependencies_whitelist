@@ -3186,7 +3186,13 @@
     {
       "group": "com\\.mercadolibre\\.android\\.errorhandler\\.v2",
       "name": "core",
+      "expires": "2023-10-10",
       "version": "production-1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.errorhandler\\.v2",
+      "name": "core",
+      "version": "production-2\\.\\+"
     },
     {
       "group": "com\\.qualtrics",
