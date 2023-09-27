@@ -1878,10 +1878,17 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "expires": "2023-10-27",
       "name": "BuyingflowPayment",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "BuyingflowPayment",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "PortableWidget",
