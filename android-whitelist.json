@@ -804,7 +804,7 @@
       "version": "7\\.\\+"
     },
     {
-      "expires": "2023-11-15",
+      "expires": "2023-11-17",
       "group": "com\\.mercadolibre\\.android\\.cpg",
       "name": "ui_components",
       "version": "8\\.\\+"
@@ -1080,7 +1080,7 @@
       "version": "9\\.\\+"
     },
     {
-      "expires": "2023-11-30",
+      "expires": "2023-12-01",
       "group": "com\\.mercadolibre\\.android\\.uicomponents",
       "version": "16\\.\\+"
     },
@@ -1124,7 +1124,7 @@
       "version": "7\\.\\+"
     },
     {
-      "expires": "2023-11-15",
+      "expires": "2023-11-17",
       "group": "com\\.mercadolibre\\.android\\.variations",
       "name": "variations",
       "version": "8\\.\\+"
@@ -1656,9 +1656,15 @@
       "version": "mercadolibre-8\\.\\+|mercadopago-8\\.\\+"
     },
     {
+      "expires": "2023-11-30",
       "group": "com\\.mercadolibre\\.android\\.insu_qpage_on",
       "name": "qpage_on",
       "version": "9\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.insu_qpage_on",
+      "name": "qpage_on",
+      "version": "10\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.andesui",
