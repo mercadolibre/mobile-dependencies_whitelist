@@ -1010,6 +1010,11 @@
     },
     {
       "group": "com\\.mercadolibre\\.android\\.qadb",
+      "version": "9\\.\\+"
+    },
+    {
+      "expires": "2023-10-30",
+      "group": "com\\.mercadolibre\\.android\\.qadb",
       "version": "8\\.\\+"
     },
     {
@@ -1656,7 +1661,7 @@
       "version": "mercadolibre-8\\.\\+|mercadopago-8\\.\\+"
     },
     {
-      "expires": "2023-11-30",
+      "expires": "2023-12-01",
       "group": "com\\.mercadolibre\\.android\\.insu_qpage_on",
       "name": "qpage_on",
       "version": "9\\.+"
@@ -3214,9 +3219,15 @@
       "version": "3\\.+"
     },
     {
+      "expires": "2023-10-10",
       "group": "com\\.mercadolibre\\.android\\.errorhandler\\.v2",
       "name": "core",
       "version": "production-1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.errorhandler\\.v2",
+      "name": "core",
+      "version": "production-2\\.\\+"
     },
     {
       "group": "com\\.qualtrics",
