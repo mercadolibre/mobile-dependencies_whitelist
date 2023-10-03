@@ -1231,14 +1231,28 @@
       "version": "7\\.\\+"
     },
     {
+      "description": "This library will be deprecated by upgrade of kotlin 1.8",
+      "expires": "2023-10-20",
       "group": "com\\.mercadolibre\\.android\\.dami_ui_components",
       "name": "ui_components",
       "version": "3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.dami_ui_components",
+      "name": "ui_components",
+      "version": "4\\.\\+"
+    },
+    {
+      "description": "This library will be deprecated by upgrade of kotlin 1.8",
+      "expires": "2023-10-20",
+      "group": "com\\.mercadolibre\\.android\\.dami_ui_components",
       "name": "base_testapp",
       "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.dami_ui_components",
+      "name": "base_testapp",
+      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.static_resources",
