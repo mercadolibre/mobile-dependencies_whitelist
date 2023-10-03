@@ -844,6 +844,11 @@
       "version": "8\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.history",
+      "name": "history",
+      "version": "9\\.\\+"
+    },
+    {
       "expires": "2023-12-01",
       "group": "com\\.mercadolibre\\.android\\.history",
       "name": "history_manager",
@@ -853,6 +858,11 @@
       "group": "com\\.mercadolibre\\.android\\.history",
       "name": "history_manager",
       "version": "8\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.history",
+      "name": "history_manager",
+      "version": "9\\.\\+"
     },
     {
       "description": "Deprecated due to Kotlin Migration. Use 6.+ instead.",
@@ -960,15 +970,25 @@
       "name": "metrics",
       "version": "7\\.\\+"
     },
-    {
+    {"expires": "2023-10-06",
       "group": "com\\.mercadolibre\\.android\\.navigationcp",
       "name": "navigationcp",
       "version": "10\\.\\+"
     },
-    {
+    {"expires": "2023-10-06",
       "group": "com\\.mercadolibre\\.android\\.navigationcp",
       "name": "shipping-address",
       "version": "10\\.\\+"
+    },
+        {
+      "group": "com\\.mercadolibre\\.android\\.navigationcp",
+      "name": "navigationcp",
+      "version": "11\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.navigationcp",
+      "name": "shipping-address",
+      "version": "11\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
@@ -1131,10 +1151,15 @@
       "group": "com\\.mercadolibre\\.android\\.mlwebkit",
       "version": "7.\\+"
     },
-    {
+    { "expires": "2023-10-06"
       "group": "com\\.mercadolibre\\.android\\.uinavigationcp",
       "name": "addresshub",
       "version": "9\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.uinavigationcp",
+      "name": "addresshub",
+      "version": "10\\.\\+"
     },
     {
       "expires": "2023-09-30",
