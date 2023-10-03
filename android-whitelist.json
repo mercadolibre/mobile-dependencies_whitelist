@@ -966,17 +966,19 @@
       "name": "metrics",
       "version": "7\\.\\+"
     },
-    {"expires": "2023-10-06",
+    {
+      "expires": "2023-10-06",
       "group": "com\\.mercadolibre\\.android\\.navigationcp",
       "name": "navigationcp",
       "version": "10\\.\\+"
     },
-    {"expires": "2023-10-06",
+    {
+      "expires": "2023-10-06",
       "group": "com\\.mercadolibre\\.android\\.navigationcp",
       "name": "shipping-address",
       "version": "10\\.\\+"
     },
-        {
+    {
       "group": "com\\.mercadolibre\\.android\\.navigationcp",
       "name": "navigationcp",
       "version": "11\\.\\+"
@@ -1147,7 +1149,8 @@
       "group": "com\\.mercadolibre\\.android\\.mlwebkit",
       "version": "7.\\+"
     },
-    { "expires": "2023-10-06"
+    { 
+      "expires": "2023-10-06"
       "group": "com\\.mercadolibre\\.android\\.uinavigationcp",
       "name": "addresshub",
       "version": "9\\.\\+"
