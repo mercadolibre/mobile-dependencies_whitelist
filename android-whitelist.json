@@ -839,26 +839,26 @@
       "version": "6\\.\\+"
     },
     {
-      "expires": "2023-12-01",
-      "group": "com\\.mercadolibre\\.android\\.history",
-      "name": "history",
-      "version": "7\\.\\+"
-    },
-    {
+      "expires": "2023-11-30",
       "group": "com\\.mercadolibre\\.android\\.history",
       "name": "history",
       "version": "8\\.\\+"
     },
     {
-      "expires": "2023-12-01",
+      "group": "com\\.mercadolibre\\.android\\.history",
+      "name": "history",
+      "version": "9\\.\\+"
+    },
+    {
+      "expires": "2023-11-30",
       "group": "com\\.mercadolibre\\.android\\.history",
       "name": "history_manager",
-      "version": "7\\.\\+"
+      "version": "8\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.history",
       "name": "history_manager",
-      "version": "8\\.\\+"
+      "version": "9\\.\\+"
     },
     {
       "description": "Deprecated due to Kotlin Migration. Use 6.+ instead.",
@@ -967,14 +967,26 @@
       "version": "7\\.\\+"
     },
     {
+      "expires": "2023-10-06",
       "group": "com\\.mercadolibre\\.android\\.navigationcp",
       "name": "navigationcp",
       "version": "10\\.\\+"
     },
     {
+      "expires": "2023-10-06",
       "group": "com\\.mercadolibre\\.android\\.navigationcp",
       "name": "shipping-address",
       "version": "10\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.navigationcp",
+      "name": "navigationcp",
+      "version": "11\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.navigationcp",
+      "name": "shipping-address",
+      "version": "11\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
@@ -1138,9 +1150,15 @@
       "version": "7.\\+"
     },
     {
+      "expires": "2023-10-06",
       "group": "com\\.mercadolibre\\.android\\.uinavigationcp",
       "name": "addresshub",
       "version": "9\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.uinavigationcp",
+      "name": "addresshub",
+      "version": "10\\.\\+"
     },
     {
       "expires": "2023-09-30",
@@ -2404,26 +2422,52 @@
       "version": "3\\.+"
     },
     {
+      "expires": "2023-12-31",
       "group": "com\\.mercadolibre\\.android\\.point_smart_helpers",
       "name": "point_commons",
       "version": "4\\.+"
     },
     {
+      "expires": "2023-12-31",
       "group": "com\\.mercadolibre\\.android\\.point_smart_helpers",
       "name": "hardware_buttons",
       "version": "4\\.+"
     },
     {
       "description": "This library create a connection with Melidata to send tracks through it.",
+      "expires": "2023-12-31",
       "group": "com\\.mercadolibre\\.android\\.point_smart_helpers",
       "name": "analytic-concrete",
       "version": "4\\.+"
     },
     {
       "description": "This library has abstraction for client to create custom tracks with path and data.",
+      "expires": "2023-12-31",
       "group": "com\\.mercadolibre\\.android\\.point_smart_helpers",
       "name": "analytic-interface",
       "version": "4\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_smart_helpers",
+      "name": "point_commons",
+      "version": "6\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_smart_helpers",
+      "name": "hardware_buttons",
+      "version": "6\\.+"
+    },
+    {
+      "description": "This library create a connection with Melidata to send tracks through it.",
+      "group": "com\\.mercadolibre\\.android\\.point_smart_helpers",
+      "name": "analytic-concrete",
+      "version": "6\\.+"
+    },
+    {
+      "description": "This library has abstraction for client to create custom tracks with path and data.",
+      "group": "com\\.mercadolibre\\.android\\.point_smart_helpers",
+      "name": "analytic-interface",
+      "version": "6\\.+"
     },
     {
       "expires": "2023-10-31",
@@ -2607,9 +2651,15 @@
       "version": "dev-4\\.\\+|a910-4\\.\\+|d20-4\\.\\+|n950-4\\.\\+|4\\.\\+"
     },
     {
+      "expires": "2023-12-31",
       "group": "com\\.mercadolibre\\.android\\.point_smart_pos_sdk",
       "name": "device",
       "version": "dev-5\\.\\+|a910-5\\.\\+|d20-5\\.\\+|n950-5\\.\\+|5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_smart_pos_sdk",
+      "name": "device",
+      "version": "dev-6\\.\\+|a910-6\\.\\+|d20-6\\.\\+|n950-6\\.\\+|6\\.\\+"
     },
     {
       "expires": "2023-10-31",
