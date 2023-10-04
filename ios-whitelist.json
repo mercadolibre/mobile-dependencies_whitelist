@@ -389,6 +389,12 @@
       "version": "^~>\\s?0.[0-9]+"
     },
     {
+      "name": "AuthScopedSession",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+"
+    },
+    {
       "name": "MLBiometrics",
       "source": "private",
       "target": "production",

@@ -37,9 +37,15 @@
       "version": "5\\.+"
     },
     {
+      "expires": "2023-10-17",
       "group": "com\\.mercadolibre\\.android",
       "name": "viewability",
       "version": "2\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "viewability",
+      "version": "3\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.om",
@@ -430,6 +436,11 @@
       "name": "firebase-messaging"
     },
     {
+      "expires": "2024-01-01",
+      "group": "com\\.google\\.firebase",
+      "name": "firebase-perf"
+    },
+    {
       "group": "com\\.google\\.firebase",
       "name": "firebase-bom",
       "version": "26\\.8\\.0"
@@ -798,36 +809,50 @@
       "version": "6\\.\\+"
     },
     {
-      "expires": "2023-12-01",
-      "group": "com\\.mercadolibre\\.android\\.history",
-      "name": "history",
-      "version": "7\\.\\+"
-    },
-    {
+      "expires": "2023-11-30",
       "group": "com\\.mercadolibre\\.android\\.history",
       "name": "history",
       "version": "8\\.\\+"
     },
     {
-      "expires": "2023-12-01",
       "group": "com\\.mercadolibre\\.android\\.history",
-      "name": "history_manager",
-      "version": "7\\.\\+"
+      "name": "history",
+      "version": "9\\.\\+"
     },
     {
+      "expires": "2023-11-30",
       "group": "com\\.mercadolibre\\.android\\.history",
       "name": "history_manager",
       "version": "8\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.history",
+      "name": "history_manager",
+      "version": "9\\.\\+"
+    },
+    {
+      "description": "Deprecated due to Kotlin Migration. Use 6.+ instead.",
+      "expires": "2023-10-31",
       "group": "com\\.mercadolibre\\.android\\.instore\\.home\\.sections",
       "name": "instore_home_sections",
       "version": "mercadopago-5\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.instore\\.home\\.sections",
+      "name": "instore_home_sections",
+      "version": "mercadopago-6\\.\\+"
+    },
+    {
+      "description": "Deprecated due to Kotlin Migration. Use 5.+ instead.",
+      "expires": "2023-10-31",
       "group": "com\\.mercadolibre\\.android\\.instore",
       "name": "reviews",
       "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.instore",
+      "name": "reviews",
+      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.instore",
@@ -912,14 +937,26 @@
       "version": "7\\.\\+"
     },
     {
+      "expires": "2023-10-06",
       "group": "com\\.mercadolibre\\.android\\.navigationcp",
       "name": "navigationcp",
       "version": "10\\.\\+"
     },
     {
+      "expires": "2023-10-06",
       "group": "com\\.mercadolibre\\.android\\.navigationcp",
       "name": "shipping-address",
       "version": "10\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.navigationcp",
+      "name": "navigationcp",
+      "version": "11\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.navigationcp",
+      "name": "shipping-address",
+      "version": "11\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
@@ -967,6 +1004,11 @@
     {
       "group": "com\\.mercadolibre\\.android\\.liveness_detection\\.liveness",
       "version": "6\\.\\+"
+    },
+    {
+      "expires": "2023-12-30",
+      "group": "com\\.mercadolibre\\.android\\.comparator",
+      "version": "7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.qadb",
@@ -1072,9 +1114,15 @@
       "version": "7.\\+"
     },
     {
+      "expires": "2023-10-06",
       "group": "com\\.mercadolibre\\.android\\.uinavigationcp",
       "name": "addresshub",
       "version": "9\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.uinavigationcp",
+      "name": "addresshub",
+      "version": "10\\.\\+"
     },
     {
       "expires": "2023-11-17",
@@ -1165,14 +1213,28 @@
       "version": "7\\.\\+"
     },
     {
+      "description": "This library will be deprecated by upgrade of kotlin 1.8",
+      "expires": "2023-10-20",
       "group": "com\\.mercadolibre\\.android\\.dami_ui_components",
       "name": "ui_components",
       "version": "3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.dami_ui_components",
+      "name": "ui_components",
+      "version": "4\\.\\+"
+    },
+    {
+      "description": "This library will be deprecated by upgrade of kotlin 1.8",
+      "expires": "2023-10-20",
+      "group": "com\\.mercadolibre\\.android\\.dami_ui_components",
       "name": "base_testapp",
       "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.dami_ui_components",
+      "name": "base_testapp",
+      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.static_resources",
@@ -1573,9 +1635,10 @@
       "version": "1\\.5\\.2"
     },
     {
+      "expires": "2024-01-30",
       "group": "com\\.mercadolibre\\.android\\.traceability",
       "name": "traceability",
-      "version": "8\\.\\+"
+      "version": "7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.inappupdates",
@@ -1629,9 +1692,16 @@
       "version": "mercadopago-2\\.\\+|mercadolibre-2\\.\\+"
     },
     {
+      "description": "Deprecated due to Kotlin Migration. Use 6.+ instead.",
+      "expires": "2023-10-31",
       "group": "com\\.mercadolibre\\.android\\.discounts_touchpoint",
       "name": "discounts_touchpoint",
       "version": "mercadopago-5\\.\\+|mercadolibre-5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.discounts_touchpoint",
+      "name": "discounts_touchpoint",
+      "version": "mercadopago-6\\.\\+|mercadolibre-6\\.\\+"
     },
     {
       "group": "androidx.preference",
@@ -2292,26 +2362,52 @@
       "version": "3\\.+"
     },
     {
+      "expires": "2023-12-31",
       "group": "com\\.mercadolibre\\.android\\.point_smart_helpers",
       "name": "point_commons",
       "version": "4\\.+"
     },
     {
+      "expires": "2023-12-31",
       "group": "com\\.mercadolibre\\.android\\.point_smart_helpers",
       "name": "hardware_buttons",
       "version": "4\\.+"
     },
     {
       "description": "This library create a connection with Melidata to send tracks through it.",
+      "expires": "2023-12-31",
       "group": "com\\.mercadolibre\\.android\\.point_smart_helpers",
       "name": "analytic-concrete",
       "version": "4\\.+"
     },
     {
       "description": "This library has abstraction for client to create custom tracks with path and data.",
+      "expires": "2023-12-31",
       "group": "com\\.mercadolibre\\.android\\.point_smart_helpers",
       "name": "analytic-interface",
       "version": "4\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_smart_helpers",
+      "name": "point_commons",
+      "version": "6\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_smart_helpers",
+      "name": "hardware_buttons",
+      "version": "6\\.+"
+    },
+    {
+      "description": "This library create a connection with Melidata to send tracks through it.",
+      "group": "com\\.mercadolibre\\.android\\.point_smart_helpers",
+      "name": "analytic-concrete",
+      "version": "6\\.+"
+    },
+    {
+      "description": "This library has abstraction for client to create custom tracks with path and data.",
+      "group": "com\\.mercadolibre\\.android\\.point_smart_helpers",
+      "name": "analytic-interface",
+      "version": "6\\.+"
     },
     {
       "expires": "2023-10-31",
@@ -2495,9 +2591,15 @@
       "version": "dev-4\\.\\+|a910-4\\.\\+|d20-4\\.\\+|n950-4\\.\\+|4\\.\\+"
     },
     {
+      "expires": "2023-12-31",
       "group": "com\\.mercadolibre\\.android\\.point_smart_pos_sdk",
       "name": "device",
       "version": "dev-5\\.\\+|a910-5\\.\\+|d20-5\\.\\+|n950-5\\.\\+|5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_smart_pos_sdk",
+      "name": "device",
+      "version": "dev-6\\.\\+|a910-6\\.\\+|d20-6\\.\\+|n950-6\\.\\+|6\\.\\+"
     },
     {
       "expires": "2023-10-31",
