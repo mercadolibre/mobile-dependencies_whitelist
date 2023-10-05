@@ -767,8 +767,13 @@
       "version": "3\\.\\+"
     },
     {
+      "expires": "2023-10-31",
       "group": "com\\.mercadolibre\\.android\\.credits\\.behaviour",
       "version": "5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.credits\\.behaviour",
+      "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cross_app_links",
@@ -2222,16 +2227,6 @@
       "version": "mercadopago-6\\.\\+|mercadolibre-6\\.\\+"
     },
     {
-      "group": "com\\.mercadolibre\\.android\\.collaboratorsui",
-      "name": "collaboratorsui",
-      "version": "1\\.\\+"
-    },
-    {
-      "group": "com\\.mercadolibre\\.android\\.mldashboard",
-      "name": "mldashboard",
-      "version": "1\\.\\+"
-    },
-    {
       "expires": "2023-10-31",
       "group": "com\\.mercadolibre\\.android\\.fees_installments",
       "name": "mlfees",
@@ -2243,29 +2238,59 @@
       "version": "8\\.\\+"
     },
     {
+      "expires": "2023-10-31",
       "group": "com\\.mercadolibre\\.android\\.tfs_commons",
       "name": "tracking",
       "version": "mercadopago-5\\.\\+|mercadolibre-5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.tfs_commons",
+      "name": "tracking",
+      "version": "mercadopago-6\\.\\+|mercadolibre-6\\.\\+"
+    },
+    {
+      "expires": "2023-10-31",
+      "group": "com\\.mercadolibre\\.android\\.tfs_commons",
       "name": "imageutils",
       "version": "5\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.tfs_commons",
+      "name": "imageutils",
+      "version": "6\\.\\+"
+    },
+    {
+      "expires": "2023-10-31",
       "group": "com\\.mercadolibre\\.android\\.tfs_commons",
       "name": "ktx",
       "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.tfs_commons",
+      "name": "ktx",
+      "version": "6\\.\\+"
+    },
+    {
+      "expires": "2023-10-31",
+      "group": "com\\.mercadolibre\\.android\\.tfs_commons",
       "name": "mvp",
       "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.tfs_commons",
+      "name": "mvp",
+      "version": "6\\.\\+"
+    },
+    {
+      "expires": "2023-10-31",
+      "group": "com\\.mercadolibre\\.android\\.tfs_commons",
       "name": "errorhandler",
       "version": "5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.tfs_commons",
+      "name": "errorhandler",
+      "version": "6\\.\\+"
     },
     {
       "group": "com\\.smartlook\\.recording",
@@ -3004,8 +3029,13 @@
       "version": "2\\.3\\.0"
     },
     {
+      "expires": "2023-10-31",
       "group": "com\\.mercadolibre\\.android\\.seller_home_section",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.seller_home_section",
+      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.hub_seller",
