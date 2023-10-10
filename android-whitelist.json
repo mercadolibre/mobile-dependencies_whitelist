@@ -1372,18 +1372,18 @@
       "version": "7\\.+"
     },
     {
-      "group": "com\\.mercadolibre\\.android\\.flow_mpoc",
+      "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
       "name": "mpoc",
       "version": "0\\.+"
     },
     {
-      "group": "com\\.mercadolibre\\.android\\.flow_mpoc",
+      "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
       "name": "mypinpad",
       "version": "0\\.+"
     },
     {
-      "group": "com\\.mercadolibre\\.android\\.flow_mpoc",
-      "name": "inhouse",
+      "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
+      "name": "payment",
       "version": "0\\.+"
     },
     {
@@ -1395,6 +1395,11 @@
       "group": "com\\.mercadolibre\\.mpos\\.android\\.sdk_mpp",
       "name": "mpp-release",
       "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadopago\\.android\\.isp\\.payment_contactless",
+      "name": "sdk",
+      "version": "0\\.+"
     },
     {
       "group": "com\\.polidea\\.rxandroidble2",
