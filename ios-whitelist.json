@@ -1709,6 +1709,7 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "expires": "2024-02-12",
       "name": "AppMonitoring",
       "source": "private",
       "target": "production",
