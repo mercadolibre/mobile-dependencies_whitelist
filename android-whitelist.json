@@ -37,6 +37,10 @@
       "version": "5\\.+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.home",
+      "version": "13\\.+"
+    },
+    {
       "expires": "2023-10-17",
       "group": "com\\.mercadolibre\\.android",
       "name": "viewability",
@@ -762,9 +766,16 @@
       "version": "3\\.\\+"
     },
     {
+      "description": "This library will be deprecated after the migration to Kotlin 1.8, new version 4.0.0 will be enabled",
+      "expires": "2023-10-31",
       "group": "com\\.mercadolibre\\.android\\.credits\\.toolkit",
       "name": "toolkit",
       "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.credits\\.toolkit",
+      "name": "toolkit",
+      "version": "4\\.\\+"
     },
     {
       "expires": "2023-10-31",
@@ -772,18 +783,20 @@
       "version": "5\\.\\+"
     },
     {
-      "group": "com\\.mercadolibre\\.android\\.credits\\.behaviour",
-      "version": "6\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.cross_app_links",
       "name": "core",
       "version": "mercadolibre-7\\.\\+|mercadopago-7\\.\\+"
     },
     {
+      "expires": "2023-10-31",
       "group": "com\\.mercadolibre\\.android\\.charts",
       "name": "melicharts",
       "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.charts",
+      "name": "melicharts",
+      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.classifieds",
@@ -977,18 +990,6 @@
       "version": "7\\.\\+"
     },
     {
-      "expires": "2023-10-06",
-      "group": "com\\.mercadolibre\\.android\\.navigationcp",
-      "name": "navigationcp",
-      "version": "10\\.\\+"
-    },
-    {
-      "expires": "2023-10-06",
-      "group": "com\\.mercadolibre\\.android\\.navigationcp",
-      "name": "shipping-address",
-      "version": "10\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.navigationcp",
       "name": "navigationcp",
       "version": "11\\.\\+"
@@ -1082,12 +1083,6 @@
       "version": "11\\.\\+"
     },
     {
-      "expires": "2023-09-30",
-      "group": "com\\.mercadolibre\\.android\\.risk_management",
-      "name": "riskmanagement",
-      "version": "3\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.risk_management",
       "name": "riskmanagement",
       "version": "4\\.\\+"
@@ -1164,12 +1159,6 @@
     {
       "group": "com\\.mercadolibre\\.android\\.mlwebkit",
       "version": "7.\\+"
-    },
-    {
-      "expires": "2023-10-06",
-      "group": "com\\.mercadolibre\\.android\\.uinavigationcp",
-      "name": "addresshub",
-      "version": "9\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.uinavigationcp",
@@ -1311,9 +1300,15 @@
       "version": "5\\.\\+"
     },
     {
+      "expires": "2023-10-31",
       "group": "com\\.mercadopago\\.android\\.ml_esc_manager",
       "name": "ml_esc_manager",
       "version": "mercadopago-6\\.\\+|mercadolibre-6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadopago\\.android\\.ml_esc_manager",
+      "name": "ml_esc_manager",
+      "version": "mercadopago-7\\.\\+|mercadolibre-7\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.multiplayer",
@@ -1395,18 +1390,18 @@
       "version": "7\\.+"
     },
     {
-      "group": "com\\.mercadolibre\\.android\\.flow_mpoc",
+      "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
       "name": "mpoc",
       "version": "0\\.+"
     },
     {
-      "group": "com\\.mercadolibre\\.android\\.flow_mpoc",
+      "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
       "name": "mypinpad",
       "version": "0\\.+"
     },
     {
-      "group": "com\\.mercadolibre\\.android\\.flow_mpoc",
-      "name": "inhouse",
+      "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
+      "name": "payment",
       "version": "0\\.+"
     },
     {
@@ -1418,6 +1413,11 @@
       "group": "com\\.mercadolibre\\.mpos\\.android\\.sdk_mpp",
       "name": "mpp-release",
       "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadopago\\.android\\.isp\\.payment_contactless",
+      "name": "sdk",
+      "version": "0\\.+"
     },
     {
       "group": "com\\.polidea\\.rxandroidble2",
@@ -2858,9 +2858,15 @@
       "version": "2\\.+"
     },
     {
+      "expires": "2023-10-31",
       "group": "com\\.mercadolibre\\.android\\.ccap",
       "name": "congrats-sdk",
       "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.ccap",
+      "name": "congrats-sdk",
+      "version": "2\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.ccap",
@@ -3131,26 +3137,20 @@
       "version": "2\\.\\+"
     },
     {
-      "expires": "2023-12-31",
-      "group": "com\\.mercadolibre\\.android\\.ccap",
-      "name": "smart-tokenization",
-      "version": "1\\.+"
-    },
-    {
+      "expires": "2023-10-31",
       "group": "com\\.mercadolibre\\.android\\.ccap",
       "name": "smart-tokenization",
       "version": "2\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.ccap",
-      "name": "secure-inputs",
-      "version": "1\\.+"
+      "name": "smart-tokenization",
+      "version": "3\\.+"
     },
     {
-      "expires": "2023-10-08",
-      "group": "com\\.mercadolibre\\.android\\.app_monitoring",
-      "name": "setup",
-      "version": "0\\.\\+"
+      "group": "com\\.mercadolibre\\.android\\.ccap",
+      "name": "secure-inputs",
+      "version": "1\\.+"
     },
     {
       "expires": "2024-01-22",
@@ -3162,12 +3162,6 @@
       "group": "com\\.mercadolibre\\.android\\.app_monitoring",
       "name": "setup",
       "version": "2\\.\\+"
-    },
-    {
-      "expires": "2023-10-08",
-      "group": "com\\.mercadolibre\\.android\\.app_monitoring",
-      "name": "core",
-      "version": "0\\.\\+"
     },
     {
       "expires": "2024-01-22",
@@ -3236,7 +3230,7 @@
       "version": "3\\.+"
     },
     {
-      "expires": "2023-10-10",
+      "expires": "2023-10-27",
       "group": "com\\.mercadolibre\\.android\\.errorhandler\\.v2",
       "name": "core",
       "version": "production-1\\.\\+"
