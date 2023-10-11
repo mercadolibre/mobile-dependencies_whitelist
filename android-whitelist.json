@@ -3353,6 +3353,7 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2023-12-1",
       "description": "This PTM library is used to schedule alarms that trigger job executions",
       "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
       "name": "qualified-alarm",
@@ -3430,6 +3431,7 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2023-12-1",
       "description": "Android library used to access connection data and measure api execution time.",
       "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
       "name": "connectivity",
@@ -3442,6 +3444,7 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2023-12-1",
       "description": "Android library used to easily send integrate metrics to PTM.",
       "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
       "name": "event",
@@ -3454,6 +3457,7 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2023-12-1",
       "description": "Android library used to facilitate development.",
       "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
       "name": "stdlib-ktx",
@@ -3466,6 +3470,7 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2023-12-1",
       "description": "Android library used to easily integrate async Android services.",
       "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
       "name": "android-service",
