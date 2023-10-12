@@ -1751,9 +1751,16 @@
       "version": "7\\.\\+"
     },
     {
+      "description": "Deprecated due to Kotlin Migration. Use 3.+ instead.",
+      "expires": "2023-11-01",
       "group": "com\\.mercadolibre\\.android\\.andes_integrations",
       "name": "integrations",
       "version": "mercadopago-2\\.\\+|mercadolibre-2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.andes_integrations",
+      "name": "integrations",
+      "version": "mercadopago-3\\.\\+|mercadolibre-3\\.\\+"
     },
     {
       "description": "Deprecated due to Kotlin Migration. Use 6.+ instead.",
