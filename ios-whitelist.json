@@ -1598,6 +1598,12 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "NavigationRouter",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "SwiftNIO",
       "source": "public",
       "target": "production",
