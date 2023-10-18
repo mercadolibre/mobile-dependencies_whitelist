@@ -7,17 +7,16 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "expires": "2023-09-30",
-      "name": "Viewability",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?0.[0-9]+"
-    },
-    {
       "name": "Viewability",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLHome",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?5.[0-9]+$"
     },
     {
       "name": "AdvertisingADN",
@@ -391,6 +390,12 @@
     },
     {
       "name": "MLAuthentication",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+"
+    },
+    {
+      "name": "AuthScopedSession",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+"
@@ -930,13 +935,6 @@
       "version": "0.1.5"
     },
     {
-      "expires": "2023-09-30",
-      "name": "Realm",
-      "source": "private",
-      "target": "production",
-      "version": "2.10.0"
-    },
-    {
       "name": "Realm",
       "source": "public",
       "target": "production",
@@ -995,13 +993,6 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "expires": "2023-09-30",
-      "name": "MPContacts",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?4.[0-9]+$"
     },
     {
       "name": "MPContacts",
@@ -1607,6 +1598,12 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "NavigationRouter",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "SwiftNIO",
       "source": "public",
       "target": "production",
@@ -1724,10 +1721,17 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "expires": "2024-01-12",
       "name": "AppMonitoring",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "AppMonitoring",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "expires": "2023-10-20",
@@ -1907,6 +1911,12 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "name": "PerformanceTraces",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
     }
   ]
 }
