@@ -1470,6 +1470,12 @@
       "version": "6.3.1"
     },
     {
+      "name": "MLRichNotifications",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "MercadoCoin",
       "source": "private",
       "target": "production",
@@ -1914,6 +1920,12 @@
     },
     {
       "name": "PerformanceTraces",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "Wishlists",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
