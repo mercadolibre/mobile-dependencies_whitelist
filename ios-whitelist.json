@@ -1740,6 +1740,12 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
+      "name": "AppMonitoringSetup",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
       "expires": "2023-10-20",
       "name": "DatadogSDK",
       "source": "public",
