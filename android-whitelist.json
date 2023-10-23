@@ -2766,22 +2766,40 @@
       "version": "4\\.+"
     },
     {
-      "expires": "2023-11-13",
+      "expires": "2023-10-30",
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "scanner",
-      "version": "mercadolibre-11\\.\\+|mercadopago-11\\.\\+"
+      "version": "mercadopago-11\\.+"
     },
     {
-      "expires": "2023-11-13",
+      "expires": "2023-10-30",
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "ocr",
-      "version": "mercadolibre-11\\.\\+|mercadopago-11\\.\\+"
+      "version": "mercadopago-11\\.+"
     },
     {
-      "expires": "2023-11-13",
+      "expires": "2023-10-30",
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "barcode",
-      "version": "mercadolibre-11\\.\\+|mercadopago-11\\.\\+"
+      "version": "mercadopago-11\\.+"
+    },
+    {
+      "expires": "2023-12-11",
+      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
+      "name": "scanner",
+      "version": "mercadolibre-11\\.+"
+    },
+    {
+      "expires": "2023-12-11",
+      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
+      "name": "ocr",
+      "version": "mercadolibre-11\\.+"
+    },
+    {
+      "expires": "2023-12-11",
+      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
+      "name": "barcode",
+      "version": "mercadolibre-11\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
