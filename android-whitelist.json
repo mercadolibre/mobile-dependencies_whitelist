@@ -1671,7 +1671,8 @@
       "version": "mercadolibre-7\\.\\+|mercadopago-7\\.\\+"
     },
     {
-      "expires": "2023-12-31",
+      "description": "Deprecated due to kotlin 1.8 migration. Use version 5.+",
+      "expires": "2023-10-31",
       "group": "com\\.mercadolibre\\.android",
       "name": "cardform",
       "version": "4\\.+"
