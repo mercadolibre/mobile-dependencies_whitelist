@@ -1931,13 +1931,13 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "name": "Wishlists",
+      "name": "PerformanceTracesConfig",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "name": "PerformanceTracesConfig",
+      "name": "Wishlists",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
