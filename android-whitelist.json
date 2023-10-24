@@ -720,9 +720,16 @@
       "version": "5\\.\\+"
     },
     {
+      "description": "This library will be deprecated after the migration to Kotlin 1.8, new version 4.0.0 is ready",
+      "expires": "2023-11-17",
       "group": "com\\.mercadolibre\\.android\\.credits\\.floxclient",
       "name": "core",
       "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.credits\\.floxclient",
+      "name": "core",
+      "version": "4\\.\\+"
     },
     {
       "description": "This library will be deprecated after the migration to Kotlin 1.8, new version 4.0.0 will be enabled",
