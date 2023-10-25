@@ -37,14 +37,9 @@
       "version": "5\\.+"
     },
     {
-      "group": "com\\.mercadolibre\\.android\\.home",
-      "version": "13\\.+"
-    },
-    {
-      "expires": "2023-10-17",
       "group": "com\\.mercadolibre\\.android",
-      "name": "viewability",
-      "version": "2\\.+"
+      "name": "home",
+      "version": "13\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -171,12 +166,6 @@
       "version": "1\\.+"
     },
     {
-      "expires": "2023-10-21",
-      "group": "com\\.mercadolibre\\.android\\.buyingflow",
-      "name": "checkout_flow",
-      "version": "1\\.\\+"
-    },
-    {
       "expires": "2023-12-25",
       "group": "com\\.mercadolibre\\.android\\.buyingflow",
       "name": "checkout_flow",
@@ -188,12 +177,6 @@
       "version": "3\\.\\+"
     },
     {
-      "expires": "2023-10-21",
-      "group": "com\\.mercadolibre\\.android\\.buyingflow",
-      "name": "shipping_flow",
-      "version": "1\\.\\+"
-    },
-    {
       "expires": "2023-12-25",
       "group": "com\\.mercadolibre\\.android\\.buyingflow",
       "name": "shipping_flow",
@@ -202,12 +185,6 @@
     {
       "group": "com\\.mercadolibre\\.android\\.buyingflow",
       "name": "shipping_flow",
-      "version": "3\\.\\+"
-    },
-    {
-      "expires": "2023-10-21",
-      "group": "com\\.mercadolibre\\.android\\.smart_coupons",
-      "name": "coupons",
       "version": "3\\.\\+"
     },
     {
@@ -709,15 +686,15 @@
       "version": "14\\.\\+"
     },
     {
+      "expires": "2023-11-27",
       "group": "com\\.mercadolibre\\.android\\.bookmarks",
       "name": "bookmarks",
       "version": "7\\.\\+"
     },
     {
-      "expires": "2023-10-21",
-      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.flox\\.components",
-      "name": "core",
-      "version": "9\\.\\+"
+      "group": "com\\.mercadolibre\\.android\\.bookmarks",
+      "name": "bookmarks",
+      "version": "8\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.flox\\.components",
@@ -735,18 +712,6 @@
       "version": "mercadolibre-16\\.\\+|mercadopago-16\\.\\+"
     },
     {
-      "expires": "2023-10-21",
-      "group": "com\\.mercadolibre\\.android\\.cart",
-      "name": "manager",
-      "version": "mercadolibre-13\\.\\+|mercadopago-13\\.\\+"
-    },
-    {
-      "expires": "2023-10-21",
-      "group": "com\\.mercadolibre\\.android\\.cart",
-      "name": "cart",
-      "version": "mercadolibre-15\\.\\+|mercadopago-15\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.purchases",
       "name": "purchases",
       "version": "3\\.\\+"
@@ -761,9 +726,16 @@
       "version": "5\\.\\+"
     },
     {
+      "description": "This library will be deprecated after the migration to Kotlin 1.8, new version 4.0.0 is ready",
+      "expires": "2023-11-17",
       "group": "com\\.mercadolibre\\.android\\.credits\\.floxclient",
       "name": "core",
       "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.credits\\.floxclient",
+      "name": "core",
+      "version": "4\\.\\+"
     },
     {
       "description": "This library will be deprecated after the migration to Kotlin 1.8, new version 4.0.0 will be enabled",
@@ -1030,8 +1002,13 @@
       "version": "9\\.\\+"
     },
     {
+      "expires": "2023-11-27",
       "group": "com\\.mercadolibre\\.android\\.recommendations",
       "version": "15\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.recommendations",
+      "version": "16\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.remedies",
@@ -1064,12 +1041,6 @@
       "group": "com\\.mercadolibre\\.android\\.remedy",
       "name": "remedy",
       "version": "mercadopago-6\\.\\+|mercadolibre-6\\.\\+"
-    },
-    {
-      "expires": "2023-10-21",
-      "group": "com\\.mercadolibre\\.android\\.rule\\.engine",
-      "name": "rule\\-engine",
-      "version": "9\\.\\+"
     },
     {
       "expires": "2023-12-25",
@@ -1266,23 +1237,9 @@
       "version": "7\\.\\+"
     },
     {
-      "description": "This library will be deprecated by upgrade of kotlin 1.8",
-      "expires": "2023-10-20",
-      "group": "com\\.mercadolibre\\.android\\.dami_ui_components",
-      "name": "ui_components",
-      "version": "3\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.dami_ui_components",
       "name": "ui_components",
       "version": "4\\.\\+"
-    },
-    {
-      "description": "This library will be deprecated by upgrade of kotlin 1.8",
-      "expires": "2023-10-20",
-      "group": "com\\.mercadolibre\\.android\\.dami_ui_components",
-      "name": "base_testapp",
-      "version": "3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.dami_ui_components",
@@ -1726,7 +1683,8 @@
       "version": "mercadolibre-7\\.\\+|mercadopago-7\\.\\+"
     },
     {
-      "expires": "2023-12-31",
+      "description": "Deprecated due to kotlin 1.8 migration. Use version 5.+",
+      "expires": "2023-10-31",
       "group": "com\\.mercadolibre\\.android",
       "name": "cardform",
       "version": "4\\.+"
@@ -2345,6 +2303,12 @@
       "group": "com\\.mercadolibre\\.android\\.devices_sdk",
       "name": "devices",
       "version": "5\\.\\+"
+    },
+    {
+      "expires": "2023-12-31",
+      "group": "com\\.mercadolibre\\.android\\.behavioral_sdk",
+      "name": "behavioral",
+      "version": "1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.behavioral_sdk",
@@ -3040,9 +3004,15 @@
       "version": "5\\.+"
     },
     {
+      "expires": "2023-11-27",
       "group": "com\\.mercadolibre\\.android\\.ml_cards",
       "name": "core",
       "version": "3\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.ml_cards",
+      "name": "core",
+      "version": "4\\.+"
     },
     {
       "group": "com\\.bitmovin\\.player",
@@ -3326,12 +3296,6 @@
       "group": "com\\.facebook\\.stetho",
       "name": "stetho-okhttp3",
       "version": "1\\.5\\.\\1"
-    },
-    {
-      "expires": "2023-10-20",
-      "group": "com\\.mercadolibre\\.android\\.xprod\\.modules",
-      "name": "webview",
-      "version": "0\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.xprod\\.modules",
