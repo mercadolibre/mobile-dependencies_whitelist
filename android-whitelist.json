@@ -1707,9 +1707,15 @@
       "version": "5\\.+"
     },
     {
+      "expires": "2023-12-01",
       "group": "com\\.mercadolibre\\.android\\.insu_flox_components",
       "name": "floxcomponents",
       "version": "mercadolibre-8\\.\\+|mercadopago-8\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.insu_flox_components",
+      "name": "floxcomponents",
+      "version": "mercadolibre-9\\.\\+|mercadopago-9\\.\\+"
     },
     {
       "expires": "2023-12-01",
