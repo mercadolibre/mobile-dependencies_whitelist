@@ -3212,9 +3212,15 @@
       "version": "2\\.\\+"
     },
     {
+      "expires": "2024-02-01",
       "group": "com\\.datadoghq",
       "name": "dd-sdk-android-gradle-plugin",
       "version": "1\\.7\\.0"
+    },
+    {
+      "group": "com\\.datadoghq",
+      "name": "dd-sdk-android-gradle-plugin",
+      "version": "1\\.12\\.0"
     },
     {
       "group": "com\\.datadoghq",
