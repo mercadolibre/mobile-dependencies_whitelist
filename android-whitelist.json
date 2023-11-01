@@ -818,9 +818,15 @@
       "version": "9\\.\\+"
     },
     {
+      "expires": "2023-12-01",
       "group": "com\\.mercadolibre\\.android\\.fluxclient",
       "name": "flux-client",
       "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.fluxclient",
+      "name": "flux-client",
+      "version": "8\\.\\+"
     },
     {
       "expires": "2023-12-01",
@@ -3094,6 +3100,11 @@
       "group": "com\\.mercadolibre\\.android\\.point_bill_payment",
       "name": "point_billpayment",
       "version": "2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_remote_config",
+      "name": "point_remote_config",
+      "version": "0\\.\\+"
     },
     {
       "expires": "2023-10-30",
