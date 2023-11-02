@@ -3554,6 +3554,11 @@
       "group": "com\\.mercadolibre\\.android\\.mobile_permissions",
       "name": "permissions",
       "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_integration_sdk",
+      "name": "nativesdk",
+      "version": "miniapp-2\\.+"
     }
   ]
 }
