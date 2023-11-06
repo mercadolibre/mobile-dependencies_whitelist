@@ -7,17 +7,16 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "expires": "2023-09-30",
-      "name": "Viewability",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?0.[0-9]+"
-    },
-    {
       "name": "Viewability",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLHome",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?5.[0-9]+$"
     },
     {
       "name": "AdvertisingADN",
@@ -391,6 +390,12 @@
     },
     {
       "name": "MLAuthentication",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+"
+    },
+    {
+      "name": "AuthScopedSession",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+"
@@ -930,13 +935,6 @@
       "version": "0.1.5"
     },
     {
-      "expires": "2023-09-30",
-      "name": "Realm",
-      "source": "private",
-      "target": "production",
-      "version": "2.10.0"
-    },
-    {
       "name": "Realm",
       "source": "public",
       "target": "production",
@@ -995,13 +993,6 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "expires": "2023-09-30",
-      "name": "MPContacts",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?4.[0-9]+$"
     },
     {
       "name": "MPContacts",
@@ -1466,17 +1457,16 @@
       "version": "^~>\\s?1.[0-9]+"
     },
     {
-      "expires": "2023-10-30",
-      "name": "Appboy-iOS-SDK/Core",
-      "source": "public",
-      "target": "production",
-      "version": "^~>4.5.[0-9]+$"
-    },
-    {
       "name": "BrazeKitCompat",
       "source": "public",
       "target": "production",
       "version": "6.3.1"
+    },
+    {
+      "name": "MLRichNotifications",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MercadoCoin",
@@ -1607,6 +1597,12 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "NavigationRouter",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "SwiftNIO",
       "source": "public",
       "target": "production",
@@ -1667,7 +1663,7 @@
       "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
     },
     {
-      "description": "This version will be deprecated in favor of version 5.0.0 on 2023-12-31",
+      "description": "This version will be deprecated in favor of version 6.0.0 on 2023-12-31",
       "expires": "2023-12-31",
       "name": "MLCardForm",
       "source": "private",
@@ -1678,7 +1674,7 @@
       "name": "MLCardForm",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?5.[0-9]+$"
+      "version": "^~>\\s?6.[0-9]+$"
     },
     {
       "name": "SellerHomeSection",
@@ -1724,50 +1720,73 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "expires": "2024-01-12",
       "name": "AppMonitoring",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "expires": "2023-10-20",
-      "name": "DatadogSDK",
-      "source": "public",
+      "name": "AppMonitoring",
+      "source": "private",
       "target": "production",
-      "version": "^~>\\s?(1.16.0)$"
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
-      "expires": "2023-10-20",
-      "name": "DatadogSDKCrashReporting",
-      "source": "public",
+      "name": "AppMonitoringSetup",
+      "source": "private",
       "target": "production",
-      "version": "^~>\\s?(1.16.0)$"
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "expires": "2023-10-20",
-      "name": "DatadogSDK",
-      "source": "public",
-      "target": "production",
-      "version": "1.21.0"
-    },
-    {
-      "expires": "2023-10-20",
-      "name": "DatadogSDKCrashReporting",
-      "source": "public",
-      "target": "production",
-      "version": "1.21.0"
-    },
-    {
+      "expires": "2024-01-12",
       "name": "DatadogSDK",
       "source": "public",
       "target": "production",
       "version": "1.23.0"
     },
     {
+      "name": "DatadogInternal",
+      "source": "public",
+      "target": "production",
+      "version": "2.4.0"
+    },
+    {
+      "name": "DatadogCore",
+      "source": "public",
+      "target": "production",
+      "version": "2.4.0"
+    },
+    {
+      "name": "DatadogRUM",
+      "source": "public",
+      "target": "production",
+      "version": "2.4.0"
+    },
+    {
+      "name": "DatadogLogs",
+      "source": "public",
+      "target": "production",
+      "version": "2.4.0"
+    },
+    {
+      "name": "DatadogTrace",
+      "source": "public",
+      "target": "production",
+      "version": "2.4.0"
+    },
+    {
+      "expires": "2024-01-12",
       "name": "DatadogSDKCrashReporting",
       "source": "public",
       "target": "production",
       "version": "1.23.0"
+    },
+    {
+      "name": "DatadogCrashReporting",
+      "source": "public",
+      "target": "production",
+      "version": "2.4.0"
     },
     {
       "name": "Dogfooding",
@@ -1881,7 +1900,7 @@
       "name": "BuyingflowPayment",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "PortableWidget",
@@ -1900,6 +1919,24 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "name": "PerformanceTraces",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "PerformanceTracesConfig",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "Wishlists",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
     }
   ]
 }
