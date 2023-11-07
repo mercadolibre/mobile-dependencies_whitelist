@@ -715,9 +715,15 @@
       "version": "8\\.\\+"
     },
     {
+      "expires": "2024-01-02",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.flox\\.components",
       "name": "core",
       "version": "10\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.flox\\.components",
+      "name": "core",
+      "version": "11\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cart",
@@ -1227,6 +1233,11 @@
       "group": "com\\.mercadolibre\\.android\\.px",
       "name": "usdk",
       "version": "6\\.5\\.52"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.px",
+      "name": "pmselector",
+      "version": "1\\.+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.sdk",
@@ -2842,9 +2853,15 @@
       "version": "2\\.\\+"
     },
     {
+      "expires": "2024-02-05",
       "group": "com\\.datadoghq",
       "name": "dd-sdk-android-gradle-plugin",
       "version": "1\\.7\\.0"
+    },
+    {
+      "group": "com\\.datadoghq",
+      "name": "dd-sdk-android-gradle-plugin",
+      "version": "1\\.12\\.0"
     },
     {
       "group": "com\\.datadoghq",
