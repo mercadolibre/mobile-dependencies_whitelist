@@ -1059,9 +1059,15 @@
       "version": "18\\.\\+"
     },
     {
+      "expires": "2023-11-14",
       "group": "com\\.mercadolibre\\.android\\.eshops",
       "name": "components",
       "version": "2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.eshops",
+      "name": "components",
+      "version": "3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.security",
@@ -2365,29 +2371,59 @@
       "version": "dev-6\\.\\+|a910-6\\.\\+|d20-6\\.\\+|n950-6\\.\\+|6\\.\\+"
     },
     {
+      "expires": "2024-02-09",
       "group": "com\\.mercadolibre\\.android\\.point_printer",
       "name": "core",
       "version": "4\\.+"
     },
     {
+      "expires": "2024-02-09",
       "group": "com\\.mercadolibre\\.android\\.point_printer",
       "name": "renderer",
       "version": "4\\.+"
     },
     {
+      "expires": "2024-02-09",
       "group": "com\\.mercadolibre\\.android\\.point_printer",
       "name": "controller_a910",
       "version": "4\\.+"
     },
     {
+      "expires": "2024-02-09",
       "group": "com\\.mercadolibre\\.android\\.point_printer",
       "name": "controller_d20",
       "version": "4\\.+"
     },
     {
+      "expires": "2024-02-09",
       "group": "com\\.mercadolibre\\.android\\.point_printer",
       "name": "controller_n950",
       "version": "4\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_printer",
+      "name": "core",
+      "version": "5\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_printer",
+      "name": "renderer",
+      "version": "5\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_printer",
+      "name": "controller_a910",
+      "version": "5\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_printer",
+      "name": "controller_d20",
+      "version": "5\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_printer",
+      "name": "controller_n950",
+      "version": "5\\.+"
     },
     {
       "expires": "2023-12-11",
@@ -2727,6 +2763,11 @@
       "group": "com\\.mercadolibre\\.android\\.clips",
       "name": "clips",
       "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.fbm\\.wms\\.hardware\\.aar",
+      "name": "honeywell",
+      "version": "1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.fbm\\.wms\\.hardware",
