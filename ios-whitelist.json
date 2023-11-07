@@ -1746,16 +1746,54 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "expires": "2024-01-12",
       "name": "DatadogSDK",
       "source": "public",
       "target": "production",
       "version": "1.23.0"
     },
     {
+      "name": "DatadogInternal",
+      "source": "public",
+      "target": "production",
+      "version": "2.4.0"
+    },
+    {
+      "name": "DatadogCore",
+      "source": "public",
+      "target": "production",
+      "version": "2.4.0"
+    },
+    {
+      "name": "DatadogRUM",
+      "source": "public",
+      "target": "production",
+      "version": "2.4.0"
+    },
+    {
+      "name": "DatadogLogs",
+      "source": "public",
+      "target": "production",
+      "version": "2.4.0"
+    },
+    {
+      "name": "DatadogTrace",
+      "source": "public",
+      "target": "production",
+      "version": "2.4.0"
+    },
+    {
+      "expires": "2024-01-12",
       "name": "DatadogSDKCrashReporting",
       "source": "public",
       "target": "production",
       "version": "1.23.0"
+    },
+    {
+      "name": "DatadogCrashReporting",
+      "source": "public",
+      "target": "production",
+      "version": "2.4.0"
     },
     {
       "name": "Dogfooding",
