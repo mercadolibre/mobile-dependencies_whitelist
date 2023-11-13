@@ -1135,14 +1135,28 @@
       "version": "8\\.\\+"
     },
     {
+      "description": "Esta libs se encuentra deprecada, por cuenta de la migración al kotlin 1.8",
+      "expires": "2023-12-08",
       "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
       "name": "api",
       "version": "4\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
+      "name": "api",
+      "version": "5\\.\\+"
+    },
+    {
+      "description": "Esta libs se encuentra deprecada, por cuenta de la migración al kotlin 1.8",
+      "expires": "2023-12-08",
       "group": "com\\.mercadolibre\\.android\\.home\\.toolkit",
       "name": "core",
       "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.home\\.toolkit",
+      "name": "core",
+      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
@@ -2694,7 +2708,7 @@
     {
       "group": "com\\.bitmovin\\.player",
       "name": "player",
-      "version": "3\\.40\\.0"
+      "version": "3\\.43\\.0"
     },
     {
       "group": "com\\.google\\.ads\\.interactivemedia.\\v3",
