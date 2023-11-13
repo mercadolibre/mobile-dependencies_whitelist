@@ -3196,6 +3196,17 @@
       "group": "com\\.mercadolibre\\.android\\.point_integration_sdk",
       "name": "nativesdk",
       "version": "miniapp-2\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.performance\\.traces",
+      "name": "api",
+      "version": "1\\.\\+"
+    },
+    ,
+    {
+      "group": "com\\.mercadolibre\\.android\\.performance\\.traces",
+      "name": "providers",
+      "version": "1\\.\\+"
     }
   ]
 }
