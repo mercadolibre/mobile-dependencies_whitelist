@@ -1940,6 +1940,12 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "name": "SplashScreen",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
       "name": "Wishlists",
       "source": "private",
       "target": "production",
