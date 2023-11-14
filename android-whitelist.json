@@ -809,8 +809,14 @@
       "version": "6\\.\\+"
     },
     {
+      "description": "Esta libs se encuentra deprecada, por cuenta de la migración al kotlin 1.8",
+      "expires": "2023-12-14",
       "group": "com\\.mercadolibre\\.android\\.instore_ui_components",
       "version": "7\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.instore_ui_components",
+      "version": "8\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.flox",
@@ -1593,9 +1599,16 @@
       "version": "mercadolibre-8\\.\\+|mercadopago-8\\.\\+"
     },
     {
+      "description": "Esta libs se encuentra deprecada, por cuenta de la migración al kotlin 1.8",
+      "expires": "2023-12-08",
       "group": "com\\.mercadolibre\\.android\\.mlbusinesscomponents",
       "name": "mlbusinesscomponents",
       "version": "4\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.mlbusinesscomponents",
+      "name": "mlbusinesscomponents",
+      "version": "5\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
