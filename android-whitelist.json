@@ -3209,6 +3209,16 @@
       "group": "com\\.mercadolibre\\.android\\.point_integration_sdk",
       "name": "nativesdk",
       "version": "miniapp-2\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.isp_bluetooth_tools",
+      "name": "core",
+      "version": "1\\.0\\.0"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.isp_bluetooth_tools",
+      "name": "ui_settings",
+      "version": "1\\.0\\.0"
     }
   ]
 }
