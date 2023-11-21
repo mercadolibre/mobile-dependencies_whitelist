@@ -1941,7 +1941,7 @@
       "name": "BillPayments",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?5.+"
+      "version": "^~>\\s?5.[0-9]+$"
     }
   ]
 }
