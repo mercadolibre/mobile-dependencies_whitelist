@@ -1938,10 +1938,10 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "name": "BillPayments",
+      "name": "bill-payments",
       "source": "private",
       "target": "production",
-      "version": "18\\.+"
+      "version": "^~>\\s?5.[0-9]+$"
     }
   ]
 }
