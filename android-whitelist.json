@@ -756,13 +756,6 @@
       "version": "5\\.\\+"
     },
     {
-      "description": "This library will be deprecated after the migration to Kotlin 1.8, new version 4.0.0 is ready",
-      "expires": "2023-11-17",
-      "group": "com\\.mercadolibre\\.android\\.credits\\.floxclient",
-      "name": "core",
-      "version": "3\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.credits\\.floxclient",
       "name": "core",
       "version": "4\\.\\+"
@@ -798,12 +791,6 @@
     {
       "group": "com\\.mercadolibre\\.android\\.remote\\.configuration",
       "version": "7\\.\\+"
-    },
-    {
-      "expires": "2023-11-17",
-      "group": "com\\.mercadolibre\\.android\\.cpg",
-      "name": "ui_components",
-      "version": "8\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cpg",
@@ -1118,12 +1105,6 @@
       "group": "com\\.mercadolibre\\.android\\.uinavigationcp",
       "name": "addresshub",
       "version": "10\\.\\+"
-    },
-    {
-      "expires": "2023-11-17",
-      "group": "com\\.mercadolibre\\.android\\.variations",
-      "name": "variations",
-      "version": "8\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.variations",
