@@ -42,9 +42,15 @@
       "version": "13\\.+"
     },
     {
+      "expires": "2023-12-4",
       "group": "com\\.mercadolibre\\.android",
       "name": "viewability",
       "version": "3\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "viewability",
+      "version": "4\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.om",
@@ -756,13 +762,6 @@
       "version": "5\\.\\+"
     },
     {
-      "description": "This library will be deprecated after the migration to Kotlin 1.8, new version 4.0.0 is ready",
-      "expires": "2023-11-17",
-      "group": "com\\.mercadolibre\\.android\\.credits\\.floxclient",
-      "name": "core",
-      "version": "3\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.credits\\.floxclient",
       "name": "core",
       "version": "4\\.\\+"
@@ -798,12 +797,6 @@
     {
       "group": "com\\.mercadolibre\\.android\\.remote\\.configuration",
       "version": "7\\.\\+"
-    },
-    {
-      "expires": "2023-11-17",
-      "group": "com\\.mercadolibre\\.android\\.cpg",
-      "name": "ui_components",
-      "version": "8\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cpg",
@@ -989,6 +982,11 @@
       "version": "9\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.portable_widget",
+      "name": "portable_widget",
+      "version": "2\\.\\+"
+    },
+    {
       "expires": "2023-11-27",
       "group": "com\\.mercadolibre\\.android\\.recommendations",
       "version": "15\\.\\+"
@@ -1077,7 +1075,7 @@
       "version": "18\\.\\+"
     },
     {
-      "expires": "2023-11-14",
+      "expires": "2023-11-21",
       "group": "com\\.mercadolibre\\.android\\.eshops",
       "name": "components",
       "version": "2\\.\\+"
@@ -1124,12 +1122,6 @@
       "group": "com\\.mercadolibre\\.android\\.uinavigationcp",
       "name": "addresshub",
       "version": "10\\.\\+"
-    },
-    {
-      "expires": "2023-11-17",
-      "group": "com\\.mercadolibre\\.android\\.variations",
-      "name": "variations",
-      "version": "8\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.variations",
@@ -1658,9 +1650,15 @@
       "version": "mercadolibre-7\\.\\+|mercadopago-7\\.\\+"
     },
     {
+      "expires": "2023-12-31",
       "group": "com\\.mercadolibre\\.android",
       "name": "cardform",
       "version": "5\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "cardform",
+      "version": "6\\.+"
     },
     {
       "expires": "2023-12-01",
@@ -3222,6 +3220,11 @@
       "group": "com\\.mercadolibre\\.android\\.point_integration_sdk",
       "name": "nativesdk",
       "version": "miniapp-2\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.singleplayer",
+      "name": "billpayments",
+      "version": "18\\.+"
     }
   ]
 }
