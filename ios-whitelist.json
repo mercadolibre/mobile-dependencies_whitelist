@@ -1936,6 +1936,12 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "BillPayments",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?5.[0-9]+$"
     }
   ]
 }
