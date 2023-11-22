@@ -2620,14 +2620,26 @@
       "version": "1\\.46\\.+"
     },
     {
+      "expires": "2024-02-23",
       "group": "com\\.mercadolibre\\.android\\.opentelemetry",
       "name": "setup",
       "version": "5\\.+"
     },
     {
+      "expires": "2024-02-23",
       "group": "com\\.mercadolibre\\.android\\.opentelemetry",
       "name": "core",
       "version": "5\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.opentelemetry",
+      "name": "setup",
+      "version": "6\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.opentelemetry",
+      "name": "core",
+      "version": "6\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.braze",
