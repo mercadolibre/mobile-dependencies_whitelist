@@ -3303,6 +3303,16 @@
       "group": "com\\.mercadolibre\\.android\\.singleplayer",
       "name": "billpayment",
       "version": "18\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.performance\\.traces",
+      "name": "api",
+      "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.performance\\.traces",
+      "name": "providers",
+      "version": "1\\.\\+"
     }
   ]
 }
