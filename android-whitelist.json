@@ -3020,6 +3020,12 @@
       "version": "0\\.1\\.\\+"
     },
     {
+      "description": "This library is used for push-notification with mqtt",
+      "group": "com\\.gojek\\.courier",
+      "name": "alarm-pingsender",
+      "version": "0\\.1\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.performance_tools",
       "name": "leakcanary",
       "version": "1\\.\\+"
