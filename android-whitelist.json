@@ -3330,6 +3330,11 @@
       "group": "com\\.mercadolibre\\.android\\.performance\\.traces",
       "name": "providers",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "androidx\\.tracing",
+      "name": "tracing",
+      "version": "1\\.10\\.0"
     }
   ]
 }
