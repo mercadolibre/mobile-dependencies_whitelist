@@ -1905,7 +1905,7 @@
       "name": "MobilePermissions",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLEShops",
@@ -1942,6 +1942,12 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?5.[0-9]+$"
+    },
+    {
+      "name": "BehavioralSdk",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     }
   ]
 }

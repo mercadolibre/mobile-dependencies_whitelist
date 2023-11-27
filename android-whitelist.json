@@ -853,8 +853,13 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2024-01-01",
       "group": "com\\.mercadolibre\\.android\\.commons",
       "version": "30\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.commons",
+      "version": "31\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point\\.lot\\.management",
@@ -1003,9 +1008,15 @@
       "version": "3\\.\\+"
     },
     {
+      "expires": "2024-02-17",
       "group": "com\\.mercadolibre\\.android\\.metrics",
       "name": "metrics",
       "version": "7\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.metrics",
+      "name": "metrics",
+      "version": "9\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.navigationcp",
@@ -3017,6 +3028,12 @@
       "description": "This library is used for push-notification with mqtt",
       "group": "com\\.gojek\\.courier",
       "name": "workmanager-2\\.6\\.0-pingsender",
+      "version": "0\\.1\\.\\+"
+    },
+    {
+      "description": "This library is used for push-notification with mqtt",
+      "group": "com\\.gojek\\.courier",
+      "name": "alarm-pingsender",
       "version": "0\\.1\\.\\+"
     },
     {
