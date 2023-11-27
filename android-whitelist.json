@@ -26,12 +26,6 @@
       "version": "3\\.+"
     },
     {
-      "expires": "2023-11-26",
-      "group": "com\\.mercadolibre\\.android\\.advertising",
-      "name": "adn",
-      "version": "5\\.+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.advertising",
       "name": "adn",
       "version": "6\\.+"
@@ -63,12 +57,6 @@
       "version": "3\\.+"
     },
     {
-      "expires": "2023-11-21",
-      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
-      "name": "review",
-      "version": "8\\.\\+"
-    },
-    {
       "expires": "2023-12-19",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "review",
@@ -78,12 +66,6 @@
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "review",
       "version": "10\\.\\+"
-    },
-    {
-      "expires": "2023-11-21",
-      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
-      "name": "congrats",
-      "version": "8\\.\\+"
     },
     {
       "expires": "2023-12-19",
@@ -97,12 +79,6 @@
       "version": "10\\.\\+"
     },
     {
-      "expires": "2023-11-21",
-      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
-      "name": "integrator_sdk",
-      "version": "8\\.\\+"
-    },
-    {
       "expires": "2023-12-19",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "integrator_sdk",
@@ -112,12 +88,6 @@
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "integrator_sdk",
       "version": "10\\.\\+"
-    },
-    {
-      "expires": "2023-11-21",
-      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
-      "name": "one_tap",
-      "version": "8\\.\\+"
     },
     {
       "expires": "2023-12-19",
@@ -131,12 +101,6 @@
       "version": "10\\.\\+"
     },
     {
-      "expires": "2023-11-21",
-      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
-      "name": "payment",
-      "version": "8\\.\\+"
-    },
-    {
       "expires": "2023-12-19",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "payment",
@@ -146,12 +110,6 @@
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "payment",
       "version": "10\\.\\+"
-    },
-    {
-      "expires": "2023-11-21",
-      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
-      "name": "shipping",
-      "version": "8\\.\\+"
     },
     {
       "expires": "2023-12-19",
@@ -165,12 +123,6 @@
       "version": "10\\.\\+"
     },
     {
-      "expires": "2023-11-21",
-      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
-      "name": "billing_info",
-      "version": "8\\.\\+"
-    },
-    {
       "expires": "2023-12-19",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "billing_info",
@@ -182,12 +134,6 @@
       "version": "10\\.\\+"
     },
     {
-      "expires": "2023-11-21",
-      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
-      "name": "flow",
-      "version": "8\\.\\+"
-    },
-    {
       "expires": "2023-12-19",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "flow",
@@ -197,12 +143,6 @@
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "flow",
       "version": "10\\.\\+"
-    },
-    {
-      "expires": "2023-11-21",
-      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
-      "name": "split_payments",
-      "version": "8\\.\\+"
     },
     {
       "expires": "2023-12-19",
@@ -821,13 +761,6 @@
       "version": "6\\.\\+"
     },
     {
-      "description": "This library will be deprecated after the migration to Kotlin 1.8, new version 4.0.0 is ready",
-      "expires": "2023-11-17",
-      "group": "com\\.mercadolibre\\.android\\.credits\\.floxclient",
-      "name": "core",
-      "version": "3\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.credits\\.floxclient",
       "name": "core",
       "version": "4\\.\\+"
@@ -1111,12 +1044,6 @@
       "version": "11\\.\\+"
     },
     {
-      "expires": "2023-11-26",
-      "group": "com\\.mercadolibre\\.android\\.risk_management",
-      "name": "riskmanagement",
-      "version": "4\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.risk_management",
       "name": "riskmanagement",
       "version": "5\\.\\+"
@@ -1150,12 +1077,6 @@
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "search",
       "version": "18\\.\\+"
-    },
-    {
-      "expires": "2023-11-21",
-      "group": "com\\.mercadolibre\\.android\\.eshops",
-      "name": "components",
-      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.eshops",
