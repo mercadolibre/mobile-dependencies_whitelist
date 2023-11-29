@@ -1636,9 +1636,15 @@
       "version": "8\\.\\+"
     },
     {
+      "expires": "2023-12-24",
       "group": "com\\.mercadolibre\\.android\\.security",
       "name": "native_reauth",
       "version": "mercadopago-5\\.\\+|mercadolibre-5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.security",
+      "name": "native_reauth",
+      "version": "mercadopago-6\\.\\+|mercadolibre-6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.reauth_native_adapter",
