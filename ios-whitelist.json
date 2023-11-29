@@ -1331,6 +1331,12 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "name": "RequestWatcher",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "SPPSpirtech",
       "source": "private",
       "target": "production",
