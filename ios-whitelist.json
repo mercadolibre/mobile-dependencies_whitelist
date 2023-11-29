@@ -1451,6 +1451,12 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "CreditCardDuedate",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "HomeToolkit",
       "source": "private",
       "target": "production",
