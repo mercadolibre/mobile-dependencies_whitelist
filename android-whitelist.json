@@ -3192,6 +3192,16 @@
       "group": "com\\.mercadolibre\\.android\\.performance\\.traces",
       "name": "providers",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.isp_bluetooth_tools",
+      "name": "core",
+      "version": "1\\.0\\.0"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.isp_bluetooth_tools",
+      "name": "ui_settings",
+      "version": "1\\.0\\.0"
     }
   ]
 }
