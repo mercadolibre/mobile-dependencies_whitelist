@@ -501,12 +501,6 @@
       "version": "6\\.\\+"
     },
     {
-      "expires": "2023-12-01",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "login",
-      "version": "mercadopago-17\\.\\+|mercadolibre-17\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android",
       "name": "login",
       "version": "mercadopago-18\\.\\+|mercadolibre-18\\.\\+"
@@ -710,12 +704,6 @@
       "version": "14\\.\\+"
     },
     {
-      "expires": "2023-11-27",
-      "group": "com\\.mercadolibre\\.android\\.bookmarks",
-      "name": "bookmarks",
-      "version": "7\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.bookmarks",
       "name": "bookmarks",
       "version": "8\\.\\+"
@@ -750,11 +738,6 @@
       "group": "com\\.mercadolibre\\.android\\.purchases",
       "name": "experimentals",
       "version": "3\\.\\+"
-    },
-    {
-      "expires": "2023-12-01",
-      "group": "com\\.mercadolibre\\.android\\.credits\\.ui_components",
-      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.credits\\.ui_components",
@@ -833,32 +816,14 @@
       "version": "9\\.\\+"
     },
     {
-      "expires": "2023-12-01",
       "group": "com\\.mercadolibre\\.android\\.fluxclient",
       "name": "flux-client",
-      "version": "6\\.\\+"
-    },
-    {
-      "group": "com\\.mercadolibre\\.android\\.fluxclient",
-      "name": "flux-client",
-      "version": "8\\.\\+"
-    },
-    {
-      "expires": "2023-12-01",
-      "group": "com\\.mercadolibre\\.android\\.history",
-      "name": "history",
       "version": "8\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.history",
       "name": "history",
       "version": "9\\.\\+"
-    },
-    {
-      "expires": "2023-12-01",
-      "group": "com\\.mercadolibre\\.android\\.history",
-      "name": "history_manager",
-      "version": "8\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.history",
@@ -1001,11 +966,6 @@
       "group": "com\\.mercadolibre\\.android\\.portable_widget",
       "name": "portable_widget",
       "version": "2\\.\\+"
-    },
-    {
-      "expires": "2023-11-27",
-      "group": "com\\.mercadolibre\\.android\\.recommendations",
-      "version": "15\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.recommendations",
@@ -1407,13 +1367,6 @@
       "version": "0\\.4\\.13"
     },
     {
-      "description": "Esta libs se encuentra deprecada, debemos utilizar data-dispatcher",
-      "expires": "2023-12-01",
-      "group": "de\\.greenrobot",
-      "name": "eventbus",
-      "version": "2\\.4\\.0|3\\.1\\.1"
-    },
-    {
       "group": "org\\.greenrobot",
       "name": "eventbus",
       "version": "3\\.1\\.1"
@@ -1514,9 +1467,15 @@
       "version": "1\\.8\\.10"
     },
     {
+      "expires": "2023-12-30",
       "group": "com\\.mercadolibre\\.android\\.userbiometrics",
       "name": "core",
       "version": "7\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.userbiometrics",
+      "name": "core",
+      "version": "8\\.\\+"
     },
     {
       "expires": "2023-12-24",
@@ -1677,21 +1636,9 @@
       "version": "6\\.+"
     },
     {
-      "expires": "2023-12-01",
-      "group": "com\\.mercadolibre\\.android\\.insu_flox_components",
-      "name": "floxcomponents",
-      "version": "mercadolibre-8\\.\\+|mercadopago-8\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.insu_flox_components",
       "name": "floxcomponents",
       "version": "mercadolibre-9\\.\\+|mercadopago-9\\.\\+"
-    },
-    {
-      "expires": "2023-12-01",
-      "group": "com\\.mercadolibre\\.android\\.insu_qpage_on",
-      "name": "qpage_on",
-      "version": "9\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.insu_qpage_on",
@@ -2646,6 +2593,11 @@
     },
     {
       "group": "com\\.mercadolibre\\.android\\.ccap",
+      "name": "amount-screen",
+      "version": "0\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.ccap",
       "name": "congrats-sdk",
       "version": "2\\.+"
     },
@@ -2763,12 +2715,6 @@
       "group": "com\\.mercadolibre\\.android\\.reviews3",
       "name": "notifications",
       "version": "5\\.+"
-    },
-    {
-      "expires": "2023-11-27",
-      "group": "com\\.mercadolibre\\.android\\.ml_cards",
-      "name": "core",
-      "version": "3\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.ml_cards",
@@ -3115,13 +3061,6 @@
     },
     {
       "description": "This PTM library is used to schedule alarms that trigger job executions",
-      "expires": "2023-12-01",
-      "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
-      "name": "qualified-alarm",
-      "version": "0\\.\\+"
-    },
-    {
-      "description": "This PTM library is used to schedule alarms that trigger job executions",
       "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
       "name": "qualified-alarm",
       "version": "1\\.\\+"
@@ -3193,23 +3132,9 @@
     },
     {
       "description": "Android library used to access connection data and measure api execution time.",
-      "expires": "2023-12-01",
-      "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
-      "name": "connectivity",
-      "version": "0\\.\\+"
-    },
-    {
-      "description": "Android library used to access connection data and measure api execution time.",
       "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
       "name": "connectivity",
       "version": "1\\.\\+"
-    },
-    {
-      "description": "Android library used to easily send integrate metrics to PTM.",
-      "expires": "2023-12-01",
-      "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
-      "name": "event",
-      "version": "0\\.\\+"
     },
     {
       "description": "Android library used to easily send integrate metrics to PTM.",
@@ -3219,23 +3144,9 @@
     },
     {
       "description": "Android library used to facilitate development.",
-      "expires": "2023-12-01",
-      "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
-      "name": "stdlib-ktx",
-      "version": "0\\.\\+"
-    },
-    {
-      "description": "Android library used to facilitate development.",
       "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
       "name": "stdlib-ktx",
       "version": "1\\.\\+"
-    },
-    {
-      "description": "Android library used to easily integrate async Android services.",
-      "expires": "2023-12-01",
-      "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
-      "name": "android-service",
-      "version": "0\\.\\+"
     },
     {
       "description": "Android library used to easily integrate async Android services.",
@@ -3287,6 +3198,16 @@
       "group": "com\\.mercadolibre\\.android\\.performance\\.traces",
       "name": "providers",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.isp_bluetooth_tools",
+      "name": "core",
+      "version": "1\\.0\\.0"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.isp_bluetooth_tools",
+      "name": "ui_settings",
+      "version": "1\\.0\\.0"
     }
   ]
 }
