@@ -2894,9 +2894,15 @@
       "version": "1\\.12\\.0"
     },
     {
+      "expires": "2024-04-06",
       "group": "com\\.datadoghq",
       "name": "dd-sdk-android",
       "version": "1\\.19\\.3"
+    },
+    {
+      "group": "com\\.datadoghq",
+      "name": "dd-sdk-android",
+      "version": "2\\.3\\.0"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.data_dispatcher",
