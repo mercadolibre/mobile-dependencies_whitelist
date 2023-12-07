@@ -2282,6 +2282,11 @@
       "version": "16\\.1\\.4"
     },
     {
+      "group": "com\\.google\\.android\\.gms",
+      "name": "play-services-mlkit-barcode-scanning",
+      "version": "18\\.3\\.0"
+    },
+    {
       "expires": "2023-12-31",
       "group": "com\\.google\\.mlkit",
       "name": "barcode-scanning",
