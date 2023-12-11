@@ -1618,7 +1618,7 @@
     {
       "group": "com\\.mercadolibre\\.android\\.inappupdates",
       "name": "in-app-updates",
-      "version": "7\\.\\+"
+      "version": "8\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.mlinappupdates",
@@ -2282,6 +2282,11 @@
       "version": "16\\.1\\.4"
     },
     {
+      "group": "com\\.google\\.android\\.gms",
+      "name": "play-services-mlkit-barcode-scanning",
+      "version": "18\\.3\\.0"
+    },
+    {
       "expires": "2023-12-31",
       "group": "com\\.google\\.mlkit",
       "name": "barcode-scanning",
@@ -2381,12 +2386,12 @@
       "expires": "2023-12-31",
       "group": "com\\.mercadolibre\\.android\\.point_smart_pos_sdk",
       "name": "device",
-      "version": "dev-5\\.\\+|a910-5\\.\\+|d20-5\\.\\+|n950-5\\.\\+|5\\.\\+"
+      "version": "dev-6\\.\\+|a910-6\\.\\+|d20-6\\.\\+|n950-6\\.\\+|6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point_smart_pos_sdk",
       "name": "device",
-      "version": "dev-6\\.\\+|a910-6\\.\\+|d20-6\\.\\+|n950-6\\.\\+|6\\.\\+"
+      "version": "dev-7\\.\\+|a910-7\\.\\+|d20-7\\.\\+|n950-7\\.\\+|7\\.\\+"
     },
     {
       "expires": "2024-02-09",
