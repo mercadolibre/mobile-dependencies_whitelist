@@ -31,8 +31,8 @@
       "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
     },
     {
-      "description": "This version will be deprecated in favor of 4.0.0 on 2023-12-28",
-      "expires": "2023-12-28",
+      "description": "This version will be deprecated in favor of 4.0.0 on 2023-12-29",
+      "expires": "2023-12-29",
       "name": "BfSplitPayment",
       "source": "private",
       "target": "production",
@@ -51,8 +51,8 @@
       "version": "^~>\\s?10.[0-9]+$"
     },
     {
-      "description": "This version will be deprecated in favor of 5.0.0 on 2023-12-28",
-      "expires": "2023-12-28",
+      "description": "This version will be deprecated in favor of 5.0.0 on 2023-12-29",
+      "expires": "2023-12-29",
       "name": "MLCheckoutSDK",
       "source": "private",
       "target": "production",
@@ -1940,8 +1940,8 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "description": "This version will be deprecated in favor of 3.0.0 on 2023-12-28",
-      "expires": "2023-12-28",
+      "description": "This version will be deprecated in favor of 3.0.0 on 2023-12-29",
+      "expires": "2023-12-29",
       "name": "BuyingflowPayment",
       "source": "private",
       "target": "production",
