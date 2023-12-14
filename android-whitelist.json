@@ -3012,19 +3012,34 @@
       "version": "production-2\\.\\+"
     },
     {
+      "description": "Qualtrics native SDK library. Use ml_qualtrics instead.",
       "group": "com\\.qualtrics",
       "name": "digital",
       "version": "2\\.9\\.3"
     },
     {
+      "description": "Deprecated due to kotlin 1.8 migration. Use version 2.+",
+      "expires": "2023-12-22",
       "group": "com\\.mercadolibre\\.android\\.ml_qualtrics",
       "name": "core",
       "version": "1\\.\\+"
     },
     {
+      "description": "Deprecated due to kotlin 1.8 migration. Use version 2.+",
+      "expires": "2023-12-22",
       "group": "com\\.mercadolibre\\.android\\.ml_qualtrics",
       "name": "ui",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.ml_qualtrics",
+      "name": "core",
+      "version": "2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.ml_qualtrics",
+      "name": "ui",
+      "version": "2\\.\\+"
     },
     {
       "expires": "2023-12-30",
