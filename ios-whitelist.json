@@ -31,10 +31,18 @@
       "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
     },
     {
+      "description": "This version will be deprecated in favor of 4.0.0 on 2023-12-29",
+      "expires": "2023-12-29",
       "name": "BfSplitPayment",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?3.[0-9]+$"
+    },
+    {
+      "name": "BfSplitPayment",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?4.[0-9]+$"
     },
     {
       "name": "MLCheckout",
@@ -43,10 +51,18 @@
       "version": "^~>\\s?10.[0-9]+$"
     },
     {
+      "description": "This version will be deprecated in favor of 5.0.0 on 2023-12-29",
+      "expires": "2023-12-29",
       "name": "MLCheckoutSDK",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?4.[0-9]+.?[0-9]*$"
+    },
+    {
+      "name": "MLCheckoutSDK",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?5.[0-9]+.?[0-9]*$"
     },
     {
       "name": "PPMagnesWrapper",
@@ -1615,10 +1631,18 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "description": "This version will be deprecated in favor of 2.0.0 on 2023-12-31",
+      "expires": "2023-12-31",
       "name": "NavigationRouter",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "NavigationRouter",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "SwiftNIO",
@@ -1681,8 +1705,8 @@
       "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
     },
     {
-      "description": "This version will be deprecated in favor of version 6.0.0 on 2023-12-11",
-      "expires": "2023-12-11",
+      "description": "This version will be deprecated in favor of version 6.0.0 on 2024-03-11",
+      "expires": "2024-03-11",
       "name": "MLCardForm",
       "source": "private",
       "target": "production",
@@ -1916,10 +1940,18 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "description": "This version will be deprecated in favor of 3.0.0 on 2023-12-29",
+      "expires": "2023-12-29",
       "name": "BuyingflowPayment",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "name": "BuyingflowPayment",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?3.[0-9]+$"
     },
     {
       "name": "PortableWidget",
@@ -1974,6 +2006,12 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "SafeGuard",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
     }
   ]
 }
