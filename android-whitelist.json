@@ -1162,9 +1162,15 @@
       "version": "4\\.\\+"
     },
     {
+      "expires": "2024-01-28",
       "group": "com\\.mercadolibre\\.android\\.static_resources",
       "name": "static_resources",
       "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.static_resources",
+      "name": "static_resources",
+      "version": "7\\.\\+"
     },
     {
       "expires": "2024-01-12",
@@ -1744,6 +1750,11 @@
       "group": "androidx\\.databinding",
       "name": "viewbinding",
       "version": "7\\.2\\.2"
+    },
+    {
+      "group": "androidx\\.drawerlayout",
+      "name": "drawerlayout",
+      "version": "1\\.0\\.0"
     },
     {
       "group": "com\\.google\\.android\\.material",
@@ -2928,9 +2939,15 @@
       "version": "1\\.12\\.0"
     },
     {
+      "expires": "2024-04-06",
       "group": "com\\.datadoghq",
       "name": "dd-sdk-android",
       "version": "1\\.19\\.3"
+    },
+    {
+      "group": "com\\.datadoghq",
+      "name": "dd-sdk-android",
+      "version": "2\\.3\\.0"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.data_dispatcher",
