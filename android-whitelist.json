@@ -51,103 +51,103 @@
       "version": "3\\.+"
     },
     {
-      "expires": "2023-12-19",
-      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
-      "name": "review",
-      "version": "9\\.\\+"
-    },
-    {
+      "expires": "2024-01-09",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "review",
       "version": "10\\.\\+"
     },
     {
-      "expires": "2023-12-19",
+      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
+      "name": "review",
+      "version": "11\\.\\+"
+    },
+    {
+      "expires": "2024-01-09",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "congrats",
-      "version": "9\\.\\+"
+      "version": "10\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "congrats",
-      "version": "10\\.\\+"
+      "version": "11\\.\\+"
     },
     {
-      "expires": "2023-12-19",
-      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
-      "name": "integrator_sdk",
-      "version": "9\\.\\+"
-    },
-    {
+      "expires": "2024-01-09",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "integrator_sdk",
       "version": "10\\.\\+"
     },
     {
-      "expires": "2023-12-19",
+      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
+      "name": "integrator_sdk",
+      "version": "11\\.\\+"
+    },
+    {
+      "expires": "2024-01-09",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "one_tap",
-      "version": "9\\.\\+"
+      "version": "10\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "one_tap",
-      "version": "10\\.\\+"
+      "version": "11\\.\\+"
     },
     {
-      "expires": "2023-12-19",
-      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
-      "name": "payment",
-      "version": "9\\.\\+"
-    },
-    {
+      "expires": "2024-01-09",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "payment",
       "version": "10\\.\\+"
     },
     {
-      "expires": "2023-12-19",
+      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
+      "name": "payment",
+      "version": "11\\.\\+"
+    },
+    {
+      "expires": "2024-01-09",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "shipping",
-      "version": "9\\.\\+"
+      "version": "10\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "shipping",
-      "version": "10\\.\\+"
+      "version": "11\\.\\+"
     },
     {
-      "expires": "2023-12-19",
-      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
-      "name": "billing_info",
-      "version": "9\\.\\+"
-    },
-    {
+      "expires": "2024-01-09",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "billing_info",
       "version": "10\\.\\+"
     },
     {
-      "expires": "2023-12-19",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
-      "name": "flow",
-      "version": "9\\.\\+"
+      "name": "billing_info",
+      "version": "11\\.\\+"
     },
     {
+      "expires": "2024-01-09",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "flow",
       "version": "10\\.\\+"
     },
     {
-      "expires": "2023-12-19",
+      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
+      "name": "flow",
+      "version": "11\\.\\+"
+    },
+    {
+      "expires": "2024-01-09",
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "split_payments",
-      "version": "9\\.\\+"
+      "version": "10\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "split_payments",
-      "version": "10\\.\\+"
+      "version": "11\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.buyingflow_payment",
@@ -1353,9 +1353,18 @@
       "version": "0\\.4\\.13"
     },
     {
+      "description": "Esta libs se encuentra deprecada, recomendamos utilizar data dispatcher",
+      "expires": "2024-12-01",
       "group": "org\\.greenrobot",
       "name": "eventbus",
       "version": "3\\.1\\.1"
+    },
+    {
+      "description": "Esta libs se encuentra deprecada, recomendamos utilizar data dispatcher",
+      "expires": "2024-12-01",
+      "group": "de\\.greenrobot",
+      "name": "eventbus",
+      "version": "2\\.4\\.0"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.footmarks",
@@ -1387,6 +1396,15 @@
       "group": "io\\.reactivex\\.rxjava2",
       "name": "rxjava",
       "version": "2\\.2\\.8"
+    },
+    {
+      "expires": "2024-10-01",
+      "group": "com\\.mercadolibre\\.android\\.credits\\.behaviour",
+      "version": "5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.credits\\.behaviour",
+      "version": "6\\.\\+"
     },
     {
       "description": "Esta libs se encuentra deprecada, recomendamos utilizar coroutine",
@@ -1611,7 +1629,8 @@
       "version": "mercadolibre-7\\.\\+|mercadopago-7\\.\\+"
     },
     {
-      "expires": "2023-12-11",
+      "description": "This version will be deprecated in favor of version 6.0.0 on 2024-03-11",
+      "expires": "2024-03-11",
       "group": "com\\.mercadolibre\\.android",
       "name": "cardform",
       "version": "5\\.+"
@@ -1725,6 +1744,11 @@
       "group": "androidx\\.databinding",
       "name": "viewbinding",
       "version": "7\\.2\\.2"
+    },
+    {
+      "group": "androidx\\.drawerlayout",
+      "name": "drawerlayout",
+      "version": "1\\.0\\.0"
     },
     {
       "group": "com\\.google\\.android\\.material",
