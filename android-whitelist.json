@@ -2069,7 +2069,7 @@
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cardsengagement",
-      "version": "5\\.\\+"
+      "version": "13\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.navigation",
@@ -2383,14 +2383,28 @@
       "version": "1\\.+"
     },
     {
+      "description": "Deprecated due to kotlin 1.8 migration. Use version 9.+",
+      "expires": "2023-01-01",
       "group": "com\\.mercadolibre\\.android\\.cardsbanking",
       "name": "cards-home-section",
       "version": "6\\.\\+"
     },
     {
+      "description": "Deprecated due to kotlin 1.8 migration. Use version 9.+",
+      "expires": "2023-01-01",
       "group": "com\\.mercadolibre\\.android\\.cardsbanking",
       "name": "card-widget",
       "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cardsbanking",
+      "name": "cards-home-section",
+      "version": "9\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cardsbanking",
+      "name": "card-widget",
+      "version": "9\\.\\+"
     },
     {
       "expires": "2023-12-31",
