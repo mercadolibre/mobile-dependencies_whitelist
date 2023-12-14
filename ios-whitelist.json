@@ -31,10 +31,18 @@
       "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
     },
     {
+      "description": "This version will be deprecated in favor of 4.0.0 on 2023-12-29",
+      "expires": "2023-12-29",
       "name": "BfSplitPayment",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?3.[0-9]+$"
+    },
+    {
+      "name": "BfSplitPayment",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?4.[0-9]+$"
     },
     {
       "name": "MLCheckout",
@@ -43,10 +51,18 @@
       "version": "^~>\\s?10.[0-9]+$"
     },
     {
+      "description": "This version will be deprecated in favor of 5.0.0 on 2023-12-29",
+      "expires": "2023-12-29",
       "name": "MLCheckoutSDK",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?4.[0-9]+.?[0-9]*$"
+    },
+    {
+      "name": "MLCheckoutSDK",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?5.[0-9]+.?[0-9]*$"
     },
     {
       "name": "PPMagnesWrapper",
@@ -85,10 +101,10 @@
       "version": "0.8"
     },
     {
-      "name": "Charts",
+      "name": "DGCharts",
       "source": "public",
       "target": "production",
-      "version": "4.1.0"
+      "version": "5.0.0"
     },
     {
       "name": "DataPrivacyHelper",
@@ -1331,6 +1347,12 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "name": "RequestWatcher",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "SPPSpirtech",
       "source": "private",
       "target": "production",
@@ -1445,6 +1467,12 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "CreditCardDuedate",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "HomeToolkit",
       "source": "private",
       "target": "production",
@@ -1457,17 +1485,16 @@
       "version": "^~>\\s?1.[0-9]+"
     },
     {
-      "expires": "2023-10-30",
-      "name": "Appboy-iOS-SDK/Core",
-      "source": "public",
-      "target": "production",
-      "version": "^~>4.5.[0-9]+$"
-    },
-    {
       "name": "BrazeKitCompat",
       "source": "public",
       "target": "production",
       "version": "6.3.1"
+    },
+    {
+      "name": "MLRichNotifications",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MercadoCoin",
@@ -1492,6 +1519,12 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "AmountScreen",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+"
     },
     {
       "name": "FeedbackScreen",
@@ -1598,10 +1631,18 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "description": "This version will be deprecated in favor of 2.0.0 on 2023-12-31",
+      "expires": "2023-12-31",
       "name": "NavigationRouter",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "NavigationRouter",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "SwiftNIO",
@@ -1664,8 +1705,8 @@
       "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
     },
     {
-      "description": "This version will be deprecated in favor of version 5.0.0 on 2023-12-31",
-      "expires": "2023-12-31",
+      "description": "This version will be deprecated in favor of version 6.0.0 on 2024-03-11",
+      "expires": "2024-03-11",
       "name": "MLCardForm",
       "source": "private",
       "target": "production",
@@ -1675,7 +1716,7 @@
       "name": "MLCardForm",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?5.[0-9]+$"
+      "version": "^~>\\s?6.[0-9]+$"
     },
     {
       "name": "SellerHomeSection",
@@ -1714,13 +1755,6 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "expires": "2023-11-10",
-      "name": "AppMonitoring",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
       "expires": "2024-01-12",
       "name": "AppMonitoring",
       "source": "private",
@@ -1734,44 +1768,60 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
-      "expires": "2023-10-20",
-      "name": "DatadogSDK",
-      "source": "public",
+      "name": "AppMonitoringSetup",
+      "source": "private",
       "target": "production",
-      "version": "^~>\\s?(1.16.0)$"
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "expires": "2023-10-20",
-      "name": "DatadogSDKCrashReporting",
-      "source": "public",
-      "target": "production",
-      "version": "^~>\\s?(1.16.0)$"
-    },
-    {
-      "expires": "2023-10-20",
-      "name": "DatadogSDK",
-      "source": "public",
-      "target": "production",
-      "version": "1.21.0"
-    },
-    {
-      "expires": "2023-10-20",
-      "name": "DatadogSDKCrashReporting",
-      "source": "public",
-      "target": "production",
-      "version": "1.21.0"
-    },
-    {
+      "expires": "2024-01-12",
       "name": "DatadogSDK",
       "source": "public",
       "target": "production",
       "version": "1.23.0"
     },
     {
+      "name": "DatadogInternal",
+      "source": "public",
+      "target": "production",
+      "version": "2.4.0"
+    },
+    {
+      "name": "DatadogCore",
+      "source": "public",
+      "target": "production",
+      "version": "2.4.0"
+    },
+    {
+      "name": "DatadogRUM",
+      "source": "public",
+      "target": "production",
+      "version": "2.4.0"
+    },
+    {
+      "name": "DatadogLogs",
+      "source": "public",
+      "target": "production",
+      "version": "2.4.0"
+    },
+    {
+      "name": "DatadogTrace",
+      "source": "public",
+      "target": "production",
+      "version": "2.4.0"
+    },
+    {
+      "expires": "2024-01-12",
       "name": "DatadogSDKCrashReporting",
       "source": "public",
       "target": "production",
       "version": "1.23.0"
+    },
+    {
+      "name": "DatadogCrashReporting",
+      "source": "public",
+      "target": "production",
+      "version": "2.4.0"
     },
     {
       "name": "Dogfooding",
@@ -1870,10 +1920,18 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "description": "This version will be deprecated in favor of 2.0.0",
+      "expires": "2023-12-31",
       "name": "IspSf",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "IspSf",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "BuyingflowCoreFlox",
@@ -1882,17 +1940,18 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "expires": "2023-10-27",
+      "description": "This version will be deprecated in favor of 3.0.0 on 2023-12-29",
+      "expires": "2023-12-29",
       "name": "BuyingflowPayment",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "BuyingflowPayment",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?2.[0-9]+$"
+      "version": "^~>\\s?3.[0-9]+$"
     },
     {
       "name": "PortableWidget",
@@ -1904,7 +1963,7 @@
       "name": "MobilePermissions",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLEShops",
@@ -1914,6 +1973,42 @@
     },
     {
       "name": "PerformanceTraces",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "PerformanceTracesConfig",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "SplashScreen",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "Wishlists",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "BillPayments",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?5.[0-9]+$"
+    },
+    {
+      "name": "BehavioralSdk",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "SafeGuard",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
