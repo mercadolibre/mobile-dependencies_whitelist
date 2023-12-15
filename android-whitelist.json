@@ -2206,11 +2206,6 @@
       "version": "2\\.\\+"
     },
     {
-      "group": "com\\.mercadolibre\\.android\\.point_smartpos_fcu",
-      "name": "pointsmartpos_fcu",
-      "version": "10\\.5\\.0" 
-    },
-    {
       "expires": "2023-12-31",
       "group": "com\\.mercadolibre\\.android\\.point_smart_helpers",
       "name": "point_commons",
@@ -2277,6 +2272,11 @@
       "group": "com\\.mercadolibre\\.android\\.point_recharge",
       "name": "antennas",
       "version": "8\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_smartpos_fcu",
+      "name": "pointsmartpos_fcu",
+      "version": "10\\.5\\.0"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point_smartpos_scanner",
