@@ -483,8 +483,8 @@
       "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
     },
     {
-      "name": "MLCharts",
       "expires": "2023-12-31",
+      "name": "MLCharts",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
