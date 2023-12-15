@@ -2522,6 +2522,21 @@
       "version": "mercadolibre-13\\.\\+|mercadopago-13\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
+      "name": "scanner",
+      "version": "mercadolibre-14\\.\\+|mercadopago-14\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
+      "name": "ocr",
+      "version": "mercadolibre-14\\.\\+|mercadopago-14\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
+      "name": "barcode",
+      "version": "mercadolibre-14\\.\\+|mercadopago-14\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.in_app_report",
       "name": "MLInAppReport",
       "version": "5\\.\\+"
