@@ -1827,6 +1827,21 @@
       "version": "1\\.6\\.0"
     },
     {
+      "group": "androidx\\.core",
+      "name": "core",
+      "version": "1\\.8\\.0"
+    },
+    {
+      "group": "androidx\\.core",
+      "name": "core-ktx",
+      "version": "1\\.8\\.0"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_smartpos_fcu",
+      "name": "pointsmartpos_fcu",
+      "version": "10\\.5\\.0" 
+    },
+    {
       "group": "androidx\\.fragment",
       "name": "fragment",
       "version": "1\\.3\\.6"
