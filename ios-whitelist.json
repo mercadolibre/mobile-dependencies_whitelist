@@ -783,6 +783,18 @@
       "version": "^~>\\s?4.[0-9]+$"
     },
     {
+      "name": "MLDemandCore/MoreLikeThis",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLDemandCore/VirtualTryOn",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
       "name": "MLSecurity",
       "source": "private",
       "target": "production",
