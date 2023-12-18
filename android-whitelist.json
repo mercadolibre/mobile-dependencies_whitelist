@@ -3302,19 +3302,14 @@
       "version": "1\\.0\\.0"
     },
     {
-      "group": "androidx\\.core",
-      "name": "core",
-      "version": "1\\.8\\.0"
-    },
-    {
-      "group": "androidx\\.core",
-      "name": "core-ktx",
-      "version": "1\\.8\\.0"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.point_smartpos_fcu",
       "name": "pointsmartpos_fcu",
       "version": "10\\.5\\.0"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.errorhandler\\.v2",
+      "name": "core",
+      "version": "develop-2\\.\\+"
     }
   ]
 }
