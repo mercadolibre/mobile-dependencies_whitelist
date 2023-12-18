@@ -1654,6 +1654,12 @@
       "version": "7\\.\\+"
     },
     {
+      "expires": "2024-01-26",
+      "group": "com\\.mercadolibre\\.android\\.andes_integrations",
+      "name": "integrations",
+      "version": "mercadopago-2\\.\\+|mercadolibre-2\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.andes_integrations",
       "name": "integrations",
       "version": "mercadopago-3\\.\\+|mercadolibre-3\\.\\+"
@@ -3282,6 +3288,11 @@
       "group": "com\\.mercadolibre\\.android\\.isp_bluetooth_tools",
       "name": "ui_settings",
       "version": "1\\.0\\.0"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_smartpos_fcu",
+      "name": "pointsmartpos_fcu",
+      "version": "10\\.\\+"
     }
   ]
 }
