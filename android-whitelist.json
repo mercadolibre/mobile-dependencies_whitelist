@@ -1142,9 +1142,16 @@
       "version": "4\\.\\+"
     },
     {
+      "description": "Deprecated due to kotlin 1.8 migration. Use version 9.+",
+      "expires": "2023-01-01",
       "group": "com\\.mercadolibre\\.android\\.cardscomponents",
       "name": "cards-components",
       "version": "8\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cardscomponents",
+      "name": "cards-components",
+      "version": "9\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.commons",
