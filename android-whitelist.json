@@ -3317,6 +3317,12 @@
       "group": "com\\.mercadolibre\\.android\\.point_smartpos_fcu",
       "name": "pointsmartpos_fcu",
       "version": "10\\.\\+"
+    },
+    {
+      "description": "Android library used to generate QRs.",
+      "group": "io\\.github\\.g0dkar",
+      "name": "qrcode-kotlin",
+      "version": "4\\.0\\.6"
     }
   ]
 }
