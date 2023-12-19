@@ -1111,6 +1111,18 @@
       "version": "mercadopago-5\\.+"
     },
     {
+      "expires": "2024-01-30",
+      "group": "com\\.mercadolibre\\.android\\.usersections\\",
+      "name": "sections",
+      "version": "mercadolibre-5\\.+|mercadopago-5\\.+"
+    },
+    {
+      "expires": "2024-01-30",
+      "group": "com\\.mercadolibre\\.android\\.usersections",
+      "name": "ui-sections",
+      "version": "mercadolibre-5\\.+|mercadopago-5\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.usersections\\",
       "name": "sections",
       "version": "mercadolibre-6\\.+|mercadopago-6\\.+"
