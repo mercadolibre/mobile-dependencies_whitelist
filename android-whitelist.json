@@ -754,9 +754,21 @@
       "version": "4\\.\\+"
     },
     {
+      "expires": "2024-01-01",
       "group": "com\\.mercadolibre\\.android\\.cross_app_links",
       "name": "core",
       "version": "mercadolibre-7\\.\\+|mercadopago-7\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cross_app_links",
+      "name": "core",
+      "version": "mercadolibre-8\\.\\+|mercadopago-8\\.\\+"
+    },
+    {
+      "expires": "2023-12-15",
+      "group": "com\\.mercadolibre\\.android\\.charts",
+      "name": "melicharts",
+      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.charts",
@@ -1052,19 +1064,26 @@
       "version": "17\\.\\+"
     },
     {
-      "group": "com\\.mercadolibre\\.android\\.navigation_manager",
-      "name": "core",
-      "version": "3\\.\\+"
-    },
-    {
+      "expires": "2024-01-01",
       "group": "com\\.mercadolibre\\.android\\.navigation_manager",
       "name": "core",
       "version": "4\\.\\+"
     },
     {
+      "expires": "2024-01-01",
       "group": "com\\.mercadolibre\\.android\\.navigation_manager",
       "name": "tabbar",
       "version": "mercadopago-4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.navigation_manager",
+      "name": "core",
+      "version": "5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.navigation_manager",
+      "name": "tabbar",
+      "version": "mercadopago-5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.mlwebkit",
@@ -1111,6 +1130,18 @@
       "version": "mercadopago-5\\.+"
     },
     {
+      "expires": "2024-01-30",
+      "group": "com\\.mercadolibre\\.android\\.usersections\\",
+      "name": "sections",
+      "version": "mercadolibre-5\\.+|mercadopago-5\\.+"
+    },
+    {
+      "expires": "2024-01-30",
+      "group": "com\\.mercadolibre\\.android\\.usersections",
+      "name": "ui-sections",
+      "version": "mercadolibre-5\\.+|mercadopago-5\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.usersections\\",
       "name": "sections",
       "version": "mercadolibre-6\\.+|mercadopago-6\\.+"
@@ -1121,9 +1152,15 @@
       "version": "mercadolibre-6\\.+|mercadopago-6\\.\\+"
     },
     {
+      "expires": "2024-01-01",
       "group": "com\\.mercadolibre\\.android\\.mercadocoin",
       "name": "cryptodata",
       "version": "5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.mercadocoin",
+      "name": "cryptodata",
+      "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.pendings",
@@ -1136,9 +1173,16 @@
       "version": "4\\.\\+"
     },
     {
+      "description": "Deprecated due to kotlin 1.8 migration. Use version 9.+",
+      "expires": "2023-01-01",
       "group": "com\\.mercadolibre\\.android\\.cardscomponents",
       "name": "cards-components",
       "version": "8\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cardscomponents",
+      "name": "cards-components",
+      "version": "9\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.commons",
@@ -1607,6 +1651,18 @@
       "version": "7\\.\\+"
     },
     {
+      "expires": "2024-01-30",
+      "group": "com\\.mercadolibre\\.android\\.inappupdates",
+      "name": "in-app-updates",
+      "version": "7\\.\\+"
+    },
+    {
+      "expires": "2024-01-30",
+      "group": "com\\.mercadolibre\\.android\\.mlinappupdates",
+      "name": "ml-in-app-updates",
+      "version": "7\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.inappupdates",
       "name": "in-app-updates",
       "version": "8\\.\\+"
@@ -1652,6 +1708,12 @@
       "group": "com\\.mercadolibre\\.android\\.andesui",
       "name": "components",
       "version": "7\\.\\+"
+    },
+    {
+      "expires": "2024-01-26",
+      "group": "com\\.mercadolibre\\.android\\.andes_integrations",
+      "name": "integrations",
+      "version": "mercadopago-2\\.\\+|mercadolibre-2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.andes_integrations",
@@ -2056,12 +2118,18 @@
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cardsengagement",
-      "version": "5\\.\\+"
+      "version": "13\\.\\+"
+    },
+    {
+      "expires": "2024-01-01",
+      "group": "com\\.mercadolibre\\.android\\.navigation",
+      "name": "menu",
+      "version": "mercadolibre-9\\.\\+|mercadopago-9\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.navigation",
       "name": "menu",
-      "version": "mercadolibre-9\\.\\+|mercadopago-9\\.\\+"
+      "version": "mercadolibre-10\\.\\+|mercadopago-10\\.\\+"
     },
     {
       "group": "com\\.squareup\\.leakcanary",
@@ -2389,14 +2457,28 @@
       "version": "1\\.+"
     },
     {
+      "description": "Deprecated due to kotlin 1.8 migration. Use version 9.+",
+      "expires": "2023-01-01",
       "group": "com\\.mercadolibre\\.android\\.cardsbanking",
       "name": "cards-home-section",
       "version": "6\\.\\+"
     },
     {
+      "description": "Deprecated due to kotlin 1.8 migration. Use version 9.+",
+      "expires": "2023-01-01",
       "group": "com\\.mercadolibre\\.android\\.cardsbanking",
       "name": "card-widget",
       "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cardsbanking",
+      "name": "cards-home-section",
+      "version": "9\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cardsbanking",
+      "name": "card-widget",
+      "version": "9\\.\\+"
     },
     {
       "expires": "2023-12-31",
@@ -2940,7 +3022,22 @@
     },
     {
       "group": "com\\.datadoghq",
-      "name": "dd-sdk-android",
+      "name": "dd-sdk-android-rum",
+      "version": "2\\.3\\.0"
+    },
+    {
+      "group": "com\\.datadoghq",
+      "name": "dd-sdk-android-logs",
+      "version": "2\\.3\\.0"
+    },
+    {
+      "group": "com\\.datadoghq",
+      "name": "dd-sdk-android-trace",
+      "version": "2\\.3\\.0"
+    },
+    {
+      "group": "com\\.datadoghq",
+      "name": "dd-sdk-android-okhttp",
       "version": "2\\.3\\.0"
     },
     {
@@ -3288,6 +3385,11 @@
       "group": "com\\.mercadolibre\\.android\\.isp_bluetooth_tools",
       "name": "ui_settings",
       "version": "1\\.0\\.0"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_smartpos_fcu",
+      "name": "pointsmartpos_fcu",
+      "version": "10\\.\\+"
     }
   ]
 }
