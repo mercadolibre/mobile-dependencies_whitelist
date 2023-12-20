@@ -754,9 +754,21 @@
       "version": "4\\.\\+"
     },
     {
+      "expires": "2024-01-01",
       "group": "com\\.mercadolibre\\.android\\.cross_app_links",
       "name": "core",
       "version": "mercadolibre-7\\.\\+|mercadopago-7\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cross_app_links",
+      "name": "core",
+      "version": "mercadolibre-8\\.\\+|mercadopago-8\\.\\+"
+    },
+    {
+      "expires": "2023-12-15",
+      "group": "com\\.mercadolibre\\.android\\.charts",
+      "name": "melicharts",
+      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.charts",
@@ -1052,19 +1064,26 @@
       "version": "17\\.\\+"
     },
     {
-      "group": "com\\.mercadolibre\\.android\\.navigation_manager",
-      "name": "core",
-      "version": "3\\.\\+"
-    },
-    {
+      "expires": "2024-01-01",
       "group": "com\\.mercadolibre\\.android\\.navigation_manager",
       "name": "core",
       "version": "4\\.\\+"
     },
     {
+      "expires": "2024-01-01",
       "group": "com\\.mercadolibre\\.android\\.navigation_manager",
       "name": "tabbar",
       "version": "mercadopago-4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.navigation_manager",
+      "name": "core",
+      "version": "5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.navigation_manager",
+      "name": "tabbar",
+      "version": "mercadopago-5\\.\\+"
     },
     {
       "expires": "2024-01-15",
@@ -1138,9 +1157,15 @@
       "version": "mercadolibre-6\\.+|mercadopago-6\\.\\+"
     },
     {
+      "expires": "2024-01-01",
       "group": "com\\.mercadolibre\\.android\\.mercadocoin",
       "name": "cryptodata",
       "version": "5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.mercadocoin",
+      "name": "cryptodata",
+      "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.pendings",
@@ -2101,9 +2126,15 @@
       "version": "13\\.\\+"
     },
     {
+      "expires": "2024-01-01",
       "group": "com\\.mercadolibre\\.android\\.navigation",
       "name": "menu",
       "version": "mercadolibre-9\\.\\+|mercadopago-9\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.navigation",
+      "name": "menu",
+      "version": "mercadolibre-10\\.\\+|mercadopago-10\\.\\+"
     },
     {
       "group": "com\\.squareup\\.leakcanary",
@@ -2863,9 +2894,15 @@
       "version": "2\\.\\+"
     },
     {
+      "expires": "2024-01-15",
       "group": "com\\.mercadolibre\\.android\\.point_remote_config",
       "name": "remote_config",
       "version": "0\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_remote_config",
+      "name": "remote_config",
+      "version": "1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cx_support_daisy",
@@ -2990,7 +3027,22 @@
     },
     {
       "group": "com\\.datadoghq",
-      "name": "dd-sdk-android",
+      "name": "dd-sdk-android-rum",
+      "version": "2\\.3\\.0"
+    },
+    {
+      "group": "com\\.datadoghq",
+      "name": "dd-sdk-android-logs",
+      "version": "2\\.3\\.0"
+    },
+    {
+      "group": "com\\.datadoghq",
+      "name": "dd-sdk-android-trace",
+      "version": "2\\.3\\.0"
+    },
+    {
+      "group": "com\\.datadoghq",
+      "name": "dd-sdk-android-okhttp",
       "version": "2\\.3\\.0"
     },
     {
@@ -3343,6 +3395,11 @@
       "group": "com\\.mercadolibre\\.android\\.point_smartpos_fcu",
       "name": "pointsmartpos_fcu",
       "version": "10\\.\\+"
+    },
+    {
+      "group": "androidx\\.tracing",
+      "name": "tracing",
+      "version": "1\\.10\\.0"
     }
   ]
 }
