@@ -31,18 +31,10 @@
       "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
     },
     {
-      "description": "This version will be deprecated in favor of 4.0.0 on 2023-12-29",
-      "expires": "2023-12-29",
       "name": "BfSplitPayment",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?3.[0-9]+$"
-    },
-    {
-      "name": "BfSplitPayment",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?4.[0-9]+$"
     },
     {
       "name": "MLCheckout",
@@ -1947,18 +1939,10 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "description": "This version will be deprecated in favor of 3.0.0 on 2023-12-29",
-      "expires": "2023-12-29",
       "name": "BuyingflowPayment",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?2.[0-9]+$"
-    },
-    {
-      "name": "BuyingflowPayment",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?3.[0-9]+$"
     },
     {
       "name": "PortableWidget",
