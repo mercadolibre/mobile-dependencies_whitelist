@@ -813,6 +813,12 @@
     {
       "group": "com\\.mercadolibre\\.android\\.flox",
       "name": "engine",
+      "version": "10\\.\\+"
+    },
+    {
+      "expires": "2024-03-25",
+      "group": "com\\.mercadolibre\\.android\\.flox",
+      "name": "engine",
       "version": "9\\.\\+"
     },
     {
@@ -988,6 +994,10 @@
       "expires": "2023-12-30",
       "group": "com\\.mercadolibre\\.android\\.comparator",
       "version": "7\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.comparator",
+      "version": "9\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.qadb",
