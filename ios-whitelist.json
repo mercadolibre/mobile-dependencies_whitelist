@@ -800,10 +800,11 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "expires": "2024-06-31",
       "name": "MLUI",
       "source": "public",
       "target": "production",
-      "version": "^~>\\s?5.[0-9]+$"
+      "version": "^~>\\s?5.2[8-9]+"
     },
     {
       "name": "MLUIComponents",
@@ -1055,7 +1056,7 @@
       "name": "MLBusinessComponents",
       "source": "public",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?1.[5-9][0-9]+"
     },
     {
       "name": "MLInsightsMetric",
@@ -1115,7 +1116,7 @@
       "name": "AndesUI",
       "source": "public",
       "target": "production",
-      "version": "^~>\\s?3.[0-9]+"
+      "version": "^~>\\s?3.1[2-9][0-9]+"
     },
     {
       "name": "AndesIntegrations",
