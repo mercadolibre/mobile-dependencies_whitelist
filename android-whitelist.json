@@ -765,12 +765,6 @@
       "version": "mercadolibre-8\\.\\+|mercadopago-8\\.\\+"
     },
     {
-      "expires": "2023-12-15",
-      "group": "com\\.mercadolibre\\.android\\.charts",
-      "name": "melicharts",
-      "version": "5\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.charts",
       "name": "melicharts",
       "version": "6\\.\\+"
@@ -1095,11 +1089,6 @@
       "version": "9\\.\\+"
     },
     {
-      "expires": "2023-12-22",
-      "group": "com\\.mercadolibre\\.android\\.uicomponents",
-      "version": "16\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.uicomponents",
       "version": "17\\.\\+"
     },
@@ -1216,13 +1205,6 @@
       "group": "com\\.mercadolibre\\.android\\.pendings",
       "name": "pendingscontainer",
       "version": "4\\.\\+"
-    },
-    {
-      "description": "Deprecated due to kotlin 1.8 migration. Use version 9.+",
-      "expires": "2023-01-01",
-      "group": "com\\.mercadolibre\\.android\\.cardscomponents",
-      "name": "cards-components",
-      "version": "8\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cardscomponents",
@@ -1571,21 +1553,9 @@
       "version": "8\\.\\+"
     },
     {
-      "expires": "2023-12-24",
-      "group": "com\\.mercadolibre\\.android\\.security",
-      "name": "security_preferences",
-      "version": "mercadopago-8\\.\\+|mercadolibre-8\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.security",
       "name": "security_preferences",
       "version": "mercadopago-9\\.\\+|mercadolibre-9\\.\\+"
-    },
-    {
-      "expires": "2023-12-19",
-      "group": "com\\.mercadolibre\\.android\\.security",
-      "name": "security_ui",
-      "version": "mercadopago-7\\.\\+|mercadolibre-7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.security",
@@ -1613,12 +1583,6 @@
       "group": "com\\.mercadolibre\\.android\\.security_two_fa",
       "name": "totp",
       "version": "8\\.\\+"
-    },
-    {
-      "expires": "2023-12-24",
-      "group": "com\\.mercadolibre\\.android\\.security",
-      "name": "native_reauth",
-      "version": "mercadopago-5\\.\\+|mercadolibre-5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.security",
@@ -2502,20 +2466,6 @@
       "version": "1\\.+"
     },
     {
-      "description": "Deprecated due to kotlin 1.8 migration. Use version 9.+",
-      "expires": "2023-01-01",
-      "group": "com\\.mercadolibre\\.android\\.cardsbanking",
-      "name": "cards-home-section",
-      "version": "6\\.\\+"
-    },
-    {
-      "description": "Deprecated due to kotlin 1.8 migration. Use version 9.+",
-      "expires": "2023-01-01",
-      "group": "com\\.mercadolibre\\.android\\.cardsbanking",
-      "name": "card-widget",
-      "version": "6\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.cardsbanking",
       "name": "cards-home-section",
       "version": "9\\.\\+"
@@ -3152,20 +3102,6 @@
       "group": "com\\.qualtrics",
       "name": "digital",
       "version": "2\\.9\\.3"
-    },
-    {
-      "description": "Deprecated due to kotlin 1.8 migration. Use version 2.+",
-      "expires": "2023-12-22",
-      "group": "com\\.mercadolibre\\.android\\.ml_qualtrics",
-      "name": "core",
-      "version": "1\\.\\+"
-    },
-    {
-      "description": "Deprecated due to kotlin 1.8 migration. Use version 2.+",
-      "expires": "2023-12-22",
-      "group": "com\\.mercadolibre\\.android\\.ml_qualtrics",
-      "name": "ui",
-      "version": "1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.ml_qualtrics",
