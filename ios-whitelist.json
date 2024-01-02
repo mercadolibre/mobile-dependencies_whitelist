@@ -43,14 +43,6 @@
       "version": "^~>\\s?10.[0-9]+$"
     },
     {
-      "description": "This version will be deprecated in favor of 5.0.0 on 2023-12-29",
-      "expires": "2023-12-29",
-      "name": "MLCheckoutSDK",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?4.[0-9]+.?[0-9]*$"
-    },
-    {
       "name": "MLCheckoutSDK",
       "source": "private",
       "target": "production",
@@ -473,13 +465,6 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
-    },
-    {
-      "expires": "2023-12-31",
-      "name": "MLCharts",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "MLCharts",
@@ -1538,14 +1523,6 @@
       "version": "^~>\\s?0.[0-9]+"
     },
     {
-      "description": "This version will be deprecated in favor of 2.0.0 on 2023-12-31",
-      "expires": "2023-12-31",
-      "name": "SmartTokenization",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
-    },
-    {
       "name": "SmartTokenization",
       "source": "private",
       "target": "production",
@@ -1625,14 +1602,6 @@
     },
     {
       "name": "MyAccountClient",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "description": "This version will be deprecated in favor of 2.0.0 on 2023-12-31",
-      "expires": "2023-12-31",
-      "name": "NavigationRouter",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
@@ -1917,14 +1886,6 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "description": "This version will be deprecated in favor of 2.0.0",
-      "expires": "2023-12-31",
-      "name": "IspSf",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "IspSf",
