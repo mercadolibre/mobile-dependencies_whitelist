@@ -1055,9 +1055,15 @@
       "version": "3\\.\\+"
     },
     {
+      "expires": "2024-01-30",
       "group": "com\\.mercadolibre\\.android\\.security",
       "name": "attestation",
       "version": "9\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.security",
+      "name": "attestation",
+      "version": "10\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.uicomponents",
