@@ -2336,9 +2336,15 @@
       "version": "9\\.+"
     },
     {
+      "expires": "2024-02-09",
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-mlkit-text-recognition",
       "version": "17\\.0\\.1"
+    },
+    {
+      "group": "com\\.google\\.android\\.gms",
+      "name": "play-services-mlkit-text-recognition",
+      "version": "18\\.0\\.0"
     },
     {
       "group": "com\\.google\\.android\\.gms",
