@@ -1878,14 +1878,26 @@
       "version": "2\\.3\\.1"
     },
     {
+      "expires": "2024-03-30",
       "group": "androidx\\.work",
       "name": "work-runtime",
       "version": "2\\.7\\.0"
     },
     {
+      "expires": "2024-03-30",
       "group": "androidx\\.work",
       "name": "work-runtime-ktx",
       "version": "2\\.7\\.0"
+    },
+    {
+      "group": "androidx\\.work",
+      "name": "work-runtime",
+      "version": "2\\.8\\.1"
+    },
+    {
+      "group": "androidx\\.work",
+      "name": "work-runtime-ktx",
+      "version": "2\\.8\\.1"
     },
     {
       "group": "androidx\\.concurrent",
@@ -1898,50 +1910,51 @@
       "version": "1\\.4\\.0"
     },
     {
-      "expires": "2024-06-30",
-      "group": "androidx\\.room",
-      "name": "room-runtime",
-      "version": "2\\.3\\.0"
-    },
-    {
-      "expires": "2024-06-30",
-      "group": "androidx\\.room",
-      "name": "room-compiler",
-      "version": "2\\.3\\.0"
-    },
-    {
-      "expires": "2024-06-30",
-      "group": "androidx\\.room",
-      "name": "room-ktx",
-      "version": "2\\.3\\.0"
-    },
-    {
-      "expires": "2024-06-30",
-      "group": "androidx\\.room",
-      "name": "room-rxjava2",
-      "version": "2\\.3\\.0"
-    },
-    {
+      "expires": "2024-03-30",
       "group": "androidx\\.room",
       "name": "room-runtime",
       "version": "2\\.4\\.3"
     },
     {
+      "expires": "2024-03-30",
       "group": "androidx\\.room",
       "name": "room-compiler",
       "version": "2\\.4\\.3"
     },
     {
+      "expires": "2024-03-30",
       "group": "androidx\\.room",
       "name": "room-ktx",
       "version": "2\\.4\\.3"
     },
     {
       "description": "Esta libs se encuentra deprecada, recomendamos utilizar coroutine",
-      "expires": "2024-12-01",
+      "expires": "2024-03-30",
       "group": "androidx\\.room",
       "name": "room-rxjava2",
       "version": "2\\.4\\.3"
+    },
+    {
+      "group": "androidx\\.room",
+      "name": "room-runtime",
+      "version": "2\\.5\\.1"
+    },
+    {
+      "group": "androidx\\.room",
+      "name": "room-compiler",
+      "version": "2\\.5\\.1"
+    },
+    {
+      "group": "androidx\\.room",
+      "name": "room-ktx",
+      "version": "2\\.5\\.1"
+    },
+    {
+      "description": "Esta libs se encuentra deprecada, recomendamos utilizar coroutine",
+      "expires": "2024-12-01",
+      "group": "androidx\\.room",
+      "name": "room-rxjava2",
+      "version": "2\\.5\\.1"
     },
     {
       "group": "androidx\\.biometric",
