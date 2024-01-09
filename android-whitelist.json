@@ -302,12 +302,6 @@
       "version": "21\\.1\\.2"
     },
     {
-      "expires": "2024-01-01",
-      "group": "com\\.google\\.android\\.play",
-      "name": "integrity",
-      "version": "1\\.1\\.0-beta01"
-    },
-    {
       "group": "com\\.google\\.android\\.play",
       "name": "integrity",
       "version": "1\\.0\\.1"
@@ -715,12 +709,6 @@
       "version": "8\\.\\+"
     },
     {
-      "expires": "2024-01-02",
-      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.flox\\.components",
-      "name": "core",
-      "version": "10\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.flox\\.components",
       "name": "core",
       "version": "11\\.\\+"
@@ -760,12 +748,6 @@
       "version": "4\\.\\+"
     },
     {
-      "expires": "2024-01-01",
-      "group": "com\\.mercadolibre\\.android\\.cross_app_links",
-      "name": "core",
-      "version": "mercadolibre-7\\.\\+|mercadopago-7\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.cross_app_links",
       "name": "core",
       "version": "mercadolibre-8\\.\\+|mercadopago-8\\.\\+"
@@ -779,11 +761,6 @@
       "group": "com\\.mercadolibre\\.android\\.classifieds",
       "name": "dynamic-flow",
       "version": "1\\.\\+"
-    },
-    {
-      "expires": "2024-01-01",
-      "group": "com\\.mercadolibre\\.android\\.commons",
-      "version": "30\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.commons",
@@ -1037,21 +1014,9 @@
       "version": "3\\.\\+"
     },
     {
-      "expires": "2024-01-01",
-      "group": "com\\.mercadolibre\\.android\\.search",
-      "name": "compats",
-      "version": "18\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "compats",
       "version": "19\\.\\+"
-    },
-    {
-      "expires": "2024-01-01",
-      "group": "com\\.mercadolibre\\.android\\.search",
-      "name": "input",
-      "version": "18\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.search",
@@ -1059,32 +1024,14 @@
       "version": "19\\.\\+"
     },
     {
-      "expires": "2024-01-01",
-      "group": "com\\.mercadolibre\\.android\\.search",
-      "name": "autosuggest",
-      "version": "18\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "autosuggest",
       "version": "19\\.\\+"
     },
     {
-      "expires": "2024-01-01",
-      "group": "com\\.mercadolibre\\.android\\.search",
-      "name": "morelikethis",
-      "version": "18\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "morelikethis",
       "version": "19\\.\\+"
-    },
-    {
-      "expires": "2024-01-01",
-      "group": "com\\.mercadolibre\\.android\\.search",
-      "name": "search",
-      "version": "18\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.search",
@@ -1110,18 +1057,6 @@
     {
       "group": "com\\.mercadolibre\\.android\\.uicomponents",
       "version": "17\\.\\+"
-    },
-    {
-      "expires": "2024-01-01",
-      "group": "com\\.mercadolibre\\.android\\.navigation_manager",
-      "name": "core",
-      "version": "4\\.\\+"
-    },
-    {
-      "expires": "2024-01-01",
-      "group": "com\\.mercadolibre\\.android\\.navigation_manager",
-      "name": "tabbar",
-      "version": "mercadopago-4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.navigation_manager",
@@ -1203,12 +1138,6 @@
       "group": "com\\.mercadolibre\\.android\\.usersections",
       "name": "ui-sections",
       "version": "mercadolibre-6\\.+|mercadopago-6\\.\\+"
-    },
-    {
-      "expires": "2024-01-01",
-      "group": "com\\.mercadolibre\\.android\\.mercadocoin",
-      "name": "cryptodata",
-      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.mercadocoin",
@@ -1991,14 +1920,26 @@
       "version": "2\\.3\\.1"
     },
     {
+      "expires": "2024-03-30",
       "group": "androidx\\.work",
       "name": "work-runtime",
       "version": "2\\.7\\.0"
     },
     {
+      "expires": "2024-03-30",
       "group": "androidx\\.work",
       "name": "work-runtime-ktx",
       "version": "2\\.7\\.0"
+    },
+    {
+      "group": "androidx\\.work",
+      "name": "work-runtime",
+      "version": "2\\.8\\.1"
+    },
+    {
+      "group": "androidx\\.work",
+      "name": "work-runtime-ktx",
+      "version": "2\\.8\\.1"
     },
     {
       "group": "androidx\\.concurrent",
@@ -2011,50 +1952,51 @@
       "version": "1\\.4\\.0"
     },
     {
-      "expires": "2024-06-30",
-      "group": "androidx\\.room",
-      "name": "room-runtime",
-      "version": "2\\.3\\.0"
-    },
-    {
-      "expires": "2024-06-30",
-      "group": "androidx\\.room",
-      "name": "room-compiler",
-      "version": "2\\.3\\.0"
-    },
-    {
-      "expires": "2024-06-30",
-      "group": "androidx\\.room",
-      "name": "room-ktx",
-      "version": "2\\.3\\.0"
-    },
-    {
-      "expires": "2024-06-30",
-      "group": "androidx\\.room",
-      "name": "room-rxjava2",
-      "version": "2\\.3\\.0"
-    },
-    {
+      "expires": "2024-03-30",
       "group": "androidx\\.room",
       "name": "room-runtime",
       "version": "2\\.4\\.3"
     },
     {
+      "expires": "2024-03-30",
       "group": "androidx\\.room",
       "name": "room-compiler",
       "version": "2\\.4\\.3"
     },
     {
+      "expires": "2024-03-30",
       "group": "androidx\\.room",
       "name": "room-ktx",
       "version": "2\\.4\\.3"
     },
     {
       "description": "Esta libs se encuentra deprecada, recomendamos utilizar coroutine",
-      "expires": "2024-12-01",
+      "expires": "2024-03-30",
       "group": "androidx\\.room",
       "name": "room-rxjava2",
       "version": "2\\.4\\.3"
+    },
+    {
+      "group": "androidx\\.room",
+      "name": "room-runtime",
+      "version": "2\\.5\\.1"
+    },
+    {
+      "group": "androidx\\.room",
+      "name": "room-compiler",
+      "version": "2\\.5\\.1"
+    },
+    {
+      "group": "androidx\\.room",
+      "name": "room-ktx",
+      "version": "2\\.5\\.1"
+    },
+    {
+      "description": "Esta libs se encuentra deprecada, recomendamos utilizar coroutine",
+      "expires": "2024-12-01",
+      "group": "androidx\\.room",
+      "name": "room-rxjava2",
+      "version": "2\\.5\\.1"
     },
     {
       "group": "androidx\\.biometric",
@@ -2159,12 +2101,6 @@
     {
       "group": "com\\.mercadolibre\\.android\\.cardsengagement",
       "version": "13\\.\\+"
-    },
-    {
-      "expires": "2024-01-01",
-      "group": "com\\.mercadolibre\\.android\\.navigation",
-      "name": "menu",
-      "version": "mercadolibre-9\\.\\+|mercadopago-9\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.navigation",
@@ -3383,6 +3319,10 @@
       "group": "androidx\\.tracing",
       "name": "tracing",
       "version": "1\\.10\\.0"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.webkitextensions",
+      "version": "1.\\+"
     }
   ]
 }
