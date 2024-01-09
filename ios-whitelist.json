@@ -1053,6 +1053,13 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "expires": "2024-15-01",
+      "name": "MLBusinessComponents",
+      "source": "public",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
       "name": "MLBusinessComponents",
       "source": "public",
       "target": "production",
@@ -1111,6 +1118,13 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?2.[0-9]+"
+    },
+    {
+      "expires": "2024-15-01",
+      "name": "AndesUI",
+      "source": "public",
+      "target": "production",
+      "version": "^~>\\s?3.[0-9]+"
     },
     {
       "name": "AndesUI",
