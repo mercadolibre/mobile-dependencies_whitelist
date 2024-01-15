@@ -51,21 +51,9 @@
       "version": "3\\.+"
     },
     {
-      "expires": "2024-01-09",
-      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
-      "name": "review",
-      "version": "10\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "review",
       "version": "11\\.\\+"
-    },
-    {
-      "expires": "2024-01-09",
-      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
-      "name": "congrats",
-      "version": "10\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
@@ -73,21 +61,9 @@
       "version": "11\\.\\+"
     },
     {
-      "expires": "2024-01-09",
-      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
-      "name": "integrator_sdk",
-      "version": "10\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "integrator_sdk",
       "version": "11\\.\\+"
-    },
-    {
-      "expires": "2024-01-09",
-      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
-      "name": "one_tap",
-      "version": "10\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
@@ -95,21 +71,9 @@
       "version": "11\\.\\+"
     },
     {
-      "expires": "2024-01-09",
-      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
-      "name": "payment",
-      "version": "10\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "payment",
       "version": "11\\.\\+"
-    },
-    {
-      "expires": "2024-01-09",
-      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
-      "name": "shipping",
-      "version": "10\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
@@ -117,32 +81,14 @@
       "version": "11\\.\\+"
     },
     {
-      "expires": "2024-01-09",
-      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
-      "name": "billing_info",
-      "version": "10\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "billing_info",
       "version": "11\\.\\+"
     },
     {
-      "expires": "2024-01-09",
-      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
-      "name": "flow",
-      "version": "10\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
       "name": "flow",
       "version": "11\\.\\+"
-    },
-    {
-      "expires": "2024-01-09",
-      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
-      "name": "split_payments",
-      "version": "10\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.checkout",
@@ -300,12 +246,6 @@
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-vision",
       "version": "21\\.1\\.2"
-    },
-    {
-      "expires": "2024-01-01",
-      "group": "com\\.google\\.android\\.play",
-      "name": "integrity",
-      "version": "1\\.1\\.0-beta01"
     },
     {
       "group": "com\\.google\\.android\\.play",
@@ -615,29 +555,59 @@
       "version": "21\\.\\+"
     },
     {
+      "expires": "2024-03-31",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient",
       "version": "22\\.\\+"
     },
     {
+      "expires": "2024-03-31",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-adapter-bus",
       "version": "22\\.\\+"
     },
     {
+      "expires": "2024-03-31",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-adapter-rx2",
       "version": "22\\.\\+"
     },
     {
+      "expires": "2024-03-31",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-converter-json",
       "version": "22\\.\\+"
     },
     {
+      "expires": "2024-03-31",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-extension-header",
       "version": "22\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient",
+      "version": "23\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient-adapter-bus",
+      "version": "23\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient-adapter-rx2",
+      "version": "23\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient-converter-json",
+      "version": "23\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient-extension-header",
+      "version": "23\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -685,12 +655,6 @@
       "version": "8\\.\\+"
     },
     {
-      "expires": "2024-01-02",
-      "group": "com\\.mercadolibre\\.android\\.buyingflow\\.flox\\.components",
-      "name": "core",
-      "version": "10\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.flox\\.components",
       "name": "core",
       "version": "11\\.\\+"
@@ -730,12 +694,6 @@
       "version": "4\\.\\+"
     },
     {
-      "expires": "2024-01-01",
-      "group": "com\\.mercadolibre\\.android\\.cross_app_links",
-      "name": "core",
-      "version": "mercadolibre-7\\.\\+|mercadopago-7\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.cross_app_links",
       "name": "core",
       "version": "mercadolibre-8\\.\\+|mercadopago-8\\.\\+"
@@ -749,11 +707,6 @@
       "group": "com\\.mercadolibre\\.android\\.classifieds",
       "name": "dynamic-flow",
       "version": "1\\.\\+"
-    },
-    {
-      "expires": "2024-01-01",
-      "group": "com\\.mercadolibre\\.android\\.commons",
-      "version": "30\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.commons",
@@ -822,14 +775,26 @@
       "version": "mercadolibre-10\\.\\+|mercadopago-10\\.\\+"
     },
     {
+      "expires": "2024-03-31",
       "group": "com\\.mercadolibre\\.android\\.local\\.storage",
       "name": "core",
       "version": "8\\.\\+"
     },
     {
+      "expires": "2024-03-31",
       "group": "com\\.mercadolibre\\.android\\.local\\.storage",
       "name": "kvs-defaults",
       "version": "8\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.local\\.storage",
+      "name": "core",
+      "version": "9\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.local\\.storage",
+      "name": "kvs-defaults",
+      "version": "9\\.\\+"
     },
     {
       "expires": "2024-01-22",
@@ -995,21 +960,9 @@
       "version": "3\\.\\+"
     },
     {
-      "expires": "2024-01-01",
-      "group": "com\\.mercadolibre\\.android\\.search",
-      "name": "compats",
-      "version": "18\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "compats",
       "version": "19\\.\\+"
-    },
-    {
-      "expires": "2024-01-01",
-      "group": "com\\.mercadolibre\\.android\\.search",
-      "name": "input",
-      "version": "18\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.search",
@@ -1017,32 +970,14 @@
       "version": "19\\.\\+"
     },
     {
-      "expires": "2024-01-01",
-      "group": "com\\.mercadolibre\\.android\\.search",
-      "name": "autosuggest",
-      "version": "18\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "autosuggest",
       "version": "19\\.\\+"
     },
     {
-      "expires": "2024-01-01",
-      "group": "com\\.mercadolibre\\.android\\.search",
-      "name": "morelikethis",
-      "version": "18\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "morelikethis",
       "version": "19\\.\\+"
-    },
-    {
-      "expires": "2024-01-01",
-      "group": "com\\.mercadolibre\\.android\\.search",
-      "name": "search",
-      "version": "18\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.search",
@@ -1068,18 +1003,6 @@
     {
       "group": "com\\.mercadolibre\\.android\\.uicomponents",
       "version": "17\\.\\+"
-    },
-    {
-      "expires": "2024-01-01",
-      "group": "com\\.mercadolibre\\.android\\.navigation_manager",
-      "name": "core",
-      "version": "4\\.\\+"
-    },
-    {
-      "expires": "2024-01-01",
-      "group": "com\\.mercadolibre\\.android\\.navigation_manager",
-      "name": "tabbar",
-      "version": "mercadopago-4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.navigation_manager",
@@ -1161,12 +1084,6 @@
       "group": "com\\.mercadolibre\\.android\\.usersections",
       "name": "ui-sections",
       "version": "mercadolibre-6\\.+|mercadopago-6\\.\\+"
-    },
-    {
-      "expires": "2024-01-01",
-      "group": "com\\.mercadolibre\\.android\\.mercadocoin",
-      "name": "cryptodata",
-      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.mercadocoin",
@@ -1260,7 +1177,7 @@
     {
       "group": "com\\.mercadolibre\\.android\\.px\\.pmselector",
       "name": "pmselector",
-      "version": "1\\.+"
+      "version": "mercadopago-1\\.\\+|mercadolibre-1\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.sdk",
@@ -1956,14 +1873,26 @@
       "version": "2\\.3\\.1"
     },
     {
+      "expires": "2024-03-30",
       "group": "androidx\\.work",
       "name": "work-runtime",
       "version": "2\\.7\\.0"
     },
     {
+      "expires": "2024-03-30",
       "group": "androidx\\.work",
       "name": "work-runtime-ktx",
       "version": "2\\.7\\.0"
+    },
+    {
+      "group": "androidx\\.work",
+      "name": "work-runtime",
+      "version": "2\\.8\\.1"
+    },
+    {
+      "group": "androidx\\.work",
+      "name": "work-runtime-ktx",
+      "version": "2\\.8\\.1"
     },
     {
       "group": "androidx\\.concurrent",
@@ -1976,50 +1905,51 @@
       "version": "1\\.4\\.0"
     },
     {
-      "expires": "2024-06-30",
-      "group": "androidx\\.room",
-      "name": "room-runtime",
-      "version": "2\\.3\\.0"
-    },
-    {
-      "expires": "2024-06-30",
-      "group": "androidx\\.room",
-      "name": "room-compiler",
-      "version": "2\\.3\\.0"
-    },
-    {
-      "expires": "2024-06-30",
-      "group": "androidx\\.room",
-      "name": "room-ktx",
-      "version": "2\\.3\\.0"
-    },
-    {
-      "expires": "2024-06-30",
-      "group": "androidx\\.room",
-      "name": "room-rxjava2",
-      "version": "2\\.3\\.0"
-    },
-    {
+      "expires": "2024-03-30",
       "group": "androidx\\.room",
       "name": "room-runtime",
       "version": "2\\.4\\.3"
     },
     {
+      "expires": "2024-03-30",
       "group": "androidx\\.room",
       "name": "room-compiler",
       "version": "2\\.4\\.3"
     },
     {
+      "expires": "2024-03-30",
       "group": "androidx\\.room",
       "name": "room-ktx",
       "version": "2\\.4\\.3"
     },
     {
       "description": "Esta libs se encuentra deprecada, recomendamos utilizar coroutine",
-      "expires": "2024-12-01",
+      "expires": "2024-03-30",
       "group": "androidx\\.room",
       "name": "room-rxjava2",
       "version": "2\\.4\\.3"
+    },
+    {
+      "group": "androidx\\.room",
+      "name": "room-runtime",
+      "version": "2\\.5\\.1"
+    },
+    {
+      "group": "androidx\\.room",
+      "name": "room-compiler",
+      "version": "2\\.5\\.1"
+    },
+    {
+      "group": "androidx\\.room",
+      "name": "room-ktx",
+      "version": "2\\.5\\.1"
+    },
+    {
+      "description": "Esta libs se encuentra deprecada, recomendamos utilizar coroutine",
+      "expires": "2024-12-01",
+      "group": "androidx\\.room",
+      "name": "room-rxjava2",
+      "version": "2\\.5\\.1"
     },
     {
       "group": "androidx\\.biometric",
@@ -2126,12 +2056,6 @@
       "version": "13\\.\\+"
     },
     {
-      "expires": "2024-01-01",
-      "group": "com\\.mercadolibre\\.android\\.navigation",
-      "name": "menu",
-      "version": "mercadolibre-9\\.\\+|mercadopago-9\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.navigation",
       "name": "menu",
       "version": "mercadolibre-10\\.\\+|mercadopago-10\\.\\+"
@@ -2163,21 +2087,9 @@
       "version": "2\\.\\+"
     },
     {
-      "expires": "2024-01-09",
-      "group": "com\\.mercadolibre\\.android\\.addresses",
-      "name": "core",
-      "version": "mercadolibre-8\\.\\+|mercadopago-8\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.addresses",
       "name": "core",
       "version": "mercadolibre-9\\.\\+|mercadopago-9\\.\\+"
-    },
-    {
-      "expires": "2024-01-09",
-      "group": "com\\.mercadolibre\\.android\\.addresses",
-      "name": "zipcode",
-      "version": "mercadolibre-8\\.\\+|mercadopago-8\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.nfcpayments",
@@ -2343,9 +2255,15 @@
       "version": "9\\.+"
     },
     {
+      "expires": "2024-02-09",
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-mlkit-text-recognition",
       "version": "17\\.0\\.1"
+    },
+    {
+      "group": "com\\.google\\.android\\.gms",
+      "name": "play-services-mlkit-text-recognition",
+      "version": "18\\.0\\.0"
     },
     {
       "group": "com\\.google\\.android\\.gms",
@@ -2623,14 +2541,26 @@
       "version": "1\\.+"
     },
     {
+      "expires": "2024-03-31",
       "group": "com\\.mercadolibre\\.android\\.mobile_cryptography",
       "name": "core",
       "version": "4\\.+"
     },
     {
+      "expires": "2024-03-31",
       "group": "com\\.mercadolibre\\.android\\.mobile_cryptography",
       "name": "test-utils",
       "version": "4\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.mobile_cryptography",
+      "name": "core",
+      "version": "5\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.mobile_cryptography",
+      "name": "test-utils",
+      "version": "5\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.valkiria",
@@ -2658,88 +2588,136 @@
       "version": "2\\.\\+"
     },
     {
-      "expires": "2024-01-12",
-      "group": "com\\.mercadopago\\.android\\.cashin",
-      "name": "seller",
-      "version": "13\\.\\+"
-    },
-    {
-      "expires": "2024-01-12",
-      "group": "com\\.mercadopago\\.android\\.cashin",
-      "name": "payer",
-      "version": "13\\.\\+"
-    },
-    {
-      "expires": "2024-01-12",
-      "group": "com\\.mercadopago\\.android\\.cashin",
-      "name": "commons",
-      "version": "13\\.\\+"
-    },
-    {
+      "expires": "2024-02-12",
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "seller",
       "version": "14\\.\\+"
     },
     {
+      "expires": "2024-02-12",
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "payer",
       "version": "14\\.\\+"
     },
     {
+      "expires": "2024-02-12",
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "commons",
       "version": "14\\.\\+"
     },
     {
-      "expires": "2024-01-12",
-      "group": "com\\.mercadolibre\\.android\\.cashout",
-      "name": "cashout",
-      "version": "10\\.\\+"
+      "group": "com\\.mercadopago\\.android\\.cashin",
+      "name": "seller",
+      "version": "15\\.\\+"
     },
     {
+      "group": "com\\.mercadopago\\.android\\.cashin",
+      "name": "payer",
+      "version": "15\\.\\+"
+    },
+    {
+      "group": "com\\.mercadopago\\.android\\.cashin",
+      "name": "commons",
+      "version": "15\\.\\+"
+    },
+    {
+      "expires": "2024-02-12",
       "group": "com\\.mercadolibre\\.android\\.cashout",
       "name": "cashout",
       "version": "11\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.cashout",
+      "name": "cashout",
+      "version": "12\\.\\+"
+    },
+    {
+      "expires": "2024-02-12",
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "rating",
       "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
+      "name": "rating",
+      "version": "6\\.\\+"
+    },
+    {
+      "expires": "2024-02-12",
+      "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "core",
       "version": "5\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.cash_rails",
+      "name": "core",
+      "version": "6\\.\\+"
+    },
+    {
+      "expires": "2024-02-12",
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "feedback",
       "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
+      "name": "feedback",
+      "version": "6\\.\\+"
+    },
+    {
+      "expires": "2024-02-12",
+      "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "tab",
       "version": "5\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.cash_rails",
+      "name": "tab",
+      "version": "6\\.\\+"
+    },
+    {
+      "expires": "2024-02-12",
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "ui_component",
       "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
+      "name": "ui_component",
+      "version": "6\\.\\+"
+    },
+    {
+      "expires": "2024-02-12",
+      "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "commons",
       "version": "5\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.cash_rails",
+      "name": "commons",
+      "version": "6\\.\\+"
+    },
+    {
+      "expires": "2024-02-12",
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "map",
       "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
+      "name": "map",
+      "version": "6\\.\\+"
+    },
+    {
+      "expires": "2024-02-12",
+      "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "report",
       "version": "5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cash_rails",
+      "name": "report",
+      "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.mp_sellers_growth",
@@ -3130,6 +3108,11 @@
       "version": "2\\.18\\.4"
     },
     {
+      "group": "com\\.google\\.android\\.exoplayer",
+      "name": "exoplayer-datasource",
+      "version": "2\\.18\\.4"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.fbm\\.wms\\.flan",
       "name": "core",
       "version": "4\\.\\+"
@@ -3168,6 +3151,11 @@
       "group": "com\\.mercadolibre\\.android\\.isp_sf",
       "name": "di",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "di",
+      "version": "2\\.\\+"
     },
     {
       "expires": "2024-01-30",
@@ -3217,6 +3205,11 @@
       "version": "1\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "network",
+      "version": "2\\.\\+"
+    },
+    {
       "expires": "2024-01-30",
       "group": "com\\.mercadolibre\\.android\\.isp_sf",
       "name": "notification",
@@ -3263,12 +3256,6 @@
       "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
       "name": "android-service",
       "version": "1\\.\\+"
-    },
-    {
-      "expires": "2024-01-09",
-      "group": "com\\.mercadolibre\\.android\\.xprod_flox_components",
-      "name": "core",
-      "version": "0\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.xprod_flox_components",
@@ -3330,6 +3317,10 @@
       "group": "androidx\\.tracing",
       "name": "tracing",
       "version": "1\\.10\\.0"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.webkitextensions",
+      "version": "1.\\+"
     }
   ]
 }
