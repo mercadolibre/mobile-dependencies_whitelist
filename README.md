@@ -88,14 +88,14 @@ Example:
 }
 ```
 
-##Support for Granular Dependencies:
+## Support for Granular Dependencies:
 
 This functionality provides a more precise management of the scope of dependencies, giving us the ability to select specific consumers for each of them.
 
 To activate the granularity feature, it is necessary to introduce a new block within the dependency definition, specifying which Mercado Libre projects will have access to it. This should be done as follows:
 
 
-###Android Platform
+### Android Platform
 ```
 {
   "whitelist": [
@@ -115,7 +115,7 @@ To activate the granularity feature, it is necessary to introduce a new block wi
 }
 ```
 
-###iOS Platform
+### iOS Platform
 ```
 {
   "whitelist": [
