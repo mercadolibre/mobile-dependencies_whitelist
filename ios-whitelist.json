@@ -1729,13 +1729,6 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "expires": "2024-01-12",
-      "name": "AppMonitoring",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
       "name": "AppMonitoring",
       "source": "private",
       "target": "production",
@@ -1746,13 +1739,6 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "expires": "2024-01-12",
-      "name": "DatadogSDK",
-      "source": "public",
-      "target": "production",
-      "version": "1.23.0"
     },
     {
       "name": "DatadogInternal",
@@ -1783,13 +1769,6 @@
       "source": "public",
       "target": "production",
       "version": "2.4.0"
-    },
-    {
-      "expires": "2024-01-12",
-      "name": "DatadogSDKCrashReporting",
-      "source": "public",
-      "target": "production",
-      "version": "1.23.0"
     },
     {
       "name": "DatadogCrashReporting",
