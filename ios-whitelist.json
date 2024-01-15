@@ -1744,13 +1744,6 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "expires": "2024-01-12",
-      "name": "AppMonitoring",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
       "name": "AppMonitoring",
       "source": "private",
       "target": "production",
@@ -1761,13 +1754,6 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "expires": "2024-01-12",
-      "name": "DatadogSDK",
-      "source": "public",
-      "target": "production",
-      "version": "1.23.0"
     },
     {
       "name": "DatadogInternal",
@@ -1798,13 +1784,6 @@
       "source": "public",
       "target": "production",
       "version": "2.4.0"
-    },
-    {
-      "expires": "2024-01-12",
-      "name": "DatadogSDKCrashReporting",
-      "source": "public",
-      "target": "production",
-      "version": "1.23.0"
     },
     {
       "name": "DatadogCrashReporting",
@@ -1909,10 +1888,18 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "description": "This version will be deprecated in favor of 3.0.0",
+      "expires": "2024-03-30",
       "name": "IspSf",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "name": "IspSf",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?3.[0-9]+$"
     },
     {
       "name": "BuyingflowCoreFlox",
