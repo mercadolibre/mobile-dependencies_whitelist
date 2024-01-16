@@ -1132,9 +1132,16 @@
       "version": "7\\.\\+"
     },
     {
+      "description": "This version will be deprecated on the same date as OkHttp 3",
+      "expires": "2024-03-31",
       "group": "com\\.mercadopago\\.android\\.digital_accounts_components",
       "name": "digital_accounts_components",
       "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadopago\\.android\\.digital_accounts_components",
+      "name": "digital_accounts_components",
+      "version": "7\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.ml_esc_manager",
