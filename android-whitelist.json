@@ -1227,6 +1227,11 @@
       "version": "7\\.+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.point\\.mpos",
+      "name": "entrypoint",
+      "version": "8\\.+"
+    },
+    {
       "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
       "name": "mpoc",
       "version": "0\\.+"
@@ -3328,7 +3333,7 @@
     {
       "group": "androidx\\.tracing",
       "name": "tracing",
-      "version": "1\\.10\\.0"
+      "version": "1\\.1\\.0"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.webkitextensions",
