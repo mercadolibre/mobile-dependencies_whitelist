@@ -3405,6 +3405,70 @@
     {
       "group": "com\\.mercadolibre\\.android\\.webkitextensions",
       "version": "1.\\+"
+    },
+    {
+      "group": "androidx\\.compose",
+      "name": "compose-bom",
+      "version": "2023\\.03\\.00",
+      "allows_granular_projects": [
+        "com.mercadolibre.android.andesui"
+      ]
+    },
+    {
+      "group": "androidx\\.compose\\.foundation",
+      "name": "foundation",
+      "allows_granular_projects": [
+        "com.mercadolibre.android.andesui"
+      ]
+    },
+    {
+      "group": "androidx\\.compose\\.ui",
+      "name": "ui",
+      "allows_granular_projects": [
+        "com.mercadolibre.android.andesui"
+      ]
+    },
+    {
+      "group": "androidx\\.compose\\.runtime",
+      "name": "runtime",
+      "allows_granular_projects": [
+        "com.mercadolibre.android.andesui"
+      ]
+    },
+    {
+      "group": "androidx\\.compose\\.ui",
+      "name": "ui-tooling-preview",
+      "allows_granular_projects": [
+        "com.mercadolibre.android.andesui"
+      ]
+    },
+    {
+      "group": "androidx\\.compose\\.ui",
+      "name": "ui-tooling",
+      "allows_granular_projects": [
+        "com.mercadolibre.android.andesui"
+      ]
+    },
+    {
+      "group": "androidx\\.compose\\.ui",
+      "name": "ui-test-manifest",
+      "allows_granular_projects": [
+        "com.mercadolibre.android.andesui"
+      ]
+    },
+    {
+      "group": "androidx\\.activity",
+      "name": "activity-compose",
+      "allows_granular_projects": [
+        "com.mercadolibre.android.andesui"
+      ]
+    },
+    {
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-runtime-compose",
+      "allows_granular_projects": [
+        "com.mercadolibre.android.andesui"
+      ]
     }
   ]
 }
