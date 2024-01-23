@@ -3490,15 +3490,17 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.andesui"
       ],
-      "group": "androidx\\.activity",
-      "name": "activity-compose"
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-runtime-compose",
+      "version": "2\\.6\\.1"
     },
     {
       "allows_granular_projects": [
         "com.mercadolibre.android.andesui"
       ],
-      "group": "androidx\\.lifecycle",
-      "name": "lifecycle-runtime-compose"
+      "group": "androidx\\.activity",
+      "name": "activity-compose",
+      "version": "1\\.7\\.2"
     }
   ]
 }
