@@ -3440,7 +3440,7 @@
       "group": "androidx\\.compose",
       "name": "compose-bom",
       "version": "2023\\.03\\.00",
-	  "allows_granular_projects": [
+	    "allows_granular_projects": [
         "com.mercadolibre.android.andesui"
       ]
     },
