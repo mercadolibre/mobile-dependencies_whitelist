@@ -14,8 +14,8 @@
 - [ ] Meli Store
 
 ## Mi dependencia es:
-- [ ] Interna
-- [ ] Externa
+- [] Interna: Libreria/modulo desarrollado in-house en base al ecosistema de Meli.
+- [] Externa: Libreria desarrollada por un externo a Meli. (Google, Airbnb, otros).
 
 ## En caso de ser una dependencia interna, se ha agregado una lib .aar o framework (iOS) en nexus sobre el proyecto?
 - [ ] Si, adjuntar link a nexus.
