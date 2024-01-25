@@ -473,8 +473,14 @@
     },
     {
       "group": "com\\.mercadolibre\\.android",
+      "expires": "2024-04-01",
       "name": "analytics",
       "version": "production-12\\.\\+|develop-12\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "analytics",
+      "version": "production-13\\.\\+|develop-13\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
