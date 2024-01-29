@@ -1287,11 +1287,11 @@
       "version": "8\\.+"
     },
     {
+      "expires": "2024-04-30",
       "allows_granular_projects": [
             "com.mercadopago.android.isp.point.mpoc",
             "com.mercadopago.android.isp.payment_contactless"
       ],
-      "expires": "2024-04-30",
       "group": "com\\.mercadopago\\.mpos\\.android\\.mpos\\.ttpkernel",
       "name": "visa-kernel",
       "version": "22\\.0\\.0"
