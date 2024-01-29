@@ -459,12 +459,6 @@
       "version": "1\\.\\+"
     },
     {
-      "expires": "2024-01-27",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "melidata-sdk",
-      "version": "17\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android",
       "name": "melidata-sdk",
       "version": "18\\.\\+"
@@ -839,12 +833,6 @@
       "version": "9\\.\\+"
     },
     {
-      "expires": "2024-01-22",
-      "group": "com\\.mercadolibre\\.android\\.maps",
-      "name": "core",
-      "version": "9\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.maps",
       "name": "core",
       "version": "10\\.\\+"
@@ -1192,12 +1180,6 @@
       "group": "com\\.mercadolibre\\.android\\.dami_ui_components",
       "name": "base_testapp",
       "version": "4\\.\\+"
-    },
-    {
-      "expires": "2024-01-28",
-      "group": "com\\.mercadolibre\\.android\\.static_resources",
-      "name": "static_resources",
-      "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.static_resources",
@@ -1682,18 +1664,6 @@
       "version": "10\\.+"
     },
     {
-      "expires": "2024-01-26",
-      "group": "com\\.mercadolibre\\.android\\.andesui",
-      "name": "coachmark",
-      "version": "7\\.\\+"
-    },
-    {
-      "expires": "2024-01-26",
-      "group": "com\\.mercadolibre\\.android\\.andesui",
-      "name": "components",
-      "version": "7\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.andesui",
       "name": "coachmark",
       "version": "8\\.\\+"
@@ -1702,12 +1672,6 @@
       "group": "com\\.mercadolibre\\.android\\.andesui",
       "name": "components",
       "version": "8\\.\\+"
-    },
-    {
-      "expires": "2024-01-26",
-      "group": "com\\.mercadolibre\\.android\\.andes_integrations",
-      "name": "integrations",
-      "version": "mercadopago-2\\.\\+|mercadolibre-2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.andes_integrations",
@@ -2534,24 +2498,6 @@
       "version": "5\\.+"
     },
     {
-      "expires": "2024-01-28",
-      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
-      "name": "scanner",
-      "version": "mercadolibre-12\\.\\+|mercadopago-12\\.\\+"
-    },
-    {
-      "expires": "2024-01-28",
-      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
-      "name": "ocr",
-      "version": "mercadolibre-12\\.\\+|mercadopago-12\\.\\+"
-    },
-    {
-      "expires": "2024-01-28",
-      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
-      "name": "barcode",
-      "version": "mercadolibre-12\\.\\+|mercadopago-12\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "scanner",
       "version": "mercadolibre-13\\.\\+|mercadopago-13\\.\\+"
@@ -3023,21 +2969,9 @@
       "version": "2\\.+"
     },
     {
-      "expires": "2024-01-22",
-      "group": "com\\.mercadolibre\\.android\\.app_monitoring",
-      "name": "setup",
-      "version": "1\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.app_monitoring",
       "name": "setup",
       "version": "2\\.\\+"
-    },
-    {
-      "expires": "2024-01-22",
-      "group": "com\\.mercadolibre\\.android\\.app_monitoring",
-      "name": "core",
-      "version": "1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.app_monitoring",
