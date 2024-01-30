@@ -88,6 +88,52 @@ Example:
 }
 ```
 
+## Support for Granular Dependencies:
+
+This functionality provides a more precise management of the scope of dependencies, giving us the ability to select specific consumers for each of them.
+
+To activate the granularity feature, it is necessary to introduce a new block within the dependency definition, specifying which Mercado Libre projects will have access to it. This should be done as follows:
+
+
+### Android Platform
+```
+{
+  "whitelist": [
+    {
+      "description": "(optional) description",
+      "expires": "yyyy-MM-dd",
+      "group": "group_regex",
+      "name": "name_regex",
+      "version": "version_regex",
+      "allows_granular_projects": [ 
+            "group_meli_project",
+            "com.mercadolibre.android.commons"  # Example of a Mercado Libre Dependency Group.
+      ],
+    },
+    ...
+  ]
+}
+```
+
+### iOS Platform
+```
+{
+  "whitelist": [
+    {
+      "name": "MeliSDK",
+      "version": "^~>5.[0-9]+$"
+      "allows_granular_projects": [ 
+            "name_meli_lib",
+            "MLRecommendations"  # Example of a Mercado Libre Dependency Lib Name .
+      ],
+    },
+    ...
+  ]
+}
+```
+
+
+
 # Contexts Allowlist [DEPRECATED]
 
 For more information consult
