@@ -3434,6 +3434,12 @@
       "version": "10\\.\\+"
     },
     {
+      "description": "Android library used to generate QRs.",
+      "group": "io\\.github\\.g0dkar",
+      "name": "qrcode-kotlin",
+      "version": "4\\.0\\.6"
+    },
+    {
       "group": "androidx\\.tracing",
       "name": "tracing",
       "version": "1\\.1\\.0"
