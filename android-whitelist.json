@@ -1545,9 +1545,15 @@
       "version": "mercadopago-6\\.\\+|mercadolibre-6\\.\\+"
     },
     {
+      "expires": "2024-02-16",
       "group": "com\\.mercadolibre\\.android\\.reauth_native_adapter",
       "name": "reauth_adapter",
       "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.reauth_native_adapter",
+      "name": "reauth_adapter",
+      "version": "4\\.\\+"
     },
     {
       "expires": "2024-03-01",
@@ -3362,6 +3368,12 @@
       "version": "10\\.\\+"
     },
     {
+      "description": "Android library used to generate QRs.",
+      "group": "io\\.github\\.g0dkar",
+      "name": "qrcode-kotlin",
+      "version": "4\\.0\\.6"
+    },
+    {
       "group": "androidx\\.tracing",
       "name": "tracing",
       "version": "1\\.1\\.0"
@@ -3435,6 +3447,16 @@
       "group": "androidx\\.lifecycle",
       "name": "lifecycle-runtime-compose",
       "version": "2\\.6\\.1"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadopago.android.isp.point.mpoc",
+        "com.mercadopago.android.isp.payment_contactless"
+      ],
+      "expires": "2024-04-30",
+      "group": "com\\.mercadopago\\.mpos\\.android\\.mpos\\.ttpkernel",
+      "name": "visa-kernel",
+      "version": "22\\.0\\.0"
     }
   ]
 }
