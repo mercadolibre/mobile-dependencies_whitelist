@@ -1569,9 +1569,15 @@
       "version": "mercadopago-6\\.\\+|mercadolibre-6\\.\\+"
     },
     {
+      "expires": "2024-02-16",
       "group": "com\\.mercadolibre\\.android\\.reauth_native_adapter",
       "name": "reauth_adapter",
       "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.reauth_native_adapter",
+      "name": "reauth_adapter",
+      "version": "4\\.\\+"
     },
     {
       "expires": "2024-03-01",
@@ -3434,6 +3440,12 @@
       "version": "10\\.\\+"
     },
     {
+      "description": "Android library used to generate QRs.",
+      "group": "io\\.github\\.g0dkar",
+      "name": "qrcode-kotlin",
+      "version": "4\\.0\\.6"
+    },
+    {
       "group": "androidx\\.tracing",
       "name": "tracing",
       "version": "1\\.1\\.0"
@@ -3441,6 +3453,82 @@
     {
       "group": "com\\.mercadolibre\\.android\\.webkitextensions",
       "version": "1.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.andesui"
+      ],
+      "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
+      "group": "androidx\\.compose",
+      "name": "compose-bom",
+      "version": "2023\\.03\\.00"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.andesui"
+      ],
+      "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
+      "group": "androidx\\.compose\\.foundation",
+      "name": "foundation"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.andesui"
+      ],
+      "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
+      "group": "androidx\\.compose\\.ui",
+      "name": "ui"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.andesui"
+      ],
+      "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
+      "group": "androidx\\.compose\\.runtime",
+      "name": "runtime"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.andesui"
+      ],
+      "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
+      "group": "androidx\\.compose\\.ui",
+      "name": "ui-tooling-preview"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.andesui"
+      ],
+      "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
+      "group": "androidx\\.compose\\.ui",
+      "name": "ui-tooling"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.andesui"
+      ],
+      "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
+      "group": "androidx\\.compose\\.ui",
+      "name": "ui-test-manifest"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.andesui"
+      ],
+      "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-runtime-compose",
+      "version": "2\\.6\\.1"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadopago.android.isp.point.mpoc",
+        "com.mercadopago.android.isp.payment_contactless"
+      ],
+      "expires": "2024-04-30",
+      "group": "com\\.mercadopago\\.mpos\\.android\\.mpos\\.ttpkernel",
+      "name": "visa-kernel",
+      "version": "22\\.0\\.0"
     }
   ]
 }
