@@ -26,9 +26,9 @@ begin
               node.each_entry do |keyname, value|
                   if keyname == "group"
                       request + "group=#{value}"
-                  elsif keyname = "name"
+                  elsif keyname == "name"
                       request + "name=#{value}"
-                  elsif keyname = "version"
+                  elsif keyname == "version"
                       request + "version=#{value}"
                   end
               end
