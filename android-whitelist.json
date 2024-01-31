@@ -551,9 +551,15 @@
       "version": "13\\.\\+"
     },
     {
+      "expires": "2024-02-02",
       "group": "androidx\\.benchmark",
       "name": "benchmark-macro-junit4",
       "version": "1\\.1\\.0"
+    },
+    {
+      "group": "androidx\\.benchmark",
+      "name": "benchmark-macro-junit4",
+      "version": "1\\.1\\.1"
     },
     {
       "group": "androidx\\.test\\.ext",
@@ -3366,12 +3372,12 @@
     {
       "group": "com\\.mercadolibre\\.android\\.isp_bluetooth_tools",
       "name": "core",
-      "version": "1\\.0\\.0"
+      "version": "1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.isp_bluetooth_tools",
       "name": "ui_settings",
-      "version": "1\\.0\\.0"
+      "version": "1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point_smartpos_fcu",
