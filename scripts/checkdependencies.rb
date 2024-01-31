@@ -18,7 +18,7 @@ begin
 
     parsed_json["whitelist"].each do |node, value|
           # Is a internal dependency
-          if node.group.include? "com\\.mercadolibre\\.android\\."
+          if node["group"].include? "com\\.mercadolibre\\.android\\."
               request = "http://android.artifacts.furycloud.io/service/rest/v1/search/?"
 
               request + "repository=releases&"
