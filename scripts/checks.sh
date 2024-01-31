@@ -23,6 +23,14 @@ if [ $EXIT_CODE != 0 ]; then
   exit 1;
 fi
 
+echo "Run Internal Dependency existence validator: this step checks if the dependency exists to implement it"
+ruby "./scripts/checkdependencies.rb"
+EXIT_CODE=${PIPESTATUS[0]}
+# exit_code == 0 -> success; exit_code == 1 -> fail
+if [ $EXIT_CODE != 0 ]; then
+  exit 1;
+fi
+
 echo "Run Check keynames"
 ruby "./scripts/checkkeynames.rb"
 EXIT_CODE=${PIPESTATUS[0]}
