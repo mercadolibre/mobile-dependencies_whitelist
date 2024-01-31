@@ -39,14 +39,15 @@ begin
               if response.body.include? "\"items\": [],"
                 areDependenciesValid = false
                 fails.push(node)
+              end
           end
-        end
     end
 
     if areDependenciesValid == false
         # we show a error message.
         puts "[ERROR] These dependencies: '" + fails + "'  do not exists"
         exit(1) # pipeline fail for CI
+    end
 
     exit(0) # successful
 end
