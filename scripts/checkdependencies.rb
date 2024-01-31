@@ -36,6 +36,8 @@ begin
               uri = URI.parse(request)
               response = Net::HTTP.get_response(uri)
 
+              puts response.body
+
               if response.body.include? "\"items\": [],"
                 areDependenciesValid = false
                 fails.push(node)
