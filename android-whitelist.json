@@ -393,14 +393,26 @@
       "version": "production-12\\.\\+|develop-12\\.\\+"
     },
     {
+      "expires": "2024-03-31",
       "group": "com\\.mercadolibre\\.android",
       "name": "authentication-enrollment",
       "version": "24\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
+      "name": "authentication-enrollment",
+      "version": "25\\.\\+"
+    },
+    {
+      "expires": "2024-03-31",
+      "group": "com\\.mercadolibre\\.android",
       "name": "authentication",
       "version": "24\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "authentication",
+      "version": "25\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.authscopedsession",
