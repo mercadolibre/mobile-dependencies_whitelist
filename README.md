@@ -41,7 +41,7 @@ JSON Schema:
 }
 ```
 
-**NOTE5**: If you want to try if its working correctly from your fork, just add this line to the build.gradle:
+**NOTE5**: If you want to try if its working correctly from your fork, just add this line to the <MODULE-NAME>/build.gradle:
 
 ```
 ext["allowlistURL"] = "https://raw.githubusercontent.com/YOUR_GITHUB_USER/mobile-dependencies_whitelist/YOUR_GIT_BRANCH/android-whitelist.json"
