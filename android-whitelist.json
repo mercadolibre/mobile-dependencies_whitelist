@@ -2612,9 +2612,15 @@
       "version": "1\\.+"
     },
     {
+      "expires": "2024-04-01",
       "group": "com\\.mercadolibre\\.android\\.data_privacy_helper",
       "name": "libdataprivacy",
       "version": "2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.data_privacy_helper",
+      "name": "libdataprivacy",
+      "version": "3\\.\\+"
     },
     {
       "expires": "2024-02-12",
