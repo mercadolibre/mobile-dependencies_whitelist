@@ -718,6 +718,11 @@
       "version": "mercadolibre-16\\.\\+|mercadopago-16\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.cart\\.facade",
+      "name": "proxy",
+      "version": "1\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.purchases",
       "name": "purchases",
       "version": "3\\.\\+"
