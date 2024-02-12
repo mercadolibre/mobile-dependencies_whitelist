@@ -2306,12 +2306,6 @@
       "version": "9\\.+"
     },
     {
-      "expires": "2024-02-09",
-      "group": "com\\.google\\.android\\.gms",
-      "name": "play-services-mlkit-text-recognition",
-      "version": "17\\.0\\.1"
-    },
-    {
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-mlkit-text-recognition",
       "version": "18\\.0\\.0"
@@ -2414,36 +2408,6 @@
       "group": "com\\.mercadolibre\\.android\\.point_smart_pos_sdk",
       "name": "device",
       "version": "dev-7\\.\\+|a910-7\\.\\+|d20-7\\.\\+|n950-7\\.\\+|7\\.\\+"
-    },
-    {
-      "expires": "2024-02-09",
-      "group": "com\\.mercadolibre\\.android\\.point_printer",
-      "name": "core",
-      "version": "4\\.+"
-    },
-    {
-      "expires": "2024-02-09",
-      "group": "com\\.mercadolibre\\.android\\.point_printer",
-      "name": "renderer",
-      "version": "4\\.+"
-    },
-    {
-      "expires": "2024-02-09",
-      "group": "com\\.mercadolibre\\.android\\.point_printer",
-      "name": "controller_a910",
-      "version": "4\\.+"
-    },
-    {
-      "expires": "2024-02-09",
-      "group": "com\\.mercadolibre\\.android\\.point_printer",
-      "name": "controller_d20",
-      "version": "4\\.+"
-    },
-    {
-      "expires": "2024-02-09",
-      "group": "com\\.mercadolibre\\.android\\.point_printer",
-      "name": "controller_n950",
-      "version": "4\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point_printer",
@@ -2979,12 +2943,6 @@
       "group": "com\\.mercadolibre\\.android\\.app_monitoring",
       "name": "core",
       "version": "2\\.\\+"
-    },
-    {
-      "expires": "2024-02-05",
-      "group": "com\\.datadoghq",
-      "name": "dd-sdk-android-gradle-plugin",
-      "version": "1\\.7\\.0"
     },
     {
       "group": "com\\.datadoghq",
