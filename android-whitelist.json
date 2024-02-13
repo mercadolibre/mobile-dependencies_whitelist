@@ -3369,6 +3369,24 @@
       "group": "com\\.mercadopago\\.mpos\\.android\\.mpos\\.ttpkernel",
       "name": "visa-kernel",
       "version": "22\\.0\\.0"
+    },
+    {
+      "description": "Meliphone is new VoIP feature implemented by CX.",
+      "group": "com\\.mercadolibre\\.android\\.meliphone\\.voip",
+      "name": "meliphone",
+      "version": "mercadopago-1\\.\\+|mercadolibre-1\\.\\+"
+    },
+    {
+      "description": "This library is required by meliphone.",
+      "group": "com\\.twilio",
+      "name": "voice-android",
+      "version": "6.\\+"
+    },
+    {
+      "description": "This library is required by meliphone.",
+      "group": "com\\.twilio",
+      "name": "audioswitch",
+      "version": "1.\\+"
     }
   ]
 }
