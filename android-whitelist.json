@@ -3327,6 +3327,11 @@
       "group": "com\\.mercadopago\\.mpos\\.android\\.mpos\\.ttpkernel",
       "name": "visa-kernel",
       "version": "22\\.0\\.0"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.barcode_img_generator",
+      "name": "barcodeimagegenerator",
+      "version": "1\\.\\+"
     }
   ]
 }
