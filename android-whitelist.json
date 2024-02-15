@@ -3169,14 +3169,32 @@
     {
       "group": "com\\.mercadolibre\\.android\\.isp_sf",
       "name": "di",
+      "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "facade",
+      "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "network",
+      "version": "3\\.\\+"
+    },
+    {
+      "expires": "2024-04-30",
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "di",
       "version": "2\\.\\+"
     },
     {
+      "expires": "2024-04-30",
       "group": "com\\.mercadolibre\\.android\\.isp_sf",
       "name": "facade",
       "version": "2\\.\\+"
     },
     {
+      "expires": "2024-04-30",
       "group": "com\\.mercadolibre\\.android\\.isp_sf",
       "name": "network",
       "version": "2\\.\\+"
