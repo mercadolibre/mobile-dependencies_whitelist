@@ -1149,7 +1149,7 @@
       "name": "MPSPPrepaid",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.+$"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLCrossAppLinks",
