@@ -2761,14 +2761,26 @@
       "version": "2\\.+"
     },
     {
+      "expires": "2024-03-31",
       "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
       "name": "core",
       "version": "3\\.+"
     },
     {
+      "expires": "2024-03-31",
       "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
       "name": "recommendations",
       "version": "3\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
+      "name": "core",
+      "version": "4\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
+      "name": "recommendations",
+      "version": "4\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.si_billing_info",
