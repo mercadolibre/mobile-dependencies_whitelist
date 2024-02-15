@@ -388,9 +388,15 @@
       "version": "10\\.\\+"
     },
     {
+      "expires": "2024-03-31",
       "group": "com\\.mercadolibre\\.android",
       "name": "analytics",
       "version": "production-12\\.\\+|develop-12\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "analytics",
+      "version": "production-13\\.\\+|develop-13\\.\\+"
     },
     {
       "expires": "2024-03-31",
@@ -471,9 +477,15 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2024-03-31",
       "group": "com\\.mercadolibre\\.android",
       "name": "melidata-sdk",
       "version": "18\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "melidata-sdk",
+      "version": "19\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
