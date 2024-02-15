@@ -1080,6 +1080,12 @@
       "version": "19\\.\\+"
     },
     {
+      "description": "Don't use this version in production. It's in experimental phase.",
+      "group": "com\\.mercadolibre\\.android\\.virtual_try_on",
+      "name": "virtualtryon",
+      "version": "0\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.eshops",
       "name": "components",
       "version": "3\\.\\+"
