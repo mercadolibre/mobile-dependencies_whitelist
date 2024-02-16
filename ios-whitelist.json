@@ -767,13 +767,6 @@
       "version": "^~>\\s?4.[0-9]+$"
     },
     {
-      "description": "Don't use this version in production. It's in experimental phase.",
-      "name": "VirtualTryOn",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
       "name": "MLSecurity",
       "source": "private",
       "target": "production",
