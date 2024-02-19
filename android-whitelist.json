@@ -1645,16 +1645,9 @@
       "version": "mercadolibre-7\\.\\+|mercadopago-7\\.\\+"
     },
     {
-      "description": "This version will be deprecated in favor of version 6.0.0 on 2024-03-11",
-      "expires": "2024-03-11",
       "group": "com\\.mercadolibre\\.android",
       "name": "cardform",
       "version": "5\\.+"
-    },
-    {
-      "group": "com\\.mercadolibre\\.android",
-      "name": "cardform",
-      "version": "6\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.insu_flox_components",
