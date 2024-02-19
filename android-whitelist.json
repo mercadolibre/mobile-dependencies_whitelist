@@ -918,12 +918,6 @@
       "version": "3\\.\\+"
     },
     {
-      "expires": "2024-02-17",
-      "group": "com\\.mercadolibre\\.android\\.metrics",
-      "name": "metrics",
-      "version": "7\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.metrics",
       "name": "metrics",
       "version": "9\\.\\+"
@@ -1078,12 +1072,6 @@
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "search",
       "version": "19\\.\\+"
-    },
-    {
-      "description": "Don't use this version in production. It's in experimental phase.",
-      "group": "com\\.mercadolibre\\.android\\.virtual_try_on",
-      "name": "virtualtryon",
-      "version": "0\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.eshops",
@@ -1576,12 +1564,6 @@
       "group": "com\\.mercadolibre\\.android\\.security",
       "name": "native_reauth",
       "version": "mercadopago-6\\.\\+|mercadolibre-6\\.\\+"
-    },
-    {
-      "expires": "2024-02-16",
-      "group": "com\\.mercadolibre\\.android\\.reauth_native_adapter",
-      "name": "reauth_adapter",
-      "version": "3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.reauth_native_adapter",
@@ -2632,24 +2614,6 @@
       "version": "3\\.\\+"
     },
     {
-      "expires": "2024-02-12",
-      "group": "com\\.mercadopago\\.android\\.cashin",
-      "name": "seller",
-      "version": "14\\.\\+"
-    },
-    {
-      "expires": "2024-02-12",
-      "group": "com\\.mercadopago\\.android\\.cashin",
-      "name": "payer",
-      "version": "14\\.\\+"
-    },
-    {
-      "expires": "2024-02-12",
-      "group": "com\\.mercadopago\\.android\\.cashin",
-      "name": "commons",
-      "version": "14\\.\\+"
-    },
-    {
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "seller",
       "version": "15\\.\\+"
@@ -2663,12 +2627,6 @@
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "commons",
       "version": "15\\.\\+"
-    },
-    {
-      "expires": "2024-02-12",
-      "group": "com\\.mercadolibre\\.android\\.cashout",
-      "name": "cashout",
-      "version": "11\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cashout",
@@ -2676,21 +2634,9 @@
       "version": "12\\.\\+"
     },
     {
-      "expires": "2024-02-12",
-      "group": "com\\.mercadolibre\\.android\\.cash_rails",
-      "name": "rating",
-      "version": "5\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "rating",
       "version": "6\\.\\+"
-    },
-    {
-      "expires": "2024-02-12",
-      "group": "com\\.mercadolibre\\.android\\.cash_rails",
-      "name": "core",
-      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
@@ -2698,21 +2644,9 @@
       "version": "6\\.\\+"
     },
     {
-      "expires": "2024-02-12",
-      "group": "com\\.mercadolibre\\.android\\.cash_rails",
-      "name": "feedback",
-      "version": "5\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "feedback",
       "version": "6\\.\\+"
-    },
-    {
-      "expires": "2024-02-12",
-      "group": "com\\.mercadolibre\\.android\\.cash_rails",
-      "name": "tab",
-      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
@@ -2720,21 +2654,9 @@
       "version": "6\\.\\+"
     },
     {
-      "expires": "2024-02-12",
-      "group": "com\\.mercadolibre\\.android\\.cash_rails",
-      "name": "ui_component",
-      "version": "5\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "ui_component",
       "version": "6\\.\\+"
-    },
-    {
-      "expires": "2024-02-12",
-      "group": "com\\.mercadolibre\\.android\\.cash_rails",
-      "name": "commons",
-      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
@@ -2742,21 +2664,9 @@
       "version": "6\\.\\+"
     },
     {
-      "expires": "2024-02-12",
-      "group": "com\\.mercadolibre\\.android\\.cash_rails",
-      "name": "map",
-      "version": "5\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "map",
       "version": "6\\.\\+"
-    },
-    {
-      "expires": "2024-02-12",
-      "group": "com\\.mercadolibre\\.android\\.cash_rails",
-      "name": "report",
-      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
@@ -2779,14 +2689,26 @@
       "version": "2\\.+"
     },
     {
+      "expires": "2024-03-31",
       "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
       "name": "core",
       "version": "3\\.+"
     },
     {
+      "expires": "2024-03-31",
       "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
       "name": "recommendations",
       "version": "3\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
+      "name": "core",
+      "version": "4\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
+      "name": "recommendations",
+      "version": "4\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.si_billing_info",
@@ -3169,14 +3091,32 @@
     {
       "group": "com\\.mercadolibre\\.android\\.isp_sf",
       "name": "di",
+      "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "facade",
+      "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "network",
+      "version": "3\\.\\+"
+    },
+    {
+      "expires": "2024-04-30",
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "di",
       "version": "2\\.\\+"
     },
     {
+      "expires": "2024-04-30",
       "group": "com\\.mercadolibre\\.android\\.isp_sf",
       "name": "facade",
       "version": "2\\.\\+"
     },
     {
+      "expires": "2024-04-30",
       "group": "com\\.mercadolibre\\.android\\.isp_sf",
       "name": "network",
       "version": "2\\.\\+"
