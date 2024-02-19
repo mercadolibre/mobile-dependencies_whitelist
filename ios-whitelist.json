@@ -52,7 +52,7 @@
       "name": "PPMagnesWrapper",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+"
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "Adjust",
@@ -262,7 +262,7 @@
       "name": "Protobuf",
       "source": "public",
       "target": "production",
-      "version": "3.14.0"
+      "version": "3.25.2"
     },
     {
       "name": "CMPopTipView",
@@ -274,13 +274,13 @@
       "name": "Flox",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?2.[0-9]+"
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "HomeSectionsApi",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "ISO8601DateFormatter",
@@ -304,13 +304,13 @@
       "name": "InStoreHomeSections",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "InstoreReviews",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "InsurtechFloxComponents",
@@ -392,13 +392,13 @@
       "name": "MLAuthentication",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+"
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "AuthScopedSession",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+"
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "MLBiometrics",
@@ -440,7 +440,7 @@
       "name": "MlCards",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLCardDrawer",
@@ -515,12 +515,6 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "name": "MLCollaboratorsV2",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
       "name": "MLCommons",
       "source": "private",
       "target": "production",
@@ -536,7 +530,7 @@
       "name": "MLCreditsBehaviours",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?3.[0-9]+"
+      "version": "^~>\\s?3.[0-9]+$"
     },
     {
       "name": "MLDynamicModal",
@@ -596,13 +590,13 @@
       "name": "MLMap",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?3.[0-9]+"
+      "version": "^~>\\s?3.[0-9]+$"
     },
     {
       "name": "MLMapComponent",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?2.[0-9]+"
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "MLMelidata",
@@ -614,13 +608,13 @@
       "name": "MLMetrics",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLMilestoneTracker",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLMultiImageView",
@@ -638,7 +632,7 @@
       "name": "MLNavigationCP",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?[1-2]+.[0-9]+"
+      "version": "^~>\\s?[1-2]+.[0-9]+$"
     },
     {
       "name": "MLNetworking",
@@ -680,25 +674,25 @@
       "name": "MLRxRestClient",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLCommonUIComponents",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?2.[0-9]+"
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "DANetworking",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLRecommendationsCombo",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLRecommendationCombo",
@@ -722,31 +716,31 @@
       "name": "MLRemedy",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?5.[0-9]+"
+      "version": "^~>\\s?5.[0-9]+$"
     },
     {
       "name": "MLUserBlocker",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?2.[0-9]+"
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "MLRemedies",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?4.[0-9]+"
+      "version": "^~>\\s?4.[0-9]+$"
     },
     {
       "name": "IvCommons",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?2.[0-9]+"
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "MLRuleEngine",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLSearch/Suggestion",
@@ -776,7 +770,7 @@
       "name": "MLSecurity",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLSIBillingInfo",
@@ -791,10 +785,11 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "expires": "2024-07-22",
       "name": "MLUI",
       "source": "public",
       "target": "production",
-      "version": "^~>\\s?5.[0-9]+$"
+      "version": "^~>\\s?5.2[8-9]+$"
     },
     {
       "name": "MLUIComponents",
@@ -812,19 +807,19 @@
       "name": "MLUINavigationCP",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?[1-2]+.[0-9]+"
+      "version": "^~>\\s?[1-2]+.[0-9]+$"
     },
     {
       "name": "MLVIP/URLScanner",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLVPP",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?[0-2]+.[0-9]+"
+      "version": "^~>\\s?[0-2]+.[0-9]+$"
     },
     {
       "name": "MLVariations",
@@ -980,7 +975,7 @@
       "name": "MLHistory",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?2.[0-9]+"
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "lottie-ios",
@@ -992,7 +987,7 @@
       "name": "MLFluxClient",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLGodzippa",
@@ -1046,7 +1041,7 @@
       "name": "MLBusinessComponents",
       "source": "public",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?1.[5-9][0-9]+$"
     },
     {
       "name": "MLInsightsMetric",
@@ -1100,37 +1095,37 @@
       "name": "MLBFFloxComponent",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?2.[0-9]+"
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "AndesUI",
       "source": "public",
       "target": "production",
-      "version": "^~>\\s?3.[0-9]+"
+      "version": "^~>\\s?3.1[2-9][0-9]+$"
     },
     {
       "name": "AndesIntegrations",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+"
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "MLLoyal",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?9.[0-9]+"
+      "version": "^~>\\s?9.[0-9]+$"
     },
     {
       "name": "MLLoyalDM",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+"
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "MLLoyalUIComponents",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?[1-2].[0-9]+"
+      "version": "^~>\\s?[1-2].[0-9]+$"
     },
     {
       "name": "CreditsUIComponents",
@@ -1142,13 +1137,13 @@
       "name": "MLCreditsCore",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?2.[0-9]+"
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "MPSPPrepaid",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.+"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLCrossAppLinks",
@@ -1202,7 +1197,7 @@
       "name": "StartUPInitializer",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?6.[0-9]+"
+      "version": "^~>\\s?6.[0-9]+$"
     },
     {
       "name": "PointUI",
@@ -1406,13 +1401,13 @@
       "name": "Cashout",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?2.[0-9]+"
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "CashRails",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLAdjust",
@@ -1436,7 +1431,7 @@
       "name": "DaManagement",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?2.[0-9]+"
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "InAppReport",
@@ -1466,13 +1461,13 @@
       "name": "HomeToolkit",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "Braze-ios",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "BrazeKitCompat",
@@ -1496,13 +1491,13 @@
       "name": "ReauthNativeAdapter",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MobileCryptography",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "Valkiria",
@@ -1514,25 +1509,31 @@
       "name": "AmountScreen",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+"
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "FeedbackScreen",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+"
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "CcapCommons",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+"
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "CcapSDUI",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "SmartTokenization",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?2.[0-9]+"
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "ADAssertLayout",
@@ -1556,13 +1557,13 @@
       "name": "Regulations",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "DevicesSdk",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+"
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "RiskManagement",
@@ -1628,7 +1629,7 @@
       "name": "OpbRedirect",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "Opentelemetry",
@@ -1729,30 +1730,16 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "expires": "2024-01-12",
       "name": "AppMonitoring",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "name": "AppMonitoring",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?2.[0-9]+$"
+      "version": "^~>\\s?2.[0-9]+.?[0-9]*$"
     },
     {
       "name": "AppMonitoringSetup",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "expires": "2024-01-12",
-      "name": "DatadogSDK",
-      "source": "public",
-      "target": "production",
-      "version": "1.23.0"
     },
     {
       "name": "DatadogInternal",
@@ -1783,13 +1770,6 @@
       "source": "public",
       "target": "production",
       "version": "2.4.0"
-    },
-    {
-      "expires": "2024-01-12",
-      "name": "DatadogSDKCrashReporting",
-      "source": "public",
-      "target": "production",
-      "version": "1.23.0"
     },
     {
       "name": "DatadogCrashReporting",
@@ -1894,10 +1874,18 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "description": "This version will be deprecated in favor of 3.0.0",
+      "expires": "2024-03-30",
       "name": "IspSf",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "name": "IspSf",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?3.[0-9]+$"
     },
     {
       "name": "BuyingflowCoreFlox",
@@ -1915,7 +1903,7 @@
       "name": "PortableWidget",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MobilePermissions",
@@ -1924,10 +1912,17 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "expires": "2024-03-01",
       "name": "MLEShops",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "name": "MLEShops",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?3.[0-9]+$"
     },
     {
       "name": "PerformanceTraces",
@@ -1976,6 +1971,12 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "TMGSDK",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
     }
   ]
 }

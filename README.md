@@ -41,12 +41,10 @@ JSON Schema:
 }
 ```
 
-**NOTE5**: If you want to try if its working correctly from your fork, just add this line to the build.gradle:
+**NOTE5**: If you want to try if its working correctly from your fork, just add this line to the <MODULE-NAME>/build.gradle:
 
 ```
-lintGradle {
-    dependencyAllowListUrl = "https://raw.githubusercontent.com/YOUR_GITHUB_USER/mobile-dependencies_whitelist/master/android-whitelist.json"
-}
+ext["allowlistURL"] = "https://raw.githubusercontent.com/YOUR_GITHUB_USER/mobile-dependencies_whitelist/YOUR_GIT_BRANCH/android-whitelist.json"
 ```
 
 ### iOS
@@ -87,6 +85,52 @@ Example:
 	}]
 }
 ```
+
+## Support for Granular Dependencies:
+
+This functionality provides a more precise management of the scope of dependencies, giving us the ability to select specific consumers for each of them.
+
+To activate the granularity feature, it is necessary to introduce a new block within the dependency definition, specifying which Mercado Libre projects will have access to it. This should be done as follows:
+
+
+### Android Platform
+```
+{
+  "whitelist": [
+    {
+      "allows_granular_projects": [ 
+            "group_meli_project",
+            "com.mercadolibre.android.commons"  # Example of a Mercado Libre Dependency Group.
+      ]
+      "description": "(optional) description",
+      "expires": "yyyy-MM-dd",
+      "group": "group_regex",
+      "name": "name_regex",
+      "version": "version_regex"
+    },
+    ...
+  ]
+}
+```
+
+### iOS Platform
+```
+{
+  "whitelist": [
+    {
+      "name": "MeliSDK",
+      "version": "^~>5.[0-9]+$"
+      "allows_granular_projects": [ 
+            "name_meli_lib",
+            "MLRecommendations"  # Example of a Mercado Libre Dependency Lib Name .
+      ]
+    },
+    ...
+  ]
+}
+```
+
+
 
 # Contexts Allowlist [DEPRECATED]
 
