@@ -645,29 +645,59 @@
       "version": "22\\.\\+"
     },
     {
+      "expires": "2024-03-31",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient",
       "version": "23\\.\\+"
     },
     {
+      "expires": "2024-03-31",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-adapter-bus",
       "version": "23\\.\\+"
     },
     {
+      "expires": "2024-03-31",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-adapter-rx2",
       "version": "23\\.\\+"
     },
     {
+      "expires": "2024-03-31",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-converter-json",
       "version": "23\\.\\+"
     },
     {
+      "expires": "2024-03-31",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-extension-header",
       "version": "23\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient",
+      "version": "24\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient-adapter-bus",
+      "version": "24\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient-adapter-rx2",
+      "version": "24\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient-converter-json",
+      "version": "24\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient-extension-header",
+      "version": "24\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -2961,9 +2991,15 @@
       "version": "4\\.+"
     },
     {
+      "expires": "2024-03-31",
       "group": "com\\.mercadolibre\\.android\\.everest",
       "name": "platform",
       "version": "5\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.everest",
+      "name": "platform",
+      "version": "6\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.errorhandler\\.v2",
