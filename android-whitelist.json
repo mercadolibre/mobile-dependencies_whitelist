@@ -126,6 +126,11 @@
       "version": "mercadolibre-9\\.\\+|mercadopago-9\\.\\+|mercadolibre-10\\.\\+|mercadopago-10\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.regulations",
+      "name": "ifpe",
+      "version": "5\\.\\+"
+    },
+    {
       "group": "com\\.squareup\\.picasso",
       "name": "picasso",
       "version": "2\\.5\\.2"
@@ -645,29 +650,59 @@
       "version": "22\\.\\+"
     },
     {
+      "expires": "2024-03-31",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient",
       "version": "23\\.\\+"
     },
     {
+      "expires": "2024-03-31",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-adapter-bus",
       "version": "23\\.\\+"
     },
     {
+      "expires": "2024-03-31",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-adapter-rx2",
       "version": "23\\.\\+"
     },
     {
+      "expires": "2024-03-31",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-converter-json",
       "version": "23\\.\\+"
     },
     {
+      "expires": "2024-03-31",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-extension-header",
       "version": "23\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient",
+      "version": "24\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient-adapter-bus",
+      "version": "24\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient-adapter-rx2",
+      "version": "24\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient-converter-json",
+      "version": "24\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient-extension-header",
+      "version": "24\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -1659,16 +1694,9 @@
       "version": "mercadolibre-7\\.\\+|mercadopago-7\\.\\+"
     },
     {
-      "description": "This version will be deprecated in favor of version 6.0.0 on 2024-03-11",
-      "expires": "2024-03-11",
       "group": "com\\.mercadolibre\\.android",
       "name": "cardform",
       "version": "5\\.+"
-    },
-    {
-      "group": "com\\.mercadolibre\\.android",
-      "name": "cardform",
-      "version": "6\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.insu_flox_components",
@@ -2982,9 +3010,15 @@
       "version": "4\\.+"
     },
     {
+      "expires": "2024-03-31",
       "group": "com\\.mercadolibre\\.android\\.everest",
       "name": "platform",
       "version": "5\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.everest",
+      "name": "platform",
+      "version": "6\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.errorhandler\\.v2",
