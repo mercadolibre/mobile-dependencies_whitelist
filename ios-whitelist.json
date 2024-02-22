@@ -829,12 +829,6 @@
       "version": "^~>\\s?[0-2]+.[0-9]+$"
     },
     {
-      "name": "MLVariations",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
       "name": "MPBalance",
       "source": "private",
       "target": "production",
