@@ -447,7 +447,7 @@
       "name": "MlCards",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?2.[0-9]+"
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "MLCardDrawer",
