@@ -2846,7 +2846,12 @@
       "version": "mercadopago-2\\.\\+|mercadolibre-2\\.\\+"
     },
     {
-      "description": "This library has a stable version but it is not the final one.",
+      "group": "com\\.mercadolibre\\.android\\.mplay",
+      "name": "mplay",
+      "version": "1\\.\\+"
+    },
+    {
+      "expires": "2024-04-06",
       "group": "com\\.mercadolibre\\.android\\.mplay",
       "name": "mplay",
       "version": "0\\.\\+"
