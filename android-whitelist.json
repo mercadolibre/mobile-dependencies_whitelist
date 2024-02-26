@@ -1157,12 +1157,6 @@
       "version": "8\\.\\+"
     },
     {
-      "expires": "2024-02-19",
-      "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
-      "name": "api",
-      "version": "5\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
       "name": "api",
       "version": "6\\.\\+"
@@ -2556,18 +2550,6 @@
       "version": "1\\.46\\.+"
     },
     {
-      "expires": "2024-02-23",
-      "group": "com\\.mercadolibre\\.android\\.opentelemetry",
-      "name": "setup",
-      "version": "5\\.+"
-    },
-    {
-      "expires": "2024-02-23",
-      "group": "com\\.mercadolibre\\.android\\.opentelemetry",
-      "name": "core",
-      "version": "5\\.+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.opentelemetry",
       "name": "setup",
       "version": "6\\.+"
@@ -3174,6 +3156,11 @@
       "group": "com\\.mercadolibre\\.android\\.isp_sf",
       "name": "network",
       "version": "2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "reader_manager",
+      "version": "3\\.\\+"
     },
     {
       "description": "Android library used to access connection data and measure api execution time.",
