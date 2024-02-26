@@ -660,6 +660,17 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
+      "name": "MLOnDemandResources/SwiftUI",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$",
+      "allows_granular_projects": [
+        "DiscountCenter",
+        "AndesUI"
+      ]
+    },
+    {
       "name": "MLPlace",
       "source": "private",
       "target": "production",
@@ -1063,6 +1074,16 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
+      "name": "MLNavigation/SwiftUI",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$",
+      "allows_granular_projects": [
+        "DiscountCenter"
+      ]
+    },
+    {
       "name": "MLQADB",
       "source": "private",
       "target": "production",
@@ -1103,6 +1124,16 @@
       "source": "public",
       "target": "production",
       "version": "^~>\\s?3.1[2-9][0-9]+$"
+    },
+    {
+      "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
+      "name": "AndesUI/SwiftUI",
+      "source": "public",
+      "target": "production",
+      "version": "^~>\\s?3.1[2-9][0-9]+$",
+      "allows_granular_projects": [
+        "DiscountCenter"
+      ]
     },
     {
       "name": "AndesIntegrations",
