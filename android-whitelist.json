@@ -1109,6 +1109,17 @@
       "version": "19\\.\\+"
     },
     {
+      "description": "Don't use this version in production. It's in experimental phase.",
+      "group": "com\\.mercadolibre\\.android\\.virtual_try_on",
+      "name": "virtualtryon",
+      "version": "0\\.\\+"
+    },
+    {
+      "group": "com\\.modiface",
+      "name": "mfemakeupkit",
+      "version": "20\\.0\\.0"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.eshops",
       "name": "components",
       "version": "3\\.\\+"
@@ -1249,13 +1260,27 @@
       "version": "5\\.\\+"
     },
     {
+      "description": "This library has been deprecated and renamed to checkout-v4.",
+      "expires": "2024-03-31",
       "group": "com\\.mercadopago\\.android\\.px",
       "name": "checkout",
       "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.px",
+      "name": "checkout-v4",
+      "version": "4\\.\\+"
+    },
+    {
+      "description": "This library has been deprecated and renamed to addons-v4.",
+      "expires": "2024-03-31",
+      "group": "com\\.mercadopago\\.android\\.px",
       "name": "addons",
+      "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadopago\\.android\\.px",
+      "name": "addons-v4",
       "version": "4\\.\\+"
     },
     {
