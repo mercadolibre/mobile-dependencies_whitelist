@@ -401,12 +401,6 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "name": "MLBiometrics",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
       "name": "MPThreeDS",
       "source": "private",
       "target": "production",
@@ -1522,7 +1516,7 @@
       "name": "FeedbackScreen",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?0.[0-9]+"
     },
     {
       "name": "CcapCommons",
@@ -1976,6 +1970,13 @@
       "source": "private",
       "target": "production",
       "version": "15.0.3"
+    },
+    {
+      "description": "Don't use this version in production. It's in experimental phase.",
+      "name": "VirtualTryOn",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
     }
   ]
 }
