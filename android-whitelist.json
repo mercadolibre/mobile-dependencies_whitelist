@@ -1260,13 +1260,27 @@
       "version": "5\\.\\+"
     },
     {
+      "description": "This library has been deprecated and renamed to checkout-v4.",
+      "expires": "2024-03-31",
       "group": "com\\.mercadopago\\.android\\.px",
       "name": "checkout",
       "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.px",
+      "name": "checkout-v4",
+      "version": "4\\.\\+"
+    },
+    {
+      "description": "This library has been deprecated and renamed to addons-v4.",
+      "expires": "2024-03-31",
+      "group": "com\\.mercadopago\\.android\\.px",
       "name": "addons",
+      "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadopago\\.android\\.px",
+      "name": "addons-v4",
       "version": "4\\.\\+"
     },
     {
