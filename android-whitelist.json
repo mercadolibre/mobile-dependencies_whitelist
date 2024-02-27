@@ -1733,24 +1733,48 @@
       "version": "1\\.0\\.0"
     },
     {
+      "expires": "2024-05-03",
       "group": "androidx\\.appcompat",
       "name": "appcompat",
       "version": "1\\.3\\.1"
     },
     {
+      "expires": "2024-05-03",
       "group": "androidx\\.appcompat",
       "name": "appcompat-resources",
       "version": "1\\.3\\.1"
     },
     {
+      "group": "androidx\\.appcompat",
+      "name": "appcompat",
+      "version": "1\\.5\\.1"
+    },
+    {
+      "group": "androidx\\.appcompat",
+      "name": "appcompat-resources",
+      "version": "1\\.5\\.1"
+    },
+    {
+      "expires": "2024-05-03",
       "group": "androidx\\.activity",
       "name": "activity",
       "version": "1\\.2\\.4"
     },
     {
       "group": "androidx\\.activity",
+      "name": "activity",
+      "version": "1\\.7\\.2"
+    },
+    {
+      "expires": "2024-05-03",
+      "group": "androidx\\.activity",
       "name": "activity-ktx",
       "version": "1\\.2\\.4"
+    },
+    {
+      "group": "androidx\\.activity",
+      "name": "activity-ktx",
+      "version": "1\\.7\\.2"
     },
     {
       "group": "androidx\\.cardview",
@@ -1863,24 +1887,48 @@
       "version": "2\\.0\\.4"
     },
     {
+      "expires": "2024-05-03",
       "group": "androidx\\.core",
       "name": "core",
       "version": "1\\.6\\.0"
     },
     {
       "group": "androidx\\.core",
+      "name": "core",
+      "version": "1\\.9\\.0"
+    },
+    {
+      "expires": "2024-05-03",
+      "group": "androidx\\.core",
       "name": "core-ktx",
       "version": "1\\.6\\.0"
     },
     {
+      "group": "androidx\\.core",
+      "name": "core-ktx",
+      "version": "1\\.9\\.0"
+    },
+    {
+      "expires": "2024-05-03",
       "group": "androidx\\.fragment",
       "name": "fragment",
       "version": "1\\.3\\.6"
     },
     {
+      "expires": "2024-05-03",
       "group": "androidx\\.fragment",
       "name": "fragment-ktx",
       "version": "1\\.3\\.6"
+    },
+    {
+      "group": "androidx\\.fragment",
+      "name": "fragment",
+      "version": "1\\.4\\.1"
+    },
+    {
+      "group": "androidx\\.fragment",
+      "name": "fragment-ktx",
+      "version": "1\\.4\\.1"
     },
     {
       "group": "androidx\\.installreferrer",
@@ -1893,33 +1941,75 @@
       "version": "1\\.1\\.2"
     },
     {
+      "expires": "2024-05-03",
       "group": "androidx\\.lifecycle",
       "name": "lifecycle-common",
       "version": "2\\.3\\.1"
     },
     {
       "group": "androidx\\.lifecycle",
+      "name": "lifecycle-common",
+      "version": "2\\.6\\.1"
+    },
+    {
+      "expires": "2024-05-03",
+      "group": "androidx\\.lifecycle",
       "name": "lifecycle-service",
       "version": "2\\.3\\.1"
     },
     {
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-service",
+      "version": "2\\.6\\.1"
+    },
+    {
+      "expires": "2024-05-03",
       "group": "androidx\\.lifecycle",
       "name": "lifecycle-livedata-core",
       "version": "2\\.3\\.1"
     },
     {
       "group": "androidx\\.lifecycle",
+      "name": "lifecycle-livedata-core",
+      "version": "2\\.6\\.1"
+    },
+    {
+      "expires": "2024-05-03",
+      "group": "androidx\\.lifecycle",
       "name": "lifecycle-livedata-core-ktx",
       "version": "2\\.3\\.1"
     },
     {
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-livedata-core-ktx",
+      "version": "2\\.6\\.1"
+    },
+    {
+      "expires": "2024-05-03",
       "group": "androidx\\.lifecycle",
       "name": "lifecycle-livedata",
       "version": "2\\.3\\.1"
     },
     {
       "group": "androidx\\.lifecycle",
+      "name": "lifecycle-livedata",
+      "version": "2\\.6\\.1"
+    },
+    {
+      "expires": "2024-05-03",
+      "group": "androidx\\.lifecycle",
       "name": "lifecycle-viewmodel",
+      "version": "2\\.3\\.1"
+    },
+    {
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-viewmodel",
+      "version": "2\\.6\\.1"
+    },
+    {
+      "expires": "2024-05-03",
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-process",
       "version": "2\\.3\\.1"
     },
     {
@@ -1928,24 +2018,48 @@
       "version": "2\\.3\\.1"
     },
     {
+      "expires": "2024-05-03",
       "group": "androidx\\.lifecycle",
       "name": "lifecycle-runtime-ktx",
       "version": "2\\.3\\.1"
     },
     {
       "group": "androidx\\.lifecycle",
+      "name": "lifecycle-runtime-ktx",
+      "version": "2\\.6\\.1"
+    },
+    {
+      "expires": "2024-05-03",
+      "group": "androidx\\.lifecycle",
       "name": "lifecycle-viewmodel-ktx",
       "version": "2\\.3\\.1"
     },
     {
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-viewmodel-ktx",
+      "version": "2\\.6\\.1"
+    },
+    {
+      "expires": "2024-05-03",
       "group": "androidx\\.lifecycle",
       "name": "lifecycle-livedata-ktx",
       "version": "2\\.3\\.1"
     },
     {
       "group": "androidx\\.lifecycle",
+      "name": "lifecycle-livedata-ktx",
+      "version": "2\\.6\\.1"
+    },
+    {
+      "expires": "2024-05-03",
+      "group": "androidx\\.lifecycle",
       "name": "lifecycle-common-java8",
       "version": "2\\.3\\.1"
+    },
+    {
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-common-java8",
+      "version": "2\\.6\\.1"
     },
     {
       "expires": "2024-03-30",
