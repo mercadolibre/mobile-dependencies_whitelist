@@ -1251,9 +1251,16 @@
       "version": "6\\.\\+"
     },
     {
+      "description": "This version will be deprecated, removes support for Google Analytics and Zxing libs",
+      "expires": "2024-03-22",
       "group": "com\\.mercadopago\\.android\\.digital_accounts_components",
       "name": "digital_accounts_components",
       "version": "7\\.\\+"
+    },
+    {
+      "group": "com\\.mercadopago\\.android\\.digital_accounts_components",
+      "name": "digital_accounts_components",
+      "version": "8\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.ml_esc_manager",
