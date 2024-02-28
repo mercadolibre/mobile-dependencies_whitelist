@@ -1109,6 +1109,17 @@
       "version": "19\\.\\+"
     },
     {
+      "description": "Don't use this version in production. It's in experimental phase.",
+      "group": "com\\.mercadolibre\\.android\\.virtual_try_on",
+      "name": "virtualtryon",
+      "version": "0\\.\\+"
+    },
+    {
+      "group": "com\\.modiface",
+      "name": "mfemakeupkit",
+      "version": "20\\.0\\.0"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.eshops",
       "name": "components",
       "version": "3\\.\\+"
@@ -1155,12 +1166,6 @@
       "group": "com\\.mercadolibre\\.android\\.vpp",
       "name": "vip_commons",
       "version": "8\\.\\+"
-    },
-    {
-      "expires": "2024-02-19",
-      "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
-      "name": "api",
-      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
@@ -1255,13 +1260,27 @@
       "version": "5\\.\\+"
     },
     {
+      "description": "This library has been deprecated and renamed to checkout-v4.",
+      "expires": "2024-03-31",
       "group": "com\\.mercadopago\\.android\\.px",
       "name": "checkout",
       "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.px",
+      "name": "checkout-v4",
+      "version": "4\\.\\+"
+    },
+    {
+      "description": "This library has been deprecated and renamed to addons-v4.",
+      "expires": "2024-03-31",
+      "group": "com\\.mercadopago\\.android\\.px",
       "name": "addons",
+      "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadopago\\.android\\.px",
+      "name": "addons-v4",
       "version": "4\\.\\+"
     },
     {
@@ -1305,14 +1324,28 @@
       "version": "6\\.+"
     },
     {
+      "description": "The expiration date is extended to have time enough to deprecate it",
+      "expires": "2024-12-31",
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
       "name": "paymentflowfcu",
       "version": "11\\.+"
     },
     {
+      "description": "The expiration date is extended to have time enough to deprecate it",
+      "expires": "2024-12-31",
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
       "name": "entities_fcu",
       "version": "11\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
+      "name": "paymentflowfcu",
+      "version": "12\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
+      "name": "entities_fcu",
+      "version": "12\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point\\.mpos",
@@ -1725,24 +1758,48 @@
       "version": "1\\.0\\.0"
     },
     {
+      "expires": "2024-05-03",
       "group": "androidx\\.appcompat",
       "name": "appcompat",
       "version": "1\\.3\\.1"
     },
     {
+      "expires": "2024-05-03",
       "group": "androidx\\.appcompat",
       "name": "appcompat-resources",
       "version": "1\\.3\\.1"
     },
     {
+      "group": "androidx\\.appcompat",
+      "name": "appcompat",
+      "version": "1\\.5\\.1"
+    },
+    {
+      "group": "androidx\\.appcompat",
+      "name": "appcompat-resources",
+      "version": "1\\.5\\.1"
+    },
+    {
+      "expires": "2024-05-03",
       "group": "androidx\\.activity",
       "name": "activity",
       "version": "1\\.2\\.4"
     },
     {
       "group": "androidx\\.activity",
+      "name": "activity",
+      "version": "1\\.7\\.2"
+    },
+    {
+      "expires": "2024-05-03",
+      "group": "androidx\\.activity",
       "name": "activity-ktx",
       "version": "1\\.2\\.4"
+    },
+    {
+      "group": "androidx\\.activity",
+      "name": "activity-ktx",
+      "version": "1\\.7\\.2"
     },
     {
       "group": "androidx\\.cardview",
@@ -1855,24 +1912,48 @@
       "version": "2\\.0\\.4"
     },
     {
+      "expires": "2024-05-03",
       "group": "androidx\\.core",
       "name": "core",
       "version": "1\\.6\\.0"
     },
     {
       "group": "androidx\\.core",
+      "name": "core",
+      "version": "1\\.9\\.0"
+    },
+    {
+      "expires": "2024-05-03",
+      "group": "androidx\\.core",
       "name": "core-ktx",
       "version": "1\\.6\\.0"
     },
     {
+      "group": "androidx\\.core",
+      "name": "core-ktx",
+      "version": "1\\.9\\.0"
+    },
+    {
+      "expires": "2024-05-03",
       "group": "androidx\\.fragment",
       "name": "fragment",
       "version": "1\\.3\\.6"
     },
     {
+      "expires": "2024-05-03",
       "group": "androidx\\.fragment",
       "name": "fragment-ktx",
       "version": "1\\.3\\.6"
+    },
+    {
+      "group": "androidx\\.fragment",
+      "name": "fragment",
+      "version": "1\\.4\\.1"
+    },
+    {
+      "group": "androidx\\.fragment",
+      "name": "fragment-ktx",
+      "version": "1\\.4\\.1"
     },
     {
       "group": "androidx\\.installreferrer",
@@ -1885,59 +1966,125 @@
       "version": "1\\.1\\.2"
     },
     {
+      "expires": "2024-05-03",
       "group": "androidx\\.lifecycle",
       "name": "lifecycle-common",
       "version": "2\\.3\\.1"
     },
     {
       "group": "androidx\\.lifecycle",
+      "name": "lifecycle-common",
+      "version": "2\\.6\\.1"
+    },
+    {
+      "expires": "2024-05-03",
+      "group": "androidx\\.lifecycle",
       "name": "lifecycle-service",
       "version": "2\\.3\\.1"
     },
     {
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-service",
+      "version": "2\\.6\\.1"
+    },
+    {
+      "expires": "2024-05-03",
       "group": "androidx\\.lifecycle",
       "name": "lifecycle-livedata-core",
       "version": "2\\.3\\.1"
     },
     {
       "group": "androidx\\.lifecycle",
+      "name": "lifecycle-livedata-core",
+      "version": "2\\.6\\.1"
+    },
+    {
+      "expires": "2024-05-03",
+      "group": "androidx\\.lifecycle",
       "name": "lifecycle-livedata-core-ktx",
       "version": "2\\.3\\.1"
     },
     {
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-livedata-core-ktx",
+      "version": "2\\.6\\.1"
+    },
+    {
+      "expires": "2024-05-03",
       "group": "androidx\\.lifecycle",
       "name": "lifecycle-livedata",
       "version": "2\\.3\\.1"
     },
     {
       "group": "androidx\\.lifecycle",
+      "name": "lifecycle-livedata",
+      "version": "2\\.6\\.1"
+    },
+    {
+      "expires": "2024-05-03",
+      "group": "androidx\\.lifecycle",
       "name": "lifecycle-viewmodel",
       "version": "2\\.3\\.1"
     },
     {
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-viewmodel",
+      "version": "2\\.6\\.1"
+    },
+    {
+      "expires": "2024-05-03",
       "group": "androidx\\.lifecycle",
       "name": "lifecycle-process",
       "version": "2\\.3\\.1"
     },
     {
       "group": "androidx\\.lifecycle",
+      "name": "lifecycle-process",
+      "version": "2\\.6\\.1"
+    },
+    {
+      "expires": "2024-05-03",
+      "group": "androidx\\.lifecycle",
       "name": "lifecycle-runtime-ktx",
       "version": "2\\.3\\.1"
     },
     {
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-runtime-ktx",
+      "version": "2\\.6\\.1"
+    },
+    {
+      "expires": "2024-05-03",
       "group": "androidx\\.lifecycle",
       "name": "lifecycle-viewmodel-ktx",
       "version": "2\\.3\\.1"
     },
     {
       "group": "androidx\\.lifecycle",
+      "name": "lifecycle-viewmodel-ktx",
+      "version": "2\\.6\\.1"
+    },
+    {
+      "expires": "2024-05-03",
+      "group": "androidx\\.lifecycle",
       "name": "lifecycle-livedata-ktx",
       "version": "2\\.3\\.1"
     },
     {
       "group": "androidx\\.lifecycle",
+      "name": "lifecycle-livedata-ktx",
+      "version": "2\\.6\\.1"
+    },
+    {
+      "expires": "2024-05-03",
+      "group": "androidx\\.lifecycle",
       "name": "lifecycle-common-java8",
       "version": "2\\.3\\.1"
+    },
+    {
+      "group": "androidx\\.lifecycle",
+      "name": "lifecycle-common-java8",
+      "version": "2\\.6\\.1"
     },
     {
       "expires": "2024-03-30",
@@ -2542,18 +2689,6 @@
       "version": "1\\.46\\.+"
     },
     {
-      "expires": "2024-02-23",
-      "group": "com\\.mercadolibre\\.android\\.opentelemetry",
-      "name": "setup",
-      "version": "5\\.+"
-    },
-    {
-      "expires": "2024-02-23",
-      "group": "com\\.mercadolibre\\.android\\.opentelemetry",
-      "name": "core",
-      "version": "5\\.+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.opentelemetry",
       "name": "setup",
       "version": "6\\.+"
@@ -2764,9 +2899,15 @@
       "version": "4\\.+"
     },
     {
+      "expires": "2024-03-08",
       "group": "com\\.bitmovin\\.player",
       "name": "player",
-      "version": "3\\.51\\.0.+"
+      "version": "3\\.43\\.0"
+    },
+    {
+      "group": "com\\.bitmovin\\.player",
+      "name": "player",
+      "version": "3\\.43\\.1\\.+"
     },
     {
       "group": "com\\.google\\.ads\\.interactivemedia.\\v3",
@@ -3156,6 +3297,11 @@
       "version": "2\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "reader_manager",
+      "version": "3\\.\\+"
+    },
+    {
       "description": "Android library used to access connection data and measure api execution time.",
       "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
       "name": "connectivity",
@@ -3185,6 +3331,12 @@
       "version": "1\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.wishlists",
+      "name": "wishlists",
+      "version": "1\\.\\+"
+    },
+    {
+      "expires": "2024-06-30",
       "group": "com\\.mercadolibre\\.android\\.wishlists",
       "name": "wishlists",
       "version": "0\\.\\+"
@@ -3246,7 +3398,8 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.andesui"
+        "com.mercadolibre.android.andesui",
+        "com.mercadolibre.android.on.demand.resources"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose",
@@ -3255,7 +3408,8 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.andesui"
+        "com.mercadolibre.android.andesui",
+        "com.mercadolibre.android.on.demand.resources"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.foundation",
@@ -3263,7 +3417,8 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.andesui"
+        "com.mercadolibre.android.andesui",
+        "com.mercadolibre.android.on.demand.resources"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.ui",
@@ -3271,7 +3426,8 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.andesui"
+        "com.mercadolibre.android.andesui",
+        "com.mercadolibre.android.on.demand.resources"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.runtime",
@@ -3287,7 +3443,8 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.andesui"
+        "com.mercadolibre.android.andesui",
+        "com.mercadolibre.android.on.demand.resources"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.ui",
@@ -3295,7 +3452,8 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.andesui"
+        "com.mercadolibre.android.andesui",
+        "com.mercadolibre.android.on.demand.resources"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.ui",
@@ -3303,7 +3461,8 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.andesui"
+        "com.mercadolibre.android.andesui",
+        "com.mercadolibre.android.on.demand.resources"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.lifecycle",
