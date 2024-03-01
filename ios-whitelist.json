@@ -435,6 +435,13 @@
       "name": "MLCPG",
       "source": "private",
       "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "expires": "2024-03-31",
+      "name": "MLCPG",
+      "source": "private",
+      "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
