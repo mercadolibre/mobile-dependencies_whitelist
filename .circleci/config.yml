@@ -1,6 +1,6 @@
 default: &defaultJob
   docker:
-    - image: circleci/node:latest
+    - image: cimg/ruby:3.0.2-node
   resource_class: small
   steps:
     - checkout
@@ -8,8 +8,12 @@ default: &defaultJob
         name: "Install linter"
         command: sudo npm install jsonlint -g
     - run:
-        name: "Run linter"
-        command: jsonlint $FILE
+        name: "Install JSON sorter"
+        command: sudo npm install json-sort-cli -g
+    - run:
+        name: "Run Checks"
+        command: ./scripts/checks.sh
+
 version: 2
 jobs:
   android:
@@ -20,9 +24,39 @@ jobs:
     <<: *defaultJob
     environment:
       FILE: "ios-whitelist.json"
+  notify:
+    docker:
+      - image: circleci/ruby:latest
+    resource_class: small
+    steps:
+      - checkout
+      - run:
+          name: Run Notification Script
+          command: ./scripts/notification.sh
+  clean:
+    docker:
+      - image: circleci/ruby:latest
+    resource_class: small
+    steps:
+      - checkout
+      - run:
+          name: Run Clean Script
+          command: ./scripts/clean_allowlists.sh
+
 workflows:
   version: 2
   build_and_test:
     jobs:
       - android
       - ios
+  weekly:
+    triggers:
+      - schedule:
+          cron: "0 8 * * 1" # on mondays at 8:00
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - notify
+      - clean
