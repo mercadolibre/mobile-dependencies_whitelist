@@ -284,12 +284,6 @@
       "version": "2\\.5\\.0"
     },
     {
-      "expires": "2024-03-01",
-      "group": "com\\.mercadolibre\\.android\\.dynamic_features",
-      "name": "core",
-      "version": "10\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.dynamic_features",
       "name": "core",
       "version": "11\\.\\+"
@@ -971,24 +965,6 @@
     {
       "group": "com\\.mercadolibre\\.android\\.navigationcp",
       "name": "shipping-address",
-      "version": "11\\.\\+"
-    },
-    {
-      "expires": "2024-03-01",
-      "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
-      "name": "core",
-      "version": "11\\.\\+"
-    },
-    {
-      "expires": "2024-03-01",
-      "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
-      "name": "renderer-fresco",
-      "version": "11\\.\\+"
-    },
-    {
-      "expires": "2024-03-01",
-      "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
-      "name": "configurer",
       "version": "11\\.\\+"
     },
     {
@@ -3153,12 +3129,6 @@
       "group": "com\\.mercadolibre\\.android\\.performance_tools",
       "name": "leakcanary",
       "version": "1\\.\\+"
-    },
-    {
-      "expires": "2024-03-01",
-      "group": "com\\.mercadolibre\\.android\\.everest",
-      "name": "platform",
-      "version": "4\\.+"
     },
     {
       "expires": "2024-03-31",
