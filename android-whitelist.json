@@ -755,9 +755,16 @@
       "version": "11\\.\\+"
     },
     {
+      "description": "Versión deprecada",
+      "expires": "2024-03-29",
       "group": "com\\.mercadolibre\\.android\\.cart",
       "name": "manager",
       "version": "mercadolibre-14\\.\\+|mercadopago-14\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cart",
+      "name": "manager",
+      "version": "mercadolibre-15\\.\\+|mercadopago-15\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cart",
@@ -2275,9 +2282,15 @@
       "version": "mercadolibre-10\\.\\+|mercadopago-10\\.\\+"
     },
     {
+      "expires": "2024-06-01",
       "group": "com\\.squareup\\.leakcanary",
       "name": "leakcanary-android",
       "version": "2\\.7"
+    },
+    {
+      "group": "com\\.squareup\\.leakcanary",
+      "name": "leakcanary-android",
+      "version": "2\\.13"
     },
     {
       "expires": "2024-12-01",
