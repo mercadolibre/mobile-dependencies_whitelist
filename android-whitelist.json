@@ -3116,15 +3116,15 @@
       "version": "2\\.4\\.0"
     },
     {
-      "expires": "2024-03-31",
+      "expires": "2024-05-03",
       "group": "com\\.mercadolibre\\.android\\.data_dispatcher",
       "name": "core",
-      "version": "2\\.+"
+      "version": "3\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.data_dispatcher",
       "name": "core",
-      "version": "3\\.+"
+      "version": "4\\.+"
     },
     {
       "description": "This library is used for push-notification with mqtt",
@@ -3162,21 +3162,21 @@
       "version": "1\\.\\+"
     },
     {
-      "expires": "2024-03-01",
-      "group": "com\\.mercadolibre\\.android\\.everest",
-      "name": "platform",
-      "version": "4\\.+"
-    },
-    {
       "expires": "2024-03-31",
       "group": "com\\.mercadolibre\\.android\\.everest",
       "name": "platform",
       "version": "5\\.+"
     },
     {
+      "expires": "2024-05-03",
       "group": "com\\.mercadolibre\\.android\\.everest",
       "name": "platform",
       "version": "6\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.everest",
+      "name": "platform",
+      "version": "7\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.errorhandler\\.v2",
