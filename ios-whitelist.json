@@ -26,7 +26,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Only minor regex allowed",
       "name": "MLCheckoutFlow",
       "source": "private",
       "target": "production",
@@ -52,7 +51,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Only minor regex allowed",
       "name": "MLCheckoutSDK",
       "source": "private",
       "target": "production",
@@ -65,18 +63,10 @@
       "version": "^~>\\s?5.[0-9]*$"
     },
     {
-        "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
       "name": "PPMagnesWrapper",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "name": "PPMagnesWrapper",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "Adjust",
@@ -86,7 +76,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Public source should be fix with patch, no regex“,
       "name": "AmountLabel",
       "source": "public",
       "target": "production",
@@ -112,8 +101,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason1": "Major prime version should start with 1“,
-        "reason2": "Public source should have patch“,
       "name": "CHTCollectionViewWaterfallLayout",
       "source": "public",
       "target": "production",
@@ -123,7 +110,7 @@
       "name": "CHTCollectionViewWaterfallLayout",
       "source": "public",
       "target": "production",
-      "version": "1.8.0"
+      "version": "0.8.0"
     },
     {
       "name": "DGCharts",
@@ -145,7 +132,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Public source should be fix with patch, no regex“,
       "name": "FBSDKCoreKit",
       "source": "public",
       "target": "production",
@@ -159,15 +145,12 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Public source should be fix with patch, no regex“,
       "name": "FBSDKCoreKit_Basics",
       "source": "public",
       "target": "production",
       "version": "^~>\\s?(13.2.0)$"
     },
     {
-        "expires": "2024-05-17",
-        "reason": "Public source should be fix with patch, no regex“,
       "name": "FBSDKCoreKit_Basics",
       "source": "public",
       "target": "production",
@@ -181,7 +164,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Public source should be fix with patch, no regex“,
       "name": "FBAEMKit",
       "source": "public",
       "target": "production",
@@ -207,7 +189,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Public source should be fix with patch, no regex“,
       "name": "Firebase",
       "source": "public",
       "target": "production",
@@ -221,7 +202,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Public source should be fix with patch, no regex“,
       "name": "FirebaseCore",
       "source": "public",
       "target": "production",
@@ -235,7 +215,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Public source should be fix with patch, no regex“,
       "name": "FirebaseAnalytics",
       "source": "public",
       "target": "production",
@@ -249,15 +228,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Public source should be fix with patch, no regex“,
-      "name": "FirebaseAnalytics",
-      "source": "public",
-      "target": "production",
-      "version": "7.8.0"
-    },
-    {
-        "expires": "2024-05-17",
-        "reason": "Public source should be fix with patch, no regex“,
       "name": "FirebaseDynamicLinks",
       "source": "public",
       "target": "production",
@@ -271,7 +241,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Public source should be fix with patch, no regex“,
       "name": "FirebasePerformance",
       "source": "public",
       "target": "production",
@@ -285,7 +254,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Public source should be fix with patch, no regex“,
       "name": "FirebaseCoreDiagnostics",
       "source": "public",
       "target": "production",
@@ -299,7 +267,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Public source should be fix with patch, no regex“,
       "name": "FirebaseRemoteConfig",
       "source": "public",
       "target": "production",
@@ -313,7 +280,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Public source should be fix with patch, no regex“,
       "name": "FirebaseABTesting",
       "source": "public",
       "target": "production",
@@ -327,7 +293,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Public source should be fix with patch, no regex“,
       "name": "FirebaseInstallations",
       "source": "public",
       "target": "production",
@@ -341,7 +306,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Public source should be fix with patch, no regex“,
       "name": "Firebase/Core",
       "source": "public",
       "target": "production",
@@ -355,7 +319,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Public source should be fix with patch, no regex“,
       "name": "Firebase/DynamicLinks",
       "source": "public",
       "target": "production",
@@ -369,7 +332,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Public source should be fix with patch, no regex“,
       "name": "Firebase/Analytics",
       "source": "public",
       "target": "production",
@@ -383,7 +345,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Public source should be fix with patch, no regex“,
       "name": "Firebase/MLModelDownloader",
       "source": "public",
       "target": "production",
@@ -397,7 +358,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Public source should be fix with patch, no regex“,
       "name": "TensorFlowLiteSwift",
       "source": "public",
       "target": "production",
@@ -477,8 +437,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason1": "Major prime version should start with 1“,
-        "reason2": "Public source should have patch“,
       "name": "ISO8601DateFormatter",
       "source": "public",
       "target": "production",
@@ -488,7 +446,7 @@
       "name": "ISO8601DateFormatter",
       "source": "public",
       "target": "production",
-      "version": "1.8.0"
+      "version": "0.8.0"
     },
     {
       "name": "InAppUpdateFlow",
@@ -528,7 +486,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Public source should have patch“,
       "name": "JRSwizzle",
       "source": "public",
       "target": "production",
@@ -563,18 +520,10 @@
       "version": "1.6.1"
     },
     {
-        "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
       "name": "UIImageEffects",
       "source": "public",
       "target": "production",
       "version": "0.0.1"
-    },
-    {
-      "name": "UIImageEffects",
-      "source": "public",
-      "target": "production",
-      "version": "1.0.1"
     },
     {
       "name": "SSPullToRefresh",
@@ -607,23 +556,7 @@
       "version": "^~>\\s?3.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
       "name": "MLAuthentication",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "name": "MLAuthentication",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-        "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
-      "name": "AuthScopedSession",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
@@ -632,7 +565,7 @@
       "name": "AuthScopedSession",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "MLBiometrics",
@@ -659,23 +592,7 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
       "name": "MLBookmarks",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "name": "MLBookmarks",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-        "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
-      "name": "MLCPG",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
@@ -684,7 +601,7 @@
       "name": "MLCPG",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "expires": "2024-03-22",
@@ -701,7 +618,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Only minor regex allowed",
       "name": "MLCardDrawer",
       "source": "private",
       "target": "production",
@@ -715,7 +631,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Only minor regex allowed",
       "name": "PxPmSelector",
       "source": "private",
       "target": "production",
@@ -734,22 +649,13 @@
       "version": "^~>\\s?3.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
       "name": "CartFacade",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "name": "CartFacade",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
         "expires": "2024-05-17",
-        "reason": "Only minor regex allowed",
       "name": "BuyingflowCart",
       "source": "private",
       "target": "production",
@@ -768,23 +674,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
       "name": "MeliChart",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "name": "MeliChart",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-        "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
-      "name": "MLDashboardComponent",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
@@ -793,11 +683,10 @@
       "name": "MLDashboardComponent",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
         "expires": "2024-05-17",
-        "reason": "Only minor regex allowed",
       "name": "MLFeesAndInstallments",
       "source": "private",
       "target": "production",
@@ -822,22 +711,13 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
       "name": "MLCollaborators",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "name": "MLCollaborators",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
         "expires": "2024-05-17",
-        "reason": "Only minor regex allowed",
       "name": "MLCommons",
       "source": "private",
       "target": "production",
@@ -863,8 +743,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason1": "Major prime version should start with 1“,
-        "reason2": "Public source should be fix with patch, no regex“,
       "name": "MLDynamicModal",
       "source": "public",
       "target": "production",
@@ -884,8 +762,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason1": "Major prime version should start with 1“,
-        "reason2": "Only minor regex allowed",
       "name": "MLFirebase",
       "source": "private",
       "target": "production",
@@ -905,8 +781,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
-        "reason2": "Only minor regex allowed",
       "name": "MLLocalStorage",
       "source": "private",
       "target": "production",
@@ -937,18 +811,10 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
       "name": "MLMYMLCommons",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "name": "MLMYMLCommons",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLMap",
@@ -963,18 +829,10 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
       "name": "MLMelidata",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "name": "MLMelidata",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLMetrics",
@@ -1002,7 +860,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Only minor regex allowed",
       "name": "MLNavigationCP",
       "source": "private",
       "target": "production",
@@ -1015,18 +872,10 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
       "name": "MLNetworking",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "name": "MLNetworking",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLNotifications",
@@ -1090,7 +939,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Only minor regex allowed",
       "name": "MLRecommendations",
       "source": "private",
       "target": "production",
@@ -1175,19 +1023,12 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
       "name": "MLSupermarket",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "name": "MLSupermarket",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
     {
       "expires": "2024-07-22",
       "name": "MLUI",
@@ -1209,7 +1050,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Only minor regex allowed",
       "name": "MLUINavigationCP",
       "source": "private",
       "target": "production",
@@ -1229,7 +1069,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Only minor regex allowed",
       "name": "MLVPP",
       "source": "private",
       "target": "production",
@@ -1249,8 +1088,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
-        "reason": "Public source should be fix with patch, no regex“,
       "name": "MPDynamicSkeleton",
       "source": "public",
       "target": "production",
@@ -1269,29 +1106,20 @@
       "version": "^~>\\s?3.[0-9]+$"
     },
     {
-        "description": "Dependency duplicated, the one with error was excluded"
+        "expires": "2024-05-17",
       "name": "MerchRealestates",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
       "name": "MPSignUpLibs",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "name": "MPSignUpLibs",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
         "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
       "name": "MPTopFloatingView",
       "source": "public",
       "target": "production",
@@ -1335,7 +1163,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Public source should have patch“,
       "name": "PINCache",
       "source": "public",
       "target": "production",
@@ -1360,18 +1187,10 @@
       "version": "^~>\\s?4.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
       "name": "PXMLPaymentProcessor",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "name": "PXMLPaymentProcessor",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "PureLayout",
@@ -1386,18 +1205,10 @@
       "version": "1.6.3"
     },
     {
-        "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
       "name": "RazzleDazzle",
       "source": "private",
       "target": "production",
       "version": "0.1.5"
-    },
-    {
-      "name": "RazzleDazzle",
-      "source": "private",
-      "target": "production",
-      "version": "1.1.5"
     },
     {
       "name": "Realm",
@@ -1424,18 +1235,10 @@
       "version": "3.6.0"
     },
     {
-        "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
       "name": "Sodium",
       "source": "private",
       "target": "production",
       "version": "0.8.0"
-    },
-    {
-      "name": "Sodium",
-      "source": "private",
-      "target": "production",
-      "version": "1.8.0"
     },
     {
       "name": "StyledPageControl",
@@ -1462,18 +1265,10 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
       "name": "MLGodzippa",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "name": "MLGodzippa",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MPContacts",
@@ -1489,7 +1284,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Only minor regex allowed",
       "name": "MLBiometricSecurity",
       "source": "private",
       "target": "production",
@@ -1527,7 +1321,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Public source should be fix with patch, no regex“,
       "name": "MLBusinessComponents",
       "source": "public",
       "target": "production",
@@ -1547,7 +1340,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Only minor regex allowed",
       "name": "MPAppRater",
       "source": "private",
       "target": "production",
@@ -1572,18 +1364,10 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
       "name": "UIImage-ResizeMagick",
       "source": "public",
       "target": "production",
       "version": "0.0.1"
-    },
-    {
-      "name": "UIImage-ResizeMagick",
-      "source": "public",
-      "target": "production",
-      "version": "1.0.1"
     },
     {
       "name": "MeliCards",
@@ -1611,7 +1395,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Only minor regex allowed",
       "name": "AndesUI",
       "source": "public",
       "target": "production",
@@ -1622,14 +1405,6 @@
       "source": "public",
       "target": "production",
       "version": "^~>\\s?3.[2-9]+$"
-    },
-    {
-        "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1"
-      "name": "AndesIntegrations",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "AndesIntegrations",
@@ -1644,22 +1419,13 @@
       "version": "^~>\\s?9.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
       "name": "MLLoyalDM",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "name": "MLLoyalDM",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
         "expires": "2024-05-17",
-        "reason": "Only minor regex allowed",
       "name": "MLLoyalUIComponents",
       "source": "private",
       "target": "production",
@@ -1673,7 +1439,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Only minor regex allowed",
       "name": "CreditsUIComponents",
       "source": "private",
       "target": "production",
@@ -1734,22 +1499,13 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
       "name": "MLTFSCommons",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "name": "MLTFSCommons",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
         "expires": "2024-05-17",
-        "reason": "Only minor regex allowed",
       "name": "PointFlowEngine",
       "source": "private",
       "target": "production",
@@ -1769,7 +1525,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Only minor regex allowed",
       "name": "PointUI",
       "source": "private",
       "target": "production",
@@ -1782,18 +1537,10 @@
       "version": "^~>\\s?10.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
       "name": "GarexGpage",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "name": "GarexGpage",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "CardsAcquisition",
@@ -1832,22 +1579,13 @@
       "version": "4.0.2"
     },
     {
-        "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
       "name": "SwiftLint",
       "source": "public",
       "target": "production",
       "version": "0.25.1"
     },
     {
-      "name": "SwiftLint",
-      "source": "public",
-      "target": "production",
-      "version": "1.25.1"
-    },
-    {
         "expires": "2024-05-17",
-        "reason": "Public source should be fix with patch, no regex“,
       "name": "Quick",
       "source": "public",
       "target": "test",
@@ -1861,7 +1599,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Public source should be fix with patch, no regex“,
       "name": "SnapshotTesting",
       "source": "public",
       "target": "test",
@@ -1875,8 +1612,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason1": "Major prime version should start with 1“,
-        "reason2": "Public source should be fix with patch, no regex“,
       "name": "SwiftFormat",
       "source": "public",
       "target": "test",
@@ -1890,7 +1625,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Public source should be fix with patch, no regex“,
       "name": "HyperioniOS",
       "source": "public",
       "target": "test",
@@ -1940,7 +1674,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Public source should be fix with patch, no regex“,
       "name": "Bagel",
       "source": "public",
       "target": "test",
@@ -1960,7 +1693,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Public source should be fix with patch, no regex“,
       "name": "Auth0",
       "source": "public",
       "target": "production",
@@ -1973,18 +1705,10 @@
       "version": "1.0.0"
     },
     {
-        "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
       "name": "DeveloperMode",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "name": "DeveloperMode",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "RequestWatcher",
@@ -2023,18 +1747,10 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
       "name": "AccountRelationships",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "name": "AccountRelationships",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "GoogleMLKit/TextRecognition",
@@ -2049,18 +1765,10 @@
       "version": "2.1.0"
     },
     {
-        "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
       "name": "ZIPFoundation",
       "source": "public",
       "target": "production",
       "version": "0.9.12"
-    },
-    {
-      "name": "ZIPFoundation",
-      "source": "public",
-      "target": "production",
-      "version": "1.9.12"
     },
     {
       "name": "Cashout",
@@ -2082,7 +1790,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Only minor regex allowed",
       "name": "SmartCoupons",
       "source": "private",
       "target": "production",
@@ -2096,7 +1803,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Public source should have patch“,
       "name": "GooglePlaces",
       "source": "public",
       "target": "production",
@@ -2187,23 +1893,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
       "name": "AmountScreen",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "name": "AmountScreen",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-        "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
-      "name": "FeedbackScreen",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
@@ -2212,26 +1902,10 @@
       "name": "FeedbackScreen",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-        "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
-      "name": "CcapCommons",
-      "source": "private",
-      "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "CcapCommons",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-        "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
-      "name": "CcapSDUI",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
@@ -2240,7 +1914,7 @@
       "name": "CcapSDUI",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "SmartTokenization",
@@ -2250,7 +1924,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Public source should be fix with patch, no regex“,
       "name": "ADAssertLayout",
       "source": "public",
       "target": "test",
@@ -2270,8 +1943,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason1": "Major prime version should start with 1“,
-        "reason2": "Public source should be fix with patch, no regex“,
       "name": "SwiftCheck",
       "source": "public",
       "target": "test",
@@ -2281,15 +1952,7 @@
       "name": "SwiftCheck",
       "source": "public",
       "target": "test",
-      "version": "1.0.0"
-    },
-    {
-        "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
-      "name": "DevicesSdk",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "0.1.0"
     },
     {
       "name": "DevicesSdk",
@@ -2305,7 +1968,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Only minor regex allowed",
       "name": "OpenTelemetryApi",
       "source": "private",
       "target": "production",
@@ -2319,7 +1981,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Only minor regex allowed",
       "name": "OpenTelemetryProtocolExporter",
       "source": "private",
       "target": "production",
@@ -2333,7 +1994,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Only minor regex allowed",
       "name": "OpenTelemetrySdk",
       "source": "private",
       "target": "production",
@@ -2347,7 +2007,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Only minor regex allowed",
       "name": "SwiftAtomics",
       "source": "private",
       "target": "production",
@@ -2361,7 +2020,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Only minor regex allowed",
       "name": "SwiftAtomicsShims",
       "source": "private",
       "target": "production",
@@ -2423,7 +2081,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Only minor regex allowed",
       "name": "Reviews",
       "source": "private",
       "target": "production",
@@ -2437,7 +2094,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Only minor regex allowed",
       "name": "NetworkStatus",
       "source": "private",
       "target": "production",
@@ -2463,7 +2119,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Only minor regex allowed",
       "name": "Mplay",
       "source": "private",
       "target": "production",
@@ -2476,18 +2131,10 @@
       "version": "^~>\\s?1.[0-9]*$"
     },
     {
-        "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
       "name": "MLCardForm",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "name": "MLCardForm",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "SellerHomeSection",
@@ -2527,7 +2174,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Only minor regex allowed",
       "name": "AppMonitoring",
       "source": "private",
       "target": "production",
@@ -2540,18 +2186,10 @@
       "version": "^~>\\s?2.[0-9]*$"
     },
     {
-        "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
       "name": "AppMonitoringSetup",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "name": "AppMonitoringSetup",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "DatadogInternal",
@@ -2650,23 +2288,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
       "name": "Matt",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "name": "Matt",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-        "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
-      "name": "XProdModules",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
@@ -2675,7 +2297,7 @@
       "name": "XProdModules",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "SmiSdk-swift",
@@ -2690,23 +2312,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
       "name": "PlatsecOauthRedirect",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "name": "PlatsecOauthRedirect",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-        "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
-      "name": "XProdFloxComponents",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
@@ -2715,7 +2321,7 @@
       "name": "XProdFloxComponents",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "description": "This version will be deprecated in favor of 4.0.0",
@@ -2769,23 +2375,7 @@
       "version": "^~>\\s?3.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
       "name": "PerformanceTraces",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "name": "PerformanceTraces",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-        "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
-      "name": "PerformanceTracesConfig",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
@@ -2794,26 +2384,10 @@
       "name": "PerformanceTracesConfig",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-        "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
-      "name": "SplashScreen",
-      "source": "private",
-      "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "SplashScreen",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-        "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
-      "name": "Wishlists",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
@@ -2822,7 +2396,7 @@
       "name": "Wishlists",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "BillPayments",
@@ -2837,18 +2411,10 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
-        "reason": "Major prime version should start with 1“,
       "name": "SafeGuard",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "name": "SafeGuard",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLWebkitExtensions",
@@ -2858,7 +2424,6 @@
     },
     {
         "expires": "2024-05-17",
-        "reason": "Only minor regex allowed",
       "name": "TMGSDK",
       "source": "private",
       "target": "production",
