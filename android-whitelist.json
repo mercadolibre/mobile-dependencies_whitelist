@@ -284,12 +284,6 @@
       "version": "2\\.5\\.0"
     },
     {
-      "expires": "2024-03-01",
-      "group": "com\\.mercadolibre\\.android\\.dynamic_features",
-      "name": "core",
-      "version": "10\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.dynamic_features",
       "name": "core",
       "version": "11\\.\\+"
@@ -978,24 +972,6 @@
     {
       "group": "com\\.mercadolibre\\.android\\.navigationcp",
       "name": "shipping-address",
-      "version": "11\\.\\+"
-    },
-    {
-      "expires": "2024-03-01",
-      "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
-      "name": "core",
-      "version": "11\\.\\+"
-    },
-    {
-      "expires": "2024-03-01",
-      "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
-      "name": "renderer-fresco",
-      "version": "11\\.\\+"
-    },
-    {
-      "expires": "2024-03-01",
-      "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
-      "name": "configurer",
       "version": "11\\.\\+"
     },
     {
@@ -2306,9 +2282,15 @@
       "version": "mercadolibre-10\\.\\+|mercadopago-10\\.\\+"
     },
     {
+      "expires": "2024-06-01",
       "group": "com\\.squareup\\.leakcanary",
       "name": "leakcanary-android",
       "version": "2\\.7"
+    },
+    {
+      "group": "com\\.squareup\\.leakcanary",
+      "name": "leakcanary-android",
+      "version": "2\\.13"
     },
     {
       "expires": "2024-12-01",
@@ -3514,6 +3496,11 @@
       "group": "com\\.mercadolibre\\.android\\.barcode_img_generator",
       "name": "barcodeimagegenerator",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cart\\.facade",
+      "name": "toolset",
+      "version": "1\\.\\.+"
     }
   ]
 }
