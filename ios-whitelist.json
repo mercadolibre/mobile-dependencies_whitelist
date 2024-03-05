@@ -25,7 +25,7 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "MLCheckoutFlow",
       "source": "private",
       "target": "production",
@@ -50,7 +50,7 @@
       "version": "^~>\\s?10.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "MLCheckoutSDK",
       "source": "private",
       "target": "production",
@@ -75,7 +75,7 @@
       "version": "^~>\\s?4.29.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "AmountLabel",
       "source": "public",
       "target": "production",
@@ -100,7 +100,7 @@
       "version": "^~>\\s?6.[0-9]+.?[0-9]*$"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "CHTCollectionViewWaterfallLayout",
       "source": "public",
       "target": "production",
@@ -131,7 +131,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "FBSDKCoreKit",
       "source": "public",
       "target": "production",
@@ -144,7 +144,7 @@
       "version": "13.2.0"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "FBSDKCoreKit_Basics",
       "source": "public",
       "target": "production",
@@ -163,7 +163,7 @@
       "version": "13.2.0"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "FBAEMKit",
       "source": "public",
       "target": "production",
@@ -188,7 +188,7 @@
       "version": "1.6.4"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "Firebase",
       "source": "public",
       "target": "production",
@@ -201,7 +201,7 @@
       "version": "7.8.0"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "FirebaseCore",
       "source": "public",
       "target": "production",
@@ -214,7 +214,7 @@
       "version": "7.8.0"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "FirebaseAnalytics",
       "source": "public",
       "target": "production",
@@ -224,10 +224,10 @@
       "name": "FirebaseAnalytics",
       "source": "public",
       "target": "production",
-      "version": "7.8.0
+      "version": "7.8.0"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "FirebaseDynamicLinks",
       "source": "public",
       "target": "production",
@@ -240,7 +240,7 @@
       "version": "7.8.0"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "FirebasePerformance",
       "source": "public",
       "target": "production",
@@ -253,7 +253,7 @@
       "version": "7.8.0"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "FirebaseCoreDiagnostics",
       "source": "public",
       "target": "production",
@@ -266,7 +266,7 @@
       "version": "7.8.0"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "FirebaseRemoteConfig",
       "source": "public",
       "target": "production",
@@ -279,7 +279,7 @@
       "version": "7.8.0"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "FirebaseABTesting",
       "source": "public",
       "target": "production",
@@ -292,7 +292,7 @@
       "version": "7.8.0"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "FirebaseInstallations",
       "source": "public",
       "target": "production",
@@ -305,7 +305,7 @@
       "version": "7.8.0"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "Firebase/Core",
       "source": "public",
       "target": "production",
@@ -318,7 +318,7 @@
       "version": "7.8.0"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "Firebase/DynamicLinks",
       "source": "public",
       "target": "production",
@@ -331,7 +331,7 @@
       "version": "7.8.0"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "Firebase/Analytics",
       "source": "public",
       "target": "production",
@@ -344,7 +344,7 @@
       "version": "7.8.0"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "Firebase/MLModelDownloader",
       "source": "public",
       "target": "production",
@@ -357,7 +357,7 @@
       "version": "7.8.0"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "TensorFlowLiteSwift",
       "source": "public",
       "target": "production",
@@ -436,7 +436,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "ISO8601DateFormatter",
       "source": "public",
       "target": "production",
@@ -485,7 +485,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "JRSwizzle",
       "source": "public",
       "target": "production",
@@ -604,7 +604,7 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "expires": "2024-03-22",
+     "expires":    "2024-03-22",
       "name": "MlCards",
       "source": "private",
       "target": "production",
@@ -617,7 +617,7 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "MLCardDrawer",
       "source": "private",
       "target": "production",
@@ -630,7 +630,7 @@
       "version": "^~>\\s?1.[0-9]*$"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "PxPmSelector",
       "source": "private",
       "target": "production",
@@ -655,7 +655,7 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "BuyingflowCart",
       "source": "private",
       "target": "production",
@@ -686,7 +686,7 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "MLFeesAndInstallments",
       "source": "private",
       "target": "production",
@@ -717,7 +717,7 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "MLCommons",
       "source": "private",
       "target": "production",
@@ -742,7 +742,7 @@
       "version": "^~>\\s?3.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "MLDynamicModal",
       "source": "public",
       "target": "production",
@@ -761,7 +761,7 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "MLFirebase",
       "source": "private",
       "target": "production",
@@ -780,7 +780,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "MLLocalStorage",
       "source": "private",
       "target": "production",
@@ -859,7 +859,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "MLNavigationCP",
       "source": "private",
       "target": "production",
@@ -938,7 +938,7 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "MLRecommendations",
       "source": "private",
       "target": "production",
@@ -1030,7 +1030,7 @@
     },
     {
     {
-      "expires": "2024-07-22",
+     "expires":    "2024-07-22",
       "name": "MLUI",
       "source": "public",
       "target": "production",
@@ -1049,7 +1049,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "MLUINavigationCP",
       "source": "private",
       "target": "production",
@@ -1068,7 +1068,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "MLVPP",
       "source": "private",
       "target": "production",
@@ -1087,7 +1087,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "MPDynamicSkeleton",
       "source": "public",
       "target": "production",
@@ -1106,7 +1106,7 @@
       "version": "^~>\\s?3.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "MerchRealestates",
       "source": "private",
       "target": "production",
@@ -1119,7 +1119,7 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "MPTopFloatingView",
       "source": "public",
       "target": "production",
@@ -1162,7 +1162,7 @@
       "version": "^~>\\s?3+.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "PINCache",
       "source": "public",
       "target": "production",
@@ -1283,7 +1283,7 @@
       "version": "^~>\\s?5.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "MLBiometricSecurity",
       "source": "private",
       "target": "production",
@@ -1320,7 +1320,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "MLBusinessComponents",
       "source": "public",
       "target": "production",
@@ -1339,7 +1339,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "MPAppRater",
       "source": "private",
       "target": "production",
@@ -1394,7 +1394,7 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "AndesUI",
       "source": "public",
       "target": "production",
@@ -1425,7 +1425,7 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "MLLoyalUIComponents",
       "source": "private",
       "target": "production",
@@ -1438,7 +1438,7 @@
       "version": "^~>\\s?[1-2]*$"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "CreditsUIComponents",
       "source": "private",
       "target": "production",
@@ -1505,7 +1505,7 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "PointFlowEngine",
       "source": "private",
       "target": "production",
@@ -1524,7 +1524,7 @@
       "version": "^~>\\s?6.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "PointUI",
       "source": "private",
       "target": "production",
@@ -1585,7 +1585,7 @@
       "version": "0.25.1"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "Quick",
       "source": "public",
       "target": "test",
@@ -1598,7 +1598,7 @@
       "version": "1.0.0"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "SnapshotTesting",
       "source": "public",
       "target": "test",
@@ -1611,7 +1611,7 @@
       "version": "1.0.0"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "SwiftFormat",
       "source": "public",
       "target": "test",
@@ -1624,7 +1624,7 @@
       "version": "1.0.0"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "HyperioniOS",
       "source": "public",
       "target": "test",
@@ -1673,7 +1673,7 @@
       "version": "^~>\\s?6.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "Bagel",
       "source": "public",
       "target": "test",
@@ -1692,7 +1692,7 @@
       "version": "^~>\\s?7.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "Auth0",
       "source": "public",
       "target": "production",
@@ -1789,7 +1789,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "SmartCoupons",
       "source": "private",
       "target": "production",
@@ -1802,7 +1802,7 @@
       "version": "^~>\\s?1.[0-9]*$"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "GooglePlaces",
       "source": "public",
       "target": "production",
@@ -1923,7 +1923,7 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "ADAssertLayout",
       "source": "public",
       "target": "test",
@@ -1942,7 +1942,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "SwiftCheck",
       "source": "public",
       "target": "test",
@@ -1967,7 +1967,7 @@
       "version": "^~>\\s?3.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "OpenTelemetryApi",
       "source": "private",
       "target": "production",
@@ -1980,7 +1980,7 @@
       "version": "^~>\\s?1.[0-9]*$"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "OpenTelemetryProtocolExporter",
       "source": "private",
       "target": "production",
@@ -1993,7 +1993,7 @@
       "version": "^~>\\s?1.[0-9]*$"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "OpenTelemetrySdk",
       "source": "private",
       "target": "production",
@@ -2006,7 +2006,7 @@
       "version": "^~>\\s?1.[0-9]"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "SwiftAtomics",
       "source": "private",
       "target": "production",
@@ -2019,7 +2019,7 @@
       "version": "^~>\\s?1.[0-9]*$"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "SwiftAtomicsShims",
       "source": "private",
       "target": "production",
@@ -2080,7 +2080,7 @@
       "version": "3.16.1"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "Reviews",
       "source": "private",
       "target": "production",
@@ -2093,7 +2093,7 @@
       "version": "^~>\\s?1.[0-9]*$"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "NetworkStatus",
       "source": "private",
       "target": "production",
@@ -2118,7 +2118,7 @@
       "version": "4.7.0"
     },
     {
-        "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "Mplay",
       "source": "private",
       "target": "production",
@@ -2173,7 +2173,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
+          "expires": "2024-05-17",
       "name": "AppMonitoring",
       "source": "private",
       "target": "production",
@@ -2325,7 +2325,7 @@
     },
     {
       "description": "This version will be deprecated in favor of 4.0.0",
-      "expires": "2024-03-30",
+     "expires":    "2024-03-30",
       "name": "IspSf",
       "source": "private",
       "target": "production",
@@ -2362,7 +2362,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "expires": "2024-03-01",
+     "expires":    "2024-03-01",
       "name": "MLEShops",
       "source": "private",
       "target": "production",
@@ -2423,7 +2423,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-        "expires": "2024-05-17",
+          "expires": "2024-05-17",
       "name": "TMGSDK",
       "source": "private",
       "target": "production",
