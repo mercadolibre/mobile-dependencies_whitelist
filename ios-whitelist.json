@@ -19,10 +19,17 @@
       "version": "^~>\\s?5.[0-9]+$"
     },
     {
+      "expires": "2024-04-01",
       "name": "AdvertisingADN",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "name": "AdvertisingADN",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?3.[0-9]+$"
     },
     {
       "name": "MLCheckoutFlow",
@@ -425,6 +432,13 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "name": "MLCPG",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "expires": "2024-03-31",
       "name": "MLCPG",
       "source": "private",
       "target": "production",
@@ -1897,13 +1911,6 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "expires": "2024-03-01",
-      "name": "MLEShops",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "MLEShops",
