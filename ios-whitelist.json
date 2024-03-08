@@ -1992,6 +1992,12 @@
       "version": "6.10.0"
     },
     {
+      "name": "OneExperience",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "MeliphoneVoip",
       "source": "private",
       "target": "production",
