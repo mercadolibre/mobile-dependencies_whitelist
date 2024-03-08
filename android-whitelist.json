@@ -224,29 +224,104 @@
       "version": "17\\.0\\.0"
     },
     {
+      "expires": "2024-05-27",
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-analytics",
       "version": "17\\.0\\.1"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.commons",
+        "com.mercadolibre.android.wallet.home",
+        "com.mercadolibre.android.singleplayer",
+        "com.mercadolibre.android.discovery",
+        "com.mercadolibre.android.point.mpos",
+        "com.mercadolibre.android.checkout",
+        "com.mercadolibre.android.buyingflow.checkout"
+      ],
+      "group": "com\\.google\\.android\\.gms",
+      "name": "play-services-analytics",
+      "version": "18\\.0\\.4"
+    },
+    {
+      "expires": "2024-05-27",
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-auth",
       "version": "19\\.2\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.commons",
+        "com.mercadolibre.android.wallet.home",
+        "com.mercadolibre.android.singleplayer",
+        "com.mercadolibre.android.discovery",
+        "com.mercadolibre.android.point.mpos",
+        "com.mercadolibre.android.checkout",
+        "com.mercadolibre.android.buyingflow.checkout"
+      ],
+      "group": "com\\.google\\.android\\.gms",
+      "name": "play-services-auth",
+      "version": "20\\.7\\.0"
+    },
+    {
+      "expires": "2024-05-27",
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-base",
       "version": "17\\.6\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.commons",
+        "com.mercadolibre.android.wallet.home",
+        "com.mercadolibre.android.singleplayer",
+        "com.mercadolibre.android.discovery",
+        "com.mercadolibre.android.point.mpos",
+        "com.mercadolibre.android.checkout",
+        "com.mercadolibre.android.buyingflow.checkout"
+      ],
+      "group": "com\\.google\\.android\\.gms",
+      "name": "play-services-base",
+      "version": "18\\.2\\.0"
+    },
+    {
+      "expires": "2024-05-27",
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-location",
       "version": "17\\.1\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.commons",
+        "com.mercadolibre.android.wallet.home",
+        "com.mercadolibre.android.singleplayer",
+        "com.mercadolibre.android.discovery",
+        "com.mercadolibre.android.point.mpos",
+        "com.mercadolibre.android.checkout",
+        "com.mercadolibre.android.buyingflow.checkout"
+      ],
+      "group": "com\\.google\\.android\\.gms",
+      "name": "play-services-location",
+      "version": "21\\.0\\.1"
+    },
+    {
+      "expires": "2024-05-27",
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-maps",
       "version": "17\\.0\\.0"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.commons",
+        "com.mercadolibre.android.wallet.home",
+        "com.mercadolibre.android.singleplayer",
+        "com.mercadolibre.android.discovery",
+        "com.mercadolibre.android.point.mpos",
+        "com.mercadolibre.android.checkout",
+        "com.mercadolibre.android.buyingflow.checkout"
+      ],
+      "group": "com\\.google\\.android\\.gms",
+      "name": "play-services-maps",
+      "version": "18\\.2\\.0"
     },
     {
       "group": "com\\.google\\.android\\.gms",
@@ -361,9 +436,24 @@
       "name": "firebase-perf"
     },
     {
+      "expires": "2024-05-27",
       "group": "com\\.google\\.firebase",
       "name": "firebase-bom",
       "version": "26\\.8\\.0"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.commons",
+        "com.mercadolibre.android.wallet.home",
+        "com.mercadolibre.android.singleplayer",
+        "com.mercadolibre.android.discovery",
+        "com.mercadolibre.android.point.mpos",
+        "com.mercadolibre.android.checkout",
+        "com.mercadolibre.android.buyingflow.checkout"
+      ],
+      "group": "com\\.google\\.firebase",
+      "name": "firebase-bom",
+      "version": "30\\.5\\.0"
     },
     {
       "group": "com\\.google\\.maps\\.android",
