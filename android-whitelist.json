@@ -816,8 +816,13 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2024-05-03",
       "group": "com\\.mercadolibre\\.android\\.commons",
       "version": "31\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.commons",
+      "version": "32\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point\\.lot\\.management",
@@ -2924,15 +2929,9 @@
       "version": "4\\.+"
     },
     {
-      "expires": "2024-03-08",
       "group": "com\\.bitmovin\\.player",
       "name": "player",
       "version": "3\\.43\\.0"
-    },
-    {
-      "group": "com\\.bitmovin\\.player",
-      "name": "player",
-      "version": "3\\.43\\.1\\.+"
     },
     {
       "group": "com\\.google\\.ads\\.interactivemedia.\\v3",
@@ -3446,6 +3445,25 @@
         "com.mercadolibre.android.on.demand.resources"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
+      "group": "androidx\\.compose\\.material3",
+      "name": "material3"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.andesui",
+        "com.mercadolibre.android.on.demand.resources"
+      ],
+      "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
+      "group": "androidx\\.activity",
+      "name": "activity-compose",
+      "version": "1\\.7\\.2"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.andesui",
+        "com.mercadolibre.android.on.demand.resources"
+      ],
+      "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.ui",
       "name": "ui"
     },
@@ -3460,7 +3478,8 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.andesui"
+        "com.mercadolibre.android.andesui",
+        "com.mercadolibre.android.on.demand.resources"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.ui",
