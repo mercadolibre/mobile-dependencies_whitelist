@@ -1978,6 +1978,24 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "PerformanceBackgroundTasks",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "TwilioVoice",
+      "source": "public",
+      "target": "production",
+      "version": "6.10.0"
+    },
+    {
+      "name": "MeliphoneVoip",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
     }
   ]
 }

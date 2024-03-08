@@ -816,8 +816,13 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2024-05-03",
       "group": "com\\.mercadolibre\\.android\\.commons",
       "version": "31\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.commons",
+      "version": "32\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point\\.lot\\.management",
@@ -2877,14 +2882,26 @@
       "version": "3\\.+"
     },
     {
+      "expires": "2024-04-30",
       "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
       "name": "core",
       "version": "4\\.+"
     },
     {
+      "expires": "2024-04-30",
       "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
       "name": "recommendations",
       "version": "4\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
+      "name": "core",
+      "version": "5\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
+      "name": "recommendations",
+      "version": "5\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.si_billing_info",
@@ -2912,15 +2929,9 @@
       "version": "4\\.+"
     },
     {
-      "expires": "2024-03-08",
       "group": "com\\.bitmovin\\.player",
       "name": "player",
       "version": "3\\.43\\.0"
-    },
-    {
-      "group": "com\\.bitmovin\\.player",
-      "name": "player",
-      "version": "3\\.43\\.1\\.+"
     },
     {
       "group": "com\\.google\\.ads\\.interactivemedia.\\v3",
@@ -3098,15 +3109,15 @@
       "version": "2\\.4\\.0"
     },
     {
-      "expires": "2024-03-31",
+      "expires": "2024-05-03",
       "group": "com\\.mercadolibre\\.android\\.data_dispatcher",
       "name": "core",
-      "version": "2\\.+"
+      "version": "3\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.data_dispatcher",
       "name": "core",
-      "version": "3\\.+"
+      "version": "4\\.+"
     },
     {
       "description": "This library is used for push-notification with mqtt",
@@ -3150,9 +3161,15 @@
       "version": "5\\.+"
     },
     {
+      "expires": "2024-05-03",
       "group": "com\\.mercadolibre\\.android\\.everest",
       "name": "platform",
       "version": "6\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.everest",
+      "name": "platform",
+      "version": "7\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.errorhandler\\.v2",
@@ -3428,6 +3445,25 @@
         "com.mercadolibre.android.on.demand.resources"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
+      "group": "androidx\\.compose\\.material3",
+      "name": "material3"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.andesui",
+        "com.mercadolibre.android.on.demand.resources"
+      ],
+      "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
+      "group": "androidx\\.activity",
+      "name": "activity-compose",
+      "version": "1\\.7\\.2"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.andesui",
+        "com.mercadolibre.android.on.demand.resources"
+      ],
+      "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.ui",
       "name": "ui"
     },
@@ -3442,7 +3478,8 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.andesui"
+        "com.mercadolibre.android.andesui",
+        "com.mercadolibre.android.on.demand.resources"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.ui",
@@ -3487,8 +3524,31 @@
       "version": "22\\.0\\.0"
     },
     {
+      "description": "Meliphone is new VoIP feature implemented by CX.",
+      "group": "com\\.mercadolibre\\.android\\.meliphone\\.voip",
+      "name": "meliphone",
+      "version": "mercadopago-1\\.\\+|mercadolibre-1\\.\\+"
+    },
+    {
+      "description": "This library is required by meliphone.",
+      "group": "com\\.twilio",
+      "name": "voice-android",
+      "version": "6\\.4\\.0"
+    },
+    {
+      "description": "This library is required by meliphone.",
+      "group": "com\\.twilio",
+      "name": "audioswitch",
+      "version": "1\\.1\\.8"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.barcode_img_generator",
       "name": "barcodeimagegenerator",
+      "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cart\\.facade",
+      "name": "toolset",
       "version": "1\\.\\+"
     }
   ]
