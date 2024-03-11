@@ -891,6 +891,12 @@
       "version": "2.0.6"
     },
     {
+      "name": "TMGSDK",
+      "source": "private",
+      "target": "production",
+      "version": "1.0.2"
+    },
+    {
       "name": "OperationDetail/Commons",
       "source": "private",
       "target": "production",
