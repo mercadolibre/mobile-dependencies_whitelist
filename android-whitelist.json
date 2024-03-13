@@ -3722,6 +3722,21 @@
       "group": "com\\.mercadolibre\\.android\\.cart\\.facade",
       "name": "toolset",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.tetris",
+      "name": "feedback",
+      "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.tetris",
+      "name": "bottombase",
+      "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.tetris",
+      "name": "scan",
+      "version": "1\\.\\+"
     }
   ]
 }
