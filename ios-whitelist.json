@@ -1785,6 +1785,12 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "EverestLibs",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "EverestLibs/Core",
       "source": "private",
       "target": "production",
