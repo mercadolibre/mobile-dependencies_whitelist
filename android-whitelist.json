@@ -1262,14 +1262,28 @@
       "version": "4\\.\\+"
     },
     {
+      "description": "It will be deprecated by commons migration",
+      "expires": "2024-04-30",
       "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
       "name": "home",
       "version": "mercadopago-5\\.+"
     },
     {
+      "description": "It will be deprecated by commons migration",
+      "expires": "2024-04-30",
       "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
       "name": "sections",
       "version": "mercadopago-5\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
+      "name": "home",
+      "version": "mercadopago-6\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
+      "name": "sections",
+      "version": "mercadopago-6\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.usersections\\",
@@ -3590,6 +3604,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.on.demand.resources"
       ],
@@ -3600,6 +3615,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.on.demand.resources"
       ],
@@ -3609,6 +3625,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.on.demand.resources"
       ],
@@ -3618,6 +3635,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.on.demand.resources"
       ],
@@ -3628,6 +3646,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.on.demand.resources"
       ],
@@ -3637,6 +3656,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.on.demand.resources"
       ],
@@ -3646,6 +3666,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.on.demand.resources"
       ],
@@ -3655,6 +3676,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.on.demand.resources"
       ],
@@ -3664,6 +3686,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.on.demand.resources"
       ],
@@ -3673,6 +3696,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.on.demand.resources"
       ],
