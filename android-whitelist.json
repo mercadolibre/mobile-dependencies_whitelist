@@ -3326,9 +3326,15 @@
       "version": "0\\.1\\.\\+"
     },
     {
+      "expires": "2024-05-03",
       "group": "com\\.mercadolibre\\.android\\.performance_tools",
       "name": "leakcanary",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.performance_tools",
+      "name": "leakcanary",
+      "version": "2\\.\\+"
     },
     {
       "expires": "2024-03-31",
