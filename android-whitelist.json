@@ -666,18 +666,14 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.yourTestlib.HERE"
+        "com.mercadolibre.android.security_two_fa.commonstest",
+        "com.mercadolibre.android.mobile_cryptography.test_utils",
+        "com.mercadolibre.android.credits.ui_components.test"
       ],
       "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "com\\.mercadolibre\\.android\\.testing",
       "name": "core",
       "version": "13\\.\\+"
-    },
-    {
-      "expires": "2024-02-02",
-      "group": "androidx\\.benchmark",
-      "name": "benchmark-macro-junit4",
-      "version": "1\\.1\\.0"
     },
     {
       "allows_granular_projects": [
@@ -2912,6 +2908,10 @@
       "version": "5\\.+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.here.your.package.remove.this.example"
+      ],
+      "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "com\\.mercadolibre\\.android\\.mobile_cryptography",
       "name": "test-utils",
       "version": "5\\.+"
