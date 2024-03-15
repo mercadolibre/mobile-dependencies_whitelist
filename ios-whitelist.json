@@ -19,10 +19,17 @@
       "version": "^~>\\s?5.[0-9]+$"
     },
     {
+      "expires": "2024-04-01",
       "name": "AdvertisingADN",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "name": "AdvertisingADN",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?3.[0-9]+$"
     },
     {
       "name": "MLCheckoutFlow",
@@ -401,12 +408,6 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "name": "MLBiometrics",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
       "name": "MPThreeDS",
       "source": "private",
       "target": "production",
@@ -431,6 +432,13 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "name": "MLCPG",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "expires": "2024-03-31",
       "name": "MLCPG",
       "source": "private",
       "target": "production",
@@ -1559,7 +1567,7 @@
       "name": "FeedbackScreen",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?0.[0-9]+"
     },
     {
       "name": "CcapCommons",
@@ -1814,25 +1822,43 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "name": "Everest/Core",
+      "name": "EverestLibs",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "name": "Everest/Data",
+      "name": "EverestLibs/Core",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "name": "Everest/Networking",
+      "name": "EverestLibs/Data",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "name": "Everest/UI",
+      "name": "EverestLibs/Networking",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "EverestLibs/UI",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "EverestLibs/Tracking",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "EverestLibs/Hardware",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
@@ -1942,13 +1968,6 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "expires": "2024-03-01",
-      "name": "MLEShops",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?2.[0-9]+$"
-    },
-    {
       "name": "MLEShops",
       "source": "private",
       "target": "production",
@@ -2003,12 +2022,6 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "name": "TMGSDK",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
-    },
-    {
       "name": "MFEMakeupKitRetailer",
       "source": "private",
       "target": "production",
@@ -2017,6 +2030,30 @@
     {
       "description": "Don't use this version in production. It's in experimental phase.",
       "name": "VirtualTryOn",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "PerformanceBackgroundTasks",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "TwilioVoice",
+      "source": "public",
+      "target": "production",
+      "version": "6.10.0"
+    },
+    {
+      "name": "OneExperience",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MeliphoneVoip",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
