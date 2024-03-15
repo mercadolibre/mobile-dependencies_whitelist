@@ -1840,6 +1840,14 @@
       "version": "8\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.andes_integrations"
+      ],
+      "group": "com\\.mercadolibre\\.android\\.andesui",
+      "name": "components-compose",
+      "version": "8\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.andes_integrations",
       "name": "integrations",
       "version": "mercadopago-3\\.\\+|mercadolibre-3\\.\\+"
