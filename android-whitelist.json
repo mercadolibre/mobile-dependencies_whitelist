@@ -1868,6 +1868,14 @@
       "version": "8\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.andes_integrations"
+      ],
+      "group": "com\\.mercadolibre\\.android\\.andesui",
+      "name": "components-compose",
+      "version": "8\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.andes_integrations",
       "name": "integrations",
       "version": "mercadopago-3\\.\\+|mercadolibre-3\\.\\+"
@@ -3159,9 +3167,15 @@
       "version": "4\\.+"
     },
     {
+      "expires": "2024-04-08",
       "group": "com\\.bitmovin\\.player",
       "name": "player",
       "version": "3\\.43\\.0"
+    },
+    {
+      "group": "com\\.bitmovin\\.player",
+      "name": "player",
+      "version": "3\\.43\\.1\\.+"
     },
     {
       "group": "com\\.google\\.ads\\.interactivemedia.\\v3",
@@ -3519,9 +3533,16 @@
     },
     {
       "description": "This PTM library is used to schedule alarms that trigger job executions",
+      "expires": "2024-04-30",
       "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
       "name": "qualified-alarm",
       "version": "1\\.\\+"
+    },
+    {
+      "description": "This PTM library is used to schedule alarms that trigger job executions",
+      "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
+      "name": "qualified-alarm",
+      "version": "3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.isp_sf",
@@ -3563,27 +3584,55 @@
     },
     {
       "description": "Android library used to access connection data and measure api execution time.",
+      "expires": "2024-04-30",
       "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
       "name": "connectivity",
+      "version": "1\\.\\+"
+    },
+    {
+      "description": "Android library used to access connection data and measure api execution time.",
+      "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
+      "name": "connectivity",
+      "version": "3\\.\\+"
+    },
+    {
+      "description": "Android library used to easily send integrate metrics to PTM.",
+      "expires": "2024-04-30",
+      "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
+      "name": "event",
       "version": "1\\.\\+"
     },
     {
       "description": "Android library used to easily send integrate metrics to PTM.",
       "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
       "name": "event",
+      "version": "3\\.\\+"
+    },
+    {
+      "description": "Android library used to facilitate development.",
+      "expires": "2024-04-30",
+      "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
+      "name": "stdlib-ktx",
       "version": "1\\.\\+"
     },
     {
       "description": "Android library used to facilitate development.",
       "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
       "name": "stdlib-ktx",
+      "version": "3\\.\\+"
+    },
+    {
+      "description": "Android library used to easily integrate async Android services.",
+      "expires": "2024-04-30",
+      "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
+      "name": "android-service",
       "version": "1\\.\\+"
     },
     {
       "description": "Android library used to easily integrate async Android services.",
       "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
       "name": "android-service",
-      "version": "1\\.\\+"
+      "version": "3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.xprod_flox_components",
@@ -3773,7 +3822,7 @@
       "description": "Meliphone is new VoIP feature implemented by CX.",
       "group": "com\\.mercadolibre\\.android\\.meliphone\\.voip",
       "name": "meliphone",
-      "version": "mercadopago-1\\.\\+|mercadolibre-1\\.\\+"
+      "version": "mercadopago-0\\.\\+|mercadolibre-0\\.\\+"
     },
     {
       "description": "This library is required by meliphone.",
