@@ -3302,9 +3302,16 @@
       "version": "2\\.\\+"
     },
     {
+      "description": "Deprecated due to okHttp migration. Use version 4.+",
+      "expires": "2024-03-31",
       "group": "com\\.mercadolibre\\.android\\.ccap",
       "name": "smart-tokenization",
       "version": "3\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.ccap",
+      "name": "smart-tokenization",
+      "version": "4\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.ccap",
