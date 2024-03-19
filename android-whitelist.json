@@ -665,16 +665,30 @@
       "version": "6\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.security_two_fa.commonstest",
+        "com.mercadolibre.android.mobile_cryptography.test_utils",
+        "com.mercadolibre.android.credits.ui_components.test"
+      ],
+      "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "com\\.mercadolibre\\.android\\.testing",
       "name": "core",
       "version": "13\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.testing"
+      ],
+      "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "androidx\\.benchmark",
       "name": "benchmark-macro-junit4",
       "version": "1\\.1\\.1"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.testing"
+      ],
+      "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "androidx\\.test\\.ext",
       "name": "junit",
       "version": "1\\.1\\.3"
@@ -1856,6 +1870,14 @@
       "version": "8\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.andes_integrations"
+      ],
+      "group": "com\\.mercadolibre\\.android\\.andesui",
+      "name": "components-compose",
+      "version": "8\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.andes_integrations",
       "name": "integrations",
       "version": "mercadopago-3\\.\\+|mercadolibre-3\\.\\+"
@@ -2289,46 +2311,82 @@
       "version": "1\\.1\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.testing"
+      ],
+      "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "org\\.mockito",
       "name": "mockito-core",
       "version": "3\\.3\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.testing"
+      ],
+      "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "org\\.hamcrest",
       "name": "hamcrest-core",
       "version": "1\\.3"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.testing"
+      ],
+      "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "org\\.mockito",
       "name": "mockito-inline",
       "version": "3\\.3\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.testing"
+      ],
+      "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "org\\.robolectric",
       "name": "robolectric",
       "version": "4\\.5\\.1"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.testing"
+      ],
+      "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "org\\.robolectric",
       "name": "shadows-multidex",
       "version": "4\\.5\\.1"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.testing"
+      ],
+      "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "org\\.robolectric",
       "name": "shadows-supportv4",
       "version": "4\\.5\\.1"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.testing"
+      ],
+      "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "org\\.robolectric",
       "name": "shadows-playservices",
       "version": "4\\.5\\.1"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.testing"
+      ],
+      "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "org\\.robolectric",
       "name": "shadowapi",
       "version": "4\\.5\\.1"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.testing"
+      ],
+      "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "junit",
       "name": "junit",
       "version": "4\\.13"
@@ -2860,6 +2918,10 @@
       "version": "5\\.+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.here.your.package.remove.this.example"
+      ],
+      "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "com\\.mercadolibre\\.android\\.mobile_cryptography",
       "name": "test-utils",
       "version": "5\\.+"
@@ -3139,14 +3201,14 @@
     },
     {
       "description": "The expiration date is extended to have time enough to deprecate it",
-      "expires": "2024-03-15",
+      "expires": "2025-03-15",
       "group": "androidx\\.navigation",
       "name": "navigation-fragment-ktx",
       "version": "2\\.3\\.0"
     },
     {
       "description": "The expiration date is extended to have time enough to deprecate it",
-      "expires": "2024-03-15",
+      "expires": "2025-03-15",
       "group": "androidx\\.navigation",
       "name": "navigation-ui-ktx",
       "version": "2\\.3\\.0"
