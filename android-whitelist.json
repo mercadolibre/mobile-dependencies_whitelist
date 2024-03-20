@@ -2775,9 +2775,16 @@
       "version": "9\\.\\+"
     },
     {
+      "description": "The expiration date is extended to have time enough to deprecate it",
+      "expires": "2024-12-31",
       "group": "com\\.mercadolibre\\.android\\.point_smart_pos_sdk",
       "name": "device",
       "version": "dev-7\\.\\+|a910-7\\.\\+|d20-7\\.\\+|n950-7\\.\\+|7\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_smart_pos_sdk",
+      "name": "device",
+      "version": "dev-8\\.\\+|a910-8\\.\\+|d20-8\\.\\+|n950-8\\.\\+|8\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point_printer",
