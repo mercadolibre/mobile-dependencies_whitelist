@@ -665,16 +665,30 @@
       "version": "6\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.security_two_fa.commonstest",
+        "com.mercadolibre.android.mobile_cryptography.test_utils",
+        "com.mercadolibre.android.credits.ui_components.test"
+      ],
+      "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "com\\.mercadolibre\\.android\\.testing",
       "name": "core",
       "version": "13\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.testing"
+      ],
+      "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "androidx\\.benchmark",
       "name": "benchmark-macro-junit4",
       "version": "1\\.1\\.1"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.testing"
+      ],
+      "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "androidx\\.test\\.ext",
       "name": "junit",
       "version": "1\\.1\\.3"
@@ -1321,14 +1335,16 @@
       "version": "7\\.\\+"
     },
     {
+      "description": "This version will be deprecated, removes support for Google Analytics",
+      "expires": "2024-04-05",
       "group": "com\\.mercadolibre\\.android\\.dami_ui_components",
       "name": "ui_components",
       "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.dami_ui_components",
-      "name": "base_testapp",
-      "version": "4\\.\\+"
+      "name": "ui_components",
+      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.static_resources",
@@ -2295,46 +2311,82 @@
       "version": "1\\.1\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.testing"
+      ],
+      "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "org\\.mockito",
       "name": "mockito-core",
       "version": "3\\.3\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.testing"
+      ],
+      "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "org\\.hamcrest",
       "name": "hamcrest-core",
       "version": "1\\.3"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.testing"
+      ],
+      "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "org\\.mockito",
       "name": "mockito-inline",
       "version": "3\\.3\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.testing"
+      ],
+      "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "org\\.robolectric",
       "name": "robolectric",
       "version": "4\\.5\\.1"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.testing"
+      ],
+      "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "org\\.robolectric",
       "name": "shadows-multidex",
       "version": "4\\.5\\.1"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.testing"
+      ],
+      "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "org\\.robolectric",
       "name": "shadows-supportv4",
       "version": "4\\.5\\.1"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.testing"
+      ],
+      "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "org\\.robolectric",
       "name": "shadows-playservices",
       "version": "4\\.5\\.1"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.testing"
+      ],
+      "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "org\\.robolectric",
       "name": "shadowapi",
       "version": "4\\.5\\.1"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.testing"
+      ],
+      "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "junit",
       "name": "junit",
       "version": "4\\.13"
@@ -2866,6 +2918,10 @@
       "version": "5\\.+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.here.your.package.remove.this.example"
+      ],
+      "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "com\\.mercadolibre\\.android\\.mobile_cryptography",
       "name": "test-utils",
       "version": "5\\.+"
