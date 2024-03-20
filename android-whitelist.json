@@ -1232,14 +1232,26 @@
       "version": "17\\.\\+"
     },
     {
+      "expires": "2024-04-30",
       "group": "com\\.mercadolibre\\.android\\.navigation_manager",
       "name": "core",
       "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.navigation_manager",
+      "name": "core",
+      "version": "6\\.\\+"
+    },
+    {
+      "expires": "2024-04-30",
+      "group": "com\\.mercadolibre\\.android\\.navigation_manager",
       "name": "tabbar",
       "version": "mercadopago-5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.navigation_manager",
+      "name": "tabbar",
+      "version": "mercadopago-6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.mlwebkit",
@@ -3855,6 +3867,11 @@
     {
       "group": "com\\.mercadolibre\\.android\\.barcode_img_generator",
       "name": "barcodeimagegenerator",
+      "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.mobile_actions",
+      "name": "core",
       "version": "1\\.\\+"
     },
     {
