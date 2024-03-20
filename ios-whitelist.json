@@ -2016,6 +2016,12 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "MobileActions",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "MeliphoneVoip",
       "source": "private",
       "target": "production",
