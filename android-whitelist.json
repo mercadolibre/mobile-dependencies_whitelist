@@ -3876,16 +3876,28 @@
       "version": "1\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.fbm.wms.tetris"
+      ],
+      "description": "Only for context of WMS",
       "group": "com\\.mercadolibre\\.android\\.tetris",
       "name": "feedback",
       "version": "1\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.fbm.wms.tetris"
+      ],
+      "description": "Only for context of WMS",
       "group": "com\\.mercadolibre\\.android\\.tetris",
       "name": "bottombase",
       "version": "1\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.fbm.wms.tetris"
+      ],
+      "description": "Only for context of WMS",
       "group": "com\\.mercadolibre\\.android\\.tetris",
       "name": "scan",
       "version": "1\\.\\+"
