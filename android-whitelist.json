@@ -926,7 +926,7 @@
     },
     {
       "group": "com\\.mercadolibre\\.android\\.commons",
-      "version": "32\\.\\+|33\\.\\+"
+      "version": "32\\.\\+|34\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point\\.lot\\.management",
@@ -2387,7 +2387,8 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.testing"
+        "com.mercadolibre.android.testing",
+        "com.mercadolibre.android.commons"
       ],
       "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "org\\.robolectric",
