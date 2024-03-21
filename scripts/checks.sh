@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# check if enviroment $FILE is set
+if [ -z "$FILE" ]; then
+  echo 'FILE enviroment variable is not set. for example you could use: export FILE=android-whitelist.json'
+  exit 1;
+fi
+
 echo "Run linter: this step checks if file ($FILE) its well formed."
 jsonlint "$FILE"
 
