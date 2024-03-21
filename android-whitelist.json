@@ -494,26 +494,38 @@
       "version": "production-13\\.\\+|develop-13\\.\\+"
     },
     {
-      "expires": "2024-03-31",
+      "expires": "2024-03-22",
       "group": "com\\.mercadolibre\\.android",
       "name": "authentication-enrollment",
       "version": "24\\.\\+"
     },
     {
+      "expires": "2024-04-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "authentication-enrollment",
       "version": "25\\.\\+"
     },
     {
-      "expires": "2024-03-31",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "authentication-enrollment",
+      "version": "26\\.\\+"
+    },
+    {
+      "expires": "2024-03-22",
       "group": "com\\.mercadolibre\\.android",
       "name": "authentication",
       "version": "24\\.\\+"
     },
     {
+      "expires": "2024-04-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "authentication",
       "version": "25\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "authentication",
+      "version": "26\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.authscopedsession",
@@ -1857,9 +1869,16 @@
       "version": "mercadolibre-7\\.\\+|mercadopago-7\\.\\+"
     },
     {
+      "description": "Deprecated due to okHttp migration. Use version 6.+",
+      "expires": "2024-03-31",
       "group": "com\\.mercadolibre\\.android",
       "name": "cardform",
       "version": "5\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "cardform",
+      "version": "6\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.insu_flox_components",
@@ -3317,9 +3336,16 @@
       "version": "2\\.\\+"
     },
     {
+      "description": "Deprecated due to okHttp migration. Use version 4.+",
+      "expires": "2024-03-31",
       "group": "com\\.mercadolibre\\.android\\.ccap",
       "name": "smart-tokenization",
       "version": "3\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.ccap",
+      "name": "smart-tokenization",
+      "version": "4\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.ccap",
@@ -3535,18 +3561,6 @@
       "version": "4\\.\\+"
     },
     {
-      "description": "This library is used to navagation without costs",
-      "group": "com\\.datami",
-      "name": "smisdk",
-      "version": "4\\.\\+"
-    },
-    {
-      "description": "Wrapper datami sdk",
-      "group": "com\\.mercadolibre\\.android\\.freenavigation",
-      "name": "freenavigation",
-      "version": "1\\.\\+"
-    },
-    {
       "description": "This PTM library is used to schedule alarms that trigger job executions",
       "expires": "2024-04-30",
       "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
@@ -3724,7 +3738,8 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
-        "com.mercadolibre.android.on.demand.resources"
+        "com.mercadolibre.android.on.demand.resources",
+        "com.mercadolibre.android.tetris"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose",
@@ -3735,7 +3750,8 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
-        "com.mercadolibre.android.on.demand.resources"
+        "com.mercadolibre.android.on.demand.resources",
+        "com.mercadolibre.android.tetris"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.foundation",
@@ -3745,7 +3761,8 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
-        "com.mercadolibre.android.on.demand.resources"
+        "com.mercadolibre.android.on.demand.resources",
+        "com.mercadolibre.android.tetris"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.material3",
@@ -3755,7 +3772,8 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
-        "com.mercadolibre.android.on.demand.resources"
+        "com.mercadolibre.android.on.demand.resources",
+        "com.mercadolibre.android.tetris"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.activity",
@@ -3766,7 +3784,8 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
-        "com.mercadolibre.android.on.demand.resources"
+        "com.mercadolibre.android.on.demand.resources",
+        "com.mercadolibre.android.tetris"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.ui",
@@ -3776,7 +3795,8 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
-        "com.mercadolibre.android.on.demand.resources"
+        "com.mercadolibre.android.on.demand.resources",
+        "com.mercadolibre.android.tetris"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.runtime",
@@ -3786,7 +3806,8 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
-        "com.mercadolibre.android.on.demand.resources"
+        "com.mercadolibre.android.on.demand.resources",
+        "com.mercadolibre.android.tetris"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.ui",
@@ -3796,7 +3817,8 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
-        "com.mercadolibre.android.on.demand.resources"
+        "com.mercadolibre.android.on.demand.resources",
+        "com.mercadolibre.android.tetris"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.ui",
@@ -3806,7 +3828,8 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
-        "com.mercadolibre.android.on.demand.resources"
+        "com.mercadolibre.android.on.demand.resources",
+        "com.mercadolibre.android.tetris"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.ui",
@@ -3816,7 +3839,8 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
-        "com.mercadolibre.android.on.demand.resources"
+        "com.mercadolibre.android.on.demand.resources",
+        "com.mercadolibre.android.tetris"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.lifecycle",
@@ -3864,6 +3888,33 @@
     {
       "group": "com\\.mercadolibre\\.android\\.cart\\.facade",
       "name": "toolset",
+      "version": "1\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.fbm.wms.tetris"
+      ],
+      "description": "Only for context of WMS",
+      "group": "com\\.mercadolibre\\.android\\.tetris",
+      "name": "feedback",
+      "version": "1\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.fbm.wms.tetris"
+      ],
+      "description": "Only for context of WMS",
+      "group": "com\\.mercadolibre\\.android\\.tetris",
+      "name": "bottombase",
+      "version": "1\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.fbm.wms.tetris"
+      ],
+      "description": "Only for context of WMS",
+      "group": "com\\.mercadolibre\\.android\\.tetris",
+      "name": "scan",
       "version": "1\\.\\+"
     }
   ]

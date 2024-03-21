@@ -19,7 +19,7 @@
       "version": "^~>\\s?5.[0-9]+$"
     },
     {
-      "expires": "2024-04-01",
+      "expires": "2024-04-29",
       "name": "AdvertisingADN",
       "source": "private",
       "target": "production",
@@ -602,7 +602,7 @@
       "name": "AuthScopedSession",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "AuthScopedSession",
