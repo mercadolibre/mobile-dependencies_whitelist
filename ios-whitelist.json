@@ -839,13 +839,13 @@
       "name": "MLDynamicModal",
       "source": "public",
       "target": "production",
-      "version": "^~>\\s?0.[0-9].*$"
+      "version": "0.4.1"
     },
     {
       "name": "MLDynamicModal",
       "source": "public",
       "target": "production",
-      "version": "1.0.0"
+      "version": "^~>\\s?0.[0-9].*$"
     },
     {
       "name": "MLESCManager",
@@ -877,13 +877,13 @@
       "name": "MLLocalStorage",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+.?[0-9]*$"
+      "version": "^~>\\s?0.[0-9]*$"
     },
     {
       "name": "MLLocalStorage",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]*$"
+      "version": "^~>\\s?0.[0-9]+.?[0-9]*$"
     },
     {
       "name": "StaticResources",
@@ -970,7 +970,7 @@
       "name": "MLNavigationCP",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?[1-2]+.[0-9]+$"
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "MLNavigationCP",
@@ -1056,7 +1056,7 @@
       "name": "MLRecommendations",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?[4-5].[0-9]+.?[0-9]*$"
+      "version": "^~>\\s?5.?[0-9]*$"
     },
     {
       "name": "MLRecommendations",
@@ -1192,13 +1192,13 @@
       "name": "MLVPP",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?[0-2]+.[0-9]+$"
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "MLVPP",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?2.[0-9]+$"
+      "version": "^~>\\s?[0-2]+.[0-9]+$"
     },
     {
       "name": "MPBalance",
@@ -1211,13 +1211,13 @@
       "name": "MPDynamicSkeleton",
       "source": "public",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "0.2.3"
     },
     {
       "name": "MPDynamicSkeleton",
       "source": "public",
       "target": "production",
-      "version": "1.0.0"
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "MPMerchEngine",
@@ -1226,7 +1226,7 @@
       "version": "^~>\\s?3.[0-9]+$"
     },
     {
-      "description": "Dependency duplicated, the one with error was excluded"
+      "description": "Dependency duplicated, the one with error was excluded",
       "name": "MerchRealestates",
       "source": "private",
       "target": "production",
@@ -1250,13 +1250,13 @@
       "name": "MPTopFloatingView",
       "source": "public",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "0.2.4"
     },
     {
       "name": "MPTopFloatingView",
       "source": "public",
       "target": "production",
-      "version": "1.0.0"
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "MercadoPagoSDK",
@@ -1569,13 +1569,6 @@
       "version": "^~>\\s?3.[2-9]+$"
     },
     {
-      "expires": "2024-05-17",
-      "name": "AndesIntegrations",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
       "name": "AndesIntegrations",
       "source": "private",
       "target": "production",
@@ -1605,7 +1598,7 @@
       "name": "MLLoyalUIComponents",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?[1-2].[0-9]+$"
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "MLLoyalUIComponents",
@@ -1963,6 +1956,12 @@
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
     },
+     {
+      "name": "MerchRealestates",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
     {
       "name": "GoogleMLKit/TextRecognition",
       "source": "public",
@@ -2201,17 +2200,10 @@
       "version": "1.0.0"
     },
     {
-      "expires": "2024-05-17",
       "name": "DevicesSdk",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "name": "DevicesSdk",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "RiskManagement",
@@ -2766,9 +2758,9 @@
     {
       "expires": "2024-05-17",
       "name": "TMGSDK",
-      "source": "private",
+      "source": "public",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
+      "version": "0.1.06"
     },
     {
       "name": "TMGSDK",
