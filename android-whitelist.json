@@ -926,7 +926,7 @@
     },
     {
       "group": "com\\.mercadolibre\\.android\\.commons",
-      "version": "32\\.\\+|33\\.\\+"
+      "version": "32\\.\\+|34\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point\\.lot\\.management",
@@ -2394,7 +2394,8 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.testing"
+        "com.mercadolibre.android.testing",
+        "com.mercadolibre.android.commons"
       ],
       "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "org\\.robolectric",
@@ -3548,18 +3549,6 @@
       "version": "4\\.\\+"
     },
     {
-      "description": "This library is used to navagation without costs",
-      "group": "com\\.datami",
-      "name": "smisdk",
-      "version": "4\\.\\+"
-    },
-    {
-      "description": "Wrapper datami sdk",
-      "group": "com\\.mercadolibre\\.android\\.freenavigation",
-      "name": "freenavigation",
-      "version": "1\\.\\+"
-    },
-    {
       "description": "This PTM library is used to schedule alarms that trigger job executions",
       "expires": "2024-04-30",
       "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
@@ -3737,7 +3726,8 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
-        "com.mercadolibre.android.on.demand.resources"
+        "com.mercadolibre.android.on.demand.resources",
+        "com.mercadolibre.android.tetris"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose",
@@ -3748,7 +3738,8 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
-        "com.mercadolibre.android.on.demand.resources"
+        "com.mercadolibre.android.on.demand.resources",
+        "com.mercadolibre.android.tetris"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.foundation",
@@ -3758,7 +3749,8 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
-        "com.mercadolibre.android.on.demand.resources"
+        "com.mercadolibre.android.on.demand.resources",
+        "com.mercadolibre.android.tetris"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.material3",
@@ -3768,7 +3760,8 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
-        "com.mercadolibre.android.on.demand.resources"
+        "com.mercadolibre.android.on.demand.resources",
+        "com.mercadolibre.android.tetris"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.activity",
@@ -3779,7 +3772,8 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
-        "com.mercadolibre.android.on.demand.resources"
+        "com.mercadolibre.android.on.demand.resources",
+        "com.mercadolibre.android.tetris"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.ui",
@@ -3789,7 +3783,8 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
-        "com.mercadolibre.android.on.demand.resources"
+        "com.mercadolibre.android.on.demand.resources",
+        "com.mercadolibre.android.tetris"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.runtime",
@@ -3799,7 +3794,8 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
-        "com.mercadolibre.android.on.demand.resources"
+        "com.mercadolibre.android.on.demand.resources",
+        "com.mercadolibre.android.tetris"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.ui",
@@ -3809,7 +3805,8 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
-        "com.mercadolibre.android.on.demand.resources"
+        "com.mercadolibre.android.on.demand.resources",
+        "com.mercadolibre.android.tetris"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.ui",
@@ -3819,7 +3816,8 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
-        "com.mercadolibre.android.on.demand.resources"
+        "com.mercadolibre.android.on.demand.resources",
+        "com.mercadolibre.android.tetris"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.ui",
@@ -3829,7 +3827,8 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
-        "com.mercadolibre.android.on.demand.resources"
+        "com.mercadolibre.android.on.demand.resources",
+        "com.mercadolibre.android.tetris"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.lifecycle",
@@ -3877,6 +3876,33 @@
     {
       "group": "com\\.mercadolibre\\.android\\.cart\\.facade",
       "name": "toolset",
+      "version": "1\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.fbm.wms.tetris"
+      ],
+      "description": "Only for context of WMS",
+      "group": "com\\.mercadolibre\\.android\\.tetris",
+      "name": "feedback",
+      "version": "1\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.fbm.wms.tetris"
+      ],
+      "description": "Only for context of WMS",
+      "group": "com\\.mercadolibre\\.android\\.tetris",
+      "name": "bottombase",
+      "version": "1\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.fbm.wms.tetris"
+      ],
+      "description": "Only for context of WMS",
+      "group": "com\\.mercadolibre\\.android\\.tetris",
+      "name": "scan",
       "version": "1\\.\\+"
     }
   ]
