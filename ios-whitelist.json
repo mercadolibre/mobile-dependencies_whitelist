@@ -2324,7 +2324,7 @@
     },
     {
       "description": "This version will be deprecated in favor of 4.0.0",
-      "expires":    "2024-03-30",
+      "expires": "2024-03-30",
       "name": "IspSf",
       "source": "private",
       "target": "production",
@@ -2361,7 +2361,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "expires":    "2024-03-01",
+      "expires": "2024-03-01",
       "name": "MLEShops",
       "source": "private",
       "target": "production",
