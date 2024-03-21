@@ -1869,18 +1869,6 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "name": "SmiSdk-swift",
-      "source": "public",
-      "target": "production",
-      "version": "4.1.3"
-    },
-    {
-      "name": "FreeNavigation",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
       "name": "PlatsecOauthRedirect",
       "source": "private",
       "target": "production",
@@ -2011,6 +1999,12 @@
     },
     {
       "name": "OneExperience",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MobileActions",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
