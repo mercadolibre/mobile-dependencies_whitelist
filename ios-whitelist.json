@@ -604,7 +604,7 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-     "expires":    "2024-03-22",
+      "expires":    "2024-03-22",
       "name": "MlCards",
       "source": "private",
       "target": "production",
@@ -1029,8 +1029,7 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-    {
-     "expires":    "2024-07-22",
+      "expires": "2024-07-22",
       "name": "MLUI",
       "source": "public",
       "target": "production",
@@ -2325,7 +2324,7 @@
     },
     {
       "description": "This version will be deprecated in favor of 4.0.0",
-     "expires":    "2024-03-30",
+      "expires":    "2024-03-30",
       "name": "IspSf",
       "source": "private",
       "target": "production",
@@ -2362,7 +2361,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-     "expires":    "2024-03-01",
+      "expires":    "2024-03-01",
       "name": "MLEShops",
       "source": "private",
       "target": "production",
@@ -2423,7 +2422,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-          "expires": "2024-05-17",
+      "expires": "2024-05-17",
       "name": "TMGSDK",
       "source": "private",
       "target": "production",
