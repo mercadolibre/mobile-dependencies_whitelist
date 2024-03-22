@@ -115,7 +115,8 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
-    },{
+    },
+    {
       "expires": "2024-05-17",
       "name": "BuyingflowCart",
       "source": "private",
@@ -211,7 +212,8 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?[0-1]+$"
-    },{
+    },
+    {
       "expires": "2024-05-17",
       "name": "CreditsUIComponents",
       "source": "private",
@@ -516,7 +518,7 @@
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
     },
-    {      
+    {
       "expires": "2024-05-17",
       "name": "MLCardDrawer",
       "source": "private",
@@ -1897,7 +1899,8 @@
       "source": "public",
       "target": "production",
       "version": "16.0.0"
-    },{
+    },
+    {
       "expires": "2024-05-17",
       "name": "FBSDKCoreKit_Basics",
       "source": "public",
@@ -1927,7 +1930,8 @@
       "source": "public",
       "target": "production",
       "version": "7.8.0"
-    },{
+    },
+    {
       "expires": "2024-05-17",
       "name": "Firebase",
       "source": "public",
@@ -2544,5 +2548,4 @@
       "version": "1.30906.0"
     }
   ]
-
 }
