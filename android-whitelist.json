@@ -461,13 +461,13 @@
       "version": "0\\.4\\.4"
     },
     {
-      "expires": "2024-03-30",
+      "expires": "2024-06-30",
       "group": "com\\.google\\.zxing",
       "name": "core",
       "version": "3\\.3\\.2"
     },
     {
-      "expires": "2024-03-30",
+      "expires": "2024-06-30",
       "group": "com\\.journeyapps",
       "name": "zxing-android-embedded",
       "version": "3\\.6\\.0|4\\.0\\.2"
@@ -494,26 +494,26 @@
       "version": "production-13\\.\\+|develop-13\\.\\+"
     },
     {
-      "expires": "2024-03-22",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "authentication-enrollment",
-      "version": "24\\.\\+"
-    },
-    {
+      "expires": "2024-04-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "authentication-enrollment",
       "version": "25\\.\\+"
     },
     {
-      "expires": "2024-03-22",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "authentication-enrollment",
+      "version": "26\\.\\+"
+    },
+    {
+      "expires": "2024-04-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "authentication",
-      "version": "24\\.\\+"
+      "version": "25\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "authentication",
-      "version": "25\\.\\+"
+      "version": "26\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.authscopedsession",
