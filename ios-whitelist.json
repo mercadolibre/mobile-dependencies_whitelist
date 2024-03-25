@@ -162,7 +162,8 @@
       "source": "public",
       "target": "production",
       "version": "16.0.0"
-    },{
+    },
+    {
       "expires": "2024-05-17",
       "name": "FBSDKCoreKit_Basics",
       "source": "public",
@@ -637,7 +638,7 @@
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
     },
-    {      
+    {
       "expires": "2024-05-17",
       "name": "MLCardDrawer",
       "source": "private",
