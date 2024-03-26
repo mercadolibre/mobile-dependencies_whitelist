@@ -1,5 +1,9 @@
 {
   "whitelist": [
-
+    {
+      "group": "com\\.jetbrains\\.kotlin",
+      "name": "kotlin-stdlib-common",
+      "version": "1\\.+"
+    }
   ]
 }
