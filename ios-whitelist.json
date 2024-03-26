@@ -19,7 +19,7 @@
       "version": "^~>\\s?5.[0-9]+$"
     },
     {
-      "expires": "2024-04-01",
+      "expires": "2024-04-29",
       "name": "AdvertisingADN",
       "source": "private",
       "target": "production",
@@ -405,7 +405,7 @@
       "name": "AuthScopedSession",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MPThreeDS",
@@ -432,13 +432,6 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "name": "MLCPG",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "expires": "2024-03-31",
       "name": "MLCPG",
       "source": "private",
       "target": "production",
@@ -889,6 +882,12 @@
       "source": "private",
       "target": "production",
       "version": "2.0.6"
+    },
+    {
+      "name": "TMGSDK",
+      "source": "private",
+      "target": "production",
+      "version": "1.0.2"
     },
     {
       "name": "OperationDetail/Commons",
@@ -1785,25 +1784,43 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "name": "Everest/Core",
+      "name": "EverestLibs",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "name": "Everest/Data",
+      "name": "EverestLibs/Core",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "name": "Everest/Networking",
+      "name": "EverestLibs/Data",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "name": "Everest/UI",
+      "name": "EverestLibs/Networking",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "EverestLibs/UI",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "EverestLibs/Tracking",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "EverestLibs/Hardware",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
@@ -1849,18 +1866,6 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "name": "SmiSdk-swift",
-      "source": "public",
-      "target": "production",
-      "version": "4.1.3"
-    },
-    {
-      "name": "FreeNavigation",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "PlatsecOauthRedirect",
@@ -1967,12 +1972,6 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "name": "TMGSDK",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
-    },
-    {
       "name": "MFEMakeupKitRetailer",
       "source": "private",
       "target": "production",
@@ -1981,6 +1980,42 @@
     {
       "description": "Don't use this version in production. It's in experimental phase.",
       "name": "VirtualTryOn",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "PerformanceBackgroundTasks",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "TwilioVoice",
+      "source": "public",
+      "target": "production",
+      "version": "6.10.0"
+    },
+    {
+      "name": "OneExperience",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MobileActions",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MeliphoneVoip",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "AiAssistantClient",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
