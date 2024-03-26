@@ -79,7 +79,7 @@
       "name": "Adjust",
       "source": "public",
       "target": "production",
-      "version": "4.33.3"
+      "version": "4.29.6"
     },
     {
       "expires": "2024-05-17",
@@ -98,7 +98,7 @@
       "name": "Bugsnag",
       "source": "public",
       "target": "production",
-      "version": "6.25.2"
+      "version": "6.26.0"
     },
     {
       "expires": "2024-05-17",
@@ -148,7 +148,7 @@
       "name": "FBSDKCoreKit",
       "source": "public",
       "target": "production",
-      "version": "16.0.0"
+      "version": "13.2.0"
     },
     {
       "expires": "2024-05-17",
@@ -161,7 +161,7 @@
       "name": "FBSDKCoreKit_Basics",
       "source": "public",
       "target": "production",
-      "version": "16.0.0"
+      "version": "13.2.0"
     },
     {
       "expires": "2024-05-17",
@@ -174,7 +174,7 @@
       "name": "FBAEMKit",
       "source": "public",
       "target": "production",
-      "version": "16.0.0"
+      "version": "13.2.0"
     },
     {
       "expires": "2024-05-17",
@@ -375,7 +375,7 @@
       "name": "TensorFlowLiteSwift",
       "source": "public",
       "target": "production",
-      "version": "0.0.1"
+      "version": "2.5.0"
     },
     {
       "expires": "2024-05-17",
@@ -759,14 +759,7 @@
     },
     {
       "name": "MLDynamicModal",
-      "source": "public",
-      "target": "production",
-      "version": "0.4.1"
-    },
-    {
-      "expires": "2024-05-17",
-      "name": "MLDynamicModal",
-      "source": "public",
+      "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9].*$"
     },
@@ -1096,14 +1089,7 @@
     },
     {
       "name": "MPDynamicSkeleton",
-      "source": "public",
-      "target": "production",
-      "version": "0.2.3"
-    },
-    {
-      "expires": "2024-05-17",
-      "name": "MPDynamicSkeleton",
-      "source": "public",
+      "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
     },
@@ -1127,14 +1113,7 @@
     },
     {
       "name": "MPTopFloatingView",
-      "source": "public",
-      "target": "production",
-      "version": "0.2.4"
-    },
-    {
-      "expires": "2024-05-17",
-      "name": "MPTopFloatingView",
-      "source": "public",
+      "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
     },
@@ -1334,9 +1313,9 @@
     },
     {
       "name": "MLBusinessComponents",
-      "source": "public",
+      "source": "private",
       "target": "production",
-      "version": "1.54.0"
+      "version": "^~>\\s?1.[5-9]+$"
     },
     {
       "expires": "2024-05-17",
@@ -1447,7 +1426,7 @@
       "name": "CreditsUIComponents",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?[0-1]+$"
+      "version": "^~>\\s?1.[0-1]+$"
     },
     {
       "expires": "2024-05-17",
@@ -1514,7 +1493,7 @@
       "name": "PointFlowEngine",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?10|[1-9]+$"
+      "version": "^~>\\s?10.[1-9]+$"
     },
     {
       "expires": "2024-05-17",
@@ -1594,7 +1573,7 @@
       "name": "Quick",
       "source": "public",
       "target": "test",
-      "version": "6.1.0"
+      "version": "5.0.1"
     },
     {
       "expires": "2024-05-17",
@@ -1633,7 +1612,7 @@
       "name": "HyperioniOS",
       "source": "public",
       "target": "test",
-      "version": "^~>\\s?1.2.0"
+      "version": "1.2.0"
     },
     {
       "expires": "2024-05-17",
