@@ -3877,6 +3877,33 @@
       "version": "22\\.0\\.0"
     },
     {
+      "allows_granular_projects": [ 
+        "com.mercadolibre.android.a11y_testing_framework"
+      ],
+      "description": "Only available for the Meli Accessibility Inspector Service. This module should not be included in any of our productive apps.",
+      "group": "com\\.deque\\.android",
+      "name": "axe-android",
+      "version": "0\\.2\\.0"
+    },
+    {
+      "allows_granular_projects": [ 
+        "com.mercadolibre.android.a11y_testing_framework"
+      ],
+      "description": "Only available for the Meli Accessibility Inspector Service. This module should not be included in any of our productive apps.",
+      "group": "com\\.google\\.android\\.apps\\.common\\.testing\\.accessibility\\.framework",
+      "name": "accessibility-test-framework",
+      "version": "4\\.0\\.0"
+    },
+    {
+      "allows_granular_projects": [ 
+        "com.mercadolibre.android.a11y_testing_framework"
+      ],
+      "description": "Only available for the Meli Accessibility Inspector Service. This module should not be included in any of our productive apps.",
+      "group": "com\\.google\\.guava",
+      "name": "guava",
+      "version": "31\\.1-android"
+    },
+    {
       "description": "Meliphone is new VoIP feature implemented by CX.",
       "group": "com\\.mercadolibre\\.android\\.meliphone\\.voip",
       "name": "meliphone",
