@@ -1381,13 +1381,6 @@
       "version": "6\\.\\+"
     },
     {
-      "description": "This version will be deprecated, removes support for Google Analytics and Zxing libs",
-      "expires": "2024-03-22",
-      "group": "com\\.mercadopago\\.android\\.digital_accounts_components",
-      "name": "digital_accounts_components",
-      "version": "7\\.\\+"
-    },
-    {
       "group": "com\\.mercadopago\\.android\\.digital_accounts_components",
       "name": "digital_accounts_components",
       "version": "8\\.\\+"
@@ -1516,6 +1509,11 @@
       "version": "0\\.+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.yourtestlib"
+      ],
+      "description": "This library should be used only in testImplementation flavor OR only in a testapp/testlib module, If you need it in for your TEST lib please add a granularity group in a PR to the allowlist.",
+      "expires": "2024-04-09",
       "group": "com\\.mercadolibre\\.mpos\\.android\\.sdk_mpp",
       "name": "mpp-debug",
       "version": "1\\.+"
@@ -2565,16 +2563,31 @@
       "version": "16\\.0\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.yourtestlib"
+      ],
+      "description": "This library should be used only in testImplementation flavor OR only in a testapp/testlib module, If you need it in for your TEST lib please add a granularity group in a PR to the allowlist.",
+      "expires": "2024-04-09",
       "group": "com\\.facebook\\.flipper",
       "name": "flipper-network-plugin",
       "version": "0\\.45\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.yourtestlib"
+      ],
+      "description": "This library should be used only in testImplementation flavor OR only in a testapp/testlib module, If you need it in for your TEST lib please add a granularity group in a PR to the allowlist",
+      "expires": "2024-04-09",
       "group": "com\\.facebook\\.flipper",
       "name": "flipper",
       "version": "0\\.90\\.2"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.yourtestlib"
+      ],
+      "description": "This library should be used only in testImplementation flavor OR only in a testapp/testlib module, If you need it in for your TEST lib please add a granularity group in a PR to the allowlist",
+      "expires": "2024-04-09",
       "group": "com\\.facebook\\.flipper",
       "name": "flipper-leakcanary2-plugin",
       "version": "0\\.90\\.2"
@@ -2792,9 +2805,16 @@
       "version": "9\\.\\+"
     },
     {
+      "description": "We'll try to migrate to version 8 until the end of Q2.",
+      "expires": "2024-06-30",
       "group": "com\\.mercadolibre\\.android\\.point_smart_pos_sdk",
       "name": "device",
       "version": "dev-7\\.\\+|a910-7\\.\\+|d20-7\\.\\+|n950-7\\.\\+|7\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_smart_pos_sdk",
+      "name": "device",
+      "version": "dev-8\\.\\+|a910-8\\.\\+|d20-8\\.\\+|n950-8\\.\\+|8\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point_printer",
@@ -2952,6 +2972,7 @@
         "com.mercadolibre.here.your.package.remove.this.example"
       ],
       "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
+      "expires": "2024-04-09",
       "group": "com\\.mercadolibre\\.android\\.mobile_cryptography",
       "name": "test-utils",
       "version": "5\\.+"
