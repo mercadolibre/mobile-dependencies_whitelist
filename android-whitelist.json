@@ -3631,6 +3631,10 @@
       "version": "3\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.point.mpos",
+        "com.mercadolibre.android.point_smartpos_fcu"
+      ],
       "group": "com\\.mercadolibre\\.android\\.isp_sf",
       "name": "developer_settings",
       "version": "3\\.\\+"
