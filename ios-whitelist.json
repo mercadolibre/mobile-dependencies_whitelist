@@ -1075,7 +1075,7 @@
     },
     {
       "name": "MPDynamicSkeleton",
-      "source": "private",
+      "source": "public",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
     },
@@ -1099,7 +1099,7 @@
     },
     {
       "name": "MPTopFloatingView",
-      "source": "private",
+      "source": "public",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
     },
@@ -1379,7 +1379,7 @@
     },
     {
       "name": "AndesIntegrations",
-      "source": "private",
+      "source": "public",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
     },
