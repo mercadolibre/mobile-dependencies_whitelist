@@ -1372,7 +1372,7 @@
     },
     {
       "name": "AndesIntegrations",
-      "source": "public",
+      "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
     },
