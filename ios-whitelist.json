@@ -145,13 +145,6 @@
       "version": "13.2.0"
     },
     {
-      "expires": "2024-05-17",
-      "name": "FBSDKCoreKit",
-      "source": "public",
-      "target": "production",
-      "version": "^~>\\s?(13.2.0)$"
-    },
-    {
       "name": "FBSDKCoreKit",
       "source": "public",
       "target": "production",
@@ -163,13 +156,6 @@
       "source": "public",
       "target": "production",
       "version": "13.2.0"
-    },
-    {
-      "expires": "2024-05-17",
-      "name": "FBSDKCoreKit_Basics",
-      "source": "public",
-      "target": "production",
-      "version": "^~>\\s?(13.2.0)$"
     },
     {
       "name": "FBSDKCoreKit_Basics",
@@ -345,13 +331,6 @@
       "source": "public",
       "target": "production",
       "version": "7.8.0"
-    },
-    {
-      "expires": "2024-05-17",
-      "name": "Firebase/DynamicLinks",
-      "source": "public",
-      "target": "production",
-      "version": "^~>\\s?(7.8.0)$"
     },
     {
       "name": "Firebase/DynamicLinks",
