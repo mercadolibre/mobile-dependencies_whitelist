@@ -738,7 +738,7 @@
     },
     {
       "name": "MLDynamicModal",
-      "source": "private",
+      "source": "public",
       "target": "production",
       "version": "^~>\\s?0.[0-9].*$"
     },
@@ -1294,7 +1294,7 @@
       "name": "MLBusinessComponents",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[5-9]+$"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "expires": "2024-05-17",
@@ -1472,7 +1472,7 @@
       "name": "PointFlowEngine",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?10.[1-9]+$"
+      "version": "^~>\\s?8.[1-9]+$"
     },
     {
       "expires": "2024-05-17",
@@ -1491,7 +1491,7 @@
       "name": "PointUI",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?10.[0-9]+$"
+      "version": "^~>\\s?17.[0-9]+$"
     },
     {
       "expires": "2024-05-17",
