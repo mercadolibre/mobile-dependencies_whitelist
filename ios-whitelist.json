@@ -110,7 +110,21 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "expires": "2024-04-30",
       "name": "FBSDKCoreKit",
+      "source": "public",
+      "target": "production",
+      "version": "^~>\\s?(13.2.0)$"
+    },
+    {
+      "name": "FBSDKCoreKit",
+      "source": "public",
+      "target": "production",
+      "version": "17.0.0"
+    },
+    {
+      "expires": "2024-04-30",
+      "name": "FBSDKCoreKit_Basics",
       "source": "public",
       "target": "production",
       "version": "^~>\\s?(13.2.0)$"
@@ -119,7 +133,7 @@
       "name": "FBSDKCoreKit_Basics",
       "source": "public",
       "target": "production",
-      "version": "^~>\\s?(13.2.0)$"
+      "version": "17.0.0"
     },
     {
       "name": "FBAEMKit",
@@ -200,10 +214,17 @@
       "version": "^~>\\s?(7.8.0)$"
     },
     {
+      "expires": "2024-04-30",
       "name": "Firebase/DynamicLinks",
       "source": "public",
       "target": "production",
       "version": "^~>\\s?(7.8.0)$"
+    },
+    {
+      "name": "Firebase/DynamicLinks",
+      "source": "public",
+      "target": "production",
+      "version": "10.22.0"
     },
     {
       "name": "Firebase/Analytics",
