@@ -138,6 +138,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "expires": "2024-04-30",
       "name": "FBSDKCoreKit",
       "source": "public",
       "target": "production",
@@ -151,6 +152,13 @@
       "version": "^~>\\s?(13.2.0)$"
     },
     {
+      "name": "FBSDKCoreKit",
+      "source": "public",
+      "target": "production",
+      "version": "17.0.0"
+    },
+    {
+      "expires": "2024-04-30",
       "name": "FBSDKCoreKit_Basics",
       "source": "public",
       "target": "production",
@@ -162,6 +170,12 @@
       "source": "public",
       "target": "production",
       "version": "^~>\\s?(13.2.0)$"
+    },
+    {
+      "name": "FBSDKCoreKit_Basics",
+      "source": "public",
+      "target": "production",
+      "version": "17.0.0"
     },
     {
       "name": "FBAEMKit",
@@ -326,6 +340,7 @@
       "version": "^~>\\s?(7.8.0)$"
     },
     {
+      "expires": "2024-04-30",
       "name": "Firebase/DynamicLinks",
       "source": "public",
       "target": "production",
@@ -337,6 +352,12 @@
       "source": "public",
       "target": "production",
       "version": "^~>\\s?(7.8.0)$"
+    },
+    {
+      "name": "Firebase/DynamicLinks",
+      "source": "public",
+      "target": "production",
+      "version": "10.22.0"
     },
     {
       "name": "Firebase/Analytics",
@@ -589,21 +610,7 @@
       "name": "MLCPG",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "expires": "2024-03-31",
-      "name": "MLCPG",
-      "source": "private",
-      "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "expires": "2024-03-22",
-      "name": "MlCards",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MlCards",
@@ -2343,18 +2350,18 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "description": "This version will be deprecated in favor of 4.0.0",
-      "expires": "2024-03-30",
+      "description": "This version will be deprecated in favor of 5.0.0",
+      "expires": "2024-06-30",
       "name": "IspSf",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?3.[0-9]+$"
+      "version": "^~>\\s?4.[0-9]+$"
     },
     {
       "name": "IspSf",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?4.[0-9]+$"
+      "version": "^~>\\s?5.[0-9]+$"
     },
     {
       "name": "BuyingflowCoreFlox",
