@@ -1292,13 +1292,6 @@
     },
     {
       "name": "MLBusinessComponents",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "expires": "2024-05-17",
-      "name": "MLBusinessComponents",
       "source": "public",
       "target": "production",
       "version": "^~>\\s?1.[5-9][0-9]+$"
