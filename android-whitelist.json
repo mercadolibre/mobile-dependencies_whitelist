@@ -1067,6 +1067,8 @@
       "version": "10\\.\\+"
     },
     {
+      "description": "The expiration date is extended to have time enough to deprecate it",
+      "expires": "2024-04-30",
       "group": "com\\.mercadolibre\\.android\\.variations",
       "name": "variations",
       "version": "9\\.\\+"
