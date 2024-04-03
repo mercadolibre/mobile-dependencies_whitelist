@@ -922,11 +922,11 @@
     {
       "expires": "2024-05-03",
       "group": "com\\.mercadolibre\\.android\\.commons",
-      "version": "31\\.\\+"
+      "version": "31\\.\\+|32\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.commons",
-      "version": "34\\.\\+|35\\.\\+"
+      "version": "35\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point\\.lot\\.management",
@@ -1350,11 +1350,6 @@
       "group": "com\\.mercadolibre\\.android\\.cardscomponents",
       "name": "cards-components",
       "version": "9\\.\\+"
-    },
-    {
-      "group": "com\\.mercadopago\\.android\\.commons",
-      "name": "commons",
-      "version": "7\\.\\+"
     },
     {
       "description": "This version will be deprecated, removes support for Google Analytics",
