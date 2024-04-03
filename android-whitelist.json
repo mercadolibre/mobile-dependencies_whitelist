@@ -425,7 +425,7 @@
       "name": "firebase-messaging"
     },
     {
-      "expires": "2024-04-01",
+      "expires": "2024-07-01",
       "group": "com\\.google\\.firebase",
       "name": "firebase-perf"
     },
@@ -2551,6 +2551,11 @@
       "group": "com\\.mercadolibre\\.android\\.in_app_report",
       "name": "MLInAppReport",
       "version": "5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.screenshots",
+      "name": "core",
+      "version": "0\\.\\+"
     },
     {
       "group": "com\\.android\\.tools",
