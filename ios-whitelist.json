@@ -19,7 +19,7 @@
       "version": "^~>\\s?5.[0-9]+$"
     },
     {
-      "expires": "2024-04-01",
+      "expires": "2024-04-29",
       "name": "AdvertisingADN",
       "source": "private",
       "target": "production",
@@ -32,6 +32,13 @@
       "version": "^~>\\s?3.[0-9]+$"
     },
     {
+      "name": "MLCheckoutFlow",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "expires": "2024-05-17",
       "name": "MLCheckoutFlow",
       "source": "private",
       "target": "production",
@@ -53,6 +60,13 @@
       "name": "MLCheckoutSDK",
       "source": "private",
       "target": "production",
+      "version": "^~>\\s?5.[0-9]+$"
+    },
+    {
+      "expires": "2024-05-17",
+      "name": "MLCheckoutSDK",
+      "source": "private",
+      "target": "production",
       "version": "^~>\\s?5.[0-9]+.?[0-9]*$"
     },
     {
@@ -65,6 +79,13 @@
       "name": "Adjust",
       "source": "public",
       "target": "production",
+      "version": "4.29.6"
+    },
+    {
+      "expires": "2024-05-17",
+      "name": "Adjust",
+      "source": "public",
+      "target": "production",
       "version": "^~>\\s?4.29.[0-9]+$"
     },
     {
@@ -74,6 +95,13 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "Bugsnag",
+      "source": "public",
+      "target": "production",
+      "version": "6.26.0"
+    },
+    {
+      "expires": "2024-05-17",
       "name": "Bugsnag",
       "source": "public",
       "target": "production",
@@ -110,18 +138,39 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "expires": "2024-04-30",
       "name": "FBSDKCoreKit",
       "source": "public",
       "target": "production",
-      "version": "^~>\\s?(13.2.0)$"
+      "version": "13.2.0"
+    },
+    {
+      "name": "FBSDKCoreKit",
+      "source": "public",
+      "target": "production",
+      "version": "17.0.0"
+    },
+    {
+      "expires": "2024-04-30",
+      "name": "FBSDKCoreKit_Basics",
+      "source": "public",
+      "target": "production",
+      "version": "13.2.0"
     },
     {
       "name": "FBSDKCoreKit_Basics",
       "source": "public",
       "target": "production",
-      "version": "^~>\\s?(13.2.0)$"
+      "version": "17.0.0"
     },
     {
+      "name": "FBAEMKit",
+      "source": "public",
+      "target": "production",
+      "version": "13.2.0"
+    },
+    {
+      "expires": "2024-05-17",
       "name": "FBAEMKit",
       "source": "public",
       "target": "production",
@@ -143,15 +192,43 @@
       "name": "Firebase",
       "source": "public",
       "target": "production",
+      "version": "7.8.0"
+    },
+    {
+      "expires": "2024-05-17",
+      "name": "Firebase",
+      "source": "public",
+      "target": "production",
       "version": "^~>\\s?(7.8.0)$"
     },
     {
       "name": "FirebaseCore",
       "source": "public",
       "target": "production",
+      "version": "7.8.0"
+    },
+    {
+      "expires": "2024-05-17",
+      "name": "FirebaseCore",
+      "source": "public",
+      "target": "production",
       "version": "^~>\\s?(7.8.0)$"
     },
     {
+      "expires": "2024-05-17",
+      "name": "Firebase/Core",
+      "source": "public",
+      "target": "production",
+      "version": "^~>\\s?(7.8.0)$"
+    },
+    {
+      "name": "FirebaseAnalytics",
+      "source": "public",
+      "target": "production",
+      "version": "7.8.0"
+    },
+    {
+      "expires": "2024-05-17",
       "name": "FirebaseAnalytics",
       "source": "public",
       "target": "production",
@@ -161,9 +238,23 @@
       "name": "FirebaseDynamicLinks",
       "source": "public",
       "target": "production",
+      "version": "7.8.0"
+    },
+    {
+      "expires": "2024-05-17",
+      "name": "FirebaseDynamicLinks",
+      "source": "public",
+      "target": "production",
       "version": "^~>\\s?(7.8.0)$"
     },
     {
+      "name": "FirebasePerformance",
+      "source": "public",
+      "target": "production",
+      "version": "7.8.0"
+    },
+    {
+      "expires": "2024-05-17",
       "name": "FirebasePerformance",
       "source": "public",
       "target": "production",
@@ -173,9 +264,23 @@
       "name": "FirebaseCoreDiagnostics",
       "source": "public",
       "target": "production",
+      "version": "7.8.0"
+    },
+    {
+      "expires": "2024-05-17",
+      "name": "FirebaseCoreDiagnostics",
+      "source": "public",
+      "target": "production",
       "version": "^~>\\s?(7.8.0)$"
     },
     {
+      "name": "FirebaseRemoteConfig",
+      "source": "public",
+      "target": "production",
+      "version": "7.8.0"
+    },
+    {
+      "expires": "2024-05-17",
       "name": "FirebaseRemoteConfig",
       "source": "public",
       "target": "production",
@@ -185,9 +290,23 @@
       "name": "FirebaseABTesting",
       "source": "public",
       "target": "production",
+      "version": "7.8.0"
+    },
+    {
+      "expires": "2024-05-17",
+      "name": "FirebaseABTesting",
+      "source": "public",
+      "target": "production",
       "version": "^~>\\s?(7.8.0)$"
     },
     {
+      "name": "FirebaseInstallations",
+      "source": "public",
+      "target": "production",
+      "version": "7.8.0"
+    },
+    {
+      "expires": "2024-05-17",
       "name": "FirebaseInstallations",
       "source": "public",
       "target": "production",
@@ -197,15 +316,36 @@
       "name": "Firebase/Core",
       "source": "public",
       "target": "production",
-      "version": "^~>\\s?(7.8.0)$"
+      "version": "7.8.0"
     },
     {
-      "name": "Firebase/DynamicLinks",
+      "expires": "2024-05-17",
+      "name": "Firebase/Core",
       "source": "public",
       "target": "production",
       "version": "^~>\\s?(7.8.0)$"
     },
     {
+      "expires": "2024-04-30",
+      "name": "Firebase/DynamicLinks",
+      "source": "public",
+      "target": "production",
+      "version": "7.8.0"
+    },
+    {
+      "name": "Firebase/DynamicLinks",
+      "source": "public",
+      "target": "production",
+      "version": "10.22.0"
+    },
+    {
+      "name": "Firebase/Analytics",
+      "source": "public",
+      "target": "production",
+      "version": "7.8.0"
+    },
+    {
+      "expires": "2024-05-17",
       "name": "Firebase/Analytics",
       "source": "public",
       "target": "production",
@@ -215,9 +355,23 @@
       "name": "Firebase/MLModelDownloader",
       "source": "public",
       "target": "production",
+      "version": "7.8.0"
+    },
+    {
+      "expires": "2024-05-17",
+      "name": "Firebase/MLModelDownloader",
+      "source": "public",
+      "target": "production",
       "version": "^~>\\s?(7.8.0)$"
     },
     {
+      "name": "TensorFlowLiteSwift",
+      "source": "public",
+      "target": "production",
+      "version": "2.5.0"
+    },
+    {
+      "expires": "2024-05-17",
       "name": "TensorFlowLiteSwift",
       "source": "public",
       "target": "production",
@@ -405,7 +559,7 @@
       "name": "AuthScopedSession",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MPThreeDS",
@@ -435,21 +589,7 @@
       "name": "MLCPG",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "expires": "2024-03-31",
-      "name": "MLCPG",
-      "source": "private",
-      "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "expires": "2024-03-22",
-      "name": "MlCards",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MlCards",
@@ -461,9 +601,23 @@
       "name": "MLCardDrawer",
       "source": "private",
       "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "expires": "2024-05-17",
+      "name": "MLCardDrawer",
+      "source": "private",
+      "target": "production",
       "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
     },
     {
+      "name": "PxPmSelector",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "expires": "2024-05-17",
       "name": "PxPmSelector",
       "source": "private",
       "target": "production",
@@ -482,6 +636,13 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "name": "BuyingflowCart",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "expires": "2024-05-17",
       "name": "BuyingflowCart",
       "source": "private",
       "target": "production",
@@ -509,6 +670,13 @@
       "name": "MLFeesAndInstallments",
       "source": "private",
       "target": "production",
+      "version": "^~>\\s3.[0-9]+$"
+    },
+    {
+      "expires": "2024-05-17",
+      "name": "MLFeesAndInstallments",
+      "source": "private",
+      "target": "production",
       "version": "^~>\\s2|3.[0-9]+$"
     },
     {
@@ -530,6 +698,13 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "name": "MLCommons",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "expires": "2024-05-17",
       "name": "MLCommons",
       "source": "private",
       "target": "production",
@@ -572,6 +747,13 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "MLLocalStorage",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "expires": "2024-05-17",
       "name": "MLLocalStorage",
       "source": "private",
       "target": "production",
@@ -644,6 +826,13 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "MLNavigationCP",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "expires": "2024-05-17",
       "name": "MLNavigationCP",
       "source": "private",
       "target": "production",
@@ -727,6 +916,13 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
+      "name": "MLRecommendations",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?5.[0-9]+$"
+    },
+    {
+      "expires": "2024-05-17",
       "name": "MLRecommendations",
       "source": "private",
       "target": "production",
@@ -833,6 +1029,13 @@
       "name": "MLUINavigationCP",
       "source": "private",
       "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "expires": "2024-05-17",
+      "name": "MLUINavigationCP",
+      "source": "private",
+      "target": "production",
       "version": "^~>\\s?[1-2]+.[0-9]+$"
     },
     {
@@ -842,6 +1045,13 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "MLVPP",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "expires": "2024-05-17",
       "name": "MLVPP",
       "source": "private",
       "target": "production",
@@ -902,6 +1112,12 @@
       "version": "2.0.6"
     },
     {
+      "name": "TMGSDK",
+      "source": "private",
+      "target": "production",
+      "version": "1.0.2"
+    },
+    {
       "name": "OperationDetail/Commons",
       "source": "private",
       "target": "production",
@@ -914,6 +1130,13 @@
       "version": "^~>\\s?3+.[0-9]+$"
     },
     {
+      "name": "PINCache",
+      "source": "public",
+      "target": "production",
+      "version": "2.3.0"
+    },
+    {
+      "expires": "2024-05-17",
       "name": "PINCache",
       "source": "public",
       "target": "production",
@@ -1031,6 +1254,13 @@
       "name": "MLBiometricSecurity",
       "source": "private",
       "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "expires": "2024-05-17",
+      "name": "MLBiometricSecurity",
+      "source": "private",
+      "target": "production",
       "version": "^~>\\s?[0-1].[0-9]+$"
     },
     {
@@ -1070,6 +1300,13 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "MPAppRater",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "expires": "2024-05-17",
       "name": "MPAppRater",
       "source": "private",
       "target": "production",
@@ -1171,9 +1408,23 @@
       "name": "MLLoyalUIComponents",
       "source": "private",
       "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "expires": "2024-05-17",
+      "name": "MLLoyalUIComponents",
+      "source": "private",
+      "target": "production",
       "version": "^~>\\s?[1-2].[0-9]+$"
     },
     {
+      "name": "CreditsUIComponents",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-1]+$"
+    },
+    {
+      "expires": "2024-05-17",
       "name": "CreditsUIComponents",
       "source": "private",
       "target": "production",
@@ -1237,6 +1488,13 @@
       "name": "PointFlowEngine",
       "source": "private",
       "target": "production",
+      "version": "^~>\\s?8.[1-9]+$"
+    },
+    {
+      "expires": "2024-05-17",
+      "name": "PointFlowEngine",
+      "source": "private",
+      "target": "production",
       "version": "^~>\\s?10|[1-9].[0-9]+$"
     },
     {
@@ -1246,6 +1504,7 @@
       "version": "^~>\\s?6.[0-9]+$"
     },
     {
+      "expires": "2024-05-17",
       "name": "PointUI",
       "source": "private",
       "target": "production",
@@ -1303,9 +1562,23 @@
       "name": "Quick",
       "source": "public",
       "target": "test",
+      "version": "5.0.1"
+    },
+    {
+      "expires": "2024-05-17",
+      "name": "Quick",
+      "source": "public",
+      "target": "test",
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "SnapshotTesting",
+      "source": "public",
+      "target": "test",
+      "version": "1.9.0"
+    },
+    {
+      "expires": "2024-05-17",
       "name": "SnapshotTesting",
       "source": "public",
       "target": "test",
@@ -1315,9 +1588,23 @@
       "name": "SwiftFormat",
       "source": "public",
       "target": "test",
+      "version": "0.50.9"
+    },
+    {
+      "expires": "2024-05-17",
+      "name": "SwiftFormat",
+      "source": "public",
+      "target": "test",
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "name": "HyperioniOS",
+      "source": "public",
+      "target": "test",
+      "version": "1.2.0"
+    },
+    {
+      "expires": "2024-05-17",
       "name": "HyperioniOS",
       "source": "public",
       "target": "test",
@@ -1327,9 +1614,23 @@
       "name": "RxBlocking",
       "source": "public",
       "target": "test",
+      "version": "6.5.0"
+    },
+    {
+      "expires": "2024-05-17",
+      "name": "RxBlocking",
+      "source": "public",
+      "target": "test",
       "version": "^~>\\s?4.[0-9]+$"
     },
     {
+      "name": "RxTest",
+      "source": "public",
+      "target": "test",
+      "version": "6.5.0"
+    },
+    {
+      "expires": "2024-05-17",
       "name": "RxTest",
       "source": "public",
       "target": "test",
@@ -1339,9 +1640,23 @@
       "name": "Nimble",
       "source": "public",
       "target": "test",
+      "version": "11.2.1"
+    },
+    {
+      "expires": "2024-05-17",
+      "name": "Nimble",
+      "source": "public",
+      "target": "test",
       "version": "^~>\\s?9.[0-9]+$"
     },
     {
+      "name": "OCMock",
+      "source": "public",
+      "target": "test",
+      "version": "3.9.1"
+    },
+    {
+      "expires": "2024-05-17",
       "name": "OCMock",
       "source": "public",
       "target": "test",
@@ -1351,9 +1666,23 @@
       "name": "IQKeyboardManager",
       "source": "public",
       "target": "test",
+      "version": "6.5.11"
+    },
+    {
+      "expires": "2024-05-17",
+      "name": "IQKeyboardManager",
+      "source": "public",
+      "target": "test",
       "version": "^~>\\s?6.[0-9]+$"
     },
     {
+      "name": "IQKeyboardManagerSwift",
+      "source": "public",
+      "target": "test",
+      "version": "6.5.11"
+    },
+    {
+      "expires": "2024-05-17",
       "name": "IQKeyboardManagerSwift",
       "source": "public",
       "target": "test",
@@ -1363,15 +1692,36 @@
       "name": "Bagel",
       "source": "public",
       "target": "test",
+      "version": "1.4.0"
+    },
+    {
+      "expires": "2024-05-17",
+      "name": "Bagel",
+      "source": "public",
+      "target": "test",
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "CocoaAsyncSocket",
       "source": "public",
       "target": "test",
+      "version": "7.6.5"
+    },
+    {
+      "expires": "2024-05-17",
+      "name": "CocoaAsyncSocket",
+      "source": "public",
+      "target": "test",
       "version": "^~>\\s?7.[0-9]+$"
     },
     {
+      "name": "Auth0",
+      "source": "public",
+      "target": "production",
+      "version": "2.3.2"
+    },
+    {
+      "expires": "2024-05-17",
       "name": "Auth0",
       "source": "public",
       "target": "production",
@@ -1471,9 +1821,23 @@
       "name": "SmartCoupons",
       "source": "private",
       "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "expires": "2024-05-17",
+      "name": "SmartCoupons",
+      "source": "private",
+      "target": "production",
       "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
     },
     {
+      "name": "GooglePlaces",
+      "source": "public",
+      "target": "production",
+      "version": "5.0.0"
+    },
+    {
+      "expires": "2024-05-17",
       "name": "GooglePlaces",
       "source": "public",
       "target": "production",
@@ -1591,15 +1955,36 @@
       "name": "ADAssertLayout",
       "source": "public",
       "target": "test",
+      "version": "1.0.1"
+    },
+    {
+      "expires": "2024-05-17",
+      "name": "ADAssertLayout",
+      "source": "public",
+      "target": "test",
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "ADLayoutTest",
       "source": "public",
       "target": "test",
+      "version": "1.0.1"
+    },
+    {
+      "expires": "2024-05-17",
+      "name": "ADLayoutTest",
+      "source": "public",
+      "target": "test",
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "SwiftCheck",
+      "source": "public",
+      "target": "test",
+      "version": "0.12.0"
+    },
+    {
+      "expires": "2024-05-17",
       "name": "SwiftCheck",
       "source": "public",
       "target": "test",
@@ -1621,9 +2006,23 @@
       "name": "OpenTelemetryApi",
       "source": "private",
       "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "expires": "2024-05-17",
+      "name": "OpenTelemetryApi",
+      "source": "private",
+      "target": "production",
       "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
     },
     {
+      "name": "OpenTelemetryProtocolExporter",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "expires": "2024-05-17",
       "name": "OpenTelemetryProtocolExporter",
       "source": "private",
       "target": "production",
@@ -1633,15 +2032,36 @@
       "name": "OpenTelemetrySdk",
       "source": "private",
       "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "expires": "2024-05-17",
+      "name": "OpenTelemetrySdk",
+      "source": "private",
+      "target": "production",
       "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
     },
     {
       "name": "SwiftAtomics",
       "source": "private",
       "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "expires": "2024-05-17",
+      "name": "SwiftAtomics",
+      "source": "private",
+      "target": "production",
       "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
     },
     {
+      "name": "SwiftAtomicsShims",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "expires": "2024-05-17",
       "name": "SwiftAtomicsShims",
       "source": "private",
       "target": "production",
@@ -1699,9 +2119,23 @@
       "name": "Reviews",
       "source": "private",
       "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "expires": "2024-05-17",
+      "name": "Reviews",
+      "source": "private",
+      "target": "production",
       "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
     },
     {
+      "name": "NetworkStatus",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "expires": "2024-05-17",
       "name": "NetworkStatus",
       "source": "private",
       "target": "production",
@@ -1720,6 +2154,13 @@
       "version": "4.7.0"
     },
     {
+      "name": "Mplay",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "expires": "2024-05-17",
       "name": "Mplay",
       "source": "private",
       "target": "production",
@@ -1768,6 +2209,13 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "AppMonitoring",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "expires": "2024-05-17",
       "name": "AppMonitoring",
       "source": "private",
       "target": "production",
@@ -1906,18 +2354,6 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "name": "SmiSdk-swift",
-      "source": "public",
-      "target": "production",
-      "version": "4.1.3"
-    },
-    {
-      "name": "FreeNavigation",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
       "name": "PlatsecOauthRedirect",
       "source": "private",
       "target": "production",
@@ -1930,18 +2366,18 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "description": "This version will be deprecated in favor of 4.0.0",
-      "expires": "2024-03-30",
+      "description": "This version will be deprecated in favor of 5.0.0",
+      "expires": "2024-06-30",
       "name": "IspSf",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?3.[0-9]+$"
+      "version": "^~>\\s?4.[0-9]+$"
     },
     {
       "name": "IspSf",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?4.[0-9]+$"
+      "version": "^~>\\s?5.[0-9]+$"
     },
     {
       "name": "BuyingflowCoreFlox",
@@ -2053,7 +2489,25 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "MobileActions",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "MeliphoneVoip",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "AiAssistantClient",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "Screenshots",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
