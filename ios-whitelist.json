@@ -1313,10 +1313,17 @@
       "version": "^~>\\s?[0-1].[0-9]+$"
     },
     {
-      "name": "MLNavigation$",
+      "description": "This version will be deprecated in favor of 2.0.0",
+      "name": "MLNavigation",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "MLNavigation",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "allows_granular_projects": [
