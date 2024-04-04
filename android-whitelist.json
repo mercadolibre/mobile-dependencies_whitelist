@@ -1073,6 +1073,8 @@
       "version": "10\\.\\+"
     },
     {
+      "description": "The expiration date is extended to have time enough to deprecate it",
+      "expires": "2024-04-30",
       "group": "com\\.mercadolibre\\.android\\.variations",
       "name": "variations",
       "version": "9\\.\\+"
@@ -2810,6 +2812,11 @@
     {
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "report",
+      "version": "7\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cash_rails",
+      "name": "business_component",
       "version": "7\\.\\+"
     },
     {
