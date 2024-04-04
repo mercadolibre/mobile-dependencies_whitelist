@@ -79,14 +79,14 @@
       "name": "Adjust",
       "source": "public",
       "target": "production",
-      "version": "4.29.6"
+      "version": "4.38.0"
     },
     {
       "expires": "2024-05-17",
       "name": "Adjust",
       "source": "public",
       "target": "production",
-      "version": "^~>\\s?4.29.[0-9]+$"
+      "version": "^~>\\s?4.38.[0-9]+$"
     },
     {
       "name": "AmountLabel",
