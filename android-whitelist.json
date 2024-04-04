@@ -2266,30 +2266,33 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.developer_mode",
         "com.mercadolibre.android.yourtestlib"
       ],
       "description": "This library should be used only in testImplementation flavor OR only in a testapp/testlib module, If you need it in for your TEST lib please add a granularity group in a PR to the allowlist.",
-      "expires": "2024-04-09",
+      "expires": "2025-04-09",
       "group": "com\\.facebook\\.flipper",
       "name": "flipper-network-plugin",
       "version": "0\\.45\\.0"
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.developer_mode",
         "com.mercadolibre.android.yourtestlib"
       ],
       "description": "This library should be used only in testImplementation flavor OR only in a testapp/testlib module, If you need it in for your TEST lib please add a granularity group in a PR to the allowlist",
-      "expires": "2024-04-09",
+      "expires": "2025-05-09",
       "group": "com\\.facebook\\.flipper",
       "name": "flipper",
       "version": "0\\.90\\.2"
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.developer_mode",
         "com.mercadolibre.android.yourtestlib"
       ],
       "description": "This library should be used only in testImplementation flavor OR only in a testapp/testlib module, If you need it in for your TEST lib please add a granularity group in a PR to the allowlist",
-      "expires": "2024-04-09",
+      "expires": "2025-04-09",
       "group": "com\\.facebook\\.flipper",
       "name": "flipper-leakcanary2-plugin",
       "version": "0\\.90\\.2"
