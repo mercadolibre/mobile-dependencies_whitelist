@@ -635,24 +635,27 @@
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient",
-      "version": "24\\.\\+"
+      "version": "25\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-adapter-bus",
-      "version": "24\\.\\+"
+      "version": "25\\.\\+"
     },
     {
+      "expires": "2024-04-12",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-adapter-rx2",
       "version": "24\\.\\+"
     },
     {
+      "expires": "2024-04-12",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-converter-json",
       "version": "24\\.\\+"
     },
     {
+      "expires": "2024-04-15",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-extension-header",
       "version": "24\\.\\+"
@@ -3025,9 +3028,15 @@
       "version": "4\\.+"
     },
     {
+      "expires": "2024-04-06",
       "group": "com\\.mercadolibre\\.android\\.ccap",
       "name": "secure-inputs",
       "version": "2\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.ccap",
+      "name": "secure-inputs",
+      "version": "3\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.app_monitoring",
@@ -3560,6 +3569,11 @@
       "group": "com\\.mercadolibre\\.android\\.cart\\.facade",
       "name": "toolset",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.traceability",
+      "name": "traceability",
+      "version": "9\\.\\+"
     },
     {
       "allows_granular_projects": [
