@@ -3160,9 +3160,16 @@
     },
     {
       "description": "Qualtrics native SDK library. Use ml_qualtrics instead.",
+      "expires": "2024-04-22",
       "group": "com\\.qualtrics",
       "name": "digital",
       "version": "2\\.9\\.3"
+    },
+    {
+      "description": "Qualtrics native SDK library. Use ml_qualtrics instead.",
+      "group": "com\\.qualtrics",
+      "name": "digital",
+      "version": "2\\.13\\.0"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.ml_qualtrics",
