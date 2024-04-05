@@ -1076,6 +1076,8 @@
       "version": "10\\.\\+"
     },
     {
+      "description": "The expiration date is extended to have time enough to deprecate it",
+      "expires": "2024-04-30",
       "group": "com\\.mercadolibre\\.android\\.variations",
       "name": "variations",
       "version": "9\\.\\+"
@@ -2816,6 +2818,11 @@
       "version": "7\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.cash_rails",
+      "name": "business_component",
+      "version": "7\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.mp_sellers_growth",
       "name": "core",
       "version": "1\\.+"
@@ -3018,9 +3025,15 @@
       "version": "4\\.+"
     },
     {
+      "expires": "2024-04-06",
       "group": "com\\.mercadolibre\\.android\\.ccap",
       "name": "secure-inputs",
       "version": "2\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.ccap",
+      "name": "secure-inputs",
+      "version": "3\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.app_monitoring",
@@ -3553,6 +3566,11 @@
       "group": "com\\.mercadolibre\\.android\\.cart\\.facade",
       "name": "toolset",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.traceability",
+      "name": "traceability",
+      "version": "9\\.\\+"
     },
     {
       "allows_granular_projects": [
