@@ -3565,6 +3565,11 @@
       "version": "1\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.traceability",
+      "name": "traceability",
+      "version": "9\\.\\+"
+    },
+    {
       "allows_granular_projects": [
         "com.mercadolibre.android.fbm.wms.tetris"
       ],
