@@ -635,24 +635,27 @@
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient",
-      "version": "24\\.\\+"
+      "version": "25\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-adapter-bus",
-      "version": "24\\.\\+"
+      "version": "25\\.\\+"
     },
     {
+      "expires": "2024-04-12",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-adapter-rx2",
       "version": "24\\.\\+"
     },
     {
+      "expires": "2024-04-12",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-converter-json",
       "version": "24\\.\\+"
     },
     {
+      "expires": "2024-04-15",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-extension-header",
       "version": "24\\.\\+"
@@ -1070,8 +1073,13 @@
       "version": "mercadopago-6\\.\\+"
     },
     {
+      "expires": "2024-04-30",
       "group": "com\\.mercadolibre\\.android\\.mlwebkit",
       "version": "8.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.mlwebkit",
+      "version": "9.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.uinavigationcp",
@@ -2272,30 +2280,33 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.developer_mode",
         "com.mercadolibre.android.yourtestlib"
       ],
       "description": "This library should be used only in testImplementation flavor OR only in a testapp/testlib module, If you need it in for your TEST lib please add a granularity group in a PR to the allowlist.",
-      "expires": "2024-04-09",
+      "expires": "2025-04-08",
       "group": "com\\.facebook\\.flipper",
       "name": "flipper-network-plugin",
       "version": "0\\.45\\.0"
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.developer_mode",
         "com.mercadolibre.android.yourtestlib"
       ],
       "description": "This library should be used only in testImplementation flavor OR only in a testapp/testlib module, If you need it in for your TEST lib please add a granularity group in a PR to the allowlist",
-      "expires": "2024-04-09",
+      "expires": "2025-04-08",
       "group": "com\\.facebook\\.flipper",
       "name": "flipper",
       "version": "0\\.90\\.2"
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.developer_mode",
         "com.mercadolibre.android.yourtestlib"
       ],
       "description": "This library should be used only in testImplementation flavor OR only in a testapp/testlib module, If you need it in for your TEST lib please add a granularity group in a PR to the allowlist",
-      "expires": "2024-04-09",
+      "expires": "2025-04-08",
       "group": "com\\.facebook\\.flipper",
       "name": "flipper-leakcanary2-plugin",
       "version": "0\\.90\\.2"
@@ -3028,9 +3039,15 @@
       "version": "4\\.+"
     },
     {
+      "expires": "2024-04-06",
       "group": "com\\.mercadolibre\\.android\\.ccap",
       "name": "secure-inputs",
       "version": "2\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.ccap",
+      "name": "secure-inputs",
+      "version": "3\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.app_monitoring",
@@ -3532,6 +3549,33 @@
       "version": "22\\.0\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.a11y_testing_framework"
+      ],
+      "description": "Only available for the Meli Accessibility Inspector Service. This module should not be included in any of our productive apps.",
+      "group": "com\\.deque\\.android",
+      "name": "axe-android",
+      "version": "0\\.2\\.0"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.a11y_testing_framework"
+      ],
+      "description": "Only available for the Meli Accessibility Inspector Service. This module should not be included in any of our productive apps.",
+      "group": "com\\.google\\.android\\.apps\\.common\\.testing\\.accessibility\\.framework",
+      "name": "accessibility-test-framework",
+      "version": "4\\.0\\.0"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.a11y_testing_framework"
+      ],
+      "description": "Only available for the Meli Accessibility Inspector Service. This module should not be included in any of our productive apps.",
+      "group": "com\\.google\\.guava",
+      "name": "guava",
+      "version": "31\\.1-android"
+    },
+    {
       "description": "Meliphone is new VoIP feature implemented by CX.",
       "group": "com\\.mercadolibre\\.android\\.meliphone\\.voip",
       "name": "meliphone",
@@ -3563,6 +3607,11 @@
       "group": "com\\.mercadolibre\\.android\\.cart\\.facade",
       "name": "toolset",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.traceability",
+      "name": "traceability",
+      "version": "9\\.\\+"
     },
     {
       "allows_granular_projects": [
