@@ -635,12 +635,12 @@
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient",
-      "version": "25\\.\\+"
+      "version": "24\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-adapter-bus",
-      "version": "25\\.\\+"
+      "version": "24\\.\\+"
     },
     {
       "expires": "2024-04-12",
@@ -801,6 +801,12 @@
       "version": "8\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.flox",
+      "name": "engine",
+      "version": "11\\.\\+"
+    },
+    {
+      "expires": "2024-06-30",
       "group": "com\\.mercadolibre\\.android\\.flox",
       "name": "engine",
       "version": "10\\.\\+"
@@ -3159,9 +3165,16 @@
     },
     {
       "description": "Qualtrics native SDK library. Use ml_qualtrics instead.",
+      "expires": "2024-04-22",
       "group": "com\\.qualtrics",
       "name": "digital",
       "version": "2\\.9\\.3"
+    },
+    {
+      "description": "Qualtrics native SDK library. Use ml_qualtrics instead.",
+      "group": "com\\.qualtrics",
+      "name": "digital",
+      "version": "2\\.13\\.0"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.ml_qualtrics",
