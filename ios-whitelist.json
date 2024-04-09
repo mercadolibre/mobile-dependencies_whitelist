@@ -326,6 +326,12 @@
       "version": "^~>\\s?(7.8.0)$"
     },
     {
+      "name": "Firebase/Core",
+      "source": "public",
+      "target": "production",
+      "version": "10.22.0"
+    },
+    {
       "expires": "2024-04-30",
       "name": "Firebase/DynamicLinks",
       "source": "public",
@@ -624,6 +630,12 @@
       "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
     },
     {
+      "name": "PxTokenization",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "MLCart",
       "source": "private",
       "target": "production",
@@ -851,7 +863,18 @@
       "version": "^~>\\s?3.[0-9]+$"
     },
     {
-      "name": "MLOnDemandResources",
+      "name": "MLOnDemandResources$",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "allows_granular_projects": [
+        "DiscountCenter",
+        "AndesUI"
+      ],
+      "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
+      "name": "MLOnDemandResources/SwiftUI",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
@@ -1302,7 +1325,17 @@
       "version": "^~>\\s?[0-1].[0-9]+$"
     },
     {
-      "name": "MLNavigation",
+      "name": "MLNavigation$",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "allows_granular_projects": [
+        "DiscountCenter"
+      ],
+      "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
+      "name": "MLNavigation/SwiftUI",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
@@ -1344,7 +1377,23 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
-      "name": "AndesUI",
+      "name": "AndesUI$",
+      "source": "public",
+      "target": "production",
+      "version": "^~>\\s?3.1[2-9][0-9]+$"
+    },
+    {
+      "name": "AndesUI/(Core|AndesCoachmark|AndesBottomSheet|AndesDropdown|AndesTimePicker)",
+      "source": "public",
+      "target": "production",
+      "version": "^~>\\s?3.1[2-9][0-9]+$"
+    },
+    {
+      "allows_granular_projects": [
+        "DiscountCenter"
+      ],
+      "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
+      "name": "AndesUI/SwiftUI",
       "source": "public",
       "target": "production",
       "version": "^~>\\s?3.1[2-9][0-9]+$"

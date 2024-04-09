@@ -655,16 +655,19 @@
       "version": "24\\.\\+"
     },
     {
+      "expires": "2024-04-12",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-adapter-rx2",
       "version": "24\\.\\+"
     },
     {
+      "expires": "2024-04-12",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-converter-json",
       "version": "24\\.\\+"
     },
     {
+      "expires": "2024-04-15",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-extension-header",
       "version": "24\\.\\+"
@@ -774,21 +777,32 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2024-04-15",
+      "group": "com\\.mercadopago\\.android\\.commons",
+      "name": "commons",
+      "version": "7\\.\\+"
+    },
+    {
       "expires": "2024-05-03",
       "group": "com\\.mercadolibre\\.android\\.commons",
-      "version": "31\\.\\+"
+      "version": "31\\.\\+|32\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.commons",
-      "version": "32\\.\\+|34\\.\\+"
+      "version": "35\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point\\.lot\\.management",
       "version": "2\\.\\+"
     },
     {
+      "expires": "2024-04-30",
       "group": "com\\.mercadolibre\\.android\\.remote\\.configuration",
       "version": "7\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.remote\\.configuration",
+      "version": "8\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cpg",
@@ -804,6 +818,12 @@
       "version": "8\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.flox",
+      "name": "engine",
+      "version": "11\\.\\+"
+    },
+    {
+      "expires": "2024-06-30",
       "group": "com\\.mercadolibre\\.android\\.flox",
       "name": "engine",
       "version": "10\\.\\+"
@@ -1023,6 +1043,11 @@
       "version": "19\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.demandcore",
+      "name": "bottom_sheet",
+      "version": "0\\.\\+"
+    },
+    {
       "description": "Don't use this version in production. It's in experimental phase.",
       "group": "com\\.mercadolibre\\.android\\.virtual_try_on",
       "name": "virtualtryon",
@@ -1070,8 +1095,13 @@
       "version": "mercadopago-6\\.\\+"
     },
     {
+      "expires": "2024-04-30",
       "group": "com\\.mercadolibre\\.android\\.mlwebkit",
       "version": "8.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.mlwebkit",
+      "version": "9.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.uinavigationcp",
@@ -1079,6 +1109,8 @@
       "version": "10\\.\\+"
     },
     {
+      "description": "The expiration date is extended to have time enough to deprecate it",
+      "expires": "2024-04-30",
       "group": "com\\.mercadolibre\\.android\\.variations",
       "name": "variations",
       "version": "9\\.\\+"
@@ -1156,18 +1188,6 @@
       "group": "com\\.mercadolibre\\.android\\.cardscomponents",
       "name": "cards-components",
       "version": "9\\.\\+"
-    },
-    {
-      "group": "com\\.mercadopago\\.android\\.commons",
-      "name": "commons",
-      "version": "7\\.\\+"
-    },
-    {
-      "description": "This version will be deprecated, removes support for Google Analytics",
-      "expires": "2024-04-05",
-      "group": "com\\.mercadolibre\\.android\\.dami_ui_components",
-      "name": "ui_components",
-      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.dami_ui_components",
@@ -2275,30 +2295,33 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.developer_mode",
         "com.mercadolibre.android.yourtestlib"
       ],
       "description": "This library should be used only in testImplementation flavor OR only in a testapp/testlib module, If you need it in for your TEST lib please add a granularity group in a PR to the allowlist.",
-      "expires": "2024-04-09",
+      "expires": "2025-04-08",
       "group": "com\\.facebook\\.flipper",
       "name": "flipper-network-plugin",
       "version": "0\\.45\\.0"
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.developer_mode",
         "com.mercadolibre.android.yourtestlib"
       ],
       "description": "This library should be used only in testImplementation flavor OR only in a testapp/testlib module, If you need it in for your TEST lib please add a granularity group in a PR to the allowlist",
-      "expires": "2024-04-09",
+      "expires": "2025-04-08",
       "group": "com\\.facebook\\.flipper",
       "name": "flipper",
       "version": "0\\.90\\.2"
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.developer_mode",
         "com.mercadolibre.android.yourtestlib"
       ],
       "description": "This library should be used only in testImplementation flavor OR only in a testapp/testlib module, If you need it in for your TEST lib please add a granularity group in a PR to the allowlist",
-      "expires": "2024-04-09",
+      "expires": "2025-04-08",
       "group": "com\\.facebook\\.flipper",
       "name": "flipper-leakcanary2-plugin",
       "version": "0\\.90\\.2"
@@ -2681,35 +2704,11 @@
       "version": "0\\.+"
     },
     {
-      "expires": "2024-04-01",
-      "group": "com\\.mercadolibre\\.android\\.data_privacy_helper",
-      "name": "libdataprivacy",
-      "version": "2\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.data_privacy_helper",
       "name": "libdataprivacy",
       "version": "3\\.\\+"
     },
     {
-      "expires": "2024-04-01",
-      "group": "com\\.mercadopago\\.android\\.cashin",
-      "name": "seller",
-      "version": "15\\.\\+"
-    },
-    {
-      "expires": "2024-04-01",
-      "group": "com\\.mercadopago\\.android\\.cashin",
-      "name": "payer",
-      "version": "15\\.\\+"
-    },
-    {
-      "expires": "2024-04-01",
-      "group": "com\\.mercadopago\\.android\\.cashin",
-      "name": "commons",
-      "version": "15\\.\\+"
-    },
-    {
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "seller",
       "version": "16\\.\\+"
@@ -2723,12 +2722,6 @@
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "commons",
       "version": "16\\.\\+"
-    },
-    {
-      "expires": "2024-04-01",
-      "group": "com\\.mercadolibre\\.android\\.cashout",
-      "name": "cashout",
-      "version": "12\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cashout",
@@ -2736,54 +2729,6 @@
       "version": "13\\.\\+"
     },
     {
-      "expires": "2024-04-01",
-      "group": "com\\.mercadolibre\\.android\\.cash_rails",
-      "name": "rating",
-      "version": "6\\.\\+"
-    },
-    {
-      "expires": "2024-04-01",
-      "group": "com\\.mercadolibre\\.android\\.cash_rails",
-      "name": "core",
-      "version": "6\\.\\+"
-    },
-    {
-      "expires": "2024-04-01",
-      "group": "com\\.mercadolibre\\.android\\.cash_rails",
-      "name": "feedback",
-      "version": "6\\.\\+"
-    },
-    {
-      "expires": "2024-04-01",
-      "group": "com\\.mercadolibre\\.android\\.cash_rails",
-      "name": "tab",
-      "version": "6\\.\\+"
-    },
-    {
-      "expires": "2024-04-01",
-      "group": "com\\.mercadolibre\\.android\\.cash_rails",
-      "name": "ui_component",
-      "version": "6\\.\\+"
-    },
-    {
-      "expires": "2024-04-01",
-      "group": "com\\.mercadolibre\\.android\\.cash_rails",
-      "name": "commons",
-      "version": "6\\.\\+"
-    },
-    {
-      "expires": "2024-04-01",
-      "group": "com\\.mercadolibre\\.android\\.cash_rails",
-      "name": "map",
-      "version": "6\\.\\+"
-    },
-    {
-      "expires": "2024-04-01",
-      "group": "com\\.mercadolibre\\.android\\.cash_rails",
-      "name": "report",
-      "version": "6\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "rating",
       "version": "7\\.\\+"
@@ -2821,6 +2766,11 @@
     {
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "report",
+      "version": "7\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cash_rails",
+      "name": "business_component",
       "version": "7\\.\\+"
     },
     {
@@ -3028,7 +2978,7 @@
     {
       "group": "com\\.mercadolibre\\.android\\.ccap",
       "name": "secure-inputs",
-      "version": "2\\.+"
+      "version": "3\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.app_monitoring",
@@ -3044,12 +2994,6 @@
       "group": "com\\.datadoghq",
       "name": "dd-sdk-android-gradle-plugin",
       "version": "1\\.12\\.0"
-    },
-    {
-      "expires": "2024-04-06",
-      "group": "com\\.datadoghq",
-      "name": "dd-sdk-android",
-      "version": "1\\.19\\.3"
     },
     {
       "group": "com\\.datadoghq",
@@ -3141,9 +3085,16 @@
     },
     {
       "description": "Qualtrics native SDK library. Use ml_qualtrics instead.",
+      "expires": "2024-04-22",
       "group": "com\\.qualtrics",
       "name": "digital",
       "version": "2\\.9\\.3"
+    },
+    {
+      "description": "Qualtrics native SDK library. Use ml_qualtrics instead.",
+      "group": "com\\.qualtrics",
+      "name": "digital",
+      "version": "2\\.13\\.0"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.ml_qualtrics",
@@ -3530,6 +3481,33 @@
       "version": "22\\.0\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.a11y_testing_framework"
+      ],
+      "description": "Only available for the Meli Accessibility Inspector Service. This module should not be included in any of our productive apps.",
+      "group": "com\\.deque\\.android",
+      "name": "axe-android",
+      "version": "0\\.2\\.0"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.a11y_testing_framework"
+      ],
+      "description": "Only available for the Meli Accessibility Inspector Service. This module should not be included in any of our productive apps.",
+      "group": "com\\.google\\.android\\.apps\\.common\\.testing\\.accessibility\\.framework",
+      "name": "accessibility-test-framework",
+      "version": "4\\.0\\.0"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.a11y_testing_framework"
+      ],
+      "description": "Only available for the Meli Accessibility Inspector Service. This module should not be included in any of our productive apps.",
+      "group": "com\\.google\\.guava",
+      "name": "guava",
+      "version": "31\\.1-android"
+    },
+    {
       "description": "Meliphone is new VoIP feature implemented by CX.",
       "group": "com\\.mercadolibre\\.android\\.meliphone\\.voip",
       "name": "meliphone",
@@ -3561,6 +3539,11 @@
       "group": "com\\.mercadolibre\\.android\\.cart\\.facade",
       "name": "toolset",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.traceability",
+      "name": "traceability",
+      "version": "9\\.\\+"
     },
     {
       "allows_granular_projects": [
