@@ -2244,6 +2244,12 @@
     {
       "group": "com\\.mercadolibre\\.android\\.addresses",
       "name": "core",
+      "version": "mercadolibre-10\\.\\+|mercadopago-10\\.\\+"
+    },
+    {
+      "expires": "2024-06-30",
+      "group": "com\\.mercadolibre\\.android\\.addresses",
+      "name": "core",
       "version": "mercadolibre-9\\.\\+|mercadopago-9\\.\\+"
     },
     {
@@ -3275,6 +3281,12 @@
       "version": "3\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.xprod_flox_components",
+      "name": "core",
+      "version": "2\\.\\+"
+    },
+    {
+      "expires": "2024-06-30",
       "group": "com\\.mercadolibre\\.android\\.xprod_flox_components",
       "name": "core",
       "version": "1\\.\\+"
