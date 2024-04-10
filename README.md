@@ -41,12 +41,10 @@ JSON Schema:
 }
 ```
 
-**NOTE5**: If you want to try if its working correctly from your fork, just add this line to the build.gradle:
+**NOTE5**: If you want to try if its working correctly from your fork, just add this line to the <MODULE-NAME>/build.gradle:
 
 ```
-lintGradle {
-    dependencyAllowListUrl = "https://raw.githubusercontent.com/YOUR_GITHUB_USER/mobile-dependencies_whitelist/master/android-whitelist.json"
-}
+ext["allowlistURL"] = "https://raw.githubusercontent.com/YOUR_GITHUB_USER/mobile-dependencies_whitelist/YOUR_GIT_BRANCH/android-whitelist.json"
 ```
 
 ### iOS
@@ -100,15 +98,15 @@ To activate the granularity feature, it is necessary to introduce a new block wi
 {
   "whitelist": [
     {
+      "allows_granular_projects": [ 
+            "group_meli_project",
+            "com.mercadolibre.android.commons"  # Example of a Mercado Libre Dependency Group.
+      ]
       "description": "(optional) description",
       "expires": "yyyy-MM-dd",
       "group": "group_regex",
       "name": "name_regex",
-      "version": "version_regex",
-      "allows_granular_projects": [ 
-            "group_meli_project",
-            "com.mercadolibre.android.commons"  # Example of a Mercado Libre Dependency Group.
-      ],
+      "version": "version_regex"
     },
     ...
   ]
@@ -125,7 +123,7 @@ To activate the granularity feature, it is necessary to introduce a new block wi
       "allows_granular_projects": [ 
             "name_meli_lib",
             "MLRecommendations"  # Example of a Mercado Libre Dependency Lib Name .
-      ],
+      ]
     },
     ...
   ]
