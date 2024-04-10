@@ -2023,8 +2023,7 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadopago.smartpos",
-        "com.mercadopago.android.smartpos"
+        "com.mercadolibre.android.point_smart_helpers"
       ],
       "description": "Enable previous work runtime version for smartpos app because current version not support Android SKD 33",
       "group": "androidx\\.work",
@@ -2033,8 +2032,7 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadopago.smartpos",
-        "com.mercadopago.android.smartpos"
+        "com.mercadolibre.android.point_smart_helpers"
       ],
       "description": "Enable previous work runtime version for smartpos app because current version not support Android SKD 33",
       "group": "androidx\\.work",
