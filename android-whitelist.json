@@ -2022,6 +2022,26 @@
       "version": "2\\.6\\.1"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadopago.smartpos",
+        "com.mercadopago.android.smartpos"
+      ],
+      "description": "Enable previous work runtime version for smartpos app because current version not support Android SKD 33",
+      "group": "androidx\\.work",
+      "name": "work-runtime",
+      "version": "2\\.7\\.0"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadopago.smartpos",
+        "com.mercadopago.android.smartpos"
+      ],
+      "description": "Enable previous work runtime version for smartpos app because current version not support Android SKD 33",
+      "group": "androidx\\.work",
+      "name": "work-runtime-ktx",
+      "version": "2\\.7\\.0"
+    },
+    {
       "group": "androidx\\.work",
       "name": "work-runtime",
       "version": "2\\.8\\.1"
