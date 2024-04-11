@@ -2023,7 +2023,16 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.point_smart_helpers"
+        "com.mercadopago.point",
+        "com.mercadopago.smartpos",
+        "com.mercadopago.android.smartpos",
+        "com.mercadolibre.android.point_smart_home",
+        "com.mercadolibre.android.point_login_qr",
+        "com.mercadolibre.android.point.lot.management",
+        "com.mercadolibre.android.point_smart_helpers",
+        "com.mercadopago.point.ptm",
+        "com.mercadopago.point.ptm.agent",
+        "com.mercadolibre.android.point_smart_home"
       ],
       "description": "Enable previous work runtime version for smartpos app because current version not support Android SKD 33",
       "group": "androidx\\.work",
@@ -2032,7 +2041,16 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.point_smart_helpers"
+        "com.mercadopago.point",
+        "com.mercadopago.smartpos",
+        "com.mercadopago.android.smartpos",
+        "com.mercadolibre.android.point_smart_home",
+        "com.mercadolibre.android.point_login_qr",
+        "com.mercadolibre.android.point.lot.management",
+        "com.mercadolibre.android.point_smart_helpers",
+        "com.mercadopago.point.ptm",
+        "com.mercadopago.point.ptm.agent",
+        "com.mercadolibre.android.point_smart_home"
       ],
       "description": "Enable previous work runtime version for smartpos app because current version not support Android SKD 33",
       "group": "androidx\\.work",
