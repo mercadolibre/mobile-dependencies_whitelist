@@ -633,6 +633,36 @@
       "version": "1\\.1\\.3"
     },
     {
+      "expires": "2024-05-03",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient",
+      "version": "21\\.\\+"
+    },
+    {
+      "expires": "2024-05-03",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient-adapter-bus",
+      "version": "21\\.\\+"
+    },
+    {
+      "expires": "2024-05-03",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient-adapter-rx2",
+      "version": "21\\.\\+"
+    },
+    {
+      "expires": "2024-05-03",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient-converter-json",
+      "version": "21\\.\\+"
+    },
+    {
+      "expires": "2024-05-03",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient-extension-header",
+      "version": "21\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient",
       "version": "25\\.\\+"
@@ -789,7 +819,7 @@
     },
     {
       "group": "com\\.mercadolibre\\.android\\.commons",
-      "version": "35\\.\\+"
+      "version": "36\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point\\.lot\\.management",
@@ -2256,6 +2286,12 @@
     {
       "group": "com\\.mercadolibre\\.android\\.addresses",
       "name": "core",
+      "version": "mercadolibre-10\\.\\+|mercadopago-10\\.\\+"
+    },
+    {
+      "expires": "2024-06-30",
+      "group": "com\\.mercadolibre\\.android\\.addresses",
+      "name": "core",
       "version": "mercadolibre-9\\.\\+|mercadopago-9\\.\\+"
     },
     {
@@ -2694,6 +2730,12 @@
       "version": "2\\.+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.ccap",
+      "name": "ccap-commons",
+      "version": "2\\.+"
+    },
+    {
+      "expires": "2024-04-29",
       "group": "com\\.mercadolibre\\.android\\.ccap",
       "name": "ccap-commons",
       "version": "1\\.+"
@@ -3287,6 +3329,12 @@
       "version": "3\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.xprod_flox_components",
+      "name": "core",
+      "version": "2\\.\\+"
+    },
+    {
+      "expires": "2024-06-30",
       "group": "com\\.mercadolibre\\.android\\.xprod_flox_components",
       "name": "core",
       "version": "1\\.\\+"
