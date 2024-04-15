@@ -138,6 +138,9 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "allows_granular_projects": [
+        "MLCrossAppLinks",
+      ],
       "name": "FBSDKCoreKit",
       "source": "public",
       "target": "production",
@@ -156,19 +159,30 @@
       "version": "1.6.4"
     },
     {
-      "name": "FirebaseCore",
+      "allows_granular_projects": [
+        "MLConfigurationProvider",
+        "MPConfigurationProvider"
+      ],
+      "name": "Firebase/Core",
       "source": "public",
       "target": "production",
       "version": "10.22.0"
     },
     {
-      "name": "FirebaseAnalytics",
+      "allows_granular_projects": [
+        "MLCheckout",
+        "MLCheckoutSDK",
+      ],
+      "name": "Firebase/Analytics",
       "source": "public",
       "target": "production",
       "version": "10.22.0"
     },
     {
-      "name": "FirebaseDynamicLinks",
+      "allows_granular_projects": [
+        "MLNavigation",
+      ],
+      "name": "Firebase/DynamicLinks",
       "source": "public",
       "target": "production",
       "version": "10.22.0"
