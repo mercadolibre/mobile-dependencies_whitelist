@@ -358,6 +358,12 @@
       "version": "^~>\\s?(7.8.0)$"
     },
     {
+      "name": "Firebase/Analytics",
+      "source": "public",
+      "target": "production",
+      "version": "10.22.0"
+    },
+    {
       "name": "Firebase/MLModelDownloader",
       "source": "public",
       "target": "production",
