@@ -26,6 +26,13 @@
       "version": "3\\.+"
     },
     {
+      "expires": "2024-04-19",
+      "description": "This version was extended just for backward fixes purpose",
+      "group": "com\\.mercadolibre\\.android\\.advertising",
+      "name": "adn",
+      "version": "6\\.+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.advertising",
       "name": "adn",
       "version": "7\\.+"
@@ -554,6 +561,13 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2024-04-19",
+      "description": "This version was extended just for backward fixes purpose",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "melidata-sdk",
+      "version": "18\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android",
       "name": "melidata-sdk",
       "version": "19\\.\\+"
@@ -674,21 +688,45 @@
     },
     {
       "expires": "2024-04-19",
+      "description": "This version was extended just for backward fixes purpose",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient",
       "version": "24\\.\\+"
     },
     {
       "expires": "2024-04-19",
+      "description": "This version was extended just for backward fixes purpose",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-adapter-bus",
       "version": "24\\.\\+"
     },
     {
-      "expires": "2024-04-15",
+      "expires": "2024-04-19",
+      "description": "This version was extended just for backward fixes purpose",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-extension-header",
       "version": "24\\.\\+"
+    },
+    {
+      "expires": "2024-04-19",
+      "description": "This version was extended just for backward fixes purpose",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient",
+      "version": "23\\.\\+"
+    },
+    {
+      "expires": "2024-04-19",
+      "description": "This version was extended just for backward fixes purpose",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient-adapter-bus",
+      "version": "23\\.\\+"
+    },
+    {
+      "expires": "2024-04-19",
+      "description": "This version was extended just for backward fixes purpose",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient-extension-header",
+      "version": "23\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
