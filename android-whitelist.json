@@ -26,6 +26,13 @@
       "version": "3\\.+"
     },
     {
+      "description": "This version was extended just for backward fixes purpose",
+      "expires": "2024-04-19",
+      "group": "com\\.mercadolibre\\.android\\.advertising",
+      "name": "adn",
+      "version": "6\\.+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.advertising",
       "name": "adn",
       "version": "7\\.+"
@@ -554,6 +561,13 @@
       "version": "1\\.\\+"
     },
     {
+      "description": "This version was extended just for backward fixes purpose",
+      "expires": "2024-04-19",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "melidata-sdk",
+      "version": "18\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android",
       "name": "melidata-sdk",
       "version": "19\\.\\+"
@@ -665,30 +679,61 @@
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient",
+      "version": "25\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient-adapter-bus",
+      "version": "25\\.\\+"
+    },
+    {
+      "description": "This version was extended just for backward fixes purpose",
+      "expires": "2024-04-19",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient",
       "version": "24\\.\\+"
     },
     {
+      "description": "This version was extended just for backward fixes purpose",
+      "expires": "2024-04-19",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-adapter-bus",
       "version": "24\\.\\+"
     },
     {
-      "expires": "2024-04-12",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "restclient-adapter-rx2",
-      "version": "24\\.\\+"
-    },
-    {
-      "expires": "2024-04-12",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "restclient-converter-json",
-      "version": "24\\.\\+"
-    },
-    {
-      "expires": "2024-04-15",
+      "description": "This version was extended just for backward fixes purpose",
+      "expires": "2024-04-19",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-extension-header",
       "version": "24\\.\\+"
+    },
+    {
+      "description": "This version was extended just for backward fixes purpose",
+      "expires": "2024-04-19",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient",
+      "version": "23\\.\\+"
+    },
+    {
+      "description": "This version was extended just for backward fixes purpose",
+      "expires": "2024-04-19",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient-adapter-bus",
+      "version": "23\\.\\+"
+    },
+    {
+      "description": "This version was extended just for backward fixes purpose",
+      "expires": "2024-04-19",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient-adapter-rx2",
+      "version": "23\\.\\+"
+    },
+    {
+      "description": "This version was extended just for backward fixes purpose",
+      "expires": "2024-04-19",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient-extension-header",
+      "version": "23\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -807,7 +852,7 @@
     },
     {
       "group": "com\\.mercadolibre\\.android\\.commons",
-      "version": "35\\.\\+"
+      "version": "36\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point\\.lot\\.management",
@@ -1330,16 +1375,6 @@
       "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
       "name": "payment",
       "version": "0\\.+"
-    },
-    {
-      "allows_granular_projects": [
-        "com.mercadolibre.android.yourtestlib"
-      ],
-      "description": "This library should be used only in testImplementation flavor OR only in a testapp/testlib module, If you need it in for your TEST lib please add a granularity group in a PR to the allowlist.",
-      "expires": "2024-04-09",
-      "group": "com\\.mercadolibre\\.mpos\\.android\\.sdk_mpp",
-      "name": "mpp-debug",
-      "version": "1\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.mpos\\.android\\.sdk_mpp",
@@ -2693,16 +2728,6 @@
       "version": "5\\.+"
     },
     {
-      "allows_granular_projects": [
-        "com.mercadolibre.here.your.package.remove.this.example"
-      ],
-      "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
-      "expires": "2024-04-09",
-      "group": "com\\.mercadolibre\\.android\\.mobile_cryptography",
-      "name": "test-utils",
-      "version": "5\\.+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.valkiria",
       "name": "valkiria",
       "version": "2\\.+"
@@ -2864,12 +2889,6 @@
       "group": "com\\.mercadolibre\\.android\\.ml_cards",
       "name": "core",
       "version": "4\\.+"
-    },
-    {
-      "expires": "2024-04-08",
-      "group": "com\\.bitmovin\\.player",
-      "name": "player",
-      "version": "3\\.43\\.0"
     },
     {
       "group": "com\\.bitmovin\\.player",
