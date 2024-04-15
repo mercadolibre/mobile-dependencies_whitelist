@@ -26,6 +26,13 @@
       "version": "3\\.+"
     },
     {
+      "description": "This version was extended just for backward fixes purpose",
+      "expires": "2024-04-19",
+      "group": "com\\.mercadolibre\\.android\\.advertising",
+      "name": "adn",
+      "version": "6\\.+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.advertising",
       "name": "adn",
       "version": "7\\.+"
@@ -554,6 +561,13 @@
       "version": "1\\.\\+"
     },
     {
+      "description": "This version was extended just for backward fixes purpose",
+      "expires": "2024-04-19",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "melidata-sdk",
+      "version": "18\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android",
       "name": "melidata-sdk",
       "version": "19\\.\\+"
@@ -633,62 +647,70 @@
       "version": "1\\.1\\.3"
     },
     {
-      "expires": "2024-05-03",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient",
-      "version": "21\\.\\+"
+      "version": "25\\.\\+"
     },
     {
-      "expires": "2024-05-03",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-adapter-bus",
-      "version": "21\\.\\+"
+      "version": "25\\.\\+"
     },
     {
-      "expires": "2024-05-03",
+      "description": "This version was extended just for backward fixes purpose",
+      "expires": "2024-04-19",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient",
+      "version": "24\\.\\+"
+    },
+    {
+      "description": "This version was extended just for backward fixes purpose",
+      "expires": "2024-04-19",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient-adapter-bus",
+      "version": "24\\.\\+"
+    },
+    {
+      "description": "This version was extended just for backward fixes purpose",
+      "expires": "2024-04-19",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-adapter-rx2",
-      "version": "21\\.\\+"
-    },
-    {
-      "expires": "2024-05-03",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "restclient-converter-json",
-      "version": "21\\.\\+"
-    },
-    {
-      "expires": "2024-05-03",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "restclient-extension-header",
-      "version": "21\\.\\+"
-    },
-    {
-      "group": "com\\.mercadolibre\\.android",
-      "name": "restclient",
-      "version": "25\\.\\+"
-    },
-    {
-      "group": "com\\.mercadolibre\\.android",
-      "name": "restclient-adapter-bus",
-      "version": "25\\.\\+"
-    },
-    {
-      "expires": "2024-04-19",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "restclient",
       "version": "24\\.\\+"
     },
     {
+      "description": "This version was extended just for backward fixes purpose",
       "expires": "2024-04-19",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "restclient-adapter-bus",
-      "version": "24\\.\\+"
-    },
-    {
-      "expires": "2024-04-15",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-extension-header",
       "version": "24\\.\\+"
+    },
+    {
+      "description": "This version was extended just for backward fixes purpose",
+      "expires": "2024-04-19",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient",
+      "version": "23\\.\\+"
+    },
+    {
+      "description": "This version was extended just for backward fixes purpose",
+      "expires": "2024-04-19",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient-adapter-bus",
+      "version": "23\\.\\+"
+    },
+    {
+      "description": "This version was extended just for backward fixes purpose",
+      "expires": "2024-04-19",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient-adapter-rx2",
+      "version": "23\\.\\+"
+    },
+    {
+      "description": "This version was extended just for backward fixes purpose",
+      "expires": "2024-04-19",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient-extension-header",
+      "version": "23\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -825,6 +847,13 @@
     {
       "group": "com\\.mercadolibre\\.android\\.cpg",
       "name": "ui_components",
+      "version": "10\\.\\+"
+    },
+    {
+      "description": "AndroidX version is updated in the following mayor version",
+      "expires": "2024-05-31",
+      "group": "com\\.mercadolibre\\.android\\.cpg",
+      "name": "ui_components",
       "version": "9\\.\\+"
     },
     {
@@ -958,19 +987,46 @@
       "version": "11\\.\\+"
     },
     {
+      "expires": "2024-05-27",
       "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
       "name": "core",
       "version": "12\\.\\+"
     },
     {
+      "expires": "2024-05-27",
       "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
       "name": "renderer-fresco",
       "version": "12\\.\\+"
     },
     {
+      "expires": "2024-05-27",
       "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
       "name": "configurer",
       "version": "12\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
+      "name": "core",
+      "version": "13\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
+      "name": "renderer-fresco",
+      "version": "13\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
+      "name": "configurer",
+      "version": "13\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.tetris"
+      ],
+      "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
+      "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
+      "name": "compose",
+      "version": "13\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.place",
@@ -3609,6 +3665,11 @@
     {
       "group": "com\\.mercadolibre\\.android\\.version_checker",
       "name": "checker",
+      "version": "0\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.transferscheckout",
+      "name": "transferscheckout",
       "version": "0\\.+"
     }
   ]

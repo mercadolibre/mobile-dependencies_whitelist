@@ -138,43 +138,13 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "expires": "2024-04-30",
-      "name": "FBSDKCoreKit",
-      "source": "public",
-      "target": "production",
-      "version": "13.2.0"
-    },
-    {
+      "allows_granular_projects": [
+        "MLCrossAppLinks"
+      ],
       "name": "FBSDKCoreKit",
       "source": "public",
       "target": "production",
       "version": "17.0.0"
-    },
-    {
-      "expires": "2024-04-30",
-      "name": "FBSDKCoreKit_Basics",
-      "source": "public",
-      "target": "production",
-      "version": "13.2.0"
-    },
-    {
-      "name": "FBSDKCoreKit_Basics",
-      "source": "public",
-      "target": "production",
-      "version": "17.0.0"
-    },
-    {
-      "name": "FBAEMKit",
-      "source": "public",
-      "target": "production",
-      "version": "13.2.0"
-    },
-    {
-      "expires": "2024-05-17",
-      "name": "FBAEMKit",
-      "source": "public",
-      "target": "production",
-      "version": "^~>\\s?(13.2.0)$"
     },
     {
       "name": "FSQCollectionViewAlignedLayout",
@@ -189,186 +159,33 @@
       "version": "1.6.4"
     },
     {
-      "name": "Firebase",
-      "source": "public",
-      "target": "production",
-      "version": "7.8.0"
-    },
-    {
-      "expires": "2024-05-17",
-      "name": "Firebase",
-      "source": "public",
-      "target": "production",
-      "version": "^~>\\s?(7.8.0)$"
-    },
-    {
-      "name": "FirebaseCore",
-      "source": "public",
-      "target": "production",
-      "version": "7.8.0"
-    },
-    {
-      "expires": "2024-05-17",
-      "name": "FirebaseCore",
-      "source": "public",
-      "target": "production",
-      "version": "^~>\\s?(7.8.0)$"
-    },
-    {
-      "expires": "2024-05-17",
-      "name": "Firebase/Core",
-      "source": "public",
-      "target": "production",
-      "version": "^~>\\s?(7.8.0)$"
-    },
-    {
-      "name": "FirebaseAnalytics",
-      "source": "public",
-      "target": "production",
-      "version": "7.8.0"
-    },
-    {
-      "expires": "2024-05-17",
-      "name": "FirebaseAnalytics",
-      "source": "public",
-      "target": "production",
-      "version": "^~>\\s?(7.8.0)$"
-    },
-    {
-      "name": "FirebaseDynamicLinks",
-      "source": "public",
-      "target": "production",
-      "version": "7.8.0"
-    },
-    {
-      "expires": "2024-05-17",
-      "name": "FirebaseDynamicLinks",
-      "source": "public",
-      "target": "production",
-      "version": "^~>\\s?(7.8.0)$"
-    },
-    {
-      "name": "FirebasePerformance",
-      "source": "public",
-      "target": "production",
-      "version": "7.8.0"
-    },
-    {
-      "expires": "2024-05-17",
-      "name": "FirebasePerformance",
-      "source": "public",
-      "target": "production",
-      "version": "^~>\\s?(7.8.0)$"
-    },
-    {
-      "name": "FirebaseCoreDiagnostics",
-      "source": "public",
-      "target": "production",
-      "version": "7.8.0"
-    },
-    {
-      "expires": "2024-05-17",
-      "name": "FirebaseCoreDiagnostics",
-      "source": "public",
-      "target": "production",
-      "version": "^~>\\s?(7.8.0)$"
-    },
-    {
-      "name": "FirebaseRemoteConfig",
-      "source": "public",
-      "target": "production",
-      "version": "7.8.0"
-    },
-    {
-      "expires": "2024-05-17",
-      "name": "FirebaseRemoteConfig",
-      "source": "public",
-      "target": "production",
-      "version": "^~>\\s?(7.8.0)$"
-    },
-    {
-      "name": "FirebaseABTesting",
-      "source": "public",
-      "target": "production",
-      "version": "7.8.0"
-    },
-    {
-      "expires": "2024-05-17",
-      "name": "FirebaseABTesting",
-      "source": "public",
-      "target": "production",
-      "version": "^~>\\s?(7.8.0)$"
-    },
-    {
-      "name": "FirebaseInstallations",
-      "source": "public",
-      "target": "production",
-      "version": "7.8.0"
-    },
-    {
-      "expires": "2024-05-17",
-      "name": "FirebaseInstallations",
-      "source": "public",
-      "target": "production",
-      "version": "^~>\\s?(7.8.0)$"
-    },
-    {
-      "name": "Firebase/Core",
-      "source": "public",
-      "target": "production",
-      "version": "7.8.0"
-    },
-    {
-      "expires": "2024-05-17",
-      "name": "Firebase/Core",
-      "source": "public",
-      "target": "production",
-      "version": "^~>\\s?(7.8.0)$"
-    },
-    {
+      "allows_granular_projects": [
+        "MLConfigurationProvider",
+        "MPConfigurationProvider"
+      ],
       "name": "Firebase/Core",
       "source": "public",
       "target": "production",
       "version": "10.22.0"
     },
     {
-      "expires": "2024-04-30",
-      "name": "Firebase/DynamicLinks",
-      "source": "public",
-      "target": "production",
-      "version": "7.8.0"
-    },
-    {
-      "name": "Firebase/DynamicLinks",
+      "allows_granular_projects": [
+        "MLCheckout",
+        "MLCheckoutSDK"
+      ],
+      "name": "Firebase/Analytics",
       "source": "public",
       "target": "production",
       "version": "10.22.0"
     },
     {
-      "name": "Firebase/Analytics",
+      "allows_granular_projects": [
+        "MLNavigation"
+      ],
+      "name": "Firebase/DynamicLinks",
       "source": "public",
       "target": "production",
-      "version": "7.8.0"
-    },
-    {
-      "expires": "2024-05-17",
-      "name": "Firebase/Analytics",
-      "source": "public",
-      "target": "production",
-      "version": "^~>\\s?(7.8.0)$"
-    },
-    {
-      "name": "Firebase/MLModelDownloader",
-      "source": "public",
-      "target": "production",
-      "version": "7.8.0"
-    },
-    {
-      "expires": "2024-05-17",
-      "name": "Firebase/MLModelDownloader",
-      "source": "public",
-      "target": "production",
-      "version": "^~>\\s?(7.8.0)$"
+      "version": "10.22.0"
     },
     {
       "name": "TensorFlowLiteSwift",
@@ -1390,7 +1207,8 @@
     },
     {
       "allows_granular_projects": [
-        "DiscountCenter"
+        "DiscountCenter",
+        "FeedbackScreen"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "name": "AndesUI/SwiftUI",
