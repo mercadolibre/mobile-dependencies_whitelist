@@ -1025,6 +1025,10 @@
       "version": "10.38.0"
     },
     {
+      "allows_granular_projects": [
+        "InStore"
+      ],
+      "expires": "2024-05-31",
       "name": "RxSwift",
       "source": "public",
       "target": "production",
