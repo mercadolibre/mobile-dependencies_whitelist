@@ -1025,6 +1025,9 @@
       "version": "10.38.0"
     },
     {
+      "allows_granular_projects": [
+        "InStore",
+      ],
       "name": "RxSwift",
       "source": "public",
       "target": "production",
