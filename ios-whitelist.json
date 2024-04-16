@@ -2160,6 +2160,12 @@
       "version": "3.36.1"
     },
     {
+      "name": "BitmovinAnalyticsCollector",
+      "source": "private",
+      "target": "production",
+      "version": "2.10.1"
+    },
+    {
       "name": "google-cast-sdk-no-bluetooth",
       "source": "public",
       "target": "production",
