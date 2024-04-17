@@ -3319,6 +3319,16 @@
       "version": "3\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.point.mpos",
+        "com.mercadolibre.android.point_smartpos_fcu"
+      ],
+      "description": "Only used for debugImplementation",
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "developer_settings",
+      "version": "3\\.\\+"
+    },
+    {
       "description": "Android library used to access connection data and measure api execution time.",
       "expires": "2024-04-30",
       "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
