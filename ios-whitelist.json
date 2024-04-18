@@ -160,8 +160,8 @@
     },
     {
       "allows_granular_projects": [
-        "MLConfigurationProvider",
-        "MPConfigurationProvider"
+        "MLConfigurationProvider/App",
+        "MPConfigurationProvider/App"
       ],
       "name": "Firebase/Core",
       "source": "public",
@@ -170,8 +170,8 @@
     },
     {
       "allows_granular_projects": [
-        "MLConfigurationProvider",
-        "MPConfigurationProvider"
+        "MLConfigurationProvider/App",
+        "MPConfigurationProvider/App"
       ],
       "expires": "2024-04-30",
       "name": "Firebase/Core",
