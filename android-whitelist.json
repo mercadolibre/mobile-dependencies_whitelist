@@ -600,9 +600,21 @@
     {
       "group": "com\\.mercadolibre\\.android\\.notifications_helpers",
       "name": "notifications_permissions",
+      "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.notifications_helpers",
+      "name": "typed_modal",
+      "version": "6\\.\\+"
+    },
+    {
+      "expires": "2024-05-19",
+      "group": "com\\.mercadolibre\\.android\\.notifications_helpers",
+      "name": "notifications_permissions",
       "version": "5\\.\\+"
     },
     {
+      "expires": "2024-05-19",
       "group": "com\\.mercadolibre\\.android\\.notifications_helpers",
       "name": "typed_modal",
       "version": "5\\.\\+"
