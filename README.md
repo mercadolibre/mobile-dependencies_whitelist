@@ -130,8 +130,6 @@ To activate the granularity feature, it is necessary to introduce a new block wi
 }
 ```
 
-
-
 # Contexts Allowlist [DEPRECATED]
 
 For more information consult
