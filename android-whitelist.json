@@ -600,9 +600,21 @@
     {
       "group": "com\\.mercadolibre\\.android\\.notifications_helpers",
       "name": "notifications_permissions",
+      "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.notifications_helpers",
+      "name": "typed_modal",
+      "version": "6\\.\\+"
+    },
+    {
+      "expires": "2024-05-19",
+      "group": "com\\.mercadolibre\\.android\\.notifications_helpers",
+      "name": "notifications_permissions",
       "version": "5\\.\\+"
     },
     {
+      "expires": "2024-05-19",
       "group": "com\\.mercadolibre\\.android\\.notifications_helpers",
       "name": "typed_modal",
       "version": "5\\.\\+"
@@ -668,6 +680,13 @@
       "expires": "2024-04-19",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-adapter-bus",
+      "version": "24\\.\\+"
+    },
+    {
+      "description": "This version was extended just for backward fixes purpose",
+      "expires": "2024-04-19",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient-adapter-rx2",
       "version": "24\\.\\+"
     },
     {
@@ -973,9 +992,21 @@
     {
       "group": "com\\.mercadolibre\\.android\\.navigationcp",
       "name": "navigationcp",
+      "version": "12\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.navigationcp",
+      "name": "shipping-address",
+      "version": "12\\.\\+"
+    },
+    {
+      "expires": "2024-06-30",
+      "group": "com\\.mercadolibre\\.android\\.navigationcp",
+      "name": "navigationcp",
       "version": "11\\.\\+"
     },
     {
+      "expires": "2024-06-30",
       "group": "com\\.mercadolibre\\.android\\.navigationcp",
       "name": "shipping-address",
       "version": "11\\.\\+"
@@ -1088,9 +1119,15 @@
       "version": "11\\.\\+"
     },
     {
+      "expires": "2024-05-03",
       "group": "com\\.mercadolibre\\.android\\.risk_management",
       "name": "riskmanagement",
       "version": "5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.risk_management",
+      "name": "riskmanagement",
+      "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.livecommerce",
@@ -1184,6 +1221,12 @@
       "version": "9.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.uinavigationcp",
+      "name": "addresshub",
+      "version": "11\\.\\+"
+    },
+    {
+      "expires": "2024-06-30",
       "group": "com\\.mercadolibre\\.android\\.uinavigationcp",
       "name": "addresshub",
       "version": "10\\.\\+"
@@ -1590,19 +1633,37 @@
       "version": "1\\.8\\.10"
     },
     {
+      "expires": "2024-05-03",
       "group": "com\\.mercadolibre\\.android\\.userbiometrics",
       "name": "core",
       "version": "8\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.userbiometrics",
+      "name": "core",
+      "version": "9\\.\\+"
+    },
+    {
+      "expires": "2024-05-03",
       "group": "com\\.mercadolibre\\.android\\.security",
       "name": "security_preferences",
       "version": "mercadopago-9\\.\\+|mercadolibre-9\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.security",
+      "name": "security_preferences",
+      "version": "mercadopago-10\\.\\+|mercadolibre-10\\.\\+"
+    },
+    {
+      "expires": "2024-05-03",
+      "group": "com\\.mercadolibre\\.android\\.security",
       "name": "security_ui",
       "version": "mercadopago-8\\.\\+|mercadolibre-8\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.security",
+      "name": "security_ui",
+      "version": "mercadopago-9\\.\\+|mercadolibre-9\\.\\+"
     },
     {
       "expires": "2024-05-10",
@@ -3146,15 +3207,15 @@
       "version": "2\\.\\+"
     },
     {
-      "expires": "2024-05-03",
+      "expires": "2024-04-26",
       "group": "com\\.mercadolibre\\.android\\.everest",
       "name": "platform",
-      "version": "6\\.+"
+      "version": "7\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.everest",
       "name": "platform",
-      "version": "7\\.+"
+      "version": "12\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.errorhandler\\.v2",
@@ -3196,6 +3257,12 @@
       "version": "1\\.5\\.\\1"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.xprod\\.modules",
+      "name": "webview",
+      "version": "2\\.\\+"
+    },
+    {
+      "expires": "2024-06-30",
       "group": "com\\.mercadolibre\\.android\\.xprod\\.modules",
       "name": "webview",
       "version": "1\\.\\+"
@@ -3310,6 +3377,16 @@
     {
       "group": "com\\.mercadolibre\\.android\\.isp_sf",
       "name": "reader_manager",
+      "version": "3\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.point.mpos",
+        "com.mercadolibre.android.point_smartpos_fcu"
+      ],
+      "description": "Only used for debugImplementation",
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "developer_settings",
       "version": "3\\.\\+"
     },
     {
@@ -3665,6 +3742,11 @@
       "group": "com\\.mercadolibre\\.android\\.transferscheckout",
       "name": "transferscheckout",
       "version": "0\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.screenshots_manager",
+      "name": "core",
+      "version": "1\\.\\+"
     }
   ]
 }
