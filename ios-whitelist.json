@@ -2128,37 +2128,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "name": "EverestLibs/Core",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "name": "EverestLibs/Data",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "name": "EverestLibs/Networking",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "name": "EverestLibs/UI",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "name": "EverestLibs/Tracking",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "name": "EverestLibs/Hardware",
+      "name": "EverestLibs/(Core|Data|Networking|UI|Tracking|Hardware|DevTools)",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
