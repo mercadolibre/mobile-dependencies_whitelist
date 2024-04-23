@@ -690,6 +690,13 @@
       "version": "23\\.\\+"
     },
     {
+      "description": "This version was extended just for backward fixes purpose",
+      "expires": "2024-05-03",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient-converter-json",
+      "version": "23\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android",
       "name": "ui",
       "version": "10\\.\\+"
