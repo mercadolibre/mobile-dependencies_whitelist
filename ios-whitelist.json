@@ -459,24 +459,10 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "expires": "2024-05-17",
-      "name": "MLCardDrawer",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
-    },
-    {
       "name": "PxPmSelector",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "expires": "2024-05-17",
-      "name": "PxPmSelector",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
     },
     {
       "name": "PxTokenization",
