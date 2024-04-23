@@ -26,13 +26,6 @@
       "version": "3\\.+"
     },
     {
-      "description": "This version was extended just for backward fixes purpose",
-      "expires": "2024-04-19",
-      "group": "com\\.mercadolibre\\.android\\.advertising",
-      "name": "adn",
-      "version": "6\\.+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.advertising",
       "name": "adn",
       "version": "7\\.+"
@@ -561,13 +554,6 @@
       "version": "1\\.\\+"
     },
     {
-      "description": "This version was extended just for backward fixes purpose",
-      "expires": "2024-04-19",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "melidata-sdk",
-      "version": "18\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android",
       "name": "melidata-sdk",
       "version": "19\\.\\+"
@@ -667,62 +653,6 @@
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-adapter-bus",
       "version": "25\\.\\+"
-    },
-    {
-      "description": "This version was extended just for backward fixes purpose",
-      "expires": "2024-04-19",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "restclient",
-      "version": "24\\.\\+"
-    },
-    {
-      "description": "This version was extended just for backward fixes purpose",
-      "expires": "2024-04-19",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "restclient-adapter-bus",
-      "version": "24\\.\\+"
-    },
-    {
-      "description": "This version was extended just for backward fixes purpose",
-      "expires": "2024-04-19",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "restclient-adapter-rx2",
-      "version": "24\\.\\+"
-    },
-    {
-      "description": "This version was extended just for backward fixes purpose",
-      "expires": "2024-04-19",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "restclient-extension-header",
-      "version": "24\\.\\+"
-    },
-    {
-      "description": "This version was extended just for backward fixes purpose",
-      "expires": "2024-04-19",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "restclient",
-      "version": "23\\.\\+"
-    },
-    {
-      "description": "This version was extended just for backward fixes purpose",
-      "expires": "2024-04-19",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "restclient-adapter-bus",
-      "version": "23\\.\\+"
-    },
-    {
-      "description": "This version was extended just for backward fixes purpose",
-      "expires": "2024-04-19",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "restclient-adapter-rx2",
-      "version": "23\\.\\+"
-    },
-    {
-      "description": "This version was extended just for backward fixes purpose",
-      "expires": "2024-04-19",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "restclient-extension-header",
-      "version": "23\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -827,12 +757,6 @@
       "group": "com\\.mercadolibre\\.android\\.classifieds",
       "name": "dynamic-flow",
       "version": "1\\.\\+"
-    },
-    {
-      "expires": "2024-04-15",
-      "group": "com\\.mercadopago\\.android\\.commons",
-      "name": "commons",
-      "version": "7\\.\\+"
     },
     {
       "expires": "2024-05-03",
@@ -1135,29 +1059,59 @@
       "version": "3\\.\\+"
     },
     {
+      "expires": "2024-05-31",
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "compats",
       "version": "19\\.\\+"
     },
     {
+      "expires": "2024-05-31",
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "input",
       "version": "19\\.\\+"
     },
     {
+      "expires": "2024-05-31",
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "autosuggest",
       "version": "19\\.\\+"
     },
     {
+      "expires": "2024-05-31",
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "morelikethis",
       "version": "19\\.\\+"
     },
     {
+      "expires": "2024-05-31",
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "search",
       "version": "19\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.search",
+      "name": "compats",
+      "version": "20\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.search",
+      "name": "input",
+      "version": "20\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.search",
+      "name": "autosuggest",
+      "version": "20\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.search",
+      "name": "morelikethis",
+      "version": "20\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.search",
+      "name": "search",
+      "version": "20\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.demandcore",
