@@ -212,7 +212,7 @@
     },
     {
       "allows_granular_projects": [
-        "MLNavigation"
+        "MLNavigation/Core"
       ],
       "name": "Firebase/DynamicLinks",
       "source": "public",
@@ -2342,6 +2342,18 @@
     },
     {
       "name": "ScreenshotsManager",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "ShippingIosToolkit",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "ShippingKmpDeltaModel",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
