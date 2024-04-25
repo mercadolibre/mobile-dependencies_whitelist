@@ -588,6 +588,13 @@
       "version": "8\\.\\+"
     },
     {
+      "description": "this lib has been deprecated when uiComponents is migrated",
+      "expires": "2024-04-26",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "networking",
+      "version": "10\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android",
       "name": "notifications",
       "version": "24\\.\\+"
