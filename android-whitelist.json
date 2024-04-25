@@ -672,6 +672,41 @@
       "expires": "2024-05-03",
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient",
+      "version": "24\\.\\+"
+    },
+    {
+      "description": "This version was extended just for backward fixes purpose",
+      "expires": "2024-05-03",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient-adapter-bus",
+      "version": "24\\.\\+"
+    },
+    {
+      "description": "This version was extended just for backward fixes purpose",
+      "expires": "2024-05-03",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient-adapter-rx2",
+      "version": "24\\.\\+"
+    },
+    {
+      "description": "This version was extended just for backward fixes purpose",
+      "expires": "2024-05-03",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient-extension-header",
+      "version": "24\\.\\+"
+    },
+    {
+      "description": "This version was extended just for backward fixes purpose",
+      "expires": "2024-05-03",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient-converter-json",
+      "version": "24\\.\\+"
+    },
+    {
+      "description": "This version was extended just for backward fixes purpose",
+      "expires": "2024-05-03",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient",
       "version": "23\\.\\+"
     },
     {
@@ -1712,9 +1747,15 @@
       "version": "mercadolibre-9\\.\\+|mercadopago-9\\.\\+"
     },
     {
+      "expires": "2024-05-03",
       "group": "com\\.mercadolibre\\.android\\.security",
       "name": "native_reauth",
       "version": "mercadopago-6\\.\\+|mercadolibre-6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.security",
+      "name": "native_reauth",
+      "version": "mercadopago-7\\.\\+|mercadolibre-7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.reauth_native_adapter",
