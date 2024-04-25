@@ -212,7 +212,8 @@
     },
     {
       "allows_granular_projects": [
-        "MLNavigation"
+        "MLNavigation",
+        "MLNavigation/SwiftUI"
       ],
       "name": "Firebase/DynamicLinks",
       "source": "public",
