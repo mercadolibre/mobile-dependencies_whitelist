@@ -1102,7 +1102,6 @@
       "version": "^~>\\s?5.[0-9]+$"
     },
     {
-      "expires": "2025-05-27",
       "name": "MLBiometricSecurity",
       "source": "private",
       "target": "production",
@@ -1115,7 +1114,6 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "expires": "2025-05-27",
       "name": "BiometricSecurityUI",
       "source": "private",
       "target": "production",
