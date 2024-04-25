@@ -43,9 +43,15 @@
       "version": "13\\.+"
     },
     {
+      "expires": "2024-05-03",
       "group": "com\\.mercadolibre\\.android",
       "name": "viewability",
       "version": "4\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "viewability",
+      "version": "5\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.om",
@@ -561,9 +567,15 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2024-05-25",
       "group": "com\\.mercadolibre\\.android",
       "name": "melidata-sdk",
       "version": "19\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "melidata-sdk",
+      "version": "20\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -1741,9 +1753,15 @@
       "version": "mercadolibre-9\\.\\+|mercadopago-9\\.\\+"
     },
     {
+      "expires": "2024-05-03",
       "group": "com\\.mercadolibre\\.android\\.security",
       "name": "native_reauth",
       "version": "mercadopago-6\\.\\+|mercadolibre-6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.security",
+      "name": "native_reauth",
+      "version": "mercadopago-7\\.\\+|mercadolibre-7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.reauth_native_adapter",
