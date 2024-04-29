@@ -598,13 +598,6 @@
       "version": "8\\.\\+"
     },
     {
-      "description": "this lib has been deprecated when uiComponents is migrated",
-      "expires": "2024-04-26",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "networking",
-      "version": "10\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android",
       "name": "notifications",
       "version": "24\\.\\+"
@@ -3286,12 +3279,6 @@
       "version": "2\\.\\+"
     },
     {
-      "expires": "2024-04-26",
-      "group": "com\\.mercadolibre\\.android\\.everest",
-      "name": "platform",
-      "version": "7\\.+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.everest",
       "name": "platform",
       "version": "12\\.+"
@@ -3300,13 +3287,6 @@
       "group": "com\\.mercadolibre\\.android\\.errorhandler\\.v2",
       "name": "core",
       "version": "production-2\\.\\+"
-    },
-    {
-      "description": "Qualtrics native SDK library. Use ml_qualtrics instead.",
-      "expires": "2024-04-22",
-      "group": "com\\.qualtrics",
-      "name": "digital",
-      "version": "2\\.9\\.3"
     },
     {
       "description": "Qualtrics native SDK library. Use ml_qualtrics instead.",
