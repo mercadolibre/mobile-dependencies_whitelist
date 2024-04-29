@@ -212,7 +212,7 @@
     },
     {
       "allows_granular_projects": [
-        "MLNavigation"
+        "MLNavigation/Core"
       ],
       "name": "Firebase/DynamicLinks",
       "source": "public",
@@ -1105,14 +1105,7 @@
       "name": "MLBiometricSecurity",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "expires": "2024-05-17",
-      "name": "MLBiometricSecurity",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?[0-1].[0-9]+$"
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "NativeReauth",
@@ -2342,6 +2335,18 @@
     },
     {
       "name": "ScreenshotsManager",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "ShippingIosToolkit",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "ShippingKmpDeltaModel",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
