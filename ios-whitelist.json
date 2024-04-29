@@ -2356,7 +2356,7 @@
         "DependencyInjection"
       ],
       "expires": "2024-06-30",
-      "name": "Swinject",
+      "name": "SwinjectAutoregistration",
       "source": "public",
       "target": "production",
       "version": "2.8.3"
@@ -2366,7 +2366,7 @@
         "DependencyInjection"
       ],      
       "expires": "2024-06-30",
-      "name": "SwinjectAutoregistration",
+      "name": "Swinject", 
       "source": "public",
       "target": "production",
       "version": "2.8.3"
