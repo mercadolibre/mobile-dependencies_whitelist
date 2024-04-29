@@ -2364,9 +2364,9 @@
     {
       "allows_granular_projects": [
         "DependencyInjection"
-      ],
-      "name": "SwinjectAutoregistration",
+      ],      
       "expires": "2024-06-30",
+      "name": "SwinjectAutoregistration",
       "source": "public",
       "target": "test",
       "version": "2.8.3"
