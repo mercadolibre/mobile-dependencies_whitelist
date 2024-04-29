@@ -164,16 +164,26 @@
       "version": "3\\.3\\.1"
     },
     {
-      "expires": "2024-12-01",
+      "expires": "2024-09-23",
       "group": "com\\.bugsnag",
       "name": "bugsnag-android",
       "version": "5\\.29\\.0"
     },
     {
-      "expires": "2024-12-01",
+      "group": "com\\.bugsnag",
+      "name": "bugsnag-android",
+      "version": "6\\.4\\.0"
+    },
+    {
+      "expires": "2024-09-23",
       "group": "com\\.bugsnag",
       "name": "bugsnag-plugin-android-okhttp",
       "version": "5\\.29\\.0"
+    },
+    {
+      "group": "com\\.bugsnag",
+      "name": "bugsnag-plugin-android-okhttp",
+      "version": "6\\.4\\.0"
     },
     {
       "group": "com\\.f2prateek\\.rx\\.preferences",
@@ -591,13 +601,6 @@
       "group": "com\\.mercadolibre\\.android",
       "name": "multiimageview",
       "version": "8\\.\\+"
-    },
-    {
-      "description": "this lib has been deprecated when uiComponents is migrated",
-      "expires": "2024-04-26",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "networking",
-      "version": "10\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -1477,19 +1480,37 @@
       "version": "8\\.+"
     },
     {
+      "expires": "2024-12-01",
       "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
       "name": "mpoc",
       "version": "0\\.+"
     },
     {
+      "expires": "2024-12-01",
       "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
       "name": "mypinpad",
       "version": "0\\.+"
     },
     {
+      "expires": "2024-12-01",
       "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
       "name": "payment",
       "version": "0\\.+"
+    },
+    {
+      "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
+      "name": "mpoc",
+      "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
+      "name": "mypinpad",
+      "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
+      "name": "payment",
+      "version": "1\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.mpos\\.android\\.sdk_mpp",
@@ -2433,10 +2454,15 @@
       "version": "2\\.13"
     },
     {
-      "expires": "2024-12-01",
+      "expires": "2024-09-23",
       "group": "com\\.bugsnag",
       "name": "bugsnag-android-core",
       "version": "5\\.29\\.0"
+    },
+    {
+      "group": "com\\.bugsnag",
+      "name": "bugsnag-android-core",
+      "version": "6\\.4\\.0"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -3177,14 +3203,26 @@
       "version": "3\\.+"
     },
     {
+      "expires": "2024-07-29",
       "group": "com\\.mercadolibre\\.android\\.app_monitoring",
       "name": "setup",
       "version": "2\\.\\+"
     },
     {
+      "expires": "2024-07-29",
       "group": "com\\.mercadolibre\\.android\\.app_monitoring",
       "name": "core",
       "version": "2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.app_monitoring",
+      "name": "setup",
+      "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.app_monitoring",
+      "name": "core",
+      "version": "3\\.\\+"
     },
     {
       "group": "com\\.datadoghq",
@@ -3264,12 +3302,6 @@
       "version": "2\\.\\+"
     },
     {
-      "expires": "2024-04-26",
-      "group": "com\\.mercadolibre\\.android\\.everest",
-      "name": "platform",
-      "version": "7\\.+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.everest",
       "name": "platform",
       "version": "12\\.+"
@@ -3278,13 +3310,6 @@
       "group": "com\\.mercadolibre\\.android\\.errorhandler\\.v2",
       "name": "core",
       "version": "production-2\\.\\+"
-    },
-    {
-      "description": "Qualtrics native SDK library. Use ml_qualtrics instead.",
-      "expires": "2024-04-22",
-      "group": "com\\.qualtrics",
-      "name": "digital",
-      "version": "2\\.9\\.3"
     },
     {
       "description": "Qualtrics native SDK library. Use ml_qualtrics instead.",
