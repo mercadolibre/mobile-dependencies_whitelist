@@ -2358,7 +2358,7 @@
       "expires": "2024-06-30",
       "name": "Swinject",
       "source": "public",
-      "target": "test",
+      "target": "production",
       "version": "2.8.3"
     },
     {
@@ -2368,7 +2368,7 @@
       "expires": "2024-06-30",
       "name": "SwinjectAutoregistration",
       "source": "public",
-      "target": "test",
+      "target": "production",
       "version": "2.8.3"
     }
   ]
