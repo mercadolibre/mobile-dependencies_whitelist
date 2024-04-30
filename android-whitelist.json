@@ -26,6 +26,11 @@
       "version": "3\\.+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.stripe_bar",
+      "name": "core",
+      "version": "0\\.+"
+    },
+    {
       "description": "This version was extended just for backward fixes purpose",
       "expires": "2024-05-03",
       "group": "com\\.mercadolibre\\.android\\.advertising",
@@ -159,16 +164,26 @@
       "version": "3\\.3\\.1"
     },
     {
-      "expires": "2024-12-01",
+      "expires": "2024-09-23",
       "group": "com\\.bugsnag",
       "name": "bugsnag-android",
       "version": "5\\.29\\.0"
     },
     {
-      "expires": "2024-12-01",
+      "group": "com\\.bugsnag",
+      "name": "bugsnag-android",
+      "version": "6\\.4\\.0"
+    },
+    {
+      "expires": "2024-09-23",
       "group": "com\\.bugsnag",
       "name": "bugsnag-plugin-android-okhttp",
       "version": "5\\.29\\.0"
+    },
+    {
+      "group": "com\\.bugsnag",
+      "name": "bugsnag-plugin-android-okhttp",
+      "version": "6\\.4\\.0"
     },
     {
       "group": "com\\.f2prateek\\.rx\\.preferences",
@@ -2439,10 +2454,15 @@
       "version": "2\\.13"
     },
     {
-      "expires": "2024-12-01",
+      "expires": "2024-09-23",
       "group": "com\\.bugsnag",
       "name": "bugsnag-android-core",
       "version": "5\\.29\\.0"
+    },
+    {
+      "group": "com\\.bugsnag",
+      "name": "bugsnag-android-core",
+      "version": "6\\.4\\.0"
     },
     {
       "group": "com\\.mercadolibre\\.android",

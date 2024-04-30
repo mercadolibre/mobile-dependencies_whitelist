@@ -2350,6 +2350,26 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "allows_granular_projects": [
+        "DependencyInjection"
+      ],
+      "expires": "2024-06-30",
+      "name": "Swinject",
+      "source": "public",
+      "target": "production",
+      "version": "2.8.3"
+    },
+    {
+      "allows_granular_projects": [
+        "DependencyInjection"
+      ],
+      "expires": "2024-06-30",
+      "name": "SwinjectAutoregistration",
+      "source": "public",
+      "target": "production",
+      "version": "2.8.3"
     }
   ]
 }
