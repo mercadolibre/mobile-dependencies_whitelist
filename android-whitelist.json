@@ -3417,16 +3417,19 @@
       "version": "3\\.\\+"
     },
     {
+      "expires": "2024-05-07",
       "group": "com\\.mercadolibre\\.android\\.isp_sf",
       "name": "di",
       "version": "3\\.\\+"
     },
     {
+      "expires": "2024-05-07",
       "group": "com\\.mercadolibre\\.android\\.isp_sf",
       "name": "facade",
       "version": "3\\.\\+"
     },
     {
+      "expires": "2024-05-07",
       "group": "com\\.mercadolibre\\.android\\.isp_sf",
       "name": "network",
       "version": "3\\.\\+"
@@ -3448,11 +3451,52 @@
       "group": "com\\.mercadolibre\\.android\\.isp_sf",
       "name": "network",
       "version": "2\\.\\+"
+    },
+    {
+      "expires": "2024-05-07",
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "reader_manager",
+      "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "di",
+      "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "facade",
+      "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "network",
+      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.isp_sf",
       "name": "reader_manager",
-      "version": "3\\.\\+"
+      "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "di",
+      "version": "5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "facade",
+      "version": "5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "network",
+      "version": "5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "reader_manager",
+      "version": "5\\.\\+"
     },
     {
       "allows_granular_projects": [
