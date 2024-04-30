@@ -1297,14 +1297,13 @@
       "version": "9\\.\\+"
     },
     {
+      "expires": "2024-05-03",
       "group": "com\\.mercadolibre\\.android\\.vpp",
-      "name": "core",
-      "version": "8\\.\\+"
+      "version": "9\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.vpp",
-      "name": "vip_commons",
-      "version": "8\\.\\+"
+      "version": "10\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
@@ -3044,19 +3043,13 @@
       "version": "1\\.+"
     },
     {
+      "expires": "2024-05-03",
       "group": "com\\.mercadolibre\\.android\\.reviews3",
-      "name": "core",
       "version": "5\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.reviews3",
-      "name": "form",
-      "version": "5\\.+"
-    },
-    {
-      "group": "com\\.mercadolibre\\.android\\.reviews3",
-      "name": "notifications",
-      "version": "5\\.+"
+      "version": "6\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.ml_cards",
