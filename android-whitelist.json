@@ -537,9 +537,15 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2024-05-05",
       "group": "com\\.mercadolibre\\.android",
       "name": "carddrawer",
       "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "carddrawer",
+      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -1395,9 +1401,15 @@
       "version": "5\\.\\+"
     },
     {
+      "expires": "2024-05-05",
       "group": "com\\.mercadopago\\.android\\.px",
       "name": "checkout-v4",
       "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadopago\\.android\\.px",
+      "name": "checkout-v4",
+      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.px",
@@ -1410,7 +1422,6 @@
       "version": "6\\.5\\.52"
     },
     {
-      "description": "This version was extended just for backward fixes purpose",
       "expires": "2024-05-05",
       "group": "com\\.mercadolibre\\.android\\.px\\.pmselector",
       "name": "pmselector",
