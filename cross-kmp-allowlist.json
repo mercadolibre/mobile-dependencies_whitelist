@@ -11,16 +11,25 @@
       "version": "1\\.5\\.2"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.rtc_mobile"
+      ],
       "group": "io\\.ktor",
       "name": "ktor-client-core",
       "version": "2\\.2\\.1"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.rtc_mobile"
+      ],
       "group": "io\\.ktor",
       "name": "ktor-client-content-negotiation",
       "version": "2\\.2\\.1"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.rtc_mobile"
+      ],
       "group": "io\\.ktor",
       "name": "ktor-serialization-kotlinx-json",
       "version": "2\\.2\\.1"
