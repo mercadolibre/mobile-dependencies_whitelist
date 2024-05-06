@@ -4,7 +4,7 @@
       "name": "OMSDK",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "1.4.13"
     },
     {
       "name": "Viewability",
@@ -19,7 +19,7 @@
       "version": "^~>\\s?5.[0-9]+$"
     },
     {
-      "expires": "2024-04-29",
+      "expires": "2024-05-31",
       "name": "AdvertisingADN",
       "source": "private",
       "target": "production",
@@ -139,7 +139,7 @@
     },
     {
       "allows_granular_projects": [
-        "MLCrossAppLinks"
+        "MLCrossAppLinks/ExternalProviders"
       ],
       "name": "FBSDKCoreKit",
       "source": "public",
@@ -160,8 +160,8 @@
     },
     {
       "allows_granular_projects": [
-        "MLConfigurationProvider",
-        "MPConfigurationProvider"
+        "MLConfigurationProvider/App",
+        "MPConfigurationProvider/App"
       ],
       "name": "Firebase/Core",
       "source": "public",
@@ -180,18 +180,7 @@
     },
     {
       "allows_granular_projects": [
-        "MLCheckout",
-        "MLCheckoutSDK/Integrator"
-      ],
-      "expires": "2024-04-30",
-      "name": "Firebase/Analytics",
-      "source": "public",
-      "target": "production",
-      "version": "7.8.0"
-    },
-    {
-      "allows_granular_projects": [
-        "MLNavigation"
+        "MLNavigation/Core"
       ],
       "name": "Firebase/DynamicLinks",
       "source": "public",
@@ -438,24 +427,10 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "expires": "2024-05-17",
-      "name": "MLCardDrawer",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
-    },
-    {
       "name": "PxPmSelector",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "expires": "2024-05-17",
-      "name": "PxPmSelector",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+.?[0-9]*$"
     },
     {
       "name": "PxTokenization",
@@ -744,6 +719,12 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "TransfersCheckout",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
       "name": "MLRecommendationsCombo",
       "source": "private",
       "target": "production",
@@ -1025,6 +1006,10 @@
       "version": "10.38.0"
     },
     {
+      "allows_granular_projects": [
+        "InStore"
+      ],
+      "expires": "2024-05-31",
       "name": "RxSwift",
       "source": "public",
       "target": "production",
@@ -1094,14 +1079,7 @@
       "name": "MLBiometricSecurity",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "expires": "2024-05-17",
-      "name": "MLBiometricSecurity",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?[0-1].[0-9]+$"
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "NativeReauth",
@@ -2123,37 +2101,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "name": "EverestLibs/Core",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "name": "EverestLibs/Data",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "name": "EverestLibs/Networking",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "name": "EverestLibs/UI",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "name": "EverestLibs/Tracking",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "name": "EverestLibs/Hardware",
+      "name": "EverestLibs/(Core|Data|Networking|UI|Tracking|Hardware|DevTools)",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
@@ -2345,7 +2293,7 @@
       "name": "MeliphoneVoip",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "AiAssistantClient",
@@ -2354,7 +2302,7 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "name": "Screenshots",
+      "name": "MLScreenshots",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
@@ -2364,6 +2312,44 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "ScreenshotsManager",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "ShippingIosToolkit",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "ShippingKmpDeltaModel",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "allows_granular_projects": [
+        "DependencyInjection"
+      ],
+      "expires": "2024-06-30",
+      "name": "Swinject",
+      "source": "public",
+      "target": "production",
+      "version": "2.8.3"
+    },
+    {
+      "allows_granular_projects": [
+        "DependencyInjection"
+      ],
+      "expires": "2024-06-30",
+      "name": "SwinjectAutoregistration",
+      "source": "public",
+      "target": "production",
+      "version": "2.8.3"
     }
   ]
 }
