@@ -170,17 +170,6 @@
     },
     {
       "allows_granular_projects": [
-        "MLConfigurationProvider/App",
-        "MPConfigurationProvider/App"
-      ],
-      "expires": "2024-04-30",
-      "name": "Firebase/Core",
-      "source": "public",
-      "target": "production",
-      "version": "7.8.0"
-    },
-    {
-      "allows_granular_projects": [
         "MLCheckout",
         "MLCheckoutSDK/Integrator"
       ],
@@ -188,27 +177,6 @@
       "source": "public",
       "target": "production",
       "version": "10.22.0"
-    },
-    {
-      "allows_granular_projects": [
-        "MLCheckout",
-        "MLCheckoutSDK/Integrator"
-      ],
-      "expires": "2024-04-30",
-      "name": "Firebase/Analytics",
-      "source": "public",
-      "target": "production",
-      "version": "7.8.0"
-    },
-    {
-      "allows_granular_projects": [
-        "MLNavigation"
-      ],
-      "expires": "2024-04-30",
-      "name": "Firebase/DynamicLinks",
-      "source": "public",
-      "target": "production",
-      "version": "7.8.0"
     },
     {
       "allows_granular_projects": [
