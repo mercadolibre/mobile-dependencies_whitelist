@@ -2288,7 +2288,19 @@
     {
       "group": "com\\.mercadolibre\\.android\\.devices_sdk",
       "name": "devices",
+      "version": "6\\.\\+",
+      "expires": "2024-05-21"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.devices_sdk",
+      "name": "devices",
       "version": "7\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.behavioral_sdk",
+      "name": "behavioral",
+      "version": "2\\.\\+",
+      "expires": "2024-05-21"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.behavioral_sdk",
