@@ -3564,7 +3564,12 @@
     },
     {
       "group": "com\\.mercadolibre\\.android\\.transferscheckout",
-      "name": "transferscheckout",
+      "name": "commons",
+      "version": "0\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.transferscheckout",
+      "name": "reviewandconfirm",
       "version": "0\\.+"
     },
     {
