@@ -512,9 +512,15 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2024-05-10",
       "group": "com\\.mercadolibre\\.android",
       "name": "carddrawer",
       "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "carddrawer",
+      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -1112,9 +1118,15 @@
       "version": "20\\.0\\.0"
     },
     {
+      "expires": "2024-06-30",
       "group": "com\\.mercadolibre\\.android\\.eshops",
       "name": "components",
       "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.eshops",
+      "name": "components",
+      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.security",
@@ -1205,9 +1217,16 @@
       "version": "9\\.\\+"
     },
     {
+      "description": "Deprecated due to Androidx migration",
+      "expires": "2024-05-10",
       "group": "com\\.mercadolibre\\.android\\.dami_ui_components",
       "name": "ui_components",
       "version": "5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.dami_ui_components",
+      "name": "ui_components",
+      "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.static_resources",
@@ -1230,14 +1249,26 @@
       "version": "5\\.\\+"
     },
     {
+      "expires": "2024-05-10",
       "group": "com\\.mercadopago\\.android\\.px",
       "name": "checkout-v4",
       "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.px",
+      "name": "checkout-v4",
+      "version": "5\\.\\+"
+    },
+    {
+      "expires": "2024-05-10",
+      "group": "com\\.mercadopago\\.android\\.px",
       "name": "addons-v4",
       "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadopago\\.android\\.px",
+      "name": "addons-v4",
+      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.px",
@@ -1245,9 +1276,15 @@
       "version": "6\\.5\\.52"
     },
     {
+      "expires": "2024-05-10",
       "group": "com\\.mercadolibre\\.android\\.px\\.pmselector",
       "name": "pmselector",
       "version": "mercadopago-1\\.\\+|mercadolibre-1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.px\\.pmselector",
+      "name": "pmselector",
+      "version": "mercadopago-2\\.\\+|mercadolibre-2\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.sdk",
@@ -3546,7 +3583,12 @@
     },
     {
       "group": "com\\.mercadolibre\\.android\\.transferscheckout",
-      "name": "transferscheckout",
+      "name": "commons",
+      "version": "0\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.transferscheckout",
+      "name": "reviewandconfirm",
       "version": "0\\.+"
     },
     {
