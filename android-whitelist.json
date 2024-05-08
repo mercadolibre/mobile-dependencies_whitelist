@@ -512,9 +512,15 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2024-05-10",
       "group": "com\\.mercadolibre\\.android",
       "name": "carddrawer",
       "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "carddrawer",
+      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -1230,14 +1236,26 @@
       "version": "5\\.\\+"
     },
     {
+      "expires": "2024-05-10",
       "group": "com\\.mercadopago\\.android\\.px",
       "name": "checkout-v4",
       "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.px",
+      "name": "checkout-v4",
+      "version": "5\\.\\+"
+    },
+    {
+      "expires": "2024-05-10",
+      "group": "com\\.mercadopago\\.android\\.px",
       "name": "addons-v4",
       "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadopago\\.android\\.px",
+      "name": "addons-v4",
+      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.px",
@@ -1245,9 +1263,15 @@
       "version": "6\\.5\\.52"
     },
     {
+      "expires": "2024-05-10",
       "group": "com\\.mercadolibre\\.android\\.px\\.pmselector",
       "name": "pmselector",
       "version": "mercadopago-1\\.\\+|mercadolibre-1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.px\\.pmselector",
+      "name": "pmselector",
+      "version": "mercadopago-2\\.\\+|mercadolibre-2\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.sdk",
@@ -3478,7 +3502,7 @@
       "description": "Meliphone is new VoIP feature implemented by CX.",
       "group": "com\\.mercadolibre\\.android\\.meliphone\\.voip",
       "name": "meliphone",
-      "version": "mercadopago-0\\.\\+|mercadolibre-0\\.\\+"
+      "version": "mercadopago-1\\.\\+|mercadolibre-1\\.\\+"
     },
     {
       "description": "This library is required by meliphone.",
@@ -3546,7 +3570,12 @@
     },
     {
       "group": "com\\.mercadolibre\\.android\\.transferscheckout",
-      "name": "transferscheckout",
+      "name": "commons",
+      "version": "0\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.transferscheckout",
+      "name": "reviewandconfirm",
       "version": "0\\.+"
     },
     {

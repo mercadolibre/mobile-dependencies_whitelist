@@ -4,6 +4,38 @@
       "group": "org\\.jetbrains\\.kotlin",
       "name": "kotlin-stdlib-common",
       "version": "1\\.8\\.10"
+    },
+    {
+      "group": "org\\.jetbrains\\.kotlinx",
+      "name": "kotlinx-coroutines-core",
+      "version": "1\\.5\\.2"
+    },
+    {
+      "expires": "2024-08-08",
+      "allows_granular_projects": [
+        "com.mercadolibre.android.rtc_mobile"
+      ],
+      "group": "io\\.ktor",
+      "name": "ktor-client-core",
+      "version": "2\\.2\\.1"
+    },
+    {
+      "expires": "2024-08-08",
+      "allows_granular_projects": [
+        "com.mercadolibre.android.rtc_mobile"
+      ],
+      "group": "io\\.ktor",
+      "name": "ktor-client-content-negotiation",
+      "version": "2\\.2\\.1"
+    },
+    {
+      "expires": "2024-08-08",
+      "allows_granular_projects": [
+        "com.mercadolibre.android.rtc_mobile"
+      ],
+      "group": "io\\.ktor",
+      "name": "ktor-serialization-kotlinx-json",
+      "version": "2\\.2\\.1"
     }
   ]
 }
