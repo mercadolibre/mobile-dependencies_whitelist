@@ -824,9 +824,15 @@
       "version": "10\\.\\+"
     },
     {
+      "expires": "2024-06-30",
       "group": "com\\.mercadolibre\\.android\\.fluxclient",
       "name": "flux-client",
       "version": "8\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.fluxclient",
+      "name": "flux-client",
+      "version": "9\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.history",
@@ -2305,14 +2311,26 @@
       "version": "mercadolibre-16\\.\\+|mercadopago-16\\.\\+"
     },
     {
+      "expires": "2024-05-25",
       "group": "com\\.mercadolibre\\.android\\.devices_sdk",
       "name": "devices",
       "version": "6\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.devices_sdk",
+      "name": "devices",
+      "version": "7\\.\\+"
+    },
+    {
+      "expires": "2024-05-25",
       "group": "com\\.mercadolibre\\.android\\.behavioral_sdk",
       "name": "behavioral",
       "version": "2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.behavioral_sdk",
+      "name": "behavioral",
+      "version": "3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.addresses",
