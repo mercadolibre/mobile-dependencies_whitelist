@@ -170,17 +170,6 @@
     },
     {
       "allows_granular_projects": [
-        "MLConfigurationProvider/App",
-        "MPConfigurationProvider/App"
-      ],
-      "expires": "2024-04-30",
-      "name": "Firebase/Core",
-      "source": "public",
-      "target": "production",
-      "version": "7.8.0"
-    },
-    {
-      "allows_granular_projects": [
         "MLCheckout",
         "MLCheckoutSDK/Integrator"
       ],
@@ -188,27 +177,6 @@
       "source": "public",
       "target": "production",
       "version": "10.22.0"
-    },
-    {
-      "allows_granular_projects": [
-        "MLCheckout",
-        "MLCheckoutSDK/Integrator"
-      ],
-      "expires": "2024-04-30",
-      "name": "Firebase/Analytics",
-      "source": "public",
-      "target": "production",
-      "version": "7.8.0"
-    },
-    {
-      "allows_granular_projects": [
-        "MLNavigation"
-      ],
-      "expires": "2024-04-30",
-      "name": "Firebase/DynamicLinks",
-      "source": "public",
-      "target": "production",
-      "version": "7.8.0"
     },
     {
       "allows_granular_projects": [
@@ -2319,7 +2287,7 @@
       "name": "MeliphoneVoip",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "AiAssistantClient",
