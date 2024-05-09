@@ -38,6 +38,12 @@
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "home",
+      "version": "15\\.+"
+    },
+    {
+      "expires": "2024-06-30",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "home",
       "version": "13\\.+"
     },
     {
@@ -710,9 +716,15 @@
       "version": "14\\.\\+"
     },
     {
+      "expires": "2024-06-30",
       "group": "com\\.mercadolibre\\.android\\.bookmarks",
       "name": "bookmarks",
       "version": "8\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.bookmarks",
+      "name": "bookmarks",
+      "version": "9\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.buyingflow\\.flox\\.components",
@@ -835,14 +847,26 @@
       "version": "9\\.\\+"
     },
     {
+      "expires": "2024-06-30",
       "group": "com\\.mercadolibre\\.android\\.history",
       "name": "history",
       "version": "9\\.\\+"
     },
     {
+      "expires": "2024-06-30",
       "group": "com\\.mercadolibre\\.android\\.history",
       "name": "history_manager",
       "version": "9\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.history",
+      "name": "history",
+      "version": "10\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.history",
+      "name": "history_manager",
+      "version": "10\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.instore\\.home\\.sections",
@@ -1003,13 +1027,24 @@
       "version": "mercadopago-2\\.\\+|mercadolibre-2\\.\\+"
     },
     {
+      "expires": "2024-06-30",
       "group": "com\\.mercadolibre\\.android\\.recommendations",
       "version": "17\\.\\+"
     },
     {
+      "expires": "2024-06-30",
       "group": "com\\.mercadolibre\\.android\\.recommendations",
       "name": "variations",
       "version": "17\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.recommendations",
+      "version": "18\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.recommendations",
+      "name": "variations",
+      "version": "18\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.remedies",
@@ -1025,8 +1060,13 @@
       "version": "6\\.\\+"
     },
     {
+      "expires": "2024-06-30",
       "group": "com\\.mercadolibre\\.android\\.comparator",
       "version": "9\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.comparator",
+      "version": "10\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.qadb",
@@ -2856,19 +2896,43 @@
     {
       "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
       "name": "combo",
+      "version": "6\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
+      "name": "comparator",
+      "version": "6\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
+      "name": "core",
+      "version": "6\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
+      "name": "recommendations",
+      "version": "6\\.+"
+    },
+    {
+      "expires": "2025-06-30",
+      "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
+      "name": "combo",
       "version": "2\\.+"
     },
     {
+      "expires": "2025-06-30",
       "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
       "name": "comparator",
       "version": "2\\.+"
     },
     {
+      "expires": "2025-06-30",
       "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
       "name": "core",
       "version": "5\\.+"
     },
     {
+      "expires": "2025-06-30",
       "group": "com\\.mercadolibre\\.android\\.recommendations_combo",
       "name": "recommendations",
       "version": "5\\.+"
@@ -2883,6 +2947,12 @@
       "version": "6\\.+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.ml_cards",
+      "name": "core",
+      "version": "5\\.+"
+    },
+    {
+      "expires": "2025-06-30",
       "group": "com\\.mercadolibre\\.android\\.ml_cards",
       "name": "core",
       "version": "4\\.+"
@@ -3326,13 +3396,19 @@
     {
       "group": "com\\.mercadolibre\\.android\\.wishlists",
       "name": "wishlists",
-      "version": "1\\.\\+"
+      "version": "2\\.\\+"
     },
     {
       "expires": "2024-06-30",
       "group": "com\\.mercadolibre\\.android\\.wishlists",
       "name": "wishlists",
       "version": "0\\.\\+"
+    },
+    {
+      "expires": "2024-06-30",
+      "group": "com\\.mercadolibre\\.android\\.wishlists",
+      "name": "wishlists",
+      "version": "1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.mobile_permissions",
