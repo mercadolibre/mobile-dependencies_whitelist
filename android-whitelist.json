@@ -809,6 +809,12 @@
     {
       "group": "com\\.mercadolibre\\.android\\.flox",
       "name": "engine",
+      "version": "12\\.\\+"
+    },
+    {
+      "expires": "2024-07-30",
+      "group": "com\\.mercadolibre\\.android\\.flox",
+      "name": "engine",
       "version": "11\\.\\+"
     },
     {
@@ -3622,6 +3628,16 @@
       "group": "com\\.mercadolibre\\.android\\.screenshots_manager",
       "name": "core",
       "version": "1\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadopago.android.isp.point.mpoc",
+        "com.mercadopago.android.isp.payment_contactless"
+      ],
+      "expires": "2024-10-29",
+      "group": "com\\.mercadopago\\.mpos\\.android\\.mpos\\.ttpkernel",
+      "name": "visa-kernel",
+      "version": "22\\.0\\.0"
     }
   ]
 }
