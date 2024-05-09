@@ -1118,10 +1118,14 @@
       "version": "0\\.\\+"
     },
     {
-      "description": "Don't use this version in production. It's in experimental phase.",
+      "group": "com\\.mercadolibre\\.android\\.virtual_try_on",
+      "name": "commons",
+      "version": "1\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.virtual_try_on",
       "name": "virtualtryon",
-      "version": "0\\.\\+"
+      "version": "1\\.\\+"
     },
     {
       "group": "com\\.modiface",
