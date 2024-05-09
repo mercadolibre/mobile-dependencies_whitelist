@@ -3470,7 +3470,8 @@
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.on.demand.resources",
-        "com.mercadolibre.android.tetris"
+        "com.mercadolibre.android.tetris",
+        "com.mercadolibre.android.auth_native_sso"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose",
@@ -3482,7 +3483,8 @@
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.on.demand.resources",
-        "com.mercadolibre.android.tetris"
+        "com.mercadolibre.android.tetris",
+        "com.mercadolibre.android.auth_native_sso"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.foundation",
@@ -3493,7 +3495,8 @@
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.on.demand.resources",
-        "com.mercadolibre.android.tetris"
+        "com.mercadolibre.android.tetris",
+        "com.mercadolibre.android.auth_native_sso"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.material3",
@@ -3516,7 +3519,8 @@
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.on.demand.resources",
-        "com.mercadolibre.android.tetris"
+        "com.mercadolibre.android.tetris",
+        "com.mercadolibre.android.auth_native_sso"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.ui",
@@ -3527,7 +3531,8 @@
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.on.demand.resources",
-        "com.mercadolibre.android.tetris"
+        "com.mercadolibre.android.tetris",
+        "com.mercadolibre.android.auth_native_sso"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.runtime",
@@ -3538,7 +3543,8 @@
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.on.demand.resources",
-        "com.mercadolibre.android.tetris"
+        "com.mercadolibre.android.tetris",
+        "com.mercadolibre.android.auth_native_sso"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.ui",
@@ -3549,7 +3555,8 @@
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.on.demand.resources",
-        "com.mercadolibre.android.tetris"
+        "com.mercadolibre.android.tetris",
+        "com.mercadolibre.android.auth_native_sso"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.ui",
@@ -3565,6 +3572,14 @@
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.ui",
       "name": "ui-test-manifest"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.auth_native_sso"
+      ],
+      "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
+      "group": "androidx\\.navigation",
+      "name": "navigation-compose"
     },
     {
       "allows_granular_projects": [
