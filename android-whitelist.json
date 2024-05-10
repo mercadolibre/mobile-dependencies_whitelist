@@ -1120,6 +1120,12 @@
     {
       "description": "Don't use this version in production. It's in experimental phase.",
       "group": "com\\.mercadolibre\\.android\\.virtual_try_on",
+      "name": "commons",
+      "version": "0\\.\\+"
+    },
+    {
+      "description": "Don't use this version in production. It's in experimental phase.",
+      "group": "com\\.mercadolibre\\.android\\.virtual_try_on",
       "name": "virtualtryon",
       "version": "0\\.\\+"
     },
@@ -1516,15 +1522,6 @@
       "group": "io\\.reactivex\\.rxjava2",
       "name": "rxjava",
       "version": "2\\.2\\.8"
-    },
-    {
-      "expires": "2024-10-01",
-      "group": "com\\.mercadolibre\\.android\\.credits\\.behaviour",
-      "version": "5\\.\\+"
-    },
-    {
-      "group": "com\\.mercadolibre\\.android\\.credits\\.behaviour",
-      "version": "6\\.\\+"
     },
     {
       "description": "Esta libs se encuentra deprecada, recomendamos utilizar coroutine",
@@ -3643,6 +3640,11 @@
       "group": "com\\.mercadopago\\.mpos\\.android\\.mpos\\.ttpkernel",
       "name": "visa-kernel",
       "version": "22\\.0\\.0"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.px",
+      "name": "tmgsdk",
+      "version": "release-1.0.2-251022"
     }
   ]
 }
