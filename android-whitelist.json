@@ -601,12 +601,6 @@
       "version": "mercadopago-1\\.\\+"
     },
     {
-      "expires": "2024-05-10",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "carddrawer",
-      "version": "3\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android",
       "name": "carddrawer",
       "version": "4\\.\\+"
@@ -867,11 +861,6 @@
       "group": "com\\.mercadolibre\\.android\\.classifieds",
       "name": "dynamic-flow",
       "version": "1\\.\\+"
-    },
-    {
-      "expires": "2024-05-10",
-      "group": "com\\.mercadolibre\\.android\\.commons",
-      "version": "31\\.\\+|32\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.commons",
@@ -1214,16 +1203,14 @@
       "version": "0\\.\\+"
     },
     {
-      "description": "Don't use this version in production. It's in experimental phase.",
       "group": "com\\.mercadolibre\\.android\\.virtual_try_on",
       "name": "commons",
-      "version": "0\\.\\+"
+      "version": "1\\.\\+"
     },
     {
-      "description": "Don't use this version in production. It's in experimental phase.",
       "group": "com\\.mercadolibre\\.android\\.virtual_try_on",
       "name": "virtualtryon",
-      "version": "0\\.\\+"
+      "version": "1\\.\\+"
     },
     {
       "group": "com\\.modiface",
@@ -1330,13 +1317,6 @@
       "version": "9\\.\\+"
     },
     {
-      "description": "Deprecated due to Androidx migration",
-      "expires": "2024-05-10",
-      "group": "com\\.mercadolibre\\.android\\.dami_ui_components",
-      "name": "ui_components",
-      "version": "5\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.dami_ui_components",
       "name": "ui_components",
       "version": "6\\.\\+"
@@ -1362,21 +1342,9 @@
       "version": "5\\.\\+"
     },
     {
-      "expires": "2024-05-10",
-      "group": "com\\.mercadopago\\.android\\.px",
-      "name": "checkout-v4",
-      "version": "4\\.\\+"
-    },
-    {
       "group": "com\\.mercadopago\\.android\\.px",
       "name": "checkout-v4",
       "version": "5\\.\\+"
-    },
-    {
-      "expires": "2024-05-10",
-      "group": "com\\.mercadopago\\.android\\.px",
-      "name": "addons-v4",
-      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.px",
@@ -1387,12 +1355,6 @@
       "group": "com\\.mercadolibre\\.android\\.px",
       "name": "usdk",
       "version": "6\\.5\\.52"
-    },
-    {
-      "expires": "2024-05-10",
-      "group": "com\\.mercadolibre\\.android\\.px\\.pmselector",
-      "name": "pmselector",
-      "version": "mercadopago-1\\.\\+|mercadolibre-1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.px\\.pmselector",
@@ -1865,18 +1827,6 @@
       "version": "1\\.0\\.0"
     },
     {
-      "expires": "2024-05-10",
-      "group": "androidx\\.appcompat",
-      "name": "appcompat",
-      "version": "1\\.3\\.1"
-    },
-    {
-      "expires": "2024-05-10",
-      "group": "androidx\\.appcompat",
-      "name": "appcompat-resources",
-      "version": "1\\.3\\.1"
-    },
-    {
       "group": "androidx\\.appcompat",
       "name": "appcompat",
       "version": "1\\.5\\.1"
@@ -1885,23 +1835,11 @@
       "group": "androidx\\.appcompat",
       "name": "appcompat-resources",
       "version": "1\\.5\\.1"
-    },
-    {
-      "expires": "2024-05-10",
-      "group": "androidx\\.activity",
-      "name": "activity",
-      "version": "1\\.2\\.4"
     },
     {
       "group": "androidx\\.activity",
       "name": "activity",
       "version": "1\\.7\\.2"
-    },
-    {
-      "expires": "2024-05-10",
-      "group": "androidx\\.activity",
-      "name": "activity-ktx",
-      "version": "1\\.2\\.4"
     },
     {
       "group": "androidx\\.activity",
@@ -2019,38 +1957,14 @@
       "version": "2\\.0\\.4"
     },
     {
-      "expires": "2024-05-10",
-      "group": "androidx\\.core",
-      "name": "core",
-      "version": "1\\.6\\.0"
-    },
-    {
       "group": "androidx\\.core",
       "name": "core",
       "version": "1\\.9\\.0"
     },
     {
-      "expires": "2024-05-10",
-      "group": "androidx\\.core",
-      "name": "core-ktx",
-      "version": "1\\.6\\.0"
-    },
-    {
       "group": "androidx\\.core",
       "name": "core-ktx",
       "version": "1\\.9\\.0"
-    },
-    {
-      "expires": "2024-05-10",
-      "group": "androidx\\.fragment",
-      "name": "fragment",
-      "version": "1\\.3\\.6"
-    },
-    {
-      "expires": "2024-05-10",
-      "group": "androidx\\.fragment",
-      "name": "fragment-ktx",
-      "version": "1\\.3\\.6"
     },
     {
       "group": "androidx\\.fragment",
@@ -2073,21 +1987,9 @@
       "version": "1\\.1\\.2"
     },
     {
-      "expires": "2024-05-10",
-      "group": "androidx\\.lifecycle",
-      "name": "lifecycle-common",
-      "version": "2\\.3\\.1"
-    },
-    {
       "group": "androidx\\.lifecycle",
       "name": "lifecycle-common",
       "version": "2\\.6\\.1"
-    },
-    {
-      "expires": "2024-05-10",
-      "group": "androidx\\.lifecycle",
-      "name": "lifecycle-service",
-      "version": "2\\.3\\.1"
     },
     {
       "group": "androidx\\.lifecycle",
@@ -2095,21 +1997,9 @@
       "version": "2\\.6\\.1"
     },
     {
-      "expires": "2024-05-10",
-      "group": "androidx\\.lifecycle",
-      "name": "lifecycle-livedata-core",
-      "version": "2\\.3\\.1"
-    },
-    {
       "group": "androidx\\.lifecycle",
       "name": "lifecycle-livedata-core",
       "version": "2\\.6\\.1"
-    },
-    {
-      "expires": "2024-05-10",
-      "group": "androidx\\.lifecycle",
-      "name": "lifecycle-livedata-core-ktx",
-      "version": "2\\.3\\.1"
     },
     {
       "group": "androidx\\.lifecycle",
@@ -2117,21 +2007,9 @@
       "version": "2\\.6\\.1"
     },
     {
-      "expires": "2024-05-10",
-      "group": "androidx\\.lifecycle",
-      "name": "lifecycle-livedata",
-      "version": "2\\.3\\.1"
-    },
-    {
       "group": "androidx\\.lifecycle",
       "name": "lifecycle-livedata",
       "version": "2\\.6\\.1"
-    },
-    {
-      "expires": "2024-05-10",
-      "group": "androidx\\.lifecycle",
-      "name": "lifecycle-viewmodel",
-      "version": "2\\.3\\.1"
     },
     {
       "group": "androidx\\.lifecycle",
@@ -2139,21 +2017,9 @@
       "version": "2\\.6\\.1"
     },
     {
-      "expires": "2024-05-10",
-      "group": "androidx\\.lifecycle",
-      "name": "lifecycle-process",
-      "version": "2\\.3\\.1"
-    },
-    {
       "group": "androidx\\.lifecycle",
       "name": "lifecycle-process",
       "version": "2\\.6\\.1"
-    },
-    {
-      "expires": "2024-05-10",
-      "group": "androidx\\.lifecycle",
-      "name": "lifecycle-runtime-ktx",
-      "version": "2\\.3\\.1"
     },
     {
       "group": "androidx\\.lifecycle",
@@ -2161,32 +2027,14 @@
       "version": "2\\.6\\.1"
     },
     {
-      "expires": "2024-05-10",
-      "group": "androidx\\.lifecycle",
-      "name": "lifecycle-viewmodel-ktx",
-      "version": "2\\.3\\.1"
-    },
-    {
       "group": "androidx\\.lifecycle",
       "name": "lifecycle-viewmodel-ktx",
       "version": "2\\.6\\.1"
     },
     {
-      "expires": "2024-05-10",
-      "group": "androidx\\.lifecycle",
-      "name": "lifecycle-livedata-ktx",
-      "version": "2\\.3\\.1"
-    },
-    {
       "group": "androidx\\.lifecycle",
       "name": "lifecycle-livedata-ktx",
       "version": "2\\.6\\.1"
-    },
-    {
-      "expires": "2024-05-10",
-      "group": "androidx\\.lifecycle",
-      "name": "lifecycle-common-java8",
-      "version": "2\\.3\\.1"
     },
     {
       "group": "androidx\\.lifecycle",
@@ -3170,12 +3018,6 @@
       "group": "com\\.datadoghq",
       "name": "dd-sdk-android-okhttp",
       "version": "2\\.4\\.0"
-    },
-    {
-      "expires": "2024-05-10",
-      "group": "com\\.mercadolibre\\.android\\.data_dispatcher",
-      "name": "core",
-      "version": "3\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.data_dispatcher",
