@@ -532,12 +532,6 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "name": "MLCreditsBehaviours",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?3.[0-9]+$"
-    },
-    {
       "name": "MLDynamicModal",
       "source": "public",
       "target": "production",
