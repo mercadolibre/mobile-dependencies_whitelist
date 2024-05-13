@@ -1789,11 +1789,13 @@
       "version": "10\\.+"
     },
     {
+      "expires": "2024-06-01",
       "group": "com\\.mercadolibre\\.android\\.andesui",
       "name": "coachmark",
       "version": "8\\.\\+"
     },
     {
+      "expires": "2024-06-01",
       "group": "com\\.mercadolibre\\.android\\.andesui",
       "name": "components",
       "version": "8\\.\\+"
@@ -1802,9 +1804,28 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.andes_integrations"
       ],
+      "expires": "2024-06-01",
       "group": "com\\.mercadolibre\\.android\\.andesui",
       "name": "components-compose",
       "version": "8\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.andesui",
+      "name": "coachmark",
+      "version": "9\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.andesui",
+      "name": "components",
+      "version": "9\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.andes_integrations"
+      ],
+      "group": "com\\.mercadolibre\\.android\\.andesui",
+      "name": "components-compose",
+      "version": "9\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.andes_integrations",
