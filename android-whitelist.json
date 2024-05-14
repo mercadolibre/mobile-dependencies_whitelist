@@ -3190,9 +3190,15 @@
       "version": "1\\.5\\.\\1"
     },
     {
+      "expires": "2024-07-27",
       "group": "com\\.mercadolibre\\.android\\.xprod\\.modules",
       "name": "webview",
       "version": "2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.xprod\\.modules",
+      "name": "webview",
+      "version": "mercadolibre-2\\.\\+|mercadopago-2\\.\\+"
     },
     {
       "expires": "2024-06-30",
