@@ -400,7 +400,7 @@
       ],
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-location",
-      "version": "20\\.0\\.0"
+      "version": "21\\.0\\.1"
     },
     {
       "expires": "2024-07-01",
@@ -622,9 +622,15 @@
       "version": "6\\.\\+"
     },
     {
+      "expires": "2024-06-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "login",
       "version": "mercadopago-18\\.\\+|mercadolibre-18\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "login",
+      "version": "mercadopago-20\\.\\+|mercadolibre-20\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point_login_qr",
