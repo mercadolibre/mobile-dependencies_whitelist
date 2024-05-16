@@ -622,9 +622,15 @@
       "version": "6\\.\\+"
     },
     {
+      "expires": "2024-06-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "login",
       "version": "mercadopago-18\\.\\+|mercadolibre-18\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "login",
+      "version": "mercadopago-20\\.\\+|mercadolibre-20\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point_login_qr",
@@ -3375,6 +3381,12 @@
       "version": "1\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.wishlists",
+      "name": "wishlists",
+      "version": "3\\.\\+"
+    },
+    {
+      "expires": "2024-08-30",
       "group": "com\\.mercadolibre\\.android\\.wishlists",
       "name": "wishlists",
       "version": "2\\.\\+"
