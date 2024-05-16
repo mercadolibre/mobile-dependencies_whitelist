@@ -2312,6 +2312,18 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "name": "ShippingIosLogin",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "ShippingIosMyaccount",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
       "name": "StripeBar",
       "source": "private",
       "target": "production",
