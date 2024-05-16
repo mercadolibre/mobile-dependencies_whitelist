@@ -400,7 +400,7 @@
       ],
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-location",
-      "version": "20\\.0\\.0"
+      "version": "21\\.0\\.1"
     },
     {
       "expires": "2024-07-01",
@@ -1446,14 +1446,28 @@
       "version": "11\\.+"
     },
     {
+      "description": "The expiration date is extended to have time enough to deprecate it",
+      "expires": "2024-12-31",
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
       "name": "paymentflowfcu",
       "version": "12\\.+"
     },
     {
+      "description": "The expiration date is extended to have time enough to deprecate it",
+      "expires": "2024-12-31",
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
       "name": "entities_fcu",
       "version": "12\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
+      "name": "paymentflowfcu",
+      "version": "13\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
+      "name": "entities_fcu",
+      "version": "13\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point\\.mpos",
@@ -3188,9 +3202,15 @@
       "version": "1\\.5\\.\\1"
     },
     {
+      "expires": "2024-07-27",
       "group": "com\\.mercadolibre\\.android\\.xprod\\.modules",
       "name": "webview",
       "version": "2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.xprod\\.modules",
+      "name": "webview",
+      "version": "mercadolibre-2\\.\\+|mercadopago-2\\.\\+"
     },
     {
       "expires": "2024-06-30",
