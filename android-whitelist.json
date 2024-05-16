@@ -2308,9 +2308,15 @@
       "version": "13\\.\\+"
     },
     {
+      "expires": "2024-06-01",
       "group": "com\\.mercadolibre\\.android\\.navigation",
       "name": "menu",
       "version": "mercadolibre-10\\.\\+|mercadopago-10\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.navigation",
+      "name": "menu",
+      "version": "mercadolibre-11\\.\\+|mercadopago-11\\.\\+"
     },
     {
       "expires": "2024-06-01",
