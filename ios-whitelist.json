@@ -170,17 +170,6 @@
     },
     {
       "allows_granular_projects": [
-        "MLConfigurationProvider/App",
-        "MPConfigurationProvider/App"
-      ],
-      "expires": "2024-04-30",
-      "name": "Firebase/Core",
-      "source": "public",
-      "target": "production",
-      "version": "7.8.0"
-    },
-    {
-      "allows_granular_projects": [
         "MLCheckout",
         "MLCheckoutSDK/Integrator"
       ],
@@ -188,27 +177,6 @@
       "source": "public",
       "target": "production",
       "version": "10.22.0"
-    },
-    {
-      "allows_granular_projects": [
-        "MLCheckout",
-        "MLCheckoutSDK/Integrator"
-      ],
-      "expires": "2024-04-30",
-      "name": "Firebase/Analytics",
-      "source": "public",
-      "target": "production",
-      "version": "7.8.0"
-    },
-    {
-      "allows_granular_projects": [
-        "MLNavigation"
-      ],
-      "expires": "2024-04-30",
-      "name": "Firebase/DynamicLinks",
-      "source": "public",
-      "target": "production",
-      "version": "7.8.0"
     },
     {
       "allows_granular_projects": [
@@ -751,6 +719,12 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "TransfersCheckout",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
       "name": "MLRecommendationsCombo",
       "source": "private",
       "target": "production",
@@ -1266,14 +1240,7 @@
       "name": "CreditsUIComponents",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-1]+$"
-    },
-    {
-      "expires": "2024-05-17",
-      "name": "CreditsUIComponents",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?[0-1].[0-9]+$"
+      "version": "^~>\\s?1.[0-9]*$"
     },
     {
       "name": "MLCreditsCore",
@@ -2279,11 +2246,10 @@
       "version": "15.0.3"
     },
     {
-      "description": "Don't use this version in production. It's in experimental phase.",
       "name": "VirtualTryOn",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "PerformanceBackgroundTasks",
@@ -2313,7 +2279,7 @@
       "name": "MeliphoneVoip",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "AiAssistantClient",
@@ -2350,6 +2316,44 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "ShippingIosLogin",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "ShippingIosMyaccount",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "StripeBar",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "allows_granular_projects": [
+        "DependencyInjection"
+      ],
+      "expires": "2024-06-30",
+      "name": "Swinject",
+      "source": "public",
+      "target": "production",
+      "version": "2.8.3"
+    },
+    {
+      "allows_granular_projects": [
+        "DependencyInjection"
+      ],
+      "expires": "2024-06-30",
+      "name": "SwinjectAutoregistration",
+      "source": "public",
+      "target": "production",
+      "version": "2.8.3"
     }
   ]
 }
