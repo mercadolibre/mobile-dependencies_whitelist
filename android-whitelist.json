@@ -1,6 +1,16 @@
 {
   "whitelist": [
     {
+      "group": "com\\.mercadolibre\\.android\\.cardsnfcwallets",
+      "name": "core",
+      "version": "0\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cardsnfcwallets",
+      "name": "flows",
+      "version": "0\\.+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.nfcpayments",
       "name": "visa-sensory-branding",
       "version": "2\\.+"
