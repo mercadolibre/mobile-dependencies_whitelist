@@ -900,7 +900,13 @@
     },
     {
       "group": "com\\.mercadolibre\\.android\\.remote\\.configuration",
+      "name":"keepnite",
       "version": "8\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.remote\\.configuration",
+      "name":"initializer",
+      "version": "mercadopagoDevelop-8\\.\\+|mercadopagoProd-8\\.\\+|mercadolibreDevelop-8\\.\\+|mercadolibreProd-8\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cpg",
