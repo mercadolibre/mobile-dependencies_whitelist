@@ -2009,6 +2009,12 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "name": "ShippingIosPreCheckIn",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
       "name": "ShippingIosMyaccount",
       "source": "private",
       "target": "production",
