@@ -3422,9 +3422,15 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2024-06-30",
       "group": "com\\.mercadolibre\\.android\\.mobile_permissions",
       "name": "permissions",
       "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.mobile_permissions",
+      "name": "permissions",
+      "version": "2\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point_integration_sdk",
