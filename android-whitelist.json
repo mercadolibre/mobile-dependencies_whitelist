@@ -1,6 +1,16 @@
 {
   "whitelist": [
     {
+      "group": "com\\.mercadolibre\\.android\\.cardsnfcwallets",
+      "name": "core",
+      "version": "0\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cardsnfcwallets",
+      "name": "flows",
+      "version": "0\\.+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.nfcpayments",
       "name": "visa-sensory-branding",
       "version": "2\\.+"
@@ -702,18 +712,6 @@
       "group": "com\\.mercadolibre\\.android\\.notifications_helpers",
       "name": "typed_modal",
       "version": "6\\.\\+"
-    },
-    {
-      "expires": "2024-05-19",
-      "group": "com\\.mercadolibre\\.android\\.notifications_helpers",
-      "name": "notifications_permissions",
-      "version": "5\\.\\+"
-    },
-    {
-      "expires": "2024-05-19",
-      "group": "com\\.mercadolibre\\.android\\.notifications_helpers",
-      "name": "typed_modal",
-      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -2814,9 +2812,15 @@
       "version": "0\\.+"
     },
     {
+      "expires": "2024-07-01",
       "group": "com\\.mercadolibre\\.android\\.data_privacy_helper",
       "name": "libdataprivacy",
       "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.data_privacy_helper",
+      "name": "libdataprivacy",
+      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.cashin",
@@ -3526,7 +3530,8 @@
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.on.demand.resources",
-        "com.mercadolibre.android.tetris"
+        "com.mercadolibre.android.tetris",
+        "com.mercadolibre.android.auth_native_sso"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.activity",
