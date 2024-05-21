@@ -476,12 +476,6 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "name": "MLCreditsBehaviours",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?3.[0-9]+$"
-    },
-    {
       "name": "MLDynamicModal",
       "source": "public",
       "target": "production",
@@ -1188,7 +1182,7 @@
       "name": "PointFlowEngine",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?8.[1-9]+$"
+      "version": "^~>\\s?9.[0-9]+$"
     },
     {
       "name": "StartUPInitializer",
