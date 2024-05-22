@@ -473,6 +473,11 @@
       "version": "11\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.dynamic_features",
+      "name": "core",
+      "version": "12\\.\\+"
+    },
+    {
       "group": "com\\.google\\.android\\.play",
       "name": "feature-delivery",
       "version": "2\\.0\\.0"
@@ -627,6 +632,11 @@
       "version": "9\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "configuration-manager",
+      "version": "10\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.ignite",
       "name": "core",
       "version": "6\\.\\+"
@@ -695,6 +705,11 @@
     },
     {
       "group": "com\\.mercadolibre\\.android",
+      "name": "notifications",
+      "version": "25\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
       "name": "notifications_commons",
       "version": "24\\.\\+"
     },
@@ -702,6 +717,11 @@
       "group": "com\\.mercadolibre\\.android\\.rich_notifications",
       "name": "carousel",
       "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.rich_notifications",
+      "name": "carousel",
+      "version": "7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.notifications_helpers",
@@ -712,6 +732,16 @@
       "group": "com\\.mercadolibre\\.android\\.notifications_helpers",
       "name": "typed_modal",
       "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.notifications_helpers",
+      "name": "notifications_permissions",
+      "version": "7\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.notifications_helpers",
+      "name": "typed_modal",
+      "version": "7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -761,6 +791,16 @@
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient-adapter-bus",
       "version": "25\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient",
+      "version": "26\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "restclient-adapter-bus",
+      "version": "26\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -883,6 +923,10 @@
       "version": "36\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.commons",
+      "version": "37\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.point\\.lot\\.management",
       "version": "2\\.\\+"
     },
@@ -975,6 +1019,11 @@
       "group": "com\\.mercadolibre\\.android\\.local\\.storage",
       "name": "core",
       "version": "9\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.local\\.storage",
+      "name": "core",
+      "version": "10\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.local\\.storage",
@@ -1108,6 +1157,21 @@
       "group": "com\\.mercadolibre\\.android\\.place",
       "name": "processor",
       "version": "10\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.place",
+      "name": "annotation",
+      "version": "11\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.place",
+      "name": "core",
+      "version": "11\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.place",
+      "name": "processor",
+      "version": "11\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.portable_widget",
@@ -2344,6 +2408,11 @@
       "version": "mercadolibre-16\\.\\+|mercadopago-16\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "notificationcenter",
+      "version": "mercadolibre-17\\.\\+|mercadopago-17\\.\\+"
+    },
+    {
       "expires": "2024-05-25",
       "group": "com\\.mercadolibre\\.android\\.devices_sdk",
       "name": "devices",
@@ -2787,6 +2856,11 @@
       "version": "5\\.+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.mobile_cryptography",
+      "name": "core",
+      "version": "6\\.+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.valkiria",
       "name": "valkiria",
       "version": "2\\.+"
@@ -3148,6 +3222,11 @@
       "version": "4\\.+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.data_dispatcher",
+      "name": "core",
+      "version": "5\\.+"
+    },
+    {
       "description": "This library is used for push-notification with mqtt",
       "group": "com\\.gojek\\.courier",
       "name": "courier",
@@ -3192,6 +3271,16 @@
       "group": "com\\.mercadolibre\\.android\\.everest",
       "name": "platform",
       "version": "14\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.everest",
+      "name": "platform",
+      "version": "15\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.everest",
+      "name": "catalog",
+      "version": "15\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.errorhandler\\.v2",
@@ -3431,6 +3520,11 @@
       "group": "com\\.mercadolibre\\.android\\.mobile_permissions",
       "name": "permissions",
       "version": "2\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.mobile_permissions",
+      "name": "permissions",
+      "version": "3\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point_integration_sdk",
