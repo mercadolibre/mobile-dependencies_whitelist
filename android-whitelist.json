@@ -680,15 +680,15 @@
       "version": "1\\.\\+"
     },
     {
-      "expires": "2024-05-25",
+      "expires": "2024-06-25",
       "group": "com\\.mercadolibre\\.android",
       "name": "melidata-sdk",
-      "version": "19\\.\\+"
+      "version": "20\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "melidata-sdk",
-      "version": "20\\.\\+"
+      "version": "21\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -2450,12 +2450,6 @@
       "version": "7\\.\\+"
     },
     {
-      "expires": "2024-05-25",
-      "group": "com\\.mercadolibre\\.android\\.behavioral_sdk",
-      "name": "behavioral",
-      "version": "2\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.behavioral_sdk",
       "name": "behavioral",
       "version": "3\\.\\+"
@@ -2901,6 +2895,11 @@
       "group": "com\\.mercadolibre\\.android\\.ccap",
       "name": "congrats-sdk",
       "version": "2\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.ccap",
+      "name": "remedy-challenge",
+      "version": "1\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.ccap",
@@ -3751,7 +3750,8 @@
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.on.demand.resources",
-        "com.mercadolibre.android.tetris"
+        "com.mercadolibre.android.tetris",
+        "com.mercadolibre.android.auth_native_sso"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.lifecycle",
