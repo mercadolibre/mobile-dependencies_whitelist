@@ -668,12 +668,6 @@
       "version": "1\\.\\+"
     },
     {
-      "expires": "2024-05-25",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "melidata-sdk",
-      "version": "19\\.\\+"
-    },
-    {
       "expires": "2024-06-25",
       "group": "com\\.mercadolibre\\.android",
       "name": "melidata-sdk",
@@ -2350,21 +2344,9 @@
       "version": "mercadolibre-16\\.\\+|mercadopago-16\\.\\+"
     },
     {
-      "expires": "2024-05-25",
-      "group": "com\\.mercadolibre\\.android\\.devices_sdk",
-      "name": "devices",
-      "version": "6\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.devices_sdk",
       "name": "devices",
       "version": "7\\.\\+"
-    },
-    {
-      "expires": "2024-05-25",
-      "group": "com\\.mercadolibre\\.android\\.behavioral_sdk",
-      "name": "behavioral",
-      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.behavioral_sdk",
@@ -2806,6 +2788,11 @@
       "group": "com\\.mercadolibre\\.android\\.ccap",
       "name": "congrats-sdk",
       "version": "2\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.ccap",
+      "name": "remedy-challenge",
+      "version": "1\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.ccap",
