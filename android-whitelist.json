@@ -674,9 +674,15 @@
       "version": "19\\.\\+"
     },
     {
+      "expires": "2024-06-25",
       "group": "com\\.mercadolibre\\.android",
       "name": "melidata-sdk",
       "version": "20\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "melidata-sdk",
+      "version": "21\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -2794,7 +2800,7 @@
     {
       "group": "com\\.mercadolibre\\.android\\.ccap",
       "name": "amount-screen",
-      "version": "0\\.+"
+      "version": "1\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.ccap",
@@ -2812,9 +2818,15 @@
       "version": "0\\.+"
     },
     {
+      "expires": "2024-07-01",
       "group": "com\\.mercadolibre\\.android\\.data_privacy_helper",
       "name": "libdataprivacy",
       "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.data_privacy_helper",
+      "name": "libdataprivacy",
+      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.cashin",
@@ -3177,9 +3189,15 @@
       "version": "2\\.\\+"
     },
     {
+      "expires": "2024-06-30",
       "group": "com\\.mercadolibre\\.android\\.everest",
       "name": "platform",
       "version": "12\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.everest",
+      "name": "platform",
+      "version": "14\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.errorhandler\\.v2",
@@ -3410,9 +3428,15 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2024-06-30",
       "group": "com\\.mercadolibre\\.android\\.mobile_permissions",
       "name": "permissions",
       "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.mobile_permissions",
+      "name": "permissions",
+      "version": "2\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point_integration_sdk",

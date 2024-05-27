@@ -476,12 +476,6 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "name": "MLCreditsBehaviours",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?3.[0-9]+$"
-    },
-    {
       "name": "MLDynamicModal",
       "source": "public",
       "target": "production",
@@ -1122,7 +1116,7 @@
       "name": "MLLoyalUIComponents",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?2.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "CreditsUIComponents",
@@ -1188,7 +1182,7 @@
       "name": "PointFlowEngine",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?8.[1-9]+$"
+      "version": "^~>\\s?9.[0-9]+$"
     },
     {
       "name": "StartUPInitializer",
@@ -1503,10 +1497,18 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "description": "This version will be deprecated in favor of 1.0.0",
+      "expires": "2024-06-03",
       "name": "AmountScreen",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "AmountScreen",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "FeedbackScreen",
@@ -1898,7 +1900,7 @@
       "name": "Wishlists",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "BillPayments",
@@ -2004,6 +2006,12 @@
     },
     {
       "name": "ShippingIosLogin",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "ShippingIosPreCheckIn",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
