@@ -1897,6 +1897,13 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "expires": "2024-05-31",
+      "name": "Wishlists",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
       "name": "Wishlists",
       "source": "private",
       "target": "production",
