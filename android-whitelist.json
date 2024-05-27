@@ -1087,7 +1087,8 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.tetris"
+        "com.mercadolibre.android.tetris",
+        "com.mercadolibre.android.vpp"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
@@ -3477,7 +3478,8 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.tetris"
+        "com.mercadolibre.android.tetris",
+        "com.mercadolibre.android.vpp"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.constraintlayout",
@@ -3490,7 +3492,8 @@
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.on.demand.resources",
         "com.mercadolibre.android.tetris",
-        "com.mercadolibre.android.auth_native_sso"
+        "com.mercadolibre.android.auth_native_sso",
+        "com.mercadolibre.android.vpp"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose",
@@ -3503,7 +3506,8 @@
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.on.demand.resources",
         "com.mercadolibre.android.tetris",
-        "com.mercadolibre.android.auth_native_sso"
+        "com.mercadolibre.android.auth_native_sso",
+        "com.mercadolibre.android.vpp"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.foundation",
@@ -3515,7 +3519,8 @@
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.on.demand.resources",
         "com.mercadolibre.android.tetris",
-        "com.mercadolibre.android.auth_native_sso"
+        "com.mercadolibre.android.auth_native_sso",
+        "com.mercadolibre.android.vpp"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.material3",
@@ -3523,7 +3528,8 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.tetris"
+        "com.mercadolibre.android.tetris",
+        "com.mercadolibre.android.vpp"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.material3",
@@ -3536,7 +3542,8 @@
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.on.demand.resources",
         "com.mercadolibre.android.tetris",
-        "com.mercadolibre.android.auth_native_sso"
+        "com.mercadolibre.android.auth_native_sso",
+        "com.mercadolibre.android.vpp"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.activity",
@@ -3549,7 +3556,8 @@
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.on.demand.resources",
         "com.mercadolibre.android.tetris",
-        "com.mercadolibre.android.auth_native_sso"
+        "com.mercadolibre.android.auth_native_sso",
+        "com.mercadolibre.android.vpp"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.ui",
@@ -3561,7 +3569,8 @@
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.on.demand.resources",
         "com.mercadolibre.android.tetris",
-        "com.mercadolibre.android.auth_native_sso"
+        "com.mercadolibre.android.auth_native_sso",
+        "com.mercadolibre.android.vpp"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.runtime",
@@ -3573,7 +3582,8 @@
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.on.demand.resources",
         "com.mercadolibre.android.tetris",
-        "com.mercadolibre.android.auth_native_sso"
+        "com.mercadolibre.android.auth_native_sso",
+        "com.mercadolibre.android.vpp"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.ui",
@@ -3585,7 +3595,8 @@
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.on.demand.resources",
         "com.mercadolibre.android.tetris",
-        "com.mercadolibre.android.auth_native_sso"
+        "com.mercadolibre.android.auth_native_sso",
+        "com.mercadolibre.android.vpp"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.ui",
@@ -3596,7 +3607,8 @@
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.on.demand.resources",
-        "com.mercadolibre.android.tetris"
+        "com.mercadolibre.android.tetris",
+        "com.mercadolibre.android.vpp"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.ui",
@@ -3604,7 +3616,8 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.auth_native_sso"
+        "com.mercadolibre.android.auth_native_sso",
+        "com.mercadolibre.android.vpp"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.navigation",
@@ -3616,7 +3629,8 @@
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.on.demand.resources",
         "com.mercadolibre.android.tetris",
-        "com.mercadolibre.android.auth_native_sso"
+        "com.mercadolibre.android.auth_native_sso",
+        "com.mercadolibre.android.vpp"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.lifecycle",
