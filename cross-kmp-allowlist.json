@@ -36,6 +36,15 @@
       "group": "io\\.ktor",
       "name": "ktor-serialization-kotlinx-json",
       "version": "2\\.2\\.1"
+    },
+    {
+      "expires": "2024-08-08",
+      "allows_granular_projects": [
+        "com.mercadolibre.android.rtc_mobile"
+      ],
+      "group": "org\\.jetbrains\\.kotlinx",
+      "name": "kotlinx-serialization-json",
+      "version": "1\\.4\\.0"
     }
   ]
 }
