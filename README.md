@@ -131,6 +131,42 @@ To activate the granularity feature, it is necessary to introduce a new block wi
 ```
 
 
+## Support for Transitive Dependencies (ONLY ANDROID):
+
+This functionality provides a more precise control over how it is possible to exclude transitive dependencies from our projects.
+
+This functionality provides a more precise management of the scope of dependencies, giving us the ability to select specific consumers for each of them.
+
+To activate the transitivity feature, it is necessary to introduce a new block within the dependency definition, specifying two new keys:
+1. By default, all dependencies are enabled as transitive. To specify otherwise, it should be configured as false as follows:
+    ` "transitivity" = false `
+2. All dependencies that are not transitive should indicate the namespace of the dependency. This can be done as follows:
+   ` "namespace": "com.name.path.path" `
+
+Both keys will be found within the ` "transitive_configuration" ` enclosure. Here's an example to visualize it more clearly:
+
+
+### Android Platform
+```
+{
+  "whitelist": [
+    {
+      "group": "com\\.squareup\\.retrofit2",
+      "name": "adapter-rxjava2",
+      "version": "2\\.6\\.4",
+      "transitive_configuration":
+      {
+          "transitivity": false,
+          "namespace": "retrofit2"
+      }
+    },
+    ...
+  ]
+}
+```
+
+It's important to mention that if non-transitive dependency imports are found within classes, they will generate a blocker through the Gradle plugin, preventing the lintAndroid() task executed in CI or locally from completing successfully.
+
 
 # Contexts Allowlist [DEPRECATED]
 
