@@ -2704,14 +2704,26 @@
       "version": "1\\.+"
     },
     {
+      "expires": "2024-08-30",
       "group": "io\\.opentelemetry",
       "name": "opentelemetry-api",
       "version": "1\\.27\\.+"
     },
     {
       "group": "io\\.opentelemetry",
+      "name": "opentelemetry-api",
+      "version": "1\\.38\\.+"
+    },
+    {
+      "expires": "2024-08-30",
+      "group": "io\\.opentelemetry",
       "name": "opentelemetry-bom",
       "version": "1\\.27\\.+"
+    },
+    {
+      "group": "io\\.opentelemetry",
+      "name": "opentelemetry-bom",
+      "version": "1\\.38\\.+"
     },
     {
       "group": "io\\.opentelemetry",
@@ -2730,9 +2742,15 @@
       "name": "opentelemetry-extension-trace-propagators"
     },
     {
+      "expires": "2024-08-30",
       "group": "io\\.opentelemetry\\.instrumentation",
       "name": "opentelemetry-okhttp-3.0",
       "version": "1\\.27\\.+"
+    },
+    {
+      "group": "io\\.opentelemetry\\.instrumentation",
+      "name": "opentelemetry-okhttp-3.0",
+      "version": "1\\.33\\.+"
     },
     {
       "group": "io\\.grpc",
