@@ -3749,6 +3749,22 @@
       "group": "com\\.mercadolibre\\.android\\.px",
       "name": "tmgsdk",
       "version": "release-1.0.2-251022"
-    }
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.everest_canvas.core"
+      ],
+      "group": "io\\.coil-kt",
+      "name": "coil",
+      "version": "2\\.6\\.0"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.everest_canvas.core"
+      ],
+      "group": "io\\.coil-kt",
+      "name": "coil-compose",
+      "version": "2\\.6\\.0"
+    },
   ]
 }
