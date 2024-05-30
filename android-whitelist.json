@@ -668,12 +668,6 @@
       "version": "1\\.\\+"
     },
     {
-      "expires": "2024-05-25",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "melidata-sdk",
-      "version": "19\\.\\+"
-    },
-    {
       "expires": "2024-06-25",
       "group": "com\\.mercadolibre\\.android",
       "name": "melidata-sdk",
@@ -2350,21 +2344,9 @@
       "version": "mercadolibre-16\\.\\+|mercadopago-16\\.\\+"
     },
     {
-      "expires": "2024-05-25",
-      "group": "com\\.mercadolibre\\.android\\.devices_sdk",
-      "name": "devices",
-      "version": "6\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.devices_sdk",
       "name": "devices",
       "version": "7\\.\\+"
-    },
-    {
-      "expires": "2024-05-25",
-      "group": "com\\.mercadolibre\\.android\\.behavioral_sdk",
-      "name": "behavioral",
-      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.behavioral_sdk",
@@ -2800,12 +2782,17 @@
     {
       "group": "com\\.mercadolibre\\.android\\.ccap",
       "name": "amount-screen",
-      "version": "1\\.+"
+      "version": "mercadopago-1\\.\\+|mercadolibre-1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.ccap",
       "name": "congrats-sdk",
       "version": "2\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.ccap",
+      "name": "remedy-challenge",
+      "version": "1\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.ccap",
@@ -3628,7 +3615,8 @@
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.on.demand.resources",
-        "com.mercadolibre.android.tetris"
+        "com.mercadolibre.android.tetris",
+        "com.mercadolibre.android.auth_native_sso"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.lifecycle",

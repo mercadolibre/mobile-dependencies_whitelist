@@ -19,7 +19,7 @@
       "version": "^~>\\s?5.[0-9]+$"
     },
     {
-      "expires": "2024-05-31",
+      "expires": "2024-06-30",
       "name": "AdvertisingADN",
       "source": "private",
       "target": "production",
@@ -830,10 +830,17 @@
       "version": "^~>\\s?4.[0-9]+$"
     },
     {
+      "expires": "2024-10-4",
       "name": "MLThreeDS",
       "source": "private",
       "target": "production",
       "version": "2.0.6"
+    },
+    {
+      "name": "MLThreeDS",
+      "source": "private",
+      "target": "production",
+      "version": "6.6.129"
     },
     {
       "name": "TMGSDK",
@@ -1892,6 +1899,13 @@
     },
     {
       "name": "SplashScreen",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "expires": "2024-05-31",
+      "name": "Wishlists",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
