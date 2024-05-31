@@ -1888,9 +1888,15 @@
       "version": "9\\.\\+"
     },
     {
+      "expires": "2024-06-15",
       "group": "com\\.mercadolibre\\.android\\.andes_integrations",
       "name": "integrations",
       "version": "mercadopago-3\\.\\+|mercadolibre-3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.andes_integrations",
+      "name": "integrations",
+      "version": "mercadopago-4\\.\\+|mercadolibre-4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.discounts_touchpoint",
@@ -3779,6 +3785,22 @@
       "group": "com\\.mercadolibre\\.android\\.px",
       "name": "tmgsdk",
       "version": "release-1.0.2-251022"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.everest_canvas.core"
+      ],
+      "group": "io\\.coil-kt",
+      "name": "coil",
+      "version": "2\\.6\\.0"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.everest_canvas.core"
+      ],
+      "group": "io\\.coil-kt",
+      "name": "coil-compose",
+      "version": "2\\.6\\.0"
     }
   ]
 }
