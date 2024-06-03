@@ -1803,7 +1803,9 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.andes_integrations"
+        "com.mercadolibre.android.andes_integrations",
+        "com.mercadolibre.android.tetris",
+        "com.mercadolibre.android.auth_native_sso"
       ],
       "group": "com\\.mercadolibre\\.android\\.andesui",
       "name": "components-compose",
