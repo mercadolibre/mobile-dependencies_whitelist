@@ -1863,7 +1863,8 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.tetris",
-        "com.mercadolibre.android.auth_native_sso"
+        "com.mercadolibre.android.auth_native_sso",
+        "com.mercadolibre.android.vpp"
       ],
       "expires": "2024-06-01",
       "group": "com\\.mercadolibre\\.android\\.andesui",
@@ -1882,7 +1883,8 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.andes_integrations"
+        "com.mercadolibre.android.andes_integrations",
+        "com.mercadolibre.android.vpp"
       ],
       "group": "com\\.mercadolibre\\.android\\.andesui",
       "name": "components-compose",
