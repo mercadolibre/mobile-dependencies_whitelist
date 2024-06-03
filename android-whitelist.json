@@ -2713,7 +2713,31 @@
       "version": "mercadolibre-12\\.\\+|mercadopago-12\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.meliscanbarcodeui",
+        "com.mercadoenvios.android.shipping-toolkit",
+        "com.mercadolibre.prepapp.android"
+      ],
+      "description": "Expire date for libs from out MP/ML apps",
+      "expires": "2024-10-10",
+      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
+      "name": "scanner",
+      "version": "mercadolibre-12\\.\\+|mercadopago-12\\.\\+"
+    },
+    {
       "expires": "2024-06-10",
+      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
+      "name": "ocr",
+      "version": "mercadolibre-12\\.\\+|mercadopago-12\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.meliscanbarcodeui",
+        "com.mercadoenvios.android.shipping-toolkit",
+        "com.mercadolibre.prepapp.android"
+      ],
+      "description": "Expire date for libs from out MP/ML apps",
+      "expires": "2024-10-10",
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "ocr",
       "version": "mercadolibre-12\\.\\+|mercadopago-12\\.\\+"
@@ -2725,7 +2749,31 @@
       "version": "mercadolibre-12\\.\\+|mercadopago-12\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.meliscanbarcodeui",
+        "com.mercadoenvios.android.shipping-toolkit",
+        "com.mercadolibre.prepapp.android"
+      ],
+      "description": "Expire date for libs from out MP/ML apps",
+      "expires": "2024-10-10",
+      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
+      "name": "barcode",
+      "version": "mercadolibre-12\\.\\+|mercadopago-12\\.\\+"
+    },
+    {
       "expires": "2024-06-10",
+      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
+      "name": "scanner",
+      "version": "mercadolibre-13\\.\\+|mercadopago-13\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.meliscanbarcodeui",
+        "com.mercadoenvios.android.shipping-toolkit",
+        "com.mercadolibre.prepapp.android"
+      ],
+      "description": "Expire date for libs from out MP/ML apps",
+      "expires": "2024-10-10",
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "scanner",
       "version": "mercadolibre-13\\.\\+|mercadopago-13\\.\\+"
@@ -2737,7 +2785,31 @@
       "version": "mercadolibre-13\\.\\+|mercadopago-13\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.meliscanbarcodeui",
+        "com.mercadoenvios.android.shipping-toolkit",
+        "com.mercadolibre.prepapp.android"
+      ],
+      "description": "Expire date for libs from out MP/ML apps",
+      "expires": "2024-10-10",
+      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
+      "name": "ocr",
+      "version": "mercadolibre-13\\.\\+|mercadopago-13\\.\\+"
+    },
+    {
       "expires": "2024-06-10",
+      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
+      "name": "barcode",
+      "version": "mercadolibre-13\\.\\+|mercadopago-13\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.meliscanbarcodeui",
+        "com.mercadoenvios.android.shipping-toolkit",
+        "com.mercadolibre.prepapp.android"
+      ],
+      "description": "Expire date for libs from out MP/ML apps",
+      "expires": "2024-10-10",
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "barcode",
       "version": "mercadolibre-13\\.\\+|mercadopago-13\\.\\+"
