@@ -883,9 +883,16 @@
       "version": "mercadolibre-16\\.\\+|mercadopago-16\\.\\+"
     },
     {
+      "description": "The expiration is due to a library update to support Android 14",
+      "expires": "2024-08-31",
       "group": "com\\.mercadolibre\\.android\\.cart\\.facade",
       "name": "proxy",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cart\\.facade",
+      "name": "proxy",
+      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.purchases",
@@ -3700,9 +3707,16 @@
       "version": "1\\.\\+"
     },
     {
+      "description": "The expiration is due to a library update to support Android 14",
+      "expires": "2024-08-31",
       "group": "com\\.mercadolibre\\.android\\.cart\\.facade",
       "name": "toolset",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cart\\.facade",
+      "name": "toolset",
+      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.traceability",
