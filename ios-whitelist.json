@@ -598,7 +598,8 @@
     {
       "allows_granular_projects": [
         "DiscountCenter",
-        "AndesUI"
+        "AndesUI",
+        "MLVPP"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "name": "MLOnDemandResources/SwiftUI",
@@ -1030,7 +1031,8 @@
     },
     {
       "allows_granular_projects": [
-        "DiscountCenter"
+        "DiscountCenter",
+        "MLVPP"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "name": "MLNavigation/SwiftUI",
@@ -1089,7 +1091,8 @@
     {
       "allows_granular_projects": [
         "DiscountCenter",
-        "FeedbackScreen"
+        "FeedbackScreen",
+        "MLVPP"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "name": "AndesUI/SwiftUI",
