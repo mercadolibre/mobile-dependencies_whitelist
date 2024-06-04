@@ -896,13 +896,6 @@
       "version": "10\\.\\+"
     },
     {
-      "description": "AndroidX version is updated in the following mayor version",
-      "expires": "2024-05-31",
-      "group": "com\\.mercadolibre\\.android\\.cpg",
-      "name": "ui_components",
-      "version": "9\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.instore_ui_components",
       "version": "9\\.\\+"
     },
@@ -1053,24 +1046,6 @@
       "version": "11\\.\\+"
     },
     {
-      "expires": "2024-05-27",
-      "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
-      "name": "core",
-      "version": "12\\.\\+"
-    },
-    {
-      "expires": "2024-05-27",
-      "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
-      "name": "renderer-fresco",
-      "version": "12\\.\\+"
-    },
-    {
-      "expires": "2024-05-27",
-      "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
-      "name": "configurer",
-      "version": "12\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
       "name": "core",
       "version": "13\\.\\+"
@@ -1185,36 +1160,6 @@
       "group": "com\\.mercadolibre\\.android\\.livecommerce",
       "name": "livecommerce",
       "version": "3\\.\\+"
-    },
-    {
-      "expires": "2024-05-31",
-      "group": "com\\.mercadolibre\\.android\\.search",
-      "name": "compats",
-      "version": "19\\.\\+"
-    },
-    {
-      "expires": "2024-05-31",
-      "group": "com\\.mercadolibre\\.android\\.search",
-      "name": "input",
-      "version": "19\\.\\+"
-    },
-    {
-      "expires": "2024-05-31",
-      "group": "com\\.mercadolibre\\.android\\.search",
-      "name": "autosuggest",
-      "version": "19\\.\\+"
-    },
-    {
-      "expires": "2024-05-31",
-      "group": "com\\.mercadolibre\\.android\\.search",
-      "name": "morelikethis",
-      "version": "19\\.\\+"
-    },
-    {
-      "expires": "2024-05-31",
-      "group": "com\\.mercadolibre\\.android\\.search",
-      "name": "search",
-      "version": "19\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.search",
@@ -1847,29 +1792,6 @@
       "version": "10\\.+"
     },
     {
-      "expires": "2024-06-01",
-      "group": "com\\.mercadolibre\\.android\\.andesui",
-      "name": "coachmark",
-      "version": "8\\.\\+"
-    },
-    {
-      "expires": "2024-06-01",
-      "group": "com\\.mercadolibre\\.android\\.andesui",
-      "name": "components",
-      "version": "8\\.\\+"
-    },
-    {
-      "allows_granular_projects": [
-        "com.mercadolibre.android.andes_integrations",
-        "com.mercadolibre.android.tetris",
-        "com.mercadolibre.android.auth_native_sso"
-      ],
-      "expires": "2024-06-01",
-      "group": "com\\.mercadolibre\\.android\\.andesui",
-      "name": "components-compose",
-      "version": "8\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.andesui",
       "name": "coachmark",
       "version": "9\\.\\+"
@@ -2312,21 +2234,9 @@
       "version": "13\\.\\+"
     },
     {
-      "expires": "2024-06-01",
-      "group": "com\\.mercadolibre\\.android\\.navigation",
-      "name": "menu",
-      "version": "mercadolibre-10\\.\\+|mercadopago-10\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.navigation",
       "name": "menu",
       "version": "mercadolibre-11\\.\\+|mercadopago-11\\.\\+"
-    },
-    {
-      "expires": "2024-06-01",
-      "group": "com\\.squareup\\.leakcanary",
-      "name": "leakcanary-android",
-      "version": "2\\.7"
     },
     {
       "group": "com\\.squareup\\.leakcanary",
@@ -3306,30 +3216,6 @@
       "description": "This PTM library is used to schedule alarms that trigger job executions",
       "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
       "name": "qualified-alarm",
-      "version": "3\\.\\+"
-    },
-    {
-      "expires": "2024-05-28",
-      "group": "com\\.mercadolibre\\.android\\.isp_sf",
-      "name": "di",
-      "version": "3\\.\\+"
-    },
-    {
-      "expires": "2024-05-28",
-      "group": "com\\.mercadolibre\\.android\\.isp_sf",
-      "name": "facade",
-      "version": "3\\.\\+"
-    },
-    {
-      "expires": "2024-05-28",
-      "group": "com\\.mercadolibre\\.android\\.isp_sf",
-      "name": "network",
-      "version": "3\\.\\+"
-    },
-    {
-      "expires": "2024-05-28",
-      "group": "com\\.mercadolibre\\.android\\.isp_sf",
-      "name": "reader_manager",
       "version": "3\\.\\+"
     },
     {
