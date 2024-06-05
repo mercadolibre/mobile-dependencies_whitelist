@@ -2571,14 +2571,27 @@
       "version": "9\\.+"
     },
     {
+      "expires": "2024-09-30",
+      "group": "com\\.google\\.android\\.gms",
+      "name": "play-services-mlkit-text-recognition",
+      "version": "17\\.0\\.1"
+    },
+    {
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-mlkit-text-recognition",
       "version": "18\\.0\\.0"
     },
     {
+      "expires": "2024-09-30",
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-mlkit-barcode-scanning",
       "version": "16\\.1\\.4"
+    },
+    {
+      "expires": "2024-09-30",
+      "group": "com\\.google\\.android\\.gms",
+      "name": "play-services-mlkit-barcode-scanning",
+      "version": "17\\.0\\.1"
     },
     {
       "group": "com\\.google\\.android\\.gms",
