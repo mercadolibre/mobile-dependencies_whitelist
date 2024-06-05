@@ -1328,8 +1328,13 @@
       "version": "mercadopago-6\\.\\+"
     },
     {
+      "expires": "2024-06-30",
       "group": "com\\.mercadolibre\\.android\\.mlwebkit",
       "version": "9.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.mlwebkit",
+      "version": "10.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.uinavigationcp",
