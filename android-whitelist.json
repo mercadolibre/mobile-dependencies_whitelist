@@ -883,9 +883,16 @@
       "version": "mercadolibre-16\\.\\+|mercadopago-16\\.\\+"
     },
     {
+      "description": "The expiration is due to a library update to support Android 14",
+      "expires": "2024-08-31",
       "group": "com\\.mercadolibre\\.android\\.cart\\.facade",
       "name": "proxy",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cart\\.facade",
+      "name": "proxy",
+      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.purchases",
@@ -1127,7 +1134,8 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.tetris"
+        "com.mercadolibre.android.tetris",
+        "com.mercadolibre.android.vpp"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
@@ -1320,8 +1328,13 @@
       "version": "mercadopago-6\\.\\+"
     },
     {
+      "expires": "2024-06-30",
       "group": "com\\.mercadolibre\\.android\\.mlwebkit",
       "version": "9.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.mlwebkit",
+      "version": "10.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.uinavigationcp",
@@ -1875,6 +1888,30 @@
       "version": "10\\.+"
     },
     {
+      "expires": "2024-06-01",
+      "group": "com\\.mercadolibre\\.android\\.andesui",
+      "name": "coachmark",
+      "version": "8\\.\\+"
+    },
+    {
+      "expires": "2024-06-01",
+      "group": "com\\.mercadolibre\\.android\\.andesui",
+      "name": "components",
+      "version": "8\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.andes_integrations",
+        "com.mercadolibre.android.tetris",
+        "com.mercadolibre.android.auth_native_sso",
+        "com.mercadolibre.android.vpp"
+      ],
+      "expires": "2024-06-01",
+      "group": "com\\.mercadolibre\\.android\\.andesui",
+      "name": "components-compose",
+      "version": "8\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.andesui",
       "name": "coachmark",
       "version": "9\\.\\+"
@@ -1886,7 +1923,10 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.andes_integrations"
+        "com.mercadolibre.android.andes_integrations",
+        "com.mercadolibre.android.tetris",
+        "com.mercadolibre.android.auth_native_sso",
+        "com.mercadolibre.android.vpp"
       ],
       "group": "com\\.mercadolibre\\.android\\.andesui",
       "name": "components-compose",
@@ -3504,7 +3544,8 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.tetris"
+        "com.mercadolibre.android.tetris",
+        "com.mercadolibre.android.vpp"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.constraintlayout",
@@ -3517,7 +3558,8 @@
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.on.demand.resources",
         "com.mercadolibre.android.tetris",
-        "com.mercadolibre.android.auth_native_sso"
+        "com.mercadolibre.android.auth_native_sso",
+        "com.mercadolibre.android.vpp"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose",
@@ -3530,7 +3572,8 @@
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.on.demand.resources",
         "com.mercadolibre.android.tetris",
-        "com.mercadolibre.android.auth_native_sso"
+        "com.mercadolibre.android.auth_native_sso",
+        "com.mercadolibre.android.vpp"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.foundation",
@@ -3542,7 +3585,8 @@
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.on.demand.resources",
         "com.mercadolibre.android.tetris",
-        "com.mercadolibre.android.auth_native_sso"
+        "com.mercadolibre.android.auth_native_sso",
+        "com.mercadolibre.android.vpp"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.material3",
@@ -3563,7 +3607,8 @@
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.on.demand.resources",
         "com.mercadolibre.android.tetris",
-        "com.mercadolibre.android.auth_native_sso"
+        "com.mercadolibre.android.auth_native_sso",
+        "com.mercadolibre.android.vpp"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.activity",
@@ -3576,7 +3621,8 @@
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.on.demand.resources",
         "com.mercadolibre.android.tetris",
-        "com.mercadolibre.android.auth_native_sso"
+        "com.mercadolibre.android.auth_native_sso",
+        "com.mercadolibre.android.vpp"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.ui",
@@ -3588,7 +3634,8 @@
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.on.demand.resources",
         "com.mercadolibre.android.tetris",
-        "com.mercadolibre.android.auth_native_sso"
+        "com.mercadolibre.android.auth_native_sso",
+        "com.mercadolibre.android.vpp"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.runtime",
@@ -3600,7 +3647,8 @@
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.on.demand.resources",
         "com.mercadolibre.android.tetris",
-        "com.mercadolibre.android.auth_native_sso"
+        "com.mercadolibre.android.auth_native_sso",
+        "com.mercadolibre.android.vpp"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.ui",
@@ -3612,7 +3660,8 @@
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.on.demand.resources",
         "com.mercadolibre.android.tetris",
-        "com.mercadolibre.android.auth_native_sso"
+        "com.mercadolibre.android.auth_native_sso",
+        "com.mercadolibre.android.vpp"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.ui",
@@ -3623,7 +3672,8 @@
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.on.demand.resources",
-        "com.mercadolibre.android.tetris"
+        "com.mercadolibre.android.tetris",
+        "com.mercadolibre.android.vpp"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.ui",
@@ -3643,7 +3693,8 @@
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.on.demand.resources",
         "com.mercadolibre.android.tetris",
-        "com.mercadolibre.android.auth_native_sso"
+        "com.mercadolibre.android.auth_native_sso",
+        "com.mercadolibre.android.vpp"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.lifecycle",
@@ -3706,9 +3757,16 @@
       "version": "1\\.\\+"
     },
     {
+      "description": "The expiration is due to a library update to support Android 14",
+      "expires": "2024-08-31",
       "group": "com\\.mercadolibre\\.android\\.cart\\.facade",
       "name": "toolset",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cart\\.facade",
+      "name": "toolset",
+      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.traceability",
