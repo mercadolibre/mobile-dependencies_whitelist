@@ -2718,7 +2718,7 @@
     {
       "group": "io\\.opentelemetry",
       "name": "opentelemetry-api",
-      "version": "1\\.38\\.+"
+      "version": "1\\.38\\.0"
     },
     {
       "expires": "2024-08-30",
@@ -2729,7 +2729,7 @@
     {
       "group": "io\\.opentelemetry",
       "name": "opentelemetry-bom",
-      "version": "1\\.38\\.+"
+      "version": "1\\.38\\.0"
     },
     {
       "group": "io\\.opentelemetry",
@@ -2756,7 +2756,7 @@
     {
       "group": "io\\.opentelemetry\\.instrumentation",
       "name": "opentelemetry-okhttp-3.0",
-      "version": "1\\.33\\.+"
+      "version": "1\\.33\\.3"
     },
     {
       "group": "io\\.grpc",
