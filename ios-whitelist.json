@@ -4,7 +4,7 @@
       "name": "OMSDK",
       "source": "private",
       "target": "production",
-      "version": "1.4.13"
+      "version": "1.4.14"
     },
     {
       "name": "Viewability",
@@ -598,7 +598,8 @@
     {
       "allows_granular_projects": [
         "DiscountCenter",
-        "AndesUI"
+        "AndesUI",
+        "MLVPP"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "name": "MLOnDemandResources/SwiftUI",
@@ -659,6 +660,12 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "name": "RecommendationsCombo",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLRecommendations",
@@ -909,16 +916,6 @@
       "version": "10.38.0"
     },
     {
-      "allows_granular_projects": [
-        "InStore"
-      ],
-      "expires": "2024-05-31",
-      "name": "RxSwift",
-      "source": "public",
-      "target": "production",
-      "version": "4.4.1"
-    },
-    {
       "name": "RxAtomic",
       "source": "public",
       "target": "production",
@@ -1034,7 +1031,8 @@
     },
     {
       "allows_granular_projects": [
-        "DiscountCenter"
+        "DiscountCenter",
+        "MLVPP"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "name": "MLNavigation/SwiftUI",
@@ -1093,7 +1091,8 @@
     {
       "allows_granular_projects": [
         "DiscountCenter",
-        "FeedbackScreen"
+        "FeedbackScreen",
+        "MLVPP"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "name": "AndesUI/SwiftUI",
@@ -1899,13 +1898,6 @@
     },
     {
       "name": "SplashScreen",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "expires": "2024-05-31",
-      "name": "Wishlists",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
