@@ -2551,14 +2551,26 @@
       "version": "mercadolibre-13\\.\\+|mercadopago-13\\.\\+"
     },
     {
+      "expires": "2024-06-29",
       "group": "com\\.mercadolibre\\.android\\.in_app_report",
       "name": "MLInAppReport",
-      "version": "7\\.\\+|8\\.\\+"
+      "version": "7\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.in_app_report",
+      "name": "MLInAppReport",
+      "version": "8\\.\\+"
+    },
+    {
+      "expires": "2024-06-29",
+      "group": "com\\.mercadolibre\\.android\\.screenshots",
+      "name": "core",
+      "version": "0\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.screenshots",
       "name": "core",
-      "version": "0\\.\\+|1\\.\\+"
+      "version": "1\\.\\+"
     },
     {
       "group": "com\\.android\\.tools",
