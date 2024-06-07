@@ -3314,9 +3314,15 @@
       "version": "15\\.+"
     },
     {
+      "expires": "2024-06-30",
       "group": "com\\.mercadolibre\\.android\\.errorhandler\\.v2",
       "name": "core",
       "version": "production-2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.errorhandler\\.v2",
+      "name": "core",
+      "version": "production-3\\.\\+"
     },
     {
       "description": "Qualtrics native SDK library. Use ml_qualtrics instead.",
