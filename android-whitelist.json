@@ -1351,6 +1351,12 @@
     {
       "group": "com\\.mercadolibre\\.android\\.uinavigationcp",
       "name": "addresshub",
+      "version": "12\\.\\+"
+    },
+    {
+      "expires": "2024-07-31",
+      "group": "com\\.mercadolibre\\.android\\.uinavigationcp",
+      "name": "addresshub",
       "version": "11\\.\\+"
     },
     {
@@ -2425,6 +2431,12 @@
     {
       "group": "com\\.mercadolibre\\.android\\.addresses",
       "name": "core",
+      "version": "mercadolibre-11\\.\\+|mercadopago-11\\.\\+"
+    },
+    {
+      "expires": "2024-07-31",
+      "group": "com\\.mercadolibre\\.android\\.addresses",
+      "name": "core",
       "version": "mercadolibre-10\\.\\+|mercadopago-10\\.\\+"
     },
     {
@@ -3328,12 +3340,18 @@
       "version": "1\\.5\\.\\1"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.xprod\\.modules",
+      "name": "webview",
+      "version": "mercadolibre-3\\.\\+|mercadopago-3\\.\\+"
+    },
+    {
       "expires": "2024-07-27",
       "group": "com\\.mercadolibre\\.android\\.xprod\\.modules",
       "name": "webview",
       "version": "2\\.\\+"
     },
     {
+      "expires": "2024-07-31",
       "group": "com\\.mercadolibre\\.android\\.xprod\\.modules",
       "name": "webview",
       "version": "mercadolibre-2\\.\\+|mercadopago-2\\.\\+"
@@ -3466,6 +3484,12 @@
       "version": "3\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.xprod_flox_components",
+      "name": "core",
+      "version": "3\\.\\+"
+    },
+    {
+      "expires": "2024-07-31",
       "group": "com\\.mercadolibre\\.android\\.xprod_flox_components",
       "name": "core",
       "version": "2\\.\\+"
