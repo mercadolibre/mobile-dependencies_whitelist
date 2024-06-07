@@ -1352,9 +1352,15 @@
       "version": "10\\.\\+"
     },
     {
+      "expires": "2024-09-06",
       "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
       "name": "api",
       "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
+      "name": "api",
+      "version": "7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.home\\.toolkit",
@@ -2740,14 +2746,26 @@
       "version": "mercadolibre-13\\.\\+|mercadopago-13\\.\\+"
     },
     {
+      "expires": "2024-06-29",
       "group": "com\\.mercadolibre\\.android\\.in_app_report",
       "name": "MLInAppReport",
-      "version": "5\\.\\+"
+      "version": "7\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.in_app_report",
+      "name": "MLInAppReport",
+      "version": "8\\.\\+"
+    },
+    {
+      "expires": "2024-06-29",
+      "group": "com\\.mercadolibre\\.android\\.screenshots",
+      "name": "core",
+      "version": "0\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.screenshots",
       "name": "core",
-      "version": "0\\.\\+"
+      "version": "1\\.\\+"
     },
     {
       "group": "com\\.android\\.tools",
