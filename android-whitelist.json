@@ -1098,9 +1098,21 @@
     {
       "group": "com\\.mercadolibre\\.android\\.navigationcp",
       "name": "navigationcp",
+      "version": "13\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.navigationcp",
+      "name": "shipping-address",
+      "version": "13\\.\\+"
+    },
+    {
+      "expires": "2024-07-31",
+      "group": "com\\.mercadolibre\\.android\\.navigationcp",
+      "name": "navigationcp",
       "version": "12\\.\\+"
     },
     {
+      "expires": "2024-07-31",
       "group": "com\\.mercadolibre\\.android\\.navigationcp",
       "name": "shipping-address",
       "version": "12\\.\\+"
