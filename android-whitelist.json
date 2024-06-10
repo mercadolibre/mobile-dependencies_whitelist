@@ -2915,19 +2915,37 @@
       "version": "4\\.\\+"
     },
     {
+      "expires": "2024-06-30",
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "seller",
       "version": "16\\.\\+"
     },
     {
+      "expires": "2024-06-30",
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "payer",
       "version": "16\\.\\+"
     },
     {
+      "expires": "2024-06-30",
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "commons",
       "version": "16\\.\\+"
+    },
+    {
+      "group": "com\\.mercadopago\\.android\\.cashin",
+      "name": "seller",
+      "version": "17\\.\\+"
+    },
+    {
+      "group": "com\\.mercadopago\\.android\\.cashin",
+      "name": "payer",
+      "version": "17\\.\\+"
+    },
+    {
+      "group": "com\\.mercadopago\\.android\\.cashin",
+      "name": "commons",
+      "version": "17\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cashout",
