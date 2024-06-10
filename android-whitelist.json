@@ -3957,7 +3957,7 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.everest_canvas.core"
+        "com.mercadolibre.android.everest_canvas"
       ],
       "group": "io\\.coil-kt",
       "name": "coil",
@@ -3965,10 +3965,34 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.everest_canvas.core"
+        "com.mercadolibre.android.everest_canvas"
       ],
       "group": "io\\.coil-kt",
       "name": "coil-compose",
+      "version": "2\\.6\\.0"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.everest_canvas"
+      ],
+      "group": "io\\.coil-kt",
+      "name": "coil-gif",
+      "version": "2\\.6\\.0"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.everest_canvas"
+      ],
+      "group": "io\\.coil-kt",
+      "name": "coil-svg",
+      "version": "2\\.6\\.0"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.everest_canvas"
+      ],
+      "group": "io\\.coil-kt",
+      "name": "coil-video",
       "version": "2\\.6\\.0"
     }
   ]
