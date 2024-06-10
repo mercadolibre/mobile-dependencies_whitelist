@@ -1894,30 +1894,6 @@
       "version": "10\\.+"
     },
     {
-      "expires": "2024-06-01",
-      "group": "com\\.mercadolibre\\.android\\.andesui",
-      "name": "coachmark",
-      "version": "8\\.\\+"
-    },
-    {
-      "expires": "2024-06-01",
-      "group": "com\\.mercadolibre\\.android\\.andesui",
-      "name": "components",
-      "version": "8\\.\\+"
-    },
-    {
-      "allows_granular_projects": [
-        "com.mercadolibre.android.andes_integrations",
-        "com.mercadolibre.android.tetris",
-        "com.mercadolibre.android.auth_native_sso",
-        "com.mercadolibre.android.vpp"
-      ],
-      "expires": "2024-06-01",
-      "group": "com\\.mercadolibre\\.android\\.andesui",
-      "name": "components-compose",
-      "version": "8\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.andesui",
       "name": "coachmark",
       "version": "9\\.\\+"
@@ -2393,12 +2369,6 @@
       "group": "com\\.mercadolibre\\.android",
       "name": "notificationcenter",
       "version": "mercadolibre-17\\.\\+|mercadopago-17\\.\\+"
-    },
-    {
-      "expires": "2024-05-25",
-      "group": "com\\.mercadolibre\\.android\\.devices_sdk",
-      "name": "devices",
-      "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.devices_sdk",
