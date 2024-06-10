@@ -1734,10 +1734,17 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
+      "expires": "2024-09-07",
       "name": "AppMonitoringSetup",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "AppMonitoringSetup",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "DatadogInternal",
