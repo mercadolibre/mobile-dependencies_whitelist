@@ -1512,14 +1512,6 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "description": "This version will be deprecated in favor of 1.0.0",
-      "expires": "2024-06-03",
-      "name": "AmountScreen",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
       "name": "AmountScreen",
       "source": "private",
       "target": "production",
