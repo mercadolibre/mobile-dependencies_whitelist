@@ -226,6 +226,8 @@
       "version": "6\\.\\+"
     },
     {
+      "description": "These versions will be deprecated so the legacy registration repository can be safely deleted.",
+      "expires": "2024-06-22",
       "group": "com\\.mercadolibre\\.android\\.registration",
       "name": "core",
       "version": "mercadolibre-9\\.\\+|mercadopago-9\\.\\+|mercadolibre-10\\.\\+|mercadopago-10\\.\\+"
@@ -1265,29 +1267,59 @@
       "version": "3\\.\\+"
     },
     {
+      "expires": "2024-07-09",
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "compats",
       "version": "20\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.search",
+      "name": "compats",
+      "version": "21\\.\\+"
+    },
+    {
+      "expires": "2024-07-09",
+      "group": "com\\.mercadolibre\\.android\\.search",
       "name": "input",
       "version": "20\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.search",
+      "name": "input",
+      "version": "21\\.\\+"
+    },
+    {
+      "expires": "2024-07-09",
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "autosuggest",
       "version": "20\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.search",
+      "name": "autosuggest",
+      "version": "21\\.\\+"
+    },
+    {
+      "expires": "2024-07-09",
+      "group": "com\\.mercadolibre\\.android\\.search",
       "name": "morelikethis",
       "version": "20\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.search",
+      "name": "morelikethis",
+      "version": "21\\.\\+"
+    },
+    {
+      "expires": "2024-07-09",
+      "group": "com\\.mercadolibre\\.android\\.search",
       "name": "search",
       "version": "20\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.search",
+      "name": "search",
+      "version": "21\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.demandcore",
@@ -3425,9 +3457,15 @@
       "version": "15\\.+"
     },
     {
+      "expires": "2024-06-30",
       "group": "com\\.mercadolibre\\.android\\.errorhandler\\.v2",
       "name": "core",
       "version": "production-2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.errorhandler\\.v2",
+      "name": "core",
+      "version": "production-3\\.\\+"
     },
     {
       "description": "Qualtrics native SDK library. Use ml_qualtrics instead.",
@@ -4033,6 +4071,11 @@
       "group": "io\\.coil-kt",
       "name": "coil-video",
       "version": "2\\.6\\.0"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.mp_search",
+      "name": "search",
+      "version": "1\\.\\+"
     }
   ]
 }
