@@ -226,6 +226,8 @@
       "version": "6\\.\\+"
     },
     {
+      "description": "These versions will be deprecated so the legacy registration repository can be safely deleted.",
+      "expires": "2024-06-22",
       "group": "com\\.mercadolibre\\.android\\.registration",
       "name": "core",
       "version": "mercadolibre-9\\.\\+|mercadopago-9\\.\\+|mercadolibre-10\\.\\+|mercadopago-10\\.\\+"
