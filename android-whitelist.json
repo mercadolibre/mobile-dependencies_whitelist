@@ -1420,9 +1420,16 @@
       "version": "9\\.\\+"
     },
     {
+      "description": "Deprecated due to API 34 migration",
+      "expires": "2024-06-30",
       "group": "com\\.mercadolibre\\.android\\.dami_ui_components",
       "name": "ui_components",
       "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.dami_ui_components",
+      "name": "ui_components",
+      "version": "7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.static_resources",
