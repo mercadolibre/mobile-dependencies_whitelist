@@ -606,7 +606,8 @@
       "allows_granular_projects": [
         "DiscountCenter",
         "AndesUI",
-        "MLVPP"
+        "MLVPP",
+        "MPSearch"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "name": "MLOnDemandResources/SwiftUI",
@@ -1039,7 +1040,8 @@
     {
       "allows_granular_projects": [
         "DiscountCenter",
-        "MLVPP"
+        "MLVPP",
+        "MPSearch"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "name": "MLNavigation/SwiftUI",
@@ -1099,7 +1101,8 @@
       "allows_granular_projects": [
         "DiscountCenter",
         "FeedbackScreen",
-        "MLVPP"
+        "MLVPP",
+        "MPSearch"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "name": "AndesUI/SwiftUI",
@@ -1228,6 +1231,8 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
+      "description": "This version will be deprecated so MLRegistration repository can be safely deleted.",
+      "expires": "2024-06-22",
       "name": "MLRegistration",
       "source": "private",
       "target": "production",
@@ -1510,14 +1515,6 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "description": "This version will be deprecated in favor of 1.0.0",
-      "expires": "2024-06-03",
-      "name": "AmountScreen",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
       "name": "AmountScreen",
       "source": "private",
       "target": "production",
@@ -1734,10 +1731,17 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
+      "expires": "2024-09-07",
       "name": "AppMonitoringSetup",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "AppMonitoringSetup",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "DatadogInternal",
@@ -2069,6 +2073,12 @@
       "source": "public",
       "target": "production",
       "version": "^~>\\s?7.[0-9]+$"
+    },
+    {
+      "name": "MPSearch",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     }
   ]
 }
