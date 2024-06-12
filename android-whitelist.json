@@ -473,14 +473,20 @@
       "version": "11\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.dynamic"
+      ],
       "group": "com\\.google\\.android\\.play",
       "name": "feature-delivery",
-      "version": "2\\.0\\.0"
+      "version": "2\\.1\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.dynamic"
+      ],
       "group": "com\\.google\\.android\\.play",
       "name": "feature-delivery-ktx",
-      "version": "2\\.0\\.0"
+      "version": "2\\.1\\.0"
     },
     {
       "group": "com\\.google\\.android\\.play",
