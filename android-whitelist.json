@@ -226,6 +226,8 @@
       "version": "6\\.\\+"
     },
     {
+      "description": "These versions will be deprecated so the legacy registration repository can be safely deleted.",
+      "expires": "2024-06-22",
       "group": "com\\.mercadolibre\\.android\\.registration",
       "name": "core",
       "version": "mercadolibre-9\\.\\+|mercadopago-9\\.\\+|mercadolibre-10\\.\\+|mercadopago-10\\.\\+"
@@ -473,14 +475,26 @@
       "version": "11\\.\\+"
     },
     {
+      "expires": "2024-07-01",
       "group": "com\\.google\\.android\\.play",
       "name": "feature-delivery",
       "version": "2\\.0\\.0"
     },
     {
+      "expires": "2024-07-01",
       "group": "com\\.google\\.android\\.play",
       "name": "feature-delivery-ktx",
       "version": "2\\.0\\.0"
+    },
+    {
+      "group": "com\\.google\\.android\\.play",
+      "name": "feature-delivery",
+      "version": "2\\.1\\.0"
+    },
+    {
+      "group": "com\\.google\\.android\\.play",
+      "name": "feature-delivery-ktx",
+      "version": "2\\.1\\.0"
     },
     {
       "group": "com\\.google\\.android\\.play",
@@ -1253,29 +1267,59 @@
       "version": "3\\.\\+"
     },
     {
+      "expires": "2024-07-09",
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "compats",
       "version": "20\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.search",
+      "name": "compats",
+      "version": "21\\.\\+"
+    },
+    {
+      "expires": "2024-07-09",
+      "group": "com\\.mercadolibre\\.android\\.search",
       "name": "input",
       "version": "20\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.search",
+      "name": "input",
+      "version": "21\\.\\+"
+    },
+    {
+      "expires": "2024-07-09",
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "autosuggest",
       "version": "20\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.search",
+      "name": "autosuggest",
+      "version": "21\\.\\+"
+    },
+    {
+      "expires": "2024-07-09",
+      "group": "com\\.mercadolibre\\.android\\.search",
       "name": "morelikethis",
       "version": "20\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.search",
+      "name": "morelikethis",
+      "version": "21\\.\\+"
+    },
+    {
+      "expires": "2024-07-09",
+      "group": "com\\.mercadolibre\\.android\\.search",
       "name": "search",
       "version": "20\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.search",
+      "name": "search",
+      "version": "21\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.demandcore",
@@ -1408,9 +1452,16 @@
       "version": "9\\.\\+"
     },
     {
+      "description": "Deprecated due to API 34 migration",
+      "expires": "2024-06-30",
       "group": "com\\.mercadolibre\\.android\\.dami_ui_components",
       "name": "ui_components",
       "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.dami_ui_components",
+      "name": "ui_components",
+      "version": "7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.static_resources",
@@ -1443,9 +1494,15 @@
       "version": "5\\.\\+"
     },
     {
+      "expires": "2024-10-4",
       "group": "com\\.mercadolibre\\.android\\.px",
       "name": "usdk",
       "version": "6\\.5\\.52"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.px",
+      "name": "usdk",
+      "version": "6\\.6\\.69"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.px\\.pmselector",
@@ -2571,6 +2628,16 @@
       "version": "9\\.+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.ml_scanner"
+      ],
+      "description": "Expire date for libs from outside MP/ML apps (they use MLKit17 scanner kind -> v > 12.1.0)",
+      "expires": "2024-09-30",
+      "group": "com\\.google\\.android\\.gms",
+      "name": "play-services-mlkit-text-recognition",
+      "version": "17\\.0\\.1"
+    },
+    {
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-mlkit-text-recognition",
       "version": "18\\.0\\.0"
@@ -2584,6 +2651,16 @@
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-mlkit-barcode-scanning",
       "version": "18\\.3\\.0"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.ml_scanner"
+      ],
+      "description": "Expire date for libs from outside MP/ML apps (they use MLKit17 scanner kind -> v > 12.1.0)",
+      "expires": "2024-09-30",
+      "group": "com\\.google\\.mlkit",
+      "name": "barcode-scanning",
+      "version": "17\\.0\\.1"
     },
     {
       "group": "androidx\\.camera",
@@ -2707,19 +2784,22 @@
       "version": "5\\.+"
     },
     {
-      "expires": "2024-06-29",
+      "description": "Expire date for libs from outside MP/ML apps (they use MLKit17 scanner kind -> v > 12.1.0)",
+      "expires": "2024-09-30",
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "scanner",
       "version": "mercadolibre-12\\.\\+|mercadopago-12\\.\\+"
     },
     {
-      "expires": "2024-06-29",
+      "description": "Expire date for libs from outside MP/ML apps (they use MLKit17 scanner kind -> v > 12.1.0)",
+      "expires": "2024-09-30",
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "ocr",
       "version": "mercadolibre-12\\.\\+|mercadopago-12\\.\\+"
     },
     {
-      "expires": "2024-06-29",
+      "description": "Expire date for libs from outside MP/ML apps (they use MLKit17 scanner kind -> v > 12.1.0)",
+      "expires": "2024-09-30",
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "barcode",
       "version": "mercadolibre-12\\.\\+|mercadopago-12\\.\\+"
@@ -3290,23 +3370,23 @@
       "expires": "2024-07-29",
       "group": "com\\.mercadolibre\\.android\\.app_monitoring",
       "name": "setup",
-      "version": "2\\.\\+"
+      "version": "2\\.\\+|3\\.\\+"
     },
     {
       "expires": "2024-07-29",
       "group": "com\\.mercadolibre\\.android\\.app_monitoring",
       "name": "core",
-      "version": "2\\.\\+"
+      "version": "2\\.\\+|3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.app_monitoring",
       "name": "setup",
-      "version": "3\\.\\+"
+      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.app_monitoring",
       "name": "core",
-      "version": "3\\.\\+"
+      "version": "4\\.\\+"
     },
     {
       "group": "com\\.datadoghq",
@@ -3407,9 +3487,15 @@
       "version": "15\\.+"
     },
     {
+      "expires": "2024-06-30",
       "group": "com\\.mercadolibre\\.android\\.errorhandler\\.v2",
       "name": "core",
       "version": "production-2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.errorhandler\\.v2",
+      "name": "core",
+      "version": "production-3\\.\\+"
     },
     {
       "description": "Qualtrics native SDK library. Use ml_qualtrics instead.",
@@ -4017,10 +4103,15 @@
       "version": "2\\.6\\.0"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.mp_search",
+      "name": "search",
+      "version": "1\\.\\+"
+    },
+    {
       "allows_granular_projects": [
         "com.mercadolibre.android.andesui"
       ],
-      "description": "This dependency is only added to allow mockposable plugin. It is not allowed outside snapshot testing modules.",
+      "description": "This dependency is only added to allow mockposable plugin. It is not allowed outside snapshot testing modules and should be removed when we update to Java 17 and AGP 8.",
       "group": "org\\.jetbrains\\.compose\\.runtime",
       "name": "runtime",
       "version": "1\\.3\\.1"
