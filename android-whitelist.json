@@ -1457,9 +1457,16 @@
       "version": "9\\.\\+"
     },
     {
+      "description": "Deprecated due to API 34 migration",
+      "expires": "2024-06-30",
       "group": "com\\.mercadolibre\\.android\\.dami_ui_components",
       "name": "ui_components",
       "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.dami_ui_components",
+      "name": "ui_components",
+      "version": "7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.static_resources",
@@ -1492,9 +1499,15 @@
       "version": "5\\.\\+"
     },
     {
+      "expires": "2024-10-4",
       "group": "com\\.mercadolibre\\.android\\.px",
       "name": "usdk",
       "version": "6\\.5\\.52"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.px",
+      "name": "usdk",
+      "version": "6\\.6\\.69"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.px\\.pmselector",
@@ -2620,6 +2633,16 @@
       "version": "9\\.+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.ml_scanner"
+      ],
+      "description": "Expire date for libs from outside MP/ML apps (they use MLKit17 scanner kind -> v > 12.1.0)",
+      "expires": "2024-09-30",
+      "group": "com\\.google\\.android\\.gms",
+      "name": "play-services-mlkit-text-recognition",
+      "version": "17\\.0\\.1"
+    },
+    {
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-mlkit-text-recognition",
       "version": "18\\.0\\.0"
@@ -2633,6 +2656,16 @@
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-mlkit-barcode-scanning",
       "version": "18\\.3\\.0"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.ml_scanner"
+      ],
+      "description": "Expire date for libs from outside MP/ML apps (they use MLKit17 scanner kind -> v > 12.1.0)",
+      "expires": "2024-09-30",
+      "group": "com\\.google\\.mlkit",
+      "name": "barcode-scanning",
+      "version": "17\\.0\\.1"
     },
     {
       "group": "androidx\\.camera",
@@ -2756,19 +2789,22 @@
       "version": "5\\.+"
     },
     {
-      "expires": "2024-06-29",
+      "description": "Expire date for libs from outside MP/ML apps (they use MLKit17 scanner kind -> v > 12.1.0)",
+      "expires": "2024-09-30",
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "scanner",
       "version": "mercadolibre-12\\.\\+|mercadopago-12\\.\\+"
     },
     {
-      "expires": "2024-06-29",
+      "description": "Expire date for libs from outside MP/ML apps (they use MLKit17 scanner kind -> v > 12.1.0)",
+      "expires": "2024-09-30",
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "ocr",
       "version": "mercadolibre-12\\.\\+|mercadopago-12\\.\\+"
     },
     {
-      "expires": "2024-06-29",
+      "description": "Expire date for libs from outside MP/ML apps (they use MLKit17 scanner kind -> v > 12.1.0)",
+      "expires": "2024-09-30",
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "barcode",
       "version": "mercadolibre-12\\.\\+|mercadopago-12\\.\\+"
