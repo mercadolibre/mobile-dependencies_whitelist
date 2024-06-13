@@ -1494,9 +1494,15 @@
       "version": "5\\.\\+"
     },
     {
+      "expires": "2024-10-4",
       "group": "com\\.mercadolibre\\.android\\.px",
       "name": "usdk",
       "version": "6\\.5\\.52"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.px",
+      "name": "usdk",
+      "version": "6\\.6\\.69"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.px\\.pmselector",
@@ -3341,23 +3347,23 @@
       "expires": "2024-07-29",
       "group": "com\\.mercadolibre\\.android\\.app_monitoring",
       "name": "setup",
-      "version": "2\\.\\+"
+      "version": "2\\.\\+|3\\.\\+"
     },
     {
       "expires": "2024-07-29",
       "group": "com\\.mercadolibre\\.android\\.app_monitoring",
       "name": "core",
-      "version": "2\\.\\+"
+      "version": "2\\.\\+|3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.app_monitoring",
       "name": "setup",
-      "version": "3\\.\\+"
+      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.app_monitoring",
       "name": "core",
-      "version": "3\\.\\+"
+      "version": "4\\.\\+"
     },
     {
       "group": "com\\.datadoghq",
