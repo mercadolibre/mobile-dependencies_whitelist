@@ -295,6 +295,10 @@
       "version": "2\\.2\\.0"
     },
     {
+      "expires": "2024-09-30",
+      "allows_granular_projects": [
+        "com.mercadolibre.android"
+      ],
       "group": "com\\.facebook\\.fresco",
       "name": "animated-gif",
       "version": "2\\.2\\.0"
