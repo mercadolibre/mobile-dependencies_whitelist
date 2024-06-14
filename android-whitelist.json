@@ -2716,7 +2716,8 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.singleplayer"
+        "com.mercadolibre.android.singleplayer",
+        "com.mercadopago.android.prepaid_globe"
       ],
       "description": "Use the version 2.3.2",
       "expires": "2024-08-30",
@@ -2726,7 +2727,8 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.singleplayer"
+        "com.mercadolibre.android.singleplayer",
+        "com.mercadopago.android.prepaid_globe"
       ],
       "group": "com\\.mercadolibre\\.android\\.globe",
       "name": "libc2d",
