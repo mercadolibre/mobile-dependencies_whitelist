@@ -3,12 +3,17 @@
     {
       "group": "com\\.mercadolibre\\.android\\.cardsnfcwallets",
       "name": "core",
-      "version": "0\\.+"
+      "version": "1\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cardsnfcwallets",
       "name": "flows",
-      "version": "0\\.+"
+      "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cardsnfcwallets",
+      "name": "commons",
+      "version": "1\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.nfcpayments",
