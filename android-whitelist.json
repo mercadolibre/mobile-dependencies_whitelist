@@ -2715,9 +2715,16 @@
       "version": "3\\.\\+"
     },
     {
+      "description": "Use the version 2.3.2",
+      "expires": "2024-08-30",
       "group": "com\\.mercadolibre\\.android\\.globe",
       "name": "libc2d",
       "version": "2\\.2\\.1\\-52"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.globe",
+      "name": "libc2d",
+      "version": "2\\.3\\.2"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point_virtualization",
