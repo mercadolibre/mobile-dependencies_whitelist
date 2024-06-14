@@ -1039,11 +1039,6 @@
       "version": "6\\.\\+"
     },
     {
-      "group": "com\\.mercadolibre\\.android\\.instore",
-      "name": "instore",
-      "version": "mercadolibre-10\\.\\+|mercadopago-10\\.\\+"
-    },
-    {
       "expires": "2024-07-05",
       "group": "com\\.mercadolibre\\.android\\.local\\.storage",
       "name": "core",
@@ -2620,11 +2615,6 @@
       "version": "4\\.+"
     },
     {
-      "group": "com\\.mercadolibre\\.android\\.meliscanbarcodeui",
-      "name": "meliscanbarcodeui",
-      "version": "1\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.point_push_notifications",
       "name": "mqtt",
       "version": "0\\.5\\.+"
@@ -4006,11 +3996,6 @@
       "version": "1\\.1\\.8"
     },
     {
-      "group": "com\\.mercadolibre\\.android\\.barcode_img_generator",
-      "name": "barcodeimagegenerator",
-      "version": "1\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.mobile_actions",
       "name": "core",
       "version": "1\\.\\+"
@@ -4138,6 +4123,42 @@
       "group": "io\\.coil-kt",
       "name": "coil-video",
       "version": "2\\.6\\.0"
+    },
+    {
+      "description": "The expiration is due to a library update to support Android 14",
+      "expires": "2024-06-14",
+      "group": "com\\.mercadolibre\\.android\\.instore",
+      "name": "instore",
+      "version": "mercadolibre-10\\.\\+|mercadopago-10\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.instore",
+      "name": "instore",
+      "version": "mercadolibre-15\\.\\+|mercadopago-15\\.\\+"
+    },
+    {
+      "description": "The expiration is due to a library update to support Android 14",
+      "expires": "2024-06-21",
+      "group": "com\\.mercadolibre\\.android\\.meliscanbarcodeui",
+      "name": "meliscanbarcodeui",
+      "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.meliscanbarcodeui",
+      "name": "meliscanbarcodeui",
+      "version": "5\\.\\+"
+    },
+    {
+      "description": "The expiration is due to a library update to support Android 14",
+      "expires": "2024-06-21",
+      "group": "com\\.mercadolibre\\.android\\.barcode_img_generator",
+      "name": "barcodeimagegenerator",
+      "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.barcode_img_generator",
+      "name": "barcodeimagegenerator",
+      "version": "3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.mp_search",
