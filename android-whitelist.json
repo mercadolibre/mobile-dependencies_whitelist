@@ -2011,7 +2011,8 @@
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
-        "com.mercadolibre.android.vpp"
+        "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.everest_canvas"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "com\\.mercadolibre\\.android\\.andes_integrations",
@@ -3794,7 +3795,8 @@
     {
       "allows_granular_projects": [
         "com.mercadolibre.android.tetris",
-        "com.mercadolibre.android.vpp"
+        "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.everest_canvas"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.constraintlayout",
@@ -3808,7 +3810,8 @@
         "com.mercadolibre.android.on.demand.resources",
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
-        "com.mercadolibre.android.vpp"
+        "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.everest_canvas"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose",
@@ -3822,7 +3825,8 @@
         "com.mercadolibre.android.on.demand.resources",
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
-        "com.mercadolibre.android.vpp"
+        "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.everest_canvas"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.foundation",
@@ -3835,7 +3839,8 @@
         "com.mercadolibre.android.on.demand.resources",
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
-        "com.mercadolibre.android.vpp"
+        "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.everest_canvas"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.material3",
@@ -3857,7 +3862,8 @@
         "com.mercadolibre.android.on.demand.resources",
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
-        "com.mercadolibre.android.vpp"
+        "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.everest_canvas"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.activity",
@@ -3871,7 +3877,8 @@
         "com.mercadolibre.android.on.demand.resources",
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
-        "com.mercadolibre.android.vpp"
+        "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.everest_canvas"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.ui",
@@ -3884,7 +3891,8 @@
         "com.mercadolibre.android.on.demand.resources",
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
-        "com.mercadolibre.android.vpp"
+        "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.everest_canvas"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.runtime",
@@ -3897,7 +3905,8 @@
         "com.mercadolibre.android.on.demand.resources",
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
-        "com.mercadolibre.android.vpp"
+        "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.everest_canvas"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.ui",
@@ -3910,7 +3919,8 @@
         "com.mercadolibre.android.on.demand.resources",
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
-        "com.mercadolibre.android.vpp"
+        "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.everest_canvas"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.ui",
@@ -3922,7 +3932,8 @@
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.on.demand.resources",
         "com.mercadolibre.android.tetris",
-        "com.mercadolibre.android.vpp"
+        "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.everest_canvas"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.ui",
@@ -3930,7 +3941,8 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.auth_native_sso"
+        "com.mercadolibre.android.auth_native_sso",
+        "com.mercadolibre.android.everest_canvas"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.navigation",
@@ -3943,7 +3955,8 @@
         "com.mercadolibre.android.on.demand.resources",
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
-        "com.mercadolibre.android.vpp"
+        "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.everest_canvas"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.lifecycle",
@@ -4164,6 +4177,19 @@
       "group": "com\\.mercadolibre\\.android\\.mp_search",
       "name": "search",
       "version": "1\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.andesui"
+      ],
+      "description": "This dependency is only added to allow mockposable plugin. It is not allowed outside snapshot testing modules and should be removed when we update to Java 17 and AGP 8.",
+      "group": "org\\.jetbrains\\.compose\\.runtime",
+      "name": "runtime",
+      "transitive_configuration": {
+        "namespace": "runtime",
+        "transitivity": false
+      },
+      "version": "1\\.3\\.1"
     }
   ]
 }
