@@ -1081,23 +1081,46 @@
       "version": "mercadolibre-10\\.\\+|mercadopago-10\\.\\+"
     },
     {
+      "expires": "2024-06-30",
       "group": "com\\.mercadolibre\\.android\\.merchengine",
       "version": "mercadopago-8\\.\\+|mercadolibre-8\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.merchengine",
+      "version": "mercadopago-9\\.\\+|mercadolibre-9\\.\\+"
+    },
+    {
+      "expires": "2024-06-30",
       "group": "com\\.mercadolibre\\.android\\.merch_realestates",
       "name": "merchrealestates",
       "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.merch_realestates",
+      "name": "merchrealestates",
+      "version": "6\\.\\+"
+    },
+    {
+      "expires": "2024-06-30",
+      "group": "com\\.mercadolibre\\.android\\.merch_realestates",
       "name": "mprealestates",
       "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.merch_realestates",
+      "name": "mprealestates",
+      "version": "6\\.\\+"
+    },
+    {
+      "expires": "2024-06-30",
+      "group": "com\\.mercadolibre\\.android\\.merch_realestates",
       "name": "dismisscontent",
       "version": "5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.merch_realestates",
+      "name": "dismisscontent",
+      "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.metrics",
