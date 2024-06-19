@@ -3994,9 +3994,15 @@
       "version": "2\\.\\+"
     },
     {
+      "expires": "2024-08-23",
       "group": "com\\.mercadolibre\\.android\\.traceability",
       "name": "traceability",
       "version": "9\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.traceability",
+      "name": "traceability",
+      "version": "10\\.\\+"
     },
     {
       "allows_granular_projects": [
