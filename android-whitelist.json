@@ -1965,9 +1965,15 @@
       "version": "10\\.\\+"
     },
     {
+      "expires": "2024-06-30",
       "group": "com\\.mercadolibre\\.android\\.andes_integrations",
       "name": "integrations",
       "version": "mercadopago-4\\.\\+|mercadolibre-4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.andes_integrations",
+      "name": "integrations",
+      "version": "mercadopago-5\\.\\+|mercadolibre-5\\.\\+"
     },
     {
       "allows_granular_projects": [
