@@ -888,8 +888,14 @@
       "version": "3\\.\\+"
     },
     {
+      "description": "The expiration is due to a library update to support Android 14",
+      "expires": "2024-07-05",
       "group": "com\\.mercadolibre\\.android\\.credits\\.ui_components",
       "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.credits\\.ui_components",
+      "version": "8\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.credits\\.floxclient",
