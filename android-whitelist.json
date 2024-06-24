@@ -1375,6 +1375,22 @@
       "version": "mercadopago-6\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.home"
+      ],
+      "group": "com\\.mercadolibre\\.android\\.navigation_manager",
+      "name": "core",
+      "version": "7\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.home"
+      ],
+      "group": "com\\.mercadolibre\\.android\\.navigation_manager",
+      "name": "tabbar",
+      "version": "mercadopago-7\\.\\+"
+    },
+    {
       "expires": "2024-06-30",
       "group": "com\\.mercadolibre\\.android\\.mlwebkit",
       "version": "9.\\+"
