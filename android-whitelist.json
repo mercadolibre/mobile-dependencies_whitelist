@@ -888,8 +888,14 @@
       "version": "3\\.\\+"
     },
     {
+      "description": "The expiration is due to a library update to support Android 14",
+      "expires": "2024-07-05",
       "group": "com\\.mercadolibre\\.android\\.credits\\.ui_components",
       "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.credits\\.ui_components",
+      "version": "8\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.credits\\.floxclient",
@@ -3446,29 +3452,59 @@
       "version": "4\\.\\+"
     },
     {
+      "expires": "2024-08-06",
       "group": "com\\.datadoghq",
       "name": "dd-sdk-android-gradle-plugin",
       "version": "1\\.12\\.0"
     },
     {
       "group": "com\\.datadoghq",
+      "name": "dd-sdk-android-gradle-plugin",
+      "version": "1\\.14\\.0"
+    },
+    {
+      "expires": "2024-08-06",
+      "group": "com\\.datadoghq",
       "name": "dd-sdk-android-rum",
       "version": "2\\.4\\.0"
     },
     {
+      "expires": "2024-08-06",
       "group": "com\\.datadoghq",
       "name": "dd-sdk-android-logs",
       "version": "2\\.4\\.0"
     },
     {
+      "expires": "2024-08-06",
       "group": "com\\.datadoghq",
       "name": "dd-sdk-android-trace",
       "version": "2\\.4\\.0"
     },
     {
+      "expires": "2024-08-06",
       "group": "com\\.datadoghq",
       "name": "dd-sdk-android-okhttp",
       "version": "2\\.4\\.0"
+    },
+    {
+      "group": "com\\.datadoghq",
+      "name": "dd-sdk-android-rum",
+      "version": "2\\.10\\.1"
+    },
+    {
+      "group": "com\\.datadoghq",
+      "name": "dd-sdk-android-logs",
+      "version": "2\\.10\\.1"
+    },
+    {
+      "group": "com\\.datadoghq",
+      "name": "dd-sdk-android-trace",
+      "version": "2\\.10\\.1"
+    },
+    {
+      "group": "com\\.datadoghq",
+      "name": "dd-sdk-android-okhttp",
+      "version": "2\\.10\\.1"
     },
     {
       "expires": "2024-07-05",
@@ -3534,14 +3570,26 @@
       "version": "14\\.+"
     },
     {
+      "expires": "2024-07-12",
       "group": "com\\.mercadolibre\\.android\\.everest",
       "name": "platform",
       "version": "15\\.+"
     },
     {
+      "expires": "2024-07-12",
       "group": "com\\.mercadolibre\\.android\\.everest",
       "name": "catalog",
       "version": "15\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.everest",
+      "name": "platform",
+      "version": "16\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.everest",
+      "name": "catalog",
+      "version": "16\\.+"
     },
     {
       "expires": "2024-06-30",
