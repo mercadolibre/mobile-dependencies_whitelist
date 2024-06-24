@@ -813,18 +813,32 @@
       "version": "12\\.\\+"
     },
     {
+      "description": "The expiration is due to a library update to support Android 14",
+      "expires": "2024-08-12",
       "group": "com\\.mercadolibre\\.android\\.cart",
       "name": "manager",
       "version": "mercadolibre-15\\.\\+|mercadopago-15\\.\\+"
     },
     {
+      "description": "The expiration is due to a library update to support Android 14",
+      "expires": "2024-08-12",
       "group": "com\\.mercadolibre\\.android\\.cart",
       "name": "cart",
       "version": "mercadolibre-16\\.\\+|mercadopago-16\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.cart",
+      "name": "manager",
+      "version": "mercadolibre-16\\.\\+|mercadopago-16\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cart",
+      "name": "cart",
+      "version": "mercadolibre-17\\.\\+|mercadopago-17\\.\\+"
+    },
+    {
       "description": "The expiration is due to a library update to support Android 14",
-      "expires": "2024-08-31",
+      "expires": "2024-08-12",
       "group": "com\\.mercadolibre\\.android\\.cart\\.facade",
       "name": "proxy",
       "version": "1\\.\\+"
