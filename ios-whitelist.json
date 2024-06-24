@@ -357,6 +357,12 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "SessionsAuthorization",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "MPThreeDS",
       "source": "private",
       "target": "production",
