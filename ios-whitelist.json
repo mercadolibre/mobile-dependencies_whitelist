@@ -357,6 +357,12 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "SessionsAuthorization",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "MPThreeDS",
       "source": "private",
       "target": "production",
@@ -1860,10 +1866,18 @@
       "version": "^~>\\s?4.[0-9]+$"
     },
     {
+      "description": "This version will be deprecated in favor of 6.0.0",
+      "expires": "2024-12-31",
       "name": "IspSf",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?5.[0-9]+$"
+    },
+    {
+      "name": "IspSf",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?6.[0-9]+$"
     },
     {
       "name": "BuyingflowCoreFlox",
