@@ -36,9 +36,15 @@
       "version": "1\\.+"
     },
     {
+      "expires": "2024-07-05",
       "group": "com\\.mercadolibre\\.android\\.onboarding",
       "name": "onboarding",
       "version": "3\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.onboarding",
+      "name": "onboarding",
+      "version": "4\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.stripe_bar",
@@ -1369,7 +1375,7 @@
     {
       "expires": "2024-06-30",
       "group": "com\\.mercadolibre\\.android\\.uicomponents",
-      "version": "17\\.\\+"
+      "version": "18\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.uicomponents",
@@ -1384,6 +1390,22 @@
       "group": "com\\.mercadolibre\\.android\\.navigation_manager",
       "name": "tabbar",
       "version": "mercadopago-6\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.home"
+      ],
+      "group": "com\\.mercadolibre\\.android\\.navigation_manager",
+      "name": "core",
+      "version": "7\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.home"
+      ],
+      "group": "com\\.mercadolibre\\.android\\.navigation_manager",
+      "name": "tabbar",
+      "version": "mercadopago-7\\.\\+"
     },
     {
       "expires": "2024-06-30",
@@ -3060,9 +3082,15 @@
       "version": "3\\.\\+"
     },
     {
+      "expires": "2024-08-03",
       "group": "com\\.mercadolibre\\.android\\.data_privacy_helper",
       "name": "libdataprivacy",
       "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.data_privacy_helper",
+      "name": "libdataprivacy",
+      "version": "5\\.\\+"
     },
     {
       "expires": "2024-06-30",
