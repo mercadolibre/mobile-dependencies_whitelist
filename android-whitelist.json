@@ -1261,8 +1261,13 @@
       "version": "9\\.\\+"
     },
     {
+      "expires": "2024-07-30",
       "group": "com\\.mercadolibre\\.android\\.comparator",
       "version": "10\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.comparator",
+      "version": "11\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.qadb",
@@ -2795,7 +2800,7 @@
         "com.mercadolibre.android.singleplayer",
         "com.mercadopago.android.prepaid_globe"
       ],
-      "description": "Use the version 2.3.2",
+      "description": "Use the version 2.3.1-114",
       "expires": "2024-08-30",
       "group": "com\\.mercadolibre\\.android\\.globe",
       "name": "libc2d",
@@ -2808,7 +2813,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.globe",
       "name": "libc2d",
-      "version": "2\\.3\\.2"
+      "version": "2\\.3\\.1\\-114"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point_virtualization",
