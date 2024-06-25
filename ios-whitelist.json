@@ -19,17 +19,10 @@
       "version": "^~>\\s?5.[0-9]+$"
     },
     {
-      "expires": "2024-06-30",
       "name": "AdvertisingADN",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?2.[0-9]+$"
-    },
-    {
-      "name": "AdvertisingADN",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?3.[0-9]+$"
     },
     {
       "name": "MLCheckoutFlow",
