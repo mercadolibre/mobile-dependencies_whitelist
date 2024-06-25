@@ -4170,9 +4170,15 @@
       "version": "0\\.+"
     },
     {
+      "expires": "2024-07-25",
       "group": "com\\.mercadolibre\\.android\\.screenshots_manager",
       "name": "core",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.screenshots_manager",
+      "name": "core",
+      "version": "2\\.\\+"
     },
     {
       "allows_granular_projects": [
