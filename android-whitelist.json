@@ -869,14 +869,28 @@
       "version": "8\\.\\+"
     },
     {
+      "description": "The expiration is due to a library update to support Android 14",
+      "expires": "2024-07-05",
       "group": "com\\.mercadolibre\\.android\\.credits\\.floxclient",
       "name": "core",
       "version": "4\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.credits\\.floxclient",
+      "name": "core",
+      "version": "5\\.\\+"
+    },
+    {
+      "description": "The expiration is due to a library update to support Android 14",
+      "expires": "2024-07-05",
       "group": "com\\.mercadolibre\\.android\\.credits\\.toolkit",
       "name": "toolkit",
       "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.credits\\.toolkit",
+      "name": "toolkit",
+      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cross_app_links",
@@ -884,9 +898,16 @@
       "version": "mercadolibre-8\\.\\+|mercadopago-8\\.\\+"
     },
     {
+      "description": "The expiration is due to a library update to support Android 14",
+      "expires": "2024-07-05",
       "group": "com\\.mercadolibre\\.android\\.charts",
       "name": "melicharts",
       "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.charts",
+      "name": "melicharts",
+      "version": "7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.classifieds",
