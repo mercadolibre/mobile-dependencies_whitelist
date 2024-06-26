@@ -188,14 +188,26 @@
       "version": "16\\.\\+"
     },
     {
+      "expires": "2024-09-28",
       "group": "com\\.mercadolibre\\.android\\.buyingflow_payment",
       "name": "payments",
-      "version": "3\\.+"
+      "version": "3\\.+" 
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.buyingflow_payment",
+      "name": "payments",
+      "version": "5\\.+"
+    },
+    {
+      "expires": "2024-09-28",
+      "group": "com\\.mercadolibre\\.android\\.bf_core_flox",
+      "name": "bf_core_flox",
+      "version": "2\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.bf_core_flox",
       "name": "bf_core_flox",
-      "version": "2\\.+"
+      "version": "3\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.buyingflow",
