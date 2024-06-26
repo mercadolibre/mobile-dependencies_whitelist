@@ -1366,7 +1366,16 @@
     {
       "group": "com\\.modiface",
       "name": "mfemakeupkit",
-      "version": "20\\.0\\.0"
+      "version": "20\\.0\\.0",
+      "description": "This dependency is only used in VirtualTryOn",
+      "transitive_configuration":
+      {
+        "transitivity": false,
+        "namespace": "mfemakeupkit"
+      },
+      "allows_granular_projects": [ 
+        "com.mercadolibre.android.virtual_try_on"
+      ]
     },
     {
       "expires": "2024-06-30",
