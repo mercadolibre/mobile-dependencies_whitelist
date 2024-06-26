@@ -975,9 +975,16 @@
       "version": "8\\.\\+"
     },
     {
+      "description": "The expiration is due to a library update to support Android 14",
+      "expires": "2024-07-05",
       "group": "com\\.mercadolibre\\.android\\.fluxclient",
       "name": "flux-client",
       "version": "9\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.fluxclient",
+      "name": "flux-client",
+      "version": "10\\.\\+"
     },
     {
       "expires": "2024-06-30",
