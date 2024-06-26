@@ -1479,9 +1479,16 @@
       "version": "8\\.\\+"
     },
     {
+      "description": "Deprecated due to Android 14 migration",
+      "expires": "2024-07-30",
       "group": "com\\.mercadolibre\\.android\\.home\\.toolkit",
       "name": "core",
       "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.home\\.toolkit",
+      "name": "core",
+      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
