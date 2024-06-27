@@ -52,6 +52,7 @@
       "version": "0\\.+"
     },
     {
+      "description": "Deprecated due to Android 14 migration"
       "expires": "2024-06-30"
       "group": "com\\.mercadolibre\\.android\\.advertising",
       "name": "adn",
@@ -80,6 +81,7 @@
       "version": "13\\.+"
     },
     {
+      "description": "Deprecated due to Android 14 migration"
       "expires": "2024-06-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "viewability",
