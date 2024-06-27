@@ -52,9 +52,16 @@
       "version": "0\\.+"
     },
     {
+      "description": "Deprecated due to Android 14 migration",
+      "expires": "2024-06-30",
       "group": "com\\.mercadolibre\\.android\\.advertising",
       "name": "adn",
       "version": "8\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.advertising",
+      "name": "adn",
+      "version": "9\\.+"
     },
     {
       "expires": "2024-07-30",
@@ -74,9 +81,16 @@
       "version": "13\\.+"
     },
     {
+      "description": "Deprecated due to Android 14 migration",
+      "expires": "2024-06-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "viewability",
       "version": "5\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "viewability",
+      "version": "6\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.om",
