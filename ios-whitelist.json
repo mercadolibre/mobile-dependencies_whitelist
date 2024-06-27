@@ -19,17 +19,10 @@
       "version": "^~>\\s?5.[0-9]+$"
     },
     {
-      "expires": "2024-06-30",
       "name": "AdvertisingADN",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?2.[0-9]+$"
-    },
-    {
-      "name": "AdvertisingADN",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?3.[0-9]+$"
     },
     {
       "name": "MLCheckoutFlow",
@@ -1244,14 +1237,6 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
-      "description": "This version will be deprecated so MLRegistration repository can be safely deleted.",
-      "expires": "2024-06-22",
-      "name": "MLRegistration",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
       "name": "Regulations",
       "source": "private",
       "target": "production",
@@ -2094,6 +2079,15 @@
       "source": "public",
       "target": "production",
       "version": "^~>\\s?7.[0-9]+$"
+    },
+    {
+      "allows_granular_projects": [
+        "EverestCanvas"
+      ],
+      "name": "KingfisherWebP",
+      "source": "public",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MPSearch",
