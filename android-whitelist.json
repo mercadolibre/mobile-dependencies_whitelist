@@ -1500,6 +1500,18 @@
       "version": "1\\.\\+"
     },
     {
+      "description": "This is an experimental version of verticals core lib",
+      "group": "com\\.mercadolibre\\.android\\.verticals_core",
+      "name": "core",
+      "version": "0\\.\\+"
+    },
+     {
+      "description": "This is an experimental version of verticals moreLikeThis module",
+      "group": "com\\.mercadolibre\\.android\\.verticals_core",
+      "name": "morelikethis",
+      "version": "0\\.\\+"
+    },
+    {
       "group": "com\\.modiface",
       "name": "mfemakeupkit",
       "version": "20\\.0\\.0"
