@@ -621,14 +621,26 @@
       "version": "production-13\\.\\+|develop-13\\.\\+"
     },
     {
+      "expires": "2024-07-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "authentication-enrollment",
       "version": "26\\.\\+"
     },
     {
+      "expires": "2024-07-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "authentication",
       "version": "26\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "authentication-enrollment",
+      "version": "27\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "authentication",
+      "version": "27\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.authscopedsession",
@@ -662,15 +674,15 @@
       "version": "6\\.\\+"
     },
     {
-      "expires": "2024-06-30",
+      "expires": "2024-07-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "login",
-      "version": "mercadopago-18\\.\\+|mercadolibre-18\\.\\+"
+      "version": "mercadopago-20\\.\\+|mercadolibre-20\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "login",
-      "version": "mercadopago-20\\.\\+|mercadolibre-20\\.\\+"
+      "version": "mercadopago-21\\.\\+|mercadolibre-21\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point_login_qr",
@@ -1607,9 +1619,16 @@
       "version": "8\\.\\+"
     },
     {
+      "description": "Deprecated due to Android 14 migration",
+      "expires": "2024-07-30",
       "group": "com\\.mercadolibre\\.android\\.home\\.toolkit",
       "name": "core",
       "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.home\\.toolkit",
+      "name": "core",
+      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
@@ -1622,14 +1641,28 @@
       "version": "mercadopago-6\\.+"
     },
     {
+      "description": "Deprecated due to Android 14 migration",
+      "expires": "2024-07-30",
       "group": "com\\.mercadolibre\\.android\\.usersections\\",
       "name": "sections",
       "version": "mercadolibre-6\\.+|mercadopago-6\\.+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.usersections\\",
+      "name": "sections",
+      "version": "mercadolibre-7\\.+|mercadopago-7\\.+"
+    },
+    {
+      "description": "Deprecated due to Android 14 migration",
+      "expires": "2024-07-30",
       "group": "com\\.mercadolibre\\.android\\.usersections",
       "name": "ui-sections",
       "version": "mercadolibre-6\\.+|mercadopago-6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.usersections",
+      "name": "ui-sections",
+      "version": "mercadolibre-7\\.+|mercadopago-7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.mercadocoin",
