@@ -2668,29 +2668,59 @@
       "version": "8\\.\\+"
     },
     {
+      "expires": "2024-07-12",
       "group": "com\\.mercadolibre\\.android\\.tfs_commons",
       "name": "tracking",
       "version": "mercadopago-7\\.\\+|mercadolibre-7\\.\\+"
     },
     {
+      "expires": "2024-07-12",
       "group": "com\\.mercadolibre\\.android\\.tfs_commons",
       "name": "imageutils",
       "version": "7\\.\\+"
     },
     {
+      "expires": "2024-07-12",
       "group": "com\\.mercadolibre\\.android\\.tfs_commons",
       "name": "ktx",
       "version": "7\\.\\+"
     },
     {
+      "expires": "2024-07-12",
       "group": "com\\.mercadolibre\\.android\\.tfs_commons",
       "name": "mvp",
       "version": "7\\.\\+"
     },
     {
+      "expires": "2024-07-12",
       "group": "com\\.mercadolibre\\.android\\.tfs_commons",
       "name": "errorhandler",
       "version": "7\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.tfs_commons",
+      "name": "tracking",
+      "version": "mercadopago-8\\.\\+|mercadolibre-8\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.tfs_commons",
+      "name": "imageutils",
+      "version": "8\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.tfs_commons",
+      "name": "ktx",
+      "version": "8\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.tfs_commons",
+      "name": "mvp",
+      "version": "8\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.tfs_commons",
+      "name": "errorhandler",
+      "version": "8\\.\\+"
     },
     {
       "group": "com\\.smartlook\\.recording",
@@ -3867,14 +3897,26 @@
       "version": "2\\.13\\.0"
     },
     {
+      "expires": "2024-07-12",
       "group": "com\\.mercadolibre\\.android\\.ml_qualtrics",
       "name": "core",
       "version": "2\\.\\+"
     },
     {
+      "expires": "2024-07-12",
       "group": "com\\.mercadolibre\\.android\\.ml_qualtrics",
       "name": "ui",
       "version": "2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.ml_qualtrics",
+      "name": "core",
+      "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.ml_qualtrics",
+      "name": "ui",
+      "version": "3\\.\\+"
     },
     {
       "expires": "2024-06-30",
