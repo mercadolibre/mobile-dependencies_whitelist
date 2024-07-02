@@ -664,6 +664,12 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "name": "TransfersComponents",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
       "name": "MLRecommendationsCombo",
       "source": "private",
       "target": "production",
