@@ -3298,12 +3298,22 @@
       "version": "2\\.3\\.0"
     },
     {
+      "expires": "2024-07-12",
       "group": "com\\.mercadolibre\\.android\\.seller_home_section",
       "version": "2\\.\\+"
     },
     {
+      "expires": "2024-07-12",
       "group": "com\\.mercadolibre\\.android\\.hub_seller",
       "version": "2\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.seller_home_section",
+      "version": "3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.hub_seller",
+      "version": "3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point_bill_payment",
