@@ -1957,6 +1957,10 @@
     {
       "description": "Test version for VerticalsCore",
       "name": "VerticalsCore",
+      "allows_granular_projects": [ 
+            "MLVPP",
+            "MLSearch"
+      ],
       "source": "private",
       "target": "test",
       "version": "^~>\\s?0.[0-9]+$"

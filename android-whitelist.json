@@ -1503,12 +1503,20 @@
       "description": "This is an experimental version of verticals core lib",
       "group": "com\\.mercadolibre\\.android\\.verticals_core",
       "name": "core",
+      "allows_granular_projects": [
+        "com.mercadolibre.android.search",
+        "com.mercadolibre.android.vpp"
+      ],
       "version": "0\\.\\+"
     },
     {
       "description": "This is an experimental version of verticals moreLikeThis module",
       "group": "com\\.mercadolibre\\.android\\.verticals_core",
       "name": "morelikethis",
+      "allows_granular_projects": [
+        "com.mercadolibre.android.search",
+        "com.mercadolibre.android.vpp"
+      ],
       "version": "0\\.\\+"
     },
     {
