@@ -3536,37 +3536,26 @@
       "version": "2\\.\\+"
     },
     {
-      "expires": "2024-07-05",
-      "group": "com\\.mercadolibre\\.android\\.everest",
-      "name": "platform",
-      "version": "14\\.+"
-    },
-    {
-      "group": "com\\.mercadolibre\\.android\\.everest",
-      "name": "catalog",
-      "version": "14\\.+"
-    },
-    {
       "expires": "2024-07-12",
       "group": "com\\.mercadolibre\\.android\\.everest",
       "name": "platform",
-      "version": "15\\.+"
+      "version": "14\\.+|15\\.\\+|16\\.\\+"
     },
     {
       "expires": "2024-07-12",
       "group": "com\\.mercadolibre\\.android\\.everest",
       "name": "catalog",
-      "version": "15\\.+"
+      "version": "14\\.+|15\\.\\+|16\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.everest",
       "name": "platform",
-      "version": "16\\.+"
+      "version": "17\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.everest",
       "name": "catalog",
-      "version": "16\\.+"
+      "version": "17\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.errorhandler\\.v2",
