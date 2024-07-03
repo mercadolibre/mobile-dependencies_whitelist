@@ -993,13 +993,13 @@
       "version": "1\\.\\+"
     },
     {
-      "expires": "2024-07-05",
+      "expires": "2024-07-09",
       "group": "com\\.mercadolibre\\.android\\.commons",
-      "version": "36\\.\\+"
+      "version": "36\\.\\+|37\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.commons",
-      "version": "37\\.\\+"
+      "version": "38\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point\\.lot\\.management",
@@ -2881,22 +2881,43 @@
       "version": "mercadolibre-12\\.\\+|mercadopago-12\\.\\+"
     },
     {
-      "description": "For integrators from inside MP/MLs app",
+      "description": "For integrators from inside MP/MLs app - Expires because migrations",
+      "expires": "2024-07-26",
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "scanner",
       "version": "mercadolibre-14\\.\\+|mercadopago-14\\.\\+"
     },
     {
-      "description": "For integrators from inside MP/MLs app",
+      "description": "For integrators from inside MP/MLs app - Expires because migrations",
+      "expires": "2024-07-26",
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "ocr",
       "version": "mercadolibre-14\\.\\+|mercadopago-14\\.\\+"
     },
     {
-      "description": "For integrators from inside MP/MLs app",
+      "description": "For integrators from inside MP/MLs app - Expires because migrations",
+      "expires": "2024-07-26",
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "barcode",
       "version": "mercadolibre-14\\.\\+|mercadopago-14\\.\\+"
+    },
+    {
+      "description": "For integrators from inside MP/MLs app",
+      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
+      "name": "scanner",
+      "version": "mercadolibre-15\\.\\+|mercadopago-15\\.\\+"
+    },
+    {
+      "description": "For integrators from inside MP/MLs app",
+      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
+      "name": "ocr",
+      "version": "mercadolibre-15\\.\\+|mercadopago-15\\.\\+"
+    },
+    {
+      "description": "For integrators from inside MP/MLs app",
+      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
+      "name": "barcode",
+      "version": "mercadolibre-15\\.\\+|mercadopago-15\\.\\+"
     },
     {
       "expires": "2024-10-28",
@@ -3515,37 +3536,26 @@
       "version": "2\\.\\+"
     },
     {
-      "expires": "2024-07-05",
-      "group": "com\\.mercadolibre\\.android\\.everest",
-      "name": "platform",
-      "version": "14\\.+"
-    },
-    {
-      "group": "com\\.mercadolibre\\.android\\.everest",
-      "name": "catalog",
-      "version": "14\\.+"
-    },
-    {
       "expires": "2024-07-12",
       "group": "com\\.mercadolibre\\.android\\.everest",
       "name": "platform",
-      "version": "15\\.+"
+      "version": "14\\.+|15\\.\\+|16\\.\\+"
     },
     {
       "expires": "2024-07-12",
       "group": "com\\.mercadolibre\\.android\\.everest",
       "name": "catalog",
-      "version": "15\\.+"
+      "version": "14\\.+|15\\.\\+|16\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.everest",
       "name": "platform",
-      "version": "16\\.+"
+      "version": "17\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.everest",
       "name": "catalog",
-      "version": "16\\.+"
+      "version": "17\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.errorhandler\\.v2",

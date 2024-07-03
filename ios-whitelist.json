@@ -640,6 +640,7 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
+      "expires": "2024-07-30",
       "name": "MLRxRestClient",
       "source": "private",
       "target": "production",
@@ -659,6 +660,12 @@
     },
     {
       "name": "TransfersCheckout",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "TransfersComponents",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
@@ -928,12 +935,6 @@
       "source": "public",
       "target": "production",
       "version": "10.38.0"
-    },
-    {
-      "name": "RxAtomic",
-      "source": "public",
-      "target": "production",
-      "version": "4.4.2"
     },
     {
       "name": "SmiSdk",
@@ -1277,18 +1278,6 @@
       "source": "public",
       "target": "test",
       "version": "1.2.0"
-    },
-    {
-      "name": "RxBlocking",
-      "source": "public",
-      "target": "test",
-      "version": "6.5.0"
-    },
-    {
-      "name": "RxTest",
-      "source": "public",
-      "target": "test",
-      "version": "6.5.0"
     },
     {
       "name": "Nimble",
