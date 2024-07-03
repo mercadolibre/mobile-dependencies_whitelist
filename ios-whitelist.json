@@ -398,10 +398,17 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "expires": "2024-09-30",
       "name": "PxPmSelector",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "PxPmSelector",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "PxTokenization",
@@ -633,6 +640,7 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
+      "expires": "2024-07-30",
       "name": "MLRxRestClient",
       "source": "private",
       "target": "production",
@@ -652,6 +660,12 @@
     },
     {
       "name": "TransfersCheckout",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "TransfersComponents",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
@@ -921,12 +935,6 @@
       "source": "public",
       "target": "production",
       "version": "10.38.0"
-    },
-    {
-      "name": "RxAtomic",
-      "source": "public",
-      "target": "production",
-      "version": "4.4.2"
     },
     {
       "name": "SmiSdk",
@@ -1270,18 +1278,6 @@
       "source": "public",
       "target": "test",
       "version": "1.2.0"
-    },
-    {
-      "name": "RxBlocking",
-      "source": "public",
-      "target": "test",
-      "version": "6.5.0"
-    },
-    {
-      "name": "RxTest",
-      "source": "public",
-      "target": "test",
-      "version": "6.5.0"
     },
     {
       "name": "Nimble",
@@ -1843,14 +1839,6 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "description": "This version will be deprecated in favor of 5.0.0",
-      "expires": "2024-06-30",
-      "name": "IspSf",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?4.[0-9]+$"
-    },
-    {
       "description": "This version will be deprecated in favor of 6.0.0",
       "expires": "2024-12-31",
       "name": "IspSf",
@@ -2043,26 +2031,6 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "allows_granular_projects": [
-        "DependencyInjection"
-      ],
-      "expires": "2024-06-30",
-      "name": "Swinject",
-      "source": "public",
-      "target": "production",
-      "version": "2.8.3"
-    },
-    {
-      "allows_granular_projects": [
-        "DependencyInjection"
-      ],
-      "expires": "2024-06-30",
-      "name": "SwinjectAutoregistration",
-      "source": "public",
-      "target": "production",
-      "version": "2.8.3"
     },
     {
       "allows_granular_projects": [
