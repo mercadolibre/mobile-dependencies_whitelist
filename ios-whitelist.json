@@ -1958,8 +1958,8 @@
       "description": "Test version for VerticalsCore",
       "name": "VerticalsCore",
       "allows_granular_projects": [ 
-            "MLVPP",
-            "MLSearch"
+        "MLVPP",
+        "MLSearch"
       ],
       "source": "private",
       "target": "test",
