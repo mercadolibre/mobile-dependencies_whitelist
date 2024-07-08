@@ -3969,6 +3969,15 @@
       "version": "0\\.+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadopago.android.moneyout",
+        "com.mercadolibre.android.da_management"
+      ],
+      "group": "com\\.mercadolibre\\.android\\.transfers_components",
+      "name": "core",
+      "version": "0\\.+"
+    },
+    {
       "expires": "2024-07-26",
       "group": "com\\.mercadolibre\\.android\\.screenshots_manager",
       "name": "core",
