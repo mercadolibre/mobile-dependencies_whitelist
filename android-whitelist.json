@@ -51,6 +51,15 @@
       "version": "9\\.+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.advertising.adn",
+        "com.mercadolibre.android.viewability"
+      ],
+      "group": "com\\.mercadolibre\\.android\\.advertising\\.analytics",
+      "name": "log",
+      "version": "0\\.+"
+    },
+    {
       "expires": "2024-07-30",
       "group": "com\\.mercadolibre\\.android",
       "name": "home",
