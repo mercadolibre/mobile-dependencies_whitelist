@@ -1384,9 +1384,15 @@
       "version": "7\\.\\+"
     },
     {
+      "expires": "2024-08-09",
       "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
       "name": "api",
       "version": "8\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
+      "name": "api",
+      "version": "9\\.\\+"
     },
     {
       "description": "Deprecated due to Android 14 migration",
