@@ -1955,11 +1955,11 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "description": "Test version for VerticalsCore",
       "allows_granular_projects": [ 
         "MLVPP",
         "MLSearch"
       ],
-      "description": "Test version for VerticalsCore",
       "name": "VerticalsCore",
       "source": "private",
       "target": "test",
