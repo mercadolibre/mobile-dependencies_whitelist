@@ -773,7 +773,7 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "expires": "2024-07-22",
+      "expires": "2024-12-22",
       "name": "MLUI",
       "source": "public",
       "target": "production",
@@ -2039,7 +2039,7 @@
       "name": "Kingfisher",
       "source": "public",
       "target": "production",
-      "version": "^~>\\s?7.[0-9]+$"
+      "version": "7.12.0"
     },
     {
       "allows_granular_projects": [
@@ -2048,13 +2048,35 @@
       "name": "KingfisherWebP",
       "source": "public",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "1.6.0"
     },
     {
       "name": "MPSearch",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "allows_granular_projects": [
+        "DependencyInjection",
+        "CrabDI"
+      ],
+      "expires": "2024-09-30",
+      "name": "Swinject",
+      "source": "public",
+      "target": "production",
+      "version": "2.8.3"
+    },
+    {
+      "allows_granular_projects": [
+        "DependencyInjection",
+        "CrabDI"
+      ],
+      "expires": "2024-09-30",
+      "name": "SwinjectAutoregistration",
+      "source": "public",
+      "target": "production",
+      "version": "2.8.3"
     }
   ]
 }
