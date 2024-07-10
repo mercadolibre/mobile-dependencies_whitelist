@@ -943,6 +943,12 @@
     {
       "group": "com\\.mercadolibre\\.android\\.flox",
       "name": "engine",
+      "version": "13\\.\\+"
+    },
+    {
+      "expires": "2024-08-25",
+      "group": "com\\.mercadolibre\\.android\\.flox",
+      "name": "engine",
       "version": "12\\.\\+"
     },
     {
@@ -1384,9 +1390,15 @@
       "version": "7\\.\\+"
     },
     {
+      "expires": "2024-08-09",
       "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
       "name": "api",
       "version": "8\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
+      "name": "api",
+      "version": "9\\.\\+"
     },
     {
       "description": "Deprecated due to Android 14 migration",
@@ -1802,14 +1814,26 @@
       "version": "9\\.\\+"
     },
     {
+      "expires": "2024-07-29",
       "group": "com\\.mercadolibre\\.android\\.security",
       "name": "native_reauth",
       "version": "mercadopago-7\\.\\+|mercadolibre-7\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.security",
+      "name": "native_reauth",
+      "version": "mercadopago-8\\.\\+|mercadolibre-8\\.\\+"
+    },
+    {
+      "expires": "2024-07-29",
       "group": "com\\.mercadolibre\\.android\\.reauth_native_adapter",
       "name": "reauth_adapter",
       "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.reauth_native_adapter",
+      "name": "reauth_adapter",
+      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.security_options",
