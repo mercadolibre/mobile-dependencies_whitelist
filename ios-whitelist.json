@@ -2045,7 +2045,7 @@
       "name": "Kingfisher",
       "source": "public",
       "target": "production",
-      "version": "^~>\\s?7.[0-9]+$"
+      "version": "7.12.0"
     },
     {
       "allows_granular_projects": [
@@ -2054,7 +2054,7 @@
       "name": "KingfisherWebP",
       "source": "public",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "1.6.0"
     },
     {
       "name": "MPSearch",
