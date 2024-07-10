@@ -1539,74 +1539,111 @@
       "version": "3\\.\\+"
     },
     {
+      "expires": "2024-12-31",
       "group": "com\\.mercadolibre\\.android\\.pos_readers",
       "name": "posreaders",
       "version": "9\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.pos_readers",
+      "name": "posreaders",
+      "version": "10\\.+"
+    },
+    {
+      "expires": "2024-12-31",
+      "group": "com\\.mercadolibre\\.android\\.pos_readers",
       "name": "entrypoint",
       "version": "9\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.pos_readers",
+      "name": "entrypoint",
+      "version": "10\\.+"
+    },
+    {
+      "expires": "2024-12-31",
+      "group": "com\\.mercadolibre\\.android\\.pos_readers",
       "name": "commons",
       "version": "9\\.+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.pos_readers",
+      "name": "commons",
+      "version": "10\\.+"
+    },
+    {
+      "expires": "2024-12-31",
       "group": "com\\.mercadopago\\.android\\.point_ui",
       "name": "components",
       "version": "6\\.+"
     },
     {
-      "description": "The expiration date is extended to have time enough to deprecate it",
-      "expires": "2024-12-31",
-      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
-      "name": "paymentflowfcu",
-      "version": "11\\.+"
-    },
-    {
-      "description": "The expiration date is extended to have time enough to deprecate it",
-      "expires": "2024-12-31",
-      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
-      "name": "entities_fcu",
-      "version": "11\\.+"
-    },
-    {
-      "description": "The expiration date is extended to have time enough to deprecate it",
-      "expires": "2024-12-31",
-      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
-      "name": "paymentflowfcu",
-      "version": "12\\.+"
-    },
-    {
-      "description": "The expiration date is extended to have time enough to deprecate it",
-      "expires": "2024-12-31",
-      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
-      "name": "entities_fcu",
-      "version": "12\\.+"
-    },
-    {
-      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
-      "name": "paymentflowfcu",
-      "version": "13\\.+"
-    },
-    {
-      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
-      "name": "entities_fcu",
-      "version": "13\\.+"
-    },
-    {
-      "group": "com\\.mercadolibre\\.android\\.point\\.mpos",
-      "name": "mpos",
+      "group": "com\\.mercadopago\\.android\\.point_ui",
+      "name": "components",
       "version": "7\\.+"
     },
     {
+      "description": "The expiration date is extended to have time enough to deprecate it",
+      "expires": "2024-12-31",
+      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
+      "name": "paymentflowfcu",
+      "version": "11\\.+"
+    },
+    {
+      "description": "The expiration date is extended to have time enough to deprecate it",
+      "expires": "2024-12-31",
+      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
+      "name": "entities_fcu",
+      "version": "11\\.+"
+    },
+    {
+      "description": "The expiration date is extended to have time enough to deprecate it",
+      "expires": "2024-12-31",
+      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
+      "name": "paymentflowfcu",
+      "version": "12\\.+"
+    },
+    {
+      "description": "The expiration date is extended to have time enough to deprecate it",
+      "expires": "2024-12-31",
+      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
+      "name": "entities_fcu",
+      "version": "12\\.+"
+    },
+    {
+      "expires": "2024-12-31",
+      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
+      "name": "paymentflowfcu",
+      "version": "13\\.+"
+    },
+    {
+      "expires": "2024-12-31",
+      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
+      "name": "entities_fcu",
+      "version": "13\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
+      "name": "paymentflowfcu",
+      "version": "14\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
+      "name": "entities_fcu",
+      "version": "14\\.+"
+    },
+    {
+      "expires": "2024-12-01",
       "group": "com\\.mercadolibre\\.android\\.point\\.mpos",
       "name": "entrypoint",
       "version": "8\\.+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.point\\.mpos",
+      "name": "entrypoint",
+      "version": "9\\.+"
+    },
+    {
       "expires": "2024-12-01",
       "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
       "name": "mpoc",
@@ -1625,19 +1662,37 @@
       "version": "0\\.+"
     },
     {
+      "expires": "2024-12-01",
       "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
       "name": "mpoc",
       "version": "1\\.+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
+      "name": "mpoc",
+      "version": "2\\.+"
+    },
+    {
+      "expires": "2024-12-01",
+      "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
       "name": "mypinpad",
       "version": "1\\.+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
+      "name": "mypinpad",
+      "version": "2\\.+"
+    },
+    {
+      "expires": "2024-12-01",
+      "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
       "name": "payment",
       "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
+      "name": "payment",
+      "version": "2\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.mpos\\.android\\.sdk_mpp",
@@ -1645,9 +1700,15 @@
       "version": "1\\.+"
     },
     {
+      "expires": "2024-12-01",
       "group": "com\\.mercadopago\\.android\\.isp\\.payment_contactless",
       "name": "sdk",
       "version": "0\\.+"
+    },
+    {
+      "group": "com\\.mercadopago\\.android\\.isp\\.payment_contactless",
+      "name": "sdk",
+      "version": "1\\.+"
     },
     {
       "group": "com\\.polidea\\.rxandroidble2",
