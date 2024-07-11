@@ -1315,6 +1315,26 @@
       "version": "1\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.search",
+        "com.mercadolibre.android.vpp"
+      ],
+      "description": "This is an experimental version of verticals core lib",
+      "group": "com\\.mercadolibre\\.android\\.verticals_core",
+      "name": "core",
+      "version": "0\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.search",
+        "com.mercadolibre.android.vpp"
+      ],
+      "description": "This is an experimental version of verticals moreLikeThis module",
+      "group": "com\\.mercadolibre\\.android\\.verticals_core",
+      "name": "morelikethis",
+      "version": "0\\.\\+"
+    },
+    {
       "group": "com\\.modiface",
       "name": "mfemakeupkit",
       "version": "20\\.0\\.0"
@@ -3130,6 +3150,11 @@
       "version": "1\\.+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.reviews3",
+      "version": "7\\.+"
+    },
+    {
+      "expires": "2024-07-30",
       "group": "com\\.mercadolibre\\.android\\.reviews3",
       "version": "6\\.+"
     },
