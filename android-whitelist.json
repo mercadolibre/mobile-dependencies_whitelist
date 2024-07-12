@@ -52,8 +52,8 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.advertising.adn",
-        "com.mercadolibre.android.viewability"
+        "com.mercadolibre.android.advertising",
+        "com.mercadolibre.android"
       ],
       "group": "com\\.mercadolibre\\.android\\.advertising\\.analytics",
       "name": "log",
