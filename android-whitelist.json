@@ -3315,15 +3315,6 @@
       "version": "2\\.\\+"
     },
     {
-      "allows_granular_projects": [
-        "com.mercadolibre.android.instore",
-        "com.mercadolibre.android.buyingflow.checkout",
-        "com.mercadolibre.android.buyingflow_payment",
-        "com.mercadolibre.android.buyingflow_review",
-        "com.mercadolibre.android.px",
-        "com.mercadolibre.android.px.pmselector",
-        "com.mercadolibre.android"
-      ],
       "group": "com\\.mercadolibre\\.android\\.ccap",
       "name": "smart-tokenization",
       "version": "5\\.+"
