@@ -52,8 +52,7 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.advertising.adn",
-        "com.mercadolibre.android.viewability"
+        "com.mercadolibre.android.advertising"
       ],
       "group": "com\\.mercadolibre\\.android\\.advertising\\.analytics",
       "name": "log",
@@ -507,14 +506,26 @@
       "version": "2\\.0\\.0"
     },
     {
+      "expires": "2024-07-19",
       "group": "com\\.google\\.android\\.play",
       "name": "app-update",
       "version": "2\\.0\\.0"
     },
     {
+      "expires": "2024-07-19",
       "group": "com\\.google\\.android\\.play",
       "name": "app-update-ktx",
       "version": "2\\.0\\.0"
+    },
+    {
+      "group": "com\\.google\\.android\\.play",
+      "name": "app-update",
+      "version": "2\\.1\\.0"
+    },
+    {
+      "group": "com\\.google\\.android\\.play",
+      "name": "app-update-ktx",
+      "version": "2\\.1\\.0"
     },
     {
       "group": "com\\.google\\.code\\.gson",
@@ -899,9 +910,15 @@
       "version": "5\\.\\+"
     },
     {
+      "expires": "2024-08-02",
       "group": "com\\.mercadolibre\\.android\\.cross_app_links",
       "name": "core",
       "version": "mercadolibre-8\\.\\+|mercadopago-8\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cross_app_links",
+      "name": "core",
+      "version": "9\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.charts",
@@ -1197,9 +1214,18 @@
       "version": "15\\.\\+"
     },
     {
+      "expires": "2024-08-12",
       "group": "com\\.mercadolibre\\.android\\.request_watcher",
       "name": "core",
       "version": "1\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.developer_mode"
+      ],
+      "group": "com\\.mercadolibre\\.android\\.request_watcher",
+      "name": "core",
+      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.liveness_detection\\.liveness",
@@ -1567,26 +1593,50 @@
       "version": "3\\.\\+"
     },
     {
+      "expires": "2024-08-11",
       "group": "com\\.mercadolibre\\.android\\.pos_readers",
       "name": "posreaders",
       "version": "9\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.pos_readers",
+      "name": "posreaders",
+      "version": "10\\.+"
+    },
+    {
+      "expires": "2024-08-11",
+      "group": "com\\.mercadolibre\\.android\\.pos_readers",
       "name": "entrypoint",
       "version": "9\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.pos_readers",
+      "name": "entrypoint",
+      "version": "10\\.+"
+    },
+    {
+      "expires": "2024-08-11",
+      "group": "com\\.mercadolibre\\.android\\.pos_readers",
       "name": "commons",
       "version": "9\\.+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.pos_readers",
+      "name": "commons",
+      "version": "10\\.+"
+    },
+    {
+      "expires": "2024-08-11",
       "group": "com\\.mercadopago\\.android\\.point_ui",
       "name": "components",
       "version": "6\\.+"
     },
     {
+      "group": "com\\.mercadopago\\.android\\.point_ui",
+      "name": "components",
+      "version": "7\\.+"
+    },
+    {
       "description": "The expiration date is extended to have time enough to deprecate it",
       "expires": "2024-12-31",
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
@@ -1615,57 +1665,94 @@
       "version": "12\\.+"
     },
     {
+      "expires": "2024-08-11",
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
       "name": "paymentflowfcu",
       "version": "13\\.+"
     },
     {
+      "expires": "2024-08-11",
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
       "name": "entities_fcu",
       "version": "13\\.+"
     },
     {
+      "expires": "2024-08-11",
       "group": "com\\.mercadolibre\\.android\\.point\\.mpos",
       "name": "mpos",
       "version": "7\\.+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
+      "name": "paymentflowfcu",
+      "version": "14\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
+      "name": "entities_fcu",
+      "version": "14\\.+"
+    },
+    {
+      "expires": "2024-08-11",
       "group": "com\\.mercadolibre\\.android\\.point\\.mpos",
       "name": "entrypoint",
       "version": "8\\.+"
     },
     {
-      "expires": "2024-12-01",
+      "group": "com\\.mercadolibre\\.android\\.point\\.mpos",
+      "name": "entrypoint",
+      "version": "9\\.+"
+    },
+    {
+      "expires": "2024-08-11",
       "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
       "name": "mpoc",
       "version": "0\\.+"
     },
     {
-      "expires": "2024-12-01",
+      "expires": "2024-08-11",
       "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
       "name": "mypinpad",
       "version": "0\\.+"
     },
     {
-      "expires": "2024-12-01",
+      "expires": "2024-08-11",
       "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
       "name": "payment",
       "version": "0\\.+"
     },
     {
+      "expires": "2024-08-11",
       "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
       "name": "mpoc",
       "version": "1\\.+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
+      "name": "mpoc",
+      "version": "2\\.+"
+    },
+    {
+      "expires": "2024-08-11",
+      "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
       "name": "mypinpad",
       "version": "1\\.+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
+      "name": "mypinpad",
+      "version": "2\\.+"
+    },
+    {
+      "expires": "2024-08-11",
+      "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
       "name": "payment",
       "version": "1\\.+"
+    },
+    {
+      "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
+      "name": "payment",
+      "version": "2\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.mpos\\.android\\.sdk_mpp",
@@ -1673,9 +1760,15 @@
       "version": "1\\.+"
     },
     {
+      "expires": "2024-08-11",
       "group": "com\\.mercadopago\\.android\\.isp\\.payment_contactless",
       "name": "sdk",
       "version": "0\\.+"
+    },
+    {
+      "group": "com\\.mercadopago\\.android\\.isp\\.payment_contactless",
+      "name": "sdk",
+      "version": "1\\.+"
     },
     {
       "group": "com\\.polidea\\.rxandroidble2",
@@ -3339,6 +3432,12 @@
       "version": "2\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.ccap",
+      "name": "smart-tokenization",
+      "version": "5\\.+"
+    },
+    {
+      "expires": "2024-07-15",
       "group": "com\\.mercadolibre\\.android\\.ccap",
       "name": "smart-tokenization",
       "version": "4\\.+"
