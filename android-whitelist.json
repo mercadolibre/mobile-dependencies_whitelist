@@ -910,9 +910,15 @@
       "version": "5\\.\\+"
     },
     {
+      "expires": "2024-08-02",
       "group": "com\\.mercadolibre\\.android\\.cross_app_links",
       "name": "core",
       "version": "mercadolibre-8\\.\\+|mercadopago-8\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cross_app_links",
+      "name": "core",
+      "version": "9\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.charts",
