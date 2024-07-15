@@ -506,14 +506,26 @@
       "version": "2\\.0\\.0"
     },
     {
+      "expires": "2024-07-19",
       "group": "com\\.google\\.android\\.play",
       "name": "app-update",
       "version": "2\\.0\\.0"
     },
     {
+      "expires": "2024-07-19",
       "group": "com\\.google\\.android\\.play",
       "name": "app-update-ktx",
       "version": "2\\.0\\.0"
+    },
+    {
+      "group": "com\\.google\\.android\\.play",
+      "name": "app-update",
+      "version": "2\\.1\\.0"
+    },
+    {
+      "group": "com\\.google\\.android\\.play",
+      "name": "app-update-ktx",
+      "version": "2\\.1\\.0"
     },
     {
       "group": "com\\.google\\.code\\.gson",
