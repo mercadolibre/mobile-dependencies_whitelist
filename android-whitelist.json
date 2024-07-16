@@ -1256,9 +1256,15 @@
       "version": "13\\.\\+"
     },
     {
+      "expires": "2024-08-12",
       "group": "com\\.mercadolibre\\.android\\.risk_management",
       "name": "riskmanagement",
       "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.risk_management",
+      "name": "riskmanagement",
+      "version": "7\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.livecommerce",
@@ -1866,19 +1872,37 @@
       "version": "1\\.8\\.10"
     },
     {
+      "expires": "2024-08-12",
       "group": "com\\.mercadolibre\\.android\\.userbiometrics",
       "name": "core",
       "version": "9\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.userbiometrics",
+      "name": "core",
+      "version": "10\\.\\+"
+    },
+    {
+      "expires": "2024-08-12",
       "group": "com\\.mercadolibre\\.android\\.security",
       "name": "security_preferences",
       "version": "mercadopago-10\\.\\+|mercadolibre-10\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.security",
+      "name": "security_preferences",
+      "version": "mercadopago-11\\.\\+|mercadolibre-11\\.\\+"
+    },
+    {
+      "expires": "2024-08-12",
+      "group": "com\\.mercadolibre\\.android\\.security",
       "name": "security_ui",
       "version": "mercadopago-9\\.\\+|mercadolibre-9\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.security",
+      "name": "security_ui",
+      "version": "mercadopago-10\\.\\+|mercadolibre-10\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.security_two_fa",
