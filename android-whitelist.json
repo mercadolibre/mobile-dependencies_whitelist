@@ -4154,6 +4154,22 @@
         "transitivity": false
       },
       "version": "1\\.3\\.1"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.ar.measures"
+      ],
+      "group": "com\\.gorisse\\.thomas\\.sceneform",
+      "name": "sceneform",
+      "version": "1\\.\\23\\.0"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.ar.measures"
+      ],
+      "group": "com\\.journeyapps",
+      "name": "zxing-android-embedded",
+      "version": "4\\.\\3\\.0"
     }
   ]
 }
