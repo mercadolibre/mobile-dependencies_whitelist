@@ -4043,6 +4043,11 @@
       "version": "0\\.+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.transferscheckout",
+      "name": "amountpicker",
+      "version": "0\\.+"
+    },
+    {
       "allows_granular_projects": [
         "com.mercadopago.android.moneyout",
         "com.mercadolibre.android.da_management"
