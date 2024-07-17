@@ -4052,7 +4052,8 @@
     {
       "allows_granular_projects": [
         "com.mercadopago.android.moneyout",
-        "com.mercadolibre.android.da_management"
+        "com.mercadolibre.android.da_management",
+        "com.mercadopago.android.multiplayer.commons"
       ],
       "group": "com\\.mercadolibre\\.android\\.transfers_components",
       "name": "core",
@@ -4061,7 +4062,8 @@
     {
       "allows_granular_projects": [
         "com.mercadopago.android.moneyout",
-        "com.mercadolibre.android.da_management"
+        "com.mercadolibre.android.da_management",
+        "com.mercadopago.android.multiplayer.commons"
       ],
       "group": "com\\.mercadolibre\\.android\\.transfers_components",
       "name": "metadata",
