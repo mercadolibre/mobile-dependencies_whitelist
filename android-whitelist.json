@@ -4159,6 +4159,7 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.ar.measures"
       ],
+      "description": "This dependency is only added for allow AR in the project of measures, this under the context of WMS. It is not allowed for modules that belong into of MP|ML",
       "group": "com\\.gorisse\\.thomas\\.sceneform",
       "name": "sceneform",
       "version": "1\\.\\23\\.0"
@@ -4167,6 +4168,7 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.ar.measures"
       ],
+      "description": "This dependency is only added for allow AR in the project of measures, this under the context of WMS. It is not allowed for modules that belong into of MP|ML",
       "group": "com\\.journeyapps",
       "name": "zxing-android-embedded",
       "version": "4\\.\\3\\.0"
