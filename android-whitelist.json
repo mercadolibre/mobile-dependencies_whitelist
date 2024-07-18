@@ -4159,7 +4159,7 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.ar.measures"
       ],
-      "description": "This dependency is only added for allow AR in the project of measures, this under the context of WMS. It is not allowed for modules that belong into of MP|ML",
+      "description": "This dependency was added to allow Augmented Reality only on Mercury WMS. No other modules are allowed to use them, especially the ones that belong to ML or MP.",
       "group": "com\\.gorisse\\.thomas\\.sceneform",
       "name": "sceneform",
       "version": "1\\.\\23\\.0"
@@ -4168,7 +4168,7 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.ar.measures"
       ],
-      "description": "This dependency is only added for allow AR in the project of measures, this under the context of WMS. It is not allowed for modules that belong into of MP|ML",
+      "description": "This dependency was added to allow Augmented Reality only on Mercury WMS. No other modules are allowed to use them, especially the ones that belong to ML or MP.",
       "group": "com\\.journeyapps",
       "name": "zxing-android-embedded",
       "version": "4\\.\\3\\.0"
