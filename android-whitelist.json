@@ -1359,7 +1359,9 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android"
+        "com.mercadolibre.android",
+        "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.search"
       ],
       "description": "This library is only available for ML. To use it in MP you must use version 6.+",
       "group": "com\\.mercadolibre\\.android\\.navigation_manager",
@@ -1526,15 +1528,15 @@
       "version": "5\\.\\+"
     },
     {
-      "expires": "2024-10-4",
+      "expires": "2024-10-04",
       "group": "com\\.mercadolibre\\.android\\.px",
       "name": "usdk",
-      "version": "6\\.5\\.52"
+      "version": "6\\.6\\.69"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.px",
       "name": "usdk",
-      "version": "6\\.6\\.69"
+      "version": "6\\.6\\.70"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.px\\.pmselector",
@@ -2751,7 +2753,7 @@
         "com.mercadolibre.android.singleplayer",
         "com.mercadopago.android.prepaid_globe"
       ],
-      "description": "Use the version 2.3.1-115",
+      "description": "Use the version 2.3.1-114",
       "expires": "2024-08-30",
       "group": "com\\.mercadolibre\\.android\\.globe",
       "name": "libc2d",
@@ -2764,7 +2766,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.globe",
       "name": "libc2d",
-      "version": "2\\.3\\.1\\-115"
+      "version": "2\\.3\\.1\\-114"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point_virtualization",
@@ -3505,9 +3507,15 @@
       "version": "17\\.+"
     },
     {
+      "expires": "2024-08-05",
       "group": "com\\.mercadolibre\\.android\\.errorhandler\\.v2",
       "name": "core",
       "version": "production-3\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.errorhandler\\.v2",
+      "name": "core",
+      "version": "production-4\\.\\+"
     },
     {
       "description": "Qualtrics native SDK library. Use ml_qualtrics instead.",
@@ -4050,10 +4058,21 @@
     {
       "allows_granular_projects": [
         "com.mercadopago.android.moneyout",
-        "com.mercadolibre.android.da_management"
+        "com.mercadolibre.android.da_management",
+        "com.mercadopago.android.multiplayer"
       ],
       "group": "com\\.mercadolibre\\.android\\.transfers_components",
       "name": "core",
+      "version": "0\\.+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadopago.android.moneyout",
+        "com.mercadolibre.android.da_management",
+        "com.mercadopago.android.multiplayer"
+      ],
+      "group": "com\\.mercadolibre\\.android\\.transfers_components",
+      "name": "metadata",
       "version": "0\\.+"
     },
     {
