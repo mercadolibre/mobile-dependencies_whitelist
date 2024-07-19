@@ -2753,7 +2753,7 @@
         "com.mercadolibre.android.singleplayer",
         "com.mercadopago.android.prepaid_globe"
       ],
-      "description": "Use the version 2.3.1-115",
+      "description": "Use the version 2.3.1-114",
       "expires": "2024-08-30",
       "group": "com\\.mercadolibre\\.android\\.globe",
       "name": "libc2d",
@@ -2766,7 +2766,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.globe",
       "name": "libc2d",
-      "version": "2\\.3\\.1\\-115"
+      "version": "2\\.3\\.1\\-114"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point_virtualization",
@@ -4185,6 +4185,24 @@
         "transitivity": false
       },
       "version": "1\\.3\\.1"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.ar.measures"
+      ],
+      "description": "This dependency was added to allow Augmented Reality only on Mercury WMS. No other modules are allowed to use them, especially the ones that belong to ML or MP.",
+      "group": "com\\.gorisse\\.thomas\\.sceneform",
+      "name": "sceneform",
+      "version": "1\\.\\23\\.0"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.ar.measures"
+      ],
+      "description": "This dependency was added to allow Augmented Reality only on Mercury WMS. No other modules are allowed to use them, especially the ones that belong to ML or MP.",
+      "group": "com\\.journeyapps",
+      "name": "zxing-android-embedded",
+      "version": "4\\.\\3\\.0"
     }
   ]
 }
