@@ -3359,6 +3359,19 @@
       "version": "2\\.\\+"
     },
     {
+      "group": "com\\.okta\\.kotlin",
+      "name": "bom",
+      "version": "1\\.0\\.0"
+    },
+    {
+      "group": "com\\.okta\\.kotlin",
+      "name": "web-authentication-ui"
+    },
+    {
+      "group": "com\\.okta\\.kotlin",
+      "name": "auth-foundation-bootstrap"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.ccap",
       "name": "smart-tokenization",
       "version": "5\\.+"
