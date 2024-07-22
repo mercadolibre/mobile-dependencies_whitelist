@@ -2062,7 +2062,9 @@
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.vpp",
-        "com.mercadolibre.android.everest_canvas"
+        "com.mercadolibre.android.everest_canvas",  
+        "com.mercadolibre.android.configuration",
+        "com.mercadopago.android.configurer"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "expires": "2024-08-05",
@@ -2076,12 +2078,14 @@
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.vpp",
-        "com.mercadolibre.android.everest_canvas"
+        "com.mercadolibre.android.everest_canvas",  
+        "com.mercadolibre.android.configuration",
+        "com.mercadopago.android.configurer"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "com\\.mercadolibre\\.android\\.andes_integrations",
       "name": "integrations-compose",
-      "version": "6\\.\\+|6\\.\\+"
+      "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.discounts_touchpoint",
