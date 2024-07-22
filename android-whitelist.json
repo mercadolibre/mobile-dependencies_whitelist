@@ -3356,6 +3356,18 @@
       "version": "3\\.43\\.1\\.+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.mplay"
+      ],
+      "group": "com\\.google\\.ads\\.interactivemedia.\\v3",
+      "name": "interactivemedia",
+      "version": "3\\.34\\.0"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.mplay"
+      ],
+      "expires": "2024-08-05",
       "group": "com\\.google\\.ads\\.interactivemedia.\\v3",
       "name": "interactivemedia",
       "version": "3\\.29\\.0"
@@ -4120,9 +4132,15 @@
       "version": "9\\.\\+"
     },
     {
+      "expires": "2024-10-19",
       "group": "com\\.mercadolibre\\.android\\.traceability",
       "name": "traceability",
       "version": "10\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.traceability",
+      "name": "traceability",
+      "version": "11\\.\\+"
     },
     {
       "allows_granular_projects": [
