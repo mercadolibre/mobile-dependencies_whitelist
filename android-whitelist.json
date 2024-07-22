@@ -2039,7 +2039,11 @@
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
-        "com.mercadolibre.android.vpp"
+        "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.configuration",
+        "com.mercadolibre.android.andesui.compose.configurator",
+        "com.mercadolibre.andes_compose_configurer",
+        "com.mercadopago.android.configurer"
       ],
       "group": "com\\.mercadolibre\\.android\\.andesui",
       "name": "components-compose",
@@ -2064,6 +2068,8 @@
         "com.mercadolibre.android.vpp",
         "com.mercadolibre.android.everest_canvas",  
         "com.mercadolibre.android.configuration",
+        "com.mercadolibre.android.andesui.compose.configurator",
+        "com.mercadolibre.andes_compose_configurer",
         "com.mercadopago.android.configurer"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
@@ -2078,8 +2084,11 @@
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.vpp",
-        "com.mercadolibre.android.everest_canvas",  
+        "com.mercadolibre.android.everest_canvas",
+        "com.mercadolibre.android.configuration.provider",
+        "com.mercadolibre.android.andesui.compose.configurator",
         "com.mercadolibre.android.configuration",
+        "com.mercadolibre.andes_compose_configurer",
         "com.mercadopago.android.configurer"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
