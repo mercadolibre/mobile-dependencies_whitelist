@@ -2046,9 +2046,9 @@
       "version": "10\\.\\+"
     },
     {
+      "expires": "2024-08-01",
       "group": "com\\.mercadolibre\\.android\\.andes_integrations",
       "name": "integrations",
-      "expires": "2024-08-01",
       "version": "mercadopago-5\\.\\+|mercadolibre-5\\.\\+"
     },
     {
@@ -2065,8 +2065,8 @@
         "com.mercadolibre.android.everest_canvas"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
-      "group": "com\\.mercadolibre\\.android\\.andes_integrations",
       "expires": "2024-08-01",
+      "group": "com\\.mercadolibre\\.android\\.andes_integrations",
       "name": "integrations-compose",
       "version": "mercadopago-5\\.\\+|mercadolibre-5\\.\\+"
     },
