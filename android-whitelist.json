@@ -506,18 +506,6 @@
       "version": "2\\.0\\.0"
     },
     {
-      "expires": "2024-07-19",
-      "group": "com\\.google\\.android\\.play",
-      "name": "app-update",
-      "version": "2\\.0\\.0"
-    },
-    {
-      "expires": "2024-07-19",
-      "group": "com\\.google\\.android\\.play",
-      "name": "app-update-ktx",
-      "version": "2\\.0\\.0"
-    },
-    {
       "group": "com\\.google\\.android\\.play",
       "name": "app-update",
       "version": "2\\.1\\.0"
@@ -945,12 +933,6 @@
       "version": "8\\.\\+"
     },
     {
-      "expires": "2024-07-15",
-      "group": "com\\.mercadolibre\\.android\\.cpg",
-      "name": "ui_components",
-      "version": "10\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.cpg",
       "name": "ui_components",
       "version": "11\\.\\+"
@@ -1337,13 +1319,6 @@
       "group": "com\\.modiface",
       "name": "mfemakeupkit",
       "version": "20\\.0\\.0"
-    },
-    {
-      "description": "The expiration is due to a library update to support Android 14",
-      "expires": "2024-7-15",
-      "group": "com\\.mercadolibre\\.android\\.eshops",
-      "name": "components",
-      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.eshops",
@@ -3495,12 +3470,6 @@
       "group": "com\\.mercadolibre\\.android\\.ccap",
       "name": "smart-tokenization",
       "version": "5\\.+"
-    },
-    {
-      "expires": "2024-07-15",
-      "group": "com\\.mercadolibre\\.android\\.ccap",
-      "name": "smart-tokenization",
-      "version": "4\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.ccap",
