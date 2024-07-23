@@ -419,7 +419,8 @@
         "com.mercadolibre.android.discovery",
         "com.mercadolibre.android.point.mpos",
         "com.mercadolibre.android.checkout",
-        "com.mercadolibre.android.buyingflow.checkout"
+        "com.mercadolibre.android.buyingflow.checkout",
+        "com.mercadolibre.android.location"
       ],
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-location",
@@ -776,14 +777,26 @@
       "version": "26\\.\\+"
     },
     {
+      "expires": "2024-08-23",
       "group": "com\\.mercadolibre\\.android",
       "name": "ui",
       "version": "10\\.\\+"
     },
     {
+      "expires": "2024-08-23",
       "group": "com\\.mercadolibre\\.android",
       "name": "ui_legacy",
       "version": "10\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "ui",
+      "version": "11\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "ui_legacy",
+      "version": "11\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.activity",
