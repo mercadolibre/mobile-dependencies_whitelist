@@ -506,18 +506,6 @@
       "version": "2\\.0\\.0"
     },
     {
-      "expires": "2024-07-19",
-      "group": "com\\.google\\.android\\.play",
-      "name": "app-update",
-      "version": "2\\.0\\.0"
-    },
-    {
-      "expires": "2024-07-19",
-      "group": "com\\.google\\.android\\.play",
-      "name": "app-update-ktx",
-      "version": "2\\.0\\.0"
-    },
-    {
       "group": "com\\.google\\.android\\.play",
       "name": "app-update",
       "version": "2\\.1\\.0"
@@ -943,12 +931,6 @@
       "version": "8\\.\\+"
     },
     {
-      "expires": "2024-07-15",
-      "group": "com\\.mercadolibre\\.android\\.cpg",
-      "name": "ui_components",
-      "version": "10\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.cpg",
       "name": "ui_components",
       "version": "11\\.\\+"
@@ -1335,13 +1317,6 @@
       "group": "com\\.modiface",
       "name": "mfemakeupkit",
       "version": "20\\.0\\.0"
-    },
-    {
-      "description": "The expiration is due to a library update to support Android 14",
-      "expires": "2024-7-15",
-      "group": "com\\.mercadolibre\\.android\\.eshops",
-      "name": "components",
-      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.eshops",
@@ -2630,11 +2605,20 @@
       "version": "0\\.10\\.1"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.yuca_authentication",
+        "com.mercadolibre.android.meli.store.authentication"
+      ],
+      "expires": "2024-12-31",
       "group": "com\\.auth0\\.android",
       "name": "auth0",
       "version": "2\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.yuca_authentication"
+      ],
+      "expires": "2024-12-31",
       "group": "com\\.auth0\\.android",
       "name": "jwtdecode",
       "version": "2\\.\\+"
@@ -3404,15 +3388,32 @@
       "version": "2\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.yuca_authentication"
+      ],
+      "description": "This library provides Single Sing-On authentication for Mercado Libre. Mainly used under the hood by an authentication abstracion layer developed with the Fury App name yuca-authentication-android.",
+      "group": "com\\.okta\\.kotlin",
+      "name": "bom",
+      "version": "1\\.0\\.0"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.yuca_authentication"
+      ],
+      "group": "com\\.okta\\.kotlin",
+      "name": "web-authentication-ui"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.yuca_authentication"
+      ],
+      "group": "com\\.okta\\.kotlin",
+      "name": "auth-foundation-bootstrap"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.ccap",
       "name": "smart-tokenization",
       "version": "5\\.+"
-    },
-    {
-      "expires": "2024-07-15",
-      "group": "com\\.mercadolibre\\.android\\.ccap",
-      "name": "smart-tokenization",
-      "version": "4\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.ccap",
@@ -4044,9 +4045,15 @@
       "version": "9\\.\\+"
     },
     {
+      "expires": "2024-10-19",
       "group": "com\\.mercadolibre\\.android\\.traceability",
       "name": "traceability",
       "version": "10\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.traceability",
+      "name": "traceability",
+      "version": "11\\.\\+"
     },
     {
       "allows_granular_projects": [
