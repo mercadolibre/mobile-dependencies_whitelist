@@ -2699,11 +2699,20 @@
       "version": "0\\.10\\.1"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.yuca_authentication",
+        "com.mercadolibre.android.meli.store.authentication"
+      ],
+      "expires": "2024-12-31",
       "group": "com\\.auth0\\.android",
       "name": "auth0",
       "version": "2\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.yuca_authentication"
+      ],
+      "expires": "2024-12-31",
       "group": "com\\.auth0\\.android",
       "name": "jwtdecode",
       "version": "2\\.\\+"
@@ -3471,6 +3480,29 @@
       "group": "com\\.mercadolibre\\.android\\.yuca_authentication",
       "name": "yuca",
       "version": "2\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.yuca_authentication"
+      ],
+      "description": "This library provides Single Sing-On authentication for Mercado Libre. Mainly used under the hood by an authentication abstracion layer developed with the Fury App name yuca-authentication-android.",
+      "group": "com\\.okta\\.kotlin",
+      "name": "bom",
+      "version": "1\\.0\\.0"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.yuca_authentication"
+      ],
+      "group": "com\\.okta\\.kotlin",
+      "name": "web-authentication-ui"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.yuca_authentication"
+      ],
+      "group": "com\\.okta\\.kotlin",
+      "name": "auth-foundation-bootstrap"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.ccap",
