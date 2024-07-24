@@ -2515,7 +2515,7 @@
         "com.mercadopago.android.digital_accounts_components.web_server"
       ],
       "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
-      "group": "com\\.squareup\\.okttp3",
+      "group": "com\\.squareup\\.okhttp3",
       "name": "mockwebserver",
       "version": "4\\.9\\.3"
     },
@@ -2533,7 +2533,7 @@
         "com.mercadopago.android.digital_accounts_components.robolectric"
       ],
       "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
-      "group": "com\\.mercadolibre\\.android",
+      "group": "com\\.mercagopago\\.android\\.configurer",
       "name": "local-storage-configurer",
       "version": "33\\.\\+"
     },
