@@ -742,7 +742,7 @@
         "com.mercadolibre.android.security_two_fa.commonstest",
         "com.mercadolibre.android.mobile_cryptography.test_utils",
         "com.mercadolibre.android.credits.ui_components.test",
-        "com.mercadopago.android.digital_accounts_components.robolectric"
+        "com.mercadopago.android.digital_accounts_components"
       ],
       "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "com\\.mercadolibre\\.android\\.testing",
@@ -761,7 +761,7 @@
     {
       "allows_granular_projects": [
         "com.mercadolibre.android.testing",
-        "com.mercadopago.android.digital_accounts_components.espresso"
+        "com.mercadopago.android.digital_accounts_components"
       ],
       "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "androidx\\.test\\.ext",
@@ -2360,7 +2360,7 @@
     {
       "allows_granular_projects": [
         "com.mercadolibre.android.testing",
-        "com.mercadopago.android.digital_accounts_components.robolectric"
+        "com.mercadopago.android.digital_accounts_components"
       ],
       "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "org\\.robolectric",
@@ -2407,7 +2407,7 @@
     {
       "allows_granular_projects": [
         "com.mercadolibre.android.testing",
-        "com.mercadopago.android.digital_accounts_components.robolectric"
+        "com.mercadopago.android.digital_accounts_components"
       ],
       "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "junit",
@@ -2416,8 +2416,7 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadopago.android.digital_accounts_components.espresso",
-        "com.mercadopago.android.digital_accounts_components.robolectric"
+        "com.mercadopago.android.digital_accounts_components"
       ],
       "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "androidx\\.test\\.espresso",
@@ -2426,8 +2425,7 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadopago.android.digital_accounts_components.espresso",
-        "com.mercadopago.android.digital_accounts_components.robolectric"
+        "com.mercadopago.android.digital_accounts_components"
       ],
       "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "androidx\\.test\\.espresso",
@@ -2436,8 +2434,7 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadopago.android.digital_accounts_components.espresso",
-        "com.mercadopago.android.digital_accounts_components.robolectric"
+        "com.mercadopago.android.digital_accounts_components"
       ],
       "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "androidx\\.test",
@@ -2446,8 +2443,7 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadopago.android.digital_accounts_components.espresso",
-        "com.mercadopago.android.digital_accounts_components.robolectric"
+        "com.mercadopago.android.digital_accounts_components"
       ],
       "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "androidx\\.test",
@@ -2456,7 +2452,7 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadopago.android.digital_accounts_components.robolectric"
+        "com.mercadopago.android.digital_accounts_components"
       ],
       "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "androidx\\.test",
@@ -2465,7 +2461,7 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadopago.android.digital_accounts_components.robolectric"
+        "com.mercadopago.android.digital_accounts_components"
       ],
       "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "androidx\\.test\\.ext",
@@ -2474,7 +2470,7 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadopago.android.digital_accounts_components.robolectric"
+        "com.mercadopago.android.digital_accounts_components"
       ],
       "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "androidx\\.arch\\.core",
@@ -2483,7 +2479,7 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadopago.android.digital_accounts_components.robolectric"
+        "com.mercadopago.android.digital_accounts_components"
       ],
       "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "androidx\\.fragment",
@@ -2492,8 +2488,7 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadopago.android.digital_accounts_components.espresso",
-        "com.mercadopago.android.digital_accounts_components.robolectric"
+        "com.mercadopago.android.digital_accounts_components"
       ],
       "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "com\\.nhaarman\\.mockitokotlin2",
@@ -2502,8 +2497,7 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadopago.android.digital_accounts_components.espresso",
-        "com.mercadopago.android.digital_accounts_components.robolectric"
+        "com.mercadopago.android.digital_accounts_components"
       ],
       "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "org\\.jetbrains\\.kotlinx",
@@ -2512,7 +2506,7 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadopago.android.digital_accounts_components.web_server"
+        "com.mercadopago.android.digital_accounts_components"
       ],
       "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "com\\.squareup\\.okhttp3",
@@ -2521,7 +2515,7 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadopago.android.digital_accounts_components.robolectric"
+        "com.mercadopago.android.digital_accounts_components"
       ],
       "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "com\\.mercadolibre\\.android",
@@ -2530,7 +2524,7 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadopago.android.digital_accounts_components.robolectric"
+        "com.mercadopago.android.digital_accounts_components"
       ],
       "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "com\\.mercadopago\\.android\\.configurer",
