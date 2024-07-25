@@ -3173,9 +3173,21 @@
     {
       "group": "com\\.mercadolibre\\.android\\.developer_mode",
       "name": "no-dm-core",
+      "version": "13\\.\\+"
+    },
+    {
+      "expires": "2024-10-29",
+      "group": "com\\.mercadolibre\\.android\\.developer_mode",
+      "name": "no-dm-core",
       "version": "10\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.developer_mode",
+      "name": "dm-core",
+      "version": "13\\.\\+"
+    },
+    {
+      "expires": "2024-10-29",
       "group": "com\\.mercadolibre\\.android\\.developer_mode",
       "name": "dm-core",
       "version": "10\\.\\+"
