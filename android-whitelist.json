@@ -419,7 +419,8 @@
         "com.mercadolibre.android.discovery",
         "com.mercadolibre.android.point.mpos",
         "com.mercadolibre.android.checkout",
-        "com.mercadolibre.android.buyingflow.checkout"
+        "com.mercadolibre.android.buyingflow.checkout",
+        "com.mercadolibre.android.location"
       ],
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-location",
@@ -740,7 +741,8 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.security_two_fa.commonstest",
         "com.mercadolibre.android.mobile_cryptography.test_utils",
-        "com.mercadolibre.android.credits.ui_components.test"
+        "com.mercadolibre.android.credits.ui_components.test",
+        "com.mercadopago.android.digital_accounts_components"
       ],
       "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "com\\.mercadolibre\\.android\\.testing",
@@ -758,7 +760,8 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.testing"
+        "com.mercadolibre.android.testing",
+        "com.mercadopago.android.digital_accounts_components"
       ],
       "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "androidx\\.test\\.ext",
@@ -776,14 +779,26 @@
       "version": "26\\.\\+"
     },
     {
+      "expires": "2024-08-23",
       "group": "com\\.mercadolibre\\.android",
       "name": "ui",
       "version": "10\\.\\+"
     },
     {
+      "expires": "2024-08-23",
       "group": "com\\.mercadolibre\\.android",
       "name": "ui_legacy",
       "version": "10\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "ui",
+      "version": "11\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "ui_legacy",
+      "version": "11\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.activity",
@@ -1478,9 +1493,16 @@
       "version": "7\\.\\+"
     },
     {
+      "description": "Deprecated due to Android 14 migration",
+      "expires": "2024-07-26",
       "group": "com\\.mercadopago\\.android\\.digital_accounts_components",
       "name": "digital_accounts_components",
       "version": "8\\.\\+"
+    },
+    {
+      "group": "com\\.mercadopago\\.android\\.digital_accounts_components",
+      "name": "digital_accounts_components",
+      "version": "9\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.ml_esc_manager",
@@ -2344,7 +2366,8 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.testing"
+        "com.mercadolibre.android.testing",
+        "com.mercadopago.android.digital_accounts_components"
       ],
       "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "org\\.robolectric",
@@ -2390,12 +2413,130 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.testing"
+        "com.mercadolibre.android.testing",
+        "com.mercadopago.android.digital_accounts_components"
       ],
       "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
       "group": "junit",
       "name": "junit",
       "version": "4\\.13"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadopago.android.digital_accounts_components"
+      ],
+      "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
+      "group": "androidx\\.test\\.espresso",
+      "name": "espresso-core",
+      "version": "3\\.4\\.0"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadopago.android.digital_accounts_components"
+      ],
+      "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
+      "group": "androidx\\.test\\.espresso",
+      "name": "espresso-intents",
+      "version": "3\\.4\\.0"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadopago.android.digital_accounts_components"
+      ],
+      "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
+      "group": "androidx\\.test",
+      "name": "runner",
+      "version": "1\\.1\\.1"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadopago.android.digital_accounts_components"
+      ],
+      "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
+      "group": "androidx\\.test",
+      "name": "rules",
+      "version": "1\\.1\\.1"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadopago.android.digital_accounts_components"
+      ],
+      "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
+      "group": "androidx\\.test",
+      "name": "core-ktx",
+      "version": "1\\.3\\.0"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadopago.android.digital_accounts_components"
+      ],
+      "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
+      "group": "androidx\\.test\\.ext",
+      "name": "junit-ktx",
+      "version": "1\\.1\\.2"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadopago.android.digital_accounts_components"
+      ],
+      "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
+      "group": "androidx\\.arch\\.core",
+      "name": "core-testing",
+      "version": "2\\.1\\.0"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadopago.android.digital_accounts_components"
+      ],
+      "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
+      "group": "androidx\\.fragment",
+      "name": "fragment-testing",
+      "version": "1\\.3\\.6"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadopago.android.digital_accounts_components"
+      ],
+      "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
+      "group": "com\\.nhaarman\\.mockitokotlin2",
+      "name": "mockito-kotlin",
+      "version": "2\\.2\\.0"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadopago.android.digital_accounts_components"
+      ],
+      "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
+      "group": "org\\.jetbrains\\.kotlinx",
+      "name": "kotlinx-coroutines-test",
+      "version": "1\\.3\\.8"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadopago.android.digital_accounts_components"
+      ],
+      "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
+      "group": "com\\.squareup\\.okhttp3",
+      "name": "mockwebserver",
+      "version": "4\\.9\\.3"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadopago.android.digital_accounts_components"
+      ],
+      "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "authentication-test",
+      "version": "26\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadopago.android.digital_accounts_components"
+      ],
+      "description": "This library should be used only in testImplementation flavor, If you need it in for your TEST lib please send a PR to the allowlist.",
+      "group": "com\\.mercadopago\\.android\\.configurer",
+      "name": "local-storage-configurer",
+      "version": "33\\.\\+"
     },
     {
       "group": "com\\.jakewharton\\.timber",
@@ -2572,11 +2713,20 @@
       "version": "0\\.10\\.1"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.yuca_authentication",
+        "com.mercadolibre.android.meli.store.authentication"
+      ],
+      "expires": "2024-12-31",
       "group": "com\\.auth0\\.android",
       "name": "auth0",
       "version": "2\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.yuca_authentication"
+      ],
+      "expires": "2024-12-31",
       "group": "com\\.auth0\\.android",
       "name": "jwtdecode",
       "version": "2\\.\\+"
@@ -2835,21 +2985,21 @@
     },
     {
       "description": "For integrators from inside MP/MLs app - Expires because migrations",
-      "expires": "2024-07-26",
+      "expires": "2024-08-16",
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "scanner",
       "version": "mercadolibre-14\\.\\+|mercadopago-14\\.\\+"
     },
     {
       "description": "For integrators from inside MP/MLs app - Expires because migrations",
-      "expires": "2024-07-26",
+      "expires": "2024-08-16",
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "ocr",
       "version": "mercadolibre-14\\.\\+|mercadopago-14\\.\\+"
     },
     {
       "description": "For integrators from inside MP/MLs app - Expires because migrations",
-      "expires": "2024-07-26",
+      "expires": "2024-08-16",
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "barcode",
       "version": "mercadolibre-14\\.\\+|mercadopago-14\\.\\+"
@@ -3344,6 +3494,29 @@
       "group": "com\\.mercadolibre\\.android\\.yuca_authentication",
       "name": "yuca",
       "version": "2\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.yuca_authentication"
+      ],
+      "description": "This library provides Single Sing-On authentication for Mercado Libre. Mainly used under the hood by an authentication abstracion layer developed with the Fury App name yuca-authentication-android.",
+      "group": "com\\.okta\\.kotlin",
+      "name": "bom",
+      "version": "1\\.0\\.0"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.yuca_authentication"
+      ],
+      "group": "com\\.okta\\.kotlin",
+      "name": "web-authentication-ui"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.yuca_authentication"
+      ],
+      "group": "com\\.okta\\.kotlin",
+      "name": "auth-foundation-bootstrap"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.ccap",
