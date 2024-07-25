@@ -1659,10 +1659,13 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "allows_granular_projects": [
+        "Mplay"
+      ],
       "name": "BitmovinPlayer",
       "source": "private",
       "target": "production",
-      "version": "3.36.1|3.64.0"
+      "version": "3.64.0"
     },
     {
       "name": "BitmovinAnalyticsCollector",
