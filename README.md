@@ -22,6 +22,7 @@ regex expressions, so you can form match cases for groups in single strings.
 will** match against a dependency `4.+` (it wont be for example the string `4.2.3`)
 * You can have expirable dependencies by adding the `expires` field. If no field is added, the dependency is
   considered as non-expirable
+  * Warning: expires should not be on wednesday or thursday, as they are to close to the release trains and generate unforseable issues
 * If no group / name / version is provided, they will default to `.*` (any string)
 
 JSON Schema:
