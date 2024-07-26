@@ -1950,6 +1950,16 @@
       "version": "15.0.3"
     },
     {
+      "allows_granular_projects": [
+        "MLSearch",
+        "MLVPP"
+      ],
+      "name": "MoreLikeThis",
+      "source": "private",
+      "target": "test",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
       "name": "VirtualTryOn",
       "source": "private",
       "target": "production",
