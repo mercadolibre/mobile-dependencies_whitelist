@@ -2095,6 +2095,12 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "name": "HorizontalCards",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
       "allows_granular_projects": [
         "DependencyInjection",
         "CrabDI"
