@@ -951,8 +951,14 @@
       "version": "11\\.\\+"
     },
     {
+      "description": "Deprecated due to flavors creation",
+      "expires": "2024-08-25",
       "group": "com\\.mercadolibre\\.android\\.instore_ui_components",
       "version": "10\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.instore_ui_components",
+      "version": "mercadopago-11\\.\\+|mercadolibre-11\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.flox",
