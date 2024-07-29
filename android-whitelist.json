@@ -1493,13 +1493,6 @@
       "version": "7\\.\\+"
     },
     {
-      "description": "Deprecated due to Android 14 migration",
-      "expires": "2024-07-26",
-      "group": "com\\.mercadopago\\.android\\.digital_accounts_components",
-      "name": "digital_accounts_components",
-      "version": "8\\.\\+"
-    },
-    {
       "group": "com\\.mercadopago\\.android\\.digital_accounts_components",
       "name": "digital_accounts_components",
       "version": "9\\.\\+"
@@ -3698,12 +3691,6 @@
       "version": "mercadolibre-3\\.\\+|mercadopago-3\\.\\+"
     },
     {
-      "expires": "2024-07-27",
-      "group": "com\\.mercadolibre\\.android\\.xprod\\.modules",
-      "name": "webview",
-      "version": "2\\.\\+"
-    },
-    {
       "expires": "2024-08-02",
       "group": "com\\.mercadolibre\\.android\\.xprod\\.modules",
       "name": "webview",
@@ -4234,12 +4221,6 @@
       "group": "com\\.mercadolibre\\.android\\.transfers_components",
       "name": "metadata",
       "version": "0\\.+"
-    },
-    {
-      "expires": "2024-07-26",
-      "group": "com\\.mercadolibre\\.android\\.screenshots_manager",
-      "name": "core",
-      "version": "1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.screenshots_manager",
