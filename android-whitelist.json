@@ -951,8 +951,14 @@
       "version": "11\\.\\+"
     },
     {
+      "description": "Deprecated due to flavors creation",
+      "expires": "2024-08-25",
       "group": "com\\.mercadolibre\\.android\\.instore_ui_components",
       "version": "10\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.instore_ui_components",
+      "version": "mercadopago-11\\.\\+|mercadolibre-11\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.flox",
@@ -1495,7 +1501,7 @@
     {
       "group": "com\\.mercadopago\\.android\\.digital_accounts_components",
       "name": "digital_accounts_components",
-      "version": "8\\.\\+"
+      "version": "9\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.ml_esc_manager",
@@ -2871,7 +2877,7 @@
         "com.mercadolibre.android.singleplayer",
         "com.mercadopago.android.prepaid_globe"
       ],
-      "description": "Use the version 2.3.1-114",
+      "description": "Use the version 2.3.3",
       "expires": "2024-08-30",
       "group": "com\\.mercadolibre\\.android\\.globe",
       "name": "libc2d",
@@ -2884,7 +2890,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.globe",
       "name": "libc2d",
-      "version": "2\\.3\\.1\\-114"
+      "version": "2\\.3\\.3"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point_virtualization",
@@ -3691,12 +3697,6 @@
       "version": "mercadolibre-3\\.\\+|mercadopago-3\\.\\+"
     },
     {
-      "expires": "2024-07-27",
-      "group": "com\\.mercadolibre\\.android\\.xprod\\.modules",
-      "name": "webview",
-      "version": "2\\.\\+"
-    },
-    {
       "expires": "2024-08-02",
       "group": "com\\.mercadolibre\\.android\\.xprod\\.modules",
       "name": "webview",
@@ -4227,12 +4227,6 @@
       "group": "com\\.mercadolibre\\.android\\.transfers_components",
       "name": "metadata",
       "version": "0\\.+"
-    },
-    {
-      "expires": "2024-07-26",
-      "group": "com\\.mercadolibre\\.android\\.screenshots_manager",
-      "name": "core",
-      "version": "1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.screenshots_manager",
