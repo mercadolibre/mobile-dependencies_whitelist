@@ -566,6 +566,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.more_like_this"
         "com.mercadolibre.android.commons",
         "com.mercadolibre.android.wallet.home",
         "com.mercadolibre.android.singleplayer",
@@ -1315,7 +1316,7 @@
       ],
       "description": "This is an experimental version of more like this lib",
       "group": "com\\.mercadolibre\\.android\\.more_like_this",
-      "name": "core",
+      "name": "more_like_this",
       "version": "0\\.\\+"
     },
     {
