@@ -3125,9 +3125,13 @@
       "version": "7\\.+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadopago.android.configurer",
+        "com.mercadolibre.android.configuration.provider"
+      ],
       "group": "com\\.mercadolibre\\.android\\.braze",
       "name": "core",
-      "version": "3.\\+"
+      "version": "6.\\+"
     },
     {
       "allows_granular_projects": [
