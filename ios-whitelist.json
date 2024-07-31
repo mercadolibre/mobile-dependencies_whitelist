@@ -1674,24 +1674,6 @@
       "version": "3.36.1"
     },
     {
-      "allows_granular_projects": [
-        "Mplay"
-      ],
-      "name": "BitmovinAnalyticsCollector",
-      "source": "private",
-      "target": "production",
-      "version": "3.7.0"
-    },
-    {
-      "allows_granular_projects": [
-        "Mplay"
-      ],
-      "name": "BitmovinPlayerCore",
-      "source": "private",
-      "target": "production",
-      "version": "3.64.0"
-    },
-    {
       "name": "google-cast-sdk-no-bluetooth",
       "source": "public",
       "target": "production",
