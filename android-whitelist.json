@@ -3125,14 +3125,21 @@
       "version": "7\\.+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadopago.android.configurer",
+        "com.mercadolibre.android.configuration.provider"
+      ],
       "group": "com\\.mercadolibre\\.android\\.braze",
       "name": "core",
-      "version": "3.\\+"
+      "version": "6.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.braze"
+      ],
       "group": "com\\.braze",
       "name": "android-sdk-ui",
-      "version": "26\\.1\\.1"
+      "version": "31\\.1\\.0"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.px\\.tokenization",
