@@ -653,13 +653,6 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
-      "expires": "2024-07-30",
-      "name": "MLRxRestClient",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
       "name": "MLCommonUIComponents",
       "source": "private",
       "target": "production",
@@ -2109,6 +2102,12 @@
     },
     {
       "name": "HorizontalCards",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MpGadgets",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
