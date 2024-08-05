@@ -603,6 +603,8 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.more_like_this",
+        "com.mercadolibre.android.commons",
         "com.mercadolibre.android.payment_flow_fcu",
         "com.mercadolibre.android.checkout",
         "com.mercadolibre.android.andesui",
@@ -1363,6 +1365,16 @@
       "group": "com\\.mercadolibre\\.android\\.virtual_try_on",
       "name": "virtualtryon",
       "version": "1\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.search",
+        "com.mercadolibre.android.vpp"
+      ],
+      "description": "This is an experimental version of more like this lib",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "more_like_this",
+      "version": "0\\.\\+"
     },
     {
       "allows_granular_projects": [
