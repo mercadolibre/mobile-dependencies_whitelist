@@ -1594,14 +1594,26 @@
       "version": "6\\.\\+"
     },
     {
+      "expires": "2024-08-20",
       "group": "com\\.mercadolibre\\.android\\.pendings",
       "name": "pendingsview",
       "version": "4\\.\\+"
     },
     {
+      "expires": "2024-08-20",
       "group": "com\\.mercadolibre\\.android\\.pendings",
       "name": "pendingscontainer",
       "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.pendings",
+      "name": "pendingsview",
+      "version": "5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.pendings",
+      "name": "pendingscontainer",
+      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cardscomponents",
@@ -3503,7 +3515,7 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.mplay"
       ],
-      "expires": "2024-08-05",
+      "expires": "2024-09-02",
       "group": "com\\.google\\.ads\\.interactivemedia.\\v3",
       "name": "interactivemedia",
       "version": "3\\.29\\.0"
@@ -3516,9 +3528,21 @@
     {
       "group": "com\\.mercadolibre\\.android\\.developer_mode",
       "name": "no-dm-core",
+      "version": "13\\.\\+"
+    },
+    {
+      "expires": "2024-10-29",
+      "group": "com\\.mercadolibre\\.android\\.developer_mode",
+      "name": "no-dm-core",
       "version": "10\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.developer_mode",
+      "name": "dm-core",
+      "version": "13\\.\\+"
+    },
+    {
+      "expires": "2024-10-29",
       "group": "com\\.mercadolibre\\.android\\.developer_mode",
       "name": "dm-core",
       "version": "10\\.\\+"
