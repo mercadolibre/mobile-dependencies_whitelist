@@ -1105,9 +1105,15 @@
       "version": "10\\.\\+"
     },
     {
+      "expires": "2024-08-30",
       "group": "com\\.mercadolibre\\.android\\.maps",
       "name": "core",
       "version": "10\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.maps",
+      "name": "core",
+      "version": "11\\.\\+"
     },
     {
       "expires": "2024-09-28",
@@ -1421,8 +1427,13 @@
       "version": "10\\.\\+"
     },
     {
+      "expires": "2024-08-30",
       "group": "com\\.mercadolibre\\.android\\.uicomponents",
       "version": "18\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.uicomponents",
+      "version": "19\\.\\+"
     },
     {
       "allows_granular_projects": [
