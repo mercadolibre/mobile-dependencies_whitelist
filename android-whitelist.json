@@ -4486,7 +4486,8 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadopago.android.configurer"
+        "com.mercadopago.android.configurer",
+        "com.mercadolibre.android.mlwebkit"
       ],
       "description": "This library was created to manage application themes. Its use is restricted to mp-config only",
       "group": "com\\.mercadolibre\\.android\\.app_theme",
