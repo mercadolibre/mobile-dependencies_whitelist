@@ -1368,6 +1368,15 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.vpp"
+      ],
+      "description": "Don't use this version in production. It's in experimental phase.",
+      "group": "com\\.mercadolibre\\.android\\.hi",
+      "name": "homeindustries",
+      "version": "0\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
         "com.mercadolibre.android.search",
         "com.mercadolibre.android.vpp"
       ],
