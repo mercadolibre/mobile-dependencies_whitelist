@@ -1491,14 +1491,14 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "expires": "2024-08-08"
+      "expires": "2024-08-08",
       "name": "OHHTTPStubs",
       "source": "public",
       "target": "test",
       "version": "4.0.2"
     },
     {
-      "description": "esta libreria deberia ser agregada en los podspecs? [REVISAR]"
+      "description": "esta libreria deberia ser agregada en los podspecs? [REVISAR]",
       "name": "SwiftLint",
       "source": "public",
       "target": "production",
