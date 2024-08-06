@@ -374,7 +374,7 @@
     },
     {
       "description": "Parece no tener utilidad y se está agregando a ML.",
-      "expires": "2024-08-08"
+      "expires": "2024-08-08",
       "name": "UIImageEffects",
       "source": "public",
       "target": "production",
@@ -583,7 +583,7 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
-      "expires": "2024-12-20"
+      "expires": "2024-12-20",
       "name": "MLFirebase",
       "source": "private",
       "target": "production",
