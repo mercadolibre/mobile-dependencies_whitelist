@@ -25,6 +25,12 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
+      "name": "AdvertisingAnalytics",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
       "name": "MLCheckoutFlow",
       "source": "private",
       "target": "production",
@@ -645,13 +651,6 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?2.[0-9]+$"
-    },
-    {
-      "expires": "2024-07-30",
-      "name": "MLRxRestClient",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MLCommonUIComponents",
@@ -1659,10 +1658,22 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "allows_granular_projects": [
+        "Mplay"
+      ],
       "name": "BitmovinPlayer",
       "source": "private",
       "target": "production",
       "version": "3.36.1"
+    },
+    {
+      "allows_granular_projects": [
+        "Mplay"
+      ],
+      "name": "BitmovinAnalyticsCollector",
+      "source": "private",
+      "target": "production",
+      "version": "2.10.2"
     },
     {
       "name": "google-cast-sdk-no-bluetooth",
@@ -1950,10 +1961,30 @@
       "version": "15.0.3"
     },
     {
+      "allows_granular_projects": [
+        "MLSearch",
+        "MLVPP"
+      ],
+      "name": "MoreLikeThis",
+      "source": "private",
+      "target": "test",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
       "name": "VirtualTryOn",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "allows_granular_projects": [
+        "MLVPP"
+      ],
+      "description": "Don't use this version in production. It's in experimental phase.",
+      "name": "HomeIndustries",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "allows_granular_projects": [
@@ -2087,6 +2118,18 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "HorizontalCards",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MpGadgets",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "allows_granular_projects": [
