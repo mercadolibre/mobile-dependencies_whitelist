@@ -11,38 +11,38 @@
       "version": "1\\.5\\.2"
     },
     {
-      "expires": "2024-09-09",
       "allows_granular_projects": [
         "com.mercadolibre.android.rtc_mobile"
       ],
+      "expires": "2024-09-09",
       "group": "io\\.ktor",
       "name": "ktor-client-core",
       "version": "2\\.2\\.1"
     },
     {
-      "expires": "2024-09-09",
       "allows_granular_projects": [
         "com.mercadolibre.android.rtc_mobile"
       ],
+      "expires": "2024-09-09",
       "group": "io\\.ktor",
       "name": "ktor-client-content-negotiation",
       "version": "2\\.2\\.1"
     },
     {
-      "expires": "2024-09-09",
       "allows_granular_projects": [
         "com.mercadolibre.android.rtc_mobile"
       ],
+      "expires": "2024-09-09",
       "group": "io\\.ktor",
       "name": "ktor-serialization-kotlinx-json",
       "version": "2\\.2\\.1"
     },
     {
-      "expires": "2024-09-09",
       "allows_granular_projects": [
-        "com.mercadolibre.android.rtc_mobile", 
+        "com.mercadolibre.android.rtc_mobile",
         "com.mercadolibre.android.version_checker"
       ],
+      "expires": "2024-09-09",
       "group": "org\\.jetbrains\\.kotlinx",
       "name": "kotlinx-serialization-json",
       "version": "1\\.4\\.0"

@@ -1425,8 +1425,8 @@
       "group": "com\\.modiface",
       "name": "mfemakeupkit",
       "transitive_configuration": {
-        "transitivity": false,
-        "namespace": "mfemakeupkit"
+        "namespace": "mfemakeupkit",
+        "transitivity": false
       },
       "version": "20\\.0\\.0"
     },
