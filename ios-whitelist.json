@@ -61,7 +61,7 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "allows_granular_projects":[
+      "allows_granular_projects": [
         "MLAdjust",
         "MLNavigation/Core",
         "MPConfigurationProvider/App",
@@ -87,7 +87,7 @@
       "version": "6.26.0"
     },
     {
-      "allows_granular_projects":[
+      "allows_granular_projects": [
         "AppMonitoringSetup",
         "MLCommons/IssueTracker-NSBundle-GateKeeper"
       ],
@@ -104,7 +104,7 @@
       "version": "^~>\\s?6.[0-9]+.?[0-9]*$"
     },
     {
-      "allows_granular_projects":[
+      "allows_granular_projects": [
         "MLHome",
         "MLSearch/Core"
       ],
@@ -114,7 +114,7 @@
       "version": "0.8"
     },
     {
-      "allows_granular_projects":[
+      "allows_granular_projects": [
         "MLCharts"
       ],
       "name": "DGCharts",
@@ -144,7 +144,7 @@
       "version": "17.0.0"
     },
     {
-      "allows_granular_projects":[
+      "allows_granular_projects": [
         "IspMpos",
         "MLCommonUIComponents",
         "MPWithdraw",
@@ -157,7 +157,7 @@
       "version": "1.1.1"
     },
     {
-      "allows_granular_projects":[
+      "allows_granular_projects": [
         "MLDynamicModal",
         "MLUI/MLFullscreenModal",
         "MLUI/MLModal",
@@ -199,7 +199,7 @@
       "version": "10.22.0"
     },
     {
-      "allows_granular_projects":[
+      "allows_granular_projects": [
         "MLRemedies/Core"
       ],
       "name": "TensorFlowLiteSwift",
@@ -257,7 +257,7 @@
       "version": "1.0.15"
     },
     {
-      "allows_granular_projects":[
+      "allows_granular_projects": [
         "MLMetrics"
       ],
       "name": "Protobuf",
@@ -266,7 +266,7 @@
       "version": "3.25.2"
     },
     {
-      "description":"Parece no tener utilidad y se está agregando a ML.",
+      "description": "Parece no tener utilidad y se está agregando a ML.",
       "expires": "2024-08-19",
       "name": "CMPopTipView",
       "source": "public",
@@ -286,7 +286,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "allows_granular_projects":[
+      "allows_granular_projects": [
         "IspMpos"
       ],
       "name": "ISO8601DateFormatter",
@@ -331,7 +331,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "allows_granular_projects":[
+      "allows_granular_projects": [
         "MLUI/MLFonts",
         "MLUI/MLSpacing"
       ],
@@ -345,7 +345,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "allows_granular_projects":[
+      "allows_granular_projects": [
         "MLMelidata",
         "MLMelidata/MelidataSwift"
       ],
@@ -362,7 +362,7 @@
       "version": "1.1.2"
     },
     {
-      "allows_granular_projects":[
+      "allows_granular_projects": [
         "MLRecommendations"
       ],
       "name": "MGSwipeTableCell",
@@ -371,7 +371,7 @@
       "version": "1.6.1"
     },
     {
-      "description":"Parece no tener utilidad y se está agregando a ML.",
+      "description": "Parece no tener utilidad y se está agregando a ML.",
       "expires": "2024-08-19",
       "name": "UIImageEffects",
       "source": "public",
@@ -561,7 +561,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "allows_granular_projects":[
+      "allows_granular_projects": [
         "MLRemedy/MercadoLibre",
         "MLRemedy/MercadoPago",
         "Cashout",
@@ -896,7 +896,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "allows_granular_projects":[
+      "allows_granular_projects": [
         "MLUIComponents/MLActivities",
         "MPMerchEngine",
         "MPModalsEngine",
@@ -945,7 +945,7 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "allows_granular_projects":[
+      "allows_granular_projects": [
         "MLNotificationCenter",
         "MLNotificationCenter/MercadoPago"
       ],
@@ -967,7 +967,7 @@
       "version": "^~>\\s?4.[0-9]+$"
     },
     {
-      "allows_granular_projects":[
+      "allows_granular_projects": [
         "PXAddon",
         "PXAddon/MercadoLibre",
         "PXAddon/MercadoPago",
@@ -980,8 +980,7 @@
       "version": "2.0.6"
     },
     {
-      
-      "allows_granular_projects":[
+      "allows_granular_projects": [
         "PXAddon",
         "PXAddon/MercadoLibre",
         "PXAddon/MercadoPago",
@@ -993,7 +992,7 @@
       "version": "6.6.129"
     },
     {
-      "description":"Parece no tener utilidad y se está agregando a ML.",
+      "description": "Parece no tener utilidad y se está agregando a ML.",
       "name": "TMGSDK",
       "source": "private",
       "target": "production",
@@ -1012,7 +1011,7 @@
       "version": "^~>\\s?3+.[0-9]+$"
     },
     {
-      "allows_granular_projects":[
+      "allows_granular_projects": [
         "MLNetworking/Images",
         "MLNetworking/Maps",
         "MPConfigurationProvider/PINRemoteImage",
@@ -1026,7 +1025,7 @@
       "version": "2.3.0"
     },
     {
-      "allows_granular_projects":[
+      "allows_granular_projects": [
         "MLNetworking/Images",
         "MLNetworking/Maps",
         "MPConfigurationProvider/PINRemoteImage",
@@ -1052,7 +1051,7 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "allows_granular_projects":[
+      "allows_granular_projects": [
         "AndesUI/Core",
         "AndesUIDraftModal",
         "AndesUIDraftModal/MercadoLibre",
@@ -1123,7 +1122,7 @@
       "version": "3.1.2"
     },
     {
-      "allows_granular_projects":[
+      "allows_granular_projects": [
         "IspMpos"
       ],
       "name": "RSKImageCropper",
@@ -1138,7 +1137,7 @@
       "version": "0.1.5"
     },
     {
-      "allows_granular_projects":[
+      "allows_granular_projects": [
         "MPContacts"
       ],
       "name": "Realm",
@@ -1159,7 +1158,7 @@
       "version": "0.8.0"
     },
     {
-      "description":"Lib en ML, analisar si tienes uso",
+      "description": "Lib en ML, analisar si tienes uso",
       "name": "StyledPageControl",
       "source": "public",
       "target": "production",
@@ -1172,7 +1171,7 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
-      "allows_granular_projects":[
+      "allows_granular_projects": [
         "AiAssistantClient",
         "BillPayments",
         "BiometricSecurityUI/MercadoLibre",
@@ -1307,7 +1306,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "allows_granular_projects":[
+      "allows_granular_projects": [
         "IspMpos"
       ],
       "name": "UIImage-ResizeMagick",
@@ -1479,7 +1478,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "description":"esta libreria deberia ser agregada en los podspecs? [REVISAR]",
+      "description": "esta libreria deberia ser agregada en los podspecs? [REVISAR]",
       "name": "SwiftLint",
       "source": "public",
       "target": "production",
@@ -1493,7 +1492,7 @@
       "version": "2.3.2"
     },
     {
-      "description":"esta libreria deberia ser agregada en los podspecs? [REVISAR]",
+      "description": "esta libreria deberia ser agregada en los podspecs? [REVISAR]",
       "name": "DeveloperMode",
       "source": "private",
       "target": "production",
@@ -1548,7 +1547,7 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "allows_granular_projects":[
+      "allows_granular_projects": [
         "IspMpos"
       ],
       "name": "ZIPFoundation",
@@ -1581,7 +1580,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "allows_granular_projects":[
+      "allows_granular_projects": [
         "MLCommonUIComponents"
       ],
       "name": "GooglePlaces",
@@ -1632,7 +1631,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "allows_granular_projects":[
+      "allows_granular_projects": [
         "Braze"
       ],
       "name": "BrazeKitCompat",
@@ -1743,7 +1742,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "allows_granular_projects":[
+      "allows_granular_projects": [
         "OpenTelemetryProtocolExporter"
       ],
       "name": "gRPC-Swift",
@@ -1789,7 +1788,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "allows_granular_projects":[
+      "allows_granular_projects": [
         "Mplay",
         "Mplay/Player"
       ],
@@ -1820,7 +1819,7 @@
       "version": "3.36.1"
     },
     {
-      "allows_granular_projects":[
+      "allows_granular_projects": [
         "Mplay",
         "Mplay/Player"
       ],
@@ -1904,7 +1903,7 @@
       "version": "2.4.0"
     },
     {
-      "allows_granular_projects":[
+      "allows_granular_projects": [
         "AppMonitoringSetup"
       ],
       "name": "DatadogCore",
@@ -1913,7 +1912,7 @@
       "version": "2.4.0"
     },
     {
-      "allows_granular_projects":[
+      "allows_granular_projects": [
         "AppMonitoringSetup"
       ],
       "name": "DatadogRUM",
@@ -1922,7 +1921,7 @@
       "version": "2.4.0"
     },
     {
-      "allows_granular_projects":[
+      "allows_granular_projects": [
         "AppMonitoringSetup"
       ],
       "name": "DatadogLogs",
@@ -1931,7 +1930,7 @@
       "version": "2.4.0"
     },
     {
-      "allows_granular_projects":[
+      "allows_granular_projects": [
         "AppMonitoringSetup"
       ],
       "name": "DatadogTrace",
@@ -1940,7 +1939,7 @@
       "version": "2.4.0"
     },
     {
-      "allows_granular_projects":[
+      "allows_granular_projects": [
         "AppMonitoringSetup"
       ],
       "name": "DatadogCrashReporting",
@@ -1973,7 +1972,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "allows_granular_projects":[
+      "allows_granular_projects": [
         "MLQualtrics/Core"
       ],
       "name": "Qualtrics",
@@ -2150,7 +2149,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "allows_granular_projects":[
+      "allows_granular_projects": [
         "MeliphoneVoip/MercadoLibre"
       ],
       "name": "TwilioVoice",
