@@ -73,13 +73,6 @@
       "version": "4.38.0"
     },
     {
-      "expires": "2024-08-19",
-      "name": "AmountLabel",
-      "source": "public",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
       "expires": "2024-08-16",
       "name": "Bugsnag",
       "source": "public",
@@ -95,13 +88,6 @@
       "source": "public",
       "target": "production",
       "version": "6.28.1"
-    },
-    {
-      "expires": "2024-08-19",
-      "name": "BugsnagNetworkRequestPlugin",
-      "source": "public",
-      "target": "production",
-      "version": "^~>\\s?6.[0-9]+.?[0-9]*$"
     },
     {
       "allows_granular_projects": [
@@ -208,55 +194,6 @@
       "version": "2.5.0"
     },
     {
-      "expires": "2024-08-19",
-      "name": "GoogleAppMeasurement",
-      "source": "public",
-      "target": "production",
-      "version": "6.8.0"
-    },
-    {
-      "expires": "2024-08-19",
-      "name": "GoogleUtilities",
-      "source": "public",
-      "target": "production",
-      "version": "6.7.2"
-    },
-    {
-      "expires": "2024-08-19",
-      "name": "GoogleDataTransport",
-      "source": "public",
-      "target": "production",
-      "version": "7.5.1"
-    },
-    {
-      "expires": "2024-08-19",
-      "name": "nanopb",
-      "source": "public",
-      "target": "production",
-      "version": "1.30906.0"
-    },
-    {
-      "expires": "2024-08-19",
-      "name": "PromisesObjC",
-      "source": "public",
-      "target": "production",
-      "version": "1.2.12"
-    },
-    {
-      "expires": "2024-08-19",
-      "name": "GTMSessionFetcher",
-      "source": "public",
-      "target": "production",
-      "version": "1.5.0"
-    },
-    {
-      "expires": "2024-08-19",
-      "name": "FLAnimatedImage",
-      "source": "public",
-      "target": "production",
-      "version": "1.0.15"
-    },
-    {
       "allows_granular_projects": [
         "MLMetrics"
       ],
@@ -264,14 +201,6 @@
       "source": "public",
       "target": "production",
       "version": "3.25.2"
-    },
-    {
-      "description": "Parece no tener utilidad y se está agregando a ML.",
-      "expires": "2024-08-19",
-      "name": "CMPopTipView",
-      "source": "public",
-      "target": "production",
-      "version": "2.2.0"
     },
     {
       "name": "Flox",
@@ -355,13 +284,6 @@
       "version": "2.2.0"
     },
     {
-      "expires": "2024-08-19",
-      "name": "Base64",
-      "source": "public",
-      "target": "production",
-      "version": "1.1.2"
-    },
-    {
       "allows_granular_projects": [
         "MLRecommendations"
       ],
@@ -369,21 +291,6 @@
       "source": "public",
       "target": "production",
       "version": "1.6.1"
-    },
-    {
-      "description": "Parece no tener utilidad y se está agregando a ML.",
-      "expires": "2024-08-19",
-      "name": "UIImageEffects",
-      "source": "public",
-      "target": "production",
-      "version": "0.0.1"
-    },
-    {
-      "expires": "2024-08-19",
-      "name": "SSPullToRefresh",
-      "source": "public",
-      "target": "production",
-      "version": "1.2.4"
     },
     {
       "name": "MIPXPaymentProcessorPlugin",
@@ -1479,20 +1386,6 @@
     },
     {
       "description": "esta libreria deberia ser agregada en los podspecs? [REVISAR]",
-      "name": "SwiftLint",
-      "source": "public",
-      "target": "production",
-      "version": "0.25.1"
-    },
-    {
-      "expires": "2024-08-19",
-      "name": "Auth0",
-      "source": "public",
-      "target": "production",
-      "version": "2.3.2"
-    },
-    {
-      "description": "esta libreria deberia ser agregada en los podspecs? [REVISAR]",
       "name": "DeveloperMode",
       "source": "private",
       "target": "production",
@@ -1763,13 +1656,6 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
-      "expires": "2024-08-19",
-      "name": "SwiftNIO",
-      "source": "public",
-      "target": "production",
-      "version": "2.40.0"
-    },
-    {
       "name": "OpbRedirect",
       "source": "private",
       "target": "production",
@@ -1897,13 +1783,6 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "expires": "2024-08-19",
-      "name": "AppMonitoringSetup",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "DatadogInternal",
