@@ -2180,6 +2180,119 @@
       "source": "public",
       "target": "production",
       "version": "2.8.3"
+    },
+    {
+      "name": "OHHTTPStubs",
+      "source": "public",
+      "target": "test",
+      "version": "4.0.2"
+    },
+    {
+      "name": "Quick",
+      "source": "public",
+      "target": "test",
+      "version": "5.0.1"
+    },
+    {
+      "name": "SnapshotTesting",
+      "source": "public",
+      "target": "test",
+      "version": "1.9.0"
+    },
+    {
+      "name": "SwiftFormat",
+      "source": "public",
+      "target": "test",
+      "version": "0.50.9"
+    },
+    {
+      "name": "HyperioniOS",
+      "source": "public",
+      "target": "test",
+      "version": "1.2.0"
+    },
+    {
+      "name": "Nimble",
+      "source": "public",
+      "target": "test",
+      "version": "11.2.1"
+    },
+    {
+      "name": "OCMock",
+      "source": "public",
+      "target": "test",
+      "version": "3.9.1"
+    },
+    {
+      "name": "IQKeyboardManager",
+      "source": "public",
+      "target": "test",
+      "version": "6.5.11"
+    },
+    {
+      "name": "IQKeyboardManagerSwift",
+      "source": "public",
+      "target": "test",
+      "version": "6.5.11"
+    },
+    {
+      "name": "Bagel",
+      "source": "public",
+      "target": "test",
+      "version": "1.4.0"
+    },
+    {
+      "name": "CocoaAsyncSocket",
+      "source": "public",
+      "target": "test",
+      "version": "7.6.5"
+    },
+    {
+      "name": "ADAssertLayout",
+      "source": "public",
+      "target": "test",
+      "version": "1.0.1"
+    },
+    {
+      "name": "ADLayoutTest",
+      "source": "public",
+      "target": "test",
+      "version": "1.0.1"
+    },
+    {
+      "name": "SwiftCheck",
+      "source": "public",
+      "target": "test",
+      "version": "0.12.0"
+    },
+    {
+      "allows_granular_projects": [
+        "MLSearch",
+        "MLVPP"
+      ],
+      "name": "MoreLikeThis",
+      "source": "private",
+      "target": "test",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "allows_granular_projects": [
+        "MLSearch",
+        "MLVPP"
+      ],
+      "name": "VerticalsCore",
+      "source": "private",
+      "target": "test",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "allows_granular_projects": [
+        "MLVPP"
+      ],
+      "name": "DemandCore",
+      "source": "private",
+      "target": "test",
+      "version": "^~>\\s?0.[0-9]+$"
     }
   ]
 }
