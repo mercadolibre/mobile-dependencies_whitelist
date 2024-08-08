@@ -1534,6 +1534,7 @@
       "version": "5\\.\\+"
     },
     {
+        "description": "Deprecated due to Android 14 migration. Use version 10.+",
         "expires": "2024-08-13",
         "group": "com\\.mercadolibre\\.android\\.cardscomponents",
         "name": "cards-components",
