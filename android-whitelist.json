@@ -4193,9 +4193,15 @@
       "version": "1\\.1\\.8"
     },
     {
+      "expires": "2024-08-09",
       "group": "com\\.mercadolibre\\.android\\.mobile_actions",
       "name": "core",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.mobile_actions",
+      "name": "core",
+      "version": "2\\.\\+"
     },
     {
       "description": "The expiration is due to a library update to support Android 14",
