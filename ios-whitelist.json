@@ -1820,6 +1820,15 @@
     },
     {
       "allows_granular_projects": [
+        "Mplay"
+      ],
+      "name": "BitmovinAnalyticsCollector",
+      "source": "private",
+      "target": "production",
+      "version": "2.10.2"
+    },
+    {
+      "allows_granular_projects": [
         "Mplay",
         "Mplay/Player"
       ],

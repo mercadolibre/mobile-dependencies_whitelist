@@ -780,15 +780,15 @@
       "version": "1\\.\\+"
     },
     {
-      "expires": "2024-08-25",
+      "expires": "2024-10-25",
       "group": "com\\.mercadolibre\\.android",
       "name": "melidata-sdk",
-      "version": "21\\.\\+"
+      "version": "22\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "melidata-sdk",
-      "version": "22\\.\\+"
+      "version": "23\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -1105,9 +1105,15 @@
       "version": "10\\.\\+"
     },
     {
+      "expires": "2024-08-30",
       "group": "com\\.mercadolibre\\.android\\.maps",
       "name": "core",
       "version": "10\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.maps",
+      "name": "core",
+      "version": "11\\.\\+"
     },
     {
       "expires": "2024-09-28",
@@ -1421,8 +1427,13 @@
       "version": "10\\.\\+"
     },
     {
+      "expires": "2024-08-30",
       "group": "com\\.mercadolibre\\.android\\.uicomponents",
       "version": "18\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.uicomponents",
+      "version": "19\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -2897,7 +2908,7 @@
         "com.mercadolibre.android.singleplayer",
         "com.mercadopago.android.prepaid_globe"
       ],
-      "description": "Use the version 2.3.3",
+      "description": "Use the version 2.3.4",
       "expires": "2024-08-30",
       "group": "com\\.mercadolibre\\.android\\.globe",
       "name": "libc2d",
@@ -2910,7 +2921,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.globe",
       "name": "libc2d",
-      "version": "2\\.3\\.3"
+      "version": "2\\.3\\.4"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point_virtualization",
