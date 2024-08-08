@@ -1534,9 +1534,16 @@
       "version": "5\\.\\+"
     },
     {
+      "description": "Deprecated due to Android 14 migration. Use version 10.+",
+      "expires": "2024-08-16",
       "group": "com\\.mercadolibre\\.android\\.cardscomponents",
       "name": "cards-components",
       "version": "9\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.cardscomponents",
+      "name": "cards-components",
+      "version": "10\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.dami_ui_components",
