@@ -1667,6 +1667,15 @@
       "version": "3.36.1"
     },
     {
+      "allows_granular_projects": [
+        "Mplay"
+      ],
+      "name": "BitmovinAnalyticsCollector",
+      "source": "private",
+      "target": "production",
+      "version": "2.10.2"
+    },
+    {
       "name": "google-cast-sdk-no-bluetooth",
       "source": "public",
       "target": "production",
@@ -2114,13 +2123,13 @@
       "name": "HorizontalCards",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "MpGadgets",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "allows_granular_projects": [
