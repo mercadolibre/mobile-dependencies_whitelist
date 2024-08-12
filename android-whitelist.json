@@ -4063,6 +4063,9 @@
       "version": "mercadopago-1\\.\\+|mercadolibre-1\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre"
+      ],
       "description": "This library is required by meliphone.",
       "group": "com\\.twilio",
       "name": "voice-android",
