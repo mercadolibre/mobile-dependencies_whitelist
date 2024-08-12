@@ -3149,16 +3149,25 @@
       "version": "17\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadopago.android.cashin"
+      ],
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "seller",
       "version": "19\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadopago.android.cashin"
+      ],
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "payer",
       "version": "19\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadopago.android.cashin"
+      ],
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "commons",
       "version": "19\\.\\+"
@@ -3170,6 +3179,9 @@
       "version": "14\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadopago.android.cashout"
+      ],
       "group": "com\\.mercadolibre\\.android\\.cashout",
       "name": "cashout",
       "version": "16\\.\\+"
@@ -3229,46 +3241,73 @@
       "version": "8\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.cash_rails"
+      ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "rating",
       "version": "10\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.cash_rails"
+      ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "core",
       "version": "10\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.cash_rails"
+      ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "feedback",
       "version": "10\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.cash_rails"
+      ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "tab",
       "version": "10\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.cash_rails"
+      ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "ui_component",
       "version": "10\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.cash_rails"
+      ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "commons",
       "version": "10\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.cash_rails"
+      ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "map",
       "version": "10\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.cash_rails"
+      ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "report",
       "version": "10\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.cash_rails"
+      ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "business_component",
       "version": "10\\.\\+"
