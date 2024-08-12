@@ -4329,6 +4329,19 @@
       "group": "com\\.journeyapps",
       "name": "zxing-android-embedded",
       "version": "4\\.\\3\\.0"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadopago.android.configurer",
+        "com.mercadolibre.android.mlwebkit"
+      ],
+      "description": "This library was created to manage application themes. Its use is restricted to mp-config only",
+      "group": "com\\.mercadolibre\\.android\\.app_theme",
+      "name": "core",
+      "transitive_configuration": {
+        "transitivity": false
+      },
+      "version": "0\\.\\+"
     }
   ]
 }
