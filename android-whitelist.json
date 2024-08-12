@@ -3126,9 +3126,15 @@
       "version": "0\\.+"
     },
     {
+      "expires": "2024-10-01",
       "group": "com\\.mercadolibre\\.android\\.data_privacy_helper",
       "name": "libdataprivacy",
       "version": "5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.data_privacy_helper",
+      "name": "libdataprivacy",
+      "version": "6\\.\\+"
     },
     {
       "expires": "2025-09-01",
