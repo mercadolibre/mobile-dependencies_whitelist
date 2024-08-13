@@ -1349,6 +1349,7 @@
       "version": "21\\.\\+"
     },
     {
+      "expires": "2024-09-13",
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "morelikethis",
       "version": "21\\.\\+"
@@ -1387,10 +1388,10 @@
         "com.mercadolibre.android.search",
         "com.mercadolibre.android.vpp"
       ],
-      "description": "This is an experimental version of more like this lib",
+      "description": "This is the MoreLikeThis standalone library",
       "group": "com\\.mercadolibre\\.android",
       "name": "more_like_this",
-      "version": "0\\.\\+"
+      "version": "1\\.\\+"
     },
     {
       "allows_granular_projects": [
