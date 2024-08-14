@@ -1349,6 +1349,7 @@
       "version": "21\\.\\+"
     },
     {
+      "expires": "2024-09-13",
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "morelikethis",
       "version": "21\\.\\+"
@@ -1387,10 +1388,10 @@
         "com.mercadolibre.android.search",
         "com.mercadolibre.android.vpp"
       ],
-      "description": "This is an experimental version of more like this lib",
+      "description": "This is the MoreLikeThis standalone library",
       "group": "com\\.mercadolibre\\.android",
       "name": "more_like_this",
-      "version": "0\\.\\+"
+      "version": "1\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -3126,11 +3127,17 @@
       "version": "0\\.+"
     },
     {
+      "expires": "2024-10-01",
       "group": "com\\.mercadolibre\\.android\\.data_privacy_helper",
       "name": "libdataprivacy",
       "version": "5\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.data_privacy_helper",
+      "name": "libdataprivacy",
+      "version": "6\\.\\+"
+    },
+    {
       "expires": "2025-09-01",
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "seller",
@@ -3149,19 +3156,28 @@
       "version": "17\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadopago.android.cashin"
+      ],
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "seller",
-      "version": "18\\.\\+"
+      "version": "19\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadopago.android.cashin"
+      ],
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "payer",
-      "version": "18\\.\\+"
+      "version": "19\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadopago.android.cashin"
+      ],
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "commons",
-      "version": "18\\.\\+"
+      "version": "19\\.\\+"
     },
     {
       "expires": "2025-09-01",
@@ -3170,9 +3186,12 @@
       "version": "14\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadopago.android.cashout"
+      ],
       "group": "com\\.mercadolibre\\.android\\.cashout",
       "name": "cashout",
-      "version": "15\\.\\+"
+      "version": "16\\.\\+"
     },
     {
       "expires": "2025-09-01",
@@ -3229,49 +3248,85 @@
       "version": "8\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadopago.android.cashin",
+        "com.mercadolibre.android.cashout"
+      ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "rating",
-      "version": "9\\.\\+"
+      "version": "10\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadopago.android.cashin",
+        "com.mercadolibre.android.cashout"
+      ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "core",
-      "version": "9\\.\\+"
+      "version": "10\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadopago.android.cashin",
+        "com.mercadolibre.android.cashout"
+      ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "feedback",
-      "version": "9\\.\\+"
+      "version": "10\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadopago.android.cashin",
+        "com.mercadolibre.android.cashout"
+      ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "tab",
-      "version": "9\\.\\+"
+      "version": "10\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadopago.android.cashin",
+        "com.mercadolibre.android.cashout"
+      ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "ui_component",
-      "version": "9\\.\\+"
+      "version": "10\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadopago.android.cashin",
+        "com.mercadolibre.android.cashout"
+      ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "commons",
-      "version": "9\\.\\+"
+      "version": "10\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadopago.android.cashin",
+        "com.mercadolibre.android.cashout"
+      ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "map",
-      "version": "9\\.\\+"
+      "version": "10\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadopago.android.cashin",
+        "com.mercadolibre.android.cashout"
+      ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "report",
-      "version": "9\\.\\+"
+      "version": "10\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadopago.android.cashin",
+        "com.mercadolibre.android.cashout"
+      ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "business_component",
-      "version": "9\\.\\+"
+      "version": "10\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.mp_sellers_growth",
@@ -4290,6 +4345,19 @@
       "group": "com\\.journeyapps",
       "name": "zxing-android-embedded",
       "version": "4\\.\\3\\.0"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadopago.android.configurer",
+        "com.mercadolibre.android.mlwebkit"
+      ],
+      "description": "This library was created to manage application themes. Its use is restricted to mp-config only",
+      "group": "com\\.mercadolibre\\.android\\.app_theme",
+      "name": "core",
+      "transitive_configuration": {
+        "transitivity": false
+      },
+      "version": "0\\.\\+"
     },
     {
       "allows_granular_projects": [
