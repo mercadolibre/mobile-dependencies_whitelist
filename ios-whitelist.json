@@ -1526,10 +1526,18 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "description": "This version will be deprecated in favor of 1.0.0",
+      "expires": "2024-09-15",
       "name": "CcapSDUI",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "CcapSDUI",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "SmartTokenization",
