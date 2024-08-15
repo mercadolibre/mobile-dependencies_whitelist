@@ -51,13 +51,12 @@ def check_version_pattern(parsed_json, file_name)
   parsed_json["whitelist"].each do |node|
     
     if node.key?("version")
-      puts node["version"]
       # Ensure file name contains the iOS prefix
       if file_name.include?(IOS_FILE_PREFIX)
-        return true if check_version_pattern_ios(node)
+        return false if check_version_pattern_ios(node)
       # Ensure file name contains the Android or KMP prefix
       elsif file_name.include?(ANDROID_FILE_PREFIX) || file_name.include?(KMP_FILE_PREFIX)
-        return true if check_version_pattern_android(node)
+        return false if check_version_pattern_android(node)
       end
     end
   end
