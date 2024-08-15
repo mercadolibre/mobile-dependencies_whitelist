@@ -1936,6 +1936,13 @@
       "name": "Wishlists",
       "source": "private",
       "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "expires": "2024-08-31",
+      "name": "Wishlists",
+      "source": "private",
+      "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
