@@ -1,0 +1,86 @@
+require 'json'
+
+IOS_FILE_PREFIX = "ios-"
+ANDROID_FILE_PREFIX = "android-"
+KMP_FILE_PREFIX = "cross-kmp"
+
+# Reads the file and returns its content as a JSON hash
+def get_json_from_file(pathFile)
+  file = File.read(pathFile)
+  JSON.parse(file)
+end
+
+# Checks if the version in iOS public libraries isn't dynamic 
+def check_version_pattern_ios(node)
+  public_source = "public"
+  fixed_pattern = /^\d+\.\d+\.\d+$/
+
+  name = node["name"]
+  source = node["source"]
+  version = node["version"]
+
+  if source == public_source && version !~ fixed_pattern
+    puts "Error: '"+ name + "' is a public library and has a dynamic version"
+    true
+  else
+    false
+  end
+end
+
+# Checks if the version in Android or KPM public libraries isn't dynamic 
+def check_version_pattern_android(node)
+  private_group_prefix = ["mercadolibre", "mercadopago"]
+  dynamic_pattern = /\+/
+
+  group = node["group"]
+  name = node["name"]
+  version = node["version"]
+
+  is_public = !private_group_prefix.any? { |prefix| group.include?(prefix) }
+
+  if is_public && version =~ dynamic_pattern
+    puts "Error: '"+ name + "' is a public library and has a dynamic version"
+    true
+  else
+    false
+  end
+end
+
+# Checks patterns in the data hash
+def check_version_pattern(parsed_json, file_name)
+  parsed_json["whitelist"].each do |node|
+    
+    if node.key?("version")
+      puts node["version"]
+      # Ensure file name contains the iOS prefix
+      if file_name.include?(IOS_FILE_PREFIX)
+        return true if check_version_pattern_ios(node)
+      # Ensure file name contains the Android or KMP prefix
+      elsif file_name.include?(ANDROID_FILE_PREFIX) || file_name.include?(KMP_FILE_PREFIX)
+        return true if check_version_pattern_android(node)
+      end
+    end
+  end
+  false
+end
+
+puts "File: #{ENV["FILE"]}"
+
+# Read the JSON file
+file_name = ENV["FILE"]
+parsed_json = get_json_from_file(file_name)
+
+begin
+  # Check version patterns
+  if check_version_pattern(parsed_json, file_name)
+    # No invalid versions found
+    exit(0)
+  else
+    # Invalid versions found
+    exit(1)
+  end
+rescue StandardError => e
+  # Handle any exceptions and exit with an error status code
+  puts "Error: #{e.message}"
+  exit(1)
+end
