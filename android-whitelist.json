@@ -4361,6 +4361,18 @@
         "transitivity": false
       },
       "version": "0\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.isp_integrations_tools"
+      ],
+      "description": "This dependency was added to enable SmartPOS devices (only Android 6 and 12) to generate a QR code or barcode and convert it into a bitmap image. The goal is to print this image on a physical voucher.",
+      "group": "com\\.google\\.zxing",
+      "name": "core",
+      "transitive_configuration": {
+        "transitivity": false
+      },
+      "version": "3\\.3\\.2"
     }
   ]
 }
