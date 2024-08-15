@@ -2308,7 +2308,8 @@
       "source": "private",
       "target": "test",
       "version": "^~>\\s?0.[0-9]+$"
-    }
+    },
+    {
       "allows_granular_projects": [
         "MPConfigurationProvider/MLNetworking"
       ],
