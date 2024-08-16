@@ -4,6 +4,8 @@ IOS_FILE_PREFIX = "ios-"
 ANDROID_FILE_PREFIX = "android-"
 KMP_FILE_PREFIX = "cross-kmp"
 
+LIBRARIES_NAMES_WITH_INVALID_VERSION = []
+
 # Reads the file and returns its content as a JSON hash
 def get_json_from_file(pathFile)
   file = File.read(pathFile)
@@ -20,10 +22,7 @@ def check_version_pattern_ios(node)
   version = node["version"]
 
   if source == public_source && version !~ fixed_pattern
-    puts "Error: '"+ name + "' is a public library and has a dynamic version"
-    true
-  else
-    false
+    LIBRARIES_NAMES_WITH_INVALID_VERSION.push(name)
   end
 end
 
@@ -39,10 +38,7 @@ def check_version_pattern_android(node)
   is_public = !private_group_prefix.any? { |prefix| group.include?(prefix) }
 
   if is_public && version =~ dynamic_pattern
-    puts "Error: '"+ name + "' is a public library and has a dynamic version"
-    true
-  else
-    false
+    LIBRARIES_NAMES_WITH_INVALID_VERSION.push(name)
   end
 end
 
@@ -53,14 +49,13 @@ def check_version_pattern(parsed_json, file_name)
     if node.key?("version")
       # Ensure file name contains the iOS prefix
       if file_name.include?(IOS_FILE_PREFIX)
-        return false if check_version_pattern_ios(node)
+        check_version_pattern_ios(node)
       # Ensure file name contains the Android or KMP prefix
       elsif file_name.include?(ANDROID_FILE_PREFIX) || file_name.include?(KMP_FILE_PREFIX)
-        return false if check_version_pattern_android(node)
+        check_version_pattern_android(node)
       end
     end
   end
-  false
 end
 
 puts "File: #{ENV["FILE"]}"
@@ -71,12 +66,18 @@ parsed_json = get_json_from_file(file_name)
 
 begin
   # Check version patterns
-  if check_version_pattern(parsed_json, file_name)
+  check_version_pattern(parsed_json, file_name)
+
+  if LIBRARIES_NAMES_WITH_INVALID_VERSION.size > 0
     # No invalid versions found
-    exit(0)
-  else
+    LIBRARIES_NAMES_WITH_INVALID_VERSION.each do |name|
+      puts "Error: '"+ name + "' is a public library and has a dynamic version"
+    end
     # Invalid versions found
     exit(1)
+  else
+    # No invalid versions found
+    exit(0)
   end
 rescue StandardError => e
   # Handle any exceptions and exit with an error status code
