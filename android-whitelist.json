@@ -1208,7 +1208,8 @@
     {
       "allows_granular_projects": [
         "com.mercadolibre.android.tetris",
-        "com.mercadolibre.android.vpp"
+        "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.polycards"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "expires": "2024-10-28",
@@ -1235,6 +1236,7 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.polycards",
         "com.mercadolibre.android.mp_search"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
@@ -1980,6 +1982,7 @@
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.polycards",
         "com.mercadolibre.android.mp_search"
       ],
       "group": "com\\.mercadolibre\\.android\\.andesui",
@@ -1997,6 +2000,7 @@
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.polycards",
         "com.mercadolibre.android.everest_canvas",
         "com.mercadolibre.android.mp_search"
       ],
@@ -3398,6 +3402,11 @@
       "version": "4\\.+"
     },
     {
+      "group": "com.mercadolibre.android.polycards",
+      "name": "core",
+      "version": "0\\.+"
+    },
+    {
       "group": "com\\.bitmovin\\.player",
       "name": "player",
       "version": "3\\.43\\.1+jason"
@@ -3906,6 +3915,7 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.polycards",
         "com.mercadolibre.android.everest_canvas",
         "com.mercadolibre.android.mp_search"
       ],
@@ -3922,6 +3932,7 @@
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.polycards",
         "com.mercadolibre.android.everest_canvas",
         "com.mercadolibre.android.mp_search"
       ],
@@ -3938,6 +3949,7 @@
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.polycards",
         "com.mercadolibre.android.everest_canvas",
         "com.mercadolibre.android.mp_search"
       ],
@@ -3953,6 +3965,7 @@
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.polycards",
         "com.mercadolibre.android.everest_canvas",
         "com.mercadolibre.android.mp_search"
       ],
@@ -3977,6 +3990,7 @@
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.polycards",
         "com.mercadolibre.android.everest_canvas",
         "com.mercadolibre.android.mp_search"
       ],
@@ -3993,6 +4007,7 @@
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.polycards",
         "com.mercadolibre.android.everest_canvas",
         "com.mercadolibre.android.mp_search"
       ],
@@ -4008,6 +4023,7 @@
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.polycards",
         "com.mercadolibre.android.everest_canvas",
         "com.mercadolibre.android.mp_search"
       ],
@@ -4023,6 +4039,7 @@
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.polycards",
         "com.mercadolibre.android.everest_canvas",
         "com.mercadolibre.android.mp_search"
       ],
@@ -4038,6 +4055,7 @@
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.polycards",
         "com.mercadolibre.android.everest_canvas",
         "com.mercadolibre.android.mp_search"
       ],
@@ -4052,6 +4070,7 @@
         "com.mercadolibre.android.on.demand.resources",
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.polycards",
         "com.mercadolibre.android.everest_canvas",
         "com.mercadolibre.android.mp_search"
       ],
@@ -4062,6 +4081,7 @@
     {
       "allows_granular_projects": [
         "com.mercadolibre.android.auth_native_sso",
+        "com.mercadolibre.android.polycards",
         "com.mercadolibre.android.everest_canvas"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
@@ -4076,6 +4096,7 @@
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.polycards",
         "com.mercadolibre.android.everest_canvas",
         "com.mercadolibre.android.mp_search"
       ],
@@ -4268,7 +4289,8 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.everest_canvas"
+        "com.mercadolibre.android.everest_canvas",
+        "com.mercadolibre.android.polycards"
       ],
       "group": "io\\.coil-kt",
       "name": "coil-compose",
