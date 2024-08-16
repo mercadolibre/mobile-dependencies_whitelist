@@ -1208,7 +1208,8 @@
     {
       "allows_granular_projects": [
         "com.mercadolibre.android.tetris",
-        "com.mercadolibre.android.vpp"
+        "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.polycards"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "expires": "2024-10-28",
@@ -1235,6 +1236,7 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.polycards",
         "com.mercadolibre.android.mp_search"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
@@ -1980,6 +1982,7 @@
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.polycards",
         "com.mercadolibre.android.mp_search"
       ],
       "group": "com\\.mercadolibre\\.android\\.andesui",
@@ -1997,6 +2000,7 @@
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.polycards",
         "com.mercadolibre.android.everest_canvas",
         "com.mercadolibre.android.mp_search"
       ],
@@ -2665,7 +2669,7 @@
       "expires": "2024-12-31",
       "group": "com\\.auth0\\.android",
       "name": "auth0",
-      "version": "2\\.\\+"
+      "version": "2\\.9\\.3"
     },
     {
       "allows_granular_projects": [
@@ -2674,7 +2678,7 @@
       "expires": "2024-12-31",
       "group": "com\\.auth0\\.android",
       "name": "jwtdecode",
-      "version": "2\\.\\+"
+      "version": "2\\.0\\.2"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point_smart_helpers",
@@ -2986,13 +2990,13 @@
     {
       "group": "com\\.android\\.tools",
       "name": "desugar_jdk_libs",
-      "version": "1\\.+"
+      "version": "1\\.1\\.5"
     },
     {
       "expires": "2024-08-30",
       "group": "io\\.opentelemetry",
       "name": "opentelemetry-api",
-      "version": "1\\.27\\.+"
+      "version": "1\\.27\\.0"
     },
     {
       "group": "io\\.opentelemetry",
@@ -3003,7 +3007,7 @@
       "expires": "2024-08-30",
       "group": "io\\.opentelemetry",
       "name": "opentelemetry-bom",
-      "version": "1\\.27\\.+"
+      "version": "1\\.27\\.0"
     },
     {
       "group": "io\\.opentelemetry",
@@ -3030,7 +3034,7 @@
       "expires": "2024-08-30",
       "group": "io\\.opentelemetry\\.instrumentation",
       "name": "opentelemetry-okhttp-3.0",
-      "version": "1\\.27\\.+"
+      "version": "1\\.27\\.0-alpha"
     },
     {
       "group": "io\\.opentelemetry\\.instrumentation",
@@ -3040,7 +3044,7 @@
     {
       "group": "io\\.grpc",
       "name": "grpc-okhttp",
-      "version": "1\\.46\\.+"
+      "version": "1\\.46\\.1"
     },
     {
       "expires": "2024-08-30",
@@ -3398,9 +3402,14 @@
       "version": "4\\.+"
     },
     {
+      "group": "com.mercadolibre.android.polycards",
+      "name": "core",
+      "version": "0\\.+"
+    },
+    {
       "group": "com\\.bitmovin\\.player",
       "name": "player",
-      "version": "3\\.43\\.1\\.+"
+      "version": "3\\.43\\.1+jason"
     },
     {
       "allows_granular_projects": [
@@ -3543,7 +3552,7 @@
     {
       "group": "com\\.symbol",
       "name": "emdk",
-      "version": "9\\.\\+"
+      "version": "9\\.1\\.1"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.yuca_authentication",
@@ -3632,31 +3641,31 @@
       "description": "This library is used for push-notification with mqtt",
       "group": "com\\.gojek\\.courier",
       "name": "courier",
-      "version": "0\\.1\\.\\+"
+      "version": "0\\.1\\.6"
     },
     {
       "description": "This library is used for push-notification with mqtt",
       "group": "com\\.gojek\\.courier",
       "name": "courier-message-adapter-gson",
-      "version": "0\\.1\\.\\+"
+      "version": "0\\.1\\.6"
     },
     {
       "description": "This library is used for push-notification with mqtt",
       "group": "com\\.gojek\\.courier",
       "name": "courier-stream-adapter-coroutines",
-      "version": "0\\.1\\.\\+"
+      "version": "0\\.1\\.6"
     },
     {
       "description": "This library is used for push-notification with mqtt",
       "group": "com\\.gojek\\.courier",
       "name": "workmanager-2\\.6\\.0-pingsender",
-      "version": "0\\.1\\.\\+"
+      "version": "0\\.1\\.6"
     },
     {
       "description": "This library is used for push-notification with mqtt",
       "group": "com\\.gojek\\.courier",
       "name": "alarm-pingsender",
-      "version": "0\\.1\\.\\+"
+      "version": "0\\.1\\.6"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.performance_tools",
@@ -3906,6 +3915,7 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.polycards",
         "com.mercadolibre.android.everest_canvas",
         "com.mercadolibre.android.mp_search"
       ],
@@ -3922,6 +3932,7 @@
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.polycards",
         "com.mercadolibre.android.everest_canvas",
         "com.mercadolibre.android.mp_search"
       ],
@@ -3938,6 +3949,7 @@
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.polycards",
         "com.mercadolibre.android.everest_canvas",
         "com.mercadolibre.android.mp_search"
       ],
@@ -3953,6 +3965,7 @@
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.polycards",
         "com.mercadolibre.android.everest_canvas",
         "com.mercadolibre.android.mp_search"
       ],
@@ -3977,6 +3990,7 @@
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.polycards",
         "com.mercadolibre.android.everest_canvas",
         "com.mercadolibre.android.mp_search"
       ],
@@ -3993,6 +4007,7 @@
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.polycards",
         "com.mercadolibre.android.everest_canvas",
         "com.mercadolibre.android.mp_search"
       ],
@@ -4008,6 +4023,7 @@
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.polycards",
         "com.mercadolibre.android.everest_canvas",
         "com.mercadolibre.android.mp_search"
       ],
@@ -4023,6 +4039,7 @@
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.polycards",
         "com.mercadolibre.android.everest_canvas",
         "com.mercadolibre.android.mp_search"
       ],
@@ -4038,6 +4055,7 @@
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.polycards",
         "com.mercadolibre.android.everest_canvas",
         "com.mercadolibre.android.mp_search"
       ],
@@ -4052,6 +4070,7 @@
         "com.mercadolibre.android.on.demand.resources",
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.polycards",
         "com.mercadolibre.android.everest_canvas",
         "com.mercadolibre.android.mp_search"
       ],
@@ -4062,6 +4081,7 @@
     {
       "allows_granular_projects": [
         "com.mercadolibre.android.auth_native_sso",
+        "com.mercadolibre.android.polycards",
         "com.mercadolibre.android.everest_canvas"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
@@ -4076,6 +4096,7 @@
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.polycards",
         "com.mercadolibre.android.everest_canvas",
         "com.mercadolibre.android.mp_search"
       ],
@@ -4268,7 +4289,8 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.everest_canvas"
+        "com.mercadolibre.android.everest_canvas",
+        "com.mercadolibre.android.polycards"
       ],
       "group": "io\\.coil-kt",
       "name": "coil-compose",
@@ -4361,6 +4383,18 @@
         "transitivity": false
       },
       "version": "0\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.isp_integrations_tools"
+      ],
+      "description": "This dependency was added to enable SmartPOS devices (only Android 6 and 12) to generate a QR code or barcode and convert it into a bitmap image. The goal is to print this image on a physical voucher.",
+      "group": "com\\.google\\.zxing",
+      "name": "core",
+      "transitive_configuration": {
+        "transitivity": false
+      },
+      "version": "3\\.3\\.2"
     }
   ]
 }
