@@ -2665,7 +2665,7 @@
       "expires": "2024-12-31",
       "group": "com\\.auth0\\.android",
       "name": "auth0",
-      "version": "2\\.\\+"
+      "version": "2\\.9\\.3"
     },
     {
       "allows_granular_projects": [
@@ -2674,7 +2674,7 @@
       "expires": "2024-12-31",
       "group": "com\\.auth0\\.android",
       "name": "jwtdecode",
-      "version": "2\\.\\+"
+      "version": "2\\.0\\.2"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point_smart_helpers",
@@ -2986,13 +2986,13 @@
     {
       "group": "com\\.android\\.tools",
       "name": "desugar_jdk_libs",
-      "version": "1\\.+"
+      "version": "1\\.1\\.5"
     },
     {
       "expires": "2024-08-30",
       "group": "io\\.opentelemetry",
       "name": "opentelemetry-api",
-      "version": "1\\.27\\.+"
+      "version": "1\\.27\\.0"
     },
     {
       "group": "io\\.opentelemetry",
@@ -3003,7 +3003,7 @@
       "expires": "2024-08-30",
       "group": "io\\.opentelemetry",
       "name": "opentelemetry-bom",
-      "version": "1\\.27\\.+"
+      "version": "1\\.27\\.0"
     },
     {
       "group": "io\\.opentelemetry",
@@ -3030,7 +3030,7 @@
       "expires": "2024-08-30",
       "group": "io\\.opentelemetry\\.instrumentation",
       "name": "opentelemetry-okhttp-3.0",
-      "version": "1\\.27\\.+"
+      "version": "1\\.27\\.0-alpha"
     },
     {
       "group": "io\\.opentelemetry\\.instrumentation",
@@ -3040,7 +3040,7 @@
     {
       "group": "io\\.grpc",
       "name": "grpc-okhttp",
-      "version": "1\\.46\\.+"
+      "version": "1\\.46\\.1"
     },
     {
       "expires": "2024-08-30",
@@ -3400,7 +3400,7 @@
     {
       "group": "com\\.bitmovin\\.player",
       "name": "player",
-      "version": "3\\.43\\.1\\.+"
+      "version": "3\\.43\\.1+jason"
     },
     {
       "allows_granular_projects": [
@@ -3543,7 +3543,7 @@
     {
       "group": "com\\.symbol",
       "name": "emdk",
-      "version": "9\\.\\+"
+      "version": "9\\.1\\.1"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.yuca_authentication",
@@ -3632,31 +3632,31 @@
       "description": "This library is used for push-notification with mqtt",
       "group": "com\\.gojek\\.courier",
       "name": "courier",
-      "version": "0\\.1\\.\\+"
+      "version": "0\\.1\\.6"
     },
     {
       "description": "This library is used for push-notification with mqtt",
       "group": "com\\.gojek\\.courier",
       "name": "courier-message-adapter-gson",
-      "version": "0\\.1\\.\\+"
+      "version": "0\\.1\\.6"
     },
     {
       "description": "This library is used for push-notification with mqtt",
       "group": "com\\.gojek\\.courier",
       "name": "courier-stream-adapter-coroutines",
-      "version": "0\\.1\\.\\+"
+      "version": "0\\.1\\.6"
     },
     {
       "description": "This library is used for push-notification with mqtt",
       "group": "com\\.gojek\\.courier",
       "name": "workmanager-2\\.6\\.0-pingsender",
-      "version": "0\\.1\\.\\+"
+      "version": "0\\.1\\.6"
     },
     {
       "description": "This library is used for push-notification with mqtt",
       "group": "com\\.gojek\\.courier",
       "name": "alarm-pingsender",
-      "version": "0\\.1\\.\\+"
+      "version": "0\\.1\\.6"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.performance_tools",
