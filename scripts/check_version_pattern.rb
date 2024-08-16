@@ -2,7 +2,19 @@ require 'json'
 
 IOS_FILE_PREFIX = "ios-"
 ANDROID_FILE_PREFIX = "android-"
-KMP_FILE_PREFIX = "cross-kmp"
+KMP_FILE_PREFIX = "cross-kmp-"
+
+EXCLUDED_LIBRARIES = [
+  "MLDynamicModal",
+  "MLUI",
+  "MPDynamicSkeleton",
+  "MPTopFloatingView",
+  "MLBusinessComponents",
+  "AndesUI",
+  "AndesUI$",
+  "AndesUI/(Core|AndesCoachmark|AndesBottomSheet|AndesDropdown|AndesTimePicker)",
+  "AndesUI/SwiftUI"
+]
 
 LIBRARIES_NAMES_WITH_INVALID_VERSION = []
 
@@ -15,13 +27,13 @@ end
 # Checks if the version in iOS public libraries isn't dynamic 
 def check_version_pattern_ios(node)
   public_source = "public"
-  fixed_pattern = /^\d+\.\d+\.\d+$/
+  dynamic_pattern = /\+\$|\[0-9\]|^\~>/
 
   name = node["name"]
   source = node["source"]
   version = node["version"]
 
-  if source == public_source && version !~ fixed_pattern
+  if source == public_source && version =~ dynamic_pattern && !EXCLUDED_LIBRARIES.include?(name)
     LIBRARIES_NAMES_WITH_INVALID_VERSION.push(name)
   end
 end
@@ -29,7 +41,7 @@ end
 # Checks if the version in Android or KPM public libraries isn't dynamic 
 def check_version_pattern_android(node)
   private_group_prefix = ["mercadolibre", "mercadopago"]
-  dynamic_pattern = /\+/
+  dynamic_pattern = /\.\+/
 
   group = node["group"]
   name = node["name"]
