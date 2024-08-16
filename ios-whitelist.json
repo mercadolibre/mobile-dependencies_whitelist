@@ -880,20 +880,7 @@
         "PXAddon/MercadoPago",
         "CcapCommons/ThreeDSLive"
       ],
-      "expires": "2024-10-4",
-      "name": "MLThreeDS",
-      "source": "private",
-      "target": "production",
-      "version": "2.0.6"
-    },
-    {
-      "allows_granular_projects": [
-        "PXAddon",
-        "PXAddon/MercadoLibre",
-        "PXAddon/MercadoPago",
-        "CcapCommons/ThreeDSLive"
-      ],
-      "expires": "2024-10-4",
+      "expires": "2025-01-01",
       "name": "MLThreeDS",
       "source": "private",
       "target": "production",
