@@ -859,10 +859,17 @@
       "version": "2.0.6"
     },
     {
+      "expires": "2024-10-4",
       "name": "MLThreeDS",
       "source": "private",
       "target": "production",
       "version": "6.6.129"
+    },
+    {
+      "name": "MLThreeDS",
+      "source": "private",
+      "target": "production",
+      "version": "6.6.132"
     },
     {
       "name": "TMGSDK",
