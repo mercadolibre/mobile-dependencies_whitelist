@@ -73,13 +73,6 @@
       "version": "4.38.0"
     },
     {
-      "expires": "2024-08-16",
-      "name": "Bugsnag",
-      "source": "public",
-      "target": "production",
-      "version": "6.26.0"
-    },
-    {
       "allows_granular_projects": [
         "AppMonitoringSetup",
         "MLCommons/IssueTracker-NSBundle-GateKeeper"
