@@ -36,3 +36,11 @@ EXIT_CODE=${PIPESTATUS[0]}
 if [ $EXIT_CODE != 0 ]; then
   exit 1;
 fi
+
+echo "Run check version pattern"
+ruby "./scripts/check_version_pattern.rb"
+EXIT_CODE=${PIPESTATUS[0]}
+# exit_code == 0 -> success; exit_code == 1 -> fail
+if [ $EXIT_CODE != 0 ]; then
+  exit 1;
+fi
