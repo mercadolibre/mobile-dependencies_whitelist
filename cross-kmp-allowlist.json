@@ -11,6 +11,14 @@
       "version": "1\\.5\\.2"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.rtc_mobile"
+      ],
+      "group": "org\\.jetbrains\\.kotlinx",
+      "name": "kotlinx-datetime",
+      "version": "0\\.+"
+    },
+    {
       "expires": "2024-09-09",
       "allows_granular_projects": [
         "com.mercadolibre.android.rtc_mobile"
