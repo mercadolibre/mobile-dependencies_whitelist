@@ -400,7 +400,9 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.commons",
         "com.mercadolibre.android.authchallenges",
-        "com.mercadolibre.android.location"
+        "com.mercadolibre.android.location",
+        "com.mercadoenvios.android.authentication_enrollment",
+        "com.mercadoenvios.android.authentication"
       ],
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-auth",
