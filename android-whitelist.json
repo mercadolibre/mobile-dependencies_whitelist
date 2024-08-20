@@ -4377,7 +4377,7 @@
         "com.mercadolibre.android.mlwebkit",
         "com.mercadolibre.android.on.demand.resources"
       ],
-      "description": "This library was created to manage application themes. Its use is restricted to mp-config only",
+      "description": "This library was created to manage application themes. Its use is restricted to mp-config, on demand resources only",
       "group": "com\\.mercadolibre\\.android\\.app_theme",
       "name": "core",
       "transitive_configuration": {
