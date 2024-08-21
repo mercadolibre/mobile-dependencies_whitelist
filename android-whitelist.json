@@ -4133,7 +4133,7 @@
       "description": "Only for context of WMS",
       "group": "com\\.mercadolibre\\.android\\.tetris",
       "name": "feedback",
-      "version": "1\\.\\+"
+      "version": "2\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -4141,8 +4141,8 @@
       ],
       "description": "Only for context of WMS",
       "group": "com\\.mercadolibre\\.android\\.tetris",
-      "name": "bottombase",
-      "version": "1\\.\\+"
+      "name": "list",
+      "version": "2\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -4151,7 +4151,16 @@
       "description": "Only for context of WMS",
       "group": "com\\.mercadolibre\\.android\\.tetris",
       "name": "scan",
-      "version": "1\\.\\+"
+      "version": "2\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.fbm.wms.tetris"
+      ],
+      "description": "Only for context of WMS",
+      "group": "com\\.mercadolibre\\.android\\.tetris",
+      "name": "productreview",
+      "version": "2\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.version_checker",
