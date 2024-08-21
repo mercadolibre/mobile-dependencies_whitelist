@@ -243,16 +243,65 @@
       "version": "5\\.\\+"
     },
     {
+      "description": "Mas de 35 consumers",
       "group": "com\\.squareup\\.picasso",
       "name": "picasso",
       "version": "2\\.5\\.2"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.adjust"
+      ],
       "group": "com\\.adjust\\.sdk",
       "name": "adjust-android",
       "version": "4\\.33\\.4"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadoenvios.android.boosters",
+        "com.mercadoenvios.android.loyalty",
+        "com.mercadoenvios.android.shipping-toolkit",
+        "com.mercadolibre.android:ai-assistant-client",
+        "com.mercadolibre.android.cardsacquisition",
+        "com.mercadolibre.android.cardsbanking",
+        "com.mercadolibre.android.cardscomponents",
+        "com.mercadolibre.android.cardsengagement",
+        "com.mercadolibre.android.cardsnfcwallets",
+        "com.mercadolibre.android.ccap",
+        "com.mercadolibre.android.credits.ui_components",
+        "com.mercadolibre.android.da_management",
+        "com.mercadolibre.android.dami_ui_components",
+        "com.mercadolibre.android.discounts.payers",
+        "com.mercadolibre.android.fbm.wms.flan",
+        "com.mercadolibre.android.fbm.wms.tetris",
+        "com.mercadolibre.android.gamification",
+        "com.mercadolibre.android.hub_seller",
+        "com.mercadolibre.android.in_app_report",
+        "com.mercadolibre.android.instore",
+        "com.mercadolibre.android.isp_sf",
+        "com.mercadolibre.android.liveness_detection",
+        "com.mercadolibre.android.mobile_permissions",
+        "com.mercadolibre.android.nfcpayments",
+        "com.mercadolibre.android.nfcpushprovisioning",
+        "com.mercadolibre.android.notifications_helpers",
+        "com.mercadolibre.android.on.demand.resources",
+        "com.mercadolibre.android.opb_redirect",
+        "com.mercadolibre.android.payment_flow_fcu",
+        "com.mercadolibre.android.personvalidation",
+        "com.mercadolibre.android.pm.om",
+        "com.mercadolibre.android.point.lot.management",
+        "com.mercadolibre.android.point_credits",
+        "com.mercadolibre.android.point_recharge",
+        "com.mercadolibre.android.remedies",
+        "com.mercadolibre.android.singleplayer",
+        "com.mercadolibre.android.wallet.home",
+        "com.mercadopago.android.cashin",
+        "com.mercadopago.android.digital_accounts_components",
+        "com.mercadopago.android.moneyin.v2",
+        "com.mercadopago.android.moneyout",
+        "com.mercadopago.android.smartpos"
+      ],
+      "description": "+40 consumers",
       "group": "com\\.airbnb\\.android",
       "name": "lottie",
       "version": "3\\.3\\.1"
@@ -264,6 +313,12 @@
       "version": "5\\.29\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadopago.point",
+        "com.mercadolibre.android.app_monitoring",
+        "com.mercadolibre.android.cardsnfcwallets",
+        "com.mercadolibre.android.commons"
+      ],
       "group": "com\\.bugsnag",
       "name": "bugsnag-android",
       "version": "6\\.4\\.0"
@@ -275,66 +330,131 @@
       "version": "5\\.29\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.commons"
+      ],
       "group": "com\\.bugsnag",
       "name": "bugsnag-plugin-android-okhttp",
       "version": "6\\.4\\.0"
     },
     {
-      "group": "com\\.f2prateek\\.rx\\.preferences",
-      "name": "rx-preferences",
-      "version": "1\\.0\\.2"
-    },
-    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.cross_app_links"
+      ],
       "group": "com\\.facebook\\.android",
       "name": "facebook-applinks",
       "version": "13\\.2\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadoenvios.android.distribution",
+        "com.mercadoenvios.android.registration"
+      ],
       "group": "com\\.facebook\\.android",
       "name": "facebook-android-sdk",
       "version": "4\\.24\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android:home",
+        "com.mercadolibre.android.mlbusinesscomponents"
+      ],
+      "description": "TODO: revisar home",
       "group": "com\\.facebook\\.fresco",
       "name": "animated-webp",
       "version": "2\\.2\\.0"
     },
     {
+      "description": "+60 consumers 05/08/24 - :ui con API()",
       "group": "com\\.facebook\\.fresco",
       "name": "fresco",
       "version": "2\\.2\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.checkout",
+        "com.mercadolibre.android.commons",
+        "com.mercadolibre.android.configuration.provider",
+        "com.mercadolibre.android.navigation_manager",
+        "com.mercadopago.android.configurer",
+        "com.mercadopago.android.configurer.smartpos",
+        "com.mercadopago.android.smartpos"
+      ],
       "group": "com\\.facebook\\.fresco",
       "name": "imagepipeline-okhttp3",
       "version": "2\\.2\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android:home",
+        "com.mercadolibre.android:ui",
+        "com.mercadolibre.android.mlbusinesscomponents",
+        "com.mercadolibre.android.wallet.home"
+      ],
+      "description": "TODO: validar :home :ui(API) ",
       "group": "com\\.facebook\\.fresco",
       "name": "webpsupport",
       "version": "2\\.2\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.charts"
+      ],
+      "description": "TODO: check this weird pseudo-3rd party",
       "group": "com\\.github\\.PhilJay",
       "name": "MPAndroidChart",
       "version": "v3\\.1\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.cardsacquisition",
+        "com.mercadolibre.android.cardsengagement",
+        "com.mercadolibre.android.cash_rails",
+        "com.mercadolibre.android.credit_card_virtual",
+        "com.mercadolibre.android.creditcard",
+        "com.mercadolibre.android.credits.customfaqs",
+        "com.mercadolibre.android.credits.floxclient",
+        "com.mercadolibre.android.credits.merchant.openmarket",
+        "com.mercadolibre.android.credits.toolkit",
+        "com.mercadolibre.android.debit_credit_cards_eng"
+      ],
+      "description": "TODO: 5 groups under .creditcard -> :changepin :dashboard :installments :overlimit :paymentflow",
       "group": "com\\.github\\.joshjdevl\\.libsodiumjni",
       "name": "libsodium-jni-aar",
       "version": "2\\.0\\.1"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.advertising",
+        "com.mercadolibre.android.bf_core_flox",
+        "com.mercadolibre.android.cash_rails",
+        "com.mercadolibre.android.ccap",
+        "com.mercadolibre.android.credit_card_disable",
+        "com.mercadolibre.android.credits.merchant.enrollment",
+        "com.mercadolibre.android.eshops",
+        "com.mercadolibre.android.instore_ui_components",
+        "com.mercadolibre.android.insu_flox_components",
+        "com.mercadolibre.android.ml_cards",
+        "com.mercadolibre.android.qadb",
+        "com.mercadolibre.android.recommendations",
+        "com.mercadolibre.android.search",
+        "com.mercadolibre.android.shorts",
+        "com.mercadolibre.android.singleplayer",
+        "com.mercadolibre.android.vpp",
+        "com.mercadopago.android.px"
+      ],
       "group": "com\\.google\\.android",
       "name": "flexbox",
       "version": "1\\.1\\.1"
     },
     {
+      "description": "TODO: revisar no hay usos directos en ningun lado, FORCE en commons, locations; MP no tiene la dep, ML solo por constraint",
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-iid",
       "version": "17\\.0\\.0"
     },
     {
+      "description": "TODO: revisar no hay usos directos en ningun lado, FORCE en commons, locations; MP no tiene la dep, ML solo por constraint",
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-gcm",
       "version": "17\\.0\\.0"
@@ -347,45 +467,47 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.checkout",
-        "com.mercadolibre.android.vpp",
-        "com.mercadolibre.android.singleplayer",
-        "com.mercadolibre.android.buyingflow.checkout",
-        "com.mercadolibre.android.mlwebkit",
-        "com.mercadolibre.android.point_recharge",
-        "com.mercadolibre.android.point_smart_home",
-        "com.mercadolibre.android.advertising",
-        "com.mercadolibre.android.point_smart_pos_sdk",
-        "com.mercadolibre.android.uicomponents",
-        "com.mercadolibre.android.insu_flox_components",
-        "com.mercadolibre.android.credits.admin",
+        "com.mercadoenvios.android.distribution",
+        "com.mercadoenvios.android.its",
+        "com.mercadoenvios.android.transferscan",
+        "com.mercadolibre.android:analytics",
+        "com.mercadolibre.android:sell-flow",
         "com.mercadolibre.android.bf_core_flox",
-        "com.mercadolibre.android.cardscomponents",
-        "com.mercadolibre.android.reviews3",
-        "com.mercadolibre.android.point_printer",
-        "com.mercadolibre.android.credits.merchant.administrator",
-        "com.mercadolibre.android.navigation_manager",
-        "com.mercadolibre.android.merch_realestates",
-        "com.mercadolibre.android.configuration.provider",
-        "com.mercadolibre.android.point_credits",
+        "com.mercadolibre.android.buyingflow.checkout",
         "com.mercadolibre.android.cardsbanking",
-        "com.mercadolibre.android.credits.pl",
-        "com.mercadolibre.android.credits.opensea",
-        "com.mercadopago.android.configurer.smartpos",
+        "com.mercadolibre.android.cardscomponents",
+        "com.mercadolibre.android.checkout",
         "com.mercadolibre.android.commons",
+        "com.mercadolibre.android.configuration.provider",
+        "com.mercadolibre.android.credit_card.upgrade",
+        "com.mercadolibre.android.credits.admin",
+        "com.mercadolibre.android.credits.merchant.administrator",
+        "com.mercadolibre.android.credits.opensea",
+        "com.mercadolibre.android.credits.pl",
         "com.mercadolibre.android.cx.support",
+        "com.mercadolibre.android.cx_support_daisy",
+        "com.mercadolibre.android.insu_flox_components",
+        "com.mercadolibre.android.location",
         "com.mercadolibre.android.meliphone.voip",
+        "com.mercadolibre.android.merch_realestates",
+        "com.mercadolibre.android.ml_qualtrics",
+        "com.mercadolibre.android.mlwebkit",
         "com.mercadolibre.android.money_advance",
         "com.mercadolibre.android.myml.questions",
-        "com.mercadolibre.android.credit_card.upgrade",
+        "com.mercadolibre.android.navigation_manager",
+        "com.mercadolibre.android.point_credits",
+        "com.mercadolibre.android.point_printer",
+        "com.mercadolibre.android.point_recharge",
+        "com.mercadolibre.android.point_smart_home",
+        "com.mercadolibre.android.point_smart_pos_sdk",
         "com.mercadolibre.android.point_virtualization",
-        "com.mercadolibre.android.location",
-        "com.mercadolibre.android.cx_support_daisy",
-        "com.mercadoenvios.android.its",
-        "com.mercadolibre.android.ml_qualtrics",
-        "com.mercadoenvios.android.transferscan",
-        "com.mercadoenvios.android.distribution"
+        "com.mercadolibre.android.reviews3",
+        "com.mercadolibre.android.singleplayer",
+        "com.mercadolibre.android.uicomponents",
+        "com.mercadolibre.android.vpp",
+        "com.mercadopago.android.configurer.smartpos"
       ],
+      "description": "TODO: revisar granularidad analytics, sell-flow; viewability solo tiene force y testapp",
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-analytics",
       "version": "18\\.0\\.4"
@@ -398,11 +520,7 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.commons",
-        "com.mercadolibre.android.authchallenges",
-        "com.mercadolibre.android.location",
-        "com.mercadoenvios.android.authentication_enrollment",
-        "com.mercadoenvios.android.authentication"
+        "com.mercadolibre.android.authchallenges"
       ],
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-auth",
@@ -416,24 +534,13 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.point.mpos",
-        "com.mercadopago.android.moneyout",
-        "com.mercadolibre.android.nfcpayments",
-        "com.mercadopago.android.digital_accounts_components",
-        "com.mercadolibre.android.nfcpushprovisioning",
-        "com.mercadolibre.android.configuration.provider",
-        "com.mercadopago.android.configurer.smartpos",
-        "com.mercadolibre.android.commons",
-        "com.mercadolibre.android.ml_scanner",
-        "com.mercadolibre.android.security",
-        "com.mercadolibre.android.creditcard",
-        "com.mercadolibre.android.money_advance",
-        "com.mercadolibre.android.inappupdates",
-        "com.mercadolibre.android.creditcard.reissue",
-        "com.mercadolibre.android.credits.floxclient",
+        "com.mercadolibre.android.configuration.provider:restclient-configurator",
         "com.mercadolibre.android.location",
         "com.mercadolibre.android.loyalty.datamanager",
-        "com.mercadolibre.android.testing"
+        "com.mercadolibre.android.nfcpushprovisioning",
+        "com.mercadolibre.android.testing",
+        "com.mercadopago.android.configurer.smartpos",
+        "com.mercadopago.android.digital_accounts_components"
       ],
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-base",
@@ -447,19 +554,20 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.point.mpos",
-        "com.mercadopago.android.moneyout",
-        "com.mercadolibre.android.singleplayer",
-        "com.mercadopago.android.digital_accounts_components",
-        "com.mercadolibre.android.addresses",
-        "com.mercadoenvios.android.shipping-toolkit",
-        "com.mercadopago.android.configurer.smartpos",
-        "com.mercadolibre.android.discovery",
-        "com.mercadolibre.android.commons",
-        "com.mercadoenvios.android.stimulator",
-        "com.mercadolibre.android.location",
         "com.mercadoenvios.android.rtt",
-        "com.mercadolibre.android.beacon_manager"
+        "com.mercadoenvios.android.shipping-toolkit",
+        "com.mercadoenvios.android.stimulator",
+        "com.mercadolibre.android",
+        "com.mercadolibre.android.addresses",
+        "com.mercadolibre.android.beacon_manager",
+        "com.mercadolibre.android.commons:location",
+        "com.mercadolibre.android.discovery",
+        "com.mercadolibre.android.location",
+        "com.mercadolibre.android.point.mpos",
+        "com.mercadolibre.android.singleplayer",
+        "com.mercadopago.android.configurer.smartpos",
+        "com.mercadopago.android.digital_accounts_components",
+        "com.mercadopago.android.moneyout"
       ],
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-location",
@@ -473,126 +581,246 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.point.mpos",
-        "com.mercadopago.android.moneyout",
-        "com.mercadopago.android.digital_accounts_components",
         "com.mercadoenvios.android.maps",
-        "com.mercadolibre.android.commons",
         "com.mercadolibre.android.maps",
-        "com.mercadolibre.android.location"
+        "com.mercadopago.android.moneyout"
       ],
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-maps",
       "version": "18\\.2\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.remove.this"
+      ],
+      "description": "TODO: I Couldn't find any real implementation; It Could be used transitively, a tentative expire date can be defined",
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-places",
       "version": "17\\.0\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.remove.this"
+      ],
+      "description": "TODO: no direct use, only FORCEs, Transitive req?; could have a tentative expiration date; APP-MP no tiene la dep, APP-ML SI tiene la dependencia ",
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-vision",
       "version": "20\\.1\\.3"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.security"
+      ],
       "group": "com\\.google\\.android\\.play",
       "name": "integrity",
       "version": "1\\.0\\.1"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.app_monitoring",
+        "com.mercadolibre.android.devices_sdk"
+      ],
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-appset",
       "version": "16\\.0\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.beacon_manager",
+        "com.mercadolibre.android.cross_app_links",
+        "com.mercadolibre.android.device",
+        "com.mercadolibre.android.devices_sdk",
+        "com.mercadopago.android.px"
+      ],
+      "description": "TODO: revisar xq device:TIENE-TODO-COMO-API()",
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-ads",
       "version": "17\\.1\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.cross_app_links",
+        "com.mercadolibre.android.device",
+        "com.mercadolibre.android.devices_sdk",
+        "com.mercadopago.android.px"
+      ],
+      "description": "TODO: revisar xq device:Tiene todo como API",
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-ads-identifier",
       "version": "17\\.1\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android:home",
+        "com.mercadolibre.android.checkout",
+        "com.mercadolibre.android.marketplace.map",
+        "com.mercadopago.android.digital_accounts_components"
+      ],
       "group": "com\\.google\\.android\\.libraries\\.places",
       "name": "places",
       "version": "2\\.5\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.checkout",
+        "com.mercadolibre.android.cx.support",
+        "com.mercadolibre.android.point.mpos",
+        "com.mercadolibre.android.remedies",
+        "com.mercadolibre.android.startupinitializer",
+        "com.mercadolibre.android.virtual_try_on"
+      ],
       "group": "com\\.mercadolibre\\.android\\.dynamic_features",
       "name": "core",
       "version": "11\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.dynamic_features"
+      ],
+      "description": "TODO: revisar cart-solo-testapp",
       "group": "com\\.google\\.android\\.play",
       "name": "feature-delivery",
       "version": "2\\.1\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.remove.this"
+      ],
+      "description": "TODO: revisar si queremos tener libs por las dudas, solo preparation-app la tiene, y es APP",
       "group": "com\\.google\\.android\\.play",
       "name": "feature-delivery-ktx",
       "version": "2\\.1\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadoenvios.android.shipping-toolkit",
+        "com.mercadolibre.android:apprater",
+        "com.mercadolibre.android:apprater-mp",
+        "com.mercadolibre.android:apprater-ml"
+      ],
       "group": "com\\.google\\.android\\.play",
       "name": "review",
       "version": "2\\.0\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadoenvios.android.shipping-toolkit"
+      ],
       "group": "com\\.google\\.android\\.play",
       "name": "review-ktx",
       "version": "2\\.0\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.inappupdates"
+      ],
       "group": "com\\.google\\.android\\.play",
       "name": "app-update",
       "version": "2\\.1\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.remove.this"
+      ],
+      "description": "TODO: revisar si queremos tener libs por las dudas, esta incluida en las apps, pero no en las libs",
       "group": "com\\.google\\.android\\.play",
       "name": "app-update-ktx",
       "version": "2\\.1\\.0"
     },
     {
+      "description": "mas de 50+ consumers",
       "group": "com\\.google\\.code\\.gson",
       "name": "gson",
       "version": "2\\.8\\.8"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.ml_cards",
+        "com.mercadolibre.android.recommendations_combo",
+        "com.mercadolibre.android.reviews3",
+        "com.mercadolibre.android.search"
+      ],
       "group": "com\\.google\\.firebase",
       "name": "firebase-appindexing"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadoenvios.android.distribution",
+        "com.mercadolibre.android.buyingflow",
+        "com.mercadolibre.android.checkout",
+        "com.mercadolibre.android.credits.admin",
+        "com.mercadolibre.android.credits.opensea",
+        "com.mercadolibre.android.mlwebkit",
+        "com.mercadolibre.android.reviews3",
+        "com.mercadolibre.android.vpp"
+      ],
       "group": "com\\.google\\.firebase",
       "name": "firebase-analytics"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.can.we.remove.this"
+      ],
+      "description": "TODO: no hay uso directo en los repos, solo por transitividad",
       "group": "com\\.google\\.firebase",
       "name": "firebase-config"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.can.we.remove.this"
+      ],
+      "description": "TODO: no hay uso directo en los repos, solo por transitividad",
       "group": "com\\.google\\.firebase",
       "name": "firebase-iid"
     },
     {
-      "group": "com\\.google\\.firebase",
-      "name": "firebase-auth"
-    },
-    {
+      "allows_granular_projects": [
+        "com.mercadolibre.can.we.remove.this"
+      ],
+      "description": "TODO: dependencia en las apps; no real implementation uses in repos; lots of testapp + un testimplementation en com.mercadolibre.android.rich_notifications:carousel",
       "group": "com\\.google\\.firebase",
       "name": "firebase-common"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android:notifications-commons",
+        "com.mercadolibre.android.braze",
+        "com.mercadolibre.android.buyingflow.checkout",
+        "com.mercadolibre.android.cardsacquisition",
+        "com.mercadolibre.android.cart",
+        "com.mercadolibre.android.credits.pl",
+        "com.mercadolibre.android.instore",
+        "com.mercadolibre.android.payment_flow_fcu",
+        "com.mercadolibre.android.point.mpos",
+        "com.mercadolibre.android.reviews3",
+        "com.mercadolibre.android.vpp",
+        "com.mercadopago.android.configurer:firebase-configurer",
+        "com.mercadopago.android.configurer:metrics-configurer"
+      ],
+      "description": "TODO: Revisar granularidad de los configurers; Porque un equipo de producto necesita inicializar esto?",
       "group": "com\\.google\\.firebase",
       "name": "firebase-core"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android:device-register",
+        "com.mercadolibre.android:notifications",
+        "com.mercadolibre.android:notifications_commons",
+        "com.mercadolibre.android.adjust",
+        "com.mercadolibre.android.braze",
+        "com.mercadolibre.android.cx.support",
+        "com.mercadolibre.android.data_privacy_helper",
+        "com.mercadolibre.android.meliphone.voip"
+      ],
       "group": "com\\.google\\.firebase",
       "name": "firebase-messaging"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.metrics",
+        "com.mercadolibre.android.reviews3",
+        "com.mercadolibre.android.search"
+      ],
       "expires": "2024-10-01",
       "group": "com\\.google\\.firebase",
       "name": "firebase-perf"
@@ -2690,16 +2918,25 @@
       "version": "17\\.0\\.1"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.ml_scanner"
+      ],
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-mlkit-text-recognition",
       "version": "18\\.0\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.ml_scanner"
+      ],
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-mlkit-barcode-scanning",
       "version": "16\\.1\\.4"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.ml_scanner"
+      ],
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-mlkit-barcode-scanning",
       "version": "18\\.3\\.0"
@@ -4053,6 +4290,9 @@
       "version": "6\\.6\\.1"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.meliphone.voip"
+      ],
       "description": "This library is required by meliphone.",
       "group": "com\\.twilio",
       "name": "audioswitch",
@@ -4180,6 +4420,9 @@
       "version": "22\\.0\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.px.tokenization.core"
+      ],
       "group": "com\\.mercadolibre\\.android\\.px",
       "name": "tmgsdk",
       "version": "release-1.0.2-251022"
