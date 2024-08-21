@@ -812,6 +812,7 @@
         "Gamification",
         "HomeWallet",
         "IspMpos",
+        "IspSf",
         "MerchRealestates",
         "MerchRealestates/DismissContent",
         "MerchRealestates/MercadoLibre",
@@ -2300,7 +2301,8 @@
     },
     {
       "allows_granular_projects": [
-        "MPConfigurationProvider/MLNetworking"
+        "MPConfigurationProvider/MLNetworking",
+        "MLOnDemandResources"
       ],
       "name": "AppTheme",
       "source": "private",
