@@ -4,7 +4,7 @@ IOS_FILE_PREFIX = "ios-"
 ANDROID_FILE_PREFIX = "android-"
 KMP_FILE_PREFIX = "cross-kmp-"
 
-EXCLUDED_LIBRARIES = [
+IOS_EXCLUDED_LIBRARIES = [
   "MLDynamicModal",
   "MLUI",
   "MPDynamicSkeleton",
@@ -14,6 +14,11 @@ EXCLUDED_LIBRARIES = [
   "AndesUI$",
   "AndesUI/(Core|AndesCoachmark|AndesBottomSheet|AndesDropdown|AndesTimePicker)",
   "AndesUI/SwiftUI"
+]
+
+ANDROID_EXCLUDED_LIBRARIES = [
+  # Meli gradle plugin dont accept version "1+jason" as valid 
+  "com\\.bitmovin\\.player:player",
 ]
 
 LIBRARIES_NAMES_WITH_INVALID_VERSION = []
@@ -32,8 +37,8 @@ def check_version_pattern_ios(node)
   name = node["name"]
   source = node["source"]
   version = node["version"]
-
-  if source == public_source && version =~ dynamic_pattern && !EXCLUDED_LIBRARIES.include?(name)
+  
+  if source == public_source && version =~ dynamic_pattern && !IOS_EXCLUDED_LIBRARIES.include?(name)
     LIBRARIES_NAMES_WITH_INVALID_VERSION.push(name)
   end
 end
@@ -49,7 +54,7 @@ def check_version_pattern_android(node)
 
   is_public = !private_group_prefix.any? { |prefix| group.include?(prefix) }
 
-  if is_public && version =~ dynamic_pattern
+  if is_public && version =~ dynamic_pattern && !ANDROID_EXCLUDED_LIBRARIES.include?(group + ":" + name)
     LIBRARIES_NAMES_WITH_INVALID_VERSION.push(name)
   end
 end
