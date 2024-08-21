@@ -1730,6 +1730,16 @@
       "version": "7\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        ""
+      ],
+      "description": "Esta lib se deprecará, debemos utilizar cameraX",
+      "expires": "2024-08-28",
+      "group": "com\\.otaliastudios",
+      "name": "cameraview",
+      "version": "2\\.7\\.2"
+    },
+    {
       "description": "Esta libs se encuentra deprecada, recomendamos utilizar coroutine",
       "expires": "2024-12-01",
       "group": "io\\.reactivex\\.rxjava2",
