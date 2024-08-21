@@ -2301,7 +2301,8 @@
     },
     {
       "allows_granular_projects": [
-        "MPConfigurationProvider/MLNetworking"
+        "MPConfigurationProvider/MLNetworking",
+        "MLOnDemandResources"
       ],
       "name": "AppTheme",
       "source": "private",
