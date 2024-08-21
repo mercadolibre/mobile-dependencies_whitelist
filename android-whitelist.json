@@ -402,7 +402,8 @@
         "com.mercadolibre.android.authchallenges",
         "com.mercadolibre.android.location",
         "com.mercadoenvios.android.authentication_enrollment",
-        "com.mercadoenvios.android.authentication"
+        "com.mercadoenvios.android.authentication",
+        "com.mercadolibre.android.authsocialaccount"
       ],
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-auth",
@@ -729,6 +730,15 @@
     {
       "group": "com\\.mercadolibre\\.android\\.authscopedsession",
       "name": "scopedsession",
+      "version": "1\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.login",
+        "com.mercadolibre.android.hub"
+      ],
+      "group": "com\\.mercadolibre\\.android\\.authsocialaccount",
+      "name": "authsocialaccount",
       "version": "1\\.\\+"
     },
     {
