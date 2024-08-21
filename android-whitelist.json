@@ -3702,24 +3702,48 @@
       "version": "3\\.\\+"
     },
     {
+      "expires": "2024-11-01",
       "group": "com\\.mercadolibre\\.android\\.isp_sf",
       "name": "di",
       "version": "5\\.\\+"
     },
     {
+      "expires": "2024-11-01",
       "group": "com\\.mercadolibre\\.android\\.isp_sf",
       "name": "facade",
       "version": "5\\.\\+"
     },
     {
+      "expires": "2024-11-01",
       "group": "com\\.mercadolibre\\.android\\.isp_sf",
       "name": "network",
       "version": "5\\.\\+"
     },
     {
+      "expires": "2024-11-01",
       "group": "com\\.mercadolibre\\.android\\.isp_sf",
       "name": "reader_manager",
       "version": "5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "di",
+      "version": "7\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "facade",
+      "version": "7\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "network",
+      "version": "7\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "reader_manager",
+      "version": "7\\.\\+"
     },
     {
       "allows_granular_projects": [
