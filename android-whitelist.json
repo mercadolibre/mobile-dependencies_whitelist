@@ -400,7 +400,9 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.commons",
         "com.mercadolibre.android.authchallenges",
-        "com.mercadolibre.android.location"
+        "com.mercadolibre.android.location",
+        "com.mercadoenvios.android.authentication_enrollment",
+        "com.mercadoenvios.android.authentication"
       ],
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-auth",
@@ -867,18 +869,6 @@
       "version": "1\\.1\\.3"
     },
     {
-      "expires": "2024-08-16",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "restclient",
-      "version": "26\\.\\+"
-    },
-    {
-      "expires": "2024-08-16",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "restclient-adapter-bus",
-      "version": "26\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android",
       "name": "restclient",
       "version": "27\\.\\+"
@@ -957,20 +947,6 @@
       "version": "13\\.\\+"
     },
     {
-      "description": "The expiration is due to a library update to support Android 14",
-      "expires": "2024-08-12",
-      "group": "com\\.mercadolibre\\.android\\.cart",
-      "name": "manager",
-      "version": "mercadolibre-15\\.\\+|mercadopago-15\\.\\+"
-    },
-    {
-      "description": "The expiration is due to a library update to support Android 14",
-      "expires": "2024-08-12",
-      "group": "com\\.mercadolibre\\.android\\.cart",
-      "name": "cart",
-      "version": "mercadolibre-16\\.\\+|mercadopago-16\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.cart",
       "name": "manager",
       "version": "mercadolibre-16\\.\\+|mercadopago-16\\.\\+"
@@ -979,13 +955,6 @@
       "group": "com\\.mercadolibre\\.android\\.cart",
       "name": "cart",
       "version": "mercadolibre-17\\.\\+|mercadopago-17\\.\\+"
-    },
-    {
-      "description": "The expiration is due to a library update to support Android 14",
-      "expires": "2024-08-12",
-      "group": "com\\.mercadolibre\\.android\\.cart\\.facade",
-      "name": "proxy",
-      "version": "1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cart\\.facade",
@@ -1208,7 +1177,8 @@
     {
       "allows_granular_projects": [
         "com.mercadolibre.android.tetris",
-        "com.mercadolibre.android.vpp"
+        "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.polycards"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "expires": "2024-10-28",
@@ -1234,7 +1204,9 @@
     {
       "allows_granular_projects": [
         "com.mercadolibre.android.tetris",
-        "com.mercadolibre.android.vpp"
+        "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.polycards",
+        "com.mercadolibre.android.mp_search"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
@@ -1275,12 +1247,6 @@
       "version": "15\\.\\+"
     },
     {
-      "expires": "2024-08-12",
-      "group": "com\\.mercadolibre\\.android\\.request_watcher",
-      "name": "core",
-      "version": "1\\.\\+"
-    },
-    {
       "allows_granular_projects": [
         "com.mercadolibre.android.developer_mode"
       ],
@@ -1317,12 +1283,6 @@
       "version": "13\\.\\+"
     },
     {
-      "expires": "2024-08-12",
-      "group": "com\\.mercadolibre\\.android\\.risk_management",
-      "name": "riskmanagement",
-      "version": "6\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.risk_management",
       "name": "riskmanagement",
       "version": "7\\.\\+"
@@ -1348,6 +1308,7 @@
       "version": "21\\.\\+"
     },
     {
+      "expires": "2024-09-13",
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "morelikethis",
       "version": "21\\.\\+"
@@ -1386,10 +1347,10 @@
         "com.mercadolibre.android.search",
         "com.mercadolibre.android.vpp"
       ],
-      "description": "This is an experimental version of more like this lib",
+      "description": "This is the MoreLikeThis standalone library",
       "group": "com\\.mercadolibre\\.android",
       "name": "more_like_this",
-      "version": "0\\.\\+"
+      "version": "1\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -1437,7 +1398,7 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android",
+        "com.mercadolibre.android:home",
         "com.mercadolibre.android.vpp",
         "com.mercadolibre.android.search"
       ],
@@ -1469,12 +1430,6 @@
     {
       "group": "com\\.mercadolibre\\.android\\.vpp",
       "version": "10\\.\\+"
-    },
-    {
-      "expires": "2024-08-09",
-      "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
-      "name": "api",
-      "version": "8\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
@@ -1534,13 +1489,6 @@
       "version": "5\\.\\+"
     },
     {
-      "description": "Deprecated due to Android 14 migration. Use version 10.+",
-      "expires": "2024-08-16",
-      "group": "com\\.mercadolibre\\.android\\.cardscomponents",
-      "name": "cards-components",
-      "version": "9\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.cardscomponents",
       "name": "cards-components",
       "version": "10\\.\\+"
@@ -1589,7 +1537,7 @@
     {
       "group": "com\\.mercadolibre\\.android\\.px",
       "name": "usdk",
-      "version": "6\\.6\\.70"
+      "version": "6\\.6\\.71"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.px\\.pmselector",
@@ -1613,21 +1561,9 @@
       "version": "3\\.\\+"
     },
     {
-      "expires": "2024-08-11",
-      "group": "com\\.mercadolibre\\.android\\.pos_readers",
-      "name": "posreaders",
-      "version": "9\\.+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.pos_readers",
       "name": "posreaders",
       "version": "10\\.+"
-    },
-    {
-      "expires": "2024-08-11",
-      "group": "com\\.mercadolibre\\.android\\.pos_readers",
-      "name": "entrypoint",
-      "version": "9\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.pos_readers",
@@ -1635,21 +1571,9 @@
       "version": "10\\.+"
     },
     {
-      "expires": "2024-08-11",
-      "group": "com\\.mercadolibre\\.android\\.pos_readers",
-      "name": "commons",
-      "version": "9\\.+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.pos_readers",
       "name": "commons",
       "version": "10\\.+"
-    },
-    {
-      "expires": "2024-08-11",
-      "group": "com\\.mercadopago\\.android\\.point_ui",
-      "name": "components",
-      "version": "6\\.+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.point_ui",
@@ -1685,24 +1609,6 @@
       "version": "12\\.+"
     },
     {
-      "expires": "2024-08-11",
-      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
-      "name": "paymentflowfcu",
-      "version": "13\\.+"
-    },
-    {
-      "expires": "2024-08-11",
-      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
-      "name": "entities_fcu",
-      "version": "13\\.+"
-    },
-    {
-      "expires": "2024-08-11",
-      "group": "com\\.mercadolibre\\.android\\.point\\.mpos",
-      "name": "mpos",
-      "version": "7\\.+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
       "name": "paymentflowfcu",
       "version": "14\\.+"
@@ -1711,12 +1617,6 @@
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
       "name": "entities_fcu",
       "version": "14\\.+"
-    },
-    {
-      "expires": "2024-08-11",
-      "group": "com\\.mercadolibre\\.android\\.point\\.mpos",
-      "name": "entrypoint",
-      "version": "8\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point\\.mpos",
@@ -1724,50 +1624,14 @@
       "version": "9\\.+"
     },
     {
-      "expires": "2024-08-11",
-      "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
-      "name": "mpoc",
-      "version": "0\\.+"
-    },
-    {
-      "expires": "2024-08-11",
-      "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
-      "name": "mypinpad",
-      "version": "0\\.+"
-    },
-    {
-      "expires": "2024-08-11",
-      "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
-      "name": "payment",
-      "version": "0\\.+"
-    },
-    {
-      "expires": "2024-08-11",
-      "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
-      "name": "mpoc",
-      "version": "1\\.+"
-    },
-    {
       "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
       "name": "mpoc",
       "version": "2\\.+"
     },
     {
-      "expires": "2024-08-11",
-      "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
-      "name": "mypinpad",
-      "version": "1\\.+"
-    },
-    {
       "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
       "name": "mypinpad",
       "version": "2\\.+"
-    },
-    {
-      "expires": "2024-08-11",
-      "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
-      "name": "payment",
-      "version": "1\\.+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
@@ -1778,12 +1642,6 @@
       "group": "com\\.mercadolibre\\.mpos\\.android\\.sdk_mpp",
       "name": "mpp-release",
       "version": "1\\.+"
-    },
-    {
-      "expires": "2024-08-11",
-      "group": "com\\.mercadopago\\.android\\.isp\\.payment_contactless",
-      "name": "sdk",
-      "version": "0\\.+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.isp\\.payment_contactless",
@@ -1872,6 +1730,16 @@
       "version": "7\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.remedies"
+      ],
+      "description": "Esta lib se deprecará, debemos utilizar cameraX",
+      "expires": "2024-08-27",
+      "group": "com\\.otaliastudios",
+      "name": "cameraview",
+      "version": "2\\.7\\.2"
+    },
+    {
       "description": "Esta libs se encuentra deprecada, recomendamos utilizar coroutine",
       "expires": "2024-12-01",
       "group": "io\\.reactivex\\.rxjava2",
@@ -1918,32 +1786,14 @@
       "version": "1\\.8\\.10"
     },
     {
-      "expires": "2024-08-12",
-      "group": "com\\.mercadolibre\\.android\\.userbiometrics",
-      "name": "core",
-      "version": "9\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.userbiometrics",
       "name": "core",
       "version": "10\\.\\+"
     },
     {
-      "expires": "2024-08-12",
-      "group": "com\\.mercadolibre\\.android\\.security",
-      "name": "security_preferences",
-      "version": "mercadopago-10\\.\\+|mercadolibre-10\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.security",
       "name": "security_preferences",
       "version": "mercadopago-11\\.\\+|mercadolibre-11\\.\\+"
-    },
-    {
-      "expires": "2024-08-12",
-      "group": "com\\.mercadolibre\\.android\\.security",
-      "name": "security_ui",
-      "version": "mercadopago-9\\.\\+|mercadolibre-9\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.security",
@@ -2073,7 +1923,9 @@
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
-        "com.mercadolibre.android.vpp"
+        "com.mercadolibre.android.vpp",
+        "com.mercadolibre.android.polycards",
+        "com.mercadolibre.android.mp_search"
       ],
       "group": "com\\.mercadolibre\\.android\\.andesui",
       "name": "components-compose",
@@ -2090,7 +1942,9 @@
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.vpp",
-        "com.mercadolibre.android.everest_canvas"
+        "com.mercadolibre.android.polycards",
+        "com.mercadolibre.android.everest_canvas",
+        "com.mercadolibre.android.mp_search"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "com\\.mercadolibre\\.android\\.andes_integrations",
@@ -2757,7 +2611,7 @@
       "expires": "2024-12-31",
       "group": "com\\.auth0\\.android",
       "name": "auth0",
-      "version": "2\\.\\+"
+      "version": "2\\.9\\.3"
     },
     {
       "allows_granular_projects": [
@@ -2766,7 +2620,7 @@
       "expires": "2024-12-31",
       "group": "com\\.auth0\\.android",
       "name": "jwtdecode",
-      "version": "2\\.\\+"
+      "version": "2\\.0\\.2"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point_smart_helpers",
@@ -3021,27 +2875,6 @@
       "version": "mercadolibre-12\\.\\+|mercadopago-12\\.\\+"
     },
     {
-      "description": "For integrators from inside MP/MLs app - Expires because migrations",
-      "expires": "2024-08-16",
-      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
-      "name": "scanner",
-      "version": "mercadolibre-14\\.\\+|mercadopago-14\\.\\+"
-    },
-    {
-      "description": "For integrators from inside MP/MLs app - Expires because migrations",
-      "expires": "2024-08-16",
-      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
-      "name": "ocr",
-      "version": "mercadolibre-14\\.\\+|mercadopago-14\\.\\+"
-    },
-    {
-      "description": "For integrators from inside MP/MLs app - Expires because migrations",
-      "expires": "2024-08-16",
-      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
-      "name": "barcode",
-      "version": "mercadolibre-14\\.\\+|mercadopago-14\\.\\+"
-    },
-    {
       "description": "For integrators from inside MP/MLs app",
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "scanner",
@@ -3078,13 +2911,13 @@
     {
       "group": "com\\.android\\.tools",
       "name": "desugar_jdk_libs",
-      "version": "1\\.+"
+      "version": "1\\.1\\.5"
     },
     {
       "expires": "2024-08-30",
       "group": "io\\.opentelemetry",
       "name": "opentelemetry-api",
-      "version": "1\\.27\\.+"
+      "version": "1\\.27\\.0"
     },
     {
       "group": "io\\.opentelemetry",
@@ -3095,7 +2928,7 @@
       "expires": "2024-08-30",
       "group": "io\\.opentelemetry",
       "name": "opentelemetry-bom",
-      "version": "1\\.27\\.+"
+      "version": "1\\.27\\.0"
     },
     {
       "group": "io\\.opentelemetry",
@@ -3122,7 +2955,7 @@
       "expires": "2024-08-30",
       "group": "io\\.opentelemetry\\.instrumentation",
       "name": "opentelemetry-okhttp-3.0",
-      "version": "1\\.27\\.+"
+      "version": "1\\.27\\.0-alpha"
     },
     {
       "group": "io\\.opentelemetry\\.instrumentation",
@@ -3132,7 +2965,7 @@
     {
       "group": "io\\.grpc",
       "name": "grpc-okhttp",
-      "version": "1\\.46\\.+"
+      "version": "1\\.46\\.1"
     },
     {
       "expires": "2024-08-30",
@@ -3219,11 +3052,17 @@
       "version": "0\\.+"
     },
     {
+      "expires": "2024-10-01",
       "group": "com\\.mercadolibre\\.android\\.data_privacy_helper",
       "name": "libdataprivacy",
       "version": "5\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.data_privacy_helper",
+      "name": "libdataprivacy",
+      "version": "6\\.\\+"
+    },
+    {
       "expires": "2025-09-01",
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "seller",
@@ -3242,19 +3081,28 @@
       "version": "17\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadopago.android.cashin"
+      ],
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "seller",
-      "version": "18\\.\\+"
+      "version": "19\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadopago.android.cashin"
+      ],
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "payer",
-      "version": "18\\.\\+"
+      "version": "19\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadopago.android.cashin"
+      ],
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "commons",
-      "version": "18\\.\\+"
+      "version": "19\\.\\+"
     },
     {
       "expires": "2025-09-01",
@@ -3263,9 +3111,12 @@
       "version": "14\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadopago.android.cashout"
+      ],
       "group": "com\\.mercadolibre\\.android\\.cashout",
       "name": "cashout",
-      "version": "15\\.\\+"
+      "version": "16\\.\\+"
     },
     {
       "expires": "2025-09-01",
@@ -3322,49 +3173,85 @@
       "version": "8\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadopago.android.cashin",
+        "com.mercadolibre.android.cashout"
+      ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "rating",
-      "version": "9\\.\\+"
+      "version": "10\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadopago.android.cashin",
+        "com.mercadolibre.android.cashout"
+      ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "core",
-      "version": "9\\.\\+"
+      "version": "10\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadopago.android.cashin",
+        "com.mercadolibre.android.cashout"
+      ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "feedback",
-      "version": "9\\.\\+"
+      "version": "10\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadopago.android.cashin",
+        "com.mercadolibre.android.cashout"
+      ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "tab",
-      "version": "9\\.\\+"
+      "version": "10\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadopago.android.cashin",
+        "com.mercadolibre.android.cashout"
+      ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "ui_component",
-      "version": "9\\.\\+"
+      "version": "10\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadopago.android.cashin",
+        "com.mercadolibre.android.cashout"
+      ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "commons",
-      "version": "9\\.\\+"
+      "version": "10\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadopago.android.cashin",
+        "com.mercadolibre.android.cashout"
+      ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "map",
-      "version": "9\\.\\+"
+      "version": "10\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadopago.android.cashin",
+        "com.mercadolibre.android.cashout"
+      ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "report",
-      "version": "9\\.\\+"
+      "version": "10\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadopago.android.cashin",
+        "com.mercadolibre.android.cashout"
+      ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "business_component",
-      "version": "9\\.\\+"
+      "version": "10\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.mp_sellers_growth",
@@ -3436,9 +3323,14 @@
       "version": "4\\.+"
     },
     {
+      "group": "com.mercadolibre.android.polycards",
+      "name": "core",
+      "version": "0\\.+"
+    },
+    {
       "group": "com\\.bitmovin\\.player",
       "name": "player",
-      "version": "3\\.43\\.1\\.+"
+      "version": "3\\.43\\.+"
     },
     {
       "allows_granular_projects": [
@@ -3581,7 +3473,7 @@
     {
       "group": "com\\.symbol",
       "name": "emdk",
-      "version": "9\\.\\+"
+      "version": "9\\.1\\.1"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.yuca_authentication",
@@ -3637,39 +3529,9 @@
       "version": "4\\.\\+"
     },
     {
-      "expires": "2024-08-06",
-      "group": "com\\.datadoghq",
-      "name": "dd-sdk-android-gradle-plugin",
-      "version": "1\\.12\\.0"
-    },
-    {
       "group": "com\\.datadoghq",
       "name": "dd-sdk-android-gradle-plugin",
       "version": "1\\.14\\.0"
-    },
-    {
-      "expires": "2024-08-06",
-      "group": "com\\.datadoghq",
-      "name": "dd-sdk-android-rum",
-      "version": "2\\.4\\.0"
-    },
-    {
-      "expires": "2024-08-06",
-      "group": "com\\.datadoghq",
-      "name": "dd-sdk-android-logs",
-      "version": "2\\.4\\.0"
-    },
-    {
-      "expires": "2024-08-06",
-      "group": "com\\.datadoghq",
-      "name": "dd-sdk-android-trace",
-      "version": "2\\.4\\.0"
-    },
-    {
-      "expires": "2024-08-06",
-      "group": "com\\.datadoghq",
-      "name": "dd-sdk-android-okhttp",
-      "version": "2\\.4\\.0"
     },
     {
       "group": "com\\.datadoghq",
@@ -3700,31 +3562,31 @@
       "description": "This library is used for push-notification with mqtt",
       "group": "com\\.gojek\\.courier",
       "name": "courier",
-      "version": "0\\.1\\.\\+"
+      "version": "0\\.1\\.6"
     },
     {
       "description": "This library is used for push-notification with mqtt",
       "group": "com\\.gojek\\.courier",
       "name": "courier-message-adapter-gson",
-      "version": "0\\.1\\.\\+"
+      "version": "0\\.1\\.6"
     },
     {
       "description": "This library is used for push-notification with mqtt",
       "group": "com\\.gojek\\.courier",
       "name": "courier-stream-adapter-coroutines",
-      "version": "0\\.1\\.\\+"
+      "version": "0\\.1\\.6"
     },
     {
       "description": "This library is used for push-notification with mqtt",
       "group": "com\\.gojek\\.courier",
       "name": "workmanager-2\\.6\\.0-pingsender",
-      "version": "0\\.1\\.\\+"
+      "version": "0\\.1\\.6"
     },
     {
       "description": "This library is used for push-notification with mqtt",
       "group": "com\\.gojek\\.courier",
       "name": "alarm-pingsender",
-      "version": "0\\.1\\.\\+"
+      "version": "0\\.1\\.6"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.performance_tools",
@@ -3740,12 +3602,6 @@
       "group": "com\\.mercadolibre\\.android\\.everest",
       "name": "catalog",
       "version": "17\\.+"
-    },
-    {
-      "expires": "2024-08-05",
-      "group": "com\\.mercadolibre\\.android\\.errorhandler\\.v2",
-      "name": "core",
-      "version": "production-3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.errorhandler\\.v2",
@@ -3846,24 +3702,48 @@
       "version": "3\\.\\+"
     },
     {
+      "expires": "2024-11-01",
       "group": "com\\.mercadolibre\\.android\\.isp_sf",
       "name": "di",
       "version": "5\\.\\+"
     },
     {
+      "expires": "2024-11-01",
       "group": "com\\.mercadolibre\\.android\\.isp_sf",
       "name": "facade",
       "version": "5\\.\\+"
     },
     {
+      "expires": "2024-11-01",
       "group": "com\\.mercadolibre\\.android\\.isp_sf",
       "name": "network",
       "version": "5\\.\\+"
     },
     {
+      "expires": "2024-11-01",
       "group": "com\\.mercadolibre\\.android\\.isp_sf",
       "name": "reader_manager",
       "version": "5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "di",
+      "version": "7\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "facade",
+      "version": "7\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "network",
+      "version": "7\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "reader_manager",
+      "version": "7\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -3914,12 +3794,6 @@
       "group": "com\\.mercadolibre\\.android\\.wishlists",
       "name": "wishlists",
       "version": "4\\.\\+"
-    },
-    {
-      "expires": "2024-08-16",
-      "group": "com\\.mercadolibre\\.android\\.wishlists",
-      "name": "wishlists",
-      "version": "3\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.mobile_permissions",
@@ -3980,7 +3854,9 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.vpp",
-        "com.mercadolibre.android.everest_canvas"
+        "com.mercadolibre.android.polycards",
+        "com.mercadolibre.android.everest_canvas",
+        "com.mercadolibre.android.mp_search"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.constraintlayout",
@@ -3995,7 +3871,9 @@
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.vpp",
-        "com.mercadolibre.android.everest_canvas"
+        "com.mercadolibre.android.polycards",
+        "com.mercadolibre.android.everest_canvas",
+        "com.mercadolibre.android.mp_search"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose",
@@ -4010,7 +3888,9 @@
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.vpp",
-        "com.mercadolibre.android.everest_canvas"
+        "com.mercadolibre.android.polycards",
+        "com.mercadolibre.android.everest_canvas",
+        "com.mercadolibre.android.mp_search"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.foundation",
@@ -4024,7 +3904,9 @@
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.vpp",
-        "com.mercadolibre.android.everest_canvas"
+        "com.mercadolibre.android.polycards",
+        "com.mercadolibre.android.everest_canvas",
+        "com.mercadolibre.android.mp_search"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.material3",
@@ -4047,7 +3929,9 @@
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.vpp",
-        "com.mercadolibre.android.everest_canvas"
+        "com.mercadolibre.android.polycards",
+        "com.mercadolibre.android.everest_canvas",
+        "com.mercadolibre.android.mp_search"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.activity",
@@ -4062,7 +3946,9 @@
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.vpp",
-        "com.mercadolibre.android.everest_canvas"
+        "com.mercadolibre.android.polycards",
+        "com.mercadolibre.android.everest_canvas",
+        "com.mercadolibre.android.mp_search"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.ui",
@@ -4076,7 +3962,9 @@
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.vpp",
-        "com.mercadolibre.android.everest_canvas"
+        "com.mercadolibre.android.polycards",
+        "com.mercadolibre.android.everest_canvas",
+        "com.mercadolibre.android.mp_search"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.runtime",
@@ -4090,7 +3978,9 @@
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.vpp",
-        "com.mercadolibre.android.everest_canvas"
+        "com.mercadolibre.android.polycards",
+        "com.mercadolibre.android.everest_canvas",
+        "com.mercadolibre.android.mp_search"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.ui",
@@ -4104,7 +3994,9 @@
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.vpp",
-        "com.mercadolibre.android.everest_canvas"
+        "com.mercadolibre.android.polycards",
+        "com.mercadolibre.android.everest_canvas",
+        "com.mercadolibre.android.mp_search"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.ui",
@@ -4117,7 +4009,9 @@
         "com.mercadolibre.android.on.demand.resources",
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.vpp",
-        "com.mercadolibre.android.everest_canvas"
+        "com.mercadolibre.android.polycards",
+        "com.mercadolibre.android.everest_canvas",
+        "com.mercadolibre.android.mp_search"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.ui",
@@ -4126,6 +4020,7 @@
     {
       "allows_granular_projects": [
         "com.mercadolibre.android.auth_native_sso",
+        "com.mercadolibre.android.polycards",
         "com.mercadolibre.android.everest_canvas"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
@@ -4140,7 +4035,9 @@
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.vpp",
-        "com.mercadolibre.android.everest_canvas"
+        "com.mercadolibre.android.polycards",
+        "com.mercadolibre.android.everest_canvas",
+        "com.mercadolibre.android.mp_search"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.lifecycle",
@@ -4181,10 +4078,13 @@
       "version": "mercadopago-1\\.\\+|mercadolibre-1\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.meliphone.voip"
+      ],
       "description": "This library is required by meliphone.",
       "group": "com\\.twilio",
       "name": "voice-android",
-      "version": "6\\.4\\.0"
+      "version": "6\\.6\\.1"
     },
     {
       "description": "This library is required by meliphone.",
@@ -4195,7 +4095,7 @@
     {
       "group": "com\\.mercadolibre\\.android\\.mobile_actions",
       "name": "core",
-      "version": "1\\.\\+"
+      "version": "2\\.\\+"
     },
     {
       "description": "The expiration is due to a library update to support Android 14",
@@ -4337,7 +4237,8 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.everest_canvas"
+        "com.mercadolibre.android.everest_canvas",
+        "com.mercadolibre.android.polycards"
       ],
       "group": "io\\.coil-kt",
       "name": "coil-compose",
@@ -4368,14 +4269,26 @@
       "version": "2\\.6\\.0"
     },
     {
+      "expires": "2024-09-09",
       "group": "com\\.mercadolibre\\.android\\.instore",
       "name": "instore",
       "version": "mercadolibre-15\\.\\+|mercadopago-15\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.instore",
+      "name": "instore",
+      "version": "mercadolibre-16\\.\\+|mercadopago-16\\.\\+"
+    },
+    {
+      "expires": "2024-09-09",
       "group": "com\\.mercadolibre\\.android\\.meliscanbarcodeui",
       "name": "meliscanbarcodeui",
       "version": "5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.meliscanbarcodeui",
+      "name": "meliscanbarcodeui",
+      "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.barcode_img_generator",
@@ -4417,6 +4330,32 @@
       "group": "com\\.journeyapps",
       "name": "zxing-android-embedded",
       "version": "4\\.\\3\\.0"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadopago.android.configurer",
+        "com.mercadolibre.android.mlwebkit",
+        "com.mercadolibre.android.on.demand.resources"
+      ],
+      "description": "This library was created to manage application themes. Its use is restricted, contact everest",
+      "group": "com\\.mercadolibre\\.android\\.app_theme",
+      "name": "core",
+      "transitive_configuration": {
+        "transitivity": false
+      },
+      "version": "0\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.isp_integrations_tools"
+      ],
+      "description": "This dependency was added to enable SmartPOS devices (only Android 6 and 12) to generate a QR code or barcode and convert it into a bitmap image. The goal is to print this image on a physical voucher.",
+      "group": "com\\.google\\.zxing",
+      "name": "core",
+      "transitive_configuration": {
+        "transitivity": false
+      },
+      "version": "3\\.3\\.2"
     }
   ]
 }
