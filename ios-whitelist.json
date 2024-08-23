@@ -73,13 +73,6 @@
       "version": "4.38.0"
     },
     {
-      "expires": "2024-08-16",
-      "name": "Bugsnag",
-      "source": "public",
-      "target": "production",
-      "version": "6.26.0"
-    },
-    {
       "allows_granular_projects": [
         "AppMonitoringSetup",
         "MLCommons/IssueTracker-NSBundle-GateKeeper"
@@ -469,8 +462,7 @@
     },
     {
       "allows_granular_projects": [
-        "MLRemedy/MercadoLibre",
-        "MLRemedy/MercadoPago",
+        "MLRemedy",
         "Cashout",
         "IspMpos",
         "MLMoneyOut",
@@ -819,6 +811,7 @@
         "Gamification",
         "HomeWallet",
         "IspMpos",
+        "IspSf",
         "MerchRealestates",
         "MerchRealestates/DismissContent",
         "MerchRealestates/MercadoLibre",
@@ -964,8 +957,7 @@
         "AndesUIDraftModal/MercadoLibre",
         "AndesUIDraftModal/MercadoPago",
         "BillPayments",
-        "BiometricSecurityUI/MercadoPago",
-        "BiometricSecurityUI/MercadoLibre",
+        "BiometricSecurityUI",
         "CardsBanking",
         "Cashin",
         "DaManagement",
@@ -975,10 +967,9 @@
         "HomeWallet",
         "HubSeller",
         "InStore-Discovery/MercadoPago",
-        "InStore/MercadoPago",
+        "InStore",
         "LivenessDetection/Core",
-        "MLBiometricSecurity/MercadoPago",
-        "MLBiometricSecurity/MercadoLibre",
+        "MLBiometricSecurity",
         "MLCommonUIComponents",
         "MLCPG/Components",
         "MLDynamicModal",
@@ -992,8 +983,7 @@
         "MLNavigationCP",
         "MLNavigationCP/ShippingLegacy",
         "MLRemedies/Core",
-        "MLRemedy/MercadoPago",
-        "MLRemedy/MercadoLibre",
+        "MLRemedy",
         "MLUIComponents/MLActivities",
         "MLUIComponents/MLHeader",
         "MLUIComponents/MLOTPInput",
@@ -1081,8 +1071,7 @@
       "allows_granular_projects": [
         "AiAssistantClient",
         "BillPayments",
-        "BiometricSecurityUI/MercadoLibre",
-        "BiometricSecurityUI/MercadoPago",
+        "BiometricSecurityUI",
         "CardsAcquisition",
         "CardsComponents/MercadoPago",
         "CardsEngagement",
@@ -1090,17 +1079,15 @@
         "CreditsUIComponents",
         "CreditsUIComponents/MercadoLibre",
         "CreditsUIComponents/MercadoPago",
-        "DiscountCenter/MercadoLibre",
-        "DiscountCenter/MercadoPago",
+        "DiscountCenter",
         "HomeSectionsApi/HomeWalletUI",
         "HubSeller",
         "InAppReport",
-        "InStore/MercadoPago",
+        "InStore",
         "IspMpos",
         "IspSf",
         "LivenessDetection/Core",
-        "MLBiometricSecurity/MercadoLibre",
-        "MLBiometricSecurity/MercadoPago",
+        "MLBiometricSecurity",
         "MLCommonUIComponents",
         "MLMoneyInV2",
         "MLNotificationsHelpers",
@@ -2053,12 +2040,12 @@
     },
     {
       "allows_granular_projects": [
-        "MeliphoneVoip/MercadoLibre"
+        "MeliphoneVoip"
       ],
       "name": "TwilioVoice",
       "source": "public",
       "target": "production",
-      "version": "6.10.0"
+      "version": "6.11.1"
     },
     {
       "name": "OneExperience",
@@ -2311,7 +2298,8 @@
     },
     {
       "allows_granular_projects": [
-        "MPConfigurationProvider/MLNetworking"
+        "MPConfigurationProvider/MLNetworking",
+        "MLOnDemandResources"
       ],
       "name": "AppTheme",
       "source": "private",
