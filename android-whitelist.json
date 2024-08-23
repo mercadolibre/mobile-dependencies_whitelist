@@ -2957,6 +2957,36 @@
       "version": "mercadolibre-12\\.\\+|mercadopago-12\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.mp_sellers_growth"
+      ],
+      "description": "For integrators from inside MP/MLs app",
+      "expires": "2024-08-30",
+      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
+      "name": "scanner",
+      "version": "mercadolibre-14\\.\\+|mercadopago-14\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.mp_sellers_growth"
+      ],
+      "description": "For integrators from inside MP/MLs app",
+      "expires": "2024-08-30",
+      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
+      "name": "scanner",
+      "version": "mercadolibre-14\\.\\+|mercadopago-14\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.mp_sellers_growth"
+      ],
+      "description": "For integrators from inside MP/MLs app",
+      "expires": "2024-08-30",
+      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
+      "name": "scanner",
+      "version": "mercadolibre-14\\.\\+|mercadopago-14\\.\\+"
+    },
+    {
       "description": "For integrators from inside MP/MLs app",
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "scanner",
