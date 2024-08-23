@@ -4248,7 +4248,8 @@
     {
       "allows_granular_projects": [
         "com.mercadolibre.android.everest_canvas",
-        "com.mercadolibre.android.polycards"
+        "com.mercadolibre.android.polycards",
+        "com.mercadolibre.android.mp_search"
       ],
       "group": "io\\.coil-kt",
       "name": "coil-compose",
