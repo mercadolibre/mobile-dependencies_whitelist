@@ -2973,7 +2973,7 @@
       "description": "For integrators from inside MP/MLs app",
       "expires": "2024-08-30",
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
-      "name": "scanner",
+      "name": "ocr",
       "version": "mercadolibre-14\\.\\+|mercadopago-14\\.\\+"
     },
     {
@@ -2983,7 +2983,7 @@
       "description": "For integrators from inside MP/MLs app",
       "expires": "2024-08-30",
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
-      "name": "scanner",
+      "name": "barcode",
       "version": "mercadolibre-14\\.\\+|mercadopago-14\\.\\+"
     },
     {
