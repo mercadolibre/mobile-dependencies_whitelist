@@ -433,13 +433,13 @@
       "version": "1\\.1\\.1"
     },
     {
-      "description": "TODO: revisar no hay usos directos en ningun lado, FORCE en commons, locations; MP no tiene la dep, ML solo por constraint",
+      "description": "check why there is no direct use, just FORCE in commons and locations",
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-iid",
       "version": "17\\.0\\.0"
     },
     {
-      "description": "TODO: revisar no hay usos directos en ningun lado, FORCE en commons, locations; MP no tiene la dep, ML solo por constraint",
+      "description": "TODO: check why there is no direct use, just FORCE in commons and locations",
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-gcm",
       "version": "17\\.0\\.0"
@@ -586,7 +586,7 @@
       "allows_granular_projects": [
         "com.mercadolibre.remove.this"
       ],
-      "description": "TODO: no direct use, only FORCEs, Transitive req?; could have a tentative expiration date; APP-MP no tiene la dep, APP-ML SI tiene la dependencia ",
+      "description": "No direct use, only FORCEs, Transitive req?; could have a tentative expiration date",
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-vision",
       "version": "20\\.1\\.3"
