@@ -341,10 +341,10 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadopago.point",
         "com.mercadolibre.android.app_monitoring",
         "com.mercadolibre.android.cardsnfcwallets",
-        "com.mercadolibre.android.commons"
+        "com.mercadolibre.android.commons",
+        "com.mercadopago.point"
       ],
       "group": "com\\.bugsnag",
       "name": "bugsnag-android",
