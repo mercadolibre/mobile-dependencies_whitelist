@@ -889,18 +889,6 @@
       "version": "27\\.\\+"
     },
     {
-      "expires": "2024-08-23",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "ui",
-      "version": "10\\.\\+"
-    },
-    {
-      "expires": "2024-08-23",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "ui_legacy",
-      "version": "10\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android",
       "name": "ui",
       "version": "11\\.\\+"
@@ -1028,12 +1016,6 @@
       "version": "11\\.\\+"
     },
     {
-      "description": "Deprecated due to flavors creation",
-      "expires": "2024-08-25",
-      "group": "com\\.mercadolibre\\.android\\.instore_ui_components",
-      "version": "10\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.instore_ui_components",
       "version": "mercadopago-11\\.\\+|mercadolibre-11\\.\\+"
     },
@@ -1041,12 +1023,6 @@
       "group": "com\\.mercadolibre\\.android\\.flox",
       "name": "engine",
       "version": "13\\.\\+"
-    },
-    {
-      "expires": "2024-08-25",
-      "group": "com\\.mercadolibre\\.android\\.flox",
-      "name": "engine",
-      "version": "12\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.fluxclient",
@@ -1144,12 +1120,6 @@
       "group": "com\\.mercadolibre\\.android\\.metrics",
       "name": "metrics-extension-default-traces",
       "version": "3\\.\\+"
-    },
-    {
-      "expires": "2024-08-23",
-      "group": "com\\.mercadolibre\\.android\\.metrics",
-      "name": "metrics",
-      "version": "9\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.metrics",
@@ -1475,18 +1445,6 @@
       "group": "com\\.mercadolibre\\.android\\.mercadocoin",
       "name": "cryptodata",
       "version": "6\\.\\+"
-    },
-    {
-      "expires": "2024-08-20",
-      "group": "com\\.mercadolibre\\.android\\.pendings",
-      "name": "pendingsview",
-      "version": "4\\.\\+"
-    },
-    {
-      "expires": "2024-08-20",
-      "group": "com\\.mercadolibre\\.android\\.pendings",
-      "name": "pendingscontainer",
-      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.pendings",
@@ -4148,12 +4106,6 @@
       "group": "com\\.mercadolibre\\.android\\.cart\\.facade",
       "name": "toolset",
       "version": "2\\.\\+"
-    },
-    {
-      "expires": "2024-08-23",
-      "group": "com\\.mercadolibre\\.android\\.traceability",
-      "name": "traceability",
-      "version": "9\\.\\+"
     },
     {
       "expires": "2024-10-19",
