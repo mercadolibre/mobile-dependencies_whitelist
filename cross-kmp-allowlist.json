@@ -11,7 +11,14 @@
       "version": "1\\.5\\.2"
     },
     {
-      "expires": "2024-09-09",
+      "allows_granular_projects": [
+        "com.mercadolibre.android.rtc_mobile"
+      ],
+      "group": "org\\.jetbrains\\.kotlinx",
+      "name": "kotlinx-datetime",
+      "version": "0\\.+"
+    },
+    {
       "allows_granular_projects": [
         "com.mercadolibre.android.rtc_mobile"
       ],
@@ -20,7 +27,6 @@
       "version": "2\\.2\\.1"
     },
     {
-      "expires": "2024-09-09",
       "allows_granular_projects": [
         "com.mercadolibre.android.rtc_mobile"
       ],
@@ -29,7 +35,6 @@
       "version": "2\\.2\\.1"
     },
     {
-      "expires": "2024-09-09",
       "allows_granular_projects": [
         "com.mercadolibre.android.rtc_mobile"
       ],
@@ -38,7 +43,6 @@
       "version": "2\\.2\\.1"
     },
     {
-      "expires": "2024-09-09",
       "allows_granular_projects": [
         "com.mercadolibre.android.rtc_mobile", 
         "com.mercadolibre.android.version_checker"
