@@ -392,21 +392,54 @@
       "version": "v3\\.1\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.cardsacquisition",
+        "com.mercadolibre.android.cardsengagement",
+        "com.mercadolibre.android.cash_rails",
+        "com.mercadolibre.android.credit_card_virtual",
+        "com.mercadolibre.android.creditcard",
+        "com.mercadolibre.android.credits.customfaqs",
+        "com.mercadolibre.android.credits.floxclient",
+        "com.mercadolibre.android.credits.merchant.openmarket",
+        "com.mercadolibre.android.credits.toolkit",
+        "com.mercadolibre.android.debit_credit_cards_eng"
+      ],
       "group": "com\\.github\\.joshjdevl\\.libsodiumjni",
       "name": "libsodium-jni-aar",
       "version": "2\\.0\\.1"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.advertising",
+        "com.mercadolibre.android.bf_core_flox",
+        "com.mercadolibre.android.cash_rails",
+        "com.mercadolibre.android.ccap",
+        "com.mercadolibre.android.credit_card_disable",
+        "com.mercadolibre.android.credits.merchant.enrollment",
+        "com.mercadolibre.android.eshops",
+        "com.mercadolibre.android.instore_ui_components",
+        "com.mercadolibre.android.insu_flox_components",
+        "com.mercadolibre.android.ml_cards",
+        "com.mercadolibre.android.qadb",
+        "com.mercadolibre.android.recommendations",
+        "com.mercadolibre.android.search",
+        "com.mercadolibre.android.shorts",
+        "com.mercadolibre.android.singleplayer",
+        "com.mercadolibre.android.vpp",
+        "com.mercadopago.android.px"
+      ],
       "group": "com\\.google\\.android",
       "name": "flexbox",
       "version": "1\\.1\\.1"
     },
     {
+      "description": "TODO: revisar no hay usos directos en ningun lado, FORCE en commons, locations; MP no tiene la dep, ML solo por constraint",
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-iid",
       "version": "17\\.0\\.0"
     },
     {
+      "description": "TODO: revisar no hay usos directos en ningun lado, FORCE en commons, locations; MP no tiene la dep, ML solo por constraint",
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-gcm",
       "version": "17\\.0\\.0"
@@ -470,11 +503,7 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.commons",
         "com.mercadolibre.android.authchallenges",
-        "com.mercadolibre.android.location",
-        "com.mercadoenvios.android.authentication_enrollment",
-        "com.mercadoenvios.android.authentication",
         "com.mercadolibre.android.authsocialaccount"
       ],
       "group": "com\\.google\\.android\\.gms",
@@ -489,24 +518,13 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.point.mpos",
-        "com.mercadopago.android.moneyout",
-        "com.mercadolibre.android.nfcpayments",
-        "com.mercadopago.android.digital_accounts_components",
-        "com.mercadolibre.android.nfcpushprovisioning",
-        "com.mercadolibre.android.configuration.provider",
-        "com.mercadopago.android.configurer.smartpos",
-        "com.mercadolibre.android.commons",
-        "com.mercadolibre.android.ml_scanner",
-        "com.mercadolibre.android.security",
-        "com.mercadolibre.android.creditcard",
-        "com.mercadolibre.android.money_advance",
-        "com.mercadolibre.android.inappupdates",
-        "com.mercadolibre.android.creditcard.reissue",
-        "com.mercadolibre.android.credits.floxclient",
+        "com.mercadolibre.android.configuration.provider:restclient-configurator",
         "com.mercadolibre.android.location",
         "com.mercadolibre.android.loyalty.datamanager",
-        "com.mercadolibre.android.testing"
+        "com.mercadolibre.android.nfcpushprovisioning",
+        "com.mercadolibre.android.testing",
+        "com.mercadopago.android.configurer.smartpos",
+        "com.mercadopago.android.digital_accounts_components"
       ],
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-base",
@@ -520,19 +538,20 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.point.mpos",
-        "com.mercadopago.android.moneyout",
-        "com.mercadolibre.android.singleplayer",
-        "com.mercadopago.android.digital_accounts_components",
-        "com.mercadolibre.android.addresses",
-        "com.mercadoenvios.android.shipping-toolkit",
-        "com.mercadopago.android.configurer.smartpos",
-        "com.mercadolibre.android.discovery",
-        "com.mercadolibre.android.commons",
-        "com.mercadoenvios.android.stimulator",
-        "com.mercadolibre.android.location",
         "com.mercadoenvios.android.rtt",
-        "com.mercadolibre.android.beacon_manager"
+        "com.mercadoenvios.android.shipping-toolkit",
+        "com.mercadoenvios.android.stimulator",
+        "com.mercadolibre.android",
+        "com.mercadolibre.android.addresses",
+        "com.mercadolibre.android.beacon_manager",
+        "com.mercadolibre.android.commons:location",
+        "com.mercadolibre.android.discovery",
+        "com.mercadolibre.android.location",
+        "com.mercadolibre.android.point.mpos",
+        "com.mercadolibre.android.singleplayer",
+        "com.mercadopago.android.configurer.smartpos",
+        "com.mercadopago.android.digital_accounts_components",
+        "com.mercadopago.android.moneyout"
       ],
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-location",
@@ -546,44 +565,68 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.point.mpos",
-        "com.mercadopago.android.moneyout",
-        "com.mercadopago.android.digital_accounts_components",
         "com.mercadoenvios.android.maps",
-        "com.mercadolibre.android.commons",
         "com.mercadolibre.android.maps",
-        "com.mercadolibre.android.location"
+        "com.mercadopago.android.moneyout"
       ],
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-maps",
       "version": "18\\.2\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.remove.this"
+      ],
+      "description": "TODO: I Couldn't find any real implementation; It Could be used transitively, a tentative expire date can be defined",
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-places",
       "version": "17\\.0\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.remove.this"
+      ],
+      "description": "TODO: no direct use, only FORCEs, Transitive req?; could have a tentative expiration date; APP-MP no tiene la dep, APP-ML SI tiene la dependencia ",
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-vision",
       "version": "20\\.1\\.3"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.security"
+      ],
       "group": "com\\.google\\.android\\.play",
       "name": "integrity",
       "version": "1\\.0\\.1"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.app_monitoring",
+        "com.mercadolibre.android.devices_sdk"
+      ],
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-appset",
       "version": "16\\.0\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.beacon_manager",
+        "com.mercadolibre.android.cross_app_links",
+        "com.mercadolibre.android.device",
+        "com.mercadolibre.android.devices_sdk",
+        "com.mercadopago.android.px"
+      ],
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-ads",
       "version": "17\\.1\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.cross_app_links",
+        "com.mercadolibre.android.device",
+        "com.mercadolibre.android.devices_sdk",
+        "com.mercadopago.android.px"
+      ],
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-ads-identifier",
       "version": "17\\.1\\.0"
