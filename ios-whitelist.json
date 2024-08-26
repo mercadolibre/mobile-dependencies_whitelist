@@ -399,7 +399,7 @@
     },
     {
       "name": "Polycards",
-      "source": "private",
+      "source": "production",
       "target": "test",
       "version": "^~>\\s?0.[0-9]+$"
     },
