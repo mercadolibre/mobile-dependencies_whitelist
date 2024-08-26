@@ -462,8 +462,7 @@
     },
     {
       "allows_granular_projects": [
-        "MLRemedy/MercadoLibre",
-        "MLRemedy/MercadoPago",
+        "MLRemedy",
         "Cashout",
         "IspMpos",
         "MLMoneyOut",
@@ -874,11 +873,11 @@
         "PXAddon/MercadoPago",
         "CcapCommons/ThreeDSLive"
       ],
-      "expires": "2024-10-4",
+      "expires": "2025-01-03",
       "name": "MLThreeDS",
       "source": "private",
       "target": "production",
-      "version": "2.0.6"
+      "version": "6.6.129"
     },
     {
       "allows_granular_projects": [
@@ -890,7 +889,7 @@
       "name": "MLThreeDS",
       "source": "private",
       "target": "production",
-      "version": "6.6.129"
+      "version": "6.6.132"
     },
     {
       "description": "Parece no tener utilidad y se está agregando a ML.",
@@ -967,8 +966,8 @@
         "HomeSectionsApi/Core",
         "HomeWallet",
         "HubSeller",
-        "InStore-Discovery/MercadoPago",
-        "InStore/MercadoPago",
+        "InStore-Discovery",
+        "InStore",
         "LivenessDetection/Core",
         "MLBiometricSecurity",
         "MLCommonUIComponents",
@@ -984,8 +983,7 @@
         "MLNavigationCP",
         "MLNavigationCP/ShippingLegacy",
         "MLRemedies/Core",
-        "MLRemedy/MercadoPago",
-        "MLRemedy/MercadoLibre",
+        "MLRemedy",
         "MLUIComponents/MLActivities",
         "MLUIComponents/MLHeader",
         "MLUIComponents/MLOTPInput",
@@ -1081,12 +1079,11 @@
         "CreditsUIComponents",
         "CreditsUIComponents/MercadoLibre",
         "CreditsUIComponents/MercadoPago",
-        "DiscountCenter/MercadoLibre",
-        "DiscountCenter/MercadoPago",
+        "DiscountCenter",
         "HomeSectionsApi/HomeWalletUI",
         "HubSeller",
         "InAppReport",
-        "InStore/MercadoPago",
+        "InStore",
         "IspMpos",
         "IspSf",
         "LivenessDetection/Core",
@@ -2043,12 +2040,12 @@
     },
     {
       "allows_granular_projects": [
-        "MeliphoneVoip/MercadoLibre"
+        "MeliphoneVoip"
       ],
       "name": "TwilioVoice",
       "source": "public",
       "target": "production",
-      "version": "6.10.0"
+      "version": "6.11.1"
     },
     {
       "name": "OneExperience",
@@ -2301,7 +2298,8 @@
     },
     {
       "allows_granular_projects": [
-        "MPConfigurationProvider/MLNetworking"
+        "MPConfigurationProvider/MLNetworking",
+        "MLOnDemandResources"
       ],
       "name": "AppTheme",
       "source": "private",
