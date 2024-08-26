@@ -1014,7 +1014,8 @@
         "RequestWatcher/Core",
         "Reseller",
         "Reviews",
-        "SellerHomeSection"
+        "SellerHomeSection",
+        "Multiwidget"
       ],
       "name": "PureLayout",
       "source": "public",
@@ -1383,6 +1384,12 @@
     },
     {
       "name": "RequestWatcher",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "Multiwidget",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
