@@ -892,7 +892,9 @@
       "version": "6.6.132"
     },
     {
-      "description": "Parece no tener utilidad y se está agregando a ML.",
+      "allows_granular_projects": [
+        "PxTokenization"
+      ],
       "name": "TMGSDK",
       "source": "private",
       "target": "production",
