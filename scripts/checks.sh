@@ -10,12 +10,13 @@ echo "Run linter: this step checks if file ($FILE) its well formed."
 jsonlint "$FILE"
 
 echo "Run JSON sorter lint: this step checks if the content of the file ($FILE) its properly sorted."
-jsonsort "$FILE"
+jsonsort "$FILE" --arrays
 
 echo "Results: "
 if [[ $(git ls-files -m | wc -l | xargs) != 0 ]]; then
     echo "[ERROR] $FILE needs to be properly linted or sorted."
-    echo "before commiting run: jsonlint | jsonsort on the file: $FILE "
+    echo "before commiting run locally: jsonlint $FILE "
+    echo "before commiting run locally: jsonsort $FILE --arrays "
     exit 1;
   else
     echo "$FILE its properly linted and sorted."
