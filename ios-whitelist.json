@@ -873,11 +873,11 @@
         "PXAddon/MercadoPago",
         "CcapCommons/ThreeDSLive"
       ],
-      "expires": "2024-10-4",
+      "expires": "2025-01-03",
       "name": "MLThreeDS",
       "source": "private",
       "target": "production",
-      "version": "2.0.6"
+      "version": "6.6.129"
     },
     {
       "allows_granular_projects": [
@@ -889,7 +889,7 @@
       "name": "MLThreeDS",
       "source": "private",
       "target": "production",
-      "version": "6.6.129"
+      "version": "6.6.132"
     },
     {
       "description": "Parece no tener utilidad y se está agregando a ML.",
