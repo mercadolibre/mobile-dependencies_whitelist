@@ -1438,6 +1438,7 @@
         "com.mercadolibre.android.vpp"
       ],
       "description": "This is the MoreLikeThis standalone library",
+      "expires": "2024-09-13",
       "group": "com\\.mercadolibre\\.android",
       "name": "more_like_this",
       "version": "1\\.\\+"
@@ -1447,19 +1448,19 @@
         "com.mercadolibre.android.search",
         "com.mercadolibre.android.vpp"
       ],
-      "description": "This is an experimental version of verticals core lib",
-      "group": "com\\.mercadolibre\\.android\\.verticals_core",
-      "name": "core",
-      "version": "0\\.\\+"
+      "description": "This is the MoreLikeThis standalone library",
+      "group": "com\\.mercadolibre\\.android",
+      "name": "more_like_this",
+      "version": "2\\.\\+"
     },
     {
       "allows_granular_projects": [
         "com.mercadolibre.android.search",
         "com.mercadolibre.android.vpp"
       ],
-      "description": "This is an experimental version of verticals moreLikeThis module",
+      "description": "This is an experimental version of verticals core lib",
       "group": "com\\.mercadolibre\\.android\\.verticals_core",
-      "name": "morelikethis",
+      "name": "core",
       "version": "0\\.\\+"
     },
     {
