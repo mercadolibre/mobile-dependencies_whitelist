@@ -2314,6 +2314,12 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "EverestCanvas",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
     }
   ]
 }

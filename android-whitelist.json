@@ -4444,6 +4444,14 @@
         "transitivity": false
       },
       "version": "3\\.3\\.2"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.everest_canvas",
+      "name": "core",
+      "transitive_configuration": {
+        "transitivity": false
+      },
+      "version": "1\\.\\+"
     }
   ]
 }
