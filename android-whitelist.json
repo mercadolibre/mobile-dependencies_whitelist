@@ -473,9 +473,9 @@
         "com.mercadolibre.android.commons",
         "com.mercadolibre.android.authchallenges",
         "com.mercadolibre.android.location",
-        "com.mercadolibre.android.authentication_enrollment",
-        "com.mercadolibre.android.authentication",
-        "com.mercadolibre.android.authsocialaccount"
+        "com.mercadolibre.android:authentication_enrollment",
+        "com.mercadolibre.android:authentication",
+        "com.mercadolibre.android:authsocialaccount"
       ],
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-auth",
