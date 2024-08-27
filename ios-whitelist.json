@@ -734,6 +734,7 @@
       "version": "^~>\\s?4.[0-9]+$"
     },
     {
+      "expires": "2024-09-25",
       "name": "MLSearch/MoreLikeThis",
       "source": "private",
       "target": "production",
@@ -2277,6 +2278,7 @@
       "version": "0.12.0"
     },
     {
+      "expires": "2024-09-13",
       "allows_granular_projects": [
         "MLSearch",
         "MLVPP"
@@ -2291,10 +2293,22 @@
         "MLSearch",
         "MLVPP"
       ],
+      "name": "MoreLikeThis",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "allows_granular_projects": [
+        "MLSearch",
+        "MLVPP",
+        "MoreLikeThis",
+        "VirtualTryOn"
+      ],
       "name": "VerticalsCore",
       "source": "private",
-      "target": "test",
-      "version": "^~>\\s?0.[0-9]+$"
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "allows_granular_projects": [
