@@ -63,9 +63,9 @@
     {
       "allows_granular_projects": [
         "MLAdjust",
+        "MLConfigurationProvider/App",
         "MLNavigation/Core",
-        "MPConfigurationProvider/App",
-        "MLConfigurationProvider/App"
+        "MPConfigurationProvider/App"
       ],
       "name": "Adjust",
       "source": "public",
@@ -125,10 +125,10 @@
     {
       "allows_granular_projects": [
         "IspMpos",
-        "MLCommonUIComponents",
-        "MPWithdraw",
         "MLBFFloxComponent",
-        "MLCheckoutSDK/Integrator"
+        "MLCheckoutSDK/Integrator",
+        "MLCommonUIComponents",
+        "MPWithdraw"
       ],
       "name": "FSQCollectionViewAlignedLayout",
       "source": "public",
@@ -462,11 +462,11 @@
     },
     {
       "allows_granular_projects": [
-        "MLRemedy",
         "Cashout",
         "IspMpos",
         "MLMoneyOut",
-        "MLMoneyOut/MercadoPago"
+        "MLMoneyOut/MercadoPago",
+        "MLRemedy"
       ],
       "name": "MLDynamicModal",
       "source": "public",
@@ -596,8 +596,8 @@
     },
     {
       "allows_granular_projects": [
-        "DiscountCenter",
         "AndesUI",
+        "DiscountCenter",
         "MLVPP",
         "MPSearch"
       ],
@@ -796,30 +796,30 @@
     },
     {
       "allows_granular_projects": [
-        "MLUIComponents/MLActivities",
-        "MPMerchEngine",
-        "MPModalsEngine",
-        "MPModalsEngine/MercadoPago",
+        "AndesUIDraftModal",
+        "AndesUIDraftModal/MercadoLibre",
+        "AndesUIDraftModal/MercadoPago",
         "CardsAcquisition",
         "CardsEngagement",
         "CardsList",
         "CardsList/MercadoPago",
         "Cashin",
         "CreditsUIComponents",
-        "CreditsUIComponents/MercadoPago",
         "CreditsUIComponents/MercadoLibre",
+        "CreditsUIComponents/MercadoPago",
         "Gamification",
         "HomeWallet",
+        "InsuQpageOn",
         "IspMpos",
         "IspSf",
         "MerchRealestates",
         "MerchRealestates/DismissContent",
         "MerchRealestates/MercadoLibre",
         "MerchRealestates/MercadoPago",
-        "AndesUIDraftModal",
-        "AndesUIDraftModal/MercadoLibre",
-        "AndesUIDraftModal/MercadoPago",
-        "InsuQpageOn"
+        "MLUIComponents/MLActivities",
+        "MPMerchEngine",
+        "MPModalsEngine",
+        "MPModalsEngine/MercadoPago"
       ],
       "name": "MPDynamicSkeleton",
       "source": "public",
@@ -868,10 +868,10 @@
     },
     {
       "allows_granular_projects": [
+        "CcapCommons/ThreeDSLive",
         "PXAddon",
         "PXAddon/MercadoLibre",
-        "PXAddon/MercadoPago",
-        "CcapCommons/ThreeDSLive"
+        "PXAddon/MercadoPago"
       ],
       "expires": "2025-01-03",
       "name": "MLThreeDS",
@@ -881,10 +881,10 @@
     },
     {
       "allows_granular_projects": [
+        "CcapCommons/ThreeDSLive",
         "PXAddon",
         "PXAddon/MercadoLibre",
-        "PXAddon/MercadoPago",
-        "CcapCommons/ThreeDSLive"
+        "PXAddon/MercadoPago"
       ],
       "name": "MLThreeDS",
       "source": "private",
@@ -892,7 +892,9 @@
       "version": "6.6.132"
     },
     {
-      "description": "Parece no tener utilidad y se está agregando a ML.",
+      "allows_granular_projects": [
+        "PxTokenization"
+      ],
       "name": "TMGSDK",
       "source": "private",
       "target": "production",
@@ -966,8 +968,8 @@
         "HomeSectionsApi/Core",
         "HomeWallet",
         "HubSeller",
-        "InStore-Discovery",
         "InStore",
+        "InStore-Discovery",
         "LivenessDetection/Core",
         "MLBiometricSecurity",
         "MLCommonUIComponents",
@@ -988,29 +990,30 @@
         "MLUIComponents/MLHeader",
         "MLUIComponents/MLOTPInput",
         "MLUserBlocker",
-        "MLUserBlocker/MercadoPago",
         "MLUserBlocker/MercadoLibre",
+        "MLUserBlocker/MercadoPago",
         "MLVPP",
+        "Mplay",
+        "Mplay/Player",
         "MPModalsEngine",
         "MPModalsEngine/MercadoPago",
         "MPMoneyTransfer",
         "MPSPPrepaid",
         "MPSPPrepaid/MercadoPago",
-        "Mplay",
-        "Mplay/Player",
         "Onboarding",
-        "Pampa/MercadoPago",
         "Pampa/MercadoLibre",
+        "Pampa/MercadoPago",
         "Pendings",
         "Pendings/Core",
         "Pendings/MercadoPago",
+        "PortableWidget",
         "PortableWidget/CoreResources",
-        "PortableWidget/MercadoPago",
         "PortableWidget/MercadoLibre",
+        "PortableWidget/MercadoPago",
         "Regulations",
         "RequestWatcher/Core",
-        "Reviews",
         "Reseller",
+        "Reviews",
         "SellerHomeSection"
       ],
       "name": "PureLayout",
@@ -2163,8 +2166,8 @@
     },
     {
       "allows_granular_projects": [
-        "DependencyInjection",
-        "CrabDI"
+        "CrabDI",
+        "DependencyInjection"
       ],
       "expires": "2024-09-30",
       "name": "Swinject",
@@ -2174,8 +2177,8 @@
     },
     {
       "allows_granular_projects": [
-        "DependencyInjection",
-        "CrabDI"
+        "CrabDI",
+        "DependencyInjection"
       ],
       "expires": "2024-09-30",
       "name": "SwinjectAutoregistration",
@@ -2298,8 +2301,8 @@
     },
     {
       "allows_granular_projects": [
-        "MPConfigurationProvider/MLNetworking",
-        "MLOnDemandResources"
+        "MLOnDemandResources",
+        "MPConfigurationProvider/MLNetworking"
       ],
       "name": "AppTheme",
       "source": "private",
