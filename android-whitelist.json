@@ -474,6 +474,7 @@
         "com.mercadolibre.android.authchallenges",
         "com.mercadolibre.android.location",
         "com.mercadolibre.android.authentication_enrollment",
+        "com.mercadolibre.android.authentication-enrollment",
         "com.mercadolibre.android.authentication",
         "com.mercadolibre.android.authsocialaccount"
       ],
@@ -1440,7 +1441,7 @@
       "version": "10\\.\\+"
     },
     {
-      "expires": "2024-08-12",
+      "expires": "2024-08-30",
       "group": "com\\.mercadolibre\\.android\\.uicomponents",
       "version": "18\\.\\+"
     },
