@@ -364,6 +364,12 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
+      "name": "Polycards",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
       "name": "MLCardDrawer",
       "source": "private",
       "target": "production",
@@ -1006,6 +1012,7 @@
         "Pendings",
         "Pendings/Core",
         "Pendings/MercadoPago",
+        "PortableWidget",
         "PortableWidget/CoreResources",
         "PortableWidget/MercadoLibre",
         "PortableWidget/MercadoPago",
@@ -2304,6 +2311,12 @@
         "MPConfigurationProvider/MLNetworking"
       ],
       "name": "AppTheme",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "EverestCanvas",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
