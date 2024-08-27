@@ -2639,7 +2639,13 @@
     {
       "group": "com\\.mercadolibre\\.android\\.devices_sdk",
       "name": "devices",
-      "version": "7\\.\\+"
+      "version": "7\\.\\+",
+      "expires": "2024-09-27"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.devices_sdk",
+      "name": "devices",
+      "version": "8\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.behavioral_sdk",
