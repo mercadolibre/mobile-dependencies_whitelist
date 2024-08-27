@@ -382,26 +382,49 @@
       "version": "4\\.24\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android:home",
+        "com.mercadolibre.android.mlbusinesscomponents"
+      ],
       "group": "com\\.facebook\\.fresco",
       "name": "animated-webp",
       "version": "2\\.2\\.0"
     },
     {
+      "description": "+60 consumers 05/08/24",
       "group": "com\\.facebook\\.fresco",
       "name": "fresco",
       "version": "2\\.2\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.checkout",
+        "com.mercadolibre.android.commons",
+        "com.mercadolibre.android.configuration.provider",
+        "com.mercadolibre.android.navigation_manager",
+        "com.mercadopago.android.configurer",
+        "com.mercadopago.android.configurer.smartpos",
+        "com.mercadopago.android.smartpos"
+      ],
       "group": "com\\.facebook\\.fresco",
       "name": "imagepipeline-okhttp3",
       "version": "2\\.2\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android:home",
+        "com.mercadolibre.android:ui",
+        "com.mercadolibre.android.mlbusinesscomponents",
+        "com.mercadolibre.android.wallet.home"
+      ],
       "group": "com\\.facebook\\.fresco",
       "name": "webpsupport",
       "version": "2\\.2\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.charts"
+      ],
       "group": "com\\.github\\.PhilJay",
       "name": "MPAndroidChart",
       "version": "v3\\.1\\.0"
@@ -3599,19 +3622,42 @@
       "version": "3\\.+"
     },
     {
+      "expires": "2024-10-27",
       "group": "com\\.mercadolibre\\.android\\.app_monitoring",
       "name": "setup",
       "version": "4\\.\\+"
     },
     {
+      "expires": "2024-10-27",
       "group": "com\\.mercadolibre\\.android\\.app_monitoring",
       "name": "core",
       "version": "4\\.\\+"
     },
     {
+      "expires": "2024-10-27",
       "group": "com\\.mercadolibre\\.android\\.app_monitoring",
       "name": "migration",
       "version": "4\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.app_monitoring",
+      "name": "setup",
+      "version": "5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.app_monitoring",
+      "name": "core",
+      "version": "5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.app_monitoring",
+      "name": "migration",
+      "version": "5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.app_monitoring",
+      "name": "instrumentation",
+      "version": "5\\.\\+"
     },
     {
       "group": "com\\.datadoghq",
@@ -4436,6 +4482,14 @@
         "transitivity": false
       },
       "version": "3\\.3\\.2"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.everest_canvas",
+      "name": "core",
+      "transitive_configuration": {
+        "transitivity": false
+      },
+      "version": "1\\.\\+"
     }
   ]
 }
