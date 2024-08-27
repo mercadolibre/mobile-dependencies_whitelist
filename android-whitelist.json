@@ -796,6 +796,7 @@
       "version": "27\\.\\+"
     },
     {
+      allows_granular_projects": ["com.mercadolibre.android.authentication_enrollment"],
       "group": "com\\.mercadolibre\\.android",
       "name": "authentication",
       "version": "27\\.\\+"
