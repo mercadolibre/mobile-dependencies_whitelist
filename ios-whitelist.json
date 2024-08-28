@@ -1006,6 +1006,7 @@
         "MPMoneyTransfer",
         "MPSPPrepaid",
         "MPSPPrepaid/MercadoPago",
+        "Multiwidget",
         "Onboarding",
         "Pampa/MercadoLibre",
         "Pampa/MercadoPago",
@@ -1391,6 +1392,12 @@
     },
     {
       "name": "RequestWatcher",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "Multiwidget",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
