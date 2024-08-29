@@ -1006,6 +1006,7 @@
         "MPMoneyTransfer",
         "MPSPPrepaid",
         "MPSPPrepaid/MercadoPago",
+        "Multiwidget",
         "Onboarding",
         "Pampa/MercadoLibre",
         "Pampa/MercadoPago",
@@ -1194,6 +1195,7 @@
       "allows_granular_projects": [
         "DiscountCenter",
         "MLVPP",
+        "Mplay",
         "MPSearch"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
@@ -1258,6 +1260,7 @@
         "DiscountCenter",
         "FeedbackScreen",
         "MLVPP",
+        "Mplay",
         "MPSearch"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
@@ -1389,6 +1392,12 @@
     },
     {
       "name": "RequestWatcher",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "Multiwidget",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
