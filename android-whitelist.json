@@ -541,8 +541,8 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.authchallenges",
         "com.mercadolibre.android:authentication",
+        "com.mercadolibre.android.authchallenges",
         "com.mercadolibre.android.authsocialaccount"
       ],
       "group": "com\\.google\\.android\\.gms",
