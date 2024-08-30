@@ -1566,6 +1566,15 @@
       "version": "10\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.mp_search",
+        "com.mercadolibre.android.wallet.home"
+      ],
+      "group": "com\\.mercadolibre\\.android\\.horizontal_cards",
+      "name": "components",
+      "version": "1\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
       "name": "api",
       "version": "9\\.\\+"
