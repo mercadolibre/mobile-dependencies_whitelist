@@ -2684,6 +2684,10 @@
       "version": "6\\.+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.nfcpushprovisioning",
+        "com.mercadolibre.android.px.tokenization"
+      ],
       "group": "net\\.java\\.dev\\.jna",
       "name": "jna",
       "version": "5\\.5\\.0"
