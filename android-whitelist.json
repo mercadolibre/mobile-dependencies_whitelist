@@ -640,7 +640,8 @@
     {
       "allows_granular_projects": [
         "com.mercadolibre.android.app_monitoring",
-        "com.mercadolibre.android.devices_sdk"
+        "com.mercadolibre.android.devices_sdk",
+        "com.mercadolibre.android.melidata-sdk"
       ],
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-appset",
@@ -663,7 +664,8 @@
         "com.mercadolibre.android.cross_app_links",
         "com.mercadolibre.android.device",
         "com.mercadolibre.android.devices_sdk",
-        "com.mercadopago.android.px"
+        "com.mercadopago.android.px",
+        "com.mercadolibre.android.melidata-sdk"
       ],
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-ads-identifier",
