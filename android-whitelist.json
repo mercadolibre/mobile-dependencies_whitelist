@@ -2737,9 +2737,31 @@
       "version": "0\\.90\\.2"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadopago.android.digital_accounts_components:robolectric",
+        "com.mercadopago.point.ptm.agent",
+        "com.mercadopago.point.ptm",
+        "com.mercadolibre.android.credits.ui_components:test",
+        "com.mercadolibre.android.developer_mode:dm-core",
+        "com.mercadolibre.android.security_two_fa:commonstest"
+      ],
+      "expires": "2024-09-16",
       "group": "com\\.facebook\\.soloader",
       "name": "soloader",
       "version": "0\\.10\\.1"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadopago.android.digital_accounts_components:robolectric",
+        "com.mercadopago.point.ptm.agent",
+        "com.mercadopago.point.ptm",
+        "com.mercadolibre.android.credits.ui_components:test",
+        "com.mercadolibre.android.developer_mode:dm-core",
+        "com.mercadolibre.android.security_two_fa:commonstest"
+      ],
+      "group": "com\\.facebook\\.soloader",
+      "name": "soloader",
+      "version": "0\\.10\\.4"
     },
     {
       "allows_granular_projects": [
