@@ -2738,12 +2738,12 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadopago.android.digital_accounts_components:robolectric",
-        "com.mercadopago.point.ptm.agent",
-        "com.mercadopago.point.ptm",
         "com.mercadolibre.android.credits.ui_components:test",
         "com.mercadolibre.android.developer_mode:dm-core",
-        "com.mercadolibre.android.security_two_fa:commonstest"
+        "com.mercadolibre.android.security_two_fa:commonstest",
+        "com.mercadopago.android.digital_accounts_components:robolectric",
+        "com.mercadopago.point.ptm",
+        "com.mercadopago.point.ptm.agent"
       ],
       "expires": "2024-09-16",
       "group": "com\\.facebook\\.soloader",
@@ -2752,12 +2752,12 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadopago.android.digital_accounts_components:robolectric",
-        "com.mercadopago.point.ptm.agent",
-        "com.mercadopago.point.ptm",
         "com.mercadolibre.android.credits.ui_components:test",
         "com.mercadolibre.android.developer_mode:dm-core",
-        "com.mercadolibre.android.security_two_fa:commonstest"
+        "com.mercadolibre.android.security_two_fa:commonstest",
+        "com.mercadopago.android.digital_accounts_components:robolectric",
+        "com.mercadopago.point.ptm",
+        "com.mercadopago.point.ptm.agent"
       ],
       "group": "com\\.facebook\\.soloader",
       "name": "soloader",
