@@ -871,14 +871,26 @@
       "version": "production-13\\.\\+|develop-13\\.\\+"
     },
     {
+      "expires": "2024-10-03",
       "group": "com\\.mercadolibre\\.android",
       "name": "authentication-enrollment",
       "version": "27\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
+      "name": "authentication-enrollment",
+      "version": "28\\.\\+"
+    },
+    {
+      "expires": "2024-10-03",
+      "group": "com\\.mercadolibre\\.android",
       "name": "authentication",
       "version": "27\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "authentication",
+      "version": "28\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.authscopedsession",
@@ -915,9 +927,15 @@
       "version": "6\\.\\+"
     },
     {
+      "expires": "2024-10-03",
       "group": "com\\.mercadolibre\\.android",
       "name": "login",
       "version": "mercadopago-21\\.\\+|mercadolibre-21\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android",
+      "name": "login",
+      "version": "mercadopago-22\\.\\+|mercadolibre-22\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.point_login_qr",
