@@ -553,6 +553,12 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "name": "FfSdk",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "MLMetrics",
       "source": "private",
       "target": "production",
