@@ -609,6 +609,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android:melidata-sdk",
         "com.mercadolibre.android.app_monitoring",
         "com.mercadolibre.android.devices_sdk"
       ],
@@ -630,6 +631,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android:melidata-sdk",
         "com.mercadolibre.android.cross_app_links",
         "com.mercadolibre.android.device",
         "com.mercadolibre.android.devices_sdk",
