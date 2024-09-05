@@ -1785,6 +1785,17 @@
       "version": "4\\.9\\.3"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android:restclient"
+      ],
+      "group": "com\\.squareup\\.okhttp3",
+      "name": "okhttp-dnsoverhttps",
+      "transitive_configuration": {
+        "transitivity": false
+      },
+      "version": "4\\.9\\.3"
+    },
+    {
       "description": "Esta libs se encuentra deprecada, recomendamos utilizar coroutine",
       "expires": "2024-12-01",
       "group": "com\\.squareup\\.retrofit2",
