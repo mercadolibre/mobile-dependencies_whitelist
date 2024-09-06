@@ -1819,8 +1819,8 @@
     {
       "allows_granular_projects": [
         "com.mercadolibre.android.discounts.payers",
-        "com.mercadolibre.android.point.mpos",
         "com.mercadolibre.android.point_smartpos_fcu",
+        "com.mercadolibre.android.point.mpos",
         "com.mercadopago.android.px",
         "com.mercadopago.android.smartpos"
       ],
@@ -1933,8 +1933,8 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android:home",
         "com.mercadolibre.android:apprater-mp",
+        "com.mercadolibre.android:home",
         "com.mercadolibre.android:notificationcenter",
         "com.mercadolibre.android:notificationcenter-settings",
         "com.mercadolibre.android.dynamic_features",
@@ -1963,8 +1963,8 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android:home",
         "com.mercadolibre.android:apprater-mp",
+        "com.mercadolibre.android:home",
         "com.mercadolibre.android:notificationcenter",
         "com.mercadolibre.android:notificationcenter-settings",
         "com.mercadolibre.android.discounts.payers",
@@ -1998,9 +1998,9 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android:ui_legacy",
         "com.mercadolibre.android:progress-circle",
         "com.mercadolibre.android:sell-flow",
+        "com.mercadolibre.android:ui_legacy",
         "com.mercadolibre.android.cart",
         "com.mercadolibre.android.checkout",
         "com.mercadolibre.android.coupon",
