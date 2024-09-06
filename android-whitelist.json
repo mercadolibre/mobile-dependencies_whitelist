@@ -1439,18 +1439,12 @@
       "version": "0\\.\\+"
     },
     {
-      "allows_granular_projects": [
-        "com.mercadolibre.android.vpp"
-      ],
       "expires": "2024-09-30",
       "group": "com\\.mercadolibre\\.android\\.virtual_try_on",
       "name": "commons",
       "version": "1\\.\\+"
     },
     {
-      "allows_granular_projects": [
-        "com.mercadolibre.android.vpp"
-      ],
       "expires": "2024-09-30",
       "group": "com\\.mercadolibre\\.android\\.virtual_try_on",
       "name": "virtualtryon",
@@ -1513,15 +1507,9 @@
       "version": "0\\.\\+"
     },
     {
-      "allows_granular_projects": [
-        "com.mercadolibre.android.virtual_try_on"
-      ],
       "description": "This dependency is only used in VirtualTryOn",
       "group": "com\\.modiface",
       "name": "mfemakeupkit",
-      "transitive_configuration": {
-        "transitivity": false
-      },
       "version": "20\\.0\\.0"
     },
     {
