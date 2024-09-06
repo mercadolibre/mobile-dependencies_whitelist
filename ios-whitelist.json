@@ -63,9 +63,9 @@
     {
       "allows_granular_projects": [
         "MLAdjust",
+        "MLConfigurationProvider/App",
         "MLNavigation/Core",
-        "MPConfigurationProvider/App",
-        "MLConfigurationProvider/App"
+        "MPConfigurationProvider/App"
       ],
       "name": "Adjust",
       "source": "public",
@@ -125,10 +125,10 @@
     {
       "allows_granular_projects": [
         "IspMpos",
-        "MLCommonUIComponents",
-        "MPWithdraw",
         "MLBFFloxComponent",
-        "MLCheckoutSDK/Integrator"
+        "MLCheckoutSDK/Integrator",
+        "MLCommonUIComponents",
+        "MPWithdraw"
       ],
       "name": "FSQCollectionViewAlignedLayout",
       "source": "public",
@@ -364,6 +364,12 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
+      "name": "Polycards",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
       "name": "MLCardDrawer",
       "source": "private",
       "target": "production",
@@ -462,11 +468,11 @@
     },
     {
       "allows_granular_projects": [
-        "MLRemedy",
         "Cashout",
         "IspMpos",
         "MLMoneyOut",
-        "MLMoneyOut/MercadoPago"
+        "MLMoneyOut/MercadoPago",
+        "MLRemedy"
       ],
       "name": "MLDynamicModal",
       "source": "public",
@@ -547,6 +553,12 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "name": "FfSdk",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "MLMetrics",
       "source": "private",
       "target": "production",
@@ -596,8 +608,8 @@
     },
     {
       "allows_granular_projects": [
-        "DiscountCenter",
         "AndesUI",
+        "DiscountCenter",
         "MLVPP",
         "MPSearch"
       ],
@@ -728,6 +740,7 @@
       "version": "^~>\\s?4.[0-9]+$"
     },
     {
+      "expires": "2024-09-28",
       "name": "MLSearch/MoreLikeThis",
       "source": "private",
       "target": "production",
@@ -796,30 +809,30 @@
     },
     {
       "allows_granular_projects": [
-        "MLUIComponents/MLActivities",
-        "MPMerchEngine",
-        "MPModalsEngine",
-        "MPModalsEngine/MercadoPago",
+        "AndesUIDraftModal",
+        "AndesUIDraftModal/MercadoLibre",
+        "AndesUIDraftModal/MercadoPago",
         "CardsAcquisition",
         "CardsEngagement",
         "CardsList",
         "CardsList/MercadoPago",
         "Cashin",
         "CreditsUIComponents",
-        "CreditsUIComponents/MercadoPago",
         "CreditsUIComponents/MercadoLibre",
+        "CreditsUIComponents/MercadoPago",
         "Gamification",
         "HomeWallet",
+        "InsuQpageOn",
         "IspMpos",
         "IspSf",
         "MerchRealestates",
         "MerchRealestates/DismissContent",
         "MerchRealestates/MercadoLibre",
         "MerchRealestates/MercadoPago",
-        "AndesUIDraftModal",
-        "AndesUIDraftModal/MercadoLibre",
-        "AndesUIDraftModal/MercadoPago",
-        "InsuQpageOn"
+        "MLUIComponents/MLActivities",
+        "MPMerchEngine",
+        "MPModalsEngine",
+        "MPModalsEngine/MercadoPago"
       ],
       "name": "MPDynamicSkeleton",
       "source": "public",
@@ -868,10 +881,10 @@
     },
     {
       "allows_granular_projects": [
+        "CcapCommons/ThreeDSLive",
         "PXAddon",
         "PXAddon/MercadoLibre",
-        "PXAddon/MercadoPago",
-        "CcapCommons/ThreeDSLive"
+        "PXAddon/MercadoPago"
       ],
       "expires": "2025-01-03",
       "name": "MLThreeDS",
@@ -881,10 +894,10 @@
     },
     {
       "allows_granular_projects": [
+        "CcapCommons/ThreeDSLive",
         "PXAddon",
         "PXAddon/MercadoLibre",
-        "PXAddon/MercadoPago",
-        "CcapCommons/ThreeDSLive"
+        "PXAddon/MercadoPago"
       ],
       "name": "MLThreeDS",
       "source": "private",
@@ -892,7 +905,9 @@
       "version": "6.6.132"
     },
     {
-      "description": "Parece no tener utilidad y se está agregando a ML.",
+      "allows_granular_projects": [
+        "PxTokenization"
+      ],
       "name": "TMGSDK",
       "source": "private",
       "target": "production",
@@ -966,8 +981,8 @@
         "HomeSectionsApi/Core",
         "HomeWallet",
         "HubSeller",
-        "InStore-Discovery",
         "InStore",
+        "InStore-Discovery",
         "LivenessDetection/Core",
         "MLBiometricSecurity",
         "MLCommonUIComponents",
@@ -988,29 +1003,31 @@
         "MLUIComponents/MLHeader",
         "MLUIComponents/MLOTPInput",
         "MLUserBlocker",
-        "MLUserBlocker/MercadoPago",
         "MLUserBlocker/MercadoLibre",
+        "MLUserBlocker/MercadoPago",
         "MLVPP",
+        "Mplay",
+        "Mplay/Player",
         "MPModalsEngine",
         "MPModalsEngine/MercadoPago",
         "MPMoneyTransfer",
         "MPSPPrepaid",
         "MPSPPrepaid/MercadoPago",
-        "Mplay",
-        "Mplay/Player",
+        "Multiwidget",
         "Onboarding",
-        "Pampa/MercadoPago",
         "Pampa/MercadoLibre",
+        "Pampa/MercadoPago",
         "Pendings",
         "Pendings/Core",
         "Pendings/MercadoPago",
+        "PortableWidget",
         "PortableWidget/CoreResources",
-        "PortableWidget/MercadoPago",
         "PortableWidget/MercadoLibre",
+        "PortableWidget/MercadoPago",
         "Regulations",
         "RequestWatcher/Core",
-        "Reviews",
         "Reseller",
+        "Reviews",
         "SellerHomeSection"
       ],
       "name": "PureLayout",
@@ -1185,6 +1202,7 @@
       "allows_granular_projects": [
         "DiscountCenter",
         "MLVPP",
+        "Mplay",
         "MPSearch"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
@@ -1249,6 +1267,7 @@
         "DiscountCenter",
         "FeedbackScreen",
         "MLVPP",
+        "Mplay",
         "MPSearch"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
@@ -1380,6 +1399,12 @@
     },
     {
       "name": "RequestWatcher",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "Multiwidget",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
@@ -1980,13 +2005,6 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
-      "expires": "2024-08-31",
-      "name": "Wishlists",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
       "name": "BillPayments",
       "source": "private",
       "target": "production",
@@ -2150,6 +2168,10 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "allows_granular_projects": [
+        "HomeWallet",
+        "MPSearch"
+      ],
       "name": "HorizontalCards",
       "source": "private",
       "target": "production",
@@ -2163,8 +2185,8 @@
     },
     {
       "allows_granular_projects": [
-        "DependencyInjection",
-        "CrabDI"
+        "CrabDI",
+        "DependencyInjection"
       ],
       "expires": "2024-09-30",
       "name": "Swinject",
@@ -2174,8 +2196,8 @@
     },
     {
       "allows_granular_projects": [
-        "DependencyInjection",
-        "CrabDI"
+        "CrabDI",
+        "DependencyInjection"
       ],
       "expires": "2024-09-30",
       "name": "SwinjectAutoregistration",
@@ -2272,6 +2294,7 @@
         "MLSearch",
         "MLVPP"
       ],
+      "expires": "2024-09-13",
       "name": "MoreLikeThis",
       "source": "private",
       "target": "test",
@@ -2279,13 +2302,25 @@
     },
     {
       "allows_granular_projects": [
-        "MLSearch",
+        "MLSearch/Core",
         "MLVPP"
+      ],
+      "name": "MoreLikeThis",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "allows_granular_projects": [
+        "MLSearch",
+        "MLVPP",
+        "MoreLikeThis",
+        "VirtualTryOn"
       ],
       "name": "VerticalsCore",
       "source": "private",
-      "target": "test",
-      "version": "^~>\\s?0.[0-9]+$"
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "allows_granular_projects": [
@@ -2298,10 +2333,16 @@
     },
     {
       "allows_granular_projects": [
-        "MPConfigurationProvider/MLNetworking",
-        "MLOnDemandResources"
+        "MLOnDemandResources",
+        "MPConfigurationProvider/MLNetworking"
       ],
       "name": "AppTheme",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "EverestCanvas",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
