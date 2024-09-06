@@ -361,9 +361,9 @@
         "com.mercadolibre.android.payment_flow_fcu",
         "com.mercadolibre.android.personvalidation",
         "com.mercadolibre.android.pm.om",
-        "com.mercadolibre.android.point.lot.management",
         "com.mercadolibre.android.point_credits",
         "com.mercadolibre.android.point_recharge",
+        "com.mercadolibre.android.point.lot.management",
         "com.mercadolibre.android.remedies",
         "com.mercadolibre.android.singleplayer",
         "com.mercadolibre.android.wallet.home",
@@ -732,8 +732,8 @@
       "allows_granular_projects": [
         "com.mercadoenvios.android.shipping-toolkit",
         "com.mercadolibre.android:apprater",
-        "com.mercadolibre.android:apprater-mp",
-        "com.mercadolibre.android:apprater-ml"
+        "com.mercadolibre.android:apprater-ml",
+        "com.mercadolibre.android:apprater-mp"
       ],
       "group": "com\\.google\\.android\\.play",
       "name": "review",
