@@ -817,6 +817,10 @@
       "version": "30\\.5\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadoenvios.android.maps",
+        "com.mercadolibre.android.maps"
+      ],
       "group": "com\\.google\\.maps\\.android",
       "name": "android-maps-utils",
       "version": "0\\.4\\.4"
@@ -1795,14 +1799,12 @@
       "version": "1\\.+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.instore"
+      ],
       "group": "com\\.polidea\\.rxandroidble2",
       "name": "rxandroidble",
       "version": "1\\.12\\.0"
-    },
-    {
-      "group": "com\\.squareup",
-      "name": "android-times-square",
-      "version": "1\\.7\\.10"
     },
     {
       "group": "com\\.squareup\\.okhttp3",
@@ -1815,6 +1817,13 @@
       "version": "4\\.9\\.3"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.discounts.payers",
+        "com.mercadolibre.android.point.mpos",
+        "com.mercadolibre.android.point_smartpos_fcu",
+        "com.mercadopago.android.px",
+        "com.mercadopago.android.smartpos"
+      ],
       "group": "com\\.squareup\\.okhttp3",
       "name": "okhttp-urlconnection",
       "version": "4\\.9\\.3"
@@ -1831,6 +1840,13 @@
       "version": "4\\.9\\.3"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.fees_installments",
+        "com.mercadolibre.android.instore",
+        "com.mercadolibre.android.usersections",
+        "com.mercadopago.android.configurer",
+        "com.mercadopago.android.configurer.smartpos"
+      ],
       "description": "Esta libs se encuentra deprecada, recomendamos utilizar coroutine",
       "expires": "2024-12-01",
       "group": "com\\.squareup\\.retrofit2",
@@ -1843,11 +1859,21 @@
       "version": "2\\.6\\.4"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.ml_qualtrics"
+      ],
       "group": "com\\.squareup\\.retrofit2",
       "name": "converter-scalars",
       "version": "2\\.6\\.4"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.cash_rails",
+        "com.mercadolibre.android.instore",
+        "com.mercadolibre.android.local.storage",
+        "com.mercadolibre.android.navigation",
+        "com.mercadopago.android.point_flow_engine"
+      ],
       "group": "com\\.squareup\\.okio",
       "name": "okio",
       "version": "2\\.8\\.0"
@@ -1858,16 +1884,30 @@
       "version": "2\\.6\\.4"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android:sell-flow",
+        "com.mercadolibre.android.payment_flow_fcu",
+        "com.mercadolibre.android.profile_picture",
+        "com.mercadolibre.android.remedy",
+        "com.mercadopago.android.smartpos"
+      ],
       "group": "com\\.theartofdev\\.edmodo",
       "name": "android-image-cropper",
       "version": "2\\.8\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.myml.questions"
+      ],
       "group": "com\\.tonicartos",
       "name": "superslim",
       "version": "0\\.4\\.13"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.beacon_manager",
+        "com.mercadolibre.android.cardsbanking"
+      ],
       "description": "Esta libs se encuentra deprecada, recomendamos utilizar data dispatcher",
       "expires": "2024-12-01",
       "group": "org\\.greenrobot",
@@ -1875,6 +1915,11 @@
       "version": "3\\.1\\.1"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.cardsengagement",
+        "com.mercadolibre.android.commons",
+        "com.mercadolibre.android.myml.questions"
+      ],
       "description": "Esta libs se encuentra deprecada, recomendamos utilizar data dispatcher",
       "expires": "2024-12-01",
       "group": "de\\.greenrobot",
@@ -1887,6 +1932,24 @@
       "version": "7\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android:home",
+        "com.mercadolibre.android:apprater-mp",
+        "com.mercadolibre.android:notificationcenter",
+        "com.mercadolibre.android:notificationcenter-settings",
+        "com.mercadolibre.android.dynamic_features",
+        "com.mercadolibre.android.fees_installments",
+        "com.mercadolibre.android.home.toolkit",
+        "com.mercadolibre.android.ignite",
+        "com.mercadolibre.android.instore",
+        "com.mercadolibre.android.navigation",
+        "com.mercadolibre.android.pendings",
+        "com.mercadolibre.android.pos_readers",
+        "com.mercadolibre.android.remedies",
+        "com.mercadolibre.android.reseller",
+        "com.mercadolibre.android.usersections",
+        "com.mercadolibre.android.wallet.home"
+      ],
       "description": "Esta libs se encuentra deprecada, recomendamos utilizar coroutine",
       "expires": "2024-12-01",
       "group": "io\\.reactivex\\.rxjava2",
@@ -1899,6 +1962,27 @@
       "version": "2\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android:home",
+        "com.mercadolibre.android:apprater-mp",
+        "com.mercadolibre.android:notificationcenter",
+        "com.mercadolibre.android:notificationcenter-settings",
+        "com.mercadolibre.android.discounts.payers",
+        "com.mercadolibre.android.dynamic_features",
+        "com.mercadolibre.android.fees_installments",
+        "com.mercadolibre.android.home.toolkit",
+        "com.mercadolibre.android.ignite",
+        "com.mercadolibre.android.instore",
+        "com.mercadolibre.android.navigation",
+        "com.mercadolibre.android.pendings",
+        "com.mercadolibre.android.pos_readers",
+        "com.mercadolibre.android.remedies",
+        "com.mercadolibre.android.sc.orders",
+        "com.mercadolibre.android.usersections",
+        "com.mercadolibre.android.wallet.home",
+        "com.mercadopago.android.configurer",
+        "com.mercadopago.android.configurer.smartpos"
+      ],
       "description": "Esta libs se encuentra deprecada, recomendamos utilizar coroutine",
       "expires": "2024-12-01",
       "group": "io\\.reactivex\\.rxjava2",
@@ -1906,13 +1990,34 @@
       "version": "2\\.2\\.8"
     },
     {
-      "description": "Esta libs se encuentra deprecada, recomendamos utilizar coroutine",
+      "description": "Esta libs se encuentra deprecada, recomendamos utilizar coroutine (+100 uses)",
       "expires": "2024-12-01",
       "group": "io\\.reactivex\\.rxjava2",
       "name": "rxkotlin",
       "version": "2\\.2\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android:ui_legacy",
+        "com.mercadolibre.android:progress-circle",
+        "com.mercadolibre.android:sell-flow",
+        "com.mercadolibre.android.cart",
+        "com.mercadolibre.android.checkout",
+        "com.mercadolibre.android.coupon",
+        "com.mercadolibre.android.flox",
+        "com.mercadolibre.android.instore",
+        "com.mercadolibre.android.merchengine",
+        "com.mercadolibre.android.myml",
+        "com.mercadolibre.android.pendings",
+        "com.mercadolibre.android.pos_readers",
+        "com.mercadolibre.android.remedies",
+        "com.mercadolibre.android.remedy",
+        "com.mercadolibre.android.singleplayer",
+        "com.mercadolibre.android.singleplayer",
+        "com.mercadopago.android.multiplayer",
+        "com.mercadopago.android.smartpos"
+      ],
+      "description": "API ui_legacy",
       "group": "org\\.apache\\.commons",
       "name": "commons-lang3",
       "version": "3\\.6"
@@ -2969,10 +3074,6 @@
       "group": "com\\.mercadolibre\\.android\\.point_virtualization",
       "name": "point_virtualization",
       "version": "4\\.+"
-    },
-    {
-      "group": "com\\.google\\.firebase",
-      "name": "firebase-ml-modeldownloader"
     },
     {
       "group": "org\\.tensorflow",
