@@ -1806,7 +1806,6 @@
       "allows_granular_projects": [
         "com.mercadopago.android.isp.mpoc.prometheus.magma"
       ],
-      "description": "",
       "group": "com\\.mercadopago\\.android\\.isp\\.mpoc\\.prometheus",
       "name": "lava",
       "version": "6\\.2\\.3"
@@ -1815,7 +1814,6 @@
       "allows_granular_projects": [
         "com.mercadopago.android.isp.mpoc.prometheus.magma"
       ],
-      "description": "",
       "group": "com\\.mercadopago\\.android\\.isp\\.mpoc\\.prometheus",
       "name": "molten",
       "version": "0\\.1\\.5"
@@ -1824,7 +1822,6 @@
       "allows_granular_projects": [
         "com.mercadopago.android.isp.mpoc.prometheus.magma"
       ],
-      "description": "",
       "group": "com\\.neovisionaries",
       "name": "nv-i18n",
       "version": "1\\.29"
@@ -1833,10 +1830,9 @@
       "allows_granular_projects": [
         "com.mercadopago.android.isp.mpoc.prometheus.magma"
       ],
-      "description": "",
-      "group": "com\\.google\\.guava",
-      "name": "guava",
-      "version": "32\\.0\\.1-jre"
+      "group": "org\\.slf4j",
+      "name": "slf4j-android",
+      "version": "1\\.7\\.32"
     },
     {
       "group": "com\\.polidea\\.rxandroidble2",
