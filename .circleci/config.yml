@@ -24,6 +24,10 @@ jobs:
     <<: *defaultJob
     environment:
       FILE: "ios-whitelist.json"
+  kmp:
+    <<: *defaultJob
+    environment:
+      FILE: "cross-kmp-allowlist.json"
   notify:
     docker:
       - image: circleci/ruby:latest
@@ -49,6 +53,7 @@ workflows:
     jobs:
       - android
       - ios
+      - kmp
   weekly:
     triggers:
       - schedule:

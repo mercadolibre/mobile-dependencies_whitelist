@@ -16,7 +16,7 @@
       ],
       "group": "org\\.jetbrains\\.kotlinx",
       "name": "kotlinx-datetime",
-      "version": "0\\.+"
+      "version": "0\\.4\\.0"
     },
     {
       "allows_granular_projects": [
@@ -44,7 +44,7 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.rtc_mobile", 
+        "com.mercadolibre.android.rtc_mobile",
         "com.mercadolibre.android.version_checker"
       ],
       "group": "org\\.jetbrains\\.kotlinx",
