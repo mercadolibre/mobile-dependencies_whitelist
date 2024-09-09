@@ -1638,12 +1638,18 @@
       "version": "10\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadopago.android.moneyin.v2"
+      ],
       "expires": "2024-09-27",
       "group": "com\\.mercadolibre\\.android\\.dami_ui_components",
       "name": "ui_components",
       "version": "7\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadopago.android.moneyin.v2"
+      ],
       "group": "com\\.mercadolibre\\.android\\.dami_ui_components",
       "name": "ui_components",
       "version": "8\\.\\+"
