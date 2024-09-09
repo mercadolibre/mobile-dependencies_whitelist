@@ -431,7 +431,6 @@
         "com.mercadolibre.android:home",
         "com.mercadolibre.android.mlbusinesscomponents"
       ],
-      "description": "TODO: revisar home",
       "group": "com\\.facebook\\.fresco",
       "name": "animated-webp",
       "version": "2\\.2\\.0"
@@ -834,7 +833,6 @@
         "com.mercadopago.android.configurer:firebase-configurer",
         "com.mercadopago.android.configurer:metrics-configurer"
       ],
-      "description": "TODO: Revisar granularidad de los configurers; Porque un equipo de producto necesita inicializar esto?",
       "group": "com\\.google\\.firebase",
       "name": "firebase-core"
     },
