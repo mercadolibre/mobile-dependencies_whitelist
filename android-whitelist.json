@@ -1605,8 +1605,8 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.wallet.home",
-        "com.mercadolibre.android.mp_search"
+        "com.mercadolibre.android.mp_search",
+        "com.mercadolibre.android.wallet.home"
       ],
       "group": "com\\.mercadolibre\\.android\\.multiwidget",
       "name": "core",
@@ -1614,8 +1614,8 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.wallet.home",
-        "com.mercadolibre.android.mp_search"
+        "com.mercadolibre.android.mp_search",
+        "com.mercadolibre.android.wallet.home"
       ],
       "group": "com\\.mercadolibre\\.android\\.multiwidget",
       "name": "widgets",
