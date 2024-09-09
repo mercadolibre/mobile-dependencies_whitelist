@@ -94,10 +94,10 @@
     },
     {
       "allows_granular_projects": [
-        "MLCharts",
         "CreditsUIComponents",
         "CreditsUIComponents/MercadoLibre",
-        "CreditsUIComponents/MercadoPago"
+        "CreditsUIComponents/MercadoPago",
+        "MLCharts"
       ],
       "name": "DGCharts",
       "source": "public",
