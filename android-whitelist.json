@@ -1604,6 +1604,16 @@
       "version": "mercadopago-6\\.+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.multiwidget",
+      "name": "core",
+      "version": "1.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.multiwidget",
+      "name": "widgets",
+      "version": "1.+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.usersections\\",
       "name": "sections",
       "version": "mercadolibre-7\\.+|mercadopago-7\\.+"
