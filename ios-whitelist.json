@@ -475,7 +475,9 @@
         "IspMpos",
         "MLMoneyOut",
         "MLMoneyOut/MercadoPago",
-        "MLRemedy"
+        "MLRemedy",
+        "TransfersDashboard",
+        "TransfersDiscovery"
       ],
       "name": "MLDynamicModal",
       "source": "public",
@@ -660,6 +662,18 @@
     },
     {
       "name": "TransfersComponents",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "TransfersDashboard",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "TransfersDiscovery",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
