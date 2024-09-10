@@ -1608,6 +1608,24 @@
       "version": "mercadopago-6\\.+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.mp_search",
+        "com.mercadolibre.android.wallet.home"
+      ],
+      "group": "com\\.mercadolibre\\.android\\.multiwidget",
+      "name": "core",
+      "version": "1\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.mp_search",
+        "com.mercadolibre.android.wallet.home"
+      ],
+      "group": "com\\.mercadolibre\\.android\\.multiwidget",
+      "name": "widgets",
+      "version": "1\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.usersections\\",
       "name": "sections",
       "version": "mercadolibre-7\\.+|mercadopago-7\\.+"
