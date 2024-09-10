@@ -472,7 +472,9 @@
         "IspMpos",
         "MLMoneyOut",
         "MLMoneyOut/MercadoPago",
-        "MLRemedy"
+        "MLRemedy",
+        "TransfersDashboard",
+        "TransfersDiscovery"
       ],
       "name": "MLDynamicModal",
       "source": "public",
@@ -657,6 +659,18 @@
     },
     {
       "name": "TransfersComponents",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "TransfersDashboard",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "TransfersDiscovery",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
@@ -1796,13 +1810,6 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?2.[0-9]+$"
-    },
-    {
-      "expires": "2024-09-07",
-      "name": "AppMonitoringSetup",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "DatadogInternal",
