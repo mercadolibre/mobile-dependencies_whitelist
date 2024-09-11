@@ -1588,10 +1588,16 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2024-10-12",
       "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
       "name": "api",
       "version": "9\\.\\+"
     },
+    {
+      "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
+      "name": "api",
+      "version": "10\\.\\+"
+    }
     {
       "group": "com\\.mercadolibre\\.android\\.home\\.toolkit",
       "name": "core",
