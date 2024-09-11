@@ -1521,12 +1521,25 @@
         "com.mercadolibre.android.virtual_try_on"
       ],
       "description": "This dependency is only used in VirtualTryOn",
+      "expires": "2024-11-19",
       "group": "com\\.modiface",
       "name": "mfemakeupkit",
       "transitive_configuration": {
         "transitivity": false
       },
       "version": "20\\.0\\.0"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.virtual_try_on"
+      ],
+      "description": "This dependency is only used in VirtualTryOn",
+      "group": "com\\.modiface",
+      "name": "mfemakeupkit",
+      "transitive_configuration": {
+        "transitivity": false
+      },
+      "version": "20\\.0\\.1"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.eshops",
