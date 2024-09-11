@@ -1725,9 +1725,15 @@
       "version": "1\\.\\+"
     },
     {
+      "expires": "2024-10-12",
       "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
       "name": "api",
       "version": "9\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
+      "name": "api",
+      "version": "10\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.home\\.toolkit",
@@ -1743,6 +1749,24 @@
       "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
       "name": "sections",
       "version": "mercadopago-6\\.+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.mp_search",
+        "com.mercadolibre.android.wallet.home"
+      ],
+      "group": "com\\.mercadolibre\\.android\\.multiwidget",
+      "name": "core",
+      "version": "1\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.mp_search",
+        "com.mercadolibre.android.wallet.home"
+      ],
+      "group": "com\\.mercadolibre\\.android\\.multiwidget",
+      "name": "widgets",
+      "version": "1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.usersections\\",
@@ -1797,9 +1821,15 @@
       "version": "7\\.\\+"
     },
     {
+      "expires": "2024-09-13",
       "group": "com\\.mercadopago\\.android\\.digital_accounts_components",
       "name": "digital_accounts_components",
       "version": "9\\.\\+"
+    },
+    {
+      "group": "com\\.mercadopago\\.android\\.digital_accounts_components",
+      "name": "digital_accounts_components",
+      "version": "10\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.ml_esc_manager",
@@ -3472,7 +3502,7 @@
       ],
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "seller",
-      "version": "20\\.\\+"
+      "version": "21\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -3480,7 +3510,7 @@
       ],
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "payer",
-      "version": "20\\.\\+"
+      "version": "21\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -3488,7 +3518,7 @@
       ],
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "commons",
-      "version": "20\\.\\+"
+      "version": "21\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -3496,7 +3526,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.cashout",
       "name": "cashout",
-      "version": "17\\.\\+"
+      "version": "18\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -3505,7 +3535,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "rating",
-      "version": "11\\.\\+"
+      "version": "12\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -3514,7 +3544,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "core",
-      "version": "11\\.\\+"
+      "version": "12\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -3523,7 +3553,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "feedback",
-      "version": "11\\.\\+"
+      "version": "12\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -3532,7 +3562,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "tab",
-      "version": "11\\.\\+"
+      "version": "12\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -3541,7 +3571,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "ui_component",
-      "version": "11\\.\\+"
+      "version": "12\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -3550,7 +3580,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "commons",
-      "version": "11\\.\\+"
+      "version": "12\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -3559,7 +3589,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "map",
-      "version": "11\\.\\+"
+      "version": "12\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -3568,7 +3598,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "report",
-      "version": "11\\.\\+"
+      "version": "12\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -3577,7 +3607,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "business_component",
-      "version": "11\\.\\+"
+      "version": "12\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.mp_sellers_growth",
