@@ -3033,9 +3033,16 @@
       "version": "17\\.0\\.1"
     },
     {
+      "description": "Expire date of previous lib (Firebase & GMS mig)",
+      "expires": "2024-09-30",
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-mlkit-text-recognition",
       "version": "18\\.0\\.0"
+    },
+    {
+      "group": "com\\.google\\.android\\.gms",
+      "name": "play-services-mlkit-text-recognition",
+      "version": "19\\.0\\.1"
     },
     {
       "group": "com\\.google\\.android\\.gms",
@@ -3043,9 +3050,16 @@
       "version": "16\\.1\\.4"
     },
     {
+      "description": "Expire date of previous lib (Firebase & GMS mig)",
+      "expires": "2024-09-30",
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-mlkit-barcode-scanning",
       "version": "18\\.3\\.0"
+    },
+    {
+      "group": "com\\.google\\.android\\.gms",
+      "name": "play-services-mlkit-barcode-scanning",
+      "version": "18\\.3\\.1"
     },
     {
       "allows_granular_projects": [
