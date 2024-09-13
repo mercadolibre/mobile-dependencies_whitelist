@@ -2017,7 +2017,11 @@
       ],
       "group": "com\\.squareup\\.okhttp3",
       "name": "okhttp-dnsoverhttps",
-      "version": "4\\.9\\.3"
+      "version": "4\\.9\\.3",
+      "transitive_configuration": {
+        "transitivity": false,
+        "namespace": "okhttp3.dnsoverhttps"
+      }
     },
     {
       "allows_granular_projects": [
