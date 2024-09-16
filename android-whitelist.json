@@ -2065,10 +2065,10 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.cash_rails",
         "com.mercadolibre.android.instore",
+        "com.mercadolibre.android.everest_canvas",
         "com.mercadolibre.android.local.storage",
         "com.mercadolibre.android.navigation",
-        "com.mercadopago.android.point_flow_engine",
-        "com.mercadolibre.android.everest_canvas"
+        "com.mercadopago.android.point_flow_engine"
       ],
       "group": "com\\.squareup\\.okio",
       "name": "okio",
