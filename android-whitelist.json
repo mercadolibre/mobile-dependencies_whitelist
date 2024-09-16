@@ -1628,17 +1628,6 @@
         "com.mercadolibre.android.vpp"
       ],
       "description": "This is the MoreLikeThis standalone library",
-      "expires": "2024-09-13",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "more_like_this",
-      "version": "1\\.\\+"
-    },
-    {
-      "allows_granular_projects": [
-        "com.mercadolibre.android.search",
-        "com.mercadolibre.android.vpp"
-      ],
-      "description": "This is the MoreLikeThis standalone library",
       "group": "com\\.mercadolibre\\.android",
       "name": "more_like_this",
       "version": "2\\.\\+"
@@ -1819,12 +1808,6 @@
       "group": "com\\.mercadolibre\\.android\\.static_resources",
       "name": "static_resources",
       "version": "7\\.\\+"
-    },
-    {
-      "expires": "2024-09-13",
-      "group": "com\\.mercadopago\\.android\\.digital_accounts_components",
-      "name": "digital_accounts_components",
-      "version": "9\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.digital_accounts_components",
@@ -4795,21 +4778,9 @@
       "version": "2\\.6\\.0"
     },
     {
-      "expires": "2024-09-09",
-      "group": "com\\.mercadolibre\\.android\\.instore",
-      "name": "instore",
-      "version": "mercadolibre-15\\.\\+|mercadopago-15\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.instore",
       "name": "instore",
       "version": "mercadolibre-16\\.\\+|mercadopago-16\\.\\+"
-    },
-    {
-      "expires": "2024-09-09",
-      "group": "com\\.mercadolibre\\.android\\.meliscanbarcodeui",
-      "name": "meliscanbarcodeui",
-      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.meliscanbarcodeui",
