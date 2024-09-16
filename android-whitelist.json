@@ -1081,6 +1081,15 @@
       "version": "23\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.remote.configuration"
+      ],
+      "description": "This library should be used only in remote-configuration.",
+      "group": "com\\.mercadolibre\\.android\\.ff_sdk",
+      "name": "core",
+      "version": "0\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android",
       "name": "milestone-tracker",
       "version": "6\\.\\+"
