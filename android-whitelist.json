@@ -499,6 +499,7 @@
         "com.mercadolibre.android.ccap",
         "com.mercadolibre.android.credit_card_disable",
         "com.mercadolibre.android.credits.merchant.enrollment",
+        "com.mercadolibre.android.demandcore",
         "com.mercadolibre.android.eshops",
         "com.mercadolibre.android.instore_ui_components",
         "com.mercadolibre.android.insu_flox_components",
@@ -2015,9 +2016,6 @@
       ],
       "group": "com\\.squareup\\.okhttp3",
       "name": "okhttp-dnsoverhttps",
-      "transitive_configuration": {
-        "transitivity": false
-      },
       "version": "4\\.9\\.3"
     },
     {
