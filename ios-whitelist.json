@@ -1608,14 +1608,6 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "description": "This version will be deprecated in favor of 1.0.0",
-      "expires": "2024-09-15",
-      "name": "CcapSDUI",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
       "name": "CcapSDUI",
       "source": "private",
       "target": "production",
@@ -2299,17 +2291,6 @@
     },
     {
       "allows_granular_projects": [
-        "MLSearch",
-        "MLVPP"
-      ],
-      "expires": "2024-09-13",
-      "name": "MoreLikeThis",
-      "source": "private",
-      "target": "test",
-      "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "allows_granular_projects": [
         "MLSearch/Core",
         "MLVPP"
       ],
@@ -2336,8 +2317,8 @@
       ],
       "name": "DemandCore",
       "source": "private",
-      "target": "test",
-      "version": "^~>\\s?0.[0-9]+$"
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "allows_granular_projects": [

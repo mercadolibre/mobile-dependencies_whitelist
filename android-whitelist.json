@@ -499,6 +499,7 @@
         "com.mercadolibre.android.ccap",
         "com.mercadolibre.android.credit_card_disable",
         "com.mercadolibre.android.credits.merchant.enrollment",
+        "com.mercadolibre.android.demandcore",
         "com.mercadolibre.android.eshops",
         "com.mercadolibre.android.instore_ui_components",
         "com.mercadolibre.android.insu_flox_components",
@@ -1628,17 +1629,6 @@
         "com.mercadolibre.android.vpp"
       ],
       "description": "This is the MoreLikeThis standalone library",
-      "expires": "2024-09-13",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "more_like_this",
-      "version": "1\\.\\+"
-    },
-    {
-      "allows_granular_projects": [
-        "com.mercadolibre.android.search",
-        "com.mercadolibre.android.vpp"
-      ],
-      "description": "This is the MoreLikeThis standalone library",
       "group": "com\\.mercadolibre\\.android",
       "name": "more_like_this",
       "version": "2\\.\\+"
@@ -1821,15 +1811,15 @@
       "version": "7\\.\\+"
     },
     {
-      "expires": "2024-09-13",
+      "expires": "2024-09-27",
       "group": "com\\.mercadopago\\.android\\.digital_accounts_components",
       "name": "digital_accounts_components",
-      "version": "9\\.\\+"
+      "version": "10\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.digital_accounts_components",
       "name": "digital_accounts_components",
-      "version": "10\\.\\+"
+      "version": "11\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.ml_esc_manager",
@@ -2017,9 +2007,6 @@
       ],
       "group": "com\\.squareup\\.okhttp3",
       "name": "okhttp-dnsoverhttps",
-      "transitive_configuration": {
-        "transitivity": false
-      },
       "version": "4\\.9\\.3"
     },
     {
@@ -4800,21 +4787,9 @@
       "version": "0\\.30\\.1"
     },
     {
-      "expires": "2024-09-09",
-      "group": "com\\.mercadolibre\\.android\\.instore",
-      "name": "instore",
-      "version": "mercadolibre-15\\.\\+|mercadopago-15\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.instore",
       "name": "instore",
       "version": "mercadolibre-16\\.\\+|mercadopago-16\\.\\+"
-    },
-    {
-      "expires": "2024-09-09",
-      "group": "com\\.mercadolibre\\.android\\.meliscanbarcodeui",
-      "name": "meliscanbarcodeui",
-      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.meliscanbarcodeui",
@@ -4855,15 +4830,6 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.ar.measures"
-      ],
-      "description": "This dependency was added to allow Augmented Reality only on Mercury WMS. No other modules are allowed to use them, especially the ones that belong to ML or MP.",
-      "group": "com\\.journeyapps",
-      "name": "zxing-android-embedded",
-      "version": "4\\.\\3\\.0"
-    },
-    {
-      "allows_granular_projects": [
         "com.mercadolibre.android.mlwebkit",
         "com.mercadolibre.android.on.demand.resources",
         "com.mercadopago.android.configurer"
@@ -4883,9 +4849,6 @@
       "description": "This dependency was added to enable SmartPOS devices (only Android 6 and 12) to generate a QR code or barcode and convert it into a bitmap image. The goal is to print this image on a physical voucher.",
       "group": "com\\.google\\.zxing",
       "name": "core",
-      "transitive_configuration": {
-        "transitivity": false
-      },
       "version": "3\\.3\\.2"
     },
     {
