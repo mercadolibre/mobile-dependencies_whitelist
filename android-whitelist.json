@@ -499,6 +499,7 @@
         "com.mercadolibre.android.ccap",
         "com.mercadolibre.android.credit_card_disable",
         "com.mercadolibre.android.credits.merchant.enrollment",
+        "com.mercadolibre.android.demandcore",
         "com.mercadolibre.android.eshops",
         "com.mercadolibre.android.instore_ui_components",
         "com.mercadolibre.android.insu_flox_components",
@@ -2006,9 +2007,6 @@
       ],
       "group": "com\\.squareup\\.okhttp3",
       "name": "okhttp-dnsoverhttps",
-      "transitive_configuration": {
-        "transitivity": false
-      },
       "version": "4\\.9\\.3"
     },
     {
@@ -5035,9 +5033,6 @@
       "description": "This dependency was added to enable SmartPOS devices (only Android 6 and 12) to generate a QR code or barcode and convert it into a bitmap image. The goal is to print this image on a physical voucher.",
       "group": "com\\.google\\.zxing",
       "name": "core",
-      "transitive_configuration": {
-        "transitivity": false
-      },
       "version": "3\\.3\\.2"
     },
     {
