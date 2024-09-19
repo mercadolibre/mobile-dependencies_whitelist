@@ -2317,8 +2317,8 @@
       ],
       "name": "DemandCore",
       "source": "private",
-      "target": "test",
-      "version": "^~>\\s?0.[0-9]+$"
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "allows_granular_projects": [
