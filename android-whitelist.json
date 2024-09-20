@@ -3218,11 +3218,41 @@
       "version": "33\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android:analytics",
+        "com.mercadolibre.android:user_configuration",
+        "com.mercadolibre.android.cardsbanking",
+        "com.mercadolibre.android.ccap",
+        "com.mercadolibre.android.crab_di_android",
+        "com.mercadolibre.android.gamification",
+        "com.mercadolibre.android.ignite",
+        "com.mercadolibre.android.mercadopago_login",
+        "com.mercadolibre.android.mp_withdrawbank",
+        "com.mercadolibre.android.nfcpayments",
+        "com.mercadolibre.android.nfcpushprovisioning",
+        "com.mercadolibre.android.payment_flow_fcu",
+        "com.mercadolibre.android.point_smart_helpers",
+        "com.mercadolibre.android.point_smart_home",
+        "com.mercadolibre.android.point_virtualization",
+        "com.mercadolibre.android.pos_readers",
+        "com.mercadolibre.android.security_two_fa",
+        "com.mercadopago.android.configurer",
+        "com.mercadopago.android.configurer.smartpos",
+        "com.mercadopago.android.isp.payment_contactless",
+        "com.mercadopago.android.isp.point.mpoc",
+        "com.mercadopago.android.multiplayer",
+        "com.mercadopago.isp.ptm.toolkit"
+      ],
+      "description": "Don't use timber directly, use our commons.log lib",
+      "expire": "2024-12-01",
       "group": "com\\.jakewharton\\.timber",
       "name": "timber",
       "version": "4\\.5\\.1"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.commons"
+      ],
       "group": "com\\.getkeepsafe\\.relinker",
       "name": "relinker",
       "version": "1\\.4\\.1"
@@ -3263,11 +3293,6 @@
       "version": "8\\.\\+"
     },
     {
-      "group": "com\\.smartlook\\.recording",
-      "name": "app",
-      "version": "1\\.5\\.2\\-native"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.cardsengagement",
       "version": "13\\.\\+"
     },
@@ -3277,6 +3302,10 @@
       "version": "mercadolibre-11\\.\\+|mercadopago-11\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.performance_tools"
+      ],
+      "description": "Use only on testapps",
       "group": "com\\.squareup\\.leakcanary",
       "name": "leakcanary-android",
       "version": "2\\.13"
@@ -3343,24 +3372,32 @@
       "version": "5\\.5\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadopago.point"
+      ],
       "group": "io\\.jsonwebtoken",
       "name": "jjwt-api",
       "version": "0\\.11\\.2"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadopago.point"
+      ],
       "group": "io\\.jsonwebtoken",
       "name": "jjwt-impl",
       "version": "0\\.11\\.2"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.security"
+      ],
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-recaptcha",
       "version": "16\\.0\\.0"
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.developer_mode",
-        "com.mercadolibre.android.yourtestlib"
+        "com.mercadolibre.android.developer_mode"
       ],
       "description": "This library should be used only in testImplementation flavor OR only in a testapp/testlib module, If you need it in for your TEST lib please add a granularity group in a PR to the allowlist.",
       "expires": "2025-04-08",
@@ -3370,8 +3407,7 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.developer_mode",
-        "com.mercadolibre.android.yourtestlib"
+        "com.mercadolibre.android.developer_mode"
       ],
       "description": "This library should be used only in testImplementation flavor OR only in a testapp/testlib module, If you need it in for your TEST lib please add a granularity group in a PR to the allowlist",
       "expires": "2025-04-08",
@@ -3381,8 +3417,7 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.developer_mode",
-        "com.mercadolibre.android.yourtestlib"
+        "com.mercadolibre.android.developer_mode"
       ],
       "description": "This library should be used only in testImplementation flavor OR only in a testapp/testlib module, If you need it in for your TEST lib please add a granularity group in a PR to the allowlist",
       "expires": "2025-04-08",
@@ -3550,21 +3585,41 @@
       "version": "17\\.0\\.1"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.ml_scanner",
+        "com.mercadolibre.android.personvalidation",
+        "com.mercadopago.android.moneyout"
+      ],
       "group": "androidx\\.camera",
       "name": "camera-camera2",
       "version": "1\\.2\\.1"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.ml_scanner",
+        "com.mercadolibre.android.personvalidation",
+        "com.mercadopago.android.moneyout"
+      ],
       "group": "androidx\\.camera",
       "name": "camera-lifecycle",
       "version": "1\\.2\\.1"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.ml_scanner",
+        "com.mercadolibre.android.personvalidation",
+        "com.mercadopago.android.moneyout"
+      ],
       "group": "androidx\\.camera",
       "name": "camera-view",
       "version": "1\\.2\\.1"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.point_recharge",
+        "com.mercadolibre.android.singleplayer",
+        "com.mercadopago.android.smartpos"
+      ],
       "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
       "name": "spirtechmodule",
       "version": "3\\.\\+"
@@ -3580,11 +3635,21 @@
       "version": "3\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.point_recharge",
+        "com.mercadolibre.android.singleplayer",
+        "com.mercadopago.android.smartpos"
+      ],
       "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
       "name": "ccmgeneral",
       "version": "3\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.point_recharge",
+        "com.mercadolibre.android.singleplayer",
+        "com.mercadopago.android.smartpos"
+      ],
       "group": "com\\.mercadolibre\\.android\\.spp_spirtech",
       "name": "ccmmexico",
       "version": "3\\.\\+"
@@ -3604,16 +3669,30 @@
       "version": "4\\.+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.ml_scanner",
+        "com.mercadolibre.android.personvalidation",
+        "com.mercadolibre.android.remedies"
+      ],
       "group": "org\\.tensorflow",
       "name": "tensorflow-lite",
       "version": "2\\.6\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.point_smart_pos_sdk",
+        "com.mercadopago.point:miniapps-pax"
+      ],
       "group": "com\\.mercadolibre\\.android\\.point_smart_pos_sdk",
       "name": "PPCompAndroidLib",
       "version": "0\\.+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.point_smart_pos_sdk",
+        "com.mercadopago.point:encryptor-newland",
+        "com.mercadopago.point:ptm-commons"
+      ],
       "group": "com\\.mercadolibre\\.smartpos\\.android\\.sdk_newland",
       "name": "bcnewland",
       "version": "1\\.+"
@@ -3719,37 +3798,57 @@
       "version": "1\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.app_monitoring",
+        "com.mercadolibre.android.opentelemetry",
+        "com.mercadopago.android.istanbul",
+        "com.mercadopago.android.smartpos",
+        "com.mercadopago.ptm.archive"
+      ],
       "group": "com\\.android\\.tools",
       "name": "desugar_jdk_libs",
       "version": "1\\.1\\.5"
     },
     {
-      "group": "io\\.opentelemetry",
-      "name": "opentelemetry-api",
-      "version": "1\\.38\\.0"
-    },
-    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.opentelemetry"
+      ],
       "group": "io\\.opentelemetry",
       "name": "opentelemetry-bom",
       "version": "1\\.38\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.opentelemetry"
+      ],
       "group": "io\\.opentelemetry",
       "name": "opentelemetry-api"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.opentelemetry"
+      ],
       "group": "io\\.opentelemetry",
       "name": "opentelemetry-exporter-otlp"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.opentelemetry"
+      ],
       "group": "io\\.opentelemetry",
       "name": "opentelemetry-sdk"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.opentelemetry"
+      ],
       "group": "io\\.opentelemetry",
       "name": "opentelemetry-extension-trace-propagators"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.opentelemetry"
+      ],
       "group": "io\\.opentelemetry\\.instrumentation",
       "name": "opentelemetry-okhttp-3.0",
       "version": "1\\.33\\.3-alpha"
