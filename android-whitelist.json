@@ -3244,7 +3244,7 @@
         "com.mercadopago.isp.ptm.toolkit"
       ],
       "description": "Don't use timber directly, use our commons.log lib",
-      "expire": "2024-12-01",
+      "expires": "2024-12-01",
       "group": "com\\.jakewharton\\.timber",
       "name": "timber",
       "version": "4\\.5\\.1"
