@@ -3399,20 +3399,6 @@
         "com.mercadopago.point.ptm",
         "com.mercadopago.point.ptm.agent"
       ],
-      "expires": "2024-09-16",
-      "group": "com\\.facebook\\.soloader",
-      "name": "soloader",
-      "version": "0\\.10\\.1"
-    },
-    {
-      "allows_granular_projects": [
-        "com.mercadolibre.android.credits.ui_components:test",
-        "com.mercadolibre.android.developer_mode:dm-core",
-        "com.mercadolibre.android.security_two_fa:commonstest",
-        "com.mercadopago.android.digital_accounts_components:robolectric",
-        "com.mercadopago.point.ptm",
-        "com.mercadopago.point.ptm.agent"
-      ],
       "description": "WARNING: This lib is REMOVED in the productive Apps!!",
       "group": "com\\.facebook\\.soloader",
       "name": "soloader",
