@@ -17,12 +17,13 @@ Each of the dependencies is a JSON Object that will be matched against each of t
 repository. The repository dependencies will be a string formed as `group:name:version`. The allowlist fields SUPPORTS
 regex expressions, so you can form match cases for groups in single strings.
 
-**NOTE1:** Remember that this are regexes, so if you want to declare `com.example` it should be `com\\.example`
-**NOTE2**: The repository will validate against unresolved dependencies. Thus, if declaring as version `4\\.\\+` it **
+* Remember that this are regexes, so if you want to declare `com.example` it should be `com\\.example`
+* The repository will validate against unresolved dependencies. Thus, if declaring as version `4\\.\\+` it **
 will** match against a dependency `4.+` (it wont be for example the string `4.2.3`)
-**NOTE3**: You can have expirable dependencies by adding the `expires` field. If no field is added, the dependency is
-considered as non-expirable
-**NOTE4**: If no group / name / version is provided, they will default to `.*` (any string)
+* You can have expirable dependencies by adding the `expires` field. If no field is added, the dependency is
+  considered as non-expirable
+  * Warning: expires should not be on wednesday or thursday, as they are to close to the release trains and generate unforseable issues
+* If no group / name / version is provided, they will default to `.*` (any string)
 
 JSON Schema:
 
@@ -41,7 +42,8 @@ JSON Schema:
 }
 ```
 
-**NOTE5**: If you want to try if its working correctly from your fork, just add this line to the <MODULE-NAME>/build.gradle:
+**How to test locally**: 
+If you want to try if its working correctly from your fork, just add this line to the \<MODULE-NAME\>/build.gradle:
 
 ```
 ext["allowlistURL"] = "https://raw.githubusercontent.com/YOUR_GITHUB_USER/mobile-dependencies_whitelist/YOUR_GIT_BRANCH/android-whitelist.json"
@@ -92,6 +94,12 @@ This functionality provides a more precise management of the scope of dependenci
 
 To activate the granularity feature, it is necessary to introduce a new block within the dependency definition, specifying which Mercado Libre projects will have access to it. This should be done as follows:
 
+#### There are two types of granularity:
+
+* GroupId : You specify the group id of the project that will have access to the dependency. 
+  * Example: `com.mercadolibre.android.example`
+* GroupId:name : You specify the group id and the name of the project that will have access to the dependency.
+  * Example: `com.mercadolibre.android.exambple:exampleModule` 
 
 ### Android Platform
 ```
@@ -101,6 +109,7 @@ To activate the granularity feature, it is necessary to introduce a new block wi
       "allows_granular_projects": [ 
             "group_meli_project",
             "com.mercadolibre.android.commons"  # Example of a Mercado Libre Dependency Group.
+            "com.mercadolibre.android.commons:crash-tracking"  # Example of a module in a Mercado Libre Dependency Group.
       ]
       "description": "(optional) description",
       "expires": "yyyy-MM-dd",
