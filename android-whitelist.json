@@ -519,7 +519,7 @@
     {
       "description": "check why there is no direct use, just FORCE in commons and locations",
       "group": "com\\.google\\.android\\.gms",
-      "name": "play-services-iid",
+      "name": "-services-iid",
       "version": "17\\.0\\.0"
     },
     {
@@ -647,11 +647,11 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.security"
+        "com.mercadolibre.android.security:attestation"
       ],
       "group": "com\\.google\\.android\\.play",
       "name": "integrity",
-      "version": "1\\.3\\.0"
+      "version": "1\\.4\\.0"
     },
     {
       "allows_granular_projects": [
