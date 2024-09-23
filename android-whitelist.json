@@ -3840,9 +3840,12 @@
       "version": "1\\.33\\.3-alpha"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.opentelemetry"
+      ],
       "group": "io\\.grpc",
       "name": "grpc-okhttp",
-      "version": "1\\.46\\.1"
+      "version": "1\\.46\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.opentelemetry",
@@ -3882,14 +3885,12 @@
       "version": "1\\.+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android"
+      ],
       "group": "com\\.mercadolibre\\.android\\.mobile_cryptography",
       "name": "core",
       "version": "6\\.+"
-    },
-    {
-      "group": "com\\.mercadolibre\\.android\\.valkiria",
-      "name": "valkiria",
-      "version": "2\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.ccap",
@@ -4115,6 +4116,9 @@
       "version": "0\\.+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.mplay"
+      ],
       "group": "com\\.bitmovin\\.player",
       "name": "player",
       "version": "3\\.43\\.+"
@@ -4128,6 +4132,9 @@
       "version": "3\\.34\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.mplay"
+      ],
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-cast-framework",
       "version": "21\\.2\\.0"
@@ -4204,11 +4211,6 @@
       "version": "2\\.\\+"
     },
     {
-      "group": "androidx\\.mediarouter",
-      "name": "mediarouter",
-      "version": "1\\.2\\.2"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.clips",
       "name": "clips",
       "version": "3\\.\\+"
@@ -4249,6 +4251,9 @@
       "version": "1\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.fbm.wms.hardware"
+      ],
       "group": "com\\.symbol",
       "name": "emdk",
       "version": "9\\.1\\.1"
@@ -4330,26 +4335,39 @@
       "version": "5\\.\\+"
     },
     {
+      "description": "Its not declared in any lib, but it does in Apps",
       "group": "com\\.datadoghq",
       "name": "dd-sdk-android-gradle-plugin",
       "version": "1\\.14\\.0"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.app_monitoring"
+      ],
       "group": "com\\.datadoghq",
       "name": "dd-sdk-android-rum",
       "version": "2\\.10\\.1"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.app_monitoring"
+      ],
       "group": "com\\.datadoghq",
       "name": "dd-sdk-android-logs",
       "version": "2\\.10\\.1"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.app_monitoring"
+      ],
       "group": "com\\.datadoghq",
       "name": "dd-sdk-android-trace",
       "version": "2\\.10\\.1"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.app_monitoring"
+      ],
       "group": "com\\.datadoghq",
       "name": "dd-sdk-android-okhttp",
       "version": "2\\.10\\.1"
@@ -4360,30 +4378,45 @@
       "version": "5\\.+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.point_push_notifications"
+      ],
       "description": "This library is used for push-notification with mqtt",
       "group": "com\\.gojek\\.courier",
       "name": "courier",
       "version": "0\\.1\\.6"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.point_push_notifications"
+      ],
       "description": "This library is used for push-notification with mqtt",
       "group": "com\\.gojek\\.courier",
       "name": "courier-message-adapter-gson",
       "version": "0\\.1\\.6"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.point_push_notifications"
+      ],
       "description": "This library is used for push-notification with mqtt",
       "group": "com\\.gojek\\.courier",
       "name": "courier-stream-adapter-coroutines",
       "version": "0\\.1\\.6"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.point_push_notifications"
+      ],
       "description": "This library is used for push-notification with mqtt",
       "group": "com\\.gojek\\.courier",
       "name": "workmanager-2\\.6\\.0-pingsender",
       "version": "0\\.1\\.6"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.point_push_notifications"
+      ],
       "description": "This library is used for push-notification with mqtt",
       "group": "com\\.gojek\\.courier",
       "name": "alarm-pingsender",
@@ -4419,6 +4452,9 @@
       "version": "production-4\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.ml_qualtrics"
+      ],
       "description": "Qualtrics native SDK library. Use ml_qualtrics instead.",
       "group": "com\\.qualtrics",
       "name": "digital",
@@ -4463,36 +4499,57 @@
       "version": "1\\.8\\.10"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android:home",
+        "com.mercadolibre.android.advertising"
+      ],
       "group": "com\\.google\\.android\\.exoplayer",
       "name": "exoplayer-common",
       "version": "2\\.18\\.4"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android:home",
+        "com.mercadolibre.android.advertising",
+        "com.mercadolibre.android.vpp"
+      ],
       "group": "com\\.google\\.android\\.exoplayer",
       "name": "exoplayer-core",
       "version": "2\\.18\\.4"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android:home",
+        "com.mercadolibre.android.advertising",
+        "com.mercadolibre.android.vpp"
+      ],
       "group": "com\\.google\\.android\\.exoplayer",
       "name": "exoplayer-dash",
       "version": "2\\.18\\.4"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android:home",
+        "com.mercadolibre.android.advertising",
+        "com.mercadolibre.android.vpp"
+      ],
       "group": "com\\.google\\.android\\.exoplayer",
       "name": "exoplayer-ui",
       "version": "2\\.18\\.4"
     },
     {
-      "group": "com\\.google\\.android\\.exoplayer",
-      "name": "exoplayer-smoothstreaming",
-      "version": "2\\.18\\.4"
-    },
-    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.advertising",
+        "com.mercadolibre.android.vpp"
+      ],
       "group": "com\\.google\\.android\\.exoplayer",
       "name": "exoplayer-hls",
       "version": "2\\.18\\.4"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android:home"
+      ],
       "group": "com\\.google\\.android\\.exoplayer",
       "name": "exoplayer-datasource",
       "version": "2\\.18\\.4"
@@ -4648,12 +4705,18 @@
       "version": "10\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.barcode_img_generator.barcodeimagegenerator"
+      ],
       "description": "Android library used to generate QRs.",
       "group": "io\\.github\\.g0dkar",
       "name": "qrcode-kotlin",
       "version": "4\\.0\\.6"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.startupinitializer"
+      ],
       "group": "androidx\\.tracing",
       "name": "tracing",
       "version": "1\\.1\\.0"
