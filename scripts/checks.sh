@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# check if enviroment $FILE is set
+# check if environment $FILE is set
 if [ -z "$FILE" ]; then
-  echo 'FILE enviroment variable is not set. for example you could use: export FILE=android-whitelist.json'
+  echo 'FILE environment variable is not set. for example you could use: export FILE=android-whitelist.json'
   exit 1;
 fi
 
