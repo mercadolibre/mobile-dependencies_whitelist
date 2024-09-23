@@ -94,6 +94,7 @@
     },
     {
       "allows_granular_projects": [
+        "CreditsUIComponents",
         "MLCharts"
       ],
       "name": "DGCharts",
@@ -472,7 +473,9 @@
         "IspMpos",
         "MLMoneyOut",
         "MLMoneyOut/MercadoPago",
-        "MLRemedy"
+        "MLRemedy",
+        "TransfersDashboard",
+        "TransfersDiscovery"
       ],
       "name": "MLDynamicModal",
       "source": "public",
@@ -611,7 +614,8 @@
         "AndesUI",
         "DiscountCenter",
         "MLVPP",
-        "MPSearch"
+        "MPSearch",
+        "Polycards"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "name": "MLOnDemandResources/SwiftUI",
@@ -657,6 +661,18 @@
     },
     {
       "name": "TransfersComponents",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "TransfersDashboard",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "TransfersDiscovery",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
@@ -1015,8 +1031,7 @@
         "MPSPPrepaid/MercadoPago",
         "Multiwidget",
         "Onboarding",
-        "Pampa/MercadoLibre",
-        "Pampa/MercadoPago",
+        "Pampa",
         "Pendings",
         "Pendings/Core",
         "Pendings/MercadoPago",
@@ -1203,7 +1218,8 @@
         "DiscountCenter",
         "MLVPP",
         "Mplay",
-        "MPSearch"
+        "MPSearch",
+        "Polycards"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "name": "MLNavigation/SwiftUI",
@@ -1268,7 +1284,8 @@
         "FeedbackScreen",
         "MLVPP",
         "Mplay",
-        "MPSearch"
+        "MPSearch",
+        "Polycards"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "name": "AndesUI/SwiftUI",
@@ -1593,14 +1610,6 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "description": "This version will be deprecated in favor of 1.0.0",
-      "expires": "2024-09-15",
-      "name": "CcapSDUI",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
       "name": "CcapSDUI",
       "source": "private",
       "target": "production",
@@ -1796,13 +1805,6 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?2.[0-9]+$"
-    },
-    {
-      "expires": "2024-09-07",
-      "name": "AppMonitoringSetup",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "DatadogInternal",
@@ -2165,7 +2167,7 @@
       "name": "MPSearch",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "allows_granular_projects": [
@@ -2291,17 +2293,6 @@
     },
     {
       "allows_granular_projects": [
-        "MLSearch",
-        "MLVPP"
-      ],
-      "expires": "2024-09-13",
-      "name": "MoreLikeThis",
-      "source": "private",
-      "target": "test",
-      "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "allows_granular_projects": [
         "MLSearch/Core",
         "MLVPP"
       ],
@@ -2328,8 +2319,8 @@
       ],
       "name": "DemandCore",
       "source": "private",
-      "target": "test",
-      "version": "^~>\\s?0.[0-9]+$"
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "allows_granular_projects": [
@@ -2346,6 +2337,12 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLEngagementComponents",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     }
   ]
 }
