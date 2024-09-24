@@ -3422,7 +3422,8 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.security"
+        "com.mercadolibre.android.security",
+        "com.mercadolibre.android.login"
       ],
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-recaptcha",
