@@ -4,7 +4,7 @@
 > branch changes, all repositories will immediately start consuming the new changes.
 
 If you need to add or update a library, please visit
-the [Architecture Wiki](https://sites.google.com/mercadolibre.com/mobile/arquitectura/allowlist).
+the [Wiki](https://furydocs.io/everest/latest/guide/#/develop/dependencies/dependencies?id=allow-list).
 
 ## Android Dependencies
 
@@ -205,7 +205,9 @@ but basically, we are validating the following:
 4. **Key Names Validator**:
     - Verify that your are using the proper key names in the JSON file.
 5. **Version Pattern Validator**:
-    - Verify that we aren't using dynamic versions for external libs.
+    - Verify that we aren't using dynamic versions for external libs and dynamic versioning for internal libs (Meli).
+      - External: `version`: `1\\.0\\.1`
+      - Internal: `version`: `1\\.+`
 
 Some other checks could be performed, check the CI Error for more information.
 
