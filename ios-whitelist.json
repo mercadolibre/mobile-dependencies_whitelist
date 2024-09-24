@@ -614,7 +614,8 @@
         "AndesUI",
         "DiscountCenter",
         "MLVPP",
-        "MPSearch"
+        "MPSearch",
+        "Polycards"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "name": "MLOnDemandResources/SwiftUI",
@@ -1030,8 +1031,7 @@
         "MPSPPrepaid/MercadoPago",
         "Multiwidget",
         "Onboarding",
-        "Pampa/MercadoLibre",
-        "Pampa/MercadoPago",
+        "Pampa",
         "Pendings",
         "Pendings/Core",
         "Pendings/MercadoPago",
@@ -1218,7 +1218,8 @@
         "DiscountCenter",
         "MLVPP",
         "Mplay",
-        "MPSearch"
+        "MPSearch",
+        "Polycards"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "name": "MLNavigation/SwiftUI",
@@ -1283,7 +1284,8 @@
         "FeedbackScreen",
         "MLVPP",
         "Mplay",
-        "MPSearch"
+        "MPSearch",
+        "Polycards"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "name": "AndesUI/SwiftUI",
@@ -1603,14 +1605,6 @@
     },
     {
       "name": "CcapCommons",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "description": "This version will be deprecated in favor of 1.0.0",
-      "expires": "2024-09-15",
-      "name": "CcapSDUI",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
@@ -2299,17 +2293,6 @@
     },
     {
       "allows_granular_projects": [
-        "MLSearch",
-        "MLVPP"
-      ],
-      "expires": "2024-09-13",
-      "name": "MoreLikeThis",
-      "source": "private",
-      "target": "test",
-      "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
-      "allows_granular_projects": [
         "MLSearch/Core",
         "MLVPP"
       ],
@@ -2336,8 +2319,8 @@
       ],
       "name": "DemandCore",
       "source": "private",
-      "target": "test",
-      "version": "^~>\\s?0.[0-9]+$"
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "allows_granular_projects": [
