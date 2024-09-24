@@ -2181,6 +2181,7 @@
     },
     {
       "name": "MpGadgets",
+      "expires": "2024-10-10",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
