@@ -3732,22 +3732,22 @@
       "version": "5\\.+"
     },
     {
-      "description": "Expire date for libs from outside MP/ML apps (they use MLKit17 scanner kind -> v > 12.1.0)",
-      "expires": "2024-09-30",
+      "description": "Expire date for libs from outside MP/ML apps (they use MLKit17 scanner kind -> v > 12.XX.X)",
+      "expires": "2024-12-31",
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "scanner",
       "version": "mercadolibre-12\\.\\+|mercadopago-12\\.\\+"
     },
     {
-      "description": "Expire date for libs from outside MP/ML apps (they use MLKit17 scanner kind -> v > 12.1.0)",
-      "expires": "2024-09-30",
+      "description": "Expire date for libs from outside MP/ML apps (they use MLKit17 scanner kind -> v > 12.XX.X)",
+      "expires": "2024-12-31",
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "ocr",
       "version": "mercadolibre-12\\.\\+|mercadopago-12\\.\\+"
     },
     {
-      "description": "Expire date for libs from outside MP/ML apps (they use MLKit17 scanner kind -> v > 12.1.0)",
-      "expires": "2024-09-30",
+      "description": "Expire date for libs from outside MP/ML apps (they use MLKit17 scanner kind -> v > 12.XX.X)",
+      "expires": "2024-12-31",
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "barcode",
       "version": "mercadolibre-12\\.\\+|mercadopago-12\\.\\+"
