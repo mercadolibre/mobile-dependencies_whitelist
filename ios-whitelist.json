@@ -2180,8 +2180,9 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "name": "MpGadgets",
+      "description": "This version will be deprecated in favor of MpGadget",
       "expires": "2024-10-10",
+      "name": "MpGadgets",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
