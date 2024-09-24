@@ -365,6 +365,7 @@
         "com.mercadolibre.android.point_recharge",
         "com.mercadolibre.android.point.lot.management",
         "com.mercadolibre.android.remedies",
+        "com.mercadolibre.android.security:security_ui",
         "com.mercadolibre.android.singleplayer",
         "com.mercadolibre.android.wallet.home",
         "com.mercadopago.android.cashin",
@@ -2939,6 +2940,7 @@
         "com.mercadolibre.android.crab_di_android",
         "com.mercadolibre.android.cross_app_links",
         "com.mercadolibre.android.errorhandler.v2",
+        "com.mercadolibre.android.mplay",
         "com.mercadolibre.android.payment_flow_fcu",
         "com.mercadolibre.android.pm.om",
         "com.mercadolibre.android.point_smart_wrapper",
@@ -2988,6 +2990,7 @@
         "com.mercadolibre.android.cross_app_links",
         "com.mercadolibre.android.discounts.payers",
         "com.mercadolibre.android.errorhandler.v2",
+        "com.mercadolibre.android.mplay",
         "com.mercadolibre.android.payment_flow_fcu",
         "com.mercadolibre.android.point_smart_wrapper",
         "com.mercadolibre.android.request_watcher",
@@ -3268,29 +3271,59 @@
       "version": "8\\.\\+"
     },
     {
+      "expires": "2024-10-04",
       "group": "com\\.mercadolibre\\.android\\.tfs_commons",
       "name": "tracking",
       "version": "mercadopago-8\\.\\+|mercadolibre-8\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.tfs_commons",
+      "name": "tracking",
+      "version": "mercadopago-9\\.\\+|mercadolibre-8\\.\\+"
+    },
+    {
+      "expires": "2024-10-04",
+      "group": "com\\.mercadolibre\\.android\\.tfs_commons",
       "name": "imageutils",
       "version": "8\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.tfs_commons",
+      "name": "imageutils",
+      "version": "9\\.\\+"
+    },
+    {
+      "expires": "2024-10-04",
       "group": "com\\.mercadolibre\\.android\\.tfs_commons",
       "name": "ktx",
       "version": "8\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.tfs_commons",
+      "name": "ktx",
+      "version": "9\\.\\+"
+    },
+    {
+      "expires": "2024-10-04",
+      "group": "com\\.mercadolibre\\.android\\.tfs_commons",
       "name": "mvp",
       "version": "8\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.tfs_commons",
+      "name": "mvp",
+      "version": "9\\.\\+"
+    },
+    {
+      "expires": "2024-10-04",
+      "group": "com\\.mercadolibre\\.android\\.tfs_commons",
       "name": "errorhandler",
       "version": "8\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.tfs_commons",
+      "name": "errorhandler",
+      "version": "9\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cardsengagement",
@@ -3933,7 +3966,7 @@
       ],
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "seller",
-      "version": "21\\.\\+"
+      "version": "22\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -3941,7 +3974,7 @@
       ],
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "payer",
-      "version": "21\\.\\+"
+      "version": "22\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -3949,7 +3982,7 @@
       ],
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "commons",
-      "version": "21\\.\\+"
+      "version": "22\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -3957,7 +3990,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.cashout",
       "name": "cashout",
-      "version": "18\\.\\+"
+      "version": "19\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -3966,7 +3999,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "rating",
-      "version": "12\\.\\+"
+      "version": "13\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -3975,7 +4008,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "core",
-      "version": "12\\.\\+"
+      "version": "13\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -3984,7 +4017,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "feedback",
-      "version": "12\\.\\+"
+      "version": "13\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -3993,7 +4026,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "tab",
-      "version": "12\\.\\+"
+      "version": "13\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -4002,7 +4035,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "ui_component",
-      "version": "12\\.\\+"
+      "version": "13\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -4011,7 +4044,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "commons",
-      "version": "12\\.\\+"
+      "version": "13\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -4020,7 +4053,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "map",
-      "version": "12\\.\\+"
+      "version": "13\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -4029,7 +4062,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "report",
-      "version": "12\\.\\+"
+      "version": "13\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -4038,7 +4071,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "business_component",
-      "version": "12\\.\\+"
+      "version": "13\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.mp_sellers_growth",
