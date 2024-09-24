@@ -1,6 +1,9 @@
 {
   "whitelist": [
     {
+      "allows_granular_projects": [
+        "Viewability"
+      ],
       "name": "OMSDK",
       "source": "private",
       "target": "production",
