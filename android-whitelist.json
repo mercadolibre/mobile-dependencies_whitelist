@@ -457,7 +457,8 @@
         "com.mercadoenvios.android.stimulator",
         "com.mercadolibre.android.location",
         "com.mercadoenvios.android.rtt",
-        "com.mercadolibre.android.beacon_manager"
+        "com.mercadolibre.android.beacon_manager",
+        "com.mercadolibre.android.search"
       ],
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-location",
@@ -688,7 +689,8 @@
         "com.mercadoenvios.android.distribution",
         "com.mercadolibre.android.cash_smartpos",
         "com.mercadolibre.android.braze",
-        "com.mercadolibre.android.credit_card.tracking"
+        "com.mercadolibre.android.credit_card.tracking",
+        "com.mercadolibre.android.search"
       ],
       "group": "com\\.google\\.firebase",
       "name": "firebase-bom",
@@ -3900,7 +3902,8 @@
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.vpp",
         "com.mercadolibre.android.everest_canvas",
-        "com.mercadolibre.android.mp_search"
+        "com.mercadolibre.android.mp_search",
+        "com.mercadolibre.android.search"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.constraintlayout",
@@ -3916,7 +3919,8 @@
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.vpp",
         "com.mercadolibre.android.everest_canvas",
-        "com.mercadolibre.android.mp_search"
+        "com.mercadolibre.android.mp_search",
+        "com.mercadolibre.android.search"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose",
@@ -3932,7 +3936,8 @@
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.vpp",
         "com.mercadolibre.android.everest_canvas",
-        "com.mercadolibre.android.mp_search"
+        "com.mercadolibre.android.mp_search",
+        "com.mercadolibre.android.search"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.foundation",
@@ -3947,7 +3952,8 @@
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.vpp",
         "com.mercadolibre.android.everest_canvas",
-        "com.mercadolibre.android.mp_search"
+        "com.mercadolibre.android.mp_search",
+        "com.mercadolibre.android.search"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.material3",
@@ -3971,7 +3977,8 @@
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.vpp",
         "com.mercadolibre.android.everest_canvas",
-        "com.mercadolibre.android.mp_search"
+        "com.mercadolibre.android.mp_search",
+        "com.mercadolibre.android.search"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.activity",
@@ -3987,7 +3994,8 @@
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.vpp",
         "com.mercadolibre.android.everest_canvas",
-        "com.mercadolibre.android.mp_search"
+        "com.mercadolibre.android.mp_search",
+        "com.mercadolibre.android.search"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.ui",
@@ -4002,7 +4010,8 @@
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.vpp",
         "com.mercadolibre.android.everest_canvas",
-        "com.mercadolibre.android.mp_search"
+        "com.mercadolibre.android.mp_search",
+        "com.mercadolibre.android.search"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.runtime",
@@ -4017,7 +4026,8 @@
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.vpp",
         "com.mercadolibre.android.everest_canvas",
-        "com.mercadolibre.android.mp_search"
+        "com.mercadolibre.android.mp_search",
+        "com.mercadolibre.android.search"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.ui",
@@ -4032,7 +4042,8 @@
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.vpp",
         "com.mercadolibre.android.everest_canvas",
-        "com.mercadolibre.android.mp_search"
+        "com.mercadolibre.android.mp_search",
+        "com.mercadolibre.android.search"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.ui",
@@ -4046,7 +4057,8 @@
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.vpp",
         "com.mercadolibre.android.everest_canvas",
-        "com.mercadolibre.android.mp_search"
+        "com.mercadolibre.android.mp_search",
+        "com.mercadolibre.android.search"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.ui",
@@ -4070,7 +4082,8 @@
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.vpp",
         "com.mercadolibre.android.everest_canvas",
-        "com.mercadolibre.android.mp_search"
+        "com.mercadolibre.android.mp_search",
+        "com.mercadolibre.android.search"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.lifecycle",
