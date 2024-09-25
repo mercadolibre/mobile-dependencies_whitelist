@@ -3565,9 +3565,9 @@
       ],
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-mlkit-text-recognition",
-        "transitive_configuration": {
-          "transitivity": false
-        },
+      "transitive_configuration": {
+        "transitivity": false
+      },
       "version": "17\\.0\\.1"
     },
     {
@@ -3601,9 +3601,9 @@
       ],
       "group": "com\\.google\\.mlkit",
       "name": "barcode-scanning",
-       "transitive_configuration": {
-         "transitivity": false
-       },
+      "transitive_configuration": {
+        "transitivity": false
+      },
       "version": "17\\.0\\.1"
     },
     {
