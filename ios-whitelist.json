@@ -2328,7 +2328,8 @@
     {
       "allows_granular_projects": [
         "MLOnDemandResources",
-        "MPConfigurationProvider/MLNetworking"
+        "MPConfigurationProvider/MLNetworking",
+        "AndesIntegrations"
       ],
       "name": "AppTheme",
       "source": "private",
