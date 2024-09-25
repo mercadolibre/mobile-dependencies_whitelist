@@ -3422,6 +3422,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.login",
         "com.mercadolibre.android.security"
       ],
       "group": "com\\.google\\.android\\.gms",
@@ -3758,22 +3759,22 @@
       "version": "5\\.+"
     },
     {
-      "description": "Expire date for libs from outside MP/ML apps (they use MLKit17 scanner kind -> v > 12.1.0)",
-      "expires": "2024-09-30",
+      "description": "Expire date for libs from outside MP/ML apps (they use MLKit17 scanner kind -> v > 12.XX.X)",
+      "expires": "2024-12-31",
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "scanner",
       "version": "mercadolibre-12\\.\\+|mercadopago-12\\.\\+"
     },
     {
-      "description": "Expire date for libs from outside MP/ML apps (they use MLKit17 scanner kind -> v > 12.1.0)",
-      "expires": "2024-09-30",
+      "description": "Expire date for libs from outside MP/ML apps (they use MLKit17 scanner kind -> v > 12.XX.X)",
+      "expires": "2024-12-31",
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "ocr",
       "version": "mercadolibre-12\\.\\+|mercadopago-12\\.\\+"
     },
     {
-      "description": "Expire date for libs from outside MP/ML apps (they use MLKit17 scanner kind -> v > 12.1.0)",
-      "expires": "2024-09-30",
+      "description": "Expire date for libs from outside MP/ML apps (they use MLKit17 scanner kind -> v > 12.XX.X)",
+      "expires": "2024-12-31",
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "barcode",
       "version": "mercadolibre-12\\.\\+|mercadopago-12\\.\\+"
@@ -5003,6 +5004,15 @@
       "group": "com\\.mercadolibre\\.android\\.mobile_actions",
       "name": "core",
       "version": "2\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.onboarding",
+        "com.mercadolibre.android.user_blocker"
+      ],
+      "group": "com\\.mercadolibre\\.android\\.flow_orchestrator",
+      "name": "startup_commons",
+      "version": "1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cart\\.facade",
