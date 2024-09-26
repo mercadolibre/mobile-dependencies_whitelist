@@ -2469,7 +2469,8 @@
     {
       "allows_granular_projects": [
         "com.mercadolibre.android.commons",
-        "com.mercadolibre.android.data_dispatcher"
+        "com.mercadolibre.android.data_dispatcher",
+        "com.mercadolibre.android.everest_canvas"
       ],
       "group": "androidx\\.appcompat",
       "name": "appcompat-resources",
