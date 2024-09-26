@@ -2285,7 +2285,10 @@
       "allows_granular_projects": [
         "group_meli_project",
         "com.mercadolibre.android.login",
-        "com.mercadolibre.android.native_reauth"
+        "com.mercadolibre.android.security",
+        "com.mercadolibre.android.reauth_native_adapter",
+        "com.mercadolibre.android.security_two_fa",
+        "com.mercadolibre.android.userbiometrics"
       ],
       "group": "com\\.mercadolibre\\.android\\.authfacevalidation",
       "name": "facevalidation",
