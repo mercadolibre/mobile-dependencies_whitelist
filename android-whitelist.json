@@ -4080,6 +4080,14 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android:home"
+      ],
+      "group": "com\\.mercadolibre\\.android\\.engagement-component",
+      "name": "engagement-component",
+      "version": "0\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
         "com.mercadolibre.android.cashout",
         "com.mercadopago.android.cashin"
       ],
