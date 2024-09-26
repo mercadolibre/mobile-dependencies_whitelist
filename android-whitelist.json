@@ -648,11 +648,11 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.security"
+        "com.mercadolibre.android.security:attestation"
       ],
       "group": "com\\.google\\.android\\.play",
       "name": "integrity",
-      "version": "1\\.0\\.1"
+      "version": "1\\.4\\.0"
     },
     {
       "allows_granular_projects": [
