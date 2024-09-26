@@ -648,11 +648,11 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.security"
+        "com.mercadolibre.android.security:attestation"
       ],
       "group": "com\\.google\\.android\\.play",
       "name": "integrity",
-      "version": "1\\.0\\.1"
+      "version": "1\\.4\\.0"
     },
     {
       "allows_granular_projects": [
@@ -1659,12 +1659,25 @@
         "com.mercadolibre.android.virtual_try_on"
       ],
       "description": "This dependency is only used in VirtualTryOn",
+      "expires": "2024-11-19",
       "group": "com\\.modiface",
       "name": "mfemakeupkit",
       "transitive_configuration": {
         "transitivity": false
       },
       "version": "20\\.0\\.0"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.virtual_try_on"
+      ],
+      "description": "This dependency is only used in VirtualTryOn",
+      "group": "com\\.modiface",
+      "name": "mfemakeupkit",
+      "transitive_configuration": {
+        "transitivity": false
+      },
+      "version": "20\\.0\\.1"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.eshops",
@@ -2727,6 +2740,7 @@
         "com.mercadolibre.android.data_dispatcher",
         "com.mercadolibre.android.device",
         "com.mercadolibre.android.discovery",
+        "com.mercadolibre.android.everest_canvas",
         "com.mercadolibre.android.fbm.wms.tetris",
         "com.mercadolibre.android.maps",
         "com.mercadolibre.android.mercadocoin",
@@ -4062,6 +4076,14 @@
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "commons",
       "version": "13\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android:home"
+      ],
+      "group": "com\\.mercadolibre\\.android\\.engagement-component",
+      "name": "engagement-component",
+      "version": "0\\.\\+"
     },
     {
       "allows_granular_projects": [
