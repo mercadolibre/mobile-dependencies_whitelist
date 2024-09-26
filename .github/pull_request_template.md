@@ -17,6 +17,16 @@
 - [ ] Interna: Libreria/modulo desarrollado in-house en base al ecosistema de Meli.
 - [ ] Externa: Libreria desarrollada por un externo a Meli. (Google, Airbnb, otros).
 
+## La categoría de la dependencia es:
+- [ ] Frontend
+- [ ] Cross
+
+    Para más información sobre la categoria mirar Readme 
+
+## Mi dependencia tienes un uso controlado:
+- [ ] Si
+- [ ] No
+
 ## En caso de ser una dependencia interna, se ha agregado una lib .aar o framework (iOS) en nexus sobre el proyecto?
 - [ ] Si, adjuntar link a nexus.
 - [ ] No
