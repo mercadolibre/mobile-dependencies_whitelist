@@ -2735,7 +2735,6 @@
         "com.mercadolibre.android:restclient",
         "com.mercadolibre.android:restclient-adapter-bus",
         "com.mercadolibre.android.commons",
-        "com.mercadolibre.android.everest_canvas",
         "com.mercadolibre.android.configuration.provider",
         "com.mercadolibre.android.da_management",
         "com.mercadolibre.android.data_dispatcher",
@@ -2757,6 +2756,7 @@
         "com.mercadopago.android.configurer.smartpos",
         "com.mercadopago.android.digital_accounts_components",
         "com.mercadopago.android.moneyin.v2",
+        "com.mercadolibre.android.everest_canvas",
         "com.mercadopago.android.moneyout"
       ],
       "group": "androidx\\.annotation",
