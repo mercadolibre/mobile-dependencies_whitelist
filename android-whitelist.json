@@ -1009,8 +1009,8 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.hub",
-        "com.mercadolibre.android:login"
+        "com.mercadolibre.android:login",
+        "com.mercadolibre.android.hub"
       ],
       "group": "com\\.mercadolibre\\.android\\.authsocialaccount",
       "name": "authsocialaccount",
