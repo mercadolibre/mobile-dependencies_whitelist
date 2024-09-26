@@ -2068,9 +2068,24 @@
         "com.mercadolibre.android.navigation",
         "com.mercadopago.android.point_flow_engine"
       ],
+      "description": "Esta version se encuentra deprecada, recomendamos utilizar la nueva version 3.0.0",
+      "expires": "2024-12-01",
       "group": "com\\.squareup\\.okio",
       "name": "okio",
       "version": "2\\.8\\.0"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.cash_rails",
+        "com.mercadolibre.android.everest_canvas",
+        "com.mercadolibre.android.instore",
+        "com.mercadolibre.android.local.storage",
+        "com.mercadolibre.android.navigation",
+        "com.mercadopago.android.point_flow_engine"
+      ],
+      "group": "com\\.squareup\\.okio",
+      "name": "okio",
+      "version": "3\\.0\\.0"
     },
     {
       "group": "com\\.squareup\\.retrofit2",
@@ -5155,44 +5170,36 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.everest_canvas"
       ],
-      "group": "io\\.coil-kt",
-      "name": "coil",
-      "version": "2\\.6\\.0"
-    },
-    {
-      "allows_granular_projects": [
-        "com.mercadolibre.android.everest_canvas",
-        "com.mercadolibre.android.mp_search",
-        "com.mercadolibre.android.polycards",
-        "com.mercadolibre.android.tetris"
-      ],
-      "group": "io\\.coil-kt",
-      "name": "coil-compose",
-      "version": "2\\.6\\.0"
+      "description": "Validate with the Everest Team to add the granular project.",
+      "group": "androidx\\.exifinterface",
+      "name": "exifinterface",
+      "version": "1\\.3\\.6"
     },
     {
       "allows_granular_projects": [
         "com.mercadolibre.android.everest_canvas"
       ],
-      "group": "io\\.coil-kt",
-      "name": "coil-gif",
-      "version": "2\\.6\\.0"
+      "description": "Validate with the Everest Team to add the granular project.",
+      "group": "androidx\\.vectordrawable",
+      "name": "vectordrawable-animated",
+      "version": "1\\.1\\.0"
     },
     {
       "allows_granular_projects": [
         "com.mercadolibre.android.everest_canvas"
       ],
-      "group": "io\\.coil-kt",
-      "name": "coil-svg",
-      "version": "2\\.6\\.0"
+      "description": "Validate with the Everest Team to add the granular project.",
+      "group": "com\\.caverock",
+      "name": "androidsvg-aar",
+      "version": "1\\.4"
     },
     {
       "allows_granular_projects": [
         "com.mercadolibre.android.everest_canvas"
       ],
-      "group": "io\\.coil-kt",
-      "name": "coil-video",
-      "version": "2\\.6\\.0"
+      "group": "com\\.google\\.accompanist",
+      "name": "accompanist-drawablepainter",
+      "version": "0\\.30\\.1"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.instore",
@@ -5258,14 +5265,6 @@
       "group": "com\\.google\\.zxing",
       "name": "core",
       "version": "3\\.3\\.2"
-    },
-    {
-      "group": "com\\.mercadolibre\\.android\\.everest_canvas",
-      "name": "core",
-      "transitive_configuration": {
-        "transitivity": false
-      },
-      "version": "1\\.\\+"
     }
   ]
 }
