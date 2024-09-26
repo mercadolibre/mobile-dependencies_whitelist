@@ -1,10 +1,13 @@
 {
   "whitelist": [
     {
+      "allows_granular_projects": [
+        "Viewability"
+      ],
       "name": "OMSDK",
       "source": "private",
       "target": "production",
-      "version": "1.4.14"
+      "version": "1.5.0"
     },
     {
       "name": "Viewability",
@@ -614,7 +617,8 @@
         "AndesUI",
         "DiscountCenter",
         "MLVPP",
-        "MPSearch"
+        "MPSearch",
+        "Polycards"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "name": "MLOnDemandResources/SwiftUI",
@@ -1030,8 +1034,7 @@
         "MPSPPrepaid/MercadoPago",
         "Multiwidget",
         "Onboarding",
-        "Pampa/MercadoLibre",
-        "Pampa/MercadoPago",
+        "Pampa",
         "Pendings",
         "Pendings/Core",
         "Pendings/MercadoPago",
@@ -1218,7 +1221,8 @@
         "DiscountCenter",
         "MLVPP",
         "Mplay",
-        "MPSearch"
+        "MPSearch",
+        "Polycards"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "name": "MLNavigation/SwiftUI",
@@ -1283,7 +1287,8 @@
         "FeedbackScreen",
         "MLVPP",
         "Mplay",
-        "MPSearch"
+        "MPSearch",
+        "Polycards"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "name": "AndesUI/SwiftUI",
@@ -2178,6 +2183,7 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "expires": "2024-10-15",
       "name": "MpGadgets",
       "source": "private",
       "target": "production",
@@ -2322,6 +2328,7 @@
     },
     {
       "allows_granular_projects": [
+        "AndesIntegrations/Core",
         "MLOnDemandResources",
         "MPConfigurationProvider/MLNetworking"
       ],
@@ -2338,6 +2345,15 @@
     },
     {
       "name": "MLEngagementComponents",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "allows_granular_projects": [
+        "CcapCommons"
+      ],
+      "name": "CrabDI",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
