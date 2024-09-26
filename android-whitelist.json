@@ -2243,6 +2243,11 @@
       "version": "9\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "group_meli_project",
+        "com.mercadolibre.android.login",
+        "com.mercadolibre.android.native_reauth"
+      ],
       "group": "com\\.mercadolibre\\.android\\.authfacevalidation",
       "name": "facevalidation",
       "version": "mercadolibre-1\\.\\+|mercadopago-1\\.\\+"
