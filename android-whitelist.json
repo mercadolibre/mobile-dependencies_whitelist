@@ -3507,7 +3507,8 @@
         "com.mercadolibre.android.security_two_fa:commonstest",
         "com.mercadopago.android.digital_accounts_components:robolectric",
         "com.mercadopago.point.ptm",
-        "com.mercadopago.point.ptm.agent"
+        "com.mercadopago.point.ptm.agent",
+        "com.mercadolibre.android.tetris"
       ],
       "description": "WARNING: This lib is REMOVED in the productive Apps!!",
       "group": "com\\.facebook\\.soloader",
