@@ -5150,12 +5150,12 @@
       "version": "0\\.+"
     },
     {
-      "expires": "2025-01-31",
       "allows_granular_projects": [
         "com.mercadolibre.android.da_management",
         "com.mercadopago.android.moneyout",
         "com.mercadopago.android.multiplayer"
       ],
+      "expires": "2025-01-31",
       "group": "com\\.mercadolibre\\.android\\.transfers_components",
       "name": "core",
       "version": "0\\.+"
@@ -5171,12 +5171,12 @@
       "version": "1\\.+"
     },
     {
-      "expires": "2025-01-31",
       "allows_granular_projects": [
         "com.mercadolibre.android.da_management",
         "com.mercadopago.android.moneyout",
         "com.mercadopago.android.multiplayer"
       ],
+      "expires": "2025-01-31",
       "group": "com\\.mercadolibre\\.android\\.transfers_components",
       "name": "metadata",
       "version": "0\\.+"
