@@ -3613,6 +3613,9 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android:authentication",
+        "com.mercadolibre.android:home",
+        "com.mercadolibre.android:login",
         "com.mercadolibre.android.ml_scanner",
         "com.mercadopago.android.moneyout"
       ],
