@@ -84,12 +84,8 @@ Example:
       "description": "# This will match with 'MeliSDK' and version '~>5.+' (version must have ~>5.x)",
       "name": "MeliSDK",
       "version": "^~>5.[0-9]+$"
-    },
-    {
-      "description": "# This will match with 'MLRecommendations' for any version",
-      "name": "MLRecommendations",
-      "version": null
-    }]
+    }
+]
 }
 ```
 
@@ -187,6 +183,10 @@ clearly:
 If declared `non-transitive dependency` imports are found in your code, our plugin will **block** the build, preventing
 the `lintAndroid()` task from completing successfully in CI or locally.
 
+## Libreria FrontEnd x Cross
+In the Allowslist we only add cross libraries. At Meli we consider a library to be cross when it can be used in one or more libraries. 
+If the library is added only and directly to the applications, we call it a frontend lib.
+To prevent a frontend lib from being added as a dependency of other libs, they should not be added to the allowlist
 
 ## Basic Continuous Integration (CI) Checks!!
 We have some basic checks placed in our CI to ensure that the allowlist is being used correctly. 
