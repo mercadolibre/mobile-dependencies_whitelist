@@ -759,13 +759,6 @@
       "version": "^~>\\s?4.[0-9]+$"
     },
     {
-      "expires": "2024-09-28",
-      "name": "MLSearch/MoreLikeThis",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?4.[0-9]+$"
-    },
-    {
       "name": "MLSecurity",
       "source": "private",
       "target": "production",
@@ -2357,6 +2350,12 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "FlowOrchestrator/Commons",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
     }
   ]
 }
