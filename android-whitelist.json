@@ -3383,7 +3383,7 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.ml_scanner"
+        "com.mercadolibre.pepe"
       ],
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-mlkit-text-recognition",
@@ -3396,8 +3396,7 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.ml_scanner",
-        "com.mercadopago.android.moneyout"
+        "com.mercadolibre.pepe"
       ],
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-mlkit-text-recognition",
