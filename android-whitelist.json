@@ -3604,7 +3604,6 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.ml_scanner"
       ],
-      "expires": "2024-10-30",
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-mlkit-text-recognition",
       "version": "17\\.0\\.1"
@@ -3643,9 +3642,6 @@
       ],
       "group": "com\\.google\\.mlkit",
       "name": "barcode-scanning",
-      "transitive_configuration": {
-        "transitivity": false
-      },
       "version": "17\\.0\\.1"
     },
     {
