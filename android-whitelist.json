@@ -3390,7 +3390,6 @@
       "version": "17\\.0\\.1",
       "transitive_configuration":
         {
-            "namespace": "com.google.android.gms.internal.mlkit_vision_text_common",
             "transitivity": false
         }
     },
@@ -3407,7 +3406,6 @@
       "version": "18\\.0\\.0",
       "transitive_configuration":
         {
-            "namespace": "com.google.mlkit.vision.text.latin",
             "transitivity": false
         }
     },
