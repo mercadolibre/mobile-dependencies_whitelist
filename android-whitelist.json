@@ -3607,6 +3607,7 @@
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-mlkit-text-recognition",
       "transitive_configuration": {
+        "namespace": "com.google.mlkit.vision.text",
         "transitivity": false
       },
       "version": "17\\.0\\.1"
@@ -4098,8 +4099,8 @@
       "allows_granular_projects": [
         "com.mercadolibre.android:home"
       ],
-      "group": "com\\.mercadolibre\\.android\\.engagement-component",
-      "name": "engagement-component",
+      "group": "com\\.mercadolibre\\.android\\.engagement_component",
+      "name": "gamification",
       "version": "0\\.\\+"
     },
     {
