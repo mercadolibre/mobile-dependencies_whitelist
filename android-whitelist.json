@@ -648,11 +648,11 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.security"
+        "com.mercadolibre.android.security:attestation"
       ],
       "group": "com\\.google\\.android\\.play",
       "name": "integrity",
-      "version": "1\\.0\\.1"
+      "version": "1\\.4\\.0"
     },
     {
       "allows_granular_projects": [
@@ -1009,8 +1009,8 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.hub",
-        "com.mercadolibre.android.login"
+        "com.mercadolibre.android:login",
+        "com.mercadolibre.android.hub"
       ],
       "group": "com\\.mercadolibre\\.android\\.authsocialaccount",
       "name": "authsocialaccount",
@@ -1659,12 +1659,25 @@
         "com.mercadolibre.android.virtual_try_on"
       ],
       "description": "This dependency is only used in VirtualTryOn",
+      "expires": "2024-11-19",
       "group": "com\\.modiface",
       "name": "mfemakeupkit",
       "transitive_configuration": {
         "transitivity": false
       },
       "version": "20\\.0\\.0"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.virtual_try_on"
+      ],
+      "description": "This dependency is only used in VirtualTryOn",
+      "group": "com\\.modiface",
+      "name": "mfemakeupkit",
+      "transitive_configuration": {
+        "transitivity": false
+      },
+      "version": "20\\.0\\.1"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.eshops",
@@ -2055,9 +2068,24 @@
         "com.mercadolibre.android.navigation",
         "com.mercadopago.android.point_flow_engine"
       ],
+      "description": "Esta version se encuentra deprecada, recomendamos utilizar la nueva version 3.0.0",
+      "expires": "2024-12-01",
       "group": "com\\.squareup\\.okio",
       "name": "okio",
       "version": "2\\.8\\.0"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.cash_rails",
+        "com.mercadolibre.android.everest_canvas",
+        "com.mercadolibre.android.instore",
+        "com.mercadolibre.android.local.storage",
+        "com.mercadolibre.android.navigation",
+        "com.mercadopago.android.point_flow_engine"
+      ],
+      "group": "com\\.squareup\\.okio",
+      "name": "okio",
+      "version": "3\\.0\\.0"
     },
     {
       "group": "com\\.squareup\\.retrofit2",
@@ -2254,6 +2282,17 @@
       "version": "9\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.login",
+        "com.mercadolibre.android.security",
+        "com.mercadolibre.android.security_two_fa",
+        "com.mercadolibre.android.userbiometrics"
+      ],
+      "group": "com\\.mercadolibre\\.android\\.authfacevalidation",
+      "name": "facevalidation",
+      "version": "mercadolibre-1\\.\\+|mercadopago-1\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.security",
       "name": "native_reauth",
       "version": "mercadopago-8\\.\\+|mercadolibre-8\\.\\+"
@@ -2441,7 +2480,8 @@
     {
       "allows_granular_projects": [
         "com.mercadolibre.android.commons",
-        "com.mercadolibre.android.data_dispatcher"
+        "com.mercadolibre.android.data_dispatcher",
+        "com.mercadolibre.android.everest_canvas"
       ],
       "group": "androidx\\.appcompat",
       "name": "appcompat-resources",
@@ -2712,6 +2752,7 @@
         "com.mercadolibre.android.data_dispatcher",
         "com.mercadolibre.android.device",
         "com.mercadolibre.android.discovery",
+        "com.mercadolibre.android.everest_canvas",
         "com.mercadolibre.android.fbm.wms.tetris",
         "com.mercadolibre.android.maps",
         "com.mercadolibre.android.mercadocoin",
@@ -3422,6 +3463,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android:login",
         "com.mercadolibre.android.security"
       ],
       "group": "com\\.google\\.android\\.gms",
@@ -3562,14 +3604,18 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.ml_scanner"
       ],
-      "description": "Expire date for libs from outside MP/ML apps (they use MLKit17 scanner kind -> v > 12.1.0)",
-      "expires": "2024-09-30",
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-mlkit-text-recognition",
+      "transitive_configuration": {
+        "transitivity": false
+      },
       "version": "17\\.0\\.1"
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android:authentication",
+        "com.mercadolibre.android:home",
+        "com.mercadolibre.android:login",
         "com.mercadolibre.android.ml_scanner",
         "com.mercadopago.android.moneyout"
       ],
@@ -3597,10 +3643,11 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.ml_scanner"
       ],
-      "description": "Expire date for libs from outside MP/ML apps (they use MLKit17 scanner kind -> v > 12.1.0)",
-      "expires": "2024-09-30",
       "group": "com\\.google\\.mlkit",
       "name": "barcode-scanning",
+      "transitive_configuration": {
+        "transitivity": false
+      },
       "version": "17\\.0\\.1"
     },
     {
@@ -4046,6 +4093,14 @@
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "commons",
       "version": "13\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android:home"
+      ],
+      "group": "com\\.mercadolibre\\.android\\.engagement-component",
+      "name": "engagement-component",
+      "version": "0\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -5141,44 +5196,36 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.everest_canvas"
       ],
-      "group": "io\\.coil-kt",
-      "name": "coil",
-      "version": "2\\.6\\.0"
-    },
-    {
-      "allows_granular_projects": [
-        "com.mercadolibre.android.everest_canvas",
-        "com.mercadolibre.android.mp_search",
-        "com.mercadolibre.android.polycards",
-        "com.mercadolibre.android.tetris"
-      ],
-      "group": "io\\.coil-kt",
-      "name": "coil-compose",
-      "version": "2\\.6\\.0"
+      "description": "Validate with the Everest Team to add the granular project.",
+      "group": "androidx\\.exifinterface",
+      "name": "exifinterface",
+      "version": "1\\.3\\.6"
     },
     {
       "allows_granular_projects": [
         "com.mercadolibre.android.everest_canvas"
       ],
-      "group": "io\\.coil-kt",
-      "name": "coil-gif",
-      "version": "2\\.6\\.0"
+      "description": "Validate with the Everest Team to add the granular project.",
+      "group": "androidx\\.vectordrawable",
+      "name": "vectordrawable-animated",
+      "version": "1\\.1\\.0"
     },
     {
       "allows_granular_projects": [
         "com.mercadolibre.android.everest_canvas"
       ],
-      "group": "io\\.coil-kt",
-      "name": "coil-svg",
-      "version": "2\\.6\\.0"
+      "description": "Validate with the Everest Team to add the granular project.",
+      "group": "com\\.caverock",
+      "name": "androidsvg-aar",
+      "version": "1\\.4"
     },
     {
       "allows_granular_projects": [
         "com.mercadolibre.android.everest_canvas"
       ],
-      "group": "io\\.coil-kt",
-      "name": "coil-video",
-      "version": "2\\.6\\.0"
+      "group": "com\\.google\\.accompanist",
+      "name": "accompanist-drawablepainter",
+      "version": "0\\.30\\.1"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.instore",
@@ -5244,14 +5291,6 @@
       "group": "com\\.google\\.zxing",
       "name": "core",
       "version": "3\\.3\\.2"
-    },
-    {
-      "group": "com\\.mercadolibre\\.android\\.everest_canvas",
-      "name": "core",
-      "transitive_configuration": {
-        "transitivity": false
-      },
-      "version": "1\\.\\+"
     }
   ]
 }
