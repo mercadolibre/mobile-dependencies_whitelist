@@ -3390,13 +3390,13 @@
       "version": "17\\.0\\.1",
       "transitive_configuration":
         {
-            "transitivity": false
+            "transitivity": false,
+            "namespace": "com.google.mlkit.vision.text.latin"
         }
     },
     {
       "allows_granular_projects": [
         "com.mercadolibre.android:authentication",
-        "com.mercadolibre.android:home",
         "com.mercadolibre.android:login",
         "com.mercadolibre.android.ml_scanner",
         "com.mercadopago.android.moneyout"
@@ -3406,7 +3406,8 @@
       "version": "18\\.0\\.0",
       "transitive_configuration":
         {
-            "transitivity": false
+            "transitivity": false,
+            "namespace": "com.google.mlkit.vision.text.latin"
         }
     },
     {
