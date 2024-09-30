@@ -461,7 +461,7 @@
         "com.mercadolibre.android:home",
         "com.mercadolibre.android:ui",
         "com.mercadolibre.android.mlbusinesscomponents",
-        "com.mercadolibre.android.wallet.home"
+        "com.mercadolibre.android."
       ],
       "group": "com\\.facebook\\.fresco",
       "name": "webpsupport",
@@ -941,7 +941,7 @@
         "com.mercadolibre.android.uicomponents",
         "com.mercadolibre.android.user_blocker",
         "com.mercadolibre.android.vpp",
-        "com.mercadolibre.android.wallet.home",
+        "com.mercadolibre.android.",
         "com.mercadolibre.android.wishlists",
         "com.mercadopago.android.cardslist",
         "com.mercadopago.android.configurer",
@@ -1732,7 +1732,7 @@
     {
       "allows_granular_projects": [
         "com.mercadolibre.android.mp_search",
-        "com.mercadolibre.android.wallet.home"
+        "com.mercadolibre.android."
       ],
       "group": "com\\.mercadolibre\\.android\\.horizontal_cards",
       "name": "components",
@@ -2925,7 +2925,7 @@
         "com.mercadolibre.android.point.lot.management",
         "com.mercadolibre.android.portable_widget",
         "com.mercadolibre.android.px.pmselector",
-        "com.mercadolibre.android.wallet.home",
+        "com.mercadolibre.android.",
         "com.mercadopago.android.moneyin.v2",
         "com.mercadopago.android.px",
         "com.mercadopago.point"
@@ -3617,8 +3617,8 @@
         "com.mercadolibre.android:home",
         "com.mercadolibre.android:login",
         "com.mercadolibre.android.ml_scanner",
-        "com.mercadopago.android.moneyout",
-        "com.mercadolibre.android.wallet.home"
+        "com.mercadolibre.android.wallet.home",
+        "com.mercadopago.android.moneyout"
       ],
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-mlkit-text-recognition",
