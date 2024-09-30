@@ -3387,7 +3387,12 @@
       ],
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-mlkit-text-recognition",
-      "version": "17\\.0\\.1"
+      "version": "17\\.0\\.1",
+      "transitive_configuration":
+        {
+            "namespace": "com.google.android.gms.internal.mlkit_vision_text_common",
+            "transitivity": false
+        }
     },
     {
       "allows_granular_projects": [
@@ -3399,7 +3404,12 @@
       ],
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-mlkit-text-recognition",
-      "version": "18\\.0\\.0"
+      "version": "18\\.0\\.0",
+      "transitive_configuration":
+        {
+            "namespace": "com.google.mlkit.vision.text.latin",
+            "transitivity": false
+        }
     },
     {
       "allows_granular_projects": [
