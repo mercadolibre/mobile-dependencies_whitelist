@@ -3615,13 +3615,13 @@
     {
       "allows_granular_projects": [
         "com.mercadolibre.android:authentication",
+        "com.mercadolibre.android:cash_rails",
+        "com.mercadolibre.android:cashout",
         "com.mercadolibre.android:home",
         "com.mercadolibre.android:login",
         "com.mercadolibre.android.ml_scanner",
-        "com.mercadopago.android.moneyout",
-        "com.mercadolibre.android.cash_rails",
-        "com.mercadolibre.android.cashout",
-        "com.mercadopago.android.cashin"
+        "com.mercadopago.android.cashin",
+        "com.mercadopago.android.moneyout"
       ],
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-mlkit-text-recognition",
