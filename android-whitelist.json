@@ -2259,7 +2259,8 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.local.storage"
+        "com.mercadolibre.android.local.storage",
+        "com.mercadopago.android.isp.point.mpoc.mpp"
       ],
       "group": "androidx\\.security",
       "name": "security-crypto",
