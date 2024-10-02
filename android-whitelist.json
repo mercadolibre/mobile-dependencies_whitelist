@@ -2261,7 +2261,8 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.local.storage"
+        "com.mercadolibre.android.local.storage",
+        "com.mercadopago.android.isp.point.mpoc"
       ],
       "group": "androidx\\.security",
       "name": "security-crypto",
@@ -3288,6 +3289,7 @@
         "com.mercadolibre.android.credits.ui_components:test",
         "com.mercadolibre.android.developer_mode:dm-core",
         "com.mercadolibre.android.security_two_fa:commonstest",
+        "com.mercadolibre.android.tetris",
         "com.mercadopago.android.digital_accounts_components:robolectric",
         "com.mercadopago.point.ptm",
         "com.mercadopago.point.ptm.agent"
@@ -3393,9 +3395,6 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android:authentication",
-        "com.mercadolibre.android:home",
-        "com.mercadolibre.android:login",
         "com.mercadolibre.android.ml_scanner",
         "com.mercadopago.android.moneyout"
       ],
@@ -4571,7 +4570,7 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.barcode_img_generator.barcodeimagegenerator"
+        "com.mercadolibre.android.barcode_img_generator"
       ],
       "description": "Android library used to generate QRs.",
       "group": "io\\.github\\.g0dkar",
@@ -4943,6 +4942,7 @@
         "com.mercadopago.android.moneyout",
         "com.mercadopago.android.multiplayer"
       ],
+      "expires": "2025-01-31",
       "group": "com\\.mercadolibre\\.android\\.transfers_components",
       "name": "core",
       "version": "0\\.+"
@@ -4954,8 +4954,38 @@
         "com.mercadopago.android.multiplayer"
       ],
       "group": "com\\.mercadolibre\\.android\\.transfers_components",
+      "name": "core",
+      "version": "1\\.+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.da_management",
+        "com.mercadopago.android.moneyout",
+        "com.mercadopago.android.multiplayer"
+      ],
+      "expires": "2025-01-31",
+      "group": "com\\.mercadolibre\\.android\\.transfers_components",
       "name": "metadata",
       "version": "0\\.+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.da_management",
+        "com.mercadopago.android.moneyout",
+        "com.mercadopago.android.multiplayer"
+      ],
+      "group": "com\\.mercadolibre\\.android\\.transfers_components",
+      "name": "metadata",
+      "version": "1\\.+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.da_management",
+        "com.mercadopago.android.moneyout"
+      ],
+      "group": "com\\.mercadolibre\\.android\\.transfers_components",
+      "name": "offlinefirst",
+      "version": "1\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.screenshots_manager",
