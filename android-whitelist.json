@@ -1438,9 +1438,19 @@
         "com.mercadolibre.android.vpp"
       ],
       "description": "Don't use this version in production. It's in experimental phase.",
+      "expires": "2024-10-20",
       "group": "com\\.mercadolibre\\.android\\.hi",
       "name": "calculator",
       "version": "0\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.vpp"
+      ],
+      "description": "This is the calculator library for production",
+      "group": "com\\.mercadolibre\\.android\\.hi",
+      "name": "calculator",
+      "version": "1\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -4659,7 +4669,7 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.tetris"
       ],
-      "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
+      "description": "Only for EARLY ADOPTERS from WMS team. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.material3",
       "name": "material3",
       "version": "1\\.1\\.0"
@@ -4768,11 +4778,9 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.auth_native_sso",
-        "com.mercadolibre.android.everest_canvas",
-        "com.mercadolibre.android.polycards"
+        "com.mercadolibre.android.auth_native_sso"
       ],
-      "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
+      "description": "Only for EARLY ADOPTERS from WMS team. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.navigation",
       "name": "navigation-compose"
     },
@@ -5063,6 +5071,14 @@
     {
       "group": "com\\.mercadolibre\\.android\\.mp_search",
       "name": "search",
+      "version": "1\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.wallet.home"
+      ],
+      "group": "com\\.mercadolibre\\.android\\.mp_search",
+      "name": "widgets",
       "version": "1\\.\\+"
     },
     {
