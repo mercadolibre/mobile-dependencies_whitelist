@@ -2043,10 +2043,21 @@
         "MLVPP"
       ],
       "description": "Don't use this version in production. It's in experimental phase.",
+      "expires": "2024-10-20",
       "name": "HomeIndustries",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "allows_granular_projects": [
+        "MLVPP"
+      ],
+      "description": "This is the calculator library for production",
+      "name": "HomeIndustries",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "PerformanceBackgroundTasks",
