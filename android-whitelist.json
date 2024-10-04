@@ -5066,6 +5066,9 @@
       "version": "1\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.wallet.home"
+      ],
       "group": "com\\.mercadolibre\\.android\\.mp_search",
       "name": "widgets",
       "version": "1\\.\\+"
