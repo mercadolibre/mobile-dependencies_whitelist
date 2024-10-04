@@ -5075,6 +5075,14 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.wallet.home"
+      ],
+      "group": "com\\.mercadolibre\\.android\\.mp_search",
+      "name": "widgets",
+      "version": "1\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
         "com.mercadolibre.android.andesui"
       ],
       "description": "This dependency is only added to allow mockposable plugin. It is not allowed outside snapshot testing modules and should be removed when we update to Java 17 and AGP 8.",
