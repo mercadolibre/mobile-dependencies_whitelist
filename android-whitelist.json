@@ -2772,6 +2772,7 @@
       "allows_granular_projects": [
         "com.mercadoenvios.android.rtt",
         "com.mercadoenvios.android.shipping-toolkit",
+        "com.mercadolibre.android:ai-assistant-client",
         "com.mercadolibre.android.cash_rails",
         "com.mercadolibre.android.ccap",
         "com.mercadolibre.android.crab_di_android",
@@ -2787,8 +2788,7 @@
         "com.mercadopago.android.istanbul",
         "com.mercadopago.android.multiplayer",
         "com.mercadopago.android.smartpos",
-        "com.mercadopago.point",
-        "com.mercadolibre.android:ai-assistant-client"
+        "com.mercadopago.point"
       ],
       "group": "androidx\\.room",
       "name": "room-runtime",
@@ -2798,6 +2798,7 @@
       "allows_granular_projects": [
         "com.mercadoenvios.android.rtt",
         "com.mercadoenvios.android.shipping-toolkit",
+        "com.mercadolibre.android:ai-assistant-client",
         "com.mercadolibre.android.cash_rails",
         "com.mercadolibre.android.ccap",
         "com.mercadolibre.android.crab_di_android",
@@ -2812,8 +2813,7 @@
         "com.mercadopago.android.istanbul",
         "com.mercadopago.android.multiplayer",
         "com.mercadopago.android.smartpos",
-        "com.mercadopago.point",
-        "com.mercadolibre.android:ai-assistant-client"
+        "com.mercadopago.point"
       ],
       "group": "androidx\\.room",
       "name": "room-compiler",
@@ -2823,6 +2823,7 @@
       "allows_granular_projects": [
         "com.mercadoenvios.android.rtt",
         "com.mercadoenvios.android.shipping-toolkit",
+        "com.mercadolibre.android:ai-assistant-client",
         "com.mercadolibre.android.cash_rails",
         "com.mercadolibre.android.ccap",
         "com.mercadolibre.android.crab_di_android",
@@ -2837,8 +2838,7 @@
         "com.mercadopago.android.istanbul",
         "com.mercadopago.android.multiplayer",
         "com.mercadopago.android.smartpos",
-        "com.mercadopago.point",
-        "com.mercadolibre.android:ai-assistant-client"
+        "com.mercadopago.point"
       ],
       "group": "androidx\\.room",
       "name": "room-ktx",
