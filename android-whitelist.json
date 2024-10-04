@@ -1421,7 +1421,7 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.search"
       ],
-      "description": "This is the MoreLikeThis standalone library",
+      "description": "This is the MoreLikeThis standalone library, and should be deleted upon expires date so we dont have two equals libs with -> 'com\\.mercadolibre\\.android\\.more_like_this` ",
       "expires": "2024-11-01",
       "group": "com\\.mercadolibre\\.android",
       "name": "more_like_this",
