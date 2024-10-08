@@ -1372,6 +1372,12 @@
       "version": "^~>\\s?6.[0-9]+$"
     },
     {
+      "name": "StartupInitializerConfig",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
       "name": "GarexGpage",
       "source": "private",
       "target": "production",
