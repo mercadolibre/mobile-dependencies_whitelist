@@ -4887,6 +4887,7 @@
       "allows_granular_projects": [
         "com.mercadopago.android.isp.payment_contactless"
       ],
+      "description": "Local attestation library for mpoc solution",
       "group": "com\\.mercadopago\\.android\\.isp\\.mpoc\\.prometheus",
       "name": "zdefend",
       "version": "1\\.\\+"
