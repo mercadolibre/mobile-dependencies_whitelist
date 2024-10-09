@@ -1378,6 +1378,12 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "name": "MemoryTools",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
       "name": "GarexGpage",
       "source": "private",
       "target": "production",
