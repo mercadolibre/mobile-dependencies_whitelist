@@ -530,7 +530,7 @@
       "name": "MLMap",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?4.[0-9]+$"
+      "version": "^~>\\s?3.[0-9]+$"
     },
     {
       "name": "MLMapComponent",
@@ -1370,6 +1370,12 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?6.[0-9]+$"
+    },
+    {
+      "name": "StartupInitializerConfig",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "GarexGpage",
