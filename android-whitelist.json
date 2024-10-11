@@ -2013,6 +2013,30 @@
       "version": "1\\.8\\.10"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.crab_di_android"
+      ],
+      "group": "io\\.insert-koin",
+      "name": "koin-core",
+      "version": "3\\.2\\.4"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.crab_di_android"
+      ],
+      "group": "io\\.insert-koin",
+      "name": "koin-test",
+      "version": "3\\.2\\.4"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.crab_di_android"
+      ],
+      "group": "io\\.insert-koin",
+      "name": "koin-android",
+      "version": "3\\.2\\.4"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.userbiometrics",
       "name": "core",
       "version": "10\\.\\+"
