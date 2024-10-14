@@ -43,5 +43,4 @@ Para más información sobre la categoria mirar [Readme](https://github.com/merc
 - [ ] Si, adjuntar link a nexus.
 - [ ] No
 
-Nota: Leí el contenido de este Pull Request y acepto que recibiré seguimiento del mismo una vez su contenido esté completo. [ ]
-
+[ ] Leí el contenido de este Pull Request y acepto que recibiré seguimiento del mismo una vez su contenido esté completo. 
