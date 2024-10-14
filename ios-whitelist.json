@@ -2331,9 +2331,21 @@
     },
     {
       "allows_granular_projects": [
+        "CcapCommons",
+        "FujiDI"
+      ],
+      "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform DI squad before adding your project.",
+      "name": "CrabDI",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "allows_granular_projects": [
         "CcapCommons"
       ],
-      "name": "CrabDI",
+      "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform DI squad before adding your project.",
+      "name": "FujiDI",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
