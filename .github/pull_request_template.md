@@ -17,12 +17,6 @@ Dependencia Externa [ [Android](https://shield.adminml.com/c/4588) - [iOS](https
 
 Para más información visitar [Wiki.](https://sites.google.com/mercadolibre.com/mobile/arquitectura/allowlist) 
 
-## Build Scan - Android * Obligatorio para dependencias Externas Android
-
-- [Build Scan sin Dependencia](https://gradle.adminml.com/s/first_code/) 
-- [Build Scan con Dependencia](https://gradle.adminml.com/s/second_code/) 
-- [Build Scan Compare](https://gradle.adminml.com/c/first_code/second_code/) 
-
 # Detalles *
 
 ## En qué apps impacta mi dependencia *
