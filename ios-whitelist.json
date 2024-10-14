@@ -2334,6 +2334,7 @@
         "CcapCommons",
         "FujiDI"
       ],
+      "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform DI squad before adding your project.",
       "name": "CrabDI",
       "source": "private",
       "target": "production",
@@ -2343,6 +2344,7 @@
       "allows_granular_projects": [
         "CcapCommons"
       ],
+      "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform DI squad before adding your project.",
       "name": "FujiDI",
       "source": "private",
       "target": "production",
