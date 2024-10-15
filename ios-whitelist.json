@@ -2025,10 +2025,18 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "description": "This version will be deprecated in favor of 18.0.1",
+      "expires": "2024-12-31",
       "name": "MFEMakeupKitRetailer",
       "source": "private",
       "target": "production",
       "version": "15.0.3"
+    },
+    {
+      "name": "MFEMakeupKitRetailer",
+      "source": "private",
+      "target": "production",
+      "version": "18.0.1"
     },
     {
       "name": "VirtualTryOn",
