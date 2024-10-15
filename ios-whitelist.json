@@ -2185,13 +2185,6 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "expires": "2024-10-15",
-      "name": "MpGadgets",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
       "name": "OHHTTPStubs",
       "source": "public",
       "target": "test",
