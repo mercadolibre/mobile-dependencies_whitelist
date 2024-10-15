@@ -1367,7 +1367,7 @@
       "version": "21\\.\\+"
     },
     {
-      "expires": "2024-10-13",
+      "expires": "2024-10-28",
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "morelikethis",
       "version": "21\\.\\+"
@@ -1808,7 +1808,7 @@
         "com.mercadopago.android.configurer.smartpos"
       ],
       "description": "Esta libs se encuentra deprecada, recomendamos utilizar coroutine",
-      "expires": "2024-12-01",
+      "expires": "2025-03-30",
       "group": "com\\.squareup\\.retrofit2",
       "name": "adapter-rxjava2",
       "version": "2\\.6\\.4"
@@ -1926,7 +1926,7 @@
         "com.mercadolibre.android.wallet.home"
       ],
       "description": "Esta libs se encuentra deprecada, recomendamos utilizar coroutine",
-      "expires": "2024-12-01",
+      "expires": "2025-03-30",
       "group": "io\\.reactivex\\.rxjava2",
       "name": "rxandroid",
       "version": "2\\.1\\.1"
@@ -1959,14 +1959,14 @@
         "com.mercadopago.android.configurer.smartpos"
       ],
       "description": "Esta libs se encuentra deprecada, recomendamos utilizar coroutine",
-      "expires": "2024-12-01",
+      "expires": "2025-03-30",
       "group": "io\\.reactivex\\.rxjava2",
       "name": "rxjava",
       "version": "2\\.2\\.8"
     },
     {
       "description": "Esta libs se encuentra deprecada, recomendamos utilizar coroutine (+100 uses)",
-      "expires": "2024-12-01",
+      "expires": "2025-03-30",
       "group": "io\\.reactivex\\.rxjava2",
       "name": "rxkotlin",
       "version": "2\\.2\\.0"
@@ -2498,9 +2498,15 @@
       "version": "1\\.1\\.0"
     },
     {
+      "expires": "2024-10-28",
       "group": "androidx\\.constraintlayout",
       "name": "constraintlayout",
       "version": "2\\.0\\.4"
+    },
+    {
+      "group": "androidx\\.constraintlayout",
+      "name": "constraintlayout",
+      "version": "2\\.1\\.4"
     },
     {
       "group": "androidx\\.core",

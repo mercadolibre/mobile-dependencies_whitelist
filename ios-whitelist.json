@@ -530,7 +530,7 @@
       "name": "MLMap",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?4.[0-9]+$"
+      "version": "^~>\\s?3.[0-9]+$"
     },
     {
       "name": "MLMapComponent",
@@ -1373,6 +1373,12 @@
     },
     {
       "name": "StartupInitializerConfig",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MemoryTools",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
@@ -2325,9 +2331,21 @@
     },
     {
       "allows_granular_projects": [
+        "CcapCommons",
+        "FujiDI"
+      ],
+      "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform DI squad before adding your project.",
+      "name": "CrabDI",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "allows_granular_projects": [
         "CcapCommons"
       ],
-      "name": "CrabDI",
+      "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform DI squad before adding your project.",
+      "name": "FujiDI",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
