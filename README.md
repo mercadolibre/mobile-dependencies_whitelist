@@ -5,8 +5,8 @@
 
 If you need to add or update a library, please visit
 the [Wiki](https://furydocs.io/everest/latest/guide/#/develop/dependencies/dependencies?id=allow-list).
-
-## Android Dependencies
+<details>
+<summary>## Android Dependencies</summary>
 
 Android allowlist dependencies consist of a set of libraries that are available for front-ends and low-level
 repositories to consume from the **MercadoLibre-mobile** group. Your Frontend should not be declared here nor consumed
@@ -59,7 +59,11 @@ If you want to verify that your changes work correctly from your fork, simply ad
 ext["allowlistURL"] = "https://raw.githubusercontent.com/YOUR_GITHUB_USER/mobile-dependencies_whitelist/YOUR_GIT_BRANCH/android-whitelist.json"
 ```
 
-## iOS Dependencies
+</details>
+
+
+<details>
+<summary>## iOS Dependencies</summary>
 
 iOS allowlist dependencies consist of a set of libraries that are available for front-ends and low-level
 repositories to consume from the **MercadoLibre-mobile** group. Your Frontend should not be declared here nor consumed
@@ -89,8 +93,10 @@ Example:
 ]
 }
 ```
+</details>
 
-## Support for Granular Dependencies:
+<details>
+<summary>## Support for Granular Dependencies</summary>
 
 This functionality provides a more precise management of the scope of dependencies, giving us the ability to select
 specific consumers for each of them.
@@ -148,7 +154,10 @@ specifying which Mercado Libre projects will have access to it. This should be d
 }
 ```
 
-## Support for Transitive Dependencies (ONLY ANDROID):
+</details>
+
+<details>
+<summary>## Support for Transitive Dependencies (ONLY ANDROID)</summary>
 
 This functionality provides more precise control over how transitive dependencies can be excluded from projects,
 allowing specific consumers to be selected for each one.
@@ -192,7 +201,11 @@ In the Allowslist we only add cross libraries. At Meli we consider a library to 
 If the library is added only and directly to the applications, we call it a frontend lib.
 To prevent a frontend lib from being added as a dependency of other libs, they should not be added to the allowlist
 
-## Basic Continuous Integration (CI) Checks!!
+</details>
+
+<details>
+<summary>## Basic Continuous Integration (CI) Checks!!</summary>
+
 We have some basic checks placed in our CI to ensure that the allowlist is being used correctly. 
 The checks can be found [here](https://github.com/mercadolibre/mobile-dependencies_whitelist/blob/master/scripts/checks.sh)
 but basically, we are validating the following:
@@ -219,8 +232,5 @@ but basically, we are validating the following:
 
 Some other checks could be performed, check the CI Error for more information.
 
-## Contexts Allowlist (Deprecated)
-
-For more information, check
-the [new context allowlist](https://furydocs.io/mobile-apps/v1.5.2/guide/#/lang-en/metrics/02_crash-rate?id=contexts).
+</details>
 
