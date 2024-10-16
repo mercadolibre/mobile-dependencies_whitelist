@@ -6,7 +6,7 @@
 If you need to add or update a library, please visit
 the [Wiki](https://furydocs.io/everest/latest/guide/#/develop/dependencies/dependencies?id=allow-list).
 <details>
-<summary>## Android Dependencies</summary>
+<summary>Android Dependencies</summary>
 
 Android allowlist dependencies consist of a set of libraries that are available for front-ends and low-level
 repositories to consume from the **MercadoLibre-mobile** group. Your Frontend should not be declared here nor consumed
@@ -63,7 +63,7 @@ ext["allowlistURL"] = "https://raw.githubusercontent.com/YOUR_GITHUB_USER/mobile
 
 
 <details>
-<summary>## iOS Dependencies</summary>
+<summary>iOS Dependencies</summary>
 
 iOS allowlist dependencies consist of a set of libraries that are available for front-ends and low-level
 repositories to consume from the **MercadoLibre-mobile** group. Your Frontend should not be declared here nor consumed
@@ -96,7 +96,7 @@ Example:
 </details>
 
 <details>
-<summary>## Support for Granular Dependencies</summary>
+<summary>Support for Granular Dependencies</summary>
 
 This functionality provides a more precise management of the scope of dependencies, giving us the ability to select
 specific consumers for each of them.
@@ -157,7 +157,7 @@ specifying which Mercado Libre projects will have access to it. This should be d
 </details>
 
 <details>
-<summary>## Support for Transitive Dependencies (ONLY ANDROID)</summary>
+<summary>Support for Transitive Dependencies (ONLY ANDROID)</summary>
 
 This functionality provides more precise control over how transitive dependencies can be excluded from projects,
 allowing specific consumers to be selected for each one.
@@ -204,7 +204,7 @@ To prevent a frontend lib from being added as a dependency of other libs, they s
 </details>
 
 <details>
-<summary>## Basic Continuous Integration (CI) Checks!!</summary>
+<summary>Basic Continuous Integration (CI) Checks!!</summary>
 
 We have some basic checks placed in our CI to ensure that the allowlist is being used correctly. 
 The checks can be found [here](https://github.com/mercadolibre/mobile-dependencies_whitelist/blob/master/scripts/checks.sh)
