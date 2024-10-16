@@ -1,4 +1,4 @@
-# Allowlist Dependencies
+# Quality Control Allowlist of Dependencies
 
 > **Note:** This repository is not versioned. The `master` branch is consumed by default, so whenever the `master`
 > branch changes, all repositories will immediately start consuming the new changes.
