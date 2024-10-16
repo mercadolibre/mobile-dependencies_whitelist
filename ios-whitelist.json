@@ -2025,10 +2025,24 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "allows_granular_projects": [
+        "VirtualTryOn"
+      ],
+      "description": "This version will be deprecated in favor of 18.0.1",
+      "expires": "2024-12-31",
       "name": "MFEMakeupKitRetailer",
       "source": "private",
       "target": "production",
       "version": "15.0.3"
+    },
+    {
+      "allows_granular_projects": [
+        "VirtualTryOn"
+      ],
+      "name": "MFEMakeupKitRetailer",
+      "source": "private",
+      "target": "production",
+      "version": "18.0.1"
     },
     {
       "name": "VirtualTryOn",
@@ -2180,13 +2194,6 @@
         "MPSearch"
       ],
       "name": "HorizontalCards",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "expires": "2024-10-15",
-      "name": "MpGadgets",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
