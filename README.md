@@ -25,7 +25,7 @@ can define matching cases for groups in single strings.
 | expires      | This date will mark the dependency as expired, rendering it no longer usable and soon to be automatically removed from the list. Format: yyyy-MM-dd. If no field is added, the dependency is considered non-expirable. | MANDATORY                       |
 | group        | This is the group of the dependency to be added.                                                                           | MANDATORY                       |
 | name         | This is the name of the module within the dependency that will be added.                                                   | MANDATORY                       |
-| version      | This will be the version of the dependency that will be used.                                                              | OPTIONAL                       |
+| version      | This will be the version of the dependency that will be used.                                                              | MANDATORY                       |
 
 
 ### Important Considerations:
