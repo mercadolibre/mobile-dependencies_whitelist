@@ -1532,12 +1532,6 @@
       "version": "1\\.\\+"
     },
     {
-      "expires": "2024-10-12",
-      "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
-      "name": "api",
-      "version": "9\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
       "name": "api",
       "version": "10\\.\\+"
@@ -2214,6 +2208,7 @@
         "com.mercadolibre.android.opb_redirect",
         "com.mercadolibre.android.payment_flow_fcu",
         "com.mercadolibre.android.static_resources",
+        "com.mercadolibre.prepapp.android",
         "com.mercadopago.android.digital_accounts_components",
         "com.mercadopago.android.moneyout",
         "com.mercadopago.android.smartpos"
@@ -2417,6 +2412,7 @@
         "com.mercadolibre.android.opb_redirect",
         "com.mercadolibre.android.payment_flow_fcu",
         "com.mercadolibre.android.static_resources",
+        "com.mercadolibre.prepapp.android",
         "com.mercadopago.android.digital_accounts_components",
         "com.mercadopago.android.moneyout",
         "com.mercadopago.android.smartpos"
@@ -2709,6 +2705,7 @@
         "com.mercadolibre.android.point_smartpos_fcu",
         "com.mercadolibre.android.request_watcher",
         "com.mercadolibre.android.test_crab_di",
+        "com.mercadolibre.prepapp.android",
         "com.mercadopago.android.istanbul",
         "com.mercadopago.android.multiplayer",
         "com.mercadopago.android.smartpos",
@@ -2759,6 +2756,7 @@
         "com.mercadolibre.android.point_smart_wrapper",
         "com.mercadolibre.android.request_watcher",
         "com.mercadolibre.android.test_crab_di",
+        "com.mercadolibre.prepapp.android",
         "com.mercadopago.android.istanbul",
         "com.mercadopago.android.multiplayer",
         "com.mercadopago.android.smartpos",
@@ -3483,42 +3481,63 @@
     },
     {
       "description": "Expire date for libs from outside MP/ML apps (they use MLKit17 scanner kind -> v > 12.XX.X)",
-      "expires": "2024-12-31",
+      "expires": "2024-11-22",
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "scanner",
       "version": "mercadolibre-12\\.\\+|mercadopago-12\\.\\+"
     },
     {
       "description": "Expire date for libs from outside MP/ML apps (they use MLKit17 scanner kind -> v > 12.XX.X)",
-      "expires": "2024-12-31",
+      "expires": "2024-11-22",
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "ocr",
       "version": "mercadolibre-12\\.\\+|mercadopago-12\\.\\+"
     },
     {
       "description": "Expire date for libs from outside MP/ML apps (they use MLKit17 scanner kind -> v > 12.XX.X)",
-      "expires": "2024-12-31",
+      "expires": "2024-11-22",
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "barcode",
       "version": "mercadolibre-12\\.\\+|mercadopago-12\\.\\+"
     },
     {
       "description": "For integrators from inside MP/MLs app",
+      "expires": "2024-11-22",
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "scanner",
       "version": "mercadolibre-15\\.\\+|mercadopago-15\\.\\+"
     },
     {
       "description": "For integrators from inside MP/MLs app",
+      "expires": "2024-11-22",
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "ocr",
       "version": "mercadolibre-15\\.\\+|mercadopago-15\\.\\+"
     },
     {
       "description": "For integrators from inside MP/MLs app",
+      "expires": "2024-11-22",
       "group": "com\\.mercadolibre\\.android\\.ml_scanner",
       "name": "barcode",
       "version": "mercadolibre-15\\.\\+|mercadopago-15\\.\\+"
+    },
+    {
+      "description": "Integrators who wants MLKit17-scanner should choose withoutGMS, and the ones who wants MLKit18-scanner, should go for mercadopagos version",
+      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
+      "name": "scanner",
+      "version": "withoutGMS-15\\.\\+|mercadopago-15\\.\\+"
+    },
+    {
+      "description": "Integrators who wants MLKit17-scanner should choose withoutGMS, and the ones who wants MLKit18-scanner, should go for mercadopagos version",
+      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
+      "name": "ocr",
+      "version": "withoutGMS-15\\.\\+|mercadopago-15\\.\\+"
+    },
+    {
+      "description": "Integrators who wants MLKit17-scanner should choose withoutGMS, and the ones who wants MLKit18-scanner, should go for mercadopagos version",
+      "group": "com\\.mercadolibre\\.android\\.ml_scanner",
+      "name": "barcode",
+      "version": "withoutGMS-15\\.\\+|mercadopago-15\\.\\+"
     },
     {
       "expires": "2024-10-28",
@@ -3639,7 +3658,8 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android"
+        "com.mercadolibre.android",
+        "com.mercadolibre.android.security:security_preferences"
       ],
       "group": "com\\.mercadolibre\\.android\\.mobile_cryptography",
       "name": "core",
