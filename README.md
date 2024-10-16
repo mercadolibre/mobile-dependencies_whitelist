@@ -110,8 +110,8 @@ specifying which Mercado Libre projects will have access to it. This should be d
 
 | Property        | Description                                                                                             | Example                                      |
 |-----------------|---------------------------------------------------------------------------------------------------------|----------------------------------------------|
-| GroupId         | You specify the group id of the project that will have access to the dependency.                      | `com.mercadolibre.android.example`          |
-| GroupId:name    | You specify the group id and the name of the project that will have access to the dependency.         | `com.mercadolibre.android.example:exampleModule` |
+| GroupId         | You specify the group id of the project that will have access to the dependency.                        | `com.mercadolibre.android.example`          |
+| GroupId:name    | You specify the group id and the name of the project that will have access to the dependency.           | `com.mercadolibre.android.example:exampleModule` |
 
 ```json
 {
@@ -137,7 +137,7 @@ specifying which Mercado Libre projects will have access to it. This should be d
 
 | Property        | Description                                                                                             | Example                                      |
 |-----------------|---------------------------------------------------------------------------------------------------------|----------------------------------------------|
-| GroupId         | You specify the group id of the project that will have access to the dependency.                      | `MLRecommendations`          |
+| GroupId         | You specify the group id of the project that will have access to the dependency.                        | `MLRecommendations`                          |
 
 ```json
 {
@@ -169,8 +169,8 @@ To activate this feature, introduce a new block within the dependency definition
 
 | Property         | Description                                                                                     | Example                          |
 |------------------|-------------------------------------------------------------------------------------------------|----------------------------------|
-| namespace        | For non-transitive dependencies, you must specify the namespace.                               | `"namespace": "com.name.path.path"` |
-| transitivity     | By default, all dependencies are transitive. To specify otherwise, set it to `false`.        | `"transitivity": "false"`        |
+| namespace        | For non-transitive dependencies, you must specify the namespace.                                | `"namespace": "com.name.path.path"` |
+| transitivity     | By default, all dependencies are transitive. To specify otherwise, set it to `false`.           | `"transitivity": "false"`        |
 
 clearly:
 
