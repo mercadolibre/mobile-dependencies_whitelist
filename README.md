@@ -5,6 +5,7 @@
 
 If you need to add or update a library, please visit
 the [Wiki](https://furydocs.io/everest/latest/guide/#/develop/dependencies/dependencies?id=allow-list).
+
 <details>
 <summary>Android Dependencies</summary>
 
