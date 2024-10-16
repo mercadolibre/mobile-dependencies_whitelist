@@ -77,7 +77,7 @@ These dependencies are defined in JSON format, and the root-level property is ca
 | name         | Dependency Podname                                                                                                        | MANDATORY    |
 | source       | Keyword that indicates the source where the dependency spec should be downloaded. (`public` or `private`)                 | MANDATORY    |
 | target       | Indicates if it is a test or productive dependency. (`test` or `productive`)                                              | MANDATORY    |
-| version      | Which will be matched against each of the dependencies in the podspec. The `version` string SUPPORTS regex expression.    | MANDATORY    |
+| version      | Which will be matched against each of the dependencies in the podspec. The `version` string SUPPORTS regex expression. If the dependency is a Catalog this field is not Mandatory    | MANDATORY    |
 | description  | Some relevant description                                                                                                 | OPTIONAL     |
 | expires      | You can have expirable dependencies by adding the `expires` field. If no field is added, the dependency is considered as non-expirable. | OPTIONAL     |
 
