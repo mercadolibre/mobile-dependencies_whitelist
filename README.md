@@ -7,7 +7,7 @@ If you need to add or update a library, please visit
 the [Wiki](https://furydocs.io/everest/latest/guide/#/develop/dependencies/dependencies?id=allow-list).
 
 <details open>
-<summary>Android Dependencies</summary>
+<summary>Android & KMP Dependencies</summary>
 
 Android allowlist dependencies consist of a set of libraries that are available for front-ends and low-level
 repositories to consume from the **MercadoLibre-mobile** group. Your Frontend should not be declared here nor consumed
@@ -158,7 +158,7 @@ specifying which Mercado Libre projects will have access to it. This should be d
 </details>
 
 <details>
-<summary>Support for Transitive Dependencies (ONLY ANDROID)</summary>
+<summary>Support for Transitive Dependencies - For Android & KMP</summary>
 
 This functionality provides more precise control over how transitive dependencies can be excluded from projects,
 allowing specific consumers to be selected for each one.
