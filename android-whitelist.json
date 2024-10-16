@@ -4760,7 +4760,8 @@
     {
       "allows_granular_projects": [
         "com.mercadolibre.android.onboarding",
-        "com.mercadolibre.android.user_blocker"
+        "com.mercadolibre.android.user_blocker",
+        "com.mercadolibre.android.mercadopago_login"
       ],
       "group": "com\\.mercadolibre\\.android\\.flow_orchestrator",
       "name": "startup_commons",
