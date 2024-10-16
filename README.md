@@ -22,7 +22,7 @@ can define matching cases for groups in single strings.
 | Field        | Description                                                                                                                 | Criticity                       |
 |--------------|-----------------------------------------------------------------------------------------------------------------------------|---------------------------------|
 | description  | Description of the dependencie.                                                                                            | OPTIONAL                        |
-| expires      | This date will mark the dependency as expired, rendering it no longer usable and soon to be automatically removed from the list. Format: yyyy-MM-dd. If no field is added, the dependency is considered non-expirable. | MANDATORY                       |
+| expires      | This date will mark the dependency as expired, rendering it no longer usable and soon to be automatically removed from the list. Format: yyyy-MM-dd. If no field is added, the dependency is considered non-expirable. | OPTIONAL                       |
 | group        | This is the group of the dependency to be added.                                                                           | OPTIONAL                        |
 | name         | This is the name of the module within the dependency that will be added.                                                   | MANDATORY                       |
 | version      | This will be the version of the dependency that will be used.                                                              | MANDATORY                       |
@@ -75,7 +75,7 @@ These dependencies are defined in JSON format, and the root-level property is ca
 | Property     | Description                                                                                                                 | Criticity    |
 |--------------|-----------------------------------------------------------------------------------------------------------------------------|--------------|
 | description  | Some relevant description                                                                                                 | OPTIONAL     |
-| expires      | You can have expirable dependencies by adding the `expires` field. If no field is added, the dependency is considered as non-expirable. | OPTIONAL     |
+| expires      | This date will mark the dependency as expired, rendering it no longer usable and soon to be automatically removed from the list. Format: yyyy-MM-dd. If no field is added, the dependency is considered non-expirable. | OPTIONAL                       |
 | name         | Dependency Podname                                                                                                        | MANDATORY    |
 | source       | Keyword that indicates the source where the dependency spec should be downloaded. (`public` or `private`)                 | MANDATORY    |
 | target       | Indicates if it is a test or productive dependency. (`test` or `productive`)                                              | MANDATORY    |
