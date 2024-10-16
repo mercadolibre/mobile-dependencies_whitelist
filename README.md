@@ -6,7 +6,7 @@
 If you need to add or update a library, please visit
 the [Wiki](https://furydocs.io/everest/latest/guide/#/develop/dependencies/dependencies?id=allow-list).
 
-<details>
+<details open>
 <summary>Android Dependencies</summary>
 
 Android allowlist dependencies consist of a set of libraries that are available for front-ends and low-level
@@ -63,7 +63,7 @@ ext["allowlistURL"] = "https://raw.githubusercontent.com/YOUR_GITHUB_USER/mobile
 </details>
 
 
-<details>
+<details open>
 <summary>iOS Dependencies</summary>
 
 iOS allowlist dependencies consist of a set of libraries that are available for front-ends and low-level
