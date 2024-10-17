@@ -188,6 +188,7 @@
         "com.mercadolibre.android.da_management",
         "com.mercadolibre.android.dami_ui_components",
         "com.mercadolibre.android.discounts.payers",
+        "com.mercadolibre.android.engagement_component",
         "com.mercadolibre.android.fbm.wms.flan",
         "com.mercadolibre.android.fbm.wms.tetris",
         "com.mercadolibre.android.gamification",
@@ -2005,6 +2006,22 @@
       "group": "org\\.jetbrains\\.kotlin",
       "name": "kotlin-stdlib-common",
       "version": "1\\.8\\.10"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.crab_di_android"
+      ],
+      "group": "io\\.insert-koin",
+      "name": "koin-core",
+      "version": "3\\.2\\.4"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.crab_di_android"
+      ],
+      "group": "io\\.insert-koin",
+      "name": "koin-android",
+      "version": "3\\.2\\.4"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.userbiometrics",
