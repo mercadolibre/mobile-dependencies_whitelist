@@ -10,8 +10,8 @@
 # Ticket ID * Obligatorio para dependencias Externas
 
 ## Links
-Dependencia Externa con Artefacto en Nexus [ [Android](https://shield.adminml.com/c/4181) - [iOS](https://shield.adminml.com/c/4192) ]
-Dependencia Externa [ [Android](https://shield.adminml.com/c/4588) - [iOS](https://shield.adminml.com/c/4589) ]
+Dependencia Externa con Artefacto en Nexus [ Upload an artifact Android to Repository - Upload an artifact iOS to Repository ] in Shield
+Dependencia Externa [ External Dependency Analysis Android - External Dependency Analysis iOS ] in Shield
 
 - # [Ticket Link]()
 
