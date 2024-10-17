@@ -4930,16 +4930,6 @@
       "expires": "2025-01-31",
       "group": "com\\.mercadolibre\\.android\\.transfers_components",
       "name": "core",
-      "version": "0\\.+"
-    },
-    {
-      "allows_granular_projects": [
-        "com.mercadolibre.android.da_management",
-        "com.mercadopago.android.moneyout",
-        "com.mercadopago.android.multiplayer"
-      ],
-      "group": "com\\.mercadolibre\\.android\\.transfers_components",
-      "name": "core",
       "version": "1\\.+"
     },
     {
@@ -4951,7 +4941,28 @@
       "expires": "2025-01-31",
       "group": "com\\.mercadolibre\\.android\\.transfers_components",
       "name": "metadata",
-      "version": "0\\.+"
+      "version": "1\\.+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.da_management",
+        "com.mercadopago.android.moneyout"
+      ],
+      "expires": "2025-01-31",
+      "group": "com\\.mercadolibre\\.android\\.transfers_components",
+      "name": "offlinefirst",
+      "version": "1\\.+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadopago.android.digital_accounts_components",
+        "com.mercadolibre.android.da_management",
+        "com.mercadopago.android.moneyout",
+        "com.mercadopago.android.multiplayer"
+      ],
+      "group": "com\\.mercadolibre\\.android\\.transfers_components",
+      "name": "core",
+      "version": "2\\.+"
     },
     {
       "allows_granular_projects": [
@@ -4961,7 +4972,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.transfers_components",
       "name": "metadata",
-      "version": "1\\.+"
+      "version": "2\\.+"
     },
     {
       "allows_granular_projects": [
@@ -4970,7 +4981,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.transfers_components",
       "name": "offlinefirst",
-      "version": "1\\.+"
+      "version": "2\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.screenshots_manager",
