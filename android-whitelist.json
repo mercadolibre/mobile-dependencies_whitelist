@@ -1764,8 +1764,8 @@
       "version": "2\\.+"
     },
     {
-      "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
-      "name": "payment",
+      "group": "com\\.mercadopago\\.android\\.isp\\.mpoc",
+      "name": "prometheus",
       "version": "2\\.+"
     },
     {
@@ -1777,6 +1777,46 @@
       "group": "com\\.mercadopago\\.android\\.isp\\.payment_contactless",
       "name": "sdk",
       "version": "1\\.+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadopago.android.isp.mpoc.prometheus.magma"
+      ],
+      "group": "com\\.mercadopago\\.android\\.isp\\.mpoc\\.prometheus",
+      "name": "lava",
+      "version": "6\\.2\\.3"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadopago.android.isp.mpoc.prometheus.magma"
+      ],
+      "group": "com\\.mercadopago\\.android\\.isp\\.mpoc\\.prometheus",
+      "name": "molten",
+      "version": "0\\.1\\.5"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadopago.android.isp.mpoc.prometheus.magma"
+      ],
+      "group": "com\\.neovisionaries",
+      "name": "nv-i18n",
+      "version": "1\\.29"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadopago.android.isp.mpoc.prometheus.magma"
+      ],
+      "group": "org\\.slf4j",
+      "name": "slf4j-android",
+      "version": "1\\.7\\.32"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadopago.android.isp.mpoc.prometheus.magma"
+      ],
+      "group": "com\\.google\\.guava",
+      "name": "guava",
+      "version": "31\\.7-android"
     },
     {
       "allows_granular_projects": [
