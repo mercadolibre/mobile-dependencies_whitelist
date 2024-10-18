@@ -2365,6 +2365,12 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "name": "BuyingflowShipping",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
       "allows_granular_projects": [
         "MPConfigurationProvider/App"
       ],
