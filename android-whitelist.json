@@ -853,9 +853,15 @@
       "version": "10\\.\\+"
     },
     {
+      "expires": "2024-11-18",
       "group": "com\\.mercadolibre\\.android\\.ignite",
       "name": "core",
       "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.ignite",
+      "name": "core",
+      "version": "10\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -1106,8 +1112,13 @@
       "version": "2\\.\\+"
     },
     {
+      "expires": "2024-11-18",
       "group": "com\\.mercadolibre\\.android\\.remote\\.configuration",
       "version": "8\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.remote\\.configuration",
+      "version": "9\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cpg",
