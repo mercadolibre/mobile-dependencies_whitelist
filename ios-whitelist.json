@@ -380,13 +380,6 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "expires": "2024-09-30",
-      "name": "PxPmSelector",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
       "name": "PxPmSelector",
       "source": "private",
       "target": "production",
@@ -534,17 +527,10 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "expires": "2024-09-30",
       "name": "MLMap",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?3.[0-9]+$"
-    },
-    {
-      "name": "MLMap",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?4.[0-9]+$"
     },
     {
       "name": "MLMapComponent",
@@ -1117,6 +1103,7 @@
         "LivenessDetection/Core",
         "MLBiometricSecurity",
         "MLCommonUIComponents",
+        "MLEngagementComponents",
         "MLMoneyInV2",
         "MLNotificationsHelpers",
         "MLNotificationsHelpers/MercadoLibre",
@@ -1384,6 +1371,18 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?6.[0-9]+$"
+    },
+    {
+      "name": "StartupInitializerConfig",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MemoryTools",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "GarexGpage",
@@ -2027,10 +2026,24 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "allows_granular_projects": [
+        "VirtualTryOn"
+      ],
+      "description": "This version will be deprecated in favor of 18.0.1",
+      "expires": "2024-12-31",
       "name": "MFEMakeupKitRetailer",
       "source": "private",
       "target": "production",
       "version": "15.0.3"
+    },
+    {
+      "allows_granular_projects": [
+        "VirtualTryOn"
+      ],
+      "name": "MFEMakeupKitRetailer",
+      "source": "private",
+      "target": "production",
+      "version": "18.0.1"
     },
     {
       "name": "VirtualTryOn",
@@ -2043,10 +2056,21 @@
         "MLVPP"
       ],
       "description": "Don't use this version in production. It's in experimental phase.",
+      "expires": "2024-10-20",
       "name": "HomeIndustries",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "allows_granular_projects": [
+        "MLVPP"
+      ],
+      "description": "This is the calculator library for production",
+      "name": "HomeIndustries",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "PerformanceBackgroundTasks",
@@ -2174,35 +2198,6 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "expires": "2024-10-15",
-      "name": "MpGadgets",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "allows_granular_projects": [
-        "CrabDI",
-        "DependencyInjection"
-      ],
-      "expires": "2024-09-30",
-      "name": "Swinject",
-      "source": "public",
-      "target": "production",
-      "version": "2.8.3"
-    },
-    {
-      "allows_granular_projects": [
-        "CrabDI",
-        "DependencyInjection"
-      ],
-      "expires": "2024-09-30",
-      "name": "SwinjectAutoregistration",
-      "source": "public",
-      "target": "production",
-      "version": "2.8.3"
     },
     {
       "name": "OHHTTPStubs",
@@ -2340,13 +2335,25 @@
       "name": "MLEngagementComponents",
       "source": "private",
       "target": "production",
+      "version": "^~>\\s?3.[0-9]+$"
+    },
+    {
+      "allows_granular_projects": [
+        "CcapCommons",
+        "FujiDI"
+      ],
+      "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform DI squad before adding your project.",
+      "name": "CrabDI",
+      "source": "private",
+      "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "allows_granular_projects": [
         "CcapCommons"
       ],
-      "name": "CrabDI",
+      "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform DI squad before adding your project.",
+      "name": "FujiDI",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
@@ -2356,6 +2363,21 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "BuyingflowShipping",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "allows_granular_projects": [
+        "MPConfigurationProvider/App"
+      ],
+      "name": "IspMpos",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     }
   ]
 }

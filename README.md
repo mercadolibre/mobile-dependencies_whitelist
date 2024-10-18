@@ -1,4 +1,4 @@
-# Allowlist Dependencies
+# Quality Control Allowlist of Dependencies
 
 > **Note:** This repository is not versioned. The `master` branch is consumed by default, so whenever the `master`
 > branch changes, all repositories will immediately start consuming the new changes.
@@ -6,7 +6,8 @@
 If you need to add or update a library, please visit
 the [Wiki](https://furydocs.io/everest/latest/guide/#/develop/dependencies/dependencies?id=allow-list).
 
-## Android Dependencies
+<details open>
+<summary>Android & KMP Dependencies</summary>
 
 Android allowlist dependencies consist of a set of libraries that are available for front-ends and low-level
 repositories to consume from the **MercadoLibre-mobile** group. Your Frontend should not be declared here nor consumed
@@ -18,18 +19,24 @@ Each dependency is a JSON object that will be matched against the unresolved dep
 dependencies will be strings in the format `group:name:version`. The allowlist fields SUPPORT regex expressions, so you
 can define matching cases for groups in single strings.
 
+| Field        | Description                                                                                                                 | Criticity                       |
+|--------------|-----------------------------------------------------------------------------------------------------------------------------|---------------------------------|
+| description  | Description of the dependencie.                                                                                            | OPTIONAL                        |
+| expires      | This date will mark the dependency as expired, rendering it no longer usable and soon to be automatically removed from the list. Format: yyyy-MM-dd. If no field is added, the dependency is considered non-expirable. | OPTIONAL                       |
+| group        | This is the group of the dependency to be added.                                                                           | MANDATORY                        |
+| name         | This is the name of the module within the dependency that will be added.                                                   | MANDATORY                       |
+| version      | This will be the version of the dependency that will be used.                                                              | MANDATORY                       |
+
+
 ### Important Considerations:
 
+- Each dependency is a JSON object that will be matched against the unresolved dependencies of the repository. Repository dependencies will be strings in the format `group:name:version`. The allowlist fields SUPPORT regex expressions, so you can define matching cases for groups in single strings.
 - Remember these are **regexes**, so if you want to declare `com.example`, you should write it as `com\\.example`.
-- Validation is done against unresolved dependencies. If you declare a version as `4\\.\\+`, it **will** match
-  with `4.+` (but not strings like `4.2.3`).
-- The `expires` field its **optional**. If no field is added, the dependency is considered non-expirable.
-    - **Warning:** Expiring dependencies on Wednesdays or Thursdays will fail CI, as they are too close to release trains and
-      may cause unforeseen issues.
-- If no `group`, `name`, or `version` is provided, they will default to `.*` (any string).
-- **All dependencies and fields are sorted**
+- Validation is done against unresolved dependencies. If you declare a version as `4\\.\\+`, it **will** match with `4.+` (but not strings like `4.2.3`).
+- The `expires` field is **optional**. If no field is added, the dependency is considered non-expirable.
+    - **Warning:** Expiring dependencies on Wednesdays or Thursdays will fail CI, as they are too close to release trains and may cause unforeseen issues.
+- **All dependencies and fields are sorted.**
 
-### Basic JSON Schema:
 
 ```json
 {
@@ -53,7 +60,11 @@ If you want to verify that your changes work correctly from your fork, simply ad
 ext["allowlistURL"] = "https://raw.githubusercontent.com/YOUR_GITHUB_USER/mobile-dependencies_whitelist/YOUR_GIT_BRANCH/android-whitelist.json"
 ```
 
-## iOS Dependencies
+</details>
+
+
+<details open>
+<summary>iOS Dependencies</summary>
 
 iOS allowlist dependencies consist of a set of libraries that are available for front-ends and low-level
 repositories to consume from the **MercadoLibre-mobile** group. Your Frontend should not be declared here nor consumed
@@ -61,19 +72,14 @@ by any other FEnd.
 
 These dependencies are defined in JSON format, and the root-level property is called `whitelist`.
 
-Each of the dependencies is an object with the following properties:
-
-- `name`: Dependency Podname
-- `source`: keyword that indicates the source where the dependency spec should be downloaded. (`public` || `private`)
-- `target`: Indicates if it is a test or productive dependency. (`test` || `productive`)
-- `version`: Which will be matched against each of the dependencies in the podspec. The `version` string SUPPORTS regex
-  expression.
-
-#### Optional
-
-- `description`: (optional) some relevant description
-- `expires`: You can have expirable dependencies by adding the `expires` field. If no field is added, the dependency is
-  considered as non-expirable
+| Property     | Description                                                                                                                 | Criticity    |
+|--------------|-----------------------------------------------------------------------------------------------------------------------------|--------------|
+| description  | Some relevant description                                                                                                 | OPTIONAL     |
+| expires      | This date will mark the dependency as expired, rendering it no longer usable and soon to be automatically removed from the list. Format: yyyy-MM-dd. If no field is added, the dependency is considered non-expirable. | OPTIONAL                       |
+| name         | Dependency Podname                                                                                                        | MANDATORY    |
+| source       | Keyword that indicates the source where the dependency spec should be downloaded. (`public` or `private`)                 | MANDATORY    |
+| target       | Indicates if it is a test or productive dependency. (`test` or `productive`)                                              | MANDATORY    |
+| version      | Which will be matched against each of the dependencies in the podspec. The `version` string SUPPORTS regex expression. If the dependency is a Catalog this field is not Mandatory    | MANDATORY    |
 
 Example:
 
@@ -88,8 +94,10 @@ Example:
 ]
 }
 ```
+</details>
 
-## Support for Granular Dependencies:
+<details>
+<summary>Support for Granular Dependencies</summary>
 
 This functionality provides a more precise management of the scope of dependencies, giving us the ability to select
 specific consumers for each of them.
@@ -100,10 +108,10 @@ specifying which Mercado Libre projects will have access to it. This should be d
 ### Android Platform
 #### There are two types of granularity:
 
-* GroupId : You specify the group id of the project that will have access to the dependency.
-    * Example: `com.mercadolibre.android.example`
-* GroupId:name : You specify the group id and the name of the project that will have access to the dependency.
-    * Example: `com.mercadolibre.android.example:exampleModule`
+| Property        | Description                                                                                             | Example                                      |
+|-----------------|---------------------------------------------------------------------------------------------------------|----------------------------------------------|
+| GroupId         | You specify the group id of the project that will have access to the dependency.                        | `com.mercadolibre.android.example`          |
+| GroupId:name    | You specify the group id and the name of the project that will have access to the dependency.           | `com.mercadolibre.android.example:exampleModule` |
 
 ```json
 {
@@ -127,6 +135,10 @@ specifying which Mercado Libre projects will have access to it. This should be d
 
 ### iOS Platform
 
+| Property        | Description                                                                                             | Example                                      |
+|-----------------|---------------------------------------------------------------------------------------------------------|----------------------------------------------|
+| GroupId         | You specify the group id of the project that will have access to the dependency.                        | `MLRecommendations`                          |
+
 ```json
 {
   "whitelist": [
@@ -143,7 +155,10 @@ specifying which Mercado Libre projects will have access to it. This should be d
 }
 ```
 
-## Support for Transitive Dependencies (ONLY ANDROID):
+</details>
+
+<details>
+<summary>Support for Transitive Dependencies - For Android & KMP</summary>
 
 This functionality provides more precise control over how transitive dependencies can be excluded from projects,
 allowing specific consumers to be selected for each one.
@@ -152,12 +167,11 @@ allowing specific consumers to be selected for each one.
 
 To activate this feature, introduce a new block within the dependency definition with two keys:
 
-1. **namespace**: For non-transitive dependencies, you must specify the namespace:
-   `"namespace": "com.name.path.path"`
-2. **transitivity**: By default, all dependencies are transitive. To specify otherwise, set it to `false`:
-   `"transitivity": "false"`
+| Property         | Description                                                                                     | Example                          |
+|------------------|-------------------------------------------------------------------------------------------------|----------------------------------|
+| namespace        | For non-transitive dependencies, you must specify the namespace.                                | `"namespace": "com.name.path.path"` |
+| transitivity     | By default, all dependencies are transitive. To specify otherwise, set it to `false`.           | `"transitivity": "false"`        |
 
-Both keys will be found within the `"transitive_configuration"` node. Here's an example to visualize it more
 clearly:
 
 ### Android Platform
@@ -188,7 +202,11 @@ In the Allowslist we only add cross libraries. At Meli we consider a library to 
 If the library is added only and directly to the applications, we call it a frontend lib.
 To prevent a frontend lib from being added as a dependency of other libs, they should not be added to the allowlist
 
-## Basic Continuous Integration (CI) Checks!!
+</details>
+
+<details>
+<summary>Basic Continuous Integration (CI) Checks!!</summary>
+
 We have some basic checks placed in our CI to ensure that the allowlist is being used correctly. 
 The checks can be found [here](https://github.com/mercadolibre/mobile-dependencies_whitelist/blob/master/scripts/checks.sh)
 but basically, we are validating the following:
@@ -215,8 +233,5 @@ but basically, we are validating the following:
 
 Some other checks could be performed, check the CI Error for more information.
 
-## Contexts Allowlist (Deprecated)
-
-For more information, check
-the [new context allowlist](https://furydocs.io/mobile-apps/v1.5.2/guide/#/lang-en/metrics/02_crash-rate?id=contexts).
+</details>
 
