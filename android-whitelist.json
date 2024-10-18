@@ -783,7 +783,8 @@
         "com.mercadopago.android.istanbul",
         "com.mercadopago.android.moneyin.v2",
         "com.mercadopago.android.moneyout",
-        "com.mercadopago.android.smartpos"
+        "com.mercadopago.android.smartpos",
+        "com.mercadolibre.android.behavioral_sdk"
       ],
       "group": "com\\.google\\.firebase",
       "name": "firebase-bom",
@@ -3458,7 +3459,8 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.ml_scanner",
         "com.mercadolibre.android.personvalidation",
-        "com.mercadolibre.android.remedies"
+        "com.mercadolibre.android.remedies",
+        "com.mercadolibre.android.behavioral_sdk"
       ],
       "group": "org\\.tensorflow",
       "name": "tensorflow-lite",
