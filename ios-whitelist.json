@@ -1103,6 +1103,7 @@
         "LivenessDetection/Core",
         "MLBiometricSecurity",
         "MLCommonUIComponents",
+        "MLEngagementComponents",
         "MLMoneyInV2",
         "MLNotificationsHelpers",
         "MLNotificationsHelpers/MercadoLibre",
@@ -2025,10 +2026,24 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "allows_granular_projects": [
+        "VirtualTryOn"
+      ],
+      "description": "This version will be deprecated in favor of 18.0.1",
+      "expires": "2024-12-31",
       "name": "MFEMakeupKitRetailer",
       "source": "private",
       "target": "production",
       "version": "15.0.3"
+    },
+    {
+      "allows_granular_projects": [
+        "VirtualTryOn"
+      ],
+      "name": "MFEMakeupKitRetailer",
+      "source": "private",
+      "target": "production",
+      "version": "18.0.1"
     },
     {
       "name": "VirtualTryOn",
@@ -2185,13 +2200,6 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "expires": "2024-10-15",
-      "name": "MpGadgets",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
       "name": "OHHTTPStubs",
       "source": "public",
       "target": "test",
@@ -2327,7 +2335,7 @@
       "name": "MLEngagementComponents",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?3.[0-9]+$"
     },
     {
       "allows_granular_projects": [
@@ -2355,6 +2363,15 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "allows_granular_projects": [
+        "MPConfigurationProvider/App"
+      ],
+      "name": "IspMpos",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     }
   ]
 }
