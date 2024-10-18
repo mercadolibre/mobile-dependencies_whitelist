@@ -2365,6 +2365,9 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "allows_granular_projects": [
+        "MPConfigurationProvider/App"
+      ],
       "name": "IspMpos",
       "source": "private",
       "target": "production",
