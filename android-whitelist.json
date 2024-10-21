@@ -534,6 +534,7 @@
         "com.mercadolibre.android:home",
         "com.mercadolibre.android.checkout",
         "com.mercadolibre.android.marketplace.map",
+        "com.mercadopago.android.cashin",
         "com.mercadopago.android.digital_accounts_components"
       ],
       "group": "com\\.google\\.android\\.libraries\\.places",
@@ -861,9 +862,15 @@
       "version": "10\\.\\+"
     },
     {
+      "expires": "2024-11-18",
       "group": "com\\.mercadolibre\\.android\\.ignite",
       "name": "core",
       "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.ignite",
+      "name": "core",
+      "version": "10\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android",
@@ -1114,8 +1121,13 @@
       "version": "2\\.\\+"
     },
     {
+      "expires": "2024-11-18",
       "group": "com\\.mercadolibre\\.android\\.remote\\.configuration",
       "version": "8\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.remote\\.configuration",
+      "version": "9\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.cpg",
@@ -1406,16 +1418,6 @@
       "group": "com\\.mercadolibre\\.android\\.virtual_try_on",
       "name": "virtualtryon",
       "version": "2\\.\\+"
-    },
-    {
-      "allows_granular_projects": [
-        "com.mercadolibre.android.vpp"
-      ],
-      "description": "Don't use this version in production. It's in experimental phase.",
-      "expires": "2024-10-20",
-      "group": "com\\.mercadolibre\\.android\\.hi",
-      "name": "calculator",
-      "version": "0\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -4831,12 +4833,6 @@
       "version": "2\\.\\+"
     },
     {
-      "expires": "2024-10-19",
-      "group": "com\\.mercadolibre\\.android\\.traceability",
-      "name": "traceability",
-      "version": "10\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.traceability",
       "name": "traceability",
       "version": "11\\.\\+"
@@ -4911,16 +4907,6 @@
       "expires": "2025-01-31",
       "group": "com\\.mercadolibre\\.android\\.transfers_components",
       "name": "core",
-      "version": "0\\.+"
-    },
-    {
-      "allows_granular_projects": [
-        "com.mercadolibre.android.da_management",
-        "com.mercadopago.android.moneyout",
-        "com.mercadopago.android.multiplayer"
-      ],
-      "group": "com\\.mercadolibre\\.android\\.transfers_components",
-      "name": "core",
       "version": "1\\.+"
     },
     {
@@ -4932,7 +4918,28 @@
       "expires": "2025-01-31",
       "group": "com\\.mercadolibre\\.android\\.transfers_components",
       "name": "metadata",
-      "version": "0\\.+"
+      "version": "1\\.+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.da_management",
+        "com.mercadopago.android.moneyout"
+      ],
+      "expires": "2025-01-31",
+      "group": "com\\.mercadolibre\\.android\\.transfers_components",
+      "name": "offlinefirst",
+      "version": "1\\.+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.da_management",
+        "com.mercadopago.android.digital_accounts_components",
+        "com.mercadopago.android.moneyout",
+        "com.mercadopago.android.multiplayer"
+      ],
+      "group": "com\\.mercadolibre\\.android\\.transfers_components",
+      "name": "core",
+      "version": "2\\.+"
     },
     {
       "allows_granular_projects": [
@@ -4942,7 +4949,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.transfers_components",
       "name": "metadata",
-      "version": "1\\.+"
+      "version": "2\\.+"
     },
     {
       "allows_granular_projects": [
@@ -4951,7 +4958,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.transfers_components",
       "name": "offlinefirst",
-      "version": "1\\.+"
+      "version": "2\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.screenshots_manager",
@@ -4976,6 +4983,24 @@
       "group": "com\\.mercadopago\\.android\\.isp\\.mpoc\\.prometheus",
       "name": "zdefend",
       "version": "1\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadopago.android.isp.payment_contactless"
+      ],
+      "description": "Bouncy Castle ligthweight API for Java Provider",
+      "group": "org\\.bouncycastle",
+      "name": "bcprov-jdk15to18",
+      "version": "1\\.\\78"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadopago.android.isp.payment_contactless"
+      ],
+      "description": "Bouncy Castle package support for PKIX/CMS/EAC/PKCS/OCSP/TSP/OPENSSL protocols and container formats",
+      "group": "org\\.bouncycastle",
+      "name": "bcpkix-jdk15to18",
+      "version": "1\\.\\78"
     },
     {
       "allows_granular_projects": [
@@ -5092,6 +5117,18 @@
       "group": "com\\.google\\.zxing",
       "name": "core",
       "version": "3\\.3\\.2"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.advertising"
+      ],
+      "description": "This library is for manage images in Android",
+      "group": "com\\.mercadolibre\\.android\\.everest_canvas",
+      "name": "core",
+      "transitive_configuration": {
+        "transitivity": false
+      },
+      "version": "2\\.\\+"
     }
   ]
 }
