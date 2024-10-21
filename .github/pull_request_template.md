@@ -7,13 +7,13 @@
 - [ ] Interna: Libreria/modulo desarrollado in-house en base al ecosistema de Meli.
 - [ ] Externa: Libreria desarrollada por un externo a Meli. (Google, Airbnb, otros).
 
-# Ticket ID * Obligatorio para dependencias Externas
+# SHIELD ticket ID * Obligatorio para dependencias Externas
 
 ## Links
 Dependencia Externa con Artefacto en Nexus [ Upload an artifact Android to Repository - Upload an artifact iOS to Repository ] in Shield
 Dependencia Externa [ External Dependency Analysis Android - External Dependency Analysis iOS ] in Shield
 
-- # [Ticket Link]()
+- # [SHIELD ticket link]()
 
 Para más información visitar [Wiki.](https://sites.google.com/mercadolibre.com/mobile/arquitectura/allowlist) 
 
