@@ -13,6 +13,9 @@ default: &defaultJob
     - run:
         name: "Run Checks"
         command: ./scripts/checks.sh
+    - run:
+        name: "Print"
+        command: echo $SLACK_NOTIFICATION_LIB_WEBHOOK
 
 version: 2
 jobs:
