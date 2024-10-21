@@ -526,6 +526,7 @@
         "com.mercadolibre.android:home",
         "com.mercadolibre.android.checkout",
         "com.mercadolibre.android.marketplace.map",
+        "com.mercadopago.android.cashin",
         "com.mercadopago.android.digital_accounts_components"
       ],
       "group": "com\\.google\\.android\\.libraries\\.places",
@@ -1410,16 +1411,6 @@
       "group": "com\\.mercadolibre\\.android\\.virtual_try_on",
       "name": "virtualtryon",
       "version": "2\\.\\+"
-    },
-    {
-      "allows_granular_projects": [
-        "com.mercadolibre.android.vpp"
-      ],
-      "description": "Don't use this version in production. It's in experimental phase.",
-      "expires": "2024-10-20",
-      "group": "com\\.mercadolibre\\.android\\.hi",
-      "name": "calculator",
-      "version": "0\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -4836,12 +4827,6 @@
       "version": "2\\.\\+"
     },
     {
-      "expires": "2024-10-19",
-      "group": "com\\.mercadolibre\\.android\\.traceability",
-      "name": "traceability",
-      "version": "10\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.traceability",
       "name": "traceability",
       "version": "11\\.\\+"
@@ -5126,6 +5111,18 @@
       "group": "com\\.google\\.zxing",
       "name": "core",
       "version": "3\\.3\\.2"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.advertising"
+      ],
+      "description": "This library is for manage images in Android",
+      "group": "com\\.mercadolibre\\.android\\.everest_canvas",
+      "name": "core",
+      "transitive_configuration": {
+        "transitivity": false
+      },
+      "version": "2\\.\\+"
     }
   ]
 }
