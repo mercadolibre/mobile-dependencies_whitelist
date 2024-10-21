@@ -711,6 +711,7 @@
         "com.mercadolibre.android.addresses",
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.authchallenges",
+        "com.mercadolibre.android.behavioral_sdk",
         "com.mercadolibre.android.braze",
         "com.mercadolibre.android.buyingflow",
         "com.mercadolibre.android.buyingflow.checkout",
@@ -3466,6 +3467,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.behavioral_sdk",
         "com.mercadolibre.android.ml_scanner",
         "com.mercadolibre.android.personvalidation",
         "com.mercadolibre.android.remedies"
