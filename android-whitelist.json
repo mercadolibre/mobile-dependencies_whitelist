@@ -188,6 +188,7 @@
         "com.mercadolibre.android.da_management",
         "com.mercadolibre.android.dami_ui_components",
         "com.mercadolibre.android.discounts.payers",
+        "com.mercadolibre.android.engagement_component",
         "com.mercadolibre.android.fbm.wms.flan",
         "com.mercadolibre.android.fbm.wms.tetris",
         "com.mercadolibre.android.gamification",
@@ -2007,6 +2008,22 @@
       "version": "1\\.8\\.10"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.crab_di_android"
+      ],
+      "group": "io\\.insert-koin",
+      "name": "koin-core",
+      "version": "3\\.2\\.4"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.crab_di_android"
+      ],
+      "group": "io\\.insert-koin",
+      "name": "koin-android",
+      "version": "3\\.2\\.4"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.userbiometrics",
       "name": "core",
       "version": "10\\.\\+"
@@ -3658,7 +3675,8 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android"
+        "com.mercadolibre.android",
+        "com.mercadolibre.android.security:security_preferences"
       ],
       "group": "com\\.mercadolibre\\.android\\.mobile_cryptography",
       "name": "core",
@@ -4758,6 +4776,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.mercadopago_login",
         "com.mercadolibre.android.onboarding",
         "com.mercadolibre.android.user_blocker"
       ],
@@ -4910,6 +4929,15 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadopago.android.isp.payment_contactless"
+      ],
+      "description": "Local attestation library for mpoc solution",
+      "group": "com\\.mercadopago\\.android\\.isp\\.mpoc\\.prometheus",
+      "name": "zdefend",
+      "version": "1\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
         "com.mercadolibre.android.px.tokenization.core"
       ],
       "group": "com\\.mercadolibre\\.android\\.px",
@@ -5026,7 +5054,7 @@
     },
     {
       "allows_granular_projects": [
-        ""
+        "com.mercadolibre.android.advertising"
       ],
       "description": "This library is for manage images in Android",
       "group": "com\\.mercadolibre\\.android\\.everest_canvas",
