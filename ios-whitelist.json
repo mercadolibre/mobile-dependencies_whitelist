@@ -2156,7 +2156,8 @@
     },
     {
       "allows_granular_projects": [
-        "EverestCanvas"
+        "EverestCanvas",
+        "EverestCanvas/Core"
       ],
       "name": "Kingfisher",
       "source": "public",
@@ -2165,7 +2166,8 @@
     },
     {
       "allows_granular_projects": [
-        "EverestCanvas"
+        "EverestCanvas",
+        "EverestCanvas/Core"
       ],
       "name": "KingfisherWebP",
       "source": "public",
