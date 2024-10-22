@@ -1374,16 +1374,19 @@
       "version": "3\\.\\+"
     },
     {
+      "expires": "2024-11-22",
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "compats",
       "version": "21\\.\\+"
     },
     {
+      "expires": "2024-11-22",
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "input",
       "version": "21\\.\\+"
     },
     {
+      "expires": "2024-11-22",
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "autosuggest",
       "version": "21\\.\\+"
@@ -1395,9 +1398,30 @@
       "version": "21\\.\\+"
     },
     {
+      "expires": "2024-11-22",
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "search",
       "version": "21\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.search",
+      "name": "compats",
+      "version": "22\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.search",
+      "name": "input",
+      "version": "22\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.search",
+      "name": "autosuggest",
+      "version": "22\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.search",
+      "name": "search",
+      "version": "22\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.demandcore",
@@ -3949,7 +3973,7 @@
     {
       "group": "com.mercadolibre.android.polycards",
       "name": "core",
-      "version": "0\\.+"
+      "version": "1\\.+"
     },
     {
       "allows_granular_projects": [
