@@ -149,6 +149,14 @@
       "version": "1\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.checkout"
+      ],
+      "group": "com\\.mercadolibre\\.android\\.buyingflow_shipping",
+      "name": "shipping",
+      "version": "0\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.smart_coupons",
       "name": "coupons",
       "version": "8\\.\\+"
@@ -526,6 +534,7 @@
         "com.mercadolibre.android:home",
         "com.mercadolibre.android.checkout",
         "com.mercadolibre.android.marketplace.map",
+        "com.mercadopago.android.cashin",
         "com.mercadopago.android.digital_accounts_components"
       ],
       "group": "com\\.google\\.android\\.libraries\\.places",
@@ -702,6 +711,7 @@
         "com.mercadolibre.android.addresses",
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.authchallenges",
+        "com.mercadolibre.android.behavioral_sdk",
         "com.mercadolibre.android.braze",
         "com.mercadolibre.android.buyingflow",
         "com.mercadolibre.android.buyingflow.checkout",
@@ -1409,16 +1419,6 @@
       "group": "com\\.mercadolibre\\.android\\.virtual_try_on",
       "name": "virtualtryon",
       "version": "2\\.\\+"
-    },
-    {
-      "allows_granular_projects": [
-        "com.mercadolibre.android.vpp"
-      ],
-      "description": "Don't use this version in production. It's in experimental phase.",
-      "expires": "2024-10-20",
-      "group": "com\\.mercadolibre\\.android\\.hi",
-      "name": "calculator",
-      "version": "0\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -3467,6 +3467,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.behavioral_sdk",
         "com.mercadolibre.android.ml_scanner",
         "com.mercadolibre.android.personvalidation",
         "com.mercadolibre.android.remedies"
@@ -3794,7 +3795,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "rating",
-      "version": "13\\.\\+"
+      "version": "14\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -3803,7 +3804,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "core",
-      "version": "13\\.\\+"
+      "version": "14\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -3812,7 +3813,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "feedback",
-      "version": "13\\.\\+"
+      "version": "14\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -3821,7 +3822,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "tab",
-      "version": "13\\.\\+"
+      "version": "14\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -3830,7 +3831,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "ui_component",
-      "version": "13\\.\\+"
+      "version": "14\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -3839,7 +3840,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "commons",
-      "version": "13\\.\\+"
+      "version": "14\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -3856,7 +3857,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "map",
-      "version": "13\\.\\+"
+      "version": "14\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -3865,7 +3866,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "report",
-      "version": "13\\.\\+"
+      "version": "14\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -3874,7 +3875,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "business_component",
-      "version": "13\\.\\+"
+      "version": "14\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.mp_sellers_growth",
@@ -4834,12 +4835,6 @@
       "version": "2\\.\\+"
     },
     {
-      "expires": "2024-10-19",
-      "group": "com\\.mercadolibre\\.android\\.traceability",
-      "name": "traceability",
-      "version": "10\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.traceability",
       "name": "traceability",
       "version": "11\\.\\+"
@@ -5117,12 +5112,16 @@
       "version": "3\\.3\\.2"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.advertising"
+      ],
+      "description": "This library is for manage images in Android",
       "group": "com\\.mercadolibre\\.android\\.everest_canvas",
       "name": "core",
       "transitive_configuration": {
         "transitivity": false
       },
-      "version": "1\\.\\+"
+      "version": "2\\.\\+"
     },
     {
       "allows_granular_projects": [
