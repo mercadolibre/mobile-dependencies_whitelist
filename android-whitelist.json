@@ -5001,6 +5001,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.instore",
         "com.mercadopago.android.isp.payment_contactless"
       ],
       "description": "Bouncy Castle ligthweight API for Java Provider",
