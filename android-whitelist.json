@@ -3978,6 +3978,9 @@
       "version": "4\\.+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.search"
+      ],
       "group": "com.mercadolibre.android.polycards",
       "name": "core",
       "version": "1\\.+"
