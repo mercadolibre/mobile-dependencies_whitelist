@@ -4945,9 +4945,9 @@
     {
       "allows_granular_projects": [
         "com.mercadolibre.android.da_management",
+        "com.mercadolibre.android.transferscheckout",
         "com.mercadopago.android.moneyout",
-        "com.mercadopago.android.multiplayer",
-        "com.mercadolibre.android.transferscheckout"
+        "com.mercadopago.android.multiplayer"
       ],
       "expires": "2025-01-31",
       "group": "com\\.mercadolibre\\.android\\.transfers_components",
@@ -4957,9 +4957,9 @@
     {
       "allows_granular_projects": [
         "com.mercadolibre.android.da_management",
+        "com.mercadolibre.android.transferscheckout",
         "com.mercadopago.android.moneyout",
-        "com.mercadopago.android.multiplayer",
-        "com.mercadolibre.android.transferscheckout"
+        "com.mercadopago.android.multiplayer"
       ],
       "expires": "2025-01-31",
       "group": "com\\.mercadolibre\\.android\\.transfers_components",
@@ -4969,8 +4969,8 @@
     {
       "allows_granular_projects": [
         "com.mercadolibre.android.da_management",
-        "com.mercadopago.android.moneyout",
-        "com.mercadolibre.android.transferscheckout"
+        "com.mercadolibre.android.transferscheckout",
+        "com.mercadopago.android.moneyout"
       ],
       "expires": "2025-01-31",
       "group": "com\\.mercadolibre\\.android\\.transfers_components",
@@ -4980,10 +4980,10 @@
     {
       "allows_granular_projects": [
         "com.mercadolibre.android.da_management",
+        "com.mercadolibre.android.transferscheckout",
         "com.mercadopago.android.digital_accounts_components",
         "com.mercadopago.android.moneyout",
-        "com.mercadopago.android.multiplayer",
-        "com.mercadolibre.android.transferscheckout"
+        "com.mercadopago.android.multiplayer"
       ],
       "group": "com\\.mercadolibre\\.android\\.transfers_components",
       "name": "core",
@@ -4992,9 +4992,9 @@
     {
       "allows_granular_projects": [
         "com.mercadolibre.android.da_management",
+        "com.mercadolibre.android.transferscheckout",
         "com.mercadopago.android.moneyout",
-        "com.mercadopago.android.multiplayer",
-        "com.mercadolibre.android.transferscheckout"
+        "com.mercadopago.android.multiplayer"
       ],
       "group": "com\\.mercadolibre\\.android\\.transfers_components",
       "name": "metadata",
@@ -5003,8 +5003,8 @@
     {
       "allows_granular_projects": [
         "com.mercadolibre.android.da_management",
-        "com.mercadopago.android.moneyout",
-        "com.mercadolibre.android.transferscheckout"
+        "com.mercadolibre.android.transferscheckout",
+        "com.mercadopago.android.moneyout"
       ],
       "group": "com\\.mercadolibre\\.android\\.transfers_components",
       "name": "offlinefirst",
