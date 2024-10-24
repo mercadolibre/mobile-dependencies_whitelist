@@ -742,6 +742,7 @@
         "com.mercadolibre.android.discovery",
         "com.mercadolibre.android.everest",
         "com.mercadolibre.android.fees_installments",
+        "com.mercadolibre.android.fluxclient",
         "com.mercadolibre.android.hub",
         "com.mercadolibre.android.instore",
         "com.mercadolibre.android.insu_flox_components",
@@ -2394,6 +2395,7 @@
         "com.mercadolibre.android.crypto_payment",
         "com.mercadolibre.android.da_management",
         "com.mercadolibre.android.data_privacy_helper",
+        "com.mercadolibre.android.fluxclient",
         "com.mercadolibre.android.history",
         "com.mercadolibre.android.hub_engine",
         "com.mercadolibre.android.insu_webkit_features",
@@ -5028,6 +5030,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.instore",
         "com.mercadopago.android.isp.payment_contactless"
       ],
       "description": "Bouncy Castle ligthweight API for Java Provider",
