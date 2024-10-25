@@ -2286,11 +2286,11 @@
     },
     {
       "allows_granular_projects": [
+        "HomeIndustries",
         "MLSearch",
         "MLVPP",
         "MoreLikeThis",
-        "VirtualTryOn",
-        "HomeIndustries"
+        "VirtualTryOn"
       ],
       "name": "VerticalsCore",
       "source": "private",
