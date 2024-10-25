@@ -2285,13 +2285,13 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-    "allows_granular_projects": [
+      "allows_granular_projects": [
         "MLSearch",
         "MLVPP",
         "MoreLikeThis",
         "VirtualTryOn",
         "HomeIndustries"
-    ],
+      ],
       "name": "VerticalsCore",
       "source": "private",
       "target": "production",
