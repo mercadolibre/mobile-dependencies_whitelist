@@ -5118,6 +5118,11 @@
       "version": "1\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.rtc_mobile",
+      "name": "realtime",
+      "version": "1\\.\\+"
+    },
+    {
       "allows_granular_projects": [
         "com.mercadolibre.android.wallet.home"
       ],
