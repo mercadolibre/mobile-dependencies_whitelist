@@ -5087,6 +5087,10 @@
       "version": "1\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadoenvios.logistics",
+        "com.mercadolibre.android.wallet.home"
+      ],
       "group": "com\\.mercadolibre\\.android\\.rtc_mobile",
       "name": "realtime",
       "version": "1\\.\\+"
