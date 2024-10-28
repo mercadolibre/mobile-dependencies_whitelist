@@ -2317,7 +2317,18 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "name": "EverestCanvas",
+      "name": "EverestCanvas$",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "allows_granular_projects": [
+        "MPSearch",
+        "MLSearch"
+      ],
+      "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
+      "name": "EverestCanvas/SwiftUI",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
