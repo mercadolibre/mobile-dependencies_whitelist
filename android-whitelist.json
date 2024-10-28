@@ -906,12 +906,6 @@
       "version": "1\\.\\+"
     },
     {
-      "expires": "2024-10-25",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "melidata-sdk",
-      "version": "22\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android",
       "name": "melidata-sdk",
       "version": "23\\.\\+"
@@ -1649,13 +1643,6 @@
       "group": "com\\.mercadolibre\\.android\\.static_resources",
       "name": "static_resources",
       "version": "7\\.\\+"
-    },
-    {
-      "description": "This library is cross for the Mercado Pago Transfer repositories",
-      "expires": "2024-10-25",
-      "group": "com\\.mercadopago\\.android\\.digital_accounts_components",
-      "name": "digital_accounts_components",
-      "version": "11\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.digital_accounts_components",
@@ -4174,24 +4161,6 @@
       "group": "com\\.mercadolibre\\.android\\.ccap",
       "name": "secure-inputs",
       "version": "3\\.+"
-    },
-    {
-      "expires": "2024-10-27",
-      "group": "com\\.mercadolibre\\.android\\.app_monitoring",
-      "name": "setup",
-      "version": "4\\.\\+"
-    },
-    {
-      "expires": "2024-10-27",
-      "group": "com\\.mercadolibre\\.android\\.app_monitoring",
-      "name": "core",
-      "version": "4\\.\\+"
-    },
-    {
-      "expires": "2024-10-27",
-      "group": "com\\.mercadolibre\\.android\\.app_monitoring",
-      "name": "migration",
-      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.app_monitoring",
