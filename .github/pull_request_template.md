@@ -1,46 +1,144 @@
-# Descripción * 
+### Descripción
 
-    ...
+#### Cual es la necesidad de agregar este cambio ? 
 
+> Complete me !
 
-## Mi dependencia es *
-- [ ] Interna: Libreria/modulo desarrollado in-house en base al ecosistema de Meli.
-- [ ] Externa: Libreria desarrollada por un externo a Meli. (Google, Airbnb, otros).
+##### Seleccione el tipo de su dependencia.
 
-# SHIELD ticket ID * Obligatorio para dependencias Externas
+<table>
+    <thead>
+        <tr>
+            <th><sub>Tipo</sub></th>
+            <th><sub>Descripción</sub></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><ul><li> - [ ] <sub>Interna</sub></li></ul></td>
+            <td><sub>Libreria/modulo desarrollado in-house en base al ecosistema de Meli.</sub></td>
+        </tr>
+        <tr>
+            <td><ul><li> - [ ] <sub>Externa</sub></li></ul></td>
+            <td><sub>Libreria desarrollada por un externo a Meli. (Google, Airbnb, otros). Requiere Ticket de Shield.</sub></td>
+        </tr>
+    </tbody>
+</table>
 
-## Links
-Dependencia Externa con Artefacto en Nexus [ Upload an artifact Android to Repository - Upload an artifact iOS to Repository ] in Shield
-Dependencia Externa [ External Dependency Analysis Android - External Dependency Analysis iOS ] in Shield
+##### ETA
 
-- # [SHIELD ticket link]()
+> <ul><li>- [ ] Leí el contenido de este Pull Request y acepto que recibiré seguimiento del mismo una vez su contenido y el de los Tickets solicitados esté completo. </li></ul> 
 
-Para más información visitar [Wiki.](https://sites.google.com/mercadolibre.com/mobile/arquitectura/allowlist) 
+<details>
 
-# Detalles *
+<summary>Sección obligatoria para Dependencias Externas</summary>
 
-## En qué apps impacta mi dependencia *
-- [ ] Mercado Libre
-- [ ] Mercado Pago
-- [ ] SmartPOS
-- [ ] Alicia: Flex / Logistics
-- [ ] WMS
-- [ ] Meli Store
+####  [ℹ️](https://sites.google.com/mercadolibre.com/mobile/arquitectura/allowlist) SHIELD Ticket
 
-## La categoría de la dependencia es *
-- [ ] Frontend
-- [ ] Cross
+##### Link de los Tickets
 
-Para más información sobre la categoria mirar [Readme](https://github.com/mercadolibre/mobile-dependencies_whitelist/blob/feature/update-readme-frontend-cross/README.md#libreria-frontend-x-cross)
+<table>
+    <thead>
+        <tr>
+            <th><sub>Descripción</sub></th>
+            <th><sub>Android</sub></th>
+            <th><sub>iOS</sub></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><sub>Dependencia Externa con Artefacto en Nexus</sub></td>
+            <td><a href="#"><sub>Upload an artifact Android to Repository</sub></a></td>
+            <td><a href="#"><sub>Upload an artifact iOS to Repository</sub></a></td>
+        </tr>
+        <tr>
+            <td><sub>Dependencia Externa</sub></td>
+            <td><a href="#"><sub>External Dependency Analysis Android</sub></a></td>
+            <td><a href="#"><sub>External Dependency Analysis iOS</sub></a></td>
+        </tr>
+    </tbody>
+</table>
 
-## Mi dependencia tienes un uso controlado *
-- [ ] Si
-- [ ] No
-    
-    Para más información sobre el uso controlado mirar [Readme](https://github.com/mercadolibre/mobile-dependencies_whitelist/blob/feature/update-readme-frontend-cross/README.md#support-for-granular-dependencies)
+##### Agregue el Ticket de Shield.
+> [Dependency Shield Ticket]()
+ 
+</details>
 
-## En caso de ser una dependencia interna, se ha agregado una lib .aar o framework (iOS) en nexus sobre el proyecto? *
-- [ ] Si, adjuntar link a nexus.
-- [ ] No
+### Información
 
-[ ] Leí el contenido de este Pull Request y acepto que recibiré seguimiento del mismo una vez su contenido esté completo. 
+#### Seleccione las Aplicaciones impactadas por esta dependencia. 
+
+<table>
+    <thead>
+        <tr>
+            <th><sub>Mercado Libre</sub></th>
+            <th><sub>Mercado Pago</sub></th>
+            <th><sub>SmartPOS</sub></th>
+            <th><sub>Alicia: Flex / Logistics</sub></th>
+            <th><sub>WMS</sub></th>
+            <th><sub>Meli Store</sub></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><ul><li> - [ ] </li></ul></td>
+            <td><ul><li> - [ ] </li></ul></td>
+            <td><ul><li> - [ ] </li></ul></td>
+            <td><ul><li> - [ ] </li></ul></td>
+            <td><ul><li> - [ ] </li></ul></td>
+            <td><ul><li> - [ ] </li></ul></td>
+        </tr>
+    </tbody>
+</table>
+
+#### [ℹ️](https://github.com/mercadolibre/mobile-dependencies_whitelist/blob/feature/update-readme-frontend-cross/README.md#libreria-frontend-x-cross) Seleccione el tipo de dependencia.  
+
+<table>
+    <thead>
+        <tr>
+            <th><sub>Frontend</sub></th>
+            <th><sub>Cross</sub></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><ul><li> - [ ] </li></ul></td>
+            <td><ul><li> - [ ] </li></ul></td>
+        </tr>
+    </tbody>
+</table>
+
+#### [ℹ️](https://github.com/mercadolibre/mobile-dependencies_whitelist/blob/feature/update-readme-frontend-cross/README.md#support-for-granular-dependencies) Mi dependencia tienes un uso controlado ?
+
+<table>
+    <thead>
+        <tr>
+            <th><sub>Si</sub></th>
+            <th><sub>No</sub></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><ul><li> - [ ] </li></ul></td>
+            <td><ul><li> - [ ] </li></ul></td>
+        </tr>
+    </tbody>
+</table>
+
+#### Esta dependencia agrega Artefactos (Jar, Arr, Framework, ...) o Dependencias Externos?  
+>  En caso de ser Si, agregue el Link de Nexus - [Nexus Link](www.google.com)
+
+<table>
+    <thead>
+        <tr>
+            <th><sub>Si</sub></th>
+            <th><sub>No</sub></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><ul><li> - [ ] </li></ul></td>
+            <td><ul><li> - [ ] </li></ul></td>
+        </tr>
+    </tbody>
+</table>
