@@ -2083,6 +2083,9 @@
       ],
       "group": "io\\.insert-koin",
       "name": "koin-core",
+      "transitive_configuration": {
+        "transitivity": false
+      },
       "version": "3\\.2\\.4"
     },
     {
@@ -2091,6 +2094,9 @@
       ],
       "group": "io\\.insert-koin",
       "name": "koin-android",
+      "transitive_configuration": {
+        "transitivity": false
+      },
       "version": "3\\.2\\.4"
     },
     {
