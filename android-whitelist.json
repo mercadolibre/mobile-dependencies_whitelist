@@ -2575,15 +2575,10 @@
       "version": "1\\.1\\.0"
     },
     {
-      "expires": "2024-10-28",
+      "expires": "2024-11-11",
       "group": "androidx\\.constraintlayout",
       "name": "constraintlayout",
       "version": "2\\.0\\.4"
-    },
-    {
-      "group": "androidx\\.constraintlayout",
-      "name": "constraintlayout",
-      "version": "2\\.1\\.4"
     },
     {
       "group": "androidx\\.core",
@@ -5118,15 +5113,6 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.ar.measures"
-      ],
-      "description": "This dependency was added to allow Augmented Reality only on Mercury WMS. No other modules are allowed to use them, especially the ones that belong to ML or MP.",
-      "group": "com\\.gorisse\\.thomas\\.sceneform",
-      "name": "sceneform",
-      "version": "1\\.\\23\\.0"
-    },
-    {
-      "allows_granular_projects": [
         "com.mercadolibre.android.mlwebkit",
         "com.mercadolibre.android.on.demand.resources",
         "com.mercadopago.android.configurer"
@@ -5159,6 +5145,33 @@
         "transitivity": false
       },
       "version": "2\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.ar.measures"
+      ],
+      "description": "This dependency enables Augmented Reality capability. Currently, it's only used on Mercury WMS to provide large package measurements and calculate shipping costs.",
+      "group": "com\\.google\\.ar\\.core",
+      "name": "arcore",
+      "version": "1\\.\\45\\.0"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.ar.measures"
+      ],
+      "description": "This dependency enables Augmented Reality capability. Currently, it's only used on Mercury WMS to provide large package measurements and calculate shipping costs.",
+      "group": "com\\.google\\.ar\\.sceneform",
+      "name": "sceneform",
+      "version": "1\\.\\17\\.1"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.ar.measures"
+      ],
+      "description": "This dependency enables Augmented Reality capability. Currently, it's only used on Mercury WMS to provide large package measurements and calculate shipping costs.",
+      "group": "com\\.google\\.ar\\.sceneform\\.ux",
+      "name": "sceneform",
+      "version": "1\\.\\17\\.1"
     }
   ]
 }
