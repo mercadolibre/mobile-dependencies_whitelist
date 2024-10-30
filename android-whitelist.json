@@ -5158,8 +5158,8 @@
         "com.mercadolibre.android.ar.measures"
       ],
       "description": "This dependency enables Augmented Reality capability. Currently, it's only used on Mercury WMS to provide large package measurements and calculate shipping costs.",
-      "group": "com\\.google\\.ar\\.core",
-      "name": "arcore",
+      "group": "com\\.google\\.ar",
+      "name": "core",
       "version": "1\\.\\45\\.0"
     },
     {
@@ -5168,7 +5168,7 @@
       ],
       "description": "This dependency enables Augmented Reality capability. Currently, it's only used on Mercury WMS to provide large package measurements and calculate shipping costs.",
       "group": "com\\.google\\.ar\\.sceneform",
-      "name": "sceneform",
+      "name": "core",
       "version": "1\\.\\17\\.1"
     },
     {
@@ -5177,7 +5177,7 @@
       ],
       "description": "This dependency enables Augmented Reality capability. Currently, it's only used on Mercury WMS to provide large package measurements and calculate shipping costs.",
       "group": "com\\.google\\.ar\\.sceneform\\.ux",
-      "name": "sceneform",
+      "name": "sceneform-ux",
       "version": "1\\.\\17\\.1"
     }
   ]
