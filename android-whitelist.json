@@ -2699,7 +2699,8 @@
         "com.mercadolibre.android.point_smart_helpers",
         "com.mercadolibre.android.security:security_preferences",
         "com.mercadopago.android.configurer",
-        "com.mercadopago.android.configurer.smartpos"
+        "com.mercadopago.android.configurer.smartpos",
+        "com.mercadopago.android.isp.mpoc.prometheus:magma"
       ],
       "group": "androidx\\.lifecycle",
       "name": "lifecycle-process",
