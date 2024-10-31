@@ -1638,19 +1638,26 @@
       "name": "OpenTelemetryApi",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "1.2.1"
     },
     {
+      "allows_granular_projects": [
+        "OpenTelemetry/Setup"
+      ],
       "name": "OpenTelemetryProtocolExporter",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "1.2.1"
     },
     {
+      "allows_granular_projects": [
+        "OpenTelemetry/Core",
+        "OpenTelemetry/Setup"
+      ],
       "name": "OpenTelemetrySdk",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "1.2.1"
     },
     {
       "name": "SwiftAtomics",
@@ -1811,12 +1818,65 @@
       "name": "DatadogInternal",
       "source": "public",
       "target": "production",
+      "version": "2.18.0"
+    },
+    {
+      "allows_granular_projects": [
+        "AppMonitoringSetup"
+      ],
+      "name": "DatadogCore",
+      "source": "public",
+      "target": "production",
+      "version": "2.18.0"
+    },
+    {
+      "allows_granular_projects": [
+        "AppMonitoringSetup"
+      ],
+      "name": "DatadogRUM",
+      "source": "public",
+      "target": "production",
+      "version": "2.18.0"
+    },
+    {
+      "allows_granular_projects": [
+        "AppMonitoringSetup"
+      ],
+      "name": "DatadogLogs",
+      "source": "public",
+      "target": "production",
+      "version": "2.18.0"
+    },
+    {
+      "allows_granular_projects": [
+        "AppMonitoringSetup"
+      ],
+      "name": "DatadogTrace",
+      "source": "public",
+      "target": "production",
+      "version": "2.18.0"
+    },
+    {
+      "allows_granular_projects": [
+        "AppMonitoringSetup"
+      ],
+      "name": "DatadogCrashReporting",
+      "source": "public",
+      "target": "production",
+      "version": "2.18.0"
+    },
+    {
+      "expires": "2025-02-31",
+      "name": "DatadogInternal",
+      "source": "public",
+      "target": "production",
       "version": "2.4.0"
     },
     {
       "allows_granular_projects": [
         "AppMonitoringSetup"
       ],
+      "expires": "2025-02-31",
       "name": "DatadogCore",
       "source": "public",
       "target": "production",
@@ -1826,6 +1886,7 @@
       "allows_granular_projects": [
         "AppMonitoringSetup"
       ],
+      "expires": "2025-02-31",
       "name": "DatadogRUM",
       "source": "public",
       "target": "production",
@@ -1835,6 +1896,7 @@
       "allows_granular_projects": [
         "AppMonitoringSetup"
       ],
+      "expires": "2025-02-31",
       "name": "DatadogLogs",
       "source": "public",
       "target": "production",
@@ -1844,6 +1906,7 @@
       "allows_granular_projects": [
         "AppMonitoringSetup"
       ],
+      "expires": "2025-02-31",
       "name": "DatadogTrace",
       "source": "public",
       "target": "production",
@@ -1853,6 +1916,7 @@
       "allows_granular_projects": [
         "AppMonitoringSetup"
       ],
+      "expires": "2025-02-31",
       "name": "DatadogCrashReporting",
       "source": "public",
       "target": "production",
