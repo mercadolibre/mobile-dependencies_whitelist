@@ -2083,9 +2083,6 @@
       ],
       "group": "io\\.insert-koin",
       "name": "koin-core",
-      "transitive_configuration": {
-        "transitivity": false
-      },
       "version": "3\\.2\\.4"
     },
     {
@@ -2094,9 +2091,6 @@
       ],
       "group": "io\\.insert-koin",
       "name": "koin-android",
-      "transitive_configuration": {
-        "transitivity": false
-      },
       "version": "3\\.2\\.4"
     },
     {
@@ -2705,7 +2699,8 @@
         "com.mercadolibre.android.point_smart_helpers",
         "com.mercadolibre.android.security:security_preferences",
         "com.mercadopago.android.configurer",
-        "com.mercadopago.android.configurer.smartpos"
+        "com.mercadopago.android.configurer.smartpos",
+        "com.mercadopago.android.isp.mpoc.prometheus:magma"
       ],
       "group": "androidx\\.lifecycle",
       "name": "lifecycle-process",
@@ -5164,8 +5159,8 @@
         "com.mercadolibre.android.ar.measures"
       ],
       "description": "This dependency enables Augmented Reality capability. Currently, it's only used on Mercury WMS to provide large package measurements and calculate shipping costs.",
-      "group": "com\\.google\\.ar\\.core",
-      "name": "arcore",
+      "group": "com\\.google\\.ar",
+      "name": "core",
       "version": "1\\.\\45\\.0"
     },
     {
@@ -5174,7 +5169,7 @@
       ],
       "description": "This dependency enables Augmented Reality capability. Currently, it's only used on Mercury WMS to provide large package measurements and calculate shipping costs.",
       "group": "com\\.google\\.ar\\.sceneform",
-      "name": "sceneform",
+      "name": "core",
       "version": "1\\.\\17\\.1"
     },
     {
@@ -5183,7 +5178,7 @@
       ],
       "description": "This dependency enables Augmented Reality capability. Currently, it's only used on Mercury WMS to provide large package measurements and calculate shipping costs.",
       "group": "com\\.google\\.ar\\.sceneform\\.ux",
-      "name": "sceneform",
+      "name": "sceneform-ux",
       "version": "1\\.\\17\\.1"
     }
   ]
