@@ -2083,6 +2083,9 @@
       ],
       "group": "io\\.insert-koin",
       "name": "koin-core",
+      "transitive_configuration": {
+        "transitivity": false
+      },
       "version": "3\\.2\\.4"
     },
     {
@@ -2091,7 +2094,28 @@
       ],
       "group": "io\\.insert-koin",
       "name": "koin-android",
+      "transitive_configuration": {
+        "transitivity": false
+      },
       "version": "3\\.2\\.4"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.point.mpos",
+        "com.mercadolibre.android.isp_sf"
+      ],
+      "group": "com\\.mercadolibre\\.android\\.crab_di_android",
+      "name": "core",
+      "version": "1\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.point.mpos",
+        "com.mercadolibre.android.isp_sf"
+      ],
+      "group": "com\\.mercadolibre\\.android\\.crab_di_android",
+      "name": "android",
+      "version": "1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.userbiometrics",
