@@ -1866,7 +1866,7 @@
       "version": "2.18.0"
     },
     {
-      "expires": "2025-02-31",
+      "expires": "2025-02-28",
       "name": "DatadogInternal",
       "source": "public",
       "target": "production",
@@ -1876,7 +1876,7 @@
       "allows_granular_projects": [
         "AppMonitoringSetup"
       ],
-      "expires": "2025-02-31",
+      "expires": "2025-02-28",
       "name": "DatadogCore",
       "source": "public",
       "target": "production",
@@ -1886,7 +1886,7 @@
       "allows_granular_projects": [
         "AppMonitoringSetup"
       ],
-      "expires": "2025-02-31",
+      "expires": "2025-02-28",
       "name": "DatadogRUM",
       "source": "public",
       "target": "production",
@@ -1896,7 +1896,7 @@
       "allows_granular_projects": [
         "AppMonitoringSetup"
       ],
-      "expires": "2025-02-31",
+      "expires": "2025-02-28",
       "name": "DatadogLogs",
       "source": "public",
       "target": "production",
@@ -1906,7 +1906,7 @@
       "allows_granular_projects": [
         "AppMonitoringSetup"
       ],
-      "expires": "2025-02-31",
+      "expires": "2025-02-28",
       "name": "DatadogTrace",
       "source": "public",
       "target": "production",
@@ -1916,7 +1916,7 @@
       "allows_granular_projects": [
         "AppMonitoringSetup"
       ],
-      "expires": "2025-02-31",
+      "expires": "2025-02-28",
       "name": "DatadogCrashReporting",
       "source": "public",
       "target": "production",
