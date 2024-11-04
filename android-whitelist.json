@@ -5032,12 +5032,24 @@
       "version": "3\\.3\\.2"
     },
     {
-      "allows_granular_projects": [
-        "com.mercadolibre.android.advertising"
-      ],
       "description": "This library is for manage images in Android",
       "group": "com\\.mercadolibre\\.android\\.everest_canvas",
       "name": "core",
+      "transitive_configuration": {
+        "transitivity": false
+      },
+      "version": "2\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.everest",
+        "com.mercadolibre.android.mp_search",
+        "com.mercadolibre.android.polycards",
+        "com.mercadopago.android.moneyout"
+      ],
+      "description": "This library is for manage images in Android with declarative programing",
+      "group": "com\\.mercadolibre\\.android\\.everest_canvas",
+      "name": "canvas-compose",
       "transitive_configuration": {
         "transitivity": false
       },

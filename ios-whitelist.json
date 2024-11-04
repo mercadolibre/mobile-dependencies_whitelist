@@ -1877,6 +1877,16 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "allows_granular_projects": [
+        "MPSearch"
+      ],
+      "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
+      "name": "EverestLibs/SwiftUI",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "ErrorHandler",
       "source": "private",
       "target": "production",
@@ -2325,6 +2335,17 @@
     },
     {
       "name": "EverestCanvas",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "allows_granular_projects": [
+        "EverestLibs/SwiftUI",
+        "MPSearch"
+      ],
+      "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
+      "name": "EverestCanvas/SwiftUI",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
