@@ -1235,36 +1235,6 @@
       "version": "13\\.\\+"
     },
     {
-      "expires": "2024-10-28",
-      "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
-      "name": "core",
-      "version": "13\\.\\+"
-    },
-    {
-      "expires": "2024-10-28",
-      "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
-      "name": "renderer-fresco",
-      "version": "13\\.\\+"
-    },
-    {
-      "expires": "2024-10-28",
-      "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
-      "name": "configurer",
-      "version": "13\\.\\+"
-    },
-    {
-      "allows_granular_projects": [
-        "com.mercadolibre.android.polycards",
-        "com.mercadolibre.android.tetris",
-        "com.mercadolibre.android.vpp"
-      ],
-      "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
-      "expires": "2024-10-28",
-      "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
-      "name": "compose",
-      "version": "13\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.on\\.demand\\.resources",
       "name": "core",
       "version": "14\\.\\+"
@@ -1388,12 +1358,6 @@
       "version": "21\\.\\+"
     },
     {
-      "expires": "2024-10-28",
-      "group": "com\\.mercadolibre\\.android\\.search",
-      "name": "morelikethis",
-      "version": "21\\.\\+"
-    },
-    {
       "expires": "2024-11-22",
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "search",
@@ -1448,16 +1412,6 @@
       "group": "com\\.mercadolibre\\.android\\.hi",
       "name": "calculator",
       "version": "1\\.\\+"
-    },
-    {
-      "allows_granular_projects": [
-        "com.mercadolibre.android.search"
-      ],
-      "description": "This is the MoreLikeThis standalone library, and should be deleted upon expires date so we dont have two equals libs with -> com.mercadolibre.android.more_like_this",
-      "expires": "2024-11-01",
-      "group": "com\\.mercadolibre\\.android",
-      "name": "more_like_this",
-      "version": "2\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -1643,13 +1597,6 @@
       "group": "com\\.mercadolibre\\.android\\.static_resources",
       "name": "static_resources",
       "version": "7\\.\\+"
-    },
-    {
-      "description": "This library is cross for the Mercado Pago Transfer repositories",
-      "expires": "2024-11-01",
-      "group": "com\\.mercadopago\\.android\\.digital_accounts_components",
-      "name": "digital_accounts_components",
-      "version": "12\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.digital_accounts_components",
@@ -2083,9 +2030,6 @@
       ],
       "group": "io\\.insert-koin",
       "name": "koin-core",
-      "transitive_configuration": {
-        "transitivity": false
-      },
       "version": "3\\.2\\.4"
     },
     {
@@ -2094,9 +2038,6 @@
       ],
       "group": "io\\.insert-koin",
       "name": "koin-android",
-      "transitive_configuration": {
-        "transitivity": false
-      },
       "version": "3\\.2\\.4"
     },
     {
@@ -2705,7 +2646,8 @@
         "com.mercadolibre.android.point_smart_helpers",
         "com.mercadolibre.android.security:security_preferences",
         "com.mercadopago.android.configurer",
-        "com.mercadopago.android.configurer.smartpos"
+        "com.mercadopago.android.configurer.smartpos",
+        "com.mercadopago.android.isp.mpoc.prometheus:magma"
       ],
       "group": "androidx\\.lifecycle",
       "name": "lifecycle-process",
@@ -3630,12 +3572,6 @@
       "version": "withoutGMS-15\\.\\+|mercadopago-15\\.\\+"
     },
     {
-      "expires": "2024-10-28",
-      "group": "com\\.mercadolibre\\.android\\.in_app_report",
-      "name": "MLInAppReport",
-      "version": "8\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.in_app_report",
       "name": "MLInAppReport",
       "version": "9\\.\\+"
@@ -4013,21 +3949,9 @@
       "version": "13\\.\\+"
     },
     {
-      "expires": "2024-10-29",
-      "group": "com\\.mercadolibre\\.android\\.developer_mode",
-      "name": "no-dm-core",
-      "version": "10\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.developer_mode",
       "name": "dm-core",
       "version": "13\\.\\+"
-    },
-    {
-      "expires": "2024-10-29",
-      "group": "com\\.mercadolibre\\.android\\.developer_mode",
-      "name": "dm-core",
-      "version": "10\\.\\+"
     },
     {
       "description": "The expiration date is extended to have time enough to deprecate it",
@@ -4408,30 +4332,6 @@
       "version": "3\\.\\+"
     },
     {
-      "expires": "2024-11-01",
-      "group": "com\\.mercadolibre\\.android\\.isp_sf",
-      "name": "di",
-      "version": "5\\.\\+"
-    },
-    {
-      "expires": "2024-11-01",
-      "group": "com\\.mercadolibre\\.android\\.isp_sf",
-      "name": "facade",
-      "version": "5\\.\\+"
-    },
-    {
-      "expires": "2024-11-01",
-      "group": "com\\.mercadolibre\\.android\\.isp_sf",
-      "name": "network",
-      "version": "5\\.\\+"
-    },
-    {
-      "expires": "2024-11-01",
-      "group": "com\\.mercadolibre\\.android\\.isp_sf",
-      "name": "reader_manager",
-      "version": "5\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.isp_sf",
       "name": "di",
       "version": "7\\.\\+"
@@ -4494,12 +4394,6 @@
       "group": "com\\.mercadolibre\\.android\\.wishlists",
       "name": "wishlists",
       "version": "5\\.\\+"
-    },
-    {
-      "expires": "2024-11-01",
-      "group": "com\\.mercadolibre\\.android\\.wishlists",
-      "name": "wishlists",
-      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.mobile_permissions",
@@ -4995,16 +4889,6 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadopago.android.isp.mpoc.prometheus",
-        "com.mercadopago.android.isp.point.mpoc"
-      ],
-      "expires": "2024-10-29",
-      "group": "com\\.mercadopago\\.mpos\\.android\\.mpos\\.ttpkernel",
-      "name": "visa-kernel",
-      "version": "22\\.0\\.0"
-    },
-    {
-      "allows_granular_projects": [
         "com.mercadopago.android.isp.mpoc.prometheus"
       ],
       "description": "Local attestation library for mpoc solution",
@@ -5099,8 +4983,8 @@
         "com.mercadoenvios.logistics",
         "com.mercadolibre.android.wallet.home"
       ],
-      "group": "com\\.mercadolibre\\.android\\.rtc_mobile",
-      "name": "realtime",
+      "group": "com\\.mercadolibre\\.android\\.rtc",
+      "name": "core",
       "version": "1\\.\\+"
     },
     {
@@ -5177,8 +5061,8 @@
         "com.mercadolibre.android.ar.measures"
       ],
       "description": "This dependency enables Augmented Reality capability. Currently, it's only used on Mercury WMS to provide large package measurements and calculate shipping costs.",
-      "group": "com\\.google\\.ar\\.core",
-      "name": "arcore",
+      "group": "com\\.google\\.ar",
+      "name": "core",
       "version": "1\\.\\45\\.0"
     },
     {
@@ -5187,7 +5071,7 @@
       ],
       "description": "This dependency enables Augmented Reality capability. Currently, it's only used on Mercury WMS to provide large package measurements and calculate shipping costs.",
       "group": "com\\.google\\.ar\\.sceneform",
-      "name": "sceneform",
+      "name": "core",
       "version": "1\\.\\17\\.1"
     },
     {
@@ -5196,7 +5080,7 @@
       ],
       "description": "This dependency enables Augmented Reality capability. Currently, it's only used on Mercury WMS to provide large package measurements and calculate shipping costs.",
       "group": "com\\.google\\.ar\\.sceneform\\.ux",
-      "name": "sceneform",
+      "name": "sceneform-ux",
       "version": "1\\.\\17\\.1"
     }
   ]
