@@ -4361,6 +4361,30 @@
       "version": "7\\.\\+"
     },
     {
+      "expires": "2025-01-30",
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "di",
+      "version": "5\\.\\+"
+    },
+    {
+      "expires": "2025-01-30",
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "facade",
+      "version": "5\\.\\+"
+    },
+    {
+      "expires": "2025-01-30",
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "network",
+      "version": "5\\.\\+"
+    },
+    {
+      "expires": "2025-01-30",
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "reader_manager",
+      "version": "5\\.\\+"
+    },
+    {
       "allows_granular_projects": [
         "com.mercadolibre.android.point_smartpos_fcu",
         "com.mercadolibre.android.point.mpos"
