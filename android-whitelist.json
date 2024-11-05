@@ -4974,9 +4974,15 @@
       "version": "3\\.\\+"
     },
     {
+      "expires": "2024-12-06",
       "group": "com\\.mercadolibre\\.android\\.mp_search",
       "name": "search",
       "version": "1\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.mp_search",
+      "name": "search",
+      "version": "2\\.\\+"
     },
     {
       "allows_granular_projects": [
