@@ -4974,9 +4974,21 @@
       "version": "3\\.\\+"
     },
     {
+      "expires": "2024-12-02",
+      "allows_granular_projects": [
+        "com.mercadolibre.android.wallet.home"
+      ],
       "group": "com\\.mercadolibre\\.android\\.mp_search",
       "name": "search",
       "version": "1\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.wallet.home"
+      ],
+      "group": "com\\.mercadolibre\\.android\\.mp_search",
+      "name": "search",
+      "version": "2\\.\\+"
     },
     {
       "allows_granular_projects": [
