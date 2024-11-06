@@ -1664,6 +1664,11 @@
       "version": "7\\.+"
     },
     {
+      "group": "com\\.mercadopago\\.android\\.multiplayer",
+      "name": "contacts",
+      "version": "12\\.+"
+    },
+    {
       "description": "The expiration date is extended to have time enough to deprecate it",
       "expires": "2024-12-31",
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
