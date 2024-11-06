@@ -2384,6 +2384,15 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "allows_granular_projects": [
+        "MpIntroScreen"
+      ],
+      "name": "FlowOrchestrator/StartupOrchestrator",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
       "name": "BuyingflowShipping",
       "source": "private",
       "target": "production",
