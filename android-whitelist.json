@@ -3348,9 +3348,18 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.ml_scanner"
       ],
+      "expires": "2024-11-15",
       "group": "com\\.google\\.mlkit",
       "name": "barcode-scanning",
       "version": "17\\.0\\.1"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.ml_scanner"
+      ],
+      "group": "com\\.google\\.mlkit",
+      "name": "barcode-scanning",
+      "version": "17\\.0\\.3"
     },
     {
       "allows_granular_projects": [
@@ -4332,6 +4341,30 @@
       "version": "3\\.\\+"
     },
     {
+      "expires": "2025-01-27",
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "di",
+      "version": "5\\.\\+"
+    },
+    {
+      "expires": "2025-01-27",
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "facade",
+      "version": "5\\.\\+"
+    },
+    {
+      "expires": "2025-01-27",
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "network",
+      "version": "5\\.\\+"
+    },
+    {
+      "expires": "2025-01-27",
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "reader_manager",
+      "version": "5\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.isp_sf",
       "name": "di",
       "version": "7\\.\\+"
@@ -4974,9 +5007,18 @@
       "version": "3\\.\\+"
     },
     {
+      "expires": "2024-12-02",
       "group": "com\\.mercadolibre\\.android\\.mp_search",
       "name": "search",
       "version": "1\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.wallet.home"
+      ],
+      "group": "com\\.mercadolibre\\.android\\.mp_search",
+      "name": "search",
+      "version": "2\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -4991,9 +5033,18 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.wallet.home"
       ],
+      "expires": "2024-12-02",
       "group": "com\\.mercadolibre\\.android\\.mp_search",
       "name": "widgets",
       "version": "1\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.wallet.home"
+      ],
+      "group": "com\\.mercadolibre\\.android\\.mp_search",
+      "name": "widgets",
+      "version": "2\\.\\+"
     },
     {
       "allows_granular_projects": [
