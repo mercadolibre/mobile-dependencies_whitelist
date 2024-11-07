@@ -821,6 +821,8 @@
       "version": "10\\.\\+"
     },
     {
+      "description": "Deprecation of Google Analytics",
+      "expires": "2025-03-31",
       "group": "com\\.mercadolibre\\.android",
       "name": "analytics",
       "version": "production-13\\.\\+|develop-13\\.\\+"
