@@ -2059,11 +2059,12 @@
     {
       "allows_granular_projects": [
         "com.mercadolibre.android.point.mpos",
-        "com.mercadolibre.android.isp_sf"
+        "com.mercadolibre.android.isp_sf",
+        "com.mercadolibre.android.transitivity_consumption"
       ],
       "group": "com\\.mercadolibre\\.android\\.crab_di_android",
       "name": "android",
-      "version": "1\\.\\+"
+      "version": "EXPERIMENTAL-0.1.1-20241107190224"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.userbiometrics",
