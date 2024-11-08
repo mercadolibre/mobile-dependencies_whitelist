@@ -5092,9 +5092,6 @@
       "expires": "2024-11-09",
       "group": "com\\.mercadolibre\\.android\\.everest_canvas",
       "name": "core",
-      "transitive_configuration": {
-        "transitivity": false
-      },
       "version": "2\\.\\+"
     },
     {
@@ -5109,18 +5106,12 @@
       "expires": "2024-11-09",
       "group": "com\\.mercadolibre\\.android\\.everest_canvas",
       "name": "canvas-compose",
-      "transitive_configuration": {
-        "transitivity": false
-      },
       "version": "2\\.\\+"
     },
     {
       "description": "This library is for manage images in Android",
       "group": "com\\.mercadolibre\\.android\\.everest_canvas",
       "name": "core",
-      "transitive_configuration": {
-        "transitivity": false
-      },
       "version": "3\\.\\+"
     },
     {
@@ -5134,9 +5125,6 @@
       "description": "This library is for manage images in Android with declarative programing",
       "group": "com\\.mercadolibre\\.android\\.everest_canvas",
       "name": "canvas-compose",
-      "transitive_configuration": {
-        "transitivity": false
-      },
       "version": "3\\.\\+"
     },
     {
