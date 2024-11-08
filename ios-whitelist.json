@@ -1813,12 +1813,65 @@
       "name": "DatadogInternal",
       "source": "public",
       "target": "production",
+      "version": "2.18.0"
+    },
+    {
+      "allows_granular_projects": [
+        "AppMonitoringSetup"
+      ],
+      "name": "DatadogCore",
+      "source": "public",
+      "target": "production",
+      "version": "2.18.0"
+    },
+    {
+      "allows_granular_projects": [
+        "AppMonitoringSetup"
+      ],
+      "name": "DatadogRUM",
+      "source": "public",
+      "target": "production",
+      "version": "2.18.0"
+    },
+    {
+      "allows_granular_projects": [
+        "AppMonitoringSetup"
+      ],
+      "name": "DatadogLogs",
+      "source": "public",
+      "target": "production",
+      "version": "2.18.0"
+    },
+    {
+      "allows_granular_projects": [
+        "AppMonitoringSetup"
+      ],
+      "name": "DatadogTrace",
+      "source": "public",
+      "target": "production",
+      "version": "2.18.0"
+    },
+    {
+      "allows_granular_projects": [
+        "AppMonitoringSetup"
+      ],
+      "name": "DatadogCrashReporting",
+      "source": "public",
+      "target": "production",
+      "version": "2.18.0"
+    },
+    {
+      "expires": "2025-02-28",
+      "name": "DatadogInternal",
+      "source": "public",
+      "target": "production",
       "version": "2.4.0"
     },
     {
       "allows_granular_projects": [
         "AppMonitoringSetup"
       ],
+      "expires": "2025-02-28",
       "name": "DatadogCore",
       "source": "public",
       "target": "production",
@@ -1828,6 +1881,7 @@
       "allows_granular_projects": [
         "AppMonitoringSetup"
       ],
+      "expires": "2025-02-28",
       "name": "DatadogRUM",
       "source": "public",
       "target": "production",
@@ -1837,6 +1891,7 @@
       "allows_granular_projects": [
         "AppMonitoringSetup"
       ],
+      "expires": "2025-02-28",
       "name": "DatadogLogs",
       "source": "public",
       "target": "production",
@@ -1846,6 +1901,7 @@
       "allows_granular_projects": [
         "AppMonitoringSetup"
       ],
+      "expires": "2025-02-28",
       "name": "DatadogTrace",
       "source": "public",
       "target": "production",
@@ -1855,6 +1911,7 @@
       "allows_granular_projects": [
         "AppMonitoringSetup"
       ],
+      "expires": "2025-02-28",
       "name": "DatadogCrashReporting",
       "source": "public",
       "target": "production",
@@ -1954,10 +2011,18 @@
       "version": "^~>\\s?5.[0-9]+$"
     },
     {
+      "description": "This version will be deprecated in favor of 7.0.0",
+      "expires": "2025-03-31",
       "name": "IspSf",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?6.[0-9]+$"
+    },
+    {
+      "name": "IspSf",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?7.[0-9]+$"
     },
     {
       "name": "BuyingflowCoreFlox",
