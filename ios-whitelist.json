@@ -2488,7 +2488,7 @@
       "description": "This library should be used for experimental uses only",
       "name": "RabbitHole",
       "source": "private",
-      "target": "production",
+      "target": "test",
       "version": "^~>\\s?0.[0-9]+$"
     }
   ]
