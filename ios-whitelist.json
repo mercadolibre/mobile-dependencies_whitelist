@@ -1,10 +1,13 @@
 {
   "whitelist": [
     {
+      "allows_granular_projects": [
+        "Viewability"
+      ],
       "name": "OMSDK",
       "source": "private",
       "target": "production",
-      "version": "1.4.14"
+      "version": "1.5.1"
     },
     {
       "name": "Viewability",
@@ -23,6 +26,12 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "name": "AdvertisingAnalytics",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "MLCheckoutFlow",
@@ -55,43 +64,42 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "allows_granular_projects": [
+        "MLAdjust",
+        "MLConfigurationProvider/App",
+        "MLNavigation/Core",
+        "MPConfigurationProvider/App"
+      ],
       "name": "Adjust",
       "source": "public",
       "target": "production",
       "version": "4.38.0"
     },
     {
-      "name": "AmountLabel",
-      "source": "public",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "expires": "2024-08-16",
-      "name": "Bugsnag",
-      "source": "public",
-      "target": "production",
-      "version": "6.26.0"
-    },
-    {
+      "allows_granular_projects": [
+        "AppMonitoringSetup",
+        "MLCommons/IssueTracker-NSBundle-GateKeeper"
+      ],
       "name": "Bugsnag",
       "source": "public",
       "target": "production",
       "version": "6.28.1"
     },
     {
-      "name": "BugsnagNetworkRequestPlugin",
-      "source": "public",
-      "target": "production",
-      "version": "^~>\\s?6.[0-9]+.?[0-9]*$"
-    },
-    {
+      "allows_granular_projects": [
+        "MLHome",
+        "MLSearch/Core"
+      ],
       "name": "CHTCollectionViewWaterfallLayout",
       "source": "public",
       "target": "production",
       "version": "0.8"
     },
     {
+      "allows_granular_projects": [
+        "CreditsUIComponents",
+        "MLCharts"
+      ],
       "name": "DGCharts",
       "source": "public",
       "target": "production",
@@ -119,12 +127,26 @@
       "version": "17.0.0"
     },
     {
+      "allows_granular_projects": [
+        "IspMpos",
+        "MLBFFloxComponent",
+        "MLCheckoutSDK/Integrator",
+        "MLCommonUIComponents",
+        "MPWithdraw"
+      ],
       "name": "FSQCollectionViewAlignedLayout",
       "source": "public",
       "target": "production",
       "version": "1.1.1"
     },
     {
+      "allows_granular_projects": [
+        "MLDynamicModal",
+        "MLUI/MLFullscreenModal",
+        "MLUI/MLModal",
+        "MPMoneyTransfer",
+        "MPWithdraw"
+      ],
       "name": "FXBlurView",
       "source": "public",
       "target": "production",
@@ -160,64 +182,22 @@
       "version": "10.22.0"
     },
     {
+      "allows_granular_projects": [
+        "MLRemedies/Core"
+      ],
       "name": "TensorFlowLiteSwift",
       "source": "public",
       "target": "production",
       "version": "2.5.0"
     },
     {
-      "name": "GoogleAppMeasurement",
-      "source": "public",
-      "target": "production",
-      "version": "6.8.0"
-    },
-    {
-      "name": "GoogleUtilities",
-      "source": "public",
-      "target": "production",
-      "version": "6.7.2"
-    },
-    {
-      "name": "GoogleDataTransport",
-      "source": "public",
-      "target": "production",
-      "version": "7.5.1"
-    },
-    {
-      "name": "nanopb",
-      "source": "public",
-      "target": "production",
-      "version": "1.30906.0"
-    },
-    {
-      "name": "PromisesObjC",
-      "source": "public",
-      "target": "production",
-      "version": "1.2.12"
-    },
-    {
-      "name": "GTMSessionFetcher",
-      "source": "public",
-      "target": "production",
-      "version": "1.5.0"
-    },
-    {
-      "name": "FLAnimatedImage",
-      "source": "public",
-      "target": "production",
-      "version": "1.0.15"
-    },
-    {
+      "allows_granular_projects": [
+        "MLMetrics"
+      ],
       "name": "Protobuf",
       "source": "public",
       "target": "production",
       "version": "3.25.2"
-    },
-    {
-      "name": "CMPopTipView",
-      "source": "public",
-      "target": "production",
-      "version": "2.2.0"
     },
     {
       "name": "Flox",
@@ -232,6 +212,9 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "allows_granular_projects": [
+        "IspMpos"
+      ],
       "name": "ISO8601DateFormatter",
       "source": "public",
       "target": "production",
@@ -274,44 +257,33 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "allows_granular_projects": [
+        "MLUI/MLFonts",
+        "MLUI/MLSpacing"
+      ],
       "name": "JRSwizzle",
       "source": "public",
       "target": "production",
       "version": "1.0"
     },
     {
-      "name": "Livecommerce",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
+      "allows_granular_projects": [
+        "MLMelidata",
+        "MLMelidata/MelidataSwift"
+      ],
       "name": "JWT",
       "source": "public",
       "target": "production",
       "version": "2.2.0"
     },
     {
-      "name": "Base64",
-      "source": "public",
-      "target": "production",
-      "version": "1.1.2"
-    },
-    {
+      "allows_granular_projects": [
+        "MLRecommendations"
+      ],
       "name": "MGSwipeTableCell",
       "source": "public",
       "target": "production",
       "version": "1.6.1"
-    },
-    {
-      "name": "UIImageEffects",
-      "source": "public",
-      "target": "production",
-      "version": "0.0.1"
-    },
-    {
-      "name": "SSPullToRefresh",
-      "source": "public",
-      "target": "production",
-      "version": "1.2.4"
     },
     {
       "name": "MIPXPaymentProcessorPlugin",
@@ -392,14 +364,20 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
-      "name": "MLCardDrawer",
+      "expires": "2024-11-11",
+      "name": "Polycards",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "Polycards",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "expires": "2024-09-30",
-      "name": "PxPmSelector",
+      "name": "MLCardDrawer",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
@@ -489,6 +467,15 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "allows_granular_projects": [
+        "Cashout",
+        "IspMpos",
+        "MLMoneyOut",
+        "MLMoneyOut/MercadoPago",
+        "MLRemedy",
+        "TransfersDashboard",
+        "TransfersDiscovery"
+      ],
       "name": "MLDynamicModal",
       "source": "public",
       "target": "production",
@@ -561,6 +548,12 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "name": "FfSdk",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "MLMetrics",
       "source": "private",
       "target": "production",
@@ -610,10 +603,12 @@
     },
     {
       "allows_granular_projects": [
-        "DiscountCenter",
         "AndesUI",
+        "DiscountCenter",
+        "MLSearch",
         "MLVPP",
-        "MPSearch"
+        "MPSearch",
+        "Polycards"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "name": "MLOnDemandResources/SwiftUI",
@@ -640,12 +635,6 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
-      "name": "MLRxRestClient",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
       "name": "MLCommonUIComponents",
       "source": "private",
       "target": "production",
@@ -659,6 +648,24 @@
     },
     {
       "name": "TransfersCheckout",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "TransfersComponents",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "TransfersDashboard",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "TransfersDiscovery",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
@@ -742,12 +749,6 @@
       "version": "^~>\\s?4.[0-9]+$"
     },
     {
-      "name": "MLSearch/MoreLikeThis",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?4.[0-9]+$"
-    },
-    {
       "name": "MLSecurity",
       "source": "private",
       "target": "production",
@@ -766,7 +767,7 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "expires": "2024-07-22",
+      "expires": "2024-12-22",
       "name": "MLUI",
       "source": "public",
       "target": "production",
@@ -809,6 +810,32 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "allows_granular_projects": [
+        "AndesUIDraftModal",
+        "AndesUIDraftModal/MercadoLibre",
+        "AndesUIDraftModal/MercadoPago",
+        "CardsAcquisition",
+        "CardsEngagement",
+        "CardsList",
+        "CardsList/MercadoPago",
+        "Cashin",
+        "CreditsUIComponents",
+        "CreditsUIComponents/MercadoLibre",
+        "CreditsUIComponents/MercadoPago",
+        "Gamification",
+        "HomeWallet",
+        "InsuQpageOn",
+        "IspMpos",
+        "IspSf",
+        "MerchRealestates",
+        "MerchRealestates/DismissContent",
+        "MerchRealestates/MercadoLibre",
+        "MerchRealestates/MercadoPago",
+        "MLUIComponents/MLActivities",
+        "MPMerchEngine",
+        "MPModalsEngine",
+        "MPModalsEngine/MercadoPago"
+      ],
       "name": "MPDynamicSkeleton",
       "source": "public",
       "target": "production",
@@ -833,6 +860,10 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "allows_granular_projects": [
+        "MLNotificationCenter",
+        "MLNotificationCenter/MercadoPago"
+      ],
       "name": "MPTopFloatingView",
       "source": "public",
       "target": "production",
@@ -851,19 +882,34 @@
       "version": "^~>\\s?4.[0-9]+$"
     },
     {
-      "expires": "2024-10-4",
-      "name": "MLThreeDS",
-      "source": "private",
-      "target": "production",
-      "version": "2.0.6"
-    },
-    {
+      "allows_granular_projects": [
+        "CcapCommons/ThreeDSLive",
+        "PXAddon",
+        "PXAddon/MercadoLibre",
+        "PXAddon/MercadoPago"
+      ],
+      "expires": "2025-01-03",
       "name": "MLThreeDS",
       "source": "private",
       "target": "production",
       "version": "6.6.129"
     },
     {
+      "allows_granular_projects": [
+        "CcapCommons/ThreeDSLive",
+        "PXAddon",
+        "PXAddon/MercadoLibre",
+        "PXAddon/MercadoPago"
+      ],
+      "name": "MLThreeDS",
+      "source": "private",
+      "target": "production",
+      "version": "6.6.132"
+    },
+    {
+      "allows_granular_projects": [
+        "PxTokenization"
+      ],
       "name": "TMGSDK",
       "source": "private",
       "target": "production",
@@ -882,12 +928,28 @@
       "version": "^~>\\s?3+.[0-9]+$"
     },
     {
+      "allows_granular_projects": [
+        "MLNetworking/Images",
+        "MLNetworking/Maps",
+        "MPConfigurationProvider/PINRemoteImage",
+        "MPContacts",
+        "Mplay",
+        "Mplay/Player"
+      ],
       "name": "PINCache",
       "source": "public",
       "target": "production",
       "version": "2.3.0"
     },
     {
+      "allows_granular_projects": [
+        "MLNetworking/Images",
+        "MLNetworking/Maps",
+        "MPConfigurationProvider/PINRemoteImage",
+        "MPContacts",
+        "Mplay",
+        "Mplay/Player"
+      ],
       "name": "PINRemoteImage",
       "source": "public",
       "target": "production",
@@ -906,12 +968,78 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "allows_granular_projects": [
+        "AndesUI/Core",
+        "AndesUIDraftModal",
+        "AndesUIDraftModal/MercadoLibre",
+        "AndesUIDraftModal/MercadoPago",
+        "BillPayments",
+        "BiometricSecurityUI",
+        "CardsBanking",
+        "Cashin",
+        "DaManagement",
+        "DeveloperMode/Views",
+        "Flox/Core",
+        "HomeSectionsApi/Core",
+        "HomeWallet",
+        "HubSeller",
+        "InStore",
+        "InStore-Discovery",
+        "LivenessDetection/Core",
+        "MLBiometricSecurity",
+        "MLCommonUIComponents",
+        "MLCPG/Components",
+        "MLDynamicModal",
+        "MLListings",
+        "MLMapComponent",
+        "MLMilestoneTracker",
+        "MLMoneyInV2",
+        "MLMoneyOut",
+        "MLMoneyOut/MercadoPago",
+        "MLMyBookmarks",
+        "MLNavigationCP",
+        "MLNavigationCP/ShippingLegacy",
+        "MLRemedies/Core",
+        "MLRemedy",
+        "MLUIComponents/MLActivities",
+        "MLUIComponents/MLHeader",
+        "MLUIComponents/MLOTPInput",
+        "MLUserBlocker",
+        "MLUserBlocker/MercadoLibre",
+        "MLUserBlocker/MercadoPago",
+        "MLVPP",
+        "Mplay",
+        "Mplay/Player",
+        "MPModalsEngine",
+        "MPModalsEngine/MercadoPago",
+        "MPMoneyTransfer",
+        "MPSPPrepaid",
+        "MPSPPrepaid/MercadoPago",
+        "Multiwidget",
+        "Onboarding",
+        "Pampa",
+        "Pendings",
+        "Pendings/Core",
+        "Pendings/MercadoPago",
+        "PortableWidget",
+        "PortableWidget/CoreResources",
+        "PortableWidget/MercadoLibre",
+        "PortableWidget/MercadoPago",
+        "Regulations",
+        "RequestWatcher/Core",
+        "Reseller",
+        "Reviews",
+        "SellerHomeSection"
+      ],
       "name": "PureLayout",
       "source": "public",
       "target": "production",
       "version": "3.1.2"
     },
     {
+      "allows_granular_projects": [
+        "IspMpos"
+      ],
       "name": "RSKImageCropper",
       "source": "public",
       "target": "production",
@@ -924,16 +1052,13 @@
       "version": "0.1.5"
     },
     {
+      "allows_granular_projects": [
+        "MPContacts"
+      ],
       "name": "Realm",
       "source": "public",
       "target": "production",
       "version": "10.38.0"
-    },
-    {
-      "name": "RxAtomic",
-      "source": "public",
-      "target": "production",
-      "version": "4.4.2"
     },
     {
       "name": "SmiSdk",
@@ -948,6 +1073,7 @@
       "version": "0.8.0"
     },
     {
+      "description": "Lib en ML, analisar si tienes uso",
       "name": "StyledPageControl",
       "source": "public",
       "target": "production",
@@ -960,6 +1086,37 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
+      "allows_granular_projects": [
+        "AiAssistantClient",
+        "BillPayments",
+        "BiometricSecurityUI",
+        "CardsAcquisition",
+        "CardsComponents/MercadoPago",
+        "CardsEngagement",
+        "Cashin",
+        "CreditsUIComponents",
+        "CreditsUIComponents/MercadoLibre",
+        "CreditsUIComponents/MercadoPago",
+        "DiscountCenter",
+        "HomeSectionsApi/HomeWalletUI",
+        "HubSeller",
+        "InAppReport",
+        "InStore",
+        "IspMpos",
+        "IspSf",
+        "LivenessDetection/Core",
+        "MLBiometricSecurity",
+        "MLCommonUIComponents",
+        "MLEngagementComponents",
+        "MLMoneyInV2",
+        "MLNotificationsHelpers",
+        "MLNotificationsHelpers/MercadoLibre",
+        "MLNotificationsHelpers/MercadoPago",
+        "MLRemedies/Core",
+        "MobilePermissions/Core",
+        "MPSPPrepaid",
+        "MPSPPrepaid/MercadoPago"
+      ],
       "name": "lottie-ios",
       "source": "public",
       "target": "production",
@@ -1046,8 +1203,11 @@
     {
       "allows_granular_projects": [
         "DiscountCenter",
+        "MLSearch",
         "MLVPP",
-        "MPSearch"
+        "Mplay",
+        "MPSearch",
+        "Polycards"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "name": "MLNavigation/SwiftUI",
@@ -1062,6 +1222,9 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "allows_granular_projects": [
+        "IspMpos"
+      ],
       "name": "UIImage-ResizeMagick",
       "source": "public",
       "target": "production",
@@ -1107,8 +1270,11 @@
       "allows_granular_projects": [
         "DiscountCenter",
         "FeedbackScreen",
+        "MLSearch",
         "MLVPP",
-        "MPSearch"
+        "Mplay",
+        "MPSearch",
+        "Polycards"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "name": "AndesUI/SwiftUI",
@@ -1213,6 +1379,18 @@
       "version": "^~>\\s?6.[0-9]+$"
     },
     {
+      "name": "StartupInitializerConfig",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MemoryTools",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
       "name": "GarexGpage",
       "source": "private",
       "target": "production",
@@ -1225,114 +1403,13 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
-      "name": "MLConfigurationProvider",
-      "source": "private",
-      "target": "test",
-      "version": "^~>\\s?3.[0-9]+$"
-    },
-    {
-      "name": "MPConfigurationProvider",
-      "source": "private",
-      "target": "test",
-      "version": "^~>\\s?2.[0-9]+$"
-    },
-    {
       "name": "Regulations",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "name": "OHHTTPStubs",
-      "source": "public",
-      "target": "test",
-      "version": "4.0.2"
-    },
-    {
-      "name": "SwiftLint",
-      "source": "public",
-      "target": "production",
-      "version": "0.25.1"
-    },
-    {
-      "name": "Quick",
-      "source": "public",
-      "target": "test",
-      "version": "5.0.1"
-    },
-    {
-      "name": "SnapshotTesting",
-      "source": "public",
-      "target": "test",
-      "version": "1.9.0"
-    },
-    {
-      "name": "SwiftFormat",
-      "source": "public",
-      "target": "test",
-      "version": "0.50.9"
-    },
-    {
-      "name": "HyperioniOS",
-      "source": "public",
-      "target": "test",
-      "version": "1.2.0"
-    },
-    {
-      "name": "RxBlocking",
-      "source": "public",
-      "target": "test",
-      "version": "6.5.0"
-    },
-    {
-      "name": "RxTest",
-      "source": "public",
-      "target": "test",
-      "version": "6.5.0"
-    },
-    {
-      "name": "Nimble",
-      "source": "public",
-      "target": "test",
-      "version": "11.2.1"
-    },
-    {
-      "name": "OCMock",
-      "source": "public",
-      "target": "test",
-      "version": "3.9.1"
-    },
-    {
-      "name": "IQKeyboardManager",
-      "source": "public",
-      "target": "test",
-      "version": "6.5.11"
-    },
-    {
-      "name": "IQKeyboardManagerSwift",
-      "source": "public",
-      "target": "test",
-      "version": "6.5.11"
-    },
-    {
-      "name": "Bagel",
-      "source": "public",
-      "target": "test",
-      "version": "1.4.0"
-    },
-    {
-      "name": "CocoaAsyncSocket",
-      "source": "public",
-      "target": "test",
-      "version": "7.6.5"
-    },
-    {
-      "name": "Auth0",
-      "source": "public",
-      "target": "production",
-      "version": "2.3.2"
-    },
-    {
+      "description": "esta libreria deberia ser agregada en los podspecs? [REVISAR]",
       "name": "DeveloperMode",
       "source": "private",
       "target": "production",
@@ -1340,6 +1417,12 @@
     },
     {
       "name": "RequestWatcher",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "Multiwidget",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
@@ -1387,18 +1470,9 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "name": "GoogleMLKit/TextRecognition",
-      "source": "public",
-      "target": "production",
-      "version": "2.1.0"
-    },
-    {
-      "name": "GoogleMLKit/BarcodeScanning",
-      "source": "public",
-      "target": "production",
-      "version": "2.1.0"
-    },
-    {
+      "allows_granular_projects": [
+        "IspMpos"
+      ],
       "name": "ZIPFoundation",
       "source": "public",
       "target": "production",
@@ -1429,6 +1503,9 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "allows_granular_projects": [
+        "MLCommonUIComponents"
+      ],
       "name": "GooglePlaces",
       "source": "public",
       "target": "production",
@@ -1477,6 +1554,9 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "allows_granular_projects": [
+        "Braze"
+      ],
       "name": "BrazeKitCompat",
       "source": "public",
       "target": "production",
@@ -1534,31 +1614,13 @@
       "name": "CcapSDUI",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "SmartTokenization",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?2.[0-9]+$"
-    },
-    {
-      "name": "ADAssertLayout",
-      "source": "public",
-      "target": "test",
-      "version": "1.0.1"
-    },
-    {
-      "name": "ADLayoutTest",
-      "source": "public",
-      "target": "test",
-      "version": "1.0.1"
-    },
-    {
-      "name": "SwiftCheck",
-      "source": "public",
-      "target": "test",
-      "version": "0.12.0"
     },
     {
       "name": "DevicesSdk",
@@ -1603,6 +1665,9 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "allows_granular_projects": [
+        "OpenTelemetryProtocolExporter"
+      ],
       "name": "gRPC-Swift",
       "source": "public",
       "target": "production",
@@ -1619,12 +1684,6 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?2.[0-9]+$"
-    },
-    {
-      "name": "SwiftNIO",
-      "source": "public",
-      "target": "production",
-      "version": "2.40.0"
     },
     {
       "name": "OpbRedirect",
@@ -1645,6 +1704,10 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "allows_granular_projects": [
+        "Mplay",
+        "Mplay/Player"
+      ],
       "name": "GoogleAds-IMA-iOS-SDK",
       "source": "public",
       "target": "production",
@@ -1663,12 +1726,28 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "allows_granular_projects": [
+        "Mplay"
+      ],
       "name": "BitmovinPlayer",
       "source": "private",
       "target": "production",
       "version": "3.36.1"
     },
     {
+      "allows_granular_projects": [
+        "Mplay"
+      ],
+      "name": "BitmovinAnalyticsCollector",
+      "source": "private",
+      "target": "production",
+      "version": "2.10.2"
+    },
+    {
+      "allows_granular_projects": [
+        "Mplay",
+        "Mplay/Player"
+      ],
       "name": "google-cast-sdk-no-bluetooth",
       "source": "public",
       "target": "production",
@@ -1729,49 +1808,108 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
-      "expires": "2024-09-07",
-      "name": "AppMonitoringSetup",
-      "source": "private",
+      "name": "DatadogInternal",
+      "source": "public",
       "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
+      "version": "2.18.0"
     },
     {
-      "name": "AppMonitoringSetup",
-      "source": "private",
+      "allows_granular_projects": [
+        "AppMonitoringSetup"
+      ],
+      "name": "DatadogCore",
+      "source": "public",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "2.18.0"
     },
     {
+      "allows_granular_projects": [
+        "AppMonitoringSetup"
+      ],
+      "name": "DatadogRUM",
+      "source": "public",
+      "target": "production",
+      "version": "2.18.0"
+    },
+    {
+      "allows_granular_projects": [
+        "AppMonitoringSetup"
+      ],
+      "name": "DatadogLogs",
+      "source": "public",
+      "target": "production",
+      "version": "2.18.0"
+    },
+    {
+      "allows_granular_projects": [
+        "AppMonitoringSetup"
+      ],
+      "name": "DatadogTrace",
+      "source": "public",
+      "target": "production",
+      "version": "2.18.0"
+    },
+    {
+      "allows_granular_projects": [
+        "AppMonitoringSetup"
+      ],
+      "name": "DatadogCrashReporting",
+      "source": "public",
+      "target": "production",
+      "version": "2.18.0"
+    },
+    {
+      "expires": "2025-02-28",
       "name": "DatadogInternal",
       "source": "public",
       "target": "production",
       "version": "2.4.0"
     },
     {
+      "allows_granular_projects": [
+        "AppMonitoringSetup"
+      ],
+      "expires": "2025-02-28",
       "name": "DatadogCore",
       "source": "public",
       "target": "production",
       "version": "2.4.0"
     },
     {
+      "allows_granular_projects": [
+        "AppMonitoringSetup"
+      ],
+      "expires": "2025-02-28",
       "name": "DatadogRUM",
       "source": "public",
       "target": "production",
       "version": "2.4.0"
     },
     {
+      "allows_granular_projects": [
+        "AppMonitoringSetup"
+      ],
+      "expires": "2025-02-28",
       "name": "DatadogLogs",
       "source": "public",
       "target": "production",
       "version": "2.4.0"
     },
     {
+      "allows_granular_projects": [
+        "AppMonitoringSetup"
+      ],
+      "expires": "2025-02-28",
       "name": "DatadogTrace",
       "source": "public",
       "target": "production",
       "version": "2.4.0"
     },
     {
+      "allows_granular_projects": [
+        "AppMonitoringSetup"
+      ],
+      "expires": "2025-02-28",
       "name": "DatadogCrashReporting",
       "source": "public",
       "target": "production",
@@ -1796,12 +1934,25 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "allows_granular_projects": [
+        "MPSearch"
+      ],
+      "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
+      "name": "EverestLibs/SwiftUI",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
       "name": "ErrorHandler",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "allows_granular_projects": [
+        "MLQualtrics/Core"
+      ],
       "name": "Qualtrics",
       "source": "public",
       "target": "production",
@@ -1858,10 +2009,18 @@
       "version": "^~>\\s?5.[0-9]+$"
     },
     {
+      "description": "This version will be deprecated in favor of 7.0.0",
+      "expires": "2025-03-31",
       "name": "IspSf",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?6.[0-9]+$"
+    },
+    {
+      "name": "IspSf",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?7.[0-9]+$"
     },
     {
       "name": "BuyingflowCoreFlox",
@@ -1874,6 +2033,12 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?2.[0-9]+$"
+    },
+    {
+      "name": "BuyingflowReview",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
     },
     {
       "name": "PortableWidget",
@@ -1915,7 +2080,7 @@
       "name": "Wishlists",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "BillPayments",
@@ -1942,13 +2107,37 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "allows_granular_projects": [
+        "VirtualTryOn"
+      ],
+      "description": "This version will be deprecated in favor of 18.0.1",
+      "expires": "2024-12-31",
       "name": "MFEMakeupKitRetailer",
       "source": "private",
       "target": "production",
       "version": "15.0.3"
     },
     {
+      "allows_granular_projects": [
+        "VirtualTryOn"
+      ],
+      "name": "MFEMakeupKitRetailer",
+      "source": "private",
+      "target": "production",
+      "version": "18.0.1"
+    },
+    {
       "name": "VirtualTryOn",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "allows_granular_projects": [
+        "MLVPP"
+      ],
+      "description": "This is the calculator library for production",
+      "name": "HomeIndustries",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
@@ -1960,10 +2149,13 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "allows_granular_projects": [
+        "MeliphoneVoip"
+      ],
       "name": "TwilioVoice",
       "source": "public",
       "target": "production",
-      "version": "6.10.0"
+      "version": "6.11.1"
     },
     {
       "name": "OneExperience",
@@ -2045,24 +2237,246 @@
     },
     {
       "allows_granular_projects": [
-        "EverestCanvas"
+        "EverestCanvas",
+        "EverestCanvas/Core"
       ],
       "name": "Kingfisher",
       "source": "public",
       "target": "production",
-      "version": "^~>\\s?7.[0-9]+$"
+      "version": "7.12.0"
     },
     {
       "allows_granular_projects": [
-        "EverestCanvas"
+        "EverestCanvas",
+        "EverestCanvas/Core"
       ],
       "name": "KingfisherWebP",
       "source": "public",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "1.6.0"
     },
     {
       "name": "MPSearch",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "allows_granular_projects": [
+        "HomeWallet",
+        "MPSearch"
+      ],
+      "name": "HorizontalCards",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "OHHTTPStubs",
+      "source": "public",
+      "target": "test",
+      "version": "4.0.2"
+    },
+    {
+      "name": "Quick",
+      "source": "public",
+      "target": "test",
+      "version": "5.0.1"
+    },
+    {
+      "name": "SnapshotTesting",
+      "source": "public",
+      "target": "test",
+      "version": "1.9.0"
+    },
+    {
+      "name": "SwiftFormat",
+      "source": "public",
+      "target": "test",
+      "version": "0.50.9"
+    },
+    {
+      "name": "HyperioniOS",
+      "source": "public",
+      "target": "test",
+      "version": "1.2.0"
+    },
+    {
+      "name": "Nimble",
+      "source": "public",
+      "target": "test",
+      "version": "11.2.1"
+    },
+    {
+      "name": "OCMock",
+      "source": "public",
+      "target": "test",
+      "version": "3.9.1"
+    },
+    {
+      "name": "IQKeyboardManager",
+      "source": "public",
+      "target": "test",
+      "version": "6.5.11"
+    },
+    {
+      "name": "IQKeyboardManagerSwift",
+      "source": "public",
+      "target": "test",
+      "version": "6.5.11"
+    },
+    {
+      "name": "Bagel",
+      "source": "public",
+      "target": "test",
+      "version": "1.4.0"
+    },
+    {
+      "name": "CocoaAsyncSocket",
+      "source": "public",
+      "target": "test",
+      "version": "7.6.5"
+    },
+    {
+      "name": "ADAssertLayout",
+      "source": "public",
+      "target": "test",
+      "version": "1.0.1"
+    },
+    {
+      "name": "ADLayoutTest",
+      "source": "public",
+      "target": "test",
+      "version": "1.0.1"
+    },
+    {
+      "name": "SwiftCheck",
+      "source": "public",
+      "target": "test",
+      "version": "0.12.0"
+    },
+    {
+      "allows_granular_projects": [
+        "MLSearch/Core",
+        "MLVPP"
+      ],
+      "name": "MoreLikeThis",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "allows_granular_projects": [
+        "HomeIndustries",
+        "MLSearch",
+        "MLVPP",
+        "MoreLikeThis",
+        "VirtualTryOn"
+      ],
+      "name": "VerticalsCore",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "allows_granular_projects": [
+        "MLVPP"
+      ],
+      "name": "DemandCore",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "allows_granular_projects": [
+        "AndesIntegrations/Core",
+        "MLOnDemandResources",
+        "MPConfigurationProvider/MLNetworking"
+      ],
+      "name": "AppTheme",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "EverestCanvas",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "allows_granular_projects": [
+        "EverestLibs/SwiftUI",
+        "MPSearch"
+      ],
+      "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
+      "name": "EverestCanvas/SwiftUI",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "MLEngagementComponents",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?3.[0-9]+$"
+    },
+    {
+      "allows_granular_projects": [
+        "CcapCommons",
+        "FujiDI"
+      ],
+      "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform DI squad before adding your project.",
+      "name": "CrabDI",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "allows_granular_projects": [
+        "CcapCommons"
+      ],
+      "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform DI squad before adding your project.",
+      "name": "FujiDI",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "FlowOrchestrator/Commons",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "allows_granular_projects": [
+        "MpIntroScreen"
+      ],
+      "name": "FlowOrchestrator/StartupOrchestrator",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "BuyingflowShipping",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "allows_granular_projects": [
+        "HomeWallet"
+      ],
+      "name": "Rtc",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "allows_granular_projects": [
+        "MPConfigurationProvider/App"
+      ],
+      "name": "IspMpos",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
