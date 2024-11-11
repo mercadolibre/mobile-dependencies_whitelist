@@ -5158,6 +5158,15 @@
       "group": "com\\.google\\.ar\\.sceneform\\.ux",
       "name": "sceneform-ux",
       "version": "1\\.\\17\\.1"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.vpp"
+      ],
+      "description": "This library should be used for experimental uses only",
+      "group": "com\\.mercadolibre\\.android\\.rabbit_hole",
+      "name": "rabbit_hole",
+      "version": "0\\.\\+"
     }
   ]
 }
