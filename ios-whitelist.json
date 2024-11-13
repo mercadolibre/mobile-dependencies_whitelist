@@ -2480,16 +2480,6 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "allows_granular_projects": [
-        "MLVPP"
-      ],
-      "description": "This library should be used for experimental uses only",
-      "name": "RabbitHole",
-      "source": "private",
-      "target": "test",
-      "version": "^~>\\s?0.[0-9]+$"
     }
   ]
 }
