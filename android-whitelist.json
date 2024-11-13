@@ -548,7 +548,8 @@
         "com.mercadolibre.android.point.mpos",
         "com.mercadolibre.android.remedies",
         "com.mercadolibre.android.startupinitializer",
-        "com.mercadolibre.android.virtual_try_on"
+        "com.mercadolibre.android.virtual_try_on",
+        "com.mercadopago.android.isp.point.mpoc"
       ],
       "group": "com\\.mercadolibre\\.android\\.dynamic_features",
       "name": "core",
@@ -1255,6 +1256,7 @@
         "com.mercadolibre.android.polycards",
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.vpp",
+        "com.mercadopago.android.isp.payment_contactless",
         "com.mercadopago.android.moneyout"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
@@ -1612,6 +1614,11 @@
       "group": "com\\.mercadopago\\.android\\.multiplayer",
       "name": "commons",
       "version": "5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.location",
+      "name": "core",
+      "version": "1\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.px",
@@ -2206,6 +2213,7 @@
         "com.mercadolibre.android.search",
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.vpp",
+        "com.mercadopago.android.isp.payment_contactless",
         "com.mercadopago.android.moneyout"
       ],
       "group": "com\\.mercadolibre\\.android\\.andesui",
@@ -2227,6 +2235,7 @@
         "com.mercadolibre.android.search",
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.vpp",
+        "com.mercadopago.android.isp.payment_contactless",
         "com.mercadopago.android.moneyout"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
@@ -4518,6 +4527,7 @@
         "com.mercadolibre.android.search",
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.vpp",
+        "com.mercadopago.android.isp.payment_contactless",
         "com.mercadopago.android.moneyout"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
@@ -4537,6 +4547,7 @@
         "com.mercadolibre.android.search",
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.vpp",
+        "com.mercadopago.android.isp.payment_contactless",
         "com.mercadopago.android.moneyout"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
@@ -4556,6 +4567,7 @@
         "com.mercadolibre.android.search",
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.vpp",
+        "com.mercadopago.android.isp.payment_contactless",
         "com.mercadopago.android.moneyout"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
@@ -4574,6 +4586,7 @@
         "com.mercadolibre.android.search",
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.vpp",
+        "com.mercadopago.android.isp.payment_contactless",
         "com.mercadopago.android.moneyout"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
@@ -4601,6 +4614,7 @@
         "com.mercadolibre.android.search",
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.vpp",
+        "com.mercadopago.android.isp.payment_contactless",
         "com.mercadopago.android.moneyout"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
@@ -4620,6 +4634,7 @@
         "com.mercadolibre.android.search",
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.vpp",
+        "com.mercadopago.android.isp.payment_contactless",
         "com.mercadopago.android.moneyout"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
@@ -4638,6 +4653,7 @@
         "com.mercadolibre.android.search",
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.vpp",
+        "com.mercadopago.android.isp.payment_contactless",
         "com.mercadopago.android.moneyout"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
@@ -4656,6 +4672,7 @@
         "com.mercadolibre.android.search",
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.vpp",
+        "com.mercadopago.android.isp.payment_contactless",
         "com.mercadopago.android.moneyout"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
@@ -4674,6 +4691,7 @@
         "com.mercadolibre.android.search",
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.vpp",
+        "com.mercadopago.android.isp.payment_contactless",
         "com.mercadopago.android.moneyout"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
@@ -4691,6 +4709,7 @@
         "com.mercadolibre.android.search",
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.vpp",
+        "com.mercadopago.android.isp.payment_contactless",
         "com.mercadopago.android.moneyout"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
@@ -4717,6 +4736,7 @@
         "com.mercadolibre.android.search",
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.vpp",
+        "com.mercadopago.android.isp.payment_contactless",
         "com.mercadopago.android.moneyout"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
