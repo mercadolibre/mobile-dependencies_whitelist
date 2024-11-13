@@ -548,7 +548,8 @@
         "com.mercadolibre.android.point.mpos",
         "com.mercadolibre.android.remedies",
         "com.mercadolibre.android.startupinitializer",
-        "com.mercadolibre.android.virtual_try_on"
+        "com.mercadolibre.android.virtual_try_on",
+        "com.mercadopago.android.isp.point.mpoc"
       ],
       "group": "com\\.mercadolibre\\.android\\.dynamic_features",
       "name": "core",
@@ -1613,6 +1614,11 @@
       "group": "com\\.mercadopago\\.android\\.multiplayer",
       "name": "commons",
       "version": "5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.location",
+      "name": "core",
+      "version": "1\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.px",
