@@ -548,7 +548,8 @@
         "com.mercadolibre.android.point.mpos",
         "com.mercadolibre.android.remedies",
         "com.mercadolibre.android.startupinitializer",
-        "com.mercadolibre.android.virtual_try_on"
+        "com.mercadolibre.android.virtual_try_on",
+        "com.mercadopago.android.isp.point.mpoc"
       ],
       "group": "com\\.mercadolibre\\.android\\.dynamic_features",
       "name": "core",
@@ -1257,6 +1258,7 @@
         "com.mercadolibre.android.polycards",
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.vpp",
+        "com.mercadopago.android.isp.payment_contactless",
         "com.mercadopago.android.moneyout"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
@@ -1614,6 +1616,11 @@
       "group": "com\\.mercadopago\\.android\\.multiplayer",
       "name": "commons",
       "version": "5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.location",
+      "name": "core",
+      "version": "1\\.\\+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.px",
@@ -2063,6 +2070,11 @@
       "version": "mercadopago-10\\.\\+|mercadolibre-10\\.\\+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.security",
+      "name": "securityconfig",
+      "version": "10\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.security_two_fa",
       "name": "core",
       "version": "mercadolibre-9\\.\\+|mercadopago-9\\.\\+"
@@ -2203,6 +2215,7 @@
         "com.mercadolibre.android.search",
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.vpp",
+        "com.mercadopago.android.isp.payment_contactless",
         "com.mercadopago.android.moneyout"
       ],
       "group": "com\\.mercadolibre\\.android\\.andesui",
@@ -2224,6 +2237,7 @@
         "com.mercadolibre.android.search",
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.vpp",
+        "com.mercadopago.android.isp.payment_contactless",
         "com.mercadopago.android.moneyout"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
@@ -2536,10 +2550,15 @@
       "version": "1\\.1\\.0"
     },
     {
-      "expires": "2024-11-11",
+      "expires": "2024-11-25",
       "group": "androidx\\.constraintlayout",
       "name": "constraintlayout",
       "version": "2\\.0\\.4"
+    },
+    {
+      "group": "androidx\\.constraintlayout",
+      "name": "constraintlayout",
+      "version": "2\\.1\\.4"
     },
     {
       "group": "androidx\\.core",
@@ -3743,7 +3762,7 @@
       ],
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "seller",
-      "version": "22\\.\\+"
+      "version": "23\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -3751,7 +3770,7 @@
       ],
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "payer",
-      "version": "22\\.\\+"
+      "version": "23\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -3759,7 +3778,7 @@
       ],
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "commons",
-      "version": "22\\.\\+"
+      "version": "23\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -3767,7 +3786,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.cashout",
       "name": "cashout",
-      "version": "19\\.\\+"
+      "version": "20\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -3776,7 +3795,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "rating",
-      "version": "14\\.\\+"
+      "version": "15\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -3785,7 +3804,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "core",
-      "version": "14\\.\\+"
+      "version": "15\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -3794,7 +3813,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "feedback",
-      "version": "14\\.\\+"
+      "version": "15\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -3803,7 +3822,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "tab",
-      "version": "14\\.\\+"
+      "version": "15\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -3812,7 +3831,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "ui_component",
-      "version": "14\\.\\+"
+      "version": "15\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -3821,7 +3840,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "commons",
-      "version": "14\\.\\+"
+      "version": "15\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -3838,7 +3857,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "map",
-      "version": "14\\.\\+"
+      "version": "15\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -3847,7 +3866,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "report",
-      "version": "14\\.\\+"
+      "version": "15\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -3856,7 +3875,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.cash_rails",
       "name": "business_component",
-      "version": "14\\.\\+"
+      "version": "15\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.mp_sellers_growth",
@@ -4510,6 +4529,7 @@
         "com.mercadolibre.android.search",
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.vpp",
+        "com.mercadopago.android.isp.payment_contactless",
         "com.mercadopago.android.moneyout"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
@@ -4529,6 +4549,7 @@
         "com.mercadolibre.android.search",
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.vpp",
+        "com.mercadopago.android.isp.payment_contactless",
         "com.mercadopago.android.moneyout"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
@@ -4548,6 +4569,7 @@
         "com.mercadolibre.android.search",
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.vpp",
+        "com.mercadopago.android.isp.payment_contactless",
         "com.mercadopago.android.moneyout"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
@@ -4566,6 +4588,7 @@
         "com.mercadolibre.android.search",
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.vpp",
+        "com.mercadopago.android.isp.payment_contactless",
         "com.mercadopago.android.moneyout"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
@@ -4593,6 +4616,7 @@
         "com.mercadolibre.android.search",
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.vpp",
+        "com.mercadopago.android.isp.payment_contactless",
         "com.mercadopago.android.moneyout"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
@@ -4612,6 +4636,7 @@
         "com.mercadolibre.android.search",
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.vpp",
+        "com.mercadopago.android.isp.payment_contactless",
         "com.mercadopago.android.moneyout"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
@@ -4630,6 +4655,7 @@
         "com.mercadolibre.android.search",
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.vpp",
+        "com.mercadopago.android.isp.payment_contactless",
         "com.mercadopago.android.moneyout"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
@@ -4648,6 +4674,7 @@
         "com.mercadolibre.android.search",
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.vpp",
+        "com.mercadopago.android.isp.payment_contactless",
         "com.mercadopago.android.moneyout"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
@@ -4666,6 +4693,7 @@
         "com.mercadolibre.android.search",
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.vpp",
+        "com.mercadopago.android.isp.payment_contactless",
         "com.mercadopago.android.moneyout"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
@@ -4683,6 +4711,7 @@
         "com.mercadolibre.android.search",
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.vpp",
+        "com.mercadopago.android.isp.payment_contactless",
         "com.mercadopago.android.moneyout"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
@@ -4709,6 +4738,7 @@
         "com.mercadolibre.android.search",
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.vpp",
+        "com.mercadopago.android.isp.payment_contactless",
         "com.mercadopago.android.moneyout"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
@@ -5091,27 +5121,6 @@
     },
     {
       "description": "This library is for manage images in Android",
-      "expires": "2024-11-09",
-      "group": "com\\.mercadolibre\\.android\\.everest_canvas",
-      "name": "core",
-      "version": "2\\.\\+"
-    },
-    {
-      "allows_granular_projects": [
-        "com.mercadolibre.android.everest",
-        "com.mercadolibre.android.everest_canvas",
-        "com.mercadolibre.android.mp_search",
-        "com.mercadolibre.android.polycards",
-        "com.mercadopago.android.moneyout"
-      ],
-      "description": "This library is for manage images in Android with declarative programing",
-      "expires": "2024-11-09",
-      "group": "com\\.mercadolibre\\.android\\.everest_canvas",
-      "name": "canvas-compose",
-      "version": "2\\.\\+"
-    },
-    {
-      "description": "This library is for manage images in Android",
       "group": "com\\.mercadolibre\\.android\\.everest_canvas",
       "name": "core",
       "version": "3\\.\\+"
@@ -5155,6 +5164,15 @@
       "group": "com\\.google\\.ar\\.sceneform\\.ux",
       "name": "sceneform-ux",
       "version": "1\\.\\17\\.1"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.vpp"
+      ],
+      "description": "This library should be used for experimental uses only",
+      "group": "com\\.mercadolibre\\.android\\.rabbit_hole",
+      "name": "rabbithole",
+      "version": "0\\.\\+"
     }
   ]
 }
