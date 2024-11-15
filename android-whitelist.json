@@ -1719,11 +1719,34 @@
       "version": "9\\.+"
     },
     {
+      "description": "The expiration date is extended to have time enough to deprecate it",
+      "expires": "2024-12-12",
       "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
       "name": "mpoc",
       "version": "2\\.+"
     },
     {
+      "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
+      "name": "mypinpad",
+      "version": "3\\.+"
+    },  
+    {
+      "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
+      "name": "mpoc",
+      "version": "3\\.+"
+    }, 
+    { "allows_granular_projects": [
+        "com.mercadolibre.android.remedy",
+        "com.mercadopago.android.px",
+        "com.mercadolibre.android:cardform"
+      ],
+      "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
+      "name": "tte",
+      "version": "3\\.+"
+    },
+    {
+     "description": "The expiration date is extended to have time enough to deprecate it",
+      "expires": "2024-12-12",
       "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
       "name": "mypinpad",
       "version": "2\\.+"
