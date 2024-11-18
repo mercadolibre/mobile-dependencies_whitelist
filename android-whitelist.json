@@ -1744,7 +1744,8 @@
       "name": "mpoc",
       "version": "3\\.+"
     }, 
-    { "allows_granular_projects": [
+    { 
+      "allows_granular_projects": [
         "com.mercadolibre.android.remedy",
         "com.mercadopago.android.px",
         "com.mercadolibre.android:cardform"
@@ -1754,7 +1755,7 @@
       "version": "3\\.+"
     },
     {
-      "group": "com\\.mercadopago\\.android\\.isp\\.mpoc",
+      "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc"",
       "name": "prometheus",
       "version": "3\\.+"
     },
