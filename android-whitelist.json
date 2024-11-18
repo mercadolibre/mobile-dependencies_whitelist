@@ -1769,9 +1769,7 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.remedy",
-        "com.mercadopago.android.px",
-        "com.mercadolibre.android:cardform"
+        "com.mercadopago.android.isp.point.mpos:softpos"
       ],
       "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
       "name": "tte",
