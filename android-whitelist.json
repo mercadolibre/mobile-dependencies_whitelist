@@ -1727,8 +1727,9 @@
     },
     { 
       "allows_granular_projects": [
-        "com.mercadopago.android.isp.point.mpos",
-        "com.mercadopago.android.isp.point.mpoc.tte
+        "com.mercadopago.android.isp.point.mpos:softpos",
+        "com.mercadopago.android.isp.point.mpoc:tte",
+        "com.mercadopago.dynamic.feature.mpoc"
       ],
       "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
       "name": "mypinpad",
@@ -1736,8 +1737,8 @@
     },  
     {
       "allows_granular_projects": [
-        "com.mercadopago.android.isp.point.mpos",
-        "com.mercadopago.android.isp.point.mpoc.tte
+        "com.mercadopago.android.isp.point.mpos:softpos",
+        "com.mercadopago.android.isp.point.mpoc:tte"
       ],
       "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
       "name": "mpoc",
