@@ -1727,9 +1727,9 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.app_monitoring",
-        "com.mercadolibre.android.cardsnfcwallets",
-        "com.mercadolibre.android.commons",
+        "com.mercadopago.dynamic.feature.mpoc",
+        "com.mercadopago.android.isp.point.mpoc:tte",
+        "com.mercadopago.android.isp.point.mpos:softpos",
         "com.mercadopago.point"
       ],
       "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
