@@ -1726,6 +1726,11 @@
       "version": "2\\.+"
     },
     {
+      "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
+      "name": "mpoc",
+      "version": "3\\.+"
+    },
+    {
       "description": "The expiration date is extended to have time enough to deprecate it",
       "expires": "2024-12-31",
       "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
@@ -1733,9 +1738,19 @@
       "version": "2\\.+"
     },
     {
+      "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
+      "name": "mypinpad",
+      "version": "3\\.+"
+    },
+    {
       "group": "com\\.mercadopago\\.android\\.isp\\.mpoc",
       "name": "prometheus",
       "version": "2\\.+"
+    },
+    {
+      "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
+      "name": "tte",
+      "version": "3\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.mpos\\.android\\.sdk_mpp",
