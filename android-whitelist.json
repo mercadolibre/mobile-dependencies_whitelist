@@ -1411,9 +1411,19 @@
         "com.mercadolibre.android.vpp"
       ],
       "description": "This is the calculator library for production",
+      "expires": "2024-11-25",
       "group": "com\\.mercadolibre\\.android\\.hi",
       "name": "calculator",
       "version": "1\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.vpp"
+      ],
+      "description": "This is the calculator library for production",
+      "group": "com\\.mercadolibre\\.android\\.hi",
+      "name": "calculator",
+      "version": "2\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -1908,7 +1918,7 @@
         "com.mercadolibre.android.cardsbanking"
       ],
       "description": "Esta libs se encuentra deprecada, recomendamos utilizar data dispatcher",
-      "expires": "2024-12-01",
+      "expires": "2025-02-01",
       "group": "org\\.greenrobot",
       "name": "eventbus",
       "version": "3\\.1\\.1"
@@ -1920,7 +1930,7 @@
         "com.mercadolibre.android.myml.questions"
       ],
       "description": "Esta libs se encuentra deprecada, recomendamos utilizar data dispatcher",
-      "expires": "2024-12-01",
+      "expires": "2025-02-01",
       "group": "de\\.greenrobot",
       "name": "eventbus",
       "version": "2\\.4\\.0"
@@ -3367,15 +3377,6 @@
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-mlkit-barcode-scanning",
       "version": "18\\.3\\.0"
-    },
-    {
-      "allows_granular_projects": [
-        "com.mercadolibre.android.ml_scanner"
-      ],
-      "expires": "2024-11-15",
-      "group": "com\\.google\\.mlkit",
-      "name": "barcode-scanning",
-      "version": "17\\.0\\.1"
     },
     {
       "allows_granular_projects": [
