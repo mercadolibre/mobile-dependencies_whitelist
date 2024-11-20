@@ -1318,8 +1318,11 @@
       "version": "11\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.vpp"
+      ],
       "group": "com\\.mercadolibre\\.android\\.qadb",
-      "version": "9\\.\\+"
+      "version": "11\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.remedy",
@@ -1517,8 +1520,11 @@
       "version": "12\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.qadb"
+      ],
       "group": "com\\.mercadolibre\\.android\\.vpp",
-      "version": "10\\.\\+"
+      "version": "11\\.\\+"
     },
     {
       "allows_granular_projects": [
