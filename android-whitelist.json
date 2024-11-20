@@ -1318,8 +1318,11 @@
       "version": "11\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.vpp"
+      ],
       "group": "com\\.mercadolibre\\.android\\.qadb",
-      "version": "9\\.\\+"
+      "version": "11\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.remedy",
@@ -1411,9 +1414,19 @@
         "com.mercadolibre.android.vpp"
       ],
       "description": "This is the calculator library for production",
+      "expires": "2024-11-25",
       "group": "com\\.mercadolibre\\.android\\.hi",
       "name": "calculator",
       "version": "1\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.vpp"
+      ],
+      "description": "This is the calculator library for production",
+      "group": "com\\.mercadolibre\\.android\\.hi",
+      "name": "calculator",
+      "version": "2\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -1507,8 +1520,11 @@
       "version": "12\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.qadb"
+      ],
       "group": "com\\.mercadolibre\\.android\\.vpp",
-      "version": "10\\.\\+"
+      "version": "11\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -1951,7 +1967,7 @@
         "com.mercadolibre.android.cardsbanking"
       ],
       "description": "Esta libs se encuentra deprecada, recomendamos utilizar data dispatcher",
-      "expires": "2024-12-01",
+      "expires": "2025-02-01",
       "group": "org\\.greenrobot",
       "name": "eventbus",
       "version": "3\\.1\\.1"
@@ -1963,7 +1979,7 @@
         "com.mercadolibre.android.myml.questions"
       ],
       "description": "Esta libs se encuentra deprecada, recomendamos utilizar data dispatcher",
-      "expires": "2024-12-01",
+      "expires": "2025-02-01",
       "group": "de\\.greenrobot",
       "name": "eventbus",
       "version": "2\\.4\\.0"
@@ -2094,6 +2110,26 @@
       "group": "io\\.insert-koin",
       "name": "koin-android",
       "version": "3\\.2\\.4"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.flox",
+        "com.mercadolibre.android.isp_sf",
+        "com.mercadolibre.android.point.mpos"
+      ],
+      "group": "com\\.mercadolibre\\.android\\.crab_di_android",
+      "name": "core",
+      "version": "1\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.flox",
+        "com.mercadolibre.android.isp_sf",
+        "com.mercadolibre.android.point.mpos"
+      ],
+      "group": "com\\.mercadolibre\\.android\\.crab_di_android",
+      "name": "android",
+      "version": "1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.userbiometrics",
@@ -3086,7 +3122,6 @@
         "com.mercadolibre.android:user_configuration",
         "com.mercadolibre.android.cardsbanking",
         "com.mercadolibre.android.ccap",
-        "com.mercadolibre.android.crab_di_android",
         "com.mercadolibre.android.gamification",
         "com.mercadolibre.android.ignite",
         "com.mercadolibre.android.mercadopago_login",
@@ -3410,15 +3445,6 @@
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-mlkit-barcode-scanning",
       "version": "18\\.3\\.0"
-    },
-    {
-      "allows_granular_projects": [
-        "com.mercadolibre.android.ml_scanner"
-      ],
-      "expires": "2024-11-15",
-      "group": "com\\.google\\.mlkit",
-      "name": "barcode-scanning",
-      "version": "17\\.0\\.1"
     },
     {
       "allows_granular_projects": [
@@ -5141,7 +5167,8 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.mlwebkit",
         "com.mercadolibre.android.on.demand.resources",
-        "com.mercadopago.android.configurer"
+        "com.mercadopago.android.configurer",
+        "com.mercadopago.android.configurer.smartpos"
       ],
       "description": "This library was created to manage application themes. Its use is restricted, contact everest",
       "group": "com\\.mercadolibre\\.android\\.app_theme",
@@ -5149,7 +5176,7 @@
       "transitive_configuration": {
         "transitivity": false
       },
-      "version": "0\\.\\+"
+      "version": "1\\.\\+"
     },
     {
       "allows_granular_projects": [
