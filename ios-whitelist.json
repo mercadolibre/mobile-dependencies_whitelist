@@ -364,13 +364,6 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
-      "expires": "2024-11-11",
-      "name": "Polycards",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
       "name": "Polycards",
       "source": "private",
       "target": "production",
@@ -811,9 +804,6 @@
     },
     {
       "allows_granular_projects": [
-        "AndesUIDraftModal",
-        "AndesUIDraftModal/MercadoLibre",
-        "AndesUIDraftModal/MercadoPago",
         "CardsAcquisition",
         "CardsEngagement",
         "CardsList",
@@ -970,9 +960,6 @@
     {
       "allows_granular_projects": [
         "AndesUI/Core",
-        "AndesUIDraftModal",
-        "AndesUIDraftModal/MercadoLibre",
-        "AndesUIDraftModal/MercadoPago",
         "BillPayments",
         "BiometricSecurityUI",
         "CardsBanking",
@@ -1120,7 +1107,7 @@
       "name": "lottie-ios",
       "source": "public",
       "target": "production",
-      "version": "2.0.6|2.5.0|^~>\\s?2.0$"
+      "version": "2.5.0|^~>\\s?2.0$"
     },
     {
       "name": "MLFluxClient",
@@ -1811,12 +1798,65 @@
       "name": "DatadogInternal",
       "source": "public",
       "target": "production",
+      "version": "2.18.0"
+    },
+    {
+      "allows_granular_projects": [
+        "AppMonitoringSetup"
+      ],
+      "name": "DatadogCore",
+      "source": "public",
+      "target": "production",
+      "version": "2.18.0"
+    },
+    {
+      "allows_granular_projects": [
+        "AppMonitoringSetup"
+      ],
+      "name": "DatadogRUM",
+      "source": "public",
+      "target": "production",
+      "version": "2.18.0"
+    },
+    {
+      "allows_granular_projects": [
+        "AppMonitoringSetup"
+      ],
+      "name": "DatadogLogs",
+      "source": "public",
+      "target": "production",
+      "version": "2.18.0"
+    },
+    {
+      "allows_granular_projects": [
+        "AppMonitoringSetup"
+      ],
+      "name": "DatadogTrace",
+      "source": "public",
+      "target": "production",
+      "version": "2.18.0"
+    },
+    {
+      "allows_granular_projects": [
+        "AppMonitoringSetup"
+      ],
+      "name": "DatadogCrashReporting",
+      "source": "public",
+      "target": "production",
+      "version": "2.18.0"
+    },
+    {
+      "expires": "2025-02-28",
+      "name": "DatadogInternal",
+      "source": "public",
+      "target": "production",
       "version": "2.4.0"
     },
     {
       "allows_granular_projects": [
         "AppMonitoringSetup"
       ],
+      "expires": "2025-02-28",
       "name": "DatadogCore",
       "source": "public",
       "target": "production",
@@ -1826,6 +1866,7 @@
       "allows_granular_projects": [
         "AppMonitoringSetup"
       ],
+      "expires": "2025-02-28",
       "name": "DatadogRUM",
       "source": "public",
       "target": "production",
@@ -1835,6 +1876,7 @@
       "allows_granular_projects": [
         "AppMonitoringSetup"
       ],
+      "expires": "2025-02-28",
       "name": "DatadogLogs",
       "source": "public",
       "target": "production",
@@ -1844,6 +1886,7 @@
       "allows_granular_projects": [
         "AppMonitoringSetup"
       ],
+      "expires": "2025-02-28",
       "name": "DatadogTrace",
       "source": "public",
       "target": "production",
@@ -1853,6 +1896,7 @@
       "allows_granular_projects": [
         "AppMonitoringSetup"
       ],
+      "expires": "2025-02-28",
       "name": "DatadogCrashReporting",
       "source": "public",
       "target": "production",
@@ -1872,6 +1916,16 @@
     },
     {
       "name": "EverestLibs/(Core|Data|Networking|UI|Tracking|Hardware|DevTools)",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "allows_granular_projects": [
+        "MPSearch"
+      ],
+      "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
+      "name": "EverestLibs/SwiftUI",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
@@ -1942,10 +1996,18 @@
       "version": "^~>\\s?5.[0-9]+$"
     },
     {
+      "description": "This version will be deprecated in favor of 7.0.0",
+      "expires": "2025-03-31",
       "name": "IspSf",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?6.[0-9]+$"
+    },
+    {
+      "name": "IspSf",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?7.[0-9]+$"
     },
     {
       "name": "BuyingflowCoreFlox",
@@ -2330,6 +2392,17 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "allows_granular_projects": [
+        "EverestLibs/SwiftUI",
+        "MPSearch"
+      ],
+      "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
+      "name": "EverestCanvas/SwiftUI",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
       "name": "MLEngagementComponents",
       "source": "private",
       "target": "production",
@@ -2363,6 +2436,15 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "allows_granular_projects": [
+        "MpIntroScreen"
+      ],
+      "name": "FlowOrchestrator/StartupOrchestrator",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
       "name": "BuyingflowShipping",
       "source": "private",
       "target": "production",
@@ -2372,7 +2454,7 @@
       "allows_granular_projects": [
         "HomeWallet"
       ],
-      "name": "RtcMobile",
+      "name": "Rtc",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
@@ -2385,6 +2467,15 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "allows_granular_projects": [
+        "IspMpos"
+      ],
+      "name": "IspTtp",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
     }
   ]
 }
