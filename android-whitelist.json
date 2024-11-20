@@ -2069,6 +2069,26 @@
       "version": "3\\.2\\.4"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.flox",
+        "com.mercadolibre.android.isp_sf",
+        "com.mercadolibre.android.point.mpos"
+      ],
+      "group": "com\\.mercadolibre\\.android\\.crab_di_android",
+      "name": "core",
+      "version": "1\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.flox",
+        "com.mercadolibre.android.isp_sf",
+        "com.mercadolibre.android.point.mpos"
+      ],
+      "group": "com\\.mercadolibre\\.android\\.crab_di_android",
+      "name": "android",
+      "version": "1\\.\\+"
+    },
+    {
       "group": "com\\.mercadolibre\\.android\\.userbiometrics",
       "name": "core",
       "version": "10\\.\\+"
@@ -3052,7 +3072,6 @@
         "com.mercadolibre.android:user_configuration",
         "com.mercadolibre.android.cardsbanking",
         "com.mercadolibre.android.ccap",
-        "com.mercadolibre.android.crab_di_android",
         "com.mercadolibre.android.gamification",
         "com.mercadolibre.android.ignite",
         "com.mercadolibre.android.mercadopago_login",
