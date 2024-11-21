@@ -1320,8 +1320,11 @@
       "version": "11\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.vpp"
+      ],
       "group": "com\\.mercadolibre\\.android\\.qadb",
-      "version": "9\\.\\+"
+      "version": "11\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.remedy",
@@ -1413,9 +1416,19 @@
         "com.mercadolibre.android.vpp"
       ],
       "description": "This is the calculator library for production",
+      "expires": "2024-11-25",
       "group": "com\\.mercadolibre\\.android\\.hi",
       "name": "calculator",
       "version": "1\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.vpp"
+      ],
+      "description": "This is the calculator library for production",
+      "group": "com\\.mercadolibre\\.android\\.hi",
+      "name": "calculator",
+      "version": "2\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -1509,8 +1522,11 @@
       "version": "12\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.qadb"
+      ],
       "group": "com\\.mercadolibre\\.android\\.vpp",
-      "version": "10\\.\\+"
+      "version": "11\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -1721,6 +1737,8 @@
       "version": "9\\.+"
     },
     {
+      "description": "The expiration date is extended to have time enough to deprecate it",
+      "expires": "2024-12-10",
       "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
       "name": "mpoc",
       "version": "2\\.+"
@@ -1728,12 +1746,53 @@
     {
       "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
       "name": "mypinpad",
+      "version": "3\\.+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadopago.android.isp.point.mpos",
+        "com.mercadopago.dynamic.feature.mpoc"
+      ],
+      "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
+      "name": "mpoc",
+      "version": "3\\.+"
+    },
+    {
+      "description": "The expiration date is extended to have time enough to deprecate it",
+      "expires": "2024-12-10",
+      "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
+      "name": "mypinpad",
       "version": "2\\.+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadopago.android.isp.point.mpos"
+      ],
+      "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
+      "name": "mypinpad",
+      "version": "3\\.+"
+    },
+    {
+      "description": "The expiration date is extended to have time enough to deprecate it",
+      "expires": "2024-12-10",
       "group": "com\\.mercadopago\\.android\\.isp\\.mpoc",
       "name": "prometheus",
       "version": "2\\.+"
+    },
+    {
+      "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
+      "name": "prometheus",
+      "version": "3\\.+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android:cardform",
+        "com.mercadolibre.android.remedy",
+        "com.mercadopago.android.px"
+      ],
+      "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
+      "name": "tte",
+      "version": "3\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.mpos\\.android\\.sdk_mpp",
@@ -1910,7 +1969,7 @@
         "com.mercadolibre.android.cardsbanking"
       ],
       "description": "Esta libs se encuentra deprecada, recomendamos utilizar data dispatcher",
-      "expires": "2024-12-01",
+      "expires": "2025-02-01",
       "group": "org\\.greenrobot",
       "name": "eventbus",
       "version": "3\\.1\\.1"
@@ -1922,7 +1981,7 @@
         "com.mercadolibre.android.myml.questions"
       ],
       "description": "Esta libs se encuentra deprecada, recomendamos utilizar data dispatcher",
-      "expires": "2024-12-01",
+      "expires": "2025-02-01",
       "group": "de\\.greenrobot",
       "name": "eventbus",
       "version": "2\\.4\\.0"
@@ -2053,6 +2112,26 @@
       "group": "io\\.insert-koin",
       "name": "koin-android",
       "version": "3\\.2\\.4"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.flox",
+        "com.mercadolibre.android.isp_sf",
+        "com.mercadolibre.android.point.mpos"
+      ],
+      "group": "com\\.mercadolibre\\.android\\.crab_di_android",
+      "name": "core",
+      "version": "1\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.flox",
+        "com.mercadolibre.android.isp_sf",
+        "com.mercadolibre.android.point.mpos"
+      ],
+      "group": "com\\.mercadolibre\\.android\\.crab_di_android",
+      "name": "android",
+      "version": "1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.userbiometrics",
@@ -2391,7 +2470,6 @@
     {
       "allows_granular_projects": [
         "com.mercadoenvios.android.shipping-toolkit",
-        "com.mercadolibre.android.crab_di_android",
         "com.mercadolibre.android.flox",
         "com.mercadolibre.android.insu_flox_components",
         "com.mercadolibre.android.mlwebkit",
@@ -2752,7 +2830,6 @@
         "com.mercadolibre.android:ai-assistant-client",
         "com.mercadolibre.android.cash_rails",
         "com.mercadolibre.android.ccap",
-        "com.mercadolibre.android.crab_di_android",
         "com.mercadolibre.android.cross_app_links",
         "com.mercadolibre.android.errorhandler.v2",
         "com.mercadolibre.android.mplay",
@@ -2761,7 +2838,6 @@
         "com.mercadolibre.android.point_smart_wrapper",
         "com.mercadolibre.android.point_smartpos_fcu",
         "com.mercadolibre.android.request_watcher",
-        "com.mercadolibre.android.test_crab_di",
         "com.mercadolibre.prepapp.android",
         "com.mercadopago.android.istanbul",
         "com.mercadopago.android.multiplayer",
@@ -2779,7 +2855,6 @@
         "com.mercadolibre.android:ai-assistant-client",
         "com.mercadolibre.android.cash_rails",
         "com.mercadolibre.android.ccap",
-        "com.mercadolibre.android.crab_di_android",
         "com.mercadolibre.android.cross_app_links",
         "com.mercadolibre.android.errorhandler.v2",
         "com.mercadolibre.android.payment_flow_fcu",
@@ -2787,7 +2862,6 @@
         "com.mercadolibre.android.point_smart_wrapper",
         "com.mercadolibre.android.point_smartpos_fcu",
         "com.mercadolibre.android.request_watcher",
-        "com.mercadolibre.android.test_crab_di",
         "com.mercadopago.android.istanbul",
         "com.mercadopago.android.multiplayer",
         "com.mercadopago.android.smartpos",
@@ -2804,7 +2878,6 @@
         "com.mercadolibre.android:ai-assistant-client",
         "com.mercadolibre.android.cash_rails",
         "com.mercadolibre.android.ccap",
-        "com.mercadolibre.android.crab_di_android",
         "com.mercadolibre.android.cross_app_links",
         "com.mercadolibre.android.discounts.payers",
         "com.mercadolibre.android.errorhandler.v2",
@@ -2812,7 +2885,6 @@
         "com.mercadolibre.android.payment_flow_fcu",
         "com.mercadolibre.android.point_smart_wrapper",
         "com.mercadolibre.android.request_watcher",
-        "com.mercadolibre.android.test_crab_di",
         "com.mercadolibre.prepapp.android",
         "com.mercadopago.android.istanbul",
         "com.mercadopago.android.multiplayer",
@@ -3045,7 +3117,6 @@
         "com.mercadolibre.android:user_configuration",
         "com.mercadolibre.android.cardsbanking",
         "com.mercadolibre.android.ccap",
-        "com.mercadolibre.android.crab_di_android",
         "com.mercadolibre.android.gamification",
         "com.mercadolibre.android.ignite",
         "com.mercadolibre.android.mercadopago_login",
@@ -3369,15 +3440,6 @@
       "group": "com\\.google\\.android\\.gms",
       "name": "play-services-mlkit-barcode-scanning",
       "version": "18\\.3\\.0"
-    },
-    {
-      "allows_granular_projects": [
-        "com.mercadolibre.android.ml_scanner"
-      ],
-      "expires": "2024-11-15",
-      "group": "com\\.google\\.mlkit",
-      "name": "barcode-scanning",
-      "version": "17\\.0\\.1"
     },
     {
       "allows_granular_projects": [
@@ -5100,7 +5162,8 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.mlwebkit",
         "com.mercadolibre.android.on.demand.resources",
-        "com.mercadopago.android.configurer"
+        "com.mercadopago.android.configurer",
+        "com.mercadopago.android.configurer.smartpos"
       ],
       "description": "This library was created to manage application themes. Its use is restricted, contact everest",
       "group": "com\\.mercadolibre\\.android\\.app_theme",
@@ -5108,7 +5171,7 @@
       "transitive_configuration": {
         "transitivity": false
       },
-      "version": "0\\.\\+"
+      "version": "1\\.\\+"
     },
     {
       "allows_granular_projects": [

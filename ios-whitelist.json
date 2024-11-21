@@ -366,13 +366,6 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
-      "expires": "2024-11-11",
-      "name": "Polycards",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
       "name": "Polycards",
       "source": "private",
       "target": "production",
@@ -813,9 +806,6 @@
     },
     {
       "allows_granular_projects": [
-        "AndesUIDraftModal",
-        "AndesUIDraftModal/MercadoLibre",
-        "AndesUIDraftModal/MercadoPago",
         "CardsAcquisition",
         "CardsEngagement",
         "CardsList",
@@ -972,9 +962,6 @@
     {
       "allows_granular_projects": [
         "AndesUI/Core",
-        "AndesUIDraftModal",
-        "AndesUIDraftModal/MercadoLibre",
-        "AndesUIDraftModal/MercadoPago",
         "BillPayments",
         "BiometricSecurityUI",
         "CardsBanking",
@@ -2426,7 +2413,8 @@
     {
       "allows_granular_projects": [
         "CcapCommons",
-        "FujiDI"
+        "FujiDI",
+        "MLLocation"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform DI squad before adding your project.",
       "name": "CrabDI",
