@@ -2471,7 +2471,8 @@
     },
     {
       "allows_granular_projects": [
-        "IspMpos"
+        "IspMpos",
+        "IspTte"
       ],
       "name": "IspTtp",
       "source": "private",
