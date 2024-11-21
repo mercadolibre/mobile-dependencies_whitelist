@@ -2411,7 +2411,8 @@
     {
       "allows_granular_projects": [
         "CcapCommons",
-        "FujiDI"
+        "FujiDI",
+        "MLLocation"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform DI squad before adding your project.",
       "name": "CrabDI",
