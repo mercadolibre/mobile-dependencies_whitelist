@@ -183,7 +183,8 @@
     },
     {
       "allows_granular_projects": [
-        "MLRemedies/Core"
+        "MLRemedies/Core",
+        "PersonValidation/Core"
       ],
       "name": "TensorFlowLiteSwift",
       "source": "public",
@@ -298,6 +299,8 @@
       "version": "^~>\\s?6.[0-9]+$"
     },
     {
+      "description": "Deprecation of Google Analytics",
+      "expires": "2025-03-31",
       "name": "MLAnalytics",
       "source": "private",
       "target": "production",
@@ -2414,7 +2417,8 @@
     {
       "allows_granular_projects": [
         "CcapCommons",
-        "FujiDI"
+        "FujiDI",
+        "MLLocation"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform DI squad before adding your project.",
       "name": "CrabDI",
@@ -2455,6 +2459,7 @@
     },
     {
       "allows_granular_projects": [
+        "AiAssistantClient",
         "HomeWallet"
       ],
       "name": "Rtc",
@@ -2473,9 +2478,19 @@
     },
     {
       "allows_granular_projects": [
-        "IspMpos"
+        "IspMpos",
+        "IspTte"
       ],
       "name": "IspTtp",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "allows_granular_projects": [
+        "IspMpos"
+      ],
+      "name": "IspTte",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
