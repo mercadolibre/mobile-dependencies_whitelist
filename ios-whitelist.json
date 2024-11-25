@@ -2453,6 +2453,7 @@
     },
     {
       "allows_granular_projects": [
+        "AiAssistantClient",
         "HomeWallet"
       ],
       "name": "Rtc",
