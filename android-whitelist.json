@@ -1808,6 +1808,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.personvalidation",
         "com.mercadolibre.android.remedies"
       ],
       "description": "Esta lib se deprecará, debemos utilizar cameraX",
