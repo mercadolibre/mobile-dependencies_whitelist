@@ -299,6 +299,8 @@
       "version": "^~>\\s?6.[0-9]+$"
     },
     {
+      "description": "Deprecation of Google Analytics",
+      "expires": "2025-03-31",
       "name": "MLAnalytics",
       "source": "private",
       "target": "production",
@@ -2454,6 +2456,7 @@
     },
     {
       "allows_granular_projects": [
+        "AiAssistantClient",
         "HomeWallet"
       ],
       "name": "Rtc",
