@@ -2346,6 +2346,12 @@
       "version": "0.12.0"
     },
     {
+      "name": "AddToCart",
+      "source": "public",
+      "target": "test",
+      "version": "0.1.0"
+    },
+    {
       "allows_granular_projects": [
         "MLSearch/Core",
         "MLVPP"
@@ -2375,15 +2381,6 @@
       "name": "DemandCore",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "allows_granular_projects": [
-        "MLVPP"
-      ],
-      "name": "add-to-cart-ios",
-      "source": "private",
-      "target": "",
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
