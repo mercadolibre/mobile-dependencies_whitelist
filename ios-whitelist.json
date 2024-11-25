@@ -183,7 +183,8 @@
     },
     {
       "allows_granular_projects": [
-        "MLRemedies/Core"
+        "MLRemedies/Core",
+        "PersonValidation/Core"
       ],
       "name": "TensorFlowLiteSwift",
       "source": "public",
