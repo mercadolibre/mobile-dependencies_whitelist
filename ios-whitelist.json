@@ -298,6 +298,8 @@
       "version": "^~>\\s?6.[0-9]+$"
     },
     {
+      "description": "Deprecation of Google Analytics",
+      "expires": "2025-03-31",
       "name": "MLAnalytics",
       "source": "private",
       "target": "production",
@@ -362,13 +364,6 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?2.[0-9]+$"
-    },
-    {
-      "expires": "2024-11-11",
-      "name": "Polycards",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "name": "Polycards",
@@ -811,9 +806,6 @@
     },
     {
       "allows_granular_projects": [
-        "AndesUIDraftModal",
-        "AndesUIDraftModal/MercadoLibre",
-        "AndesUIDraftModal/MercadoPago",
         "CardsAcquisition",
         "CardsEngagement",
         "CardsList",
@@ -970,9 +962,6 @@
     {
       "allows_granular_projects": [
         "AndesUI/Core",
-        "AndesUIDraftModal",
-        "AndesUIDraftModal/MercadoLibre",
-        "AndesUIDraftModal/MercadoPago",
         "BillPayments",
         "BiometricSecurityUI",
         "CardsBanking",
@@ -1120,7 +1109,7 @@
       "name": "lottie-ios",
       "source": "public",
       "target": "production",
-      "version": "2.0.6|2.5.0|^~>\\s?2.0$"
+      "version": "2.5.0|^~>\\s?2.0$"
     },
     {
       "name": "MLFluxClient",
@@ -2424,7 +2413,8 @@
     {
       "allows_granular_projects": [
         "CcapCommons",
-        "FujiDI"
+        "FujiDI",
+        "MLLocation"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform DI squad before adding your project.",
       "name": "CrabDI",
@@ -2465,6 +2455,7 @@
     },
     {
       "allows_granular_projects": [
+        "AiAssistantClient",
         "HomeWallet"
       ],
       "name": "Rtc",
@@ -2480,6 +2471,25 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "allows_granular_projects": [
+        "IspMpos",
+        "IspTte"
+      ],
+      "name": "IspTtp",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "allows_granular_projects": [
+        "IspMpos"
+      ],
+      "name": "IspTte",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
     }
   ]
 }
