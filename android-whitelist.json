@@ -822,6 +822,8 @@
       "version": "10\\.\\+"
     },
     {
+      "description": "Deprecation of Google Analytics",
+      "expires": "2025-03-31",
       "group": "com\\.mercadolibre\\.android",
       "name": "analytics",
       "version": "production-13\\.\\+|develop-13\\.\\+"
@@ -864,12 +866,6 @@
       "group": "com\\.mercadolibre\\.android",
       "name": "configuration-manager",
       "version": "10\\.\\+"
-    },
-    {
-      "expires": "2024-11-18",
-      "group": "com\\.mercadolibre\\.android\\.ignite",
-      "name": "core",
-      "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.ignite",
@@ -1119,11 +1115,6 @@
       "version": "2\\.\\+"
     },
     {
-      "expires": "2024-11-18",
-      "group": "com\\.mercadolibre\\.android\\.remote\\.configuration",
-      "version": "8\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.remote\\.configuration",
       "version": "9\\.\\+"
     },
@@ -1345,30 +1336,6 @@
       "version": "3\\.\\+"
     },
     {
-      "expires": "2024-11-22",
-      "group": "com\\.mercadolibre\\.android\\.search",
-      "name": "compats",
-      "version": "21\\.\\+"
-    },
-    {
-      "expires": "2024-11-22",
-      "group": "com\\.mercadolibre\\.android\\.search",
-      "name": "input",
-      "version": "21\\.\\+"
-    },
-    {
-      "expires": "2024-11-22",
-      "group": "com\\.mercadolibre\\.android\\.search",
-      "name": "autosuggest",
-      "version": "21\\.\\+"
-    },
-    {
-      "expires": "2024-11-22",
-      "group": "com\\.mercadolibre\\.android\\.search",
-      "name": "search",
-      "version": "21\\.\\+"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.search",
       "name": "compats",
       "version": "22\\.\\+"
@@ -1447,19 +1414,6 @@
       "group": "com\\.mercadolibre\\.android\\.verticals_core",
       "name": "core",
       "version": "0\\.\\+"
-    },
-    {
-      "allows_granular_projects": [
-        "com.mercadolibre.android.virtual_try_on"
-      ],
-      "description": "This dependency is only used in VirtualTryOn",
-      "expires": "2024-11-19",
-      "group": "com\\.modiface",
-      "name": "mfemakeupkit",
-      "transitive_configuration": {
-        "transitivity": false
-      },
-      "version": "20\\.0\\.0"
     },
     {
       "allows_granular_projects": [
@@ -1562,6 +1516,25 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.multiwidget",
       "name": "core",
+      "version": "2\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.mp_search",
+        "com.mercadolibre.android.wallet.home"
+      ],
+      "group": "com\\.mercadolibre\\.android\\.multiwidget",
+      "name": "widgets",
+      "version": "2\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.mp_search",
+        "com.mercadolibre.android.wallet.home"
+      ],
+      "expires": "2024-12-16",
+      "group": "com\\.mercadolibre\\.android\\.multiwidget",
+      "name": "core",
       "version": "1\\.\\+"
     },
     {
@@ -1569,6 +1542,7 @@
         "com.mercadolibre.android.mp_search",
         "com.mercadolibre.android.wallet.home"
       ],
+      "expires": "2024-12-16",
       "group": "com\\.mercadolibre\\.android\\.multiwidget",
       "name": "widgets",
       "version": "1\\.\\+"
@@ -1854,6 +1828,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.personvalidation",
         "com.mercadolibre.android.remedies"
       ],
       "description": "Esta lib se deprecará, debemos utilizar cameraX",
@@ -2287,6 +2262,7 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.auth_native_sso",
+        "com.mercadolibre.android.mlwebkit",
         "com.mercadolibre.android.mp_search",
         "com.mercadolibre.android.polycards",
         "com.mercadolibre.android.search",
@@ -2309,6 +2285,7 @@
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.everest_canvas",
+        "com.mercadolibre.android.mlwebkit",
         "com.mercadolibre.android.mp_search",
         "com.mercadolibre.android.polycards",
         "com.mercadolibre.android.search",
@@ -4584,6 +4561,7 @@
     {
       "allows_granular_projects": [
         "com.mercadolibre.android.everest_canvas",
+        "com.mercadolibre.android.mlwebkit",
         "com.mercadolibre.android.mp_search",
         "com.mercadolibre.android.polycards",
         "com.mercadolibre.android.search",
@@ -4603,6 +4581,7 @@
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.everest_canvas",
+        "com.mercadolibre.android.mlwebkit",
         "com.mercadolibre.android.mp_search",
         "com.mercadolibre.android.on.demand.resources",
         "com.mercadolibre.android.polycards",
@@ -4642,6 +4621,7 @@
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.everest_canvas",
+        "com.mercadolibre.android.mlwebkit",
         "com.mercadolibre.android.mp_search",
         "com.mercadolibre.android.on.demand.resources",
         "com.mercadolibre.android.polycards",
@@ -4670,6 +4650,7 @@
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.everest_canvas",
+        "com.mercadolibre.android.mlwebkit",
         "com.mercadolibre.android.mp_search",
         "com.mercadolibre.android.on.demand.resources",
         "com.mercadolibre.android.polycards",
@@ -4690,6 +4671,7 @@
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.everest_canvas",
+        "com.mercadolibre.android.mlwebkit",
         "com.mercadolibre.android.mp_search",
         "com.mercadolibre.android.on.demand.resources",
         "com.mercadolibre.android.polycards",
@@ -4709,6 +4691,7 @@
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.everest_canvas",
+        "com.mercadolibre.android.mlwebkit",
         "com.mercadolibre.android.mp_search",
         "com.mercadolibre.android.on.demand.resources",
         "com.mercadolibre.android.polycards",
@@ -4728,6 +4711,7 @@
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.everest_canvas",
+        "com.mercadolibre.android.mlwebkit",
         "com.mercadolibre.android.mp_search",
         "com.mercadolibre.android.on.demand.resources",
         "com.mercadolibre.android.polycards",
@@ -4747,6 +4731,7 @@
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.everest_canvas",
+        "com.mercadolibre.android.mlwebkit",
         "com.mercadolibre.android.mp_search",
         "com.mercadolibre.android.on.demand.resources",
         "com.mercadolibre.android.polycards",
@@ -4765,6 +4750,7 @@
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.everest_canvas",
+        "com.mercadolibre.android.mlwebkit",
         "com.mercadolibre.android.mp_search",
         "com.mercadolibre.android.on.demand.resources",
         "com.mercadolibre.android.polycards",
@@ -4792,6 +4778,7 @@
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.everest_canvas",
+        "com.mercadolibre.android.mlwebkit",
         "com.mercadolibre.android.mp_search",
         "com.mercadolibre.android.on.demand.resources",
         "com.mercadolibre.android.polycards",
@@ -5024,7 +5011,7 @@
       "description": "Local attestation library for mpoc solution",
       "group": "com\\.mercadopago\\.android\\.isp\\.mpoc\\.prometheus",
       "name": "zdefend",
-      "version": "1\\.\\+"
+      "version": "1\\.0\\.1"
     },
     {
       "allows_granular_projects": [
@@ -5120,6 +5107,7 @@
     {
       "allows_granular_projects": [
         "com.mercadoenvios.logistics",
+        "com.mercadolibre.android:ai-assistant-client",
         "com.mercadolibre.android.wallet.home"
       ],
       "group": "com\\.mercadolibre\\.android\\.rtc",
