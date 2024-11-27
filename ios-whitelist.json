@@ -2384,7 +2384,8 @@
       "allows_granular_projects": [
         "AndesIntegrations/Core",
         "MLOnDemandResources",
-        "MPConfigurationProvider/MLNetworking"
+        "MPConfigurationProvider/MLNetworking",
+        "HomeWallet"
       ],
       "name": "AppTheme",
       "source": "private",
