@@ -2352,7 +2352,7 @@
       "name": "AddToCart",
       "source": "public",
       "target": "test",
-      "version": "0.0.1"
+      "version": "^~>\\s?0.[0-9]+$"
     },
     {
       "allows_granular_projects": [
