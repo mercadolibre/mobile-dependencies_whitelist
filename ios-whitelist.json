@@ -2345,11 +2345,14 @@
       "target": "test",
       "version": "0.12.0"
     },
-    {
+    {      
+      "allows_granular_projects": [
+      "MLVPP"
+    ],
       "name": "AddToCart",
       "source": "public",
       "target": "test",
-      "version": "0.1.0"
+      "version": "0.0.1"
     },
     {
       "allows_granular_projects": [
