@@ -183,7 +183,8 @@
     },
     {
       "allows_granular_projects": [
-        "MLRemedies/Core"
+        "MLRemedies/Core",
+        "PersonValidation/Core"
       ],
       "name": "TensorFlowLiteSwift",
       "source": "public",
@@ -602,6 +603,7 @@
         "DiscountCenter",
         "MLSearch",
         "MLVPP",
+        "MLWebkit",
         "MPSearch",
         "Polycards"
       ],
@@ -1087,6 +1089,8 @@
         "CreditsUIComponents/MercadoLibre",
         "CreditsUIComponents/MercadoPago",
         "DiscountCenter",
+        "EverestCanvas/Animation",
+        "EverestCanvas/AnimationSwiftUI",
         "HomeSectionsApi/HomeWalletUI",
         "HubSeller",
         "InAppReport",
@@ -1194,6 +1198,7 @@
         "DiscountCenter",
         "MLSearch",
         "MLVPP",
+        "MLWebkit",
         "Mplay",
         "MPSearch",
         "Polycards"
@@ -1261,6 +1266,7 @@
         "FeedbackScreen",
         "MLSearch",
         "MLVPP",
+        "MLWebkit",
         "Mplay",
         "MPSearch",
         "Polycards"
@@ -1785,10 +1791,18 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
+      "description": "This version will be deprecated in favor of 2.0.0 on 2024-12-06",
+      "expires": "2024-12-06",
       "name": "SecureInputs",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
+    },
+    {
+      "name": "SecureInputs",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "AppMonitoring",
@@ -2144,7 +2158,7 @@
       "name": "TwilioVoice",
       "source": "public",
       "target": "production",
-      "version": "6.11.1"
+      "version": "6.12.0"
     },
     {
       "name": "OneExperience",
@@ -2379,6 +2393,7 @@
     {
       "allows_granular_projects": [
         "AndesIntegrations/Core",
+        "HomeWallet",
         "MLOnDemandResources",
         "MPConfigurationProvider/MLNetworking"
       ],
