@@ -4503,9 +4503,15 @@
       "version": "miniapp-2\\.+"
     },
     {
+      "expires": "2025-04-30",
       "group": "com\\.mercadolibre\\.android\\.point_integration_sdk",
       "name": "nativesdk",
       "version": "miniapp-3\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_integration_sdk",
+      "name": "nativesdk",
+      "version": "4\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.singleplayer",
