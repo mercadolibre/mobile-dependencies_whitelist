@@ -1722,7 +1722,7 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadopago.android.isp.point.mpos",
+        "com.mercadolibre.android.point.mpos",
         "com.mercadopago.dynamic.feature.mpoc"
       ],
       "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
@@ -1738,7 +1738,7 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadopago.android.isp.point.mpos"
+        "com.mercadolibre.android.point.mpos"
       ],
       "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
       "name": "mypinpad",
@@ -1759,7 +1759,7 @@
     {
       "allows_granular_projects": [
         "com.mercadolibre.android:cardform",
-        "com.mercadolibre.android.remedy",
+        "com.mercadolibre.android.ccap:remedy-challenge",
         "com.mercadopago.android.px"
       ],
       "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
