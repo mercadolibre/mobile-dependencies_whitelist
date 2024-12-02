@@ -699,16 +699,6 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.metrics",
-        "com.mercadolibre.android.reviews3",
-        "com.mercadolibre.android.search"
-      ],
-      "expires": "2024-11-29",
-      "group": "com\\.google\\.firebase",
-      "name": "firebase-perf"
-    },
-    {
-      "allows_granular_projects": [
         "com.mercadoenvios.android.distribution",
         "com.mercadolibre.android.addresses",
         "com.mercadolibre.android.andesui",
@@ -1381,16 +1371,6 @@
         "com.mercadolibre.android.vpp"
       ],
       "description": "This is the calculator library for production",
-      "expires": "2024-11-25",
-      "group": "com\\.mercadolibre\\.android\\.hi",
-      "name": "calculator",
-      "version": "1\\.\\+"
-    },
-    {
-      "allows_granular_projects": [
-        "com.mercadolibre.android.vpp"
-      ],
-      "description": "This is the calculator library for production",
       "group": "com\\.mercadolibre\\.android\\.hi",
       "name": "calculator",
       "version": "2\\.\\+"
@@ -1883,20 +1863,6 @@
       "group": "com\\.squareup\\.retrofit2",
       "name": "converter-scalars",
       "version": "2\\.6\\.4"
-    },
-    {
-      "allows_granular_projects": [
-        "com.mercadolibre.android.cash_rails",
-        "com.mercadolibre.android.instore",
-        "com.mercadolibre.android.local.storage",
-        "com.mercadolibre.android.navigation",
-        "com.mercadopago.android.point_flow_engine"
-      ],
-      "description": "Esta version se encuentra deprecada, recomendamos utilizar la nueva version 3.0.0",
-      "expires": "2024-12-01",
-      "group": "com\\.squareup\\.okio",
-      "name": "okio",
-      "version": "2\\.8\\.0"
     },
     {
       "allows_granular_projects": [
@@ -2603,12 +2569,6 @@
       "version": "1\\.1\\.0"
     },
     {
-      "expires": "2024-11-25",
-      "group": "androidx\\.constraintlayout",
-      "name": "constraintlayout",
-      "version": "2\\.0\\.4"
-    },
-    {
       "group": "androidx\\.constraintlayout",
       "name": "constraintlayout",
       "version": "2\\.1\\.4"
@@ -3085,37 +3045,6 @@
       "group": "com\\.mercadopago\\.android\\.configurer",
       "name": "local-storage-configurer",
       "version": "33\\.\\+"
-    },
-    {
-      "allows_granular_projects": [
-        "com.mercadolibre.android:analytics",
-        "com.mercadolibre.android:user_configuration",
-        "com.mercadolibre.android.cardsbanking",
-        "com.mercadolibre.android.ccap",
-        "com.mercadolibre.android.gamification",
-        "com.mercadolibre.android.ignite",
-        "com.mercadolibre.android.mercadopago_login",
-        "com.mercadolibre.android.mp_withdrawbank",
-        "com.mercadolibre.android.nfcpayments",
-        "com.mercadolibre.android.nfcpushprovisioning",
-        "com.mercadolibre.android.payment_flow_fcu",
-        "com.mercadolibre.android.point_smart_helpers",
-        "com.mercadolibre.android.point_smart_home",
-        "com.mercadolibre.android.point_virtualization",
-        "com.mercadolibre.android.pos_readers",
-        "com.mercadolibre.android.security_two_fa",
-        "com.mercadopago.android.configurer",
-        "com.mercadopago.android.configurer.smartpos",
-        "com.mercadopago.android.isp.mpoc.prometheus",
-        "com.mercadopago.android.isp.point.mpoc",
-        "com.mercadopago.android.multiplayer",
-        "com.mercadopago.isp.ptm.toolkit"
-      ],
-      "description": "Don't use timber directly, use our commons.log lib",
-      "expires": "2024-12-01",
-      "group": "com\\.jakewharton\\.timber",
-      "name": "timber",
-      "version": "4\\.5\\.1"
     },
     {
       "allows_granular_projects": [
@@ -4938,7 +4867,7 @@
         "com.mercadopago.android.moneyout",
         "com.mercadopago.android.multiplayer"
       ],
-      "expires": "2025-01-31",
+      "expires": "2024-12-13",
       "group": "com\\.mercadolibre\\.android\\.transfers_components",
       "name": "core",
       "version": "1\\.+"
@@ -4972,7 +4901,9 @@
         "com.mercadolibre.android.transferscheckout",
         "com.mercadopago.android.digital_accounts_components",
         "com.mercadopago.android.moneyout",
-        "com.mercadopago.android.multiplayer"
+        "com.mercadopago.android.multiplayer",
+        "com.mercadopago.android.transfers_dashboard",
+        "com.mercadopago.android.transfersdiscovery"
       ],
       "group": "com\\.mercadolibre\\.android\\.transfers_components",
       "name": "core",
