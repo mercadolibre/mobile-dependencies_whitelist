@@ -722,10 +722,18 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
+      "description": "This version will be deprecated, because for new expression.",
+      "expires": "2024-12-13",
       "name": "MLRuleEngine",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MLRuleEngine",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "MLSearch/Suggestion",
