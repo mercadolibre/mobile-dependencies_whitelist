@@ -3235,7 +3235,6 @@
         "com.mercadolibre.android.meli.store.authentication",
         "com.mercadolibre.android.yuca_authentication"
       ],
-      "expires": "2024-12-31",
       "group": "com\\.auth0\\.android",
       "name": "auth0",
       "version": "2\\.9\\.3"
@@ -3244,7 +3243,6 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.yuca_authentication"
       ],
-      "expires": "2024-12-31",
       "group": "com\\.auth0\\.android",
       "name": "jwtdecode",
       "version": "2\\.0\\.2"
