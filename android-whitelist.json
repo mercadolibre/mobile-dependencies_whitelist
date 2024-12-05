@@ -4487,6 +4487,12 @@
       "version": "10\\.\\+"
     },
     {
+      "description": "Android library used to connect with HAL and platform services.",
+      "group": "com\\.mercadopago\\.android\\.isp\\.smart\\.ipc",
+      "name": "connection",
+      "version": "2\\.\\+"
+    },
+    {
       "allows_granular_projects": [
         "com.mercadolibre.android.barcode_img_generator"
       ],
