@@ -993,11 +993,15 @@
       "version": "27\\.\\+"
     },
     {
+      "description": "Deprecation ui lib",
+      "expires": "2025-03-31",
       "group": "com\\.mercadolibre\\.android",
       "name": "ui",
       "version": "11\\.\\+"
     },
     {
+      "description": "Deprecation of ui_legacy lib",
+      "expires": "2025-03-31",
       "group": "com\\.mercadolibre\\.android",
       "name": "ui_legacy",
       "version": "11\\.\\+"
