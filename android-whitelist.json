@@ -71,7 +71,13 @@
     {
       "group": "com\\.mercadolibre\\.android\\.om",
       "name": "sdk",
-      "version": "1\\.+"
+      "version": "1\\.5\\.1"
+    },
+    {
+      "expires": "2024-12-20",
+      "group": "com\\.mercadolibre\\.android\\.om",
+      "name": "sdk",
+      "version": "1\\.4\\.14"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.gamification",
@@ -993,11 +999,15 @@
       "version": "27\\.\\+"
     },
     {
+      "description": "Deprecation ui lib",
+      "expires": "2025-03-31",
       "group": "com\\.mercadolibre\\.android",
       "name": "ui",
       "version": "11\\.\\+"
     },
     {
+      "description": "Deprecation of ui_legacy lib",
+      "expires": "2025-03-31",
       "group": "com\\.mercadolibre\\.android",
       "name": "ui_legacy",
       "version": "11\\.\\+"
@@ -4424,15 +4434,27 @@
       "version": "3\\.+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.point_smart_wrapper"
+      ],
       "expires": "2024-12-31",
       "group": "com\\.mercadolibre\\.android\\.point_integration_sdk",
       "name": "nativesdk",
       "version": "miniapp-2\\.+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.point_smart_wrapper"
+      ],
+      "expires": "2025-05-02",
       "group": "com\\.mercadolibre\\.android\\.point_integration_sdk",
       "name": "nativesdk",
       "version": "miniapp-3\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_integration_sdk",
+      "name": "nativesdk",
+      "version": "4\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.singleplayer",
