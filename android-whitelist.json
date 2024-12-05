@@ -4517,7 +4517,8 @@
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.vpp",
         "com.mercadopago.android.isp.mpoc.prometheus",
-        "com.mercadopago.android.moneyout"
+        "com.mercadopago.android.moneyout",
+        "com.mercadolibre.android.advanced_debugger"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.constraintlayout",
@@ -4538,7 +4539,8 @@
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.vpp",
         "com.mercadopago.android.isp.mpoc.prometheus",
-        "com.mercadopago.android.moneyout"
+        "com.mercadopago.android.moneyout",
+        "com.mercadolibre.android.advanced_debugger"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose",
@@ -4558,7 +4560,8 @@
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.vpp",
         "com.mercadopago.android.isp.mpoc.prometheus",
-        "com.mercadopago.android.moneyout"
+        "com.mercadopago.android.moneyout",
+        "com.mercadolibre.android.advanced_debugger"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.foundation",
@@ -4586,7 +4589,8 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.tetris"
+        "com.mercadolibre.android.tetris",
+        "com.mercadolibre.android.advanced_debugger"
       ],
       "description": "Only for EARLY ADOPTERS from WMS team. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.compose\\.material3",
@@ -4735,7 +4739,8 @@
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.vpp",
         "com.mercadopago.android.isp.mpoc.prometheus",
-        "com.mercadopago.android.moneyout"
+        "com.mercadopago.android.moneyout",
+        "com.mercadolibre.android.advanced_debugger"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "androidx\\.lifecycle",
