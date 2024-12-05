@@ -4424,15 +4424,27 @@
       "version": "3\\.+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.point_smart_wrapper"
+      ],
       "expires": "2024-12-31",
       "group": "com\\.mercadolibre\\.android\\.point_integration_sdk",
       "name": "nativesdk",
       "version": "miniapp-2\\.+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.point_smart_wrapper"
+      ],
+      "expires": "2025-05-02",
       "group": "com\\.mercadolibre\\.android\\.point_integration_sdk",
       "name": "nativesdk",
       "version": "miniapp-3\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_integration_sdk",
+      "name": "nativesdk",
+      "version": "4\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.singleplayer",
