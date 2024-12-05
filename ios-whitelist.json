@@ -772,7 +772,7 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "expires": "2024-12-22",
+      "expires": "2025-03-31",
       "name": "MLUI",
       "source": "public",
       "target": "production",
@@ -1222,15 +1222,6 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "allows_granular_projects": [
-        "IspMpos"
-      ],
-      "name": "UIImage-ResizeMagick",
-      "source": "public",
-      "target": "production",
-      "version": "0.0.1"
     },
     {
       "name": "MeliCards",
