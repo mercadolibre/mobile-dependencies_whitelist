@@ -1224,15 +1224,6 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "allows_granular_projects": [
-        "IspMpos"
-      ],
-      "name": "UIImage-ResizeMagick",
-      "source": "public",
-      "target": "production",
-      "version": "0.0.1"
-    },
-    {
       "name": "MeliCards",
       "source": "private",
       "target": "production",
@@ -2401,6 +2392,8 @@
     {
       "allows_granular_projects": [
         "AndesIntegrations/Core",
+        "EverestCanvas",
+        "EverestCanvas/Core",
         "HomeWallet",
         "MLOnDemandResources",
         "MPConfigurationProvider/MLNetworking"
