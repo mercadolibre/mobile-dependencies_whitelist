@@ -2392,6 +2392,8 @@
     {
       "allows_granular_projects": [
         "AndesIntegrations/Core",
+        "EverestCanvas",
+        "EverestCanvas/Core",
         "HomeWallet",
         "MLOnDemandResources",
         "MPConfigurationProvider/MLNetworking"
