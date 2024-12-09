@@ -5047,12 +5047,6 @@
       "version": "3\\.\\+"
     },
     {
-      "expires": "2024-12-02",
-      "group": "com\\.mercadolibre\\.android\\.mp_search",
-      "name": "search",
-      "version": "1\\.\\+"
-    },
-    {
       "allows_granular_projects": [
         "com.mercadolibre.android.wallet.home"
       ],
@@ -5068,15 +5062,6 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.rtc",
       "name": "core",
-      "version": "1\\.\\+"
-    },
-    {
-      "allows_granular_projects": [
-        "com.mercadolibre.android.wallet.home"
-      ],
-      "expires": "2024-12-02",
-      "group": "com\\.mercadolibre\\.android\\.mp_search",
-      "name": "widgets",
       "version": "1\\.\\+"
     },
     {
@@ -5102,6 +5087,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.everest_canvas",
         "com.mercadolibre.android.mlwebkit",
         "com.mercadolibre.android.on.demand.resources",
         "com.mercadopago.android.configurer",
