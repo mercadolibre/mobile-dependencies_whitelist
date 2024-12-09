@@ -1791,14 +1791,6 @@
       "version": "^~>\\s?1.[0-9]+$"
     },
     {
-      "description": "This version will be deprecated in favor of 2.0.0 on 2024-12-06",
-      "expires": "2024-12-06",
-      "name": "SecureInputs",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
       "name": "SecureInputs",
       "source": "private",
       "target": "production",
