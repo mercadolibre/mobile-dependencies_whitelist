@@ -4423,40 +4423,24 @@
       "version": "3\\.\\+"
     },
     {
-      "allows_granular_projects": [
-        "com.mercadolibre.android.point_smart_wrapper",
-        "com.mercadolibre.android.isp_integrations_tools"
-      ],
       "description": "Android library used to access connection data and measure api execution time.",
       "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
       "name": "connectivity",
       "version": "4\\.\\+"
     },
     {
-      "allows_granular_projects": [
-        "com.mercadolibre.android.point_smart_wrapper",
-        "com.mercadolibre.android.isp_integrations_tools"
-      ],
       "description": "Android library used to easily send integrate metrics to PTM.",
       "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
       "name": "event",
       "version": "4\\.\\+"
     },
     {
-      "allows_granular_projects": [
-        "com.mercadolibre.android.point_smart_wrapper",
-        "com.mercadolibre.android.isp_integrations_tools"
-      ],
       "description": "Android library used to facilitate development.",
       "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
       "name": "stdlib-ktx",
       "version": "4\\.\\+"
     },
     {
-      "allows_granular_projects": [
-        "com.mercadolibre.android.point_smart_wrapper",
-        "com.mercadolibre.android.isp_integrations_tools"
-      ],
       "description": "Android library used to easily integrate async Android services.",
       "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
       "name": "android-service",
