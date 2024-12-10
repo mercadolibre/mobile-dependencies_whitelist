@@ -723,10 +723,18 @@
       "version": "^~>\\s?2.[0-9]+$"
     },
     {
+      "description": "This version will be deprecated, because for new expression.",
+      "expires": "2024-12-13",
       "name": "MLRuleEngine",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?1.[0-9]+"
+    },
+    {
+      "name": "MLRuleEngine",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "MLSearch/Suggestion",
@@ -765,7 +773,7 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "expires": "2024-12-22",
+      "expires": "2025-03-31",
       "name": "MLUI",
       "source": "public",
       "target": "production",
@@ -964,6 +972,7 @@
     },
     {
       "allows_granular_projects": [
+        "AccountRelationships",
         "AndesUI/Core",
         "BillPayments",
         "BiometricSecurityUI",
@@ -1196,6 +1205,7 @@
     },
     {
       "allows_granular_projects": [
+        "AdvancedDebuggerTech",
         "DiscountCenter",
         "MLSearch",
         "MLVPP",
@@ -1216,15 +1226,6 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "allows_granular_projects": [
-        "IspMpos"
-      ],
-      "name": "UIImage-ResizeMagick",
-      "source": "public",
-      "target": "production",
-      "version": "0.0.1"
     },
     {
       "name": "MeliCards",
@@ -1264,6 +1265,7 @@
     },
     {
       "allows_granular_projects": [
+        "AdvancedDebuggerTech",
         "DiscountCenter",
         "FeedbackScreen",
         "MLSearch",
@@ -1789,14 +1791,6 @@
     },
     {
       "name": "MLClips",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "description": "This version will be deprecated in favor of 2.0.0 on 2024-12-06",
-      "expires": "2024-12-06",
-      "name": "SecureInputs",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
@@ -2396,6 +2390,8 @@
     {
       "allows_granular_projects": [
         "AndesIntegrations/Core",
+        "EverestCanvas",
+        "EverestCanvas/Core",
         "HomeWallet",
         "MLOnDemandResources",
         "MPConfigurationProvider/MLNetworking"
@@ -2505,6 +2501,12 @@
         "IspMpos"
       ],
       "name": "IspTte",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "AddToCart",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"

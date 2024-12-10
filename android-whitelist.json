@@ -71,7 +71,13 @@
     {
       "group": "com\\.mercadolibre\\.android\\.om",
       "name": "sdk",
-      "version": "1\\.+"
+      "version": "1\\.5\\.1"
+    },
+    {
+      "expires": "2024-12-20",
+      "group": "com\\.mercadolibre\\.android\\.om",
+      "name": "sdk",
+      "version": "1\\.4\\.14"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.gamification",
@@ -699,16 +705,6 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.metrics",
-        "com.mercadolibre.android.reviews3",
-        "com.mercadolibre.android.search"
-      ],
-      "expires": "2024-11-29",
-      "group": "com\\.google\\.firebase",
-      "name": "firebase-perf"
-    },
-    {
-      "allows_granular_projects": [
         "com.mercadoenvios.android.distribution",
         "com.mercadolibre.android.addresses",
         "com.mercadolibre.android.andesui",
@@ -1003,11 +999,15 @@
       "version": "27\\.\\+"
     },
     {
+      "description": "Deprecation ui lib",
+      "expires": "2025-03-31",
       "group": "com\\.mercadolibre\\.android",
       "name": "ui",
       "version": "11\\.\\+"
     },
     {
+      "description": "Deprecation of ui_legacy lib",
+      "expires": "2025-03-31",
       "group": "com\\.mercadolibre\\.android",
       "name": "ui_legacy",
       "version": "11\\.\\+"
@@ -1375,16 +1375,6 @@
       "group": "com\\.mercadolibre\\.android\\.virtual_try_on",
       "name": "virtualtryon",
       "version": "2\\.\\+"
-    },
-    {
-      "allows_granular_projects": [
-        "com.mercadolibre.android.vpp"
-      ],
-      "description": "This is the calculator library for production",
-      "expires": "2024-11-25",
-      "group": "com\\.mercadolibre\\.android\\.hi",
-      "name": "calculator",
-      "version": "1\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -1887,20 +1877,6 @@
     {
       "allows_granular_projects": [
         "com.mercadolibre.android.cash_rails",
-        "com.mercadolibre.android.instore",
-        "com.mercadolibre.android.local.storage",
-        "com.mercadolibre.android.navigation",
-        "com.mercadopago.android.point_flow_engine"
-      ],
-      "description": "Esta version se encuentra deprecada, recomendamos utilizar la nueva version 3.0.0",
-      "expires": "2024-12-01",
-      "group": "com\\.squareup\\.okio",
-      "name": "okio",
-      "version": "2\\.8\\.0"
-    },
-    {
-      "allows_granular_projects": [
-        "com.mercadolibre.android.cash_rails",
         "com.mercadolibre.android.everest_canvas",
         "com.mercadolibre.android.instore",
         "com.mercadolibre.android.local.storage",
@@ -2260,6 +2236,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.advanced_debugger",
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.mlwebkit",
@@ -2282,6 +2259,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.advanced_debugger",
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.everest_canvas",
@@ -2601,12 +2579,6 @@
       "group": "androidx\\.media",
       "name": "media",
       "version": "1\\.1\\.0"
-    },
-    {
-      "expires": "2024-11-25",
-      "group": "androidx\\.constraintlayout",
-      "name": "constraintlayout",
-      "version": "2\\.0\\.4"
     },
     {
       "group": "androidx\\.constraintlayout",
@@ -3088,37 +3060,6 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android:analytics",
-        "com.mercadolibre.android:user_configuration",
-        "com.mercadolibre.android.cardsbanking",
-        "com.mercadolibre.android.ccap",
-        "com.mercadolibre.android.gamification",
-        "com.mercadolibre.android.ignite",
-        "com.mercadolibre.android.mercadopago_login",
-        "com.mercadolibre.android.mp_withdrawbank",
-        "com.mercadolibre.android.nfcpayments",
-        "com.mercadolibre.android.nfcpushprovisioning",
-        "com.mercadolibre.android.payment_flow_fcu",
-        "com.mercadolibre.android.point_smart_helpers",
-        "com.mercadolibre.android.point_smart_home",
-        "com.mercadolibre.android.point_virtualization",
-        "com.mercadolibre.android.pos_readers",
-        "com.mercadolibre.android.security_two_fa",
-        "com.mercadopago.android.configurer",
-        "com.mercadopago.android.configurer.smartpos",
-        "com.mercadopago.android.isp.mpoc.prometheus",
-        "com.mercadopago.android.isp.point.mpoc",
-        "com.mercadopago.android.multiplayer",
-        "com.mercadopago.isp.ptm.toolkit"
-      ],
-      "description": "Don't use timber directly, use our commons.log lib",
-      "expires": "2024-12-01",
-      "group": "com\\.jakewharton\\.timber",
-      "name": "timber",
-      "version": "4\\.5\\.1"
-    },
-    {
-      "allows_granular_projects": [
         "com.mercadolibre.android.commons"
       ],
       "group": "com\\.getkeepsafe\\.relinker",
@@ -3302,7 +3243,6 @@
         "com.mercadolibre.android.meli.store.authentication",
         "com.mercadolibre.android.yuca_authentication"
       ],
-      "expires": "2024-12-31",
       "group": "com\\.auth0\\.android",
       "name": "auth0",
       "version": "2\\.9\\.3"
@@ -3311,7 +3251,6 @@
       "allows_granular_projects": [
         "com.mercadolibre.android.yuca_authentication"
       ],
-      "expires": "2024-12-31",
       "group": "com\\.auth0\\.android",
       "name": "jwtdecode",
       "version": "2\\.0\\.2"
@@ -4497,15 +4436,27 @@
       "version": "3\\.+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.point_smart_wrapper"
+      ],
       "expires": "2024-12-31",
       "group": "com\\.mercadolibre\\.android\\.point_integration_sdk",
       "name": "nativesdk",
       "version": "miniapp-2\\.+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.point_smart_wrapper"
+      ],
+      "expires": "2025-05-02",
       "group": "com\\.mercadolibre\\.android\\.point_integration_sdk",
       "name": "nativesdk",
       "version": "miniapp-3\\.+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.point_integration_sdk",
+      "name": "nativesdk",
+      "version": "4\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.singleplayer",
@@ -4539,6 +4490,15 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.isp_integrations_tools"
+      ],
+      "description": "Android library used to connect with HAL and platform services.",
+      "group": "com\\.mercadopago\\.android\\.isp\\.smart\\.ipc",
+      "name": "connection",
+      "version": "2\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
         "com.mercadolibre.android.barcode_img_generator"
       ],
       "description": "Android library used to generate QRs.",
@@ -4560,6 +4520,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.advanced_debugger",
         "com.mercadolibre.android.everest_canvas",
         "com.mercadolibre.android.mlwebkit",
         "com.mercadolibre.android.mp_search",
@@ -4577,6 +4538,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.advanced_debugger",
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.auth_native_sso",
@@ -4598,6 +4560,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.advanced_debugger",
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.auth_native_sso",
@@ -4617,6 +4580,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.advanced_debugger",
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.auth_native_sso",
@@ -4667,6 +4631,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.advanced_debugger",
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.auth_native_sso",
@@ -4687,6 +4652,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.advanced_debugger",
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.auth_native_sso",
@@ -4774,6 +4740,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.advanced_debugger",
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.auth_native_sso",
@@ -4938,7 +4905,7 @@
         "com.mercadopago.android.moneyout",
         "com.mercadopago.android.multiplayer"
       ],
-      "expires": "2025-01-31",
+      "expires": "2024-12-13",
       "group": "com\\.mercadolibre\\.android\\.transfers_components",
       "name": "core",
       "version": "1\\.+"
@@ -4972,7 +4939,9 @@
         "com.mercadolibre.android.transferscheckout",
         "com.mercadopago.android.digital_accounts_components",
         "com.mercadopago.android.moneyout",
-        "com.mercadopago.android.multiplayer"
+        "com.mercadopago.android.multiplayer",
+        "com.mercadopago.android.transfers_dashboard",
+        "com.mercadopago.android.transfersdiscovery"
       ],
       "group": "com\\.mercadolibre\\.android\\.transfers_components",
       "name": "core",
@@ -5091,12 +5060,6 @@
       "version": "3\\.\\+"
     },
     {
-      "expires": "2024-12-02",
-      "group": "com\\.mercadolibre\\.android\\.mp_search",
-      "name": "search",
-      "version": "1\\.\\+"
-    },
-    {
       "allows_granular_projects": [
         "com.mercadolibre.android.wallet.home"
       ],
@@ -5112,15 +5075,6 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.rtc",
       "name": "core",
-      "version": "1\\.\\+"
-    },
-    {
-      "allows_granular_projects": [
-        "com.mercadolibre.android.wallet.home"
-      ],
-      "expires": "2024-12-02",
-      "group": "com\\.mercadolibre\\.android\\.mp_search",
-      "name": "widgets",
       "version": "1\\.\\+"
     },
     {
@@ -5146,6 +5100,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.everest_canvas",
         "com.mercadolibre.android.mlwebkit",
         "com.mercadolibre.android.on.demand.resources",
         "com.mercadopago.android.configurer",
