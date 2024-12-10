@@ -4395,29 +4395,29 @@
       "version": "3\\.\\+"
     },
     {
+      "expires": "2025-03-31",
       "description": "Android library used to access connection data and measure api execution time.",
-      "expires": "2025-03-31",      
       "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
       "name": "connectivity",
       "version": "3\\.\\+"
     },
     {
+      "expires": "2025-03-31",
       "description": "Android library used to easily send integrate metrics to PTM.",
-      "expires": "2025-03-31",      
       "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
       "name": "event",
       "version": "3\\.\\+"
     },
     {
-      "description": "Android library used to facilitate development.",
       "expires": "2025-03-31",
+      "description": "Android library used to facilitate development.",
       "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
       "name": "stdlib-ktx",
       "version": "3\\.\\+"
     },
     {
-      "description": "Android library used to easily integrate async Android services.",
       "expires": "2025-03-31",
+      "description": "Android library used to easily integrate async Android services.",
       "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
       "name": "android-service",
       "version": "3\\.\\+"
