@@ -173,7 +173,8 @@
       "version": "5\\.\\+"
     },
     {
-      "description": "Mas de 35 consumers",
+      "description": "This library will be deprecated as we transition to using EverestCanvas instead of Picasso.",
+      "expires": "2025-02-28",
       "group": "com\\.squareup\\.picasso",
       "name": "picasso",
       "version": "2\\.5\\.2"
@@ -279,12 +280,15 @@
         "com.mercadolibre.android:home",
         "com.mercadolibre.android.mlbusinesscomponents"
       ],
+      "description": "This library will be deprecated as we transition to using EverestCanvas instead of Fresco.",
+      "expires": "2025-08-31",
       "group": "com\\.facebook\\.fresco",
       "name": "animated-webp",
       "version": "2\\.2\\.0"
     },
     {
-      "description": "+60 consumers 05/08/24",
+      "description": "This library will be deprecated as we transition to using EverestCanvas instead of Fresco.",
+      "expires": "2025-08-31",
       "group": "com\\.facebook\\.fresco",
       "name": "fresco",
       "version": "2\\.2\\.0"
@@ -299,6 +303,8 @@
         "com.mercadopago.android.configurer.smartpos",
         "com.mercadopago.android.smartpos"
       ],
+      "description": "This library will be deprecated as we transition to using EverestCanvas instead of Fresco.",
+      "expires": "2025-08-31",
       "group": "com\\.facebook\\.fresco",
       "name": "imagepipeline-okhttp3",
       "version": "2\\.2\\.0"
@@ -310,6 +316,8 @@
         "com.mercadolibre.android.mlbusinesscomponents",
         "com.mercadolibre.android.wallet.home"
       ],
+      "description": "This library will be deprecated as we transition to using EverestCanvas instead of Fresco.",
+      "expires": "2025-08-31",
       "group": "com\\.facebook\\.fresco",
       "name": "webpsupport",
       "version": "2\\.2\\.0"
@@ -948,6 +956,8 @@
       "version": "7\\.\\+"
     },
     {
+      "description": "This library will be deprecated as we transition to using EverestCanvas instead of Picasso.",
+      "expires": "2025-02-28",
       "group": "com\\.mercadolibre\\.android",
       "name": "picasso-disk-cache",
       "version": "1\\.\\+"
