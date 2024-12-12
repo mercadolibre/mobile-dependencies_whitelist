@@ -605,7 +605,8 @@
         "MLVPP",
         "MLWebkit",
         "MPSearch",
-        "Polycards"
+        "Polycards",
+        "TransfersComponents"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "name": "MLOnDemandResources/SwiftUI",
@@ -1204,13 +1205,15 @@
     },
     {
       "allows_granular_projects": [
+        "AdvancedDebuggerTech",
         "DiscountCenter",
         "MLSearch",
         "MLVPP",
         "MLWebkit",
         "Mplay",
         "MPSearch",
-        "Polycards"
+        "Polycards",
+        "TransfersComponents"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "name": "MLNavigation/SwiftUI",
@@ -1262,6 +1265,7 @@
     },
     {
       "allows_granular_projects": [
+        "AdvancedDebuggerTech",
         "DiscountCenter",
         "FeedbackScreen",
         "MLSearch",
@@ -1269,7 +1273,8 @@
         "MLWebkit",
         "Mplay",
         "MPSearch",
-        "Polycards"
+        "Polycards",
+        "TransfersComponents"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "name": "AndesUI/SwiftUI",
@@ -1786,14 +1791,6 @@
     },
     {
       "name": "MLClips",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "description": "This version will be deprecated in favor of 2.0.0 on 2024-12-06",
-      "expires": "2024-12-06",
-      "name": "SecureInputs",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
