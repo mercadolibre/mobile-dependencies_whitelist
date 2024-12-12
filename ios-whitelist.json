@@ -939,6 +939,8 @@
         "Mplay",
         "Mplay/Player"
       ],
+      "description": "This library will be deprecated as we transition to using EverestCanvas instead of PINCache.",
+      "expires": "2025-2-28",
       "name": "PINCache",
       "source": "public",
       "target": "production",
@@ -953,6 +955,8 @@
         "Mplay",
         "Mplay/Player"
       ],
+      "description": "This library will be deprecated as we transition to using EverestCanvas instead of PINRemoteImage.",
+      "expires": "2025-2-28",
       "name": "PINRemoteImage",
       "source": "public",
       "target": "production",
