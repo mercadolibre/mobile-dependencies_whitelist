@@ -1,3 +1,12 @@
+# [ℹ️](https://github.com/mercadolibre/mobile-dependencies_whitelist/blob/feature/update-readme-frontend-cross/README.md#libreria-frontend-x-cross) ETA
+
+La adicion de una dependencia requiere de varios analisis con el objetivo de que ninguna libreria impacte de forma negativa al Stack Tecnologico de Meli. Tener en cuenta que el proceso realizado por Platform Updates puede ofrecer los siguientes plazos:
+
+Librarias Internas : 1 - 2 dias
+Librarias Externas : 1 - 2 semanas / mas en casos excepcionales
+
+Este plazo comienza una vez la solicitud esta completa y sus comentarios sean resueltos.
+
 ### Descripción
 
 #### Cual es la necesidad de agregar este cambio?
