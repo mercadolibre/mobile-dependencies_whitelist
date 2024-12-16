@@ -605,7 +605,8 @@
         "MLVPP",
         "MLWebkit",
         "MPSearch",
-        "Polycards"
+        "Polycards",
+        "TransfersComponents"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "name": "MLOnDemandResources/SwiftUI",
@@ -720,14 +721,6 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?2.[0-9]+$"
-    },
-    {
-      "description": "This version will be deprecated, because for new expression.",
-      "expires": "2024-12-13",
-      "name": "MLRuleEngine",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+"
     },
     {
       "name": "MLRuleEngine",
@@ -938,6 +931,8 @@
         "Mplay",
         "Mplay/Player"
       ],
+      "description": "This library will be deprecated as we transition to using EverestCanvas instead of PINCache.",
+      "expires": "2025-2-28",
       "name": "PINCache",
       "source": "public",
       "target": "production",
@@ -952,6 +947,8 @@
         "Mplay",
         "Mplay/Player"
       ],
+      "description": "This library will be deprecated as we transition to using EverestCanvas instead of PINRemoteImage.",
+      "expires": "2025-2-28",
       "name": "PINRemoteImage",
       "source": "public",
       "target": "production",
@@ -1211,7 +1208,8 @@
         "MLWebkit",
         "Mplay",
         "MPSearch",
-        "Polycards"
+        "Polycards",
+        "TransfersComponents"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "name": "MLNavigation/SwiftUI",
@@ -1271,7 +1269,8 @@
         "MLWebkit",
         "Mplay",
         "MPSearch",
-        "Polycards"
+        "Polycards",
+        "TransfersComponents"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "name": "AndesUI/SwiftUI",
