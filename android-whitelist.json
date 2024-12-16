@@ -3684,7 +3684,8 @@
     {
       "allows_granular_projects": [
         "com.mercadolibre.android",
-        "com.mercadolibre.android.security:security_preferences"
+        "com.mercadolibre.android.security:security_preferences",
+        "com.mercadolibre.android.accountrelationships"
       ],
       "group": "com\\.mercadolibre\\.android\\.mobile_cryptography",
       "name": "core",
