@@ -1709,13 +1709,6 @@
       "version": "9\\.+"
     },
     {
-      "description": "The expiration date is extended to have time enough to deprecate it",
-      "expires": "2024-12-10",
-      "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
-      "name": "mpoc",
-      "version": "2\\.+"
-    },
-    {
       "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
       "name": "mypinpad",
       "version": "3\\.+"
@@ -1730,26 +1723,12 @@
       "version": "3\\.+"
     },
     {
-      "description": "The expiration date is extended to have time enough to deprecate it",
-      "expires": "2024-12-10",
-      "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
-      "name": "mypinpad",
-      "version": "2\\.+"
-    },
-    {
       "allows_granular_projects": [
         "com.mercadolibre.android.point.mpos"
       ],
       "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
       "name": "mypinpad",
       "version": "3\\.+"
-    },
-    {
-      "description": "The expiration date is extended to have time enough to deprecate it",
-      "expires": "2024-12-10",
-      "group": "com\\.mercadopago\\.android\\.isp\\.mpoc",
-      "name": "prometheus",
-      "version": "2\\.+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
@@ -4932,18 +4911,6 @@
         "com.mercadopago.android.moneyout",
         "com.mercadopago.android.multiplayer"
       ],
-      "expires": "2024-12-13",
-      "group": "com\\.mercadolibre\\.android\\.transfers_components",
-      "name": "core",
-      "version": "1\\.+"
-    },
-    {
-      "allows_granular_projects": [
-        "com.mercadolibre.android.da_management",
-        "com.mercadolibre.android.transferscheckout",
-        "com.mercadopago.android.moneyout",
-        "com.mercadopago.android.multiplayer"
-      ],
       "expires": "2025-01-31",
       "group": "com\\.mercadolibre\\.android\\.transfers_components",
       "name": "metadata",
@@ -5007,7 +4974,7 @@
       "description": "Local attestation library for mpoc solution",
       "group": "com\\.mercadopago\\.android\\.isp\\.mpoc\\.prometheus",
       "name": "zdefend",
-      "version": "1\\.0\\.1"
+      "version": "1\\.1\\.0"
     },
     {
       "allows_granular_projects": [
