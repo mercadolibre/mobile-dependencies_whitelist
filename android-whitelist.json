@@ -4332,12 +4332,6 @@
       "version": "4\\.\\+"
     },
     {
-      "description": "This PTM library is used to schedule alarms that trigger job executions",
-      "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
-      "name": "qualified-alarm",
-      "version": "3\\.\\+"
-    },
-    {
       "expires": "2025-01-27",
       "group": "com\\.mercadolibre\\.android\\.isp_sf",
       "name": "di",
@@ -4392,28 +4386,89 @@
       "version": "3\\.\\+"
     },
     {
+      "description": "This PTM library is used to schedule alarms that trigger job executions",
+      "expires": "2025-03-31",
+      "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
+      "name": "qualified-alarm",
+      "version": "3\\.\\+"
+    },
+    {
       "description": "Android library used to access connection data and measure api execution time.",
+      "expires": "2025-03-31",
       "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
       "name": "connectivity",
       "version": "3\\.\\+"
     },
     {
       "description": "Android library used to easily send integrate metrics to PTM.",
+      "expires": "2025-03-31",
       "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
       "name": "event",
       "version": "3\\.\\+"
     },
     {
       "description": "Android library used to facilitate development.",
+      "expires": "2025-03-31",
       "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
       "name": "stdlib-ktx",
       "version": "3\\.\\+"
     },
     {
       "description": "Android library used to easily integrate async Android services.",
+      "expires": "2025-03-31",
       "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
       "name": "android-service",
       "version": "3\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.isp_integrations_tools",
+        "com.mercadolibre.android.point_smart_wrapper"
+      ],
+      "description": "This PTM library is used to schedule alarms that trigger job executions",
+      "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
+      "name": "qualified-alarm",
+      "version": "4\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.isp_integrations_tools",
+        "com.mercadolibre.android.point_smart_wrapper"
+      ],
+      "description": "Android library used to access connection data and measure api execution time.",
+      "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
+      "name": "connectivity",
+      "version": "4\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.isp_integrations_tools",
+        "com.mercadolibre.android.point_smart_wrapper"
+      ],
+      "description": "Android library used to easily send integrate metrics to PTM.",
+      "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
+      "name": "event",
+      "version": "4\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.isp_integrations_tools",
+        "com.mercadolibre.android.point_smart_wrapper"
+      ],
+      "description": "Android library used to facilitate development.",
+      "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
+      "name": "stdlib-ktx",
+      "version": "4\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.isp_integrations_tools",
+        "com.mercadolibre.android.point_smart_wrapper"
+      ],
+      "description": "Android library used to easily integrate async Android services.",
+      "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
+      "name": "android-service",
+      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.xprod_flox_components",
