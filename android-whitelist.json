@@ -173,7 +173,8 @@
       "version": "5\\.\\+"
     },
     {
-      "description": "Mas de 35 consumers",
+      "description": "This library will be deprecated as we transition to using EverestCanvas instead of Picasso.",
+      "expires": "2025-02-28",
       "group": "com\\.squareup\\.picasso",
       "name": "picasso",
       "version": "2\\.5\\.2"
@@ -279,12 +280,15 @@
         "com.mercadolibre.android:home",
         "com.mercadolibre.android.mlbusinesscomponents"
       ],
+      "description": "This library will be deprecated as we transition to using EverestCanvas instead of Fresco.",
+      "expires": "2025-08-31",
       "group": "com\\.facebook\\.fresco",
       "name": "animated-webp",
       "version": "2\\.2\\.0"
     },
     {
-      "description": "+60 consumers 05/08/24",
+      "description": "This library will be deprecated as we transition to using EverestCanvas instead of Fresco.",
+      "expires": "2025-08-31",
       "group": "com\\.facebook\\.fresco",
       "name": "fresco",
       "version": "2\\.2\\.0"
@@ -299,6 +303,8 @@
         "com.mercadopago.android.configurer.smartpos",
         "com.mercadopago.android.smartpos"
       ],
+      "description": "This library will be deprecated as we transition to using EverestCanvas instead of Fresco.",
+      "expires": "2025-08-31",
       "group": "com\\.facebook\\.fresco",
       "name": "imagepipeline-okhttp3",
       "version": "2\\.2\\.0"
@@ -310,6 +316,8 @@
         "com.mercadolibre.android.mlbusinesscomponents",
         "com.mercadolibre.android.wallet.home"
       ],
+      "description": "This library will be deprecated as we transition to using EverestCanvas instead of Fresco.",
+      "expires": "2025-08-31",
       "group": "com\\.facebook\\.fresco",
       "name": "webpsupport",
       "version": "2\\.2\\.0"
@@ -948,6 +956,8 @@
       "version": "7\\.\\+"
     },
     {
+      "description": "This library will be deprecated as we transition to using EverestCanvas instead of Picasso.",
+      "expires": "2025-02-28",
       "group": "com\\.mercadolibre\\.android",
       "name": "picasso-disk-cache",
       "version": "1\\.\\+"
@@ -1699,13 +1709,6 @@
       "version": "9\\.+"
     },
     {
-      "description": "The expiration date is extended to have time enough to deprecate it",
-      "expires": "2024-12-10",
-      "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
-      "name": "mpoc",
-      "version": "2\\.+"
-    },
-    {
       "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
       "name": "mypinpad",
       "version": "3\\.+"
@@ -1720,26 +1723,12 @@
       "version": "3\\.+"
     },
     {
-      "description": "The expiration date is extended to have time enough to deprecate it",
-      "expires": "2024-12-10",
-      "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
-      "name": "mypinpad",
-      "version": "2\\.+"
-    },
-    {
       "allows_granular_projects": [
         "com.mercadolibre.android.point.mpos"
       ],
       "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
       "name": "mypinpad",
       "version": "3\\.+"
-    },
-    {
-      "description": "The expiration date is extended to have time enough to deprecate it",
-      "expires": "2024-12-10",
-      "group": "com\\.mercadopago\\.android\\.isp\\.mpoc",
-      "name": "prometheus",
-      "version": "2\\.+"
     },
     {
       "group": "com\\.mercadopago\\.android\\.isp\\.point\\.mpoc",
@@ -3696,6 +3685,7 @@
     {
       "allows_granular_projects": [
         "com.mercadolibre.android",
+        "com.mercadolibre.android.accountrelationships",
         "com.mercadolibre.android.security:security_preferences"
       ],
       "group": "com\\.mercadolibre\\.android\\.mobile_cryptography",
@@ -3762,7 +3752,7 @@
       ],
       "group": "com\\.mercadolibre\\.android\\.cashout",
       "name": "cashout",
-      "version": "20\\.\\+"
+      "version": "22\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -4337,12 +4327,6 @@
       "version": "4\\.\\+"
     },
     {
-      "description": "This PTM library is used to schedule alarms that trigger job executions",
-      "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
-      "name": "qualified-alarm",
-      "version": "3\\.\\+"
-    },
-    {
       "expires": "2025-01-27",
       "group": "com\\.mercadolibre\\.android\\.isp_sf",
       "name": "di",
@@ -4397,28 +4381,89 @@
       "version": "3\\.\\+"
     },
     {
+      "description": "This PTM library is used to schedule alarms that trigger job executions",
+      "expires": "2025-03-31",
+      "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
+      "name": "qualified-alarm",
+      "version": "3\\.\\+"
+    },
+    {
       "description": "Android library used to access connection data and measure api execution time.",
+      "expires": "2025-03-31",
       "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
       "name": "connectivity",
       "version": "3\\.\\+"
     },
     {
       "description": "Android library used to easily send integrate metrics to PTM.",
+      "expires": "2025-03-31",
       "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
       "name": "event",
       "version": "3\\.\\+"
     },
     {
       "description": "Android library used to facilitate development.",
+      "expires": "2025-03-31",
       "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
       "name": "stdlib-ktx",
       "version": "3\\.\\+"
     },
     {
       "description": "Android library used to easily integrate async Android services.",
+      "expires": "2025-03-31",
       "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
       "name": "android-service",
       "version": "3\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.isp_integrations_tools",
+        "com.mercadolibre.android.point_smart_wrapper"
+      ],
+      "description": "This PTM library is used to schedule alarms that trigger job executions",
+      "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
+      "name": "qualified-alarm",
+      "version": "4\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.isp_integrations_tools",
+        "com.mercadolibre.android.point_smart_wrapper"
+      ],
+      "description": "Android library used to access connection data and measure api execution time.",
+      "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
+      "name": "connectivity",
+      "version": "4\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.isp_integrations_tools",
+        "com.mercadolibre.android.point_smart_wrapper"
+      ],
+      "description": "Android library used to easily send integrate metrics to PTM.",
+      "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
+      "name": "event",
+      "version": "4\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.isp_integrations_tools",
+        "com.mercadolibre.android.point_smart_wrapper"
+      ],
+      "description": "Android library used to facilitate development.",
+      "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
+      "name": "stdlib-ktx",
+      "version": "4\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.isp_integrations_tools",
+        "com.mercadolibre.android.point_smart_wrapper"
+      ],
+      "description": "Android library used to easily integrate async Android services.",
+      "group": "com\\.mercadopago\\.isp\\.ptm\\.toolkit",
+      "name": "android-service",
+      "version": "4\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.xprod_flox_components",
@@ -4610,6 +4655,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.advanced_debugger",
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.auth_native_sso",
@@ -4673,6 +4719,22 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.advanced_debugger",
+        "com.mercadolibre.android.auth_native_sso",
+        "com.mercadolibre.android.mp_search",
+        "com.mercadolibre.android.polycards",
+        "com.mercadolibre.android.search",
+        "com.mercadolibre.android.vpp",
+        "com.mercadopago.android.isp.mpoc.prometheus",
+        "com.mercadopago.android.moneyout"
+      ],
+      "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
+      "group": "androidx\\.compose\\.runtime",
+      "name": "runtime-livedata"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.advanced_debugger",
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.auth_native_sso",
@@ -4801,7 +4863,7 @@
       "description": "This library is required by meliphone.",
       "group": "com\\.twilio",
       "name": "voice-android",
-      "version": "6\\.6\\.1"
+      "version": "6\\.7\\.1"
     },
     {
       "allows_granular_projects": [
@@ -4905,18 +4967,6 @@
         "com.mercadopago.android.moneyout",
         "com.mercadopago.android.multiplayer"
       ],
-      "expires": "2024-12-13",
-      "group": "com\\.mercadolibre\\.android\\.transfers_components",
-      "name": "core",
-      "version": "1\\.+"
-    },
-    {
-      "allows_granular_projects": [
-        "com.mercadolibre.android.da_management",
-        "com.mercadolibre.android.transferscheckout",
-        "com.mercadopago.android.moneyout",
-        "com.mercadopago.android.multiplayer"
-      ],
       "expires": "2025-01-31",
       "group": "com\\.mercadolibre\\.android\\.transfers_components",
       "name": "metadata",
@@ -4980,7 +5030,7 @@
       "description": "Local attestation library for mpoc solution",
       "group": "com\\.mercadopago\\.android\\.isp\\.mpoc\\.prometheus",
       "name": "zdefend",
-      "version": "1\\.0\\.1"
+      "version": "1\\.1\\.0"
     },
     {
       "allows_granular_projects": [
