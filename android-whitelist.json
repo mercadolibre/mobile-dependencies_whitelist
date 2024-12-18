@@ -2201,7 +2201,7 @@
     {
       "group": "com\\.mercadolibre\\.android",
       "name": "cardform",
-      "version": "6\\.+"
+      "version": "6\\.+|mercadopago-6\\.\\+|mercadolibre-6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.insu_flox_components",
@@ -3710,7 +3710,7 @@
     {
       "group": "com\\.mercadolibre\\.android\\.ccap",
       "name": "remedy-challenge",
-      "version": "1\\.+"
+      "version": "1\\.+|mercadopago-1\\.\\+|mercadolibre-1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.ccap",
