@@ -605,7 +605,8 @@
         "MLVPP",
         "MLWebkit",
         "MPSearch",
-        "Polycards"
+        "Polycards",
+        "TransfersComponents"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "name": "MLOnDemandResources/SwiftUI",
@@ -725,7 +726,7 @@
       "name": "MLRuleEngine",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?2.[0-9]+"
     },
     {
       "name": "MLSearch/Suggestion",
@@ -764,7 +765,7 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
-      "expires": "2024-12-22",
+      "expires": "2025-03-31",
       "name": "MLUI",
       "source": "public",
       "target": "production",
@@ -930,6 +931,8 @@
         "Mplay",
         "Mplay/Player"
       ],
+      "description": "This library will be deprecated as we transition to using EverestCanvas instead of PINCache.",
+      "expires": "2025-2-28",
       "name": "PINCache",
       "source": "public",
       "target": "production",
@@ -944,6 +947,8 @@
         "Mplay",
         "Mplay/Player"
       ],
+      "description": "This library will be deprecated as we transition to using EverestCanvas instead of PINRemoteImage.",
+      "expires": "2025-2-28",
       "name": "PINRemoteImage",
       "source": "public",
       "target": "production",
@@ -963,6 +968,7 @@
     },
     {
       "allows_granular_projects": [
+        "AccountRelationships",
         "AndesUI/Core",
         "BillPayments",
         "BiometricSecurityUI",
@@ -1089,6 +1095,8 @@
         "CreditsUIComponents/MercadoLibre",
         "CreditsUIComponents/MercadoPago",
         "DiscountCenter",
+        "EverestCanvas/Animation",
+        "EverestCanvas/AnimationSwiftUI",
         "HomeSectionsApi/HomeWalletUI",
         "HubSeller",
         "InAppReport",
@@ -1193,13 +1201,15 @@
     },
     {
       "allows_granular_projects": [
+        "AdvancedDebuggerTech",
         "DiscountCenter",
         "MLSearch",
         "MLVPP",
         "MLWebkit",
         "Mplay",
         "MPSearch",
-        "Polycards"
+        "Polycards",
+        "TransfersComponents"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "name": "MLNavigation/SwiftUI",
@@ -1212,15 +1222,6 @@
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "allows_granular_projects": [
-        "IspMpos"
-      ],
-      "name": "UIImage-ResizeMagick",
-      "source": "public",
-      "target": "production",
-      "version": "0.0.1"
     },
     {
       "name": "MeliCards",
@@ -1260,6 +1261,7 @@
     },
     {
       "allows_granular_projects": [
+        "AdvancedDebuggerTech",
         "DiscountCenter",
         "FeedbackScreen",
         "MLSearch",
@@ -1267,7 +1269,8 @@
         "MLWebkit",
         "Mplay",
         "MPSearch",
-        "Polycards"
+        "Polycards",
+        "TransfersComponents"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "name": "AndesUI/SwiftUI",
@@ -1784,14 +1787,6 @@
     },
     {
       "name": "MLClips",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "description": "This version will be deprecated in favor of 2.0.0 on 2024-12-06",
-      "expires": "2024-12-06",
-      "name": "SecureInputs",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
@@ -2397,6 +2392,9 @@
     {
       "allows_granular_projects": [
         "AndesIntegrations/Core",
+        "EverestCanvas",
+        "EverestCanvas/Core",
+        "HomeWallet",
         "MLOnDemandResources",
         "MPConfigurationProvider/MLNetworking"
       ],
@@ -2505,6 +2503,12 @@
         "IspMpos"
       ],
       "name": "IspTte",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?0.[0-9]+$"
+    },
+    {
+      "name": "AddToCart",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?0.[0-9]+$"
