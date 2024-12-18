@@ -2,7 +2,7 @@
 
 La adicion de una dependencia requiere de varios analisis con el objetivo de que ninguna libreria impacte de forma negativa al Stack Tecnologico de Meli. Tener en cuenta que el proceso realizado por Platform Updates puede ofrecer los siguientes plazos:
 
-Librarias Internas : 1 - 2 dias
+Librarias Internas : 1 - 3 dias
 Librarias Externas : 1 - 2 semanas / mas en casos excepcionales
 
 Este plazo comienza una vez la solicitud esta completa y sus comentarios sean resueltos.
