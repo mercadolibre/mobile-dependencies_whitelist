@@ -7,6 +7,8 @@ Librarias Externas : 1 - 2 semanas / mas en casos excepcionales
 
 Este plazo comienza una vez la solicitud esta completa y sus comentarios sean resueltos.
 
+> <ul><li>- [ ] Leí el contenido de este Pull Request y acepto que recibiré seguimiento del mismo una vez su contenido y el de los Tickets solicitados esté completo.</li></ul>
+
 ### Descripción
 
 #### Cual es la necesidad de agregar este cambio?
@@ -19,10 +21,6 @@ Este plazo comienza una vez la solicitud esta completa y sus comentarios sean re
 |-----|--------------|
 | <ul><li>- [ ] <sub>Interna</sub></li></ul> | <sub>Libreria/modulo desarrollado in-house en base al ecosistema de Meli.</sub>                    |
 | <ul><li>- [ ] <sub>Externa</sub></li></ul> | <sub>Libreria desarrollada por un externo a Meli. (Google, Airbnb, otros). Requiere Ticket de Shield.</sub> |
-
-##### ETA
-
-> <ul><li>- [ ] Leí el contenido de este Pull Request y acepto que recibiré seguimiento del mismo una vez su contenido y el de los Tickets solicitados esté completo.</li></ul>
 
 <details>
 <summary>Sección obligatoria para Dependencias Externas</summary>
