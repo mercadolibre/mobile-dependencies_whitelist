@@ -2039,6 +2039,12 @@
       "source": "public",
       "target": "production",
       "version": "2.8.3"
+    },
+    {
+      "name": "LivenessDetection",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?2.[0-9]+$"
     }
   ]
 }
