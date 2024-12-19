@@ -4095,24 +4095,53 @@
       "version": "3\\.+"
     },
     {
+      "expires": "2025-02-18",
       "group": "com\\.mercadolibre\\.android\\.app_monitoring",
       "name": "setup",
       "version": "5\\.\\+"
     },
     {
+      "expires": "2025-02-18",
       "group": "com\\.mercadolibre\\.android\\.app_monitoring",
       "name": "core",
       "version": "5\\.\\+"
     },
     {
+      "expires": "2025-02-18",
       "group": "com\\.mercadolibre\\.android\\.app_monitoring",
       "name": "migration",
       "version": "5\\.\\+"
     },
     {
+      "expires": "2025-02-18",
       "group": "com\\.mercadolibre\\.android\\.app_monitoring",
       "name": "instrumentation",
       "version": "5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.app_monitoring",
+      "name": "setup",
+      "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.app_monitoring",
+      "name": "core",
+      "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.app_monitoring",
+      "name": "migration",
+      "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.app_monitoring",
+      "name": "instrumentation",
+      "version": "6\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.app_monitoring",
+      "name": "session-replay",
+      "version": "6\\.\\+"
     },
     {
       "description": "Its not declared in any lib, but it does in Apps",
