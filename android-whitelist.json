@@ -503,7 +503,8 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadolibre.android.security:attestation"
+        "com.mercadolibre.android.security:attestation",
+        "com.mercadolibre.android.rampup_mobile_advalenzuela:rampup"
       ],
       "group": "com\\.google\\.android\\.play",
       "name": "integrity",
