@@ -74,12 +74,6 @@
       "version": "1\\.5\\.1"
     },
     {
-      "expires": "2024-12-20",
-      "group": "com\\.mercadolibre\\.android\\.om",
-      "name": "sdk",
-      "version": "1\\.4\\.14"
-    },
-    {
       "group": "com\\.mercadolibre\\.android\\.gamification",
       "name": "gamification",
       "version": "3\\.+"
@@ -1526,26 +1520,6 @@
       "group": "com\\.mercadolibre\\.android\\.multiwidget",
       "name": "widgets",
       "version": "2\\.\\+"
-    },
-    {
-      "allows_granular_projects": [
-        "com.mercadolibre.android.mp_search",
-        "com.mercadolibre.android.wallet.home"
-      ],
-      "expires": "2024-12-16",
-      "group": "com\\.mercadolibre\\.android\\.multiwidget",
-      "name": "core",
-      "version": "1\\.\\+"
-    },
-    {
-      "allows_granular_projects": [
-        "com.mercadolibre.android.mp_search",
-        "com.mercadolibre.android.wallet.home"
-      ],
-      "expires": "2024-12-16",
-      "group": "com\\.mercadolibre\\.android\\.multiwidget",
-      "name": "widgets",
-      "version": "1\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.usersections\\",
