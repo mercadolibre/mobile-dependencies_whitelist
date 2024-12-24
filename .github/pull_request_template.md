@@ -7,8 +7,6 @@ Librarias Externas : 1 - 2 semanas / mas en casos excepcionales
 
 Este plazo comienza una vez la solicitud esta completa y sus comentarios sean resueltos.
 
-> <ul><li>- [ ] Leí el contenido de este Pull Request y acepto que recibiré seguimiento del mismo una vez su contenido y el de los Tickets solicitados estén completos.</li></ul>
-
 ### Descripción
 
 #### Cual es la necesidad de agregar este cambio?
