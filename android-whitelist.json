@@ -4387,22 +4387,22 @@
     {
       "group": "com\\.mercadolibre\\.android\\.isp_sf",
       "name": "di",
-      "version": "7\\.\\+"
+      "version": "8\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.isp_sf",
       "name": "facade",
-      "version": "7\\.\\+"
+      "version": "8\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.isp_sf",
       "name": "network",
-      "version": "7\\.\\+"
+      "version": "8\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.isp_sf",
       "name": "reader_manager",
-      "version": "7\\.\\+"
+      "version": "8\\.\\+"
     },
     {
       "allows_granular_projects": [
@@ -4412,7 +4412,7 @@
       "description": "Only used for debugImplementation",
       "group": "com\\.mercadolibre\\.android\\.isp_sf",
       "name": "developer_settings",
-      "version": "3\\.\\+"
+      "version": "8\\.\\+"
     },
     {
       "description": "This PTM library is used to schedule alarms that trigger job executions",
