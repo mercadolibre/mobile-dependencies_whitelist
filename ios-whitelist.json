@@ -599,6 +599,7 @@
     },
     {
       "allows_granular_projects": [
+        "AddToCart",
         "AndesUI",
         "DiscountCenter",
         "MLSearch",
@@ -606,8 +607,7 @@
         "MLWebkit",
         "MPSearch",
         "Polycards",
-        "TransfersComponents",
-        "AddToCart"
+        "TransfersComponents"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "name": "MLOnDemandResources/SwiftUI",
@@ -1210,6 +1210,7 @@
     },
     {
       "allows_granular_projects": [
+        "AddToCart",
         "AdvancedDebuggerTech",
         "DiscountCenter",
         "MLSearch",
@@ -1218,8 +1219,7 @@
         "Mplay",
         "MPSearch",
         "Polycards",
-        "TransfersComponents",
-        "AddToCart"
+        "TransfersComponents"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "name": "MLNavigation/SwiftUI",
@@ -1271,6 +1271,7 @@
     },
     {
       "allows_granular_projects": [
+        "AddToCart",
         "AdvancedDebuggerTech",
         "DiscountCenter",
         "FeedbackScreen",
@@ -1280,8 +1281,7 @@
         "Mplay",
         "MPSearch",
         "Polycards",
-        "TransfersComponents",
-        "AddToCart"
+        "TransfersComponents"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "name": "AndesUI/SwiftUI",
