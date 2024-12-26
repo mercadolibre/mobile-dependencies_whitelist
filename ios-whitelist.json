@@ -606,7 +606,8 @@
         "MLWebkit",
         "MPSearch",
         "Polycards",
-        "TransfersComponents"
+        "TransfersComponents",
+        "AddToCart"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "name": "MLOnDemandResources/SwiftUI",
@@ -1217,7 +1218,8 @@
         "Mplay",
         "MPSearch",
         "Polycards",
-        "TransfersComponents"
+        "TransfersComponents",
+        "AddToCart"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "name": "MLNavigation/SwiftUI",
@@ -1278,7 +1280,8 @@
         "Mplay",
         "MPSearch",
         "Polycards",
-        "TransfersComponents"
+        "TransfersComponents",
+        "AddToCart"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "name": "AndesUI/SwiftUI",
@@ -2516,6 +2519,10 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "allows_granular_projects": [
+        "MLSearch",
+        "Polycards"
+      ],
       "name": "AddToCart",
       "source": "private",
       "target": "production",
