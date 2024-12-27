@@ -7,7 +7,7 @@
       "name": "OMSDK",
       "source": "private",
       "target": "production",
-      "version": "1.5.1"
+      "version": "1.5.2"
     },
     {
       "name": "Viewability",
@@ -599,6 +599,7 @@
     },
     {
       "allows_granular_projects": [
+        "AddToCart",
         "AndesUI",
         "DiscountCenter",
         "MLSearch",
@@ -1209,6 +1210,7 @@
     },
     {
       "allows_granular_projects": [
+        "AddToCart",
         "AdvancedDebuggerTech",
         "DiscountCenter",
         "MLSearch",
@@ -1269,6 +1271,7 @@
     },
     {
       "allows_granular_projects": [
+        "AddToCart",
         "AdvancedDebuggerTech",
         "DiscountCenter",
         "FeedbackScreen",
@@ -2516,6 +2519,10 @@
       "version": "^~>\\s?0.[0-9]+$"
     },
     {
+      "allows_granular_projects": [
+        "MLSearch",
+        "Polycards"
+      ],
       "name": "AddToCart",
       "source": "private",
       "target": "production",
