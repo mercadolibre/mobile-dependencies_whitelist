@@ -3729,7 +3729,8 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadopago.android.cashin"
+        "com.mercadopago.android.cashin",
+        "com.mercadopago.android.cash_smartpos"
       ],
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "seller",
@@ -3745,7 +3746,8 @@
     },
     {
       "allows_granular_projects": [
-        "com.mercadopago.android.cashin"
+        "com.mercadopago.android.cashin",
+        "com.mercadopago.android.cash_smartpos"
       ],
       "group": "com\\.mercadopago\\.android\\.cashin",
       "name": "commons",
