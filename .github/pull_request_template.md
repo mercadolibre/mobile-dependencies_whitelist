@@ -1,3 +1,12 @@
+# [ℹ️](https://github.com/mercadolibre/mobile-dependencies_whitelist/blob/feature/update-readme-frontend-cross/README.md#libreria-frontend-x-cross) ETA
+
+La adicion de una dependencia requiere de varios analisis con el objetivo de que ninguna libreria impacte de forma negativa al Stack Tecnologico de Meli. Tener en cuenta que el proceso realizado por Platform Updates puede ofrecer los siguientes plazos:
+
+Librarias Internas : 1 - 3 dias
+Librarias Externas : 1 - 2 semanas / mas en casos excepcionales
+
+Este plazo comienza una vez la solicitud esta completa y sus comentarios sean resueltos.
+
 ### Descripción
 
 #### Cual es la necesidad de agregar este cambio?
@@ -10,10 +19,6 @@
 |-----|--------------|
 | <ul><li>- [ ] <sub>Interna</sub></li></ul> | <sub>Libreria/modulo desarrollado in-house en base al ecosistema de Meli.</sub>                    |
 | <ul><li>- [ ] <sub>Externa</sub></li></ul> | <sub>Libreria desarrollada por un externo a Meli. (Google, Airbnb, otros). Requiere Ticket de Shield.</sub> |
-
-##### ETA
-
-> <ul><li>- [ ] Leí el contenido de este Pull Request y acepto que recibiré seguimiento del mismo una vez su contenido y el de los Tickets solicitados esté completo.</li></ul>
 
 <details>
 <summary>Sección obligatoria para Dependencias Externas</summary>
