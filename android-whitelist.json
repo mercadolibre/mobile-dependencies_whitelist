@@ -1247,6 +1247,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.add_to_cart",
         "com.mercadolibre.android.mp_search",
         "com.mercadolibre.android.polycards",
         "com.mercadolibre.android.tetris",
@@ -1785,7 +1786,7 @@
         "com.mercadolibre.android.remedies"
       ],
       "description": "Esta lib se deprecará, debemos utilizar cameraX",
-      "expires": "2024-12-31",
+      "expires": "2025-01-31",
       "group": "com\\.otaliastudios",
       "name": "cameraview",
       "version": "2\\.7\\.2"
@@ -2204,6 +2205,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.add_to_cart",
         "com.mercadolibre.android.advanced_debugger",
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.auth_native_sso",
@@ -2227,6 +2229,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.add_to_cart",
         "com.mercadolibre.android.advanced_debugger",
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.auth_native_sso",
@@ -3903,6 +3906,14 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.polycards"
+      ],
+      "group": "com.mercadolibre.android.add_to_cart",
+      "name": "atc-compose",
+      "version": "0\\.+"
+    },
+    {
+      "allows_granular_projects": [
         "com.mercadolibre.android.mplay"
       ],
       "group": "com\\.bitmovin\\.player",
@@ -4337,47 +4348,57 @@
       "version": "4\\.\\+"
     },
     {
-      "expires": "2025-01-27",
-      "group": "com\\.mercadolibre\\.android\\.isp_sf",
-      "name": "di",
-      "version": "5\\.\\+"
-    },
-    {
-      "expires": "2025-01-27",
-      "group": "com\\.mercadolibre\\.android\\.isp_sf",
-      "name": "facade",
-      "version": "5\\.\\+"
-    },
-    {
-      "expires": "2025-01-27",
-      "group": "com\\.mercadolibre\\.android\\.isp_sf",
-      "name": "network",
-      "version": "5\\.\\+"
-    },
-    {
-      "expires": "2025-01-27",
-      "group": "com\\.mercadolibre\\.android\\.isp_sf",
-      "name": "reader_manager",
-      "version": "5\\.\\+"
-    },
-    {
+      "expires": "2025-05-31",
       "group": "com\\.mercadolibre\\.android\\.isp_sf",
       "name": "di",
       "version": "7\\.\\+"
     },
     {
+      "expires": "2025-05-31",
       "group": "com\\.mercadolibre\\.android\\.isp_sf",
       "name": "facade",
       "version": "7\\.\\+"
     },
     {
+      "expires": "2025-05-31",
       "group": "com\\.mercadolibre\\.android\\.isp_sf",
       "name": "network",
       "version": "7\\.\\+"
     },
     {
+      "expires": "2025-05-31",
       "group": "com\\.mercadolibre\\.android\\.isp_sf",
       "name": "reader_manager",
+      "version": "7\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "di",
+      "version": "8\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "facade",
+      "version": "8\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "network",
+      "version": "8\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "reader_manager",
+      "version": "8\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.point_smartpos_fcu",
+        "com.mercadolibre.android.point.mpos"
+      ],
+      "description": "Only used for debugImplementation",
+      "group": "com\\.mercadolibre\\.android\\.isp_sf",
+      "name": "developer_settings",
       "version": "7\\.\\+"
     },
     {
@@ -4388,7 +4409,7 @@
       "description": "Only used for debugImplementation",
       "group": "com\\.mercadolibre\\.android\\.isp_sf",
       "name": "developer_settings",
-      "version": "3\\.\\+"
+      "version": "8\\.\\+"
     },
     {
       "description": "This PTM library is used to schedule alarms that trigger job executions",
@@ -4575,6 +4596,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.add_to_cart",
         "com.mercadolibre.android.advanced_debugger",
         "com.mercadolibre.android.everest_canvas",
         "com.mercadolibre.android.mlwebkit",
@@ -4593,6 +4615,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.add_to_cart",
         "com.mercadolibre.android.advanced_debugger",
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
@@ -4615,6 +4638,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.add_to_cart",
         "com.mercadolibre.android.advanced_debugger",
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
@@ -4635,6 +4659,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.add_to_cart",
         "com.mercadolibre.android.advanced_debugger",
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
@@ -4665,6 +4690,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.add_to_cart",
         "com.mercadolibre.android.advanced_debugger",
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
@@ -4687,6 +4713,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.add_to_cart",
         "com.mercadolibre.android.advanced_debugger",
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
@@ -4708,6 +4735,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.add_to_cart",
         "com.mercadolibre.android.advanced_debugger",
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
@@ -4729,6 +4757,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.add_to_cart",
         "com.mercadolibre.android.advanced_debugger",
         "com.mercadolibre.android.auth_native_sso",
         "com.mercadolibre.android.mp_search",
@@ -4744,6 +4773,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.add_to_cart",
         "com.mercadolibre.android.advanced_debugger",
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
@@ -4765,6 +4795,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.add_to_cart",
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.auth_native_sso",
@@ -4785,6 +4816,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.add_to_cart",
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.everest_canvas",
@@ -4812,6 +4844,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.add_to_cart",
         "com.mercadolibre.android.advanced_debugger",
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.andesui",
@@ -5192,6 +5225,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android.add_to_cart",
         "com.mercadolibre.android.everest",
         "com.mercadolibre.android.everest_canvas",
         "com.mercadolibre.android.mp_search",
@@ -5239,6 +5273,12 @@
       "group": "com\\.mercadolibre\\.android\\.rabbit_hole",
       "name": "rabbithole",
       "version": "0\\.\\+"
+    },
+    {
+      "expires": "2025-02-01",
+      "group": "com\\.jakewharton\\.timber",
+      "name": "timber",
+      "version": "4.5.1"
     }
   ]
 }
