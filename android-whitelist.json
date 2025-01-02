@@ -1490,12 +1490,6 @@
       "version": "10\\.\\+"
     },
     {
-      "expires": "2025-02-02",
-      "group": "com\\.mercadolibre\\.android\\.home\\.toolkit",
-      "name": "core",
-      "version": "5\\.\\+"
-    },
-    {
       "allows_granular_projects": [
         "com.mercadolibre.android.coupon",
         "com.mercadolibre.android.merchengine",
@@ -1510,6 +1504,12 @@
       "group": "com\\.mercadolibre\\.android\\.home\\.toolkit",
       "name": "core",
       "version": "6\\.\\+"
+    },
+    {
+      "expires": "2025-02-02",
+      "group": "com\\.mercadolibre\\.android\\.home\\.toolkit",
+      "name": "core",
+      "version": "5\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
