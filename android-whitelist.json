@@ -1496,20 +1496,20 @@
       "version": "5\\.\\+"
     },
     {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.coupon",
+        "com.mercadolibre.android.merchengine",
+        "com.mercadolibre.android.merch_realestates",
+        "com.mercadolibre.android.modalsengine",
+        "com.mercadolibre.android.mp_search",
+        "com.mercadolibre.android.multiwidget",
+        "com.mercadolibre.android.pendings",
+        "com.mercadolibre.android.usersections",
+        "com.mercadolibre.android.wallet.home",
+      ],
       "group": "com\\.mercadolibre\\.android\\.home\\.toolkit",
       "name": "core",
-      "version": "6\\.\\+",
-      "allows_granular_projects": [
-        "com.mercadolibre.android.mp_search",
-        "com.mercadolibre.android.wallet.home",
-        "com.mercadolibre.android.merchengine",
-        "com.mercadolibre.android.modalsengine",
-        "com.mercadolibre.android.merch_realestates",
-        "com.mercadolibre.android.pendings",
-        "com.mercadolibre.android.multiwidget",
-        "com.mercadolibre.android.usersections",
-        "com.mercadolibre.android.coupon"
-      ]
+      "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.wallet\\.home",
