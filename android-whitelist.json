@@ -907,6 +907,7 @@
     },
     {
       "allows_granular_projects": [
+        "com.mercadolibre.android:melidata-sdk",
         "com.mercadolibre.android.remote.configuration"
       ],
       "description": "This library should be used only in remote-configuration.",
