@@ -1444,7 +1444,7 @@
       "name": "SpGlobeWrapper",
       "source": "private",
       "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
+      "version": "^~>\\s?2.[0-9]+$"
     },
     {
       "name": "Hub",
@@ -2017,17 +2017,25 @@
     },
     {
       "description": "This version will be deprecated in favor of 7.0.0",
-      "expires": "2025-03-31",
+      "expires": "2025-02-10",
       "name": "IspSf",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?6.[0-9]+$"
     },
     {
+      "description": "This version will be deprecated in favor of 8.0.0",
+      "expires": "2025-03-10",
       "name": "IspSf",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?7.[0-9]+$"
+    },
+    {
+      "name": "IspSf",
+      "source": "private",
+      "target": "production",
+      "version": "^~>\\s?8.[0-9]+$"
     },
     {
       "name": "BuyingflowCoreFlox",
