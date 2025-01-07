@@ -1651,6 +1651,13 @@
     {
       "group": "com\\.mercadopago\\.android\\.point_ui",
       "name": "components",
+      "version": "9\\.+"
+    },
+    {
+      "description": "The expiration date is set to have time enough to deprecate it",
+      "expires": "2025-03-31",
+      "group": "com\\.mercadopago\\.android\\.point_ui",
+      "name": "components",
       "version": "7\\.+"
     },
     {
@@ -1661,14 +1668,35 @@
     {
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
       "name": "paymentflowfcu",
+      "version": "15\\.+"
+    },
+    {
+      "description": "The expiration date is set to have time enough to deprecate it",
+      "expires": "2025-03-31",
+      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
+      "name": "paymentflowfcu",
       "version": "14\\.+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
       "name": "entities_fcu",
+      "version": "15\\.+"
+    },
+    {
+      "description": "The expiration date is set to have time enough to deprecate it",
+      "expires": "2025-03-31",
+      "group": "com\\.mercadolibre\\.android\\.payment_flow_fcu",
+      "name": "entities_fcu",
       "version": "14\\.+"
     },
     {
+      "group": "com\\.mercadolibre\\.android\\.point\\.mpos",
+      "name": "entrypoint",
+      "version": "10\\.+"
+    },
+    {
+      "description": "The expiration date is set to have time enough to deprecate it",
+      "expires": "2025-03-31",
       "group": "com\\.mercadolibre\\.android\\.point\\.mpos",
       "name": "entrypoint",
       "version": "9\\.+"
