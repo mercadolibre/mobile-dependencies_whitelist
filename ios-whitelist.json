@@ -58,12 +58,6 @@
       "version": "^~>\\s?5.[0-9]+$"
     },
     {
-      "name": "PPMagnesWrapper",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
       "allows_granular_projects": [
         "MLAdjust",
         "MLConfigurationProvider/App",
