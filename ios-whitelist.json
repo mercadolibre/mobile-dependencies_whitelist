@@ -58,12 +58,6 @@
       "version": "^~>\\s?5.[0-9]+$"
     },
     {
-      "name": "PPMagnesWrapper",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?0.[0-9]+$"
-    },
-    {
       "allows_granular_projects": [
         "MLAdjust",
         "MLConfigurationProvider/App",
@@ -97,8 +91,7 @@
     },
     {
       "allows_granular_projects": [
-        "CreditsUIComponents",
-        "MLCharts"
+        "CreditsUIComponents"
       ],
       "name": "DGCharts",
       "source": "public",
@@ -404,12 +397,6 @@
     },
     {
       "name": "BuyingflowCart",
-      "source": "private",
-      "target": "production",
-      "version": "^~>\\s?1.[0-9]+$"
-    },
-    {
-      "name": "MLCharts",
       "source": "private",
       "target": "production",
       "version": "^~>\\s?1.[0-9]+$"
