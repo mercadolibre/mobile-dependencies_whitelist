@@ -3930,7 +3930,7 @@
       ],
       "group": "com\\.bitmovin\\.player",
       "name": "player",
-      "version": "3\\.43\\.+"
+      "version": "3\\.97\\.0"
     },
     {
       "allows_granular_projects": [
@@ -3994,6 +3994,14 @@
       "group": "com\\.mercadolibre\\.android\\.cx_support_daisy",
       "name": "daisy",
       "version": "mercadopago-2\\.\\+|mercadolibre-2\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.meliphone.voip"
+      ],
+      "group": "com\\.mercadolibre\\.android\\.cx\\.support",
+      "name": "yoshi",
+      "version": "mercadopago-12\\.\\+|mercadolibre-12\\.\\+"
     },
     {
       "description": "This library has a stable version but it is not the final one.",
@@ -5217,7 +5225,9 @@
         "com.mercadolibre.android.everest_canvas",
         "com.mercadolibre.android.mercadopago_login",
         "com.mercadolibre.android.mlwebkit",
+        "com.mercadolibre.android.nfcpayments",
         "com.mercadolibre.android.on.demand.resources",
+        "com.mercadolibre.android.security.security_preferences",
         "com.mercadopago.android.configurer",
         "com.mercadopago.android.configurer.smartpos"
       ],
