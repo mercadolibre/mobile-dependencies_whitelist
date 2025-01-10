@@ -2229,12 +2229,14 @@
         "com.mercadolibre.android.advanced_debugger",
         "com.mercadolibre.android.andes_integrations",
         "com.mercadolibre.android.auth_native_sso",
+        "com.mercadolibre.android.configuration.provider",
         "com.mercadolibre.android.mlwebkit",
         "com.mercadolibre.android.mp_search",
         "com.mercadolibre.android.polycards",
         "com.mercadolibre.android.search",
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.vpp",
+        "com.mercadopago.android.configurer",
         "com.mercadopago.android.isp.mpoc.prometheus",
         "com.mercadopago.android.moneyout"
       ],
@@ -2243,8 +2245,38 @@
       "version": "10\\.\\+"
     },
     {
+      "expires": "2025-01-17",
       "group": "com\\.mercadolibre\\.android\\.andes_integrations",
       "name": "integrations",
+      "version": "mercadopago-5\\.\\+|mercadolibre-5\\.\\+"
+    },
+    {
+      "group": "com\\.mercadolibre\\.android\\.andes_integrations",
+      "name": "integrations",
+      "version": "mercadopago-6\\.\\+|mercadolibre-6\\.\\+"
+    },
+    {
+      "allows_granular_projects": [
+        "com.mercadolibre.android.add_to_cart",
+        "com.mercadolibre.android.advanced_debugger",
+        "com.mercadolibre.android.andesui",
+        "com.mercadolibre.android.auth_native_sso",
+        "com.mercadolibre.android.configuration.provider",
+        "com.mercadolibre.android.everest_canvas",
+        "com.mercadolibre.android.mlwebkit",
+        "com.mercadolibre.android.mp_search",
+        "com.mercadolibre.android.polycards",
+        "com.mercadolibre.android.search",
+        "com.mercadolibre.android.tetris",
+        "com.mercadolibre.android.vpp",
+        "com.mercadopago.android.configurer",
+        "com.mercadopago.android.isp.mpoc.prometheus",
+        "com.mercadopago.android.moneyout"
+      ],
+      "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
+      "expires": "2025-01-17",
+      "group": "com\\.mercadolibre\\.android\\.andes_integrations",
+      "name": "integrations-compose",
       "version": "mercadopago-5\\.\\+|mercadolibre-5\\.\\+"
     },
     {
@@ -2253,6 +2285,7 @@
         "com.mercadolibre.android.advanced_debugger",
         "com.mercadolibre.android.andesui",
         "com.mercadolibre.android.auth_native_sso",
+        "com.mercadolibre.android.configuration.provider",
         "com.mercadolibre.android.everest_canvas",
         "com.mercadolibre.android.mlwebkit",
         "com.mercadolibre.android.mp_search",
@@ -2260,13 +2293,14 @@
         "com.mercadolibre.android.search",
         "com.mercadolibre.android.tetris",
         "com.mercadolibre.android.vpp",
+        "com.mercadopago.android.configurer",
         "com.mercadopago.android.isp.mpoc.prometheus",
         "com.mercadopago.android.moneyout"
       ],
       "description": "Only for EARLY ADOPTERS. Communicate with Frontend Platform declarative squad before adding your project.",
       "group": "com\\.mercadolibre\\.android\\.andes_integrations",
       "name": "integrations-compose",
-      "version": "mercadopago-5\\.\\+|mercadolibre-5\\.\\+"
+      "version": "6\\.\\+"
     },
     {
       "group": "com\\.mercadolibre\\.android\\.discounts_touchpoint",
