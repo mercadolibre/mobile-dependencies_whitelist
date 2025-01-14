@@ -15,8 +15,12 @@ jobs:
         with:
           script: |
             const message = `
-            ### 🚨 This repository is deprecated
-            This repository is no longer actively maintained. Please refer to alternative projects or documentation for guidance.
+            ### 🚨 This Repository is Deprecated
+            This repository is no longer actively maintained. Please use the new repository for future updates and contributions:
+            
+            👉 **[New Repository](https://github.com/melisource/fury_mobile-dependencies-allowlist)** 👈
+            
+            If you have any questions, refer to the new repository or contact the maintainers.
             `;
             github.rest.issues.createComment({
               owner: context.repo.owner,
