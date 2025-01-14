@@ -1,0 +1,26 @@
+name: Deprecation Warning
+
+on:
+  pull_request:
+    types:
+      - opened
+
+jobs:
+  post-deprecation-message:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Add deprecation message as a comment
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const message = `
+            ### 🚨 This repository is deprecated
+            This repository is no longer actively maintained. Please refer to alternative projects or documentation for guidance.
+            `;
+            github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.pull_request.number,
+              body: message,
+            });
