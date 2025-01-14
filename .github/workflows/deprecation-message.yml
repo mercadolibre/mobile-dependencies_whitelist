@@ -7,7 +7,7 @@ on:
 
 jobs:
   post-deprecation-message:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
       - name: Add deprecation message as a comment
